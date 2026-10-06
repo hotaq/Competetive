@@ -1,0 +1,46 @@
+{
+ "tag": "e022_warm_cc0",
+ "src": "raptor_ft_coatnet_v4_full.pt@ep12",
+ "best_gold_auc": 0.9143590258647324,
+ "aucs": {
+  "ACL": 0.9767156862745098,
+  "MCL": 0.981859410430839,
+  "Medial Meniscus": 0.9507211538461537,
+  "Lateral Meniscus": 0.8472049689440994,
+  "Medial OA": 0.9829457364341085,
+  "Lateral OA": 0.8297872340425532,
+  "PF OA": 0.8223938223938224,
+  "Effusion": 0.9826086956521739,
+  "Synovitis": 0.7753882915173238,
+  "Baker's": 0.9583333333333333,
+  "Contusion": 0.9365721997300944,
+  "Fracture": 0.9277777777777778
+ },
+ "hist": [
+  {
+   "ep": -1,
+   "loss": null,
+   "gold_auc": 0.9136794915206353
+  },
+  {
+   "ep": 0,
+   "loss": 0.813491290807724,
+   "gold_auc": 0.9143590258647324
+  },
+  {
+   "ep": 1,
+   "loss": 0.7692404806613922,
+   "gold_auc": 0.9142671613405958
+  }
+ ],
+ "res": 384,
+ "epochs": 2,
+ "bb_lr": 5e-06,
+ "head_lr": 0.0001,
+ "n_train": 40,
+ "n_gold": 58,
+ "roi": false,
+ "roi_mode": "compartment",
+ "partial": false,
+ "epochs_done": 2
+}

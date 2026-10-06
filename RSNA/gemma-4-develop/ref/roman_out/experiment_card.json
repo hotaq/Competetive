@@ -1,0 +1,29 @@
+{
+  "created_utc": "2026-09-23T19:18:33+00:00",
+  "zip": "submission.zip",
+  "sha256": "f3534769cd8c7761b8ae83722b0f2fd381c0349587a10e84bd63e0554a4a7aa4",
+  "architecture": "analyzer+coder",
+  "bundle_base": "starter",
+  "model_alias": "gemma-4-31b-it-qat-w4a16-ct",
+  "tools": [
+    "run_command",
+    "submit_patch",
+    "get_status",
+    "read_file",
+    "edit_file",
+    "write_file",
+    "search_similar_code",
+    "get_code_neighbors",
+    "get_code_subgraph"
+  ],
+  "context_limit": 32768,
+  "sampling": {
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "top_k": 40,
+    "max_output_tokens": 8192,
+    "thinking_budget": 4096
+  },
+  "prompt_sha": "22b6a11eeed2",
+  "validation_passed": true
+}

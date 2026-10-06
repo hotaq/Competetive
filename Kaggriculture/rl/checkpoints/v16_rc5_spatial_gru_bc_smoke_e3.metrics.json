@@ -1,0 +1,337 @@
+{
+  "batch_size": 8,
+  "checkpoint": "rl/checkpoints/v16_rc5_spatial_gru_bc_smoke_e3.npz",
+  "config": {
+    "conv_channels": 16,
+    "embedding_dim": 64,
+    "global_features": 68,
+    "hidden_dim": 128,
+    "market_classes": 113,
+    "max_hands": 14,
+    "max_market_orders": 10,
+    "spatial_channels": 20,
+    "unit_classes": 33
+  },
+  "dataset": "rl/datasets/v16_rc5_teacher_spatial_v1.npz",
+  "dataset_metadata": {
+    "base_seed": 610000,
+    "encoder": "perspective-spatial-v1",
+    "episode_records": [
+      {
+        "episode_id": 61000000,
+        "margin": 0.0,
+        "opponent": "self:main.py",
+        "opponent_money": 99962.0,
+        "seed": 610000,
+        "teacher_money": 99962.0,
+        "teacher_seat": 0
+      },
+      {
+        "episode_id": 61000001,
+        "margin": 0.0,
+        "opponent": "self:main.py",
+        "opponent_money": 99962.0,
+        "seed": 610000,
+        "teacher_money": 99962.0,
+        "teacher_seat": 1
+      },
+      {
+        "episode_id": 61000002,
+        "margin": 13093.0,
+        "opponent": "file:main.py",
+        "opponent_money": 129381.0,
+        "seed": 610001,
+        "teacher_money": 142474.0,
+        "teacher_seat": 0
+      },
+      {
+        "episode_id": 61000003,
+        "margin": 13093.0,
+        "opponent": "file:main.py",
+        "opponent_money": 129381.0,
+        "seed": 610001,
+        "teacher_money": 142474.0,
+        "teacher_seat": 1
+      },
+      {
+        "episode_id": 61000004,
+        "margin": 139130.0,
+        "opponent": "crop:WHEAT:6",
+        "opponent_money": 3000.0,
+        "seed": 610002,
+        "teacher_money": 142130.0,
+        "teacher_seat": 0
+      },
+      {
+        "episode_id": 61000005,
+        "margin": 139130.0,
+        "opponent": "crop:WHEAT:6",
+        "opponent_money": 3000.0,
+        "seed": 610002,
+        "teacher_money": 142130.0,
+        "teacher_seat": 1
+      },
+      {
+        "episode_id": 61000006,
+        "margin": 166210.0,
+        "opponent": "crop:CARROT:6",
+        "opponent_money": 3000.0,
+        "seed": 610003,
+        "teacher_money": 169210.0,
+        "teacher_seat": 0
+      },
+      {
+        "episode_id": 61000007,
+        "margin": 166210.0,
+        "opponent": "crop:CARROT:6",
+        "opponent_money": 3000.0,
+        "seed": 610003,
+        "teacher_money": 169210.0,
+        "teacher_seat": 1
+      },
+      {
+        "episode_id": 61000008,
+        "margin": 152978.0,
+        "opponent": "crop:TOMATO:6",
+        "opponent_money": 3000.0,
+        "seed": 610004,
+        "teacher_money": 155978.0,
+        "teacher_seat": 0
+      },
+      {
+        "episode_id": 61000009,
+        "margin": 151828.0,
+        "opponent": "crop:TOMATO:6",
+        "opponent_money": 3000.0,
+        "seed": 610004,
+        "teacher_money": 154828.0,
+        "teacher_seat": 1
+      },
+      {
+        "episode_id": 61000010,
+        "margin": 136987.0,
+        "opponent": "crop:STRAWBERRY:6",
+        "opponent_money": 3000.0,
+        "seed": 610005,
+        "teacher_money": 139987.0,
+        "teacher_seat": 0
+      },
+      {
+        "episode_id": 61000011,
+        "margin": 135921.0,
+        "opponent": "crop:STRAWBERRY:6",
+        "opponent_money": 3000.0,
+        "seed": 610005,
+        "teacher_money": 138921.0,
+        "teacher_seat": 1
+      },
+      {
+        "episode_id": 61000012,
+        "margin": 140294.0,
+        "opponent": "crop:MELON:6",
+        "opponent_money": 3000.0,
+        "seed": 610006,
+        "teacher_money": 143294.0,
+        "teacher_seat": 0
+      },
+      {
+        "episode_id": 61000013,
+        "margin": 139379.0,
+        "opponent": "crop:MELON:6",
+        "opponent_money": 3000.0,
+        "seed": 610006,
+        "teacher_money": 142379.0,
+        "teacher_seat": 1
+      },
+      {
+        "episode_id": 61000014,
+        "margin": 0.0,
+        "opponent": "self:main.py",
+        "opponent_money": 88425.0,
+        "seed": 610007,
+        "teacher_money": 88425.0,
+        "teacher_seat": 0
+      },
+      {
+        "episode_id": 61000015,
+        "margin": 0.0,
+        "opponent": "self:main.py",
+        "opponent_money": 88425.0,
+        "seed": 610007,
+        "teacher_money": 88425.0,
+        "teacher_seat": 1
+      },
+      {
+        "episode_id": 61000016,
+        "margin": 13521.0,
+        "opponent": "file:main.py",
+        "opponent_money": 119488.0,
+        "seed": 610008,
+        "teacher_money": 133009.0,
+        "teacher_seat": 0
+      },
+      {
+        "episode_id": 61000017,
+        "margin": 13521.0,
+        "opponent": "file:main.py",
+        "opponent_money": 119488.0,
+        "seed": 610008,
+        "teacher_money": 133009.0,
+        "teacher_seat": 1
+      },
+      {
+        "episode_id": 61000018,
+        "margin": 154943.0,
+        "opponent": "crop:WHEAT:6",
+        "opponent_money": 3000.0,
+        "seed": 610009,
+        "teacher_money": 157943.0,
+        "teacher_seat": 0
+      },
+      {
+        "episode_id": 61000019,
+        "margin": 173327.0,
+        "opponent": "crop:WHEAT:6",
+        "opponent_money": 3000.0,
+        "seed": 610009,
+        "teacher_money": 176327.0,
+        "teacher_seat": 1
+      },
+      {
+        "episode_id": 61000020,
+        "margin": 162171.0,
+        "opponent": "crop:CARROT:6",
+        "opponent_money": 3000.0,
+        "seed": 610010,
+        "teacher_money": 165171.0,
+        "teacher_seat": 0
+      },
+      {
+        "episode_id": 61000021,
+        "margin": 162171.0,
+        "opponent": "crop:CARROT:6",
+        "opponent_money": 3000.0,
+        "seed": 610010,
+        "teacher_money": 165171.0,
+        "teacher_seat": 1
+      },
+      {
+        "episode_id": 61000022,
+        "margin": 172740.0,
+        "opponent": "crop:TOMATO:6",
+        "opponent_money": 3000.0,
+        "seed": 610011,
+        "teacher_money": 175740.0,
+        "teacher_seat": 0
+      },
+      {
+        "episode_id": 61000023,
+        "margin": 172740.0,
+        "opponent": "crop:TOMATO:6",
+        "opponent_money": 3000.0,
+        "seed": 610011,
+        "teacher_money": 175740.0,
+        "teacher_seat": 1
+      }
+    ],
+    "episodes": 24,
+    "holdout_episodes": 4,
+    "market_vocab_size": 113,
+    "max_hands": 14,
+    "opponents": [
+      "self:main.py",
+      "file:main.py",
+      "crop:WHEAT:6",
+      "crop:CARROT:6",
+      "crop:TOMATO:6",
+      "crop:STRAWBERRY:6",
+      "crop:MELON:6"
+    ],
+    "samples": 17256,
+    "schema_version": 3,
+    "source": "live-standalone-teacher-v1",
+    "teacher_path": "/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/submissions/meta_v16_rc5_robust_base_standalone/main.py",
+    "teacher_sanitation_changes": 7026,
+    "teacher_sha256": "f029fa0cb66a9eb509afbe44e3f59b800332d0419db91607183410e4089c4d19",
+    "unit_vocab_size": 33
+  },
+  "epochs": 3,
+  "history": [
+    {
+      "epoch": 1,
+      "holdout": [
+        8.520743370056152,
+        2.425259828567505,
+        2.7237563133239746,
+        3.371727228164673,
+        0.24617524445056915,
+        0.15341004729270935,
+        0.6022078394889832
+      ],
+      "train": [
+        10.328675270080566,
+        2.8543834686279297,
+        3.1949024200439453,
+        4.279388427734375,
+        0.22672411799430847,
+        0.11869208514690399,
+        0.31059539318084717
+      ]
+    },
+    {
+      "epoch": 2,
+      "holdout": [
+        6.456616401672363,
+        2.3315391540527344,
+        2.286673069000244,
+        1.8384041786193848,
+        0.24617524445056915,
+        0.2050226777791977,
+        0.6233345866203308
+      ],
+      "train": [
+        7.2044548988342285,
+        2.379074811935425,
+        2.434567928314209,
+        2.3908119201660156,
+        0.24539104104042053,
+        0.18130852282047272,
+        0.6045774817466736
+      ]
+    },
+    {
+      "epoch": 3,
+      "holdout": [
+        6.1180195808410645,
+        2.192340612411499,
+        2.23140549659729,
+        1.6942734718322754,
+        0.3167593777179718,
+        0.21837729215621948,
+        0.643890380859375
+      ],
+      "train": [
+        6.262609958648682,
+        2.265601396560669,
+        2.258758306503296,
+        1.738250494003296,
+        0.28875017166137695,
+        0.2088003158569336,
+        0.6376379132270813
+      ]
+    }
+  ],
+  "learning_rate": 0.0003,
+  "metric_order": [
+    "loss",
+    "farmer_loss",
+    "hand_loss",
+    "market_loss",
+    "farmer_accuracy",
+    "hand_accuracy",
+    "market_accuracy"
+  ],
+  "model": "spatial-gru-bc-v1",
+  "seed": 20260821,
+  "sequence_length": 48
+}

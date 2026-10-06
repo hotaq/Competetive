@@ -1,0 +1,13 @@
+AUC=0.8163 base_rate=0.1000
+
+|--- Environmental_Concern_Level <= 2.50
+|   |--- Subsidy_Available_Yes <= 0.50
+|   |   |--- class: 0
+|   |--- Subsidy_Available_Yes >  0.50
+|   |   |--- class: 0
+|--- Environmental_Concern_Level >  2.50
+|   |--- Subsidy_Available_Yes <= 0.50
+|   |   |--- class: 0
+|   |--- Subsidy_Available_Yes >  0.50
+|   |   |--- class: 0
+

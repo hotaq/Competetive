@@ -1,0 +1,1024 @@
+{
+  "left": "artifacts/top20_live_tapes80_20260826/tape_99566826_s0.py",
+  "right": "artifacts/top20_live_tapes80_20260826/tape_99607808_s1.py",
+  "replay": "replays/top20_live_20260826/r17_16671767_kaileh57/99594060.json",
+  "seat": 0,
+  "steps": 719,
+  "exact_steps": 0,
+  "mismatch_steps": 719,
+  "first_mismatches": [
+    {
+      "frame": 1,
+      "step": 0,
+      "left": {
+        "farmer": [
+          "PASS"
+        ],
+        "hands": [],
+        "market": [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            4
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_SEED",
+            "MELON",
+            7
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            5
+          ],
+          [
+            "BUY_ANIMAL",
+            "SHEEP",
+            4
+          ]
+        ]
+      },
+      "right": {
+        "farmer": [
+          "PASS"
+        ],
+        "hands": [],
+        "market": []
+      }
+    },
+    {
+      "frame": 2,
+      "step": 1,
+      "left": {
+        "farmer": [
+          "PICKUP",
+          "SHEEP",
+          4
+        ],
+        "hands": [
+          [
+            "WEST"
+          ],
+          [
+            "NORTH"
+          ]
+        ],
+        "market": []
+      },
+      "right": {
+        "farmer": [
+          "NORTH"
+        ],
+        "hands": [],
+        "market": [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            5
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            7
+          ],
+          [
+            "BUY_SEED",
+            "MELON",
+            12
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_ANIMAL",
+            "COW",
+            2
+          ],
+          [
+            "BUY_ANIMAL",
+            "SHEEP",
+            2
+          ]
+        ]
+      }
+    },
+    {
+      "frame": 3,
+      "step": 2,
+      "left": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          4
+        ],
+        "hands": [
+          [
+            "WEST"
+          ],
+          [
+            "NORTH"
+          ]
+        ],
+        "market": [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            4
+          ]
+        ]
+      },
+      "right": {
+        "farmer": [
+          "WEST"
+        ],
+        "hands": [
+          [
+            "PICKUP",
+            "COW",
+            1
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "PICKUP",
+            "COW",
+            1
+          ]
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "frame": 4,
+      "step": 3,
+      "left": {
+        "farmer": [
+          "BUILD_PASTURE"
+        ],
+        "hands": [
+          [
+            "NORTH"
+          ],
+          [
+            "NORTH"
+          ]
+        ],
+        "market": []
+      },
+      "right": {
+        "farmer": [
+          "WEST"
+        ],
+        "hands": [
+          [
+            "NORTH"
+          ],
+          [
+            "PICKUP",
+            "SHEEP",
+            1
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "BUILD_PASTURE"
+          ]
+        ],
+        "market": [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "frame": 5,
+      "step": 4,
+      "left": {
+        "farmer": [
+          "PLACE",
+          "SHEEP",
+          1
+        ],
+        "hands": [
+          [
+            "PLANT",
+            "MELON"
+          ],
+          [
+            "NORTH"
+          ]
+        ],
+        "market": []
+      },
+      "right": {
+        "farmer": [
+          "PLANT",
+          "MELON"
+        ],
+        "hands": [
+          [
+            "BUILD_PASTURE"
+          ],
+          [
+            "PICKUP",
+            "WHEAT",
+            1
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "PICKUP",
+            "SHEEP",
+            1
+          ],
+          [
+            "PLACE",
+            "COW",
+            1
+          ]
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            1
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "frame": 6,
+      "step": 5,
+      "left": {
+        "farmer": [
+          "FEED"
+        ],
+        "hands": [
+          [
+            "WATER"
+          ],
+          [
+            "PLANT",
+            "MELON"
+          ]
+        ],
+        "market": []
+      },
+      "right": {
+        "farmer": [
+          "WATER"
+        ],
+        "hands": [
+          [
+            "PLACE",
+            "COW",
+            1
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "PICKUP",
+            "WHEAT",
+            1
+          ],
+          [
+            "CARE"
+          ]
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            1
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "frame": 7,
+      "step": 6,
+      "left": {
+        "farmer": [
+          "CARE"
+        ],
+        "hands": [
+          [
+            "NORTH"
+          ],
+          [
+            "WATER"
+          ]
+        ],
+        "market": []
+      },
+      "right": {
+        "farmer": [
+          "WEST"
+        ],
+        "hands": [
+          [
+            "CARE"
+          ],
+          [
+            "BUILD_PASTURE"
+          ],
+          [
+            "PLANT",
+            "MELON"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "WEST"
+          ]
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            1
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "frame": 8,
+      "step": 7,
+      "left": {
+        "farmer": [
+          "NORTH"
+        ],
+        "hands": [
+          [
+            "PLANT",
+            "MELON"
+          ],
+          [
+            "NORTH"
+          ]
+        ],
+        "market": []
+      },
+      "right": {
+        "farmer": [
+          "PLANT",
+          "MELON"
+        ],
+        "hands": [
+          [
+            "WEST"
+          ],
+          [
+            "PLACE",
+            "SHEEP",
+            1
+          ],
+          [
+            "WATER"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "WEST"
+          ]
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            1
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "frame": 9,
+      "step": 8,
+      "left": {
+        "farmer": [
+          "BUILD_PASTURE"
+        ],
+        "hands": [
+          [
+            "WATER"
+          ],
+          [
+            "PLANT",
+            "MELON"
+          ]
+        ],
+        "market": []
+      },
+      "right": {
+        "farmer": [
+          "WATER"
+        ],
+        "hands": [
+          [
+            "NORTH"
+          ],
+          [
+            "FEED"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "BUILD_PASTURE"
+          ],
+          [
+            "WEST"
+          ]
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            1
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "frame": 10,
+      "step": 9,
+      "left": {
+        "farmer": [
+          "PLACE",
+          "SHEEP",
+          1
+        ],
+        "hands": [
+          [
+            "WEST"
+          ],
+          [
+            "WATER"
+          ]
+        ],
+        "market": []
+      },
+      "right": {
+        "farmer": [
+          "PASS"
+        ],
+        "hands": [
+          [
+            "PLANT",
+            "MELON"
+          ],
+          [
+            "CARE"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "PLACE",
+            "SHEEP",
+            1
+          ],
+          [
+            "PLANT",
+            "MELON"
+          ]
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            1
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "frame": 11,
+      "step": 10,
+      "left": {
+        "farmer": [
+          "FEED"
+        ],
+        "hands": [
+          [
+            "PLANT",
+            "WHEAT"
+          ],
+          [
+            "WEST"
+          ]
+        ],
+        "market": []
+      },
+      "right": {
+        "farmer": [
+          "PASS"
+        ],
+        "hands": [
+          [
+            "WATER"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "FEED"
+          ],
+          [
+            "WATER"
+          ]
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            1
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "frame": 12,
+      "step": 11,
+      "left": {
+        "farmer": [
+          "CARE"
+        ],
+        "hands": [
+          [
+            "WATER"
+          ],
+          [
+            "PLANT",
+            "WHEAT"
+          ]
+        ],
+        "market": []
+      },
+      "right": {
+        "farmer": [
+          "PASS"
+        ],
+        "hands": [
+          [
+            "WEST"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "CARE"
+          ],
+          [
+            "WEST"
+          ]
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            1
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "frame": 13,
+      "step": 12,
+      "left": {
+        "farmer": [
+          "NORTH"
+        ],
+        "hands": [
+          [
+            "SOUTH"
+          ],
+          [
+            "WATER"
+          ]
+        ],
+        "market": []
+      },
+      "right": {
+        "farmer": [
+          "PASS"
+        ],
+        "hands": [
+          [
+            "PLANT",
+            "MELON"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "PLANT",
+            "WHEAT"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "PLANT",
+            "MELON"
+          ]
+        ],
+        "market": []
+      }
+    },
+    {
+      "frame": 14,
+      "step": 13,
+      "left": {
+        "farmer": [
+          "BUILD_PASTURE"
+        ],
+        "hands": [
+          [
+            "PLANT",
+            "MELON"
+          ],
+          [
+            "SOUTH"
+          ]
+        ],
+        "market": []
+      },
+      "right": {
+        "farmer": [
+          "PASS"
+        ],
+        "hands": [
+          [
+            "WATER"
+          ],
+          [
+            "PLANT",
+            "MELON"
+          ],
+          [
+            "WATER"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "WATER"
+          ]
+        ],
+        "market": []
+      }
+    },
+    {
+      "frame": 15,
+      "step": 14,
+      "left": {
+        "farmer": [
+          "PLACE",
+          "SHEEP",
+          1
+        ],
+        "hands": [
+          [
+            "WATER"
+          ],
+          [
+            "PLANT",
+            "WHEAT"
+          ]
+        ],
+        "market": []
+      },
+      "right": {
+        "farmer": [
+          "PASS"
+        ],
+        "hands": [
+          [
+            "WEST"
+          ],
+          [
+            "WATER"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "NORTH"
+          ]
+        ],
+        "market": []
+      }
+    },
+    {
+      "frame": 16,
+      "step": 15,
+      "left": {
+        "farmer": [
+          "FEED"
+        ],
+        "hands": [
+          [
+            "WEST"
+          ],
+          [
+            "WATER"
+          ]
+        ],
+        "market": []
+      },
+      "right": {
+        "farmer": [
+          "PASS"
+        ],
+        "hands": [
+          [
+            "PLANT",
+            "MELON"
+          ],
+          [
+            "NORTH"
+          ],
+          [
+            "PLANT",
+            "WHEAT"
+          ],
+          [
+            "PLANT",
+            "MELON"
+          ],
+          [
+            "PLANT",
+            "WHEAT"
+          ]
+        ],
+        "market": []
+      }
+    },
+    {
+      "frame": 17,
+      "step": 16,
+      "left": {
+        "farmer": [
+          "CARE"
+        ],
+        "hands": [
+          [
+            "PLANT",
+            "WHEAT"
+          ],
+          [
+            "SOUTH"
+          ]
+        ],
+        "market": []
+      },
+      "right": {
+        "farmer": [
+          "PASS"
+        ],
+        "hands": [
+          [
+            "WATER"
+          ],
+          [
+            "PLANT",
+            "MELON"
+          ],
+          [
+            "WATER"
+          ],
+          [
+            "WATER"
+          ],
+          [
+            "WATER"
+          ]
+        ],
+        "market": []
+      }
+    },
+    {
+      "frame": 18,
+      "step": 17,
+      "left": {
+        "farmer": [
+          "SOUTH"
+        ],
+        "hands": [
+          [
+            "WATER"
+          ],
+          [
+            "SOUTH"
+          ]
+        ],
+        "market": []
+      },
+      "right": {
+        "farmer": [
+          "PASS"
+        ],
+        "hands": [
+          [
+            "WEST"
+          ],
+          [
+            "WATER"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "PASS"
+          ]
+        ],
+        "market": []
+      }
+    },
+    {
+      "frame": 19,
+      "step": 18,
+      "left": {
+        "farmer": [
+          "WEST"
+        ],
+        "hands": [
+          [
+            "SOUTH"
+          ],
+          [
+            "WEST"
+          ]
+        ],
+        "market": []
+      },
+      "right": {
+        "farmer": [
+          "PASS"
+        ],
+        "hands": [
+          [
+            "PLANT",
+            "WHEAT"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "PLANT",
+            "WHEAT"
+          ],
+          [
+            "PLANT",
+            "WHEAT"
+          ],
+          [
+            "PASS"
+          ]
+        ],
+        "market": []
+      }
+    },
+    {
+      "frame": 20,
+      "step": 19,
+      "left": {
+        "farmer": [
+          "SOUTH"
+        ],
+        "hands": [
+          [
+            "PLANT",
+            "MELON"
+          ],
+          [
+            "SOUTH"
+          ]
+        ],
+        "market": []
+      },
+      "right": {
+        "farmer": [
+          "PASS"
+        ],
+        "hands": [
+          [
+            "WATER"
+          ],
+          [
+            "PLANT",
+            "MELON"
+          ],
+          [
+            "WATER"
+          ],
+          [
+            "WATER"
+          ],
+          [
+            "PASS"
+          ]
+        ],
+        "market": []
+      }
+    }
+  ]
+}

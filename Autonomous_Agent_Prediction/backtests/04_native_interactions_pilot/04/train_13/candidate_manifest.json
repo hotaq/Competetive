@@ -1,0 +1,77 @@
+{
+  "classes": [
+    0,
+    1
+  ],
+  "rows": 10000,
+  "features": 9,
+  "candidates": [
+    {
+      "file": "candidate_blend_top4.csv",
+      "name": "blend_top4",
+      "family": "blend",
+      "oof_auc": 0.681136,
+      "fold_auc": [],
+      "fold_auc_std": null,
+      "test_rank_correlation_to_best": 0.9740778
+    },
+    {
+      "file": "candidate_catboost_d8.csv",
+      "name": "catboost_d8",
+      "family": "catboost",
+      "oof_auc": 0.672168,
+      "fold_auc": [
+        0.692,
+        0.6364,
+        0.7232,
+        0.7128,
+        0.7882
+      ],
+      "fold_auc_std": 0.04906512,
+      "test_rank_correlation_to_best": 1.0
+    },
+    {
+      "file": "candidate_logistic.csv",
+      "name": "logistic",
+      "family": "linear",
+      "oof_auc": 0.662016,
+      "fold_auc": [
+        0.6476,
+        0.624,
+        0.6276,
+        0.7044,
+        0.7208
+      ],
+      "fold_auc_std": 0.04012094,
+      "test_rank_correlation_to_best": 0.81472727
+    }
+  ],
+  "diagnostics": {
+    "best_core": {
+      "name": "catboost_d8",
+      "family": "catboost",
+      "oof_auc": 0.672168
+    },
+    "blend_gate": {
+      "accepted": true,
+      "name": "blend_top4",
+      "oof_auc": 0.681136,
+      "gain": 0.008968,
+      "test_rank_correlation_to_best": 0.9740778
+    },
+    "interaction_gate": {
+      "accepted": false,
+      "name": "interaction_te",
+      "oof_auc": 0.641744,
+      "standalone_gain": -0.030424,
+      "blend_auc": 0.672632,
+      "blend_gain": 0.000464,
+      "fold_auc_std": 0.03043619,
+      "test_rank_correlation": 0.85561023,
+      "stable": true,
+      "diverse": true,
+      "improves": false
+    }
+  },
+  "failures": []
+}

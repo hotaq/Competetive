@@ -1,0 +1,72 @@
+{
+  "model": "catboost_pairwise_te_cpu",
+  "train_rows": 630000,
+  "test_rows": 270000,
+  "original_rows": 10000,
+  "features": 176,
+  "base_features_after_pair_drop": 41,
+  "pair_columns": 135,
+  "target_encoder_output_columns": 405,
+  "params": {
+    "folds": 5,
+    "iterations": 650,
+    "learning_rate": 0.045,
+    "depth": 8,
+    "l2_leaf_reg": 4.0,
+    "early_stopping_rounds": 100,
+    "orig_row_weight": 0.35,
+    "max_pairs": 135,
+    "seed": 202,
+    "thread_count": -1,
+    "output_dir": "/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Irrigation/artifacts/catboost_pairwise_te_cpu_650",
+    "copy_submission": false
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "raw_balanced_accuracy": 0.976479255194404,
+      "tree_count": 648,
+      "seconds": 871.765762090683
+    },
+    {
+      "fold": 2,
+      "raw_balanced_accuracy": 0.9783415265970404,
+      "tree_count": 650,
+      "seconds": 833.9749052524567
+    },
+    {
+      "fold": 3,
+      "raw_balanced_accuracy": 0.978731638583117,
+      "tree_count": 650,
+      "seconds": 861.0610802173615
+    },
+    {
+      "fold": 4,
+      "raw_balanced_accuracy": 0.9777092510392897,
+      "tree_count": 648,
+      "seconds": 11319.09031701088
+    },
+    {
+      "fold": 5,
+      "raw_balanced_accuracy": 0.9771809397514349,
+      "tree_count": 649,
+      "seconds": 12955.44889497757
+    }
+  ],
+  "raw_oof_balanced_accuracy": 0.9776885764009772,
+  "raw_oof_accuracy": 0.9840031746031747,
+  "bias": [
+    -0.37000000000000005,
+    -0.7,
+    -0.01
+  ],
+  "tuned_oof_balanced_accuracy": 0.9780093043883111,
+  "tuned_oof_accuracy": 0.982984126984127,
+  "submission": "artifacts/catboost_pairwise_te_cpu_650/submission_catboost_pairwise_te_cpu.csv",
+  "elapsed_seconds": 26892.120765209198,
+  "test_label_counts": {
+    "Low": 159532,
+    "Medium": 100266,
+    "High": 10202
+  }
+}

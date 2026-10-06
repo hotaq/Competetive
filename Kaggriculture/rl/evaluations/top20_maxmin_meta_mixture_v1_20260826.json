@@ -1,0 +1,525 @@
+{
+  "objective": "maximize worst-team expected win rate, then league mean",
+  "policies": [
+    {
+      "label": "v12_current_top20_league4_20260825",
+      "train_report": "rl/evaluations/v12_current_top20_league4_20260825.json",
+      "validation_report": "rl/evaluations/v12_holdout_top20_offset4_20260825.json",
+      "weight": 0.0
+    },
+    {
+      "label": "v16_current_top20_league4_20260825",
+      "train_report": "rl/evaluations/v16_current_top20_league4_20260825.json",
+      "validation_report": "rl/evaluations/v16_holdout_top20_offset4_20260825.json",
+      "weight": 0.33333333233333334
+    },
+    {
+      "label": "v19_current_top20_league4_20260825",
+      "train_report": "rl/evaluations/v19_current_top20_league4_20260825.json",
+      "validation_report": "rl/evaluations/v19_holdout_top20_offset4_20260825.json",
+      "weight": 0.0
+    },
+    {
+      "label": "v20_taiseiu99297663_repaired_dev_top20_league4_20260825",
+      "train_report": "rl/evaluations/v20_taiseiu99297663_repaired_dev_top20_league4_20260825.json",
+      "validation_report": "rl/evaluations/v20_taiseiu99297663_repaired_holdout_top20_offset4_20260825.json",
+      "weight": 0.6666666676666666
+    }
+  ],
+  "schema_version": 1,
+  "solver_floor": 0.33333333233333334,
+  "train": {
+    "best_team_expected_win_rate": 1.0,
+    "mean_expected_win_rate": 0.5791666667291667,
+    "teams": [
+      {
+        "expected_win_rate": 0.3333333338333333,
+        "policy_win_rates": [
+          0.0,
+          0.0,
+          0.0,
+          0.5
+        ],
+        "snapshot_rank": 1,
+        "team_id": 16714457,
+        "team_name": "Crop Dusta"
+      },
+      {
+        "expected_win_rate": 0.6666666669166667,
+        "policy_win_rates": [
+          0.5,
+          0.5,
+          0.75,
+          0.75
+        ],
+        "snapshot_rank": 2,
+        "team_id": 16644287,
+        "team_name": "Ryo Hasegawa"
+      },
+      {
+        "expected_win_rate": 0.6666666661666667,
+        "policy_win_rates": [
+          0.75,
+          1.0,
+          0.75,
+          0.5
+        ],
+        "snapshot_rank": 3,
+        "team_id": 16705390,
+        "team_name": "Subramanya N"
+      },
+      {
+        "expected_win_rate": 0.33333333233333334,
+        "policy_win_rates": [
+          0.75,
+          1.0,
+          1.0,
+          0.0
+        ],
+        "snapshot_rank": 4,
+        "team_id": 16665224,
+        "team_name": "tyz123456"
+      },
+      {
+        "expected_win_rate": 0.8333333330833332,
+        "policy_win_rates": [
+          1.0,
+          1.0,
+          1.0,
+          0.75
+        ],
+        "snapshot_rank": 5,
+        "team_id": 16711376,
+        "team_name": "Arman Tuganbaev"
+      },
+      {
+        "expected_win_rate": 0.5,
+        "policy_win_rates": [
+          0.75,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "snapshot_rank": 6,
+        "team_id": 16686827,
+        "team_name": "Kronki"
+      },
+      {
+        "expected_win_rate": 0.75,
+        "policy_win_rates": [
+          0.5,
+          0.75,
+          0.5,
+          0.75
+        ],
+        "snapshot_rank": 7,
+        "team_id": 16632245,
+        "team_name": "u"
+      },
+      {
+        "expected_win_rate": 0.50000000075,
+        "policy_win_rates": [
+          0.0,
+          0.0,
+          0.0,
+          0.75
+        ],
+        "snapshot_rank": 8,
+        "team_id": 16748154,
+        "team_name": "taiseiu"
+      },
+      {
+        "expected_win_rate": 0.5833333338333333,
+        "policy_win_rates": [
+          0.25,
+          0.25,
+          0.25,
+          0.75
+        ],
+        "snapshot_rank": 9,
+        "team_id": 16663649,
+        "team_name": "Akhil Chinta"
+      },
+      {
+        "expected_win_rate": 1.0,
+        "policy_win_rates": [
+          0.5,
+          1.0,
+          0.75,
+          1.0
+        ],
+        "snapshot_rank": 10,
+        "team_id": 16655477,
+        "team_name": "Aurora"
+      },
+      {
+        "expected_win_rate": 0.5833333338333333,
+        "policy_win_rates": [
+          0.25,
+          0.25,
+          0.25,
+          0.75
+        ],
+        "snapshot_rank": 11,
+        "team_id": 16762957,
+        "team_name": "Yizuki"
+      },
+      {
+        "expected_win_rate": 0.5833333330833332,
+        "policy_win_rates": [
+          0.75,
+          0.75,
+          0.75,
+          0.5
+        ],
+        "snapshot_rank": 12,
+        "team_id": 16623716,
+        "team_name": "tetsuya"
+      },
+      {
+        "expected_win_rate": 0.33333333308333335,
+        "policy_win_rates": [
+          0.25,
+          0.5,
+          0.5,
+          0.25
+        ],
+        "snapshot_rank": 13,
+        "team_id": 16732578,
+        "team_name": "nao.kwmr"
+      },
+      {
+        "expected_win_rate": 0.5833333338333333,
+        "policy_win_rates": [
+          0.75,
+          0.25,
+          0.25,
+          0.75
+        ],
+        "snapshot_rank": 14,
+        "team_id": 16727266,
+        "team_name": "ebisu_ya"
+      },
+      {
+        "expected_win_rate": 0.41666666616666664,
+        "policy_win_rates": [
+          0.5,
+          0.75,
+          0.75,
+          0.25
+        ],
+        "snapshot_rank": 15,
+        "team_id": 16673205,
+        "team_name": "Arda Ceylan"
+      },
+      {
+        "expected_win_rate": 0.41666666691666665,
+        "policy_win_rates": [
+          0.25,
+          0.25,
+          0.25,
+          0.5
+        ],
+        "snapshot_rank": 16,
+        "team_id": 16750416,
+        "team_name": "G!vIOne"
+      },
+      {
+        "expected_win_rate": 0.5,
+        "policy_win_rates": [
+          0.75,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "snapshot_rank": 17,
+        "team_id": 16662883,
+        "team_name": "OceanMix"
+      },
+      {
+        "expected_win_rate": 0.33333333308333335,
+        "policy_win_rates": [
+          0.25,
+          0.5,
+          0.5,
+          0.25
+        ],
+        "snapshot_rank": 18,
+        "team_id": 16671767,
+        "team_name": "Kaileh57"
+      },
+      {
+        "expected_win_rate": 0.8333333338333333,
+        "policy_win_rates": [
+          0.5,
+          0.5,
+          0.25,
+          1.0
+        ],
+        "snapshot_rank": 19,
+        "team_id": 16641138,
+        "team_name": "Bharath Varma"
+      },
+      {
+        "expected_win_rate": 0.8333333338333333,
+        "policy_win_rates": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "snapshot_rank": 20,
+        "team_id": 16655277,
+        "team_name": "GUAM"
+      }
+    ],
+    "worst_team_expected_win_rate": 0.33333333233333334
+  },
+  "validation": {
+    "best_team_expected_win_rate": 0.8333333338333333,
+    "mean_expected_win_rate": 0.5541666667666666,
+    "teams": [
+      {
+        "expected_win_rate": 0.33333333308333335,
+        "policy_win_rates": [
+          0.5,
+          0.5,
+          0.5,
+          0.25
+        ],
+        "snapshot_rank": 1,
+        "team_id": 16714457,
+        "team_name": "Crop Dusta"
+      },
+      {
+        "expected_win_rate": 0.6666666669166667,
+        "policy_win_rates": [
+          0.25,
+          0.5,
+          0.75,
+          0.75
+        ],
+        "snapshot_rank": 2,
+        "team_id": 16644287,
+        "team_name": "Ryo Hasegawa"
+      },
+      {
+        "expected_win_rate": 0.25,
+        "policy_win_rates": [
+          1.0,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "snapshot_rank": 3,
+        "team_id": 16705390,
+        "team_name": "Subramanya N"
+      },
+      {
+        "expected_win_rate": 0.25,
+        "policy_win_rates": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "snapshot_rank": 4,
+        "team_id": 16665224,
+        "team_name": "tyz123456"
+      },
+      {
+        "expected_win_rate": 0.6666666661666667,
+        "policy_win_rates": [
+          1.0,
+          1.0,
+          1.0,
+          0.5
+        ],
+        "snapshot_rank": 5,
+        "team_id": 16711376,
+        "team_name": "Arman Tuganbaev"
+      },
+      {
+        "expected_win_rate": 0.50000000075,
+        "policy_win_rates": [
+          0.75,
+          0.0,
+          0.25,
+          0.75
+        ],
+        "snapshot_rank": 6,
+        "team_id": 16686827,
+        "team_name": "Kronki"
+      },
+      {
+        "expected_win_rate": 0.5,
+        "policy_win_rates": [
+          0.25,
+          0.5,
+          0.25,
+          0.5
+        ],
+        "snapshot_rank": 7,
+        "team_id": 16632245,
+        "team_name": "u"
+      },
+      {
+        "expected_win_rate": 0.8333333338333333,
+        "policy_win_rates": [
+          0.0,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "snapshot_rank": 8,
+        "team_id": 16748154,
+        "team_name": "taiseiu"
+      },
+      {
+        "expected_win_rate": 0.8333333338333333,
+        "policy_win_rates": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "snapshot_rank": 9,
+        "team_id": 16663649,
+        "team_name": "Akhil Chinta"
+      },
+      {
+        "expected_win_rate": 0.75,
+        "policy_win_rates": [
+          0.25,
+          0.75,
+          0.75,
+          0.75
+        ],
+        "snapshot_rank": 10,
+        "team_id": 16655477,
+        "team_name": "Aurora"
+      },
+      {
+        "expected_win_rate": 0.5833333338333333,
+        "policy_win_rates": [
+          0.75,
+          0.25,
+          0.25,
+          0.75
+        ],
+        "snapshot_rank": 11,
+        "team_id": 16762957,
+        "team_name": "Yizuki"
+      },
+      {
+        "expected_win_rate": 0.5833333330833332,
+        "policy_win_rates": [
+          0.75,
+          0.75,
+          0.75,
+          0.5
+        ],
+        "snapshot_rank": 12,
+        "team_id": 16623716,
+        "team_name": "tetsuya"
+      },
+      {
+        "expected_win_rate": 0.08333333308333334,
+        "policy_win_rates": [
+          0.5,
+          0.25,
+          0.5,
+          0.0
+        ],
+        "snapshot_rank": 13,
+        "team_id": 16732578,
+        "team_name": "nao.kwmr"
+      },
+      {
+        "expected_win_rate": 0.8333333338333333,
+        "policy_win_rates": [
+          0.75,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "snapshot_rank": 14,
+        "team_id": 16727266,
+        "team_name": "ebisu_ya"
+      },
+      {
+        "expected_win_rate": 0.49999999925,
+        "policy_win_rates": [
+          0.5,
+          1.0,
+          0.75,
+          0.25
+        ],
+        "snapshot_rank": 15,
+        "team_id": 16673205,
+        "team_name": "Arda Ceylan"
+      },
+      {
+        "expected_win_rate": 0.75,
+        "policy_win_rates": [
+          0.25,
+          0.75,
+          0.5,
+          0.75
+        ],
+        "snapshot_rank": 16,
+        "team_id": 16750416,
+        "team_name": "G!vIOne"
+      },
+      {
+        "expected_win_rate": 0.5833333338333333,
+        "policy_win_rates": [
+          0.5,
+          0.25,
+          0.25,
+          0.75
+        ],
+        "snapshot_rank": 17,
+        "team_id": 16662883,
+        "team_name": "OceanMix"
+      },
+      {
+        "expected_win_rate": 0.6666666669166667,
+        "policy_win_rates": [
+          0.75,
+          0.5,
+          0.5,
+          0.75
+        ],
+        "snapshot_rank": 18,
+        "team_id": 16671767,
+        "team_name": "Kaileh57"
+      },
+      {
+        "expected_win_rate": 0.5,
+        "policy_win_rates": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "snapshot_rank": 19,
+        "team_id": 16641138,
+        "team_name": "Bharath Varma"
+      },
+      {
+        "expected_win_rate": 0.41666666691666665,
+        "policy_win_rates": [
+          0.25,
+          0.25,
+          0.25,
+          0.5
+        ],
+        "snapshot_rank": 20,
+        "team_id": 16655277,
+        "team_name": "GUAM"
+      }
+    ],
+    "worst_team_expected_win_rate": 0.08333333308333334
+  }
+}

@@ -1,0 +1,7181 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-08-26T15:52:11.191488+00:00",
+  "protocol": {
+    "status": "post-unblind development analysis",
+    "rows": 160,
+    "route_schedules": [
+      "base",
+      "a120",
+      "b120",
+      "c120"
+    ],
+    "families": [
+      "v59",
+      "v67"
+    ],
+    "branch_step": 120,
+    "observable_selector_features": true,
+    "opponent_identity_feature": false,
+    "team_or_episode_identity_feature": false,
+    "cross_validation": "leave-one-team-out diagnostic on same development160",
+    "no_new_holdout_opened": true,
+    "policy_files_modified": false,
+    "uploaded": false
+  },
+  "sources": {
+    "league_manifest": "replays/top20_live_refresh_after_v67_20260826/manifest.json",
+    "league_manifest_sha256": "da57689a618f76695c5350cdb6d9a6be71eefd25c12e21e809e2c9d40c97dc9b",
+    "team_manifest_name": "manifest_novel.json",
+    "v59_actual_report": "rl/evaluations/v59_post_unblind_current_top20_novel160_20260826.json",
+    "v67_actual_report": "rl/evaluations/v67_standalone_third_holdout_novel160rows_20260826.json",
+    "v59_selector_report": "rl/evaluations/v59_causal_route_selector_b120_old80_to_fresh95_20260826.json",
+    "base_agent": "submissions/meta_v54_market_splice_state_gate_local/main.py"
+  },
+  "runtime": {
+    "aggregation_wall_seconds": 27.256491899490356,
+    "route_worker_seconds": {
+      "v59:base": 351.69128131866455,
+      "v59:a120": 330.2626688480377,
+      "v59:b120": 347.8502609729767,
+      "v59:c120": 338.9204783439636,
+      "v67:base": 428.42587208747864,
+      "v67:a120": 408.9160850048065,
+      "v67:b120": 425.13841819763184,
+      "v67:c120": 417.1762127876282
+    }
+  },
+  "validation": {
+    "key_count": 160,
+    "all_sources_cover_exact_same_keys": true,
+    "actual_matches_selected_fixed_route": {
+      "v59": {
+        "matched_rows": 160,
+        "nonzero_differences": 0,
+        "max_abs_margin_difference": 0.0,
+        "selected_route_counts": {
+          "base": 139,
+          "a120": 0,
+          "b120": 0,
+          "c120": 21
+        }
+      },
+      "v67": {
+        "matched_rows": 160,
+        "nonzero_differences": 0,
+        "max_abs_margin_difference": 0.0,
+        "selected_route_counts": {
+          "base": 139,
+          "a120": 0,
+          "b120": 0,
+          "c120": 21
+        }
+      }
+    },
+    "all_fixed_rows_zero_sanitized_steps": true,
+    "all_fixed_rows_719_transitions": true
+  },
+  "families": {
+    "v59": {
+      "static_routes": {
+        "base": {
+          "games": 160,
+          "wins": 100,
+          "draws": 0,
+          "losses": 60,
+          "win_rate": 0.625,
+          "mean_margin": 3728.6875,
+          "median_margin": 1412.5,
+          "worst_margin": -52353.0,
+          "cvar10_margin": -25854.125,
+          "choice_counts": {
+            "base": 160,
+            "a120": 0,
+            "b120": 0,
+            "c120": 0
+          }
+        },
+        "a120": {
+          "games": 160,
+          "wins": 24,
+          "draws": 0,
+          "losses": 136,
+          "win_rate": 0.15,
+          "mean_margin": -20153.26875,
+          "median_margin": -18366.0,
+          "worst_margin": -113656.0,
+          "cvar10_margin": -64304.375,
+          "choice_counts": {
+            "base": 0,
+            "a120": 160,
+            "b120": 0,
+            "c120": 0
+          }
+        },
+        "b120": {
+          "games": 160,
+          "wins": 91,
+          "draws": 0,
+          "losses": 69,
+          "win_rate": 0.56875,
+          "mean_margin": 207.08125,
+          "median_margin": 814.5,
+          "worst_margin": -90359.0,
+          "cvar10_margin": -32432.0,
+          "choice_counts": {
+            "base": 0,
+            "a120": 0,
+            "b120": 160,
+            "c120": 0
+          }
+        },
+        "c120": {
+          "games": 160,
+          "wins": 64,
+          "draws": 0,
+          "losses": 96,
+          "win_rate": 0.4,
+          "mean_margin": -4098.7,
+          "median_margin": -3500.5,
+          "worst_margin": -55863.0,
+          "cvar10_margin": -39155.125,
+          "choice_counts": {
+            "base": 0,
+            "a120": 0,
+            "b120": 0,
+            "c120": 160
+          }
+        }
+      },
+      "oracle": {
+        "games": 160,
+        "wins": 134,
+        "draws": 0,
+        "losses": 26,
+        "win_rate": 0.8375,
+        "mean_margin": 11519.3875,
+        "median_margin": 5560.5,
+        "worst_margin": -15748.0,
+        "cvar10_margin": -4596.0,
+        "choice_counts": {
+          "base": 76,
+          "a120": 4,
+          "b120": 29,
+          "c120": 51
+        }
+      },
+      "route_vs_base": {
+        "base": {
+          "base_loss_to_route_win": 0,
+          "base_win_to_route_loss": 0,
+          "margin_improved": 0,
+          "margin_worsened": 0
+        },
+        "a120": {
+          "base_loss_to_route_win": 4,
+          "base_win_to_route_loss": 80,
+          "margin_improved": 17,
+          "margin_worsened": 143
+        },
+        "b120": {
+          "base_loss_to_route_win": 16,
+          "base_win_to_route_loss": 25,
+          "margin_improved": 47,
+          "margin_worsened": 113
+        },
+        "c120": {
+          "base_loss_to_route_win": 22,
+          "base_win_to_route_loss": 58,
+          "margin_improved": 58,
+          "margin_worsened": 102
+        }
+      },
+      "actual_selector": {
+        "games": 160,
+        "wins": 106,
+        "draws": 0,
+        "losses": 54,
+        "win_rate": 0.6625,
+        "mean_margin": 6251.75,
+        "median_margin": 2009.0,
+        "worst_margin": -52353.0,
+        "cvar10_margin": -20429.625,
+        "choice_counts": {
+          "base": 139,
+          "a120": 0,
+          "b120": 0,
+          "c120": 21
+        }
+      }
+    },
+    "v67": {
+      "static_routes": {
+        "base": {
+          "games": 160,
+          "wins": 100,
+          "draws": 0,
+          "losses": 60,
+          "win_rate": 0.625,
+          "mean_margin": 3170.73125,
+          "median_margin": 2009.0,
+          "worst_margin": -52486.0,
+          "cvar10_margin": -26182.0,
+          "choice_counts": {
+            "base": 160,
+            "a120": 0,
+            "b120": 0,
+            "c120": 0
+          }
+        },
+        "a120": {
+          "games": 160,
+          "wins": 24,
+          "draws": 0,
+          "losses": 136,
+          "win_rate": 0.15,
+          "mean_margin": -20169.53125,
+          "median_margin": -18388.0,
+          "worst_margin": -113656.0,
+          "cvar10_margin": -64306.875,
+          "choice_counts": {
+            "base": 0,
+            "a120": 160,
+            "b120": 0,
+            "c120": 0
+          }
+        },
+        "b120": {
+          "games": 160,
+          "wins": 94,
+          "draws": 0,
+          "losses": 66,
+          "win_rate": 0.5875,
+          "mean_margin": 595.10625,
+          "median_margin": 1465.5,
+          "worst_margin": -90365.0,
+          "cvar10_margin": -32310.375,
+          "choice_counts": {
+            "base": 0,
+            "a120": 0,
+            "b120": 160,
+            "c120": 0
+          }
+        },
+        "c120": {
+          "games": 160,
+          "wins": 64,
+          "draws": 0,
+          "losses": 96,
+          "win_rate": 0.4,
+          "mean_margin": -4098.93125,
+          "median_margin": -3500.5,
+          "worst_margin": -55863.0,
+          "cvar10_margin": -39155.125,
+          "choice_counts": {
+            "base": 0,
+            "a120": 0,
+            "b120": 0,
+            "c120": 160
+          }
+        }
+      },
+      "oracle": {
+        "games": 160,
+        "wins": 134,
+        "draws": 0,
+        "losses": 26,
+        "win_rate": 0.8375,
+        "mean_margin": 11008.9125,
+        "median_margin": 5744.0,
+        "worst_margin": -15718.0,
+        "cvar10_margin": -4989.9375,
+        "choice_counts": {
+          "base": 75,
+          "a120": 6,
+          "b120": 32,
+          "c120": 47
+        }
+      },
+      "route_vs_base": {
+        "base": {
+          "base_loss_to_route_win": 0,
+          "base_win_to_route_loss": 0,
+          "margin_improved": 0,
+          "margin_worsened": 0
+        },
+        "a120": {
+          "base_loss_to_route_win": 6,
+          "base_win_to_route_loss": 82,
+          "margin_improved": 19,
+          "margin_worsened": 141
+        },
+        "b120": {
+          "base_loss_to_route_win": 14,
+          "base_win_to_route_loss": 20,
+          "margin_improved": 51,
+          "margin_worsened": 109
+        },
+        "c120": {
+          "base_loss_to_route_win": 21,
+          "base_win_to_route_loss": 57,
+          "margin_improved": 54,
+          "margin_worsened": 106
+        }
+      },
+      "actual_selector": {
+        "games": 160,
+        "wins": 106,
+        "draws": 0,
+        "losses": 54,
+        "win_rate": 0.6625,
+        "mean_margin": 5704.13125,
+        "median_margin": 2609.5,
+        "worst_margin": -52486.0,
+        "cvar10_margin": -21095.1875,
+        "choice_counts": {
+          "base": 139,
+          "a120": 0,
+          "b120": 0,
+          "c120": 21
+        }
+      }
+    }
+  },
+  "cross_family": {
+    "base": {
+      "v59": {
+        "games": 160,
+        "wins": 100,
+        "draws": 0,
+        "losses": 60,
+        "win_rate": 0.625,
+        "mean_margin": 3728.6875,
+        "median_margin": 1412.5,
+        "worst_margin": -52353.0,
+        "cvar10_margin": -25854.125
+      },
+      "v67": {
+        "games": 160,
+        "wins": 100,
+        "draws": 0,
+        "losses": 60,
+        "win_rate": 0.625,
+        "mean_margin": 3170.73125,
+        "median_margin": 2009.0,
+        "worst_margin": -52486.0,
+        "cvar10_margin": -26182.0
+      },
+      "v67_minus_v59_mean_margin": -557.95625,
+      "v67_rescues_v59_loss": 9,
+      "v67_regresses_v59_win": 9
+    },
+    "a120": {
+      "v59": {
+        "games": 160,
+        "wins": 24,
+        "draws": 0,
+        "losses": 136,
+        "win_rate": 0.15,
+        "mean_margin": -20153.26875,
+        "median_margin": -18366.0,
+        "worst_margin": -113656.0,
+        "cvar10_margin": -64304.375
+      },
+      "v67": {
+        "games": 160,
+        "wins": 24,
+        "draws": 0,
+        "losses": 136,
+        "win_rate": 0.15,
+        "mean_margin": -20169.53125,
+        "median_margin": -18388.0,
+        "worst_margin": -113656.0,
+        "cvar10_margin": -64306.875
+      },
+      "v67_minus_v59_mean_margin": -16.2625,
+      "v67_rescues_v59_loss": 0,
+      "v67_regresses_v59_win": 0
+    },
+    "b120": {
+      "v59": {
+        "games": 160,
+        "wins": 91,
+        "draws": 0,
+        "losses": 69,
+        "win_rate": 0.56875,
+        "mean_margin": 207.08125,
+        "median_margin": 814.5,
+        "worst_margin": -90359.0,
+        "cvar10_margin": -32432.0
+      },
+      "v67": {
+        "games": 160,
+        "wins": 94,
+        "draws": 0,
+        "losses": 66,
+        "win_rate": 0.5875,
+        "mean_margin": 595.10625,
+        "median_margin": 1465.5,
+        "worst_margin": -90365.0,
+        "cvar10_margin": -32310.375
+      },
+      "v67_minus_v59_mean_margin": 388.025,
+      "v67_rescues_v59_loss": 9,
+      "v67_regresses_v59_win": 6
+    },
+    "c120": {
+      "v59": {
+        "games": 160,
+        "wins": 64,
+        "draws": 0,
+        "losses": 96,
+        "win_rate": 0.4,
+        "mean_margin": -4098.7,
+        "median_margin": -3500.5,
+        "worst_margin": -55863.0,
+        "cvar10_margin": -39155.125
+      },
+      "v67": {
+        "games": 160,
+        "wins": 64,
+        "draws": 0,
+        "losses": 96,
+        "win_rate": 0.4,
+        "mean_margin": -4098.93125,
+        "median_margin": -3500.5,
+        "worst_margin": -55863.0,
+        "cvar10_margin": -39155.125
+      },
+      "v67_minus_v59_mean_margin": -0.23125,
+      "v67_rescues_v59_loss": 0,
+      "v67_regresses_v59_win": 0
+    }
+  },
+  "failure_rescues": {
+    "v59": {
+      "actual_losses_rescuable_by_fixed_route": 28,
+      "actual_loss_rescues": [
+        {
+          "episode_id": 99890702,
+          "top1_seat": 0,
+          "team_id": 16714457,
+          "team_name": "Crop Dusta",
+          "actual_margin": -29671.0,
+          "best_route": "a120",
+          "best_route_margin": 27232.0,
+          "improvement": 56903.0
+        },
+        {
+          "episode_id": 99918119,
+          "top1_seat": 0,
+          "team_id": 16730065,
+          "team_name": "Blu3s",
+          "actual_margin": -15135.0,
+          "best_route": "b120",
+          "best_route_margin": 41214.0,
+          "improvement": 56349.0
+        },
+        {
+          "episode_id": 100084756,
+          "top1_seat": 1,
+          "team_id": 16671476,
+          "team_name": "Mingkang YAN",
+          "actual_margin": -31739.0,
+          "best_route": "b120",
+          "best_route_margin": 23646.0,
+          "improvement": 55385.0
+        },
+        {
+          "episode_id": 99920421,
+          "top1_seat": 0,
+          "team_id": 16705390,
+          "team_name": "Subramanya N",
+          "actual_margin": -52353.0,
+          "best_route": "c120",
+          "best_route_margin": 335.0,
+          "improvement": 52688.0
+        },
+        {
+          "episode_id": 99954645,
+          "top1_seat": 0,
+          "team_id": 16644287,
+          "team_name": "Ryo Hasegawa",
+          "actual_margin": -13452.0,
+          "best_route": "b120",
+          "best_route_margin": 18971.0,
+          "improvement": 32423.0
+        },
+        {
+          "episode_id": 100134962,
+          "top1_seat": 1,
+          "team_id": 16665224,
+          "team_name": "tyz123456",
+          "actual_margin": -25185.0,
+          "best_route": "c120",
+          "best_route_margin": 3278.0,
+          "improvement": 28463.0
+        },
+        {
+          "episode_id": 99954642,
+          "top1_seat": 0,
+          "team_id": 16644287,
+          "team_name": "Ryo Hasegawa",
+          "actual_margin": -1388.0,
+          "best_route": "b120",
+          "best_route_margin": 26808.0,
+          "improvement": 28196.0
+        },
+        {
+          "episode_id": 100134962,
+          "top1_seat": 0,
+          "team_id": 16715733,
+          "team_name": "peikopon",
+          "actual_margin": -26611.0,
+          "best_route": "c120",
+          "best_route_margin": 995.0,
+          "improvement": 27606.0
+        },
+        {
+          "episode_id": 99920420,
+          "top1_seat": 1,
+          "team_id": 16623716,
+          "team_name": "tetsuya",
+          "actual_margin": -17643.0,
+          "best_route": "a120",
+          "best_route_margin": 7118.0,
+          "improvement": 24761.0
+        },
+        {
+          "episode_id": 99835928,
+          "top1_seat": 0,
+          "team_id": 16623716,
+          "team_name": "tetsuya",
+          "actual_margin": -12398.0,
+          "best_route": "b120",
+          "best_route_margin": 10880.0,
+          "improvement": 23278.0
+        },
+        {
+          "episode_id": 100052686,
+          "top1_seat": 1,
+          "team_id": 16671476,
+          "team_name": "Mingkang YAN",
+          "actual_margin": -5461.0,
+          "best_route": "c120",
+          "best_route_margin": 17140.0,
+          "improvement": 22601.0
+        },
+        {
+          "episode_id": 99765183,
+          "top1_seat": 0,
+          "team_id": 16705390,
+          "team_name": "Subramanya N",
+          "actual_margin": -15582.0,
+          "best_route": "a120",
+          "best_route_margin": 5356.0,
+          "improvement": 20938.0
+        },
+        {
+          "episode_id": 100000132,
+          "top1_seat": 0,
+          "team_id": 16727266,
+          "team_name": "ebisu_ya",
+          "actual_margin": -16831.0,
+          "best_route": "c120",
+          "best_route_margin": 3159.0,
+          "improvement": 19990.0
+        },
+        {
+          "episode_id": 100134929,
+          "top1_seat": 1,
+          "team_id": 16671767,
+          "team_name": "Kaileh57",
+          "actual_margin": -973.0,
+          "best_route": "c120",
+          "best_route_margin": 18703.0,
+          "improvement": 19676.0
+        },
+        {
+          "episode_id": 100025241,
+          "top1_seat": 1,
+          "team_id": 16704466,
+          "team_name": "QQ Farming",
+          "actual_margin": -6821.0,
+          "best_route": "c120",
+          "best_route_margin": 12801.0,
+          "improvement": 19622.0
+        },
+        {
+          "episode_id": 99788036,
+          "top1_seat": 1,
+          "team_id": 16714457,
+          "team_name": "Crop Dusta",
+          "actual_margin": -9841.0,
+          "best_route": "c120",
+          "best_route_margin": 3724.0,
+          "improvement": 13565.0
+        },
+        {
+          "episode_id": 100034464,
+          "top1_seat": 0,
+          "team_id": 16715733,
+          "team_name": "peikopon",
+          "actual_margin": -7860.0,
+          "best_route": "b120",
+          "best_route_margin": 4345.0,
+          "improvement": 12205.0
+        },
+        {
+          "episode_id": 100093836,
+          "top1_seat": 0,
+          "team_id": 16641077,
+          "team_name": "lucaskna",
+          "actual_margin": -8036.0,
+          "best_route": "c120",
+          "best_route_margin": 3139.0,
+          "improvement": 11175.0
+        },
+        {
+          "episode_id": 100091529,
+          "top1_seat": 1,
+          "team_id": 16641077,
+          "team_name": "lucaskna",
+          "actual_margin": -1222.0,
+          "best_route": "c120",
+          "best_route_margin": 5283.0,
+          "improvement": 6505.0
+        },
+        {
+          "episode_id": 100084749,
+          "top1_seat": 1,
+          "team_id": 16715733,
+          "team_name": "peikopon",
+          "actual_margin": -2474.0,
+          "best_route": "b120",
+          "best_route_margin": 3943.0,
+          "improvement": 6417.0
+        },
+        {
+          "episode_id": 100084650,
+          "top1_seat": 0,
+          "team_id": 16641077,
+          "team_name": "lucaskna",
+          "actual_margin": -496.0,
+          "best_route": "c120",
+          "best_route_margin": 4496.0,
+          "improvement": 4992.0
+        },
+        {
+          "episode_id": 99988684,
+          "top1_seat": 1,
+          "team_id": 16762957,
+          "team_name": "Yizuki",
+          "actual_margin": -1594.0,
+          "best_route": "base",
+          "best_route_margin": 2489.0,
+          "improvement": 4083.0
+        },
+        {
+          "episode_id": 99986522,
+          "top1_seat": 0,
+          "team_id": 16623608,
+          "team_name": "Dmitry Larko",
+          "actual_margin": -313.0,
+          "best_route": "b120",
+          "best_route_margin": 3589.0,
+          "improvement": 3902.0
+        },
+        {
+          "episode_id": 99808519,
+          "top1_seat": 1,
+          "team_id": 16665224,
+          "team_name": "tyz123456",
+          "actual_margin": -1144.0,
+          "best_route": "b120",
+          "best_route_margin": 2108.0,
+          "improvement": 3252.0
+        },
+        {
+          "episode_id": 100139497,
+          "top1_seat": 1,
+          "team_id": 16671767,
+          "team_name": "Kaileh57",
+          "actual_margin": -565.0,
+          "best_route": "c120",
+          "best_route_margin": 1949.0,
+          "improvement": 2514.0
+        },
+        {
+          "episode_id": 100141816,
+          "top1_seat": 1,
+          "team_id": 16732578,
+          "team_name": "nao.kwmr",
+          "actual_margin": -143.0,
+          "best_route": "c120",
+          "best_route_margin": 1315.0,
+          "improvement": 1458.0
+        },
+        {
+          "episode_id": 99995549,
+          "top1_seat": 0,
+          "team_id": 16686827,
+          "team_name": "Kronki",
+          "actual_margin": -539.0,
+          "best_route": "b120",
+          "best_route_margin": 176.0,
+          "improvement": 715.0
+        },
+        {
+          "episode_id": 100045947,
+          "top1_seat": 0,
+          "team_id": 16686827,
+          "team_name": "Kronki",
+          "actual_margin": -29.0,
+          "best_route": "b120",
+          "best_route_margin": 593.0,
+          "improvement": 622.0
+        }
+      ],
+      "oracle_unresolved_losses": [
+        {
+          "episode_id": 99986486,
+          "top1_seat": 1,
+          "team_id": 16732578,
+          "team_name": "nao.kwmr",
+          "best_route": "c120",
+          "best_route_margin": -15748.0,
+          "route_margins": {
+            "base": -21200.0,
+            "a120": -37281.0,
+            "b120": -28407.0,
+            "c120": -15748.0
+          }
+        },
+        {
+          "episode_id": 100007008,
+          "top1_seat": 1,
+          "team_id": 16704466,
+          "team_name": "QQ Farming",
+          "best_route": "base",
+          "best_route_margin": -7816.0,
+          "route_margins": {
+            "base": -7816.0,
+            "a120": -25251.0,
+            "b120": -90359.0,
+            "c120": -10429.0
+          }
+        },
+        {
+          "episode_id": 100013965,
+          "top1_seat": 0,
+          "team_id": 16714457,
+          "team_name": "Crop Dusta",
+          "best_route": "c120",
+          "best_route_margin": -6649.0,
+          "route_margins": {
+            "base": -14322.0,
+            "a120": -14130.0,
+            "b120": -13090.0,
+            "c120": -6649.0
+          }
+        },
+        {
+          "episode_id": 99986573,
+          "top1_seat": 1,
+          "team_id": 16730065,
+          "team_name": "Blu3s",
+          "best_route": "base",
+          "best_route_margin": -6591.0,
+          "route_margins": {
+            "base": -6591.0,
+            "a120": -16176.0,
+            "b120": -21478.0,
+            "c120": -13453.0
+          }
+        },
+        {
+          "episode_id": 100029868,
+          "top1_seat": 1,
+          "team_id": 16623716,
+          "team_name": "tetsuya",
+          "best_route": "c120",
+          "best_route_margin": -4384.0,
+          "route_margins": {
+            "base": -18182.0,
+            "a120": -7312.0,
+            "b120": -20910.0,
+            "c120": -4384.0
+          }
+        },
+        {
+          "episode_id": 100054967,
+          "top1_seat": 1,
+          "team_id": 16671476,
+          "team_name": "Mingkang YAN",
+          "best_route": "base",
+          "best_route_margin": -4119.0,
+          "route_margins": {
+            "base": -4119.0,
+            "a120": -37527.0,
+            "b120": -15441.0,
+            "c120": -22680.0
+          }
+        },
+        {
+          "episode_id": 99808519,
+          "top1_seat": 0,
+          "team_id": 16727266,
+          "team_name": "ebisu_ya",
+          "best_route": "base",
+          "best_route_margin": -4057.0,
+          "route_margins": {
+            "base": -4057.0,
+            "a120": -20764.0,
+            "b120": -7433.0,
+            "c120": -13145.0
+          }
+        },
+        {
+          "episode_id": 100066330,
+          "top1_seat": 0,
+          "team_id": 16685548,
+          "team_name": "Erfan Eshratifar",
+          "best_route": "b120",
+          "best_route_margin": -3793.0,
+          "route_margins": {
+            "base": -4979.0,
+            "a120": -17430.0,
+            "b120": -3793.0,
+            "c120": -24450.0
+          }
+        },
+        {
+          "episode_id": 99879123,
+          "top1_seat": 1,
+          "team_id": 16730065,
+          "team_name": "Blu3s",
+          "best_route": "base",
+          "best_route_margin": -3544.0,
+          "route_margins": {
+            "base": -3544.0,
+            "a120": -15172.0,
+            "b120": -10360.0,
+            "c120": -20047.0
+          }
+        },
+        {
+          "episode_id": 100075620,
+          "top1_seat": 1,
+          "team_id": 16730065,
+          "team_name": "Blu3s",
+          "best_route": "base",
+          "best_route_margin": -3440.0,
+          "route_margins": {
+            "base": -3440.0,
+            "a120": -49958.0,
+            "b120": -16866.0,
+            "c120": -50414.0
+          }
+        },
+        {
+          "episode_id": 100006958,
+          "top1_seat": 0,
+          "team_id": 16673205,
+          "team_name": "Arda Ceylan",
+          "best_route": "c120",
+          "best_route_margin": -3018.0,
+          "route_margins": {
+            "base": -28860.0,
+            "a120": -33538.0,
+            "b120": -25521.0,
+            "c120": -3018.0
+          }
+        },
+        {
+          "episode_id": 100013966,
+          "top1_seat": 0,
+          "team_id": 16730065,
+          "team_name": "Blu3s",
+          "best_route": "base",
+          "best_route_margin": -2763.0,
+          "route_margins": {
+            "base": -2763.0,
+            "a120": -28082.0,
+            "b120": -19866.0,
+            "c120": -55863.0
+          }
+        },
+        {
+          "episode_id": 100061842,
+          "top1_seat": 1,
+          "team_id": 16671476,
+          "team_name": "Mingkang YAN",
+          "best_route": "base",
+          "best_route_margin": -2686.0,
+          "route_margins": {
+            "base": -2686.0,
+            "a120": -20721.0,
+            "b120": -5554.0,
+            "c120": -34176.0
+          }
+        },
+        {
+          "episode_id": 100064207,
+          "top1_seat": 0,
+          "team_id": 16671476,
+          "team_name": "Mingkang YAN",
+          "best_route": "base",
+          "best_route_margin": -2248.0,
+          "route_margins": {
+            "base": -2248.0,
+            "a120": -6619.0,
+            "b120": -4227.0,
+            "c120": -2593.0
+          }
+        },
+        {
+          "episode_id": 100075623,
+          "top1_seat": 1,
+          "team_id": 16705390,
+          "team_name": "Subramanya N",
+          "best_route": "b120",
+          "best_route_margin": -1546.0,
+          "route_margins": {
+            "base": -12181.0,
+            "a120": -10536.0,
+            "b120": -1546.0,
+            "c120": -15170.0
+          }
+        },
+        {
+          "episode_id": 100032174,
+          "top1_seat": 1,
+          "team_id": 16715733,
+          "team_name": "peikopon",
+          "best_route": "base",
+          "best_route_margin": -1134.0,
+          "route_margins": {
+            "base": -1134.0,
+            "a120": -72198.0,
+            "b120": -2211.0,
+            "c120": -31631.0
+          }
+        },
+        {
+          "episode_id": 100050323,
+          "top1_seat": 1,
+          "team_id": 16685548,
+          "team_name": "Erfan Eshratifar",
+          "best_route": "b120",
+          "best_route_margin": -1115.0,
+          "route_margins": {
+            "base": -5498.0,
+            "a120": -21858.0,
+            "b120": -1115.0,
+            "c120": -31637.0
+          }
+        },
+        {
+          "episode_id": 99979758,
+          "top1_seat": 1,
+          "team_id": 16730065,
+          "team_name": "Blu3s",
+          "best_route": "base",
+          "best_route_margin": -939.0,
+          "route_margins": {
+            "base": -939.0,
+            "a120": -13766.0,
+            "b120": -9907.0,
+            "c120": -54782.0
+          }
+        },
+        {
+          "episode_id": 99997839,
+          "top1_seat": 1,
+          "team_id": 16673205,
+          "team_name": "Arda Ceylan",
+          "best_route": "base",
+          "best_route_margin": -819.0,
+          "route_margins": {
+            "base": -819.0,
+            "a120": -86142.0,
+            "b120": -953.0,
+            "c120": -13837.0
+          }
+        },
+        {
+          "episode_id": 100018528,
+          "top1_seat": 0,
+          "team_id": 16623608,
+          "team_name": "Dmitry Larko",
+          "best_route": "c120",
+          "best_route_margin": -599.0,
+          "route_margins": {
+            "base": -2576.0,
+            "a120": -35698.0,
+            "b120": -22081.0,
+            "c120": -599.0
+          }
+        },
+        {
+          "episode_id": 100004715,
+          "top1_seat": 1,
+          "team_id": 16665224,
+          "team_name": "tyz123456",
+          "best_route": "b120",
+          "best_route_margin": -556.0,
+          "route_margins": {
+            "base": -3036.0,
+            "a120": -38365.0,
+            "b120": -556.0,
+            "c120": -17568.0
+          }
+        },
+        {
+          "episode_id": 99856427,
+          "top1_seat": 0,
+          "team_id": 16730065,
+          "team_name": "Blu3s",
+          "best_route": "base",
+          "best_route_margin": -555.0,
+          "route_margins": {
+            "base": -555.0,
+            "a120": -10000.0,
+            "b120": -19719.0,
+            "c120": -4880.0
+          }
+        },
+        {
+          "episode_id": 100093845,
+          "top1_seat": 0,
+          "team_id": 16623716,
+          "team_name": "tetsuya",
+          "best_route": "base",
+          "best_route_margin": -456.0,
+          "route_margins": {
+            "base": -456.0,
+            "a120": -25188.0,
+            "b120": -11270.0,
+            "c120": -13201.0
+          }
+        },
+        {
+          "episode_id": 100075627,
+          "top1_seat": 0,
+          "team_id": 16644287,
+          "team_name": "Ryo Hasegawa",
+          "best_route": "base",
+          "best_route_margin": -416.0,
+          "route_margins": {
+            "base": -416.0,
+            "a120": -43142.0,
+            "b120": -2478.0,
+            "c120": -54436.0
+          }
+        },
+        {
+          "episode_id": 100045947,
+          "top1_seat": 1,
+          "team_id": 16715733,
+          "team_name": "peikopon",
+          "best_route": "base",
+          "best_route_margin": -386.0,
+          "route_margins": {
+            "base": -386.0,
+            "a120": -46413.0,
+            "b120": -3935.0,
+            "c120": -20136.0
+          }
+        },
+        {
+          "episode_id": 99974958,
+          "top1_seat": 0,
+          "team_id": 16670032,
+          "team_name": "Kenjo1209",
+          "best_route": "base",
+          "best_route_margin": -74.0,
+          "route_margins": {
+            "base": -74.0,
+            "a120": -45862.0,
+            "b120": -1116.0,
+            "c120": -26423.0
+          }
+        }
+      ]
+    },
+    "v67": {
+      "actual_losses_rescuable_by_fixed_route": 28,
+      "actual_loss_rescues": [
+        {
+          "episode_id": 99890702,
+          "top1_seat": 0,
+          "team_id": 16714457,
+          "team_name": "Crop Dusta",
+          "actual_margin": -30337.0,
+          "best_route": "a120",
+          "best_route_margin": 27217.0,
+          "improvement": 57554.0
+        },
+        {
+          "episode_id": 99920421,
+          "top1_seat": 0,
+          "team_id": 16705390,
+          "team_name": "Subramanya N",
+          "actual_margin": -52486.0,
+          "best_route": "c120",
+          "best_route_margin": 335.0,
+          "improvement": 52821.0
+        },
+        {
+          "episode_id": 100084756,
+          "top1_seat": 1,
+          "team_id": 16671476,
+          "team_name": "Mingkang YAN",
+          "actual_margin": -31605.0,
+          "best_route": "b120",
+          "best_route_margin": 13687.0,
+          "improvement": 45292.0
+        },
+        {
+          "episode_id": 99918119,
+          "top1_seat": 0,
+          "team_id": 16730065,
+          "team_name": "Blu3s",
+          "actual_margin": -15142.0,
+          "best_route": "b120",
+          "best_route_margin": 19413.0,
+          "improvement": 34555.0
+        },
+        {
+          "episode_id": 99954645,
+          "top1_seat": 0,
+          "team_id": 16644287,
+          "team_name": "Ryo Hasegawa",
+          "actual_margin": -13516.0,
+          "best_route": "b120",
+          "best_route_margin": 18912.0,
+          "improvement": 32428.0
+        },
+        {
+          "episode_id": 100134962,
+          "top1_seat": 1,
+          "team_id": 16665224,
+          "team_name": "tyz123456",
+          "actual_margin": -25383.0,
+          "best_route": "c120",
+          "best_route_margin": 3306.0,
+          "improvement": 28689.0
+        },
+        {
+          "episode_id": 99954642,
+          "top1_seat": 0,
+          "team_id": 16644287,
+          "team_name": "Ryo Hasegawa",
+          "actual_margin": -1378.0,
+          "best_route": "b120",
+          "best_route_margin": 26697.0,
+          "improvement": 28075.0
+        },
+        {
+          "episode_id": 100134962,
+          "top1_seat": 0,
+          "team_id": 16715733,
+          "team_name": "peikopon",
+          "actual_margin": -26928.0,
+          "best_route": "c120",
+          "best_route_margin": 995.0,
+          "improvement": 27923.0
+        },
+        {
+          "episode_id": 100057268,
+          "top1_seat": 0,
+          "team_id": 16671476,
+          "team_name": "Mingkang YAN",
+          "actual_margin": -16717.0,
+          "best_route": "a120",
+          "best_route_margin": 9463.0,
+          "improvement": 26180.0
+        },
+        {
+          "episode_id": 99920420,
+          "top1_seat": 1,
+          "team_id": 16623716,
+          "team_name": "tetsuya",
+          "actual_margin": -17728.0,
+          "best_route": "a120",
+          "best_route_margin": 7218.0,
+          "improvement": 24946.0
+        },
+        {
+          "episode_id": 99835928,
+          "top1_seat": 0,
+          "team_id": 16623716,
+          "team_name": "tetsuya",
+          "actual_margin": -12579.0,
+          "best_route": "b120",
+          "best_route_margin": 10804.0,
+          "improvement": 23383.0
+        },
+        {
+          "episode_id": 100052686,
+          "top1_seat": 1,
+          "team_id": 16671476,
+          "team_name": "Mingkang YAN",
+          "actual_margin": -5306.0,
+          "best_route": "c120",
+          "best_route_margin": 17134.0,
+          "improvement": 22440.0
+        },
+        {
+          "episode_id": 100057268,
+          "top1_seat": 1,
+          "team_id": 16623608,
+          "team_name": "Dmitry Larko",
+          "actual_margin": -478.0,
+          "best_route": "c120",
+          "best_route_margin": 21891.0,
+          "improvement": 22369.0
+        },
+        {
+          "episode_id": 99765183,
+          "top1_seat": 0,
+          "team_id": 16705390,
+          "team_name": "Subramanya N",
+          "actual_margin": -16544.0,
+          "best_route": "a120",
+          "best_route_margin": 5296.0,
+          "improvement": 21840.0
+        },
+        {
+          "episode_id": 100000132,
+          "top1_seat": 0,
+          "team_id": 16727266,
+          "team_name": "ebisu_ya",
+          "actual_margin": -17164.0,
+          "best_route": "c120",
+          "best_route_margin": 3159.0,
+          "improvement": 20323.0
+        },
+        {
+          "episode_id": 100025241,
+          "top1_seat": 1,
+          "team_id": 16704466,
+          "team_name": "QQ Farming",
+          "actual_margin": -7423.0,
+          "best_route": "c120",
+          "best_route_margin": 12801.0,
+          "improvement": 20224.0
+        },
+        {
+          "episode_id": 100034464,
+          "top1_seat": 0,
+          "team_id": 16715733,
+          "team_name": "peikopon",
+          "actual_margin": -10666.0,
+          "best_route": "b120",
+          "best_route_margin": 4646.0,
+          "improvement": 15312.0
+        },
+        {
+          "episode_id": 99788036,
+          "top1_seat": 1,
+          "team_id": 16714457,
+          "team_name": "Crop Dusta",
+          "actual_margin": -10831.0,
+          "best_route": "c120",
+          "best_route_margin": 3724.0,
+          "improvement": 14555.0
+        },
+        {
+          "episode_id": 100093836,
+          "top1_seat": 0,
+          "team_id": 16641077,
+          "team_name": "lucaskna",
+          "actual_margin": -8432.0,
+          "best_route": "c120",
+          "best_route_margin": 3139.0,
+          "improvement": 11571.0
+        },
+        {
+          "episode_id": 100018451,
+          "top1_seat": 0,
+          "team_id": 16704466,
+          "team_name": "QQ Farming",
+          "actual_margin": -52.0,
+          "best_route": "c120",
+          "best_route_margin": 8241.0,
+          "improvement": 8293.0
+        },
+        {
+          "episode_id": 100032174,
+          "top1_seat": 1,
+          "team_id": 16715733,
+          "team_name": "peikopon",
+          "actual_margin": -1376.0,
+          "best_route": "b120",
+          "best_route_margin": 6650.0,
+          "improvement": 8026.0
+        },
+        {
+          "episode_id": 100084749,
+          "top1_seat": 1,
+          "team_id": 16715733,
+          "team_name": "peikopon",
+          "actual_margin": -2756.0,
+          "best_route": "b120",
+          "best_route_margin": 5002.0,
+          "improvement": 7758.0
+        },
+        {
+          "episode_id": 100091529,
+          "top1_seat": 1,
+          "team_id": 16641077,
+          "team_name": "lucaskna",
+          "actual_margin": -1750.0,
+          "best_route": "b120",
+          "best_route_margin": 5617.0,
+          "improvement": 7367.0
+        },
+        {
+          "episode_id": 99988684,
+          "top1_seat": 1,
+          "team_id": 16762957,
+          "team_name": "Yizuki",
+          "actual_margin": -1594.0,
+          "best_route": "base",
+          "best_route_margin": 4374.0,
+          "improvement": 5968.0
+        },
+        {
+          "episode_id": 100084650,
+          "top1_seat": 0,
+          "team_id": 16641077,
+          "team_name": "lucaskna",
+          "actual_margin": -446.0,
+          "best_route": "c120",
+          "best_route_margin": 4496.0,
+          "improvement": 4942.0
+        },
+        {
+          "episode_id": 99808519,
+          "top1_seat": 1,
+          "team_id": 16665224,
+          "team_name": "tyz123456",
+          "actual_margin": -1739.0,
+          "best_route": "b120",
+          "best_route_margin": 2195.0,
+          "improvement": 3934.0
+        },
+        {
+          "episode_id": 100077800,
+          "top1_seat": 0,
+          "team_id": 16673205,
+          "team_name": "Arda Ceylan",
+          "actual_margin": -777.0,
+          "best_route": "a120",
+          "best_route_margin": 2347.0,
+          "improvement": 3124.0
+        },
+        {
+          "episode_id": 99990974,
+          "top1_seat": 1,
+          "team_id": 16663649,
+          "team_name": "Akhil Chinta",
+          "actual_margin": -67.0,
+          "best_route": "b120",
+          "best_route_margin": 131.0,
+          "improvement": 198.0
+        }
+      ],
+      "oracle_unresolved_losses": [
+        {
+          "episode_id": 99986486,
+          "top1_seat": 1,
+          "team_id": 16732578,
+          "team_name": "nao.kwmr",
+          "best_route": "c120",
+          "best_route_margin": -15718.0,
+          "route_margins": {
+            "base": -21497.0,
+            "a120": -37302.0,
+            "b120": -28087.0,
+            "c120": -15718.0
+          }
+        },
+        {
+          "episode_id": 100007008,
+          "top1_seat": 1,
+          "team_id": 16704466,
+          "team_name": "QQ Farming",
+          "best_route": "base",
+          "best_route_margin": -8212.0,
+          "route_margins": {
+            "base": -8212.0,
+            "a120": -25255.0,
+            "b120": -90365.0,
+            "c120": -10429.0
+          }
+        },
+        {
+          "episode_id": 99986573,
+          "top1_seat": 1,
+          "team_id": 16730065,
+          "team_name": "Blu3s",
+          "best_route": "base",
+          "best_route_margin": -6714.0,
+          "route_margins": {
+            "base": -6714.0,
+            "a120": -16220.0,
+            "b120": -19918.0,
+            "c120": -13453.0
+          }
+        },
+        {
+          "episode_id": 100013965,
+          "top1_seat": 0,
+          "team_id": 16714457,
+          "team_name": "Crop Dusta",
+          "best_route": "c120",
+          "best_route_margin": -6649.0,
+          "route_margins": {
+            "base": -15289.0,
+            "a120": -14147.0,
+            "b120": -13122.0,
+            "c120": -6649.0
+          }
+        },
+        {
+          "episode_id": 100034464,
+          "top1_seat": 1,
+          "team_id": 16670032,
+          "team_name": "Kenjo1209",
+          "best_route": "base",
+          "best_route_margin": -5541.0,
+          "route_margins": {
+            "base": -5541.0,
+            "a120": -18749.0,
+            "b120": -10843.0,
+            "c120": -14149.0
+          }
+        },
+        {
+          "episode_id": 99856427,
+          "top1_seat": 0,
+          "team_id": 16730065,
+          "team_name": "Blu3s",
+          "best_route": "c120",
+          "best_route_margin": -4880.0,
+          "route_margins": {
+            "base": -6363.0,
+            "a120": -10008.0,
+            "b120": -18233.0,
+            "c120": -4880.0
+          }
+        },
+        {
+          "episode_id": 100029868,
+          "top1_seat": 1,
+          "team_id": 16623716,
+          "team_name": "tetsuya",
+          "best_route": "c120",
+          "best_route_margin": -4384.0,
+          "route_margins": {
+            "base": -18239.0,
+            "a120": -7313.0,
+            "b120": -21018.0,
+            "c120": -4384.0
+          }
+        },
+        {
+          "episode_id": 100066330,
+          "top1_seat": 0,
+          "team_id": 16685548,
+          "team_name": "Erfan Eshratifar",
+          "best_route": "b120",
+          "best_route_margin": -3876.0,
+          "route_margins": {
+            "base": -5418.0,
+            "a120": -17465.0,
+            "b120": -3876.0,
+            "c120": -24450.0
+          }
+        },
+        {
+          "episode_id": 100054967,
+          "top1_seat": 1,
+          "team_id": 16671476,
+          "team_name": "Mingkang YAN",
+          "best_route": "base",
+          "best_route_margin": -3817.0,
+          "route_margins": {
+            "base": -3817.0,
+            "a120": -37528.0,
+            "b120": -15363.0,
+            "c120": -22700.0
+          }
+        },
+        {
+          "episode_id": 99879123,
+          "top1_seat": 1,
+          "team_id": 16730065,
+          "team_name": "Blu3s",
+          "best_route": "base",
+          "best_route_margin": -3545.0,
+          "route_margins": {
+            "base": -3545.0,
+            "a120": -15219.0,
+            "b120": -10128.0,
+            "c120": -20047.0
+          }
+        },
+        {
+          "episode_id": 100075620,
+          "top1_seat": 1,
+          "team_id": 16730065,
+          "team_name": "Blu3s",
+          "best_route": "base",
+          "best_route_margin": -3363.0,
+          "route_margins": {
+            "base": -3363.0,
+            "a120": -49953.0,
+            "b120": -14895.0,
+            "c120": -50414.0
+          }
+        },
+        {
+          "episode_id": 100006958,
+          "top1_seat": 0,
+          "team_id": 16673205,
+          "team_name": "Arda Ceylan",
+          "best_route": "c120",
+          "best_route_margin": -3018.0,
+          "route_margins": {
+            "base": -28432.0,
+            "a120": -33567.0,
+            "b120": -25294.0,
+            "c120": -3018.0
+          }
+        },
+        {
+          "episode_id": 100061842,
+          "top1_seat": 1,
+          "team_id": 16671476,
+          "team_name": "Mingkang YAN",
+          "best_route": "base",
+          "best_route_margin": -2822.0,
+          "route_margins": {
+            "base": -2822.0,
+            "a120": -20708.0,
+            "b120": -4155.0,
+            "c120": -34176.0
+          }
+        },
+        {
+          "episode_id": 99765179,
+          "top1_seat": 1,
+          "team_id": 16727266,
+          "team_name": "ebisu_ya",
+          "best_route": "b120",
+          "best_route_margin": -2673.0,
+          "route_margins": {
+            "base": -2777.0,
+            "a120": -29906.0,
+            "b120": -2673.0,
+            "c120": -36244.0
+          }
+        },
+        {
+          "episode_id": 99808519,
+          "top1_seat": 0,
+          "team_id": 16727266,
+          "team_name": "ebisu_ya",
+          "best_route": "base",
+          "best_route_margin": -2393.0,
+          "route_margins": {
+            "base": -2393.0,
+            "a120": -20793.0,
+            "b120": -2699.0,
+            "c120": -13145.0
+          }
+        },
+        {
+          "episode_id": 100064207,
+          "top1_seat": 0,
+          "team_id": 16671476,
+          "team_name": "Mingkang YAN",
+          "best_route": "base",
+          "best_route_margin": -2234.0,
+          "route_margins": {
+            "base": -2234.0,
+            "a120": -6621.0,
+            "b120": -2931.0,
+            "c120": -2593.0
+          }
+        },
+        {
+          "episode_id": 100075623,
+          "top1_seat": 1,
+          "team_id": 16705390,
+          "team_name": "Subramanya N",
+          "best_route": "b120",
+          "best_route_margin": -1315.0,
+          "route_margins": {
+            "base": -12148.0,
+            "a120": -10611.0,
+            "b120": -1315.0,
+            "c120": -15170.0
+          }
+        },
+        {
+          "episode_id": 99979758,
+          "top1_seat": 1,
+          "team_id": 16730065,
+          "team_name": "Blu3s",
+          "best_route": "base",
+          "best_route_margin": -1079.0,
+          "route_margins": {
+            "base": -1079.0,
+            "a120": -13818.0,
+            "b120": -7090.0,
+            "c120": -54782.0
+          }
+        },
+        {
+          "episode_id": 100050323,
+          "top1_seat": 1,
+          "team_id": 16685548,
+          "team_name": "Erfan Eshratifar",
+          "best_route": "b120",
+          "best_route_margin": -949.0,
+          "route_margins": {
+            "base": -5985.0,
+            "a120": -21869.0,
+            "b120": -949.0,
+            "c120": -31637.0
+          }
+        },
+        {
+          "episode_id": 100093845,
+          "top1_seat": 0,
+          "team_id": 16623716,
+          "team_name": "tetsuya",
+          "best_route": "base",
+          "best_route_margin": -913.0,
+          "route_margins": {
+            "base": -913.0,
+            "a120": -25285.0,
+            "b120": -11476.0,
+            "c120": -13201.0
+          }
+        },
+        {
+          "episode_id": 100013966,
+          "top1_seat": 0,
+          "team_id": 16730065,
+          "team_name": "Blu3s",
+          "best_route": "base",
+          "best_route_margin": -696.0,
+          "route_margins": {
+            "base": -696.0,
+            "a120": -28088.0,
+            "b120": -19677.0,
+            "c120": -55863.0
+          }
+        },
+        {
+          "episode_id": 100018528,
+          "top1_seat": 0,
+          "team_id": 16623608,
+          "team_name": "Dmitry Larko",
+          "best_route": "c120",
+          "best_route_margin": -599.0,
+          "route_margins": {
+            "base": -2877.0,
+            "a120": -35741.0,
+            "b120": -22059.0,
+            "c120": -599.0
+          }
+        },
+        {
+          "episode_id": 100075627,
+          "top1_seat": 0,
+          "team_id": 16644287,
+          "team_name": "Ryo Hasegawa",
+          "best_route": "base",
+          "best_route_margin": -470.0,
+          "route_margins": {
+            "base": -470.0,
+            "a120": -43162.0,
+            "b120": -2653.0,
+            "c120": -54436.0
+          }
+        },
+        {
+          "episode_id": 100032174,
+          "top1_seat": 0,
+          "team_id": 16665224,
+          "team_name": "tyz123456",
+          "best_route": "base",
+          "best_route_margin": -438.0,
+          "route_margins": {
+            "base": -438.0,
+            "a120": -42951.0,
+            "b120": -776.0,
+            "c120": -8659.0
+          }
+        },
+        {
+          "episode_id": 100004715,
+          "top1_seat": 1,
+          "team_id": 16665224,
+          "team_name": "tyz123456",
+          "best_route": "b120",
+          "best_route_margin": -402.0,
+          "route_margins": {
+            "base": -2666.0,
+            "a120": -38359.0,
+            "b120": -402.0,
+            "c120": -17568.0
+          }
+        },
+        {
+          "episode_id": 99952356,
+          "top1_seat": 1,
+          "team_id": 16665224,
+          "team_name": "tyz123456",
+          "best_route": "base",
+          "best_route_margin": -328.0,
+          "route_margins": {
+            "base": -328.0,
+            "a120": -21505.0,
+            "b120": -9383.0,
+            "c120": -23520.0
+          }
+        }
+      ]
+    }
+  },
+  "observable_feature_analysis": {
+    "feature_histories": {
+      "pre120": [
+        24,
+        48,
+        72,
+        96
+      ],
+      "at120": [
+        120
+      ],
+      "pre_and_at": [
+        24,
+        48,
+        72,
+        96,
+        120
+      ]
+    },
+    "mode": "economy: player/clock/money/shared prices/private shed/seeds/unit inventory",
+    "best_lofo_by_family_and_history": {
+      "v59": {
+        "pre120": {
+          "family": "v59",
+          "history": "pre120",
+          "mode": "economy",
+          "alpha": 100.0,
+          "switch_penalty": 10000.0,
+          "score": {
+            "games": 160,
+            "wins": 106,
+            "draws": 0,
+            "losses": 54,
+            "win_rate": 0.6625,
+            "mean_margin": 6004.21875,
+            "median_margin": 1950.5,
+            "worst_margin": -52353.0,
+            "cvar10_margin": -20429.625,
+            "choice_counts": {
+              "base": 139,
+              "a120": 0,
+              "b120": 1,
+              "c120": 20
+            }
+          }
+        },
+        "at120": {
+          "family": "v59",
+          "history": "at120",
+          "mode": "economy",
+          "alpha": 0.1,
+          "switch_penalty": 10000.0,
+          "score": {
+            "games": 160,
+            "wins": 106,
+            "draws": 0,
+            "losses": 54,
+            "win_rate": 0.6625,
+            "mean_margin": 6048.4625,
+            "median_margin": 1950.5,
+            "worst_margin": -31739.0,
+            "cvar10_margin": -17389.75,
+            "choice_counts": {
+              "base": 134,
+              "a120": 0,
+              "b120": 1,
+              "c120": 25
+            }
+          }
+        },
+        "pre_and_at": {
+          "family": "v59",
+          "history": "pre_and_at",
+          "mode": "economy",
+          "alpha": 100.0,
+          "switch_penalty": 0.0,
+          "score": {
+            "games": 160,
+            "wins": 108,
+            "draws": 0,
+            "losses": 52,
+            "win_rate": 0.675,
+            "mean_margin": 5928.75,
+            "median_margin": 2133.0,
+            "worst_margin": -31739.0,
+            "cvar10_margin": -18731.3125,
+            "choice_counts": {
+              "base": 113,
+              "a120": 0,
+              "b120": 18,
+              "c120": 29
+            }
+          }
+        }
+      },
+      "v67": {
+        "pre120": {
+          "family": "v67",
+          "history": "pre120",
+          "mode": "economy",
+          "alpha": 100.0,
+          "switch_penalty": 5000.0,
+          "score": {
+            "games": 160,
+            "wins": 106,
+            "draws": 0,
+            "losses": 54,
+            "win_rate": 0.6625,
+            "mean_margin": 5467.30625,
+            "median_margin": 2609.5,
+            "worst_margin": -52486.0,
+            "cvar10_margin": -21605.9375,
+            "choice_counts": {
+              "base": 134,
+              "a120": 0,
+              "b120": 4,
+              "c120": 22
+            }
+          }
+        },
+        "at120": {
+          "family": "v67",
+          "history": "at120",
+          "mode": "economy",
+          "alpha": 1.0,
+          "switch_penalty": 10000.0,
+          "score": {
+            "games": 160,
+            "wins": 107,
+            "draws": 0,
+            "losses": 53,
+            "win_rate": 0.66875,
+            "mean_margin": 5656.86875,
+            "median_margin": 2609.5,
+            "worst_margin": -31605.0,
+            "cvar10_margin": -18399.125,
+            "choice_counts": {
+              "base": 134,
+              "a120": 0,
+              "b120": 2,
+              "c120": 24
+            }
+          }
+        },
+        "pre_and_at": {
+          "family": "v67",
+          "history": "pre_and_at",
+          "mode": "economy",
+          "alpha": 100.0,
+          "switch_penalty": 2500.0,
+          "score": {
+            "games": 160,
+            "wins": 107,
+            "draws": 0,
+            "losses": 53,
+            "win_rate": 0.66875,
+            "mean_margin": 5278.89375,
+            "median_margin": 2358.0,
+            "worst_margin": -31605.0,
+            "cvar10_margin": -19107.25,
+            "choice_counts": {
+              "base": 122,
+              "a120": 0,
+              "b120": 12,
+              "c120": 26
+            }
+          }
+        }
+      }
+    },
+    "top_lofo_searches": [
+      {
+        "family": "v59",
+        "history": "pre_and_at",
+        "mode": "economy",
+        "alpha": 100.0,
+        "switch_penalty": 0.0,
+        "score": {
+          "games": 160,
+          "wins": 108,
+          "draws": 0,
+          "losses": 52,
+          "win_rate": 0.675,
+          "mean_margin": 5928.75,
+          "median_margin": 2133.0,
+          "worst_margin": -31739.0,
+          "cvar10_margin": -18731.3125,
+          "choice_counts": {
+            "base": 113,
+            "a120": 0,
+            "b120": 18,
+            "c120": 29
+          }
+        }
+      },
+      {
+        "family": "v67",
+        "history": "at120",
+        "mode": "economy",
+        "alpha": 1.0,
+        "switch_penalty": 10000.0,
+        "score": {
+          "games": 160,
+          "wins": 107,
+          "draws": 0,
+          "losses": 53,
+          "win_rate": 0.66875,
+          "mean_margin": 5656.86875,
+          "median_margin": 2609.5,
+          "worst_margin": -31605.0,
+          "cvar10_margin": -18399.125,
+          "choice_counts": {
+            "base": 134,
+            "a120": 0,
+            "b120": 2,
+            "c120": 24
+          }
+        }
+      },
+      {
+        "family": "v67",
+        "history": "at120",
+        "mode": "economy",
+        "alpha": 10.0,
+        "switch_penalty": 10000.0,
+        "score": {
+          "games": 160,
+          "wins": 107,
+          "draws": 0,
+          "losses": 53,
+          "win_rate": 0.66875,
+          "mean_margin": 5591.50625,
+          "median_margin": 2609.5,
+          "worst_margin": -31605.0,
+          "cvar10_margin": -18491.75,
+          "choice_counts": {
+            "base": 137,
+            "a120": 0,
+            "b120": 0,
+            "c120": 23
+          }
+        }
+      },
+      {
+        "family": "v67",
+        "history": "pre_and_at",
+        "mode": "economy",
+        "alpha": 100.0,
+        "switch_penalty": 2500.0,
+        "score": {
+          "games": 160,
+          "wins": 107,
+          "draws": 0,
+          "losses": 53,
+          "win_rate": 0.66875,
+          "mean_margin": 5278.89375,
+          "median_margin": 2358.0,
+          "worst_margin": -31605.0,
+          "cvar10_margin": -19107.25,
+          "choice_counts": {
+            "base": 122,
+            "a120": 0,
+            "b120": 12,
+            "c120": 26
+          }
+        }
+      },
+      {
+        "family": "v59",
+        "history": "pre_and_at",
+        "mode": "economy",
+        "alpha": 100.0,
+        "switch_penalty": 5000.0,
+        "score": {
+          "games": 160,
+          "wins": 107,
+          "draws": 0,
+          "losses": 53,
+          "win_rate": 0.66875,
+          "mean_margin": 6216.8625,
+          "median_margin": 2009.0,
+          "worst_margin": -31739.0,
+          "cvar10_margin": -17846.625,
+          "choice_counts": {
+            "base": 133,
+            "a120": 0,
+            "b120": 2,
+            "c120": 25
+          }
+        }
+      },
+      {
+        "family": "v59",
+        "history": "pre_and_at",
+        "mode": "economy",
+        "alpha": 100.0,
+        "switch_penalty": 2500.0,
+        "score": {
+          "games": 160,
+          "wins": 107,
+          "draws": 0,
+          "losses": 53,
+          "win_rate": 0.66875,
+          "mean_margin": 6101.8375,
+          "median_margin": 2009.0,
+          "worst_margin": -31739.0,
+          "cvar10_margin": -18225.75,
+          "choice_counts": {
+            "base": 131,
+            "a120": 0,
+            "b120": 3,
+            "c120": 26
+          }
+        }
+      },
+      {
+        "family": "v67",
+        "history": "pre_and_at",
+        "mode": "economy",
+        "alpha": 10.0,
+        "switch_penalty": 0.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 5085.11875,
+          "median_margin": 2609.5,
+          "worst_margin": -30337.0,
+          "cvar10_margin": -18541.0,
+          "choice_counts": {
+            "base": 95,
+            "a120": 6,
+            "b120": 32,
+            "c120": 27
+          }
+        }
+      },
+      {
+        "family": "v67",
+        "history": "pre_and_at",
+        "mode": "economy",
+        "alpha": 100.0,
+        "switch_penalty": 5000.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 5429.79375,
+          "median_margin": 2358.0,
+          "worst_margin": -31605.0,
+          "cvar10_margin": -19042.8125,
+          "choice_counts": {
+            "base": 128,
+            "a120": 0,
+            "b120": 7,
+            "c120": 25
+          }
+        }
+      },
+      {
+        "family": "v67",
+        "history": "pre_and_at",
+        "mode": "economy",
+        "alpha": 10.0,
+        "switch_penalty": 5000.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 5274.28125,
+          "median_margin": 2358.0,
+          "worst_margin": -31605.0,
+          "cvar10_margin": -19241.375,
+          "choice_counts": {
+            "base": 123,
+            "a120": 1,
+            "b120": 11,
+            "c120": 25
+          }
+        }
+      },
+      {
+        "family": "v59",
+        "history": "at120",
+        "mode": "economy",
+        "alpha": 0.1,
+        "switch_penalty": 10000.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 6048.4625,
+          "median_margin": 1950.5,
+          "worst_margin": -31739.0,
+          "cvar10_margin": -17389.75,
+          "choice_counts": {
+            "base": 134,
+            "a120": 0,
+            "b120": 1,
+            "c120": 25
+          }
+        }
+      },
+      {
+        "family": "v59",
+        "history": "at120",
+        "mode": "economy",
+        "alpha": 1.0,
+        "switch_penalty": 10000.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 6048.4625,
+          "median_margin": 1950.5,
+          "worst_margin": -31739.0,
+          "cvar10_margin": -17389.75,
+          "choice_counts": {
+            "base": 134,
+            "a120": 0,
+            "b120": 1,
+            "c120": 25
+          }
+        }
+      },
+      {
+        "family": "v59",
+        "history": "at120",
+        "mode": "economy",
+        "alpha": 10.0,
+        "switch_penalty": 10000.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 5962.5,
+          "median_margin": 1950.5,
+          "worst_margin": -31739.0,
+          "cvar10_margin": -17846.625,
+          "choice_counts": {
+            "base": 135,
+            "a120": 0,
+            "b120": 0,
+            "c120": 25
+          }
+        }
+      },
+      {
+        "family": "v59",
+        "history": "at120",
+        "mode": "economy",
+        "alpha": 100.0,
+        "switch_penalty": 5000.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 6260.78125,
+          "median_margin": 2009.0,
+          "worst_margin": -52353.0,
+          "cvar10_margin": -20170.5625,
+          "choice_counts": {
+            "base": 137,
+            "a120": 0,
+            "b120": 1,
+            "c120": 22
+          }
+        }
+      },
+      {
+        "family": "v59",
+        "history": "pre_and_at",
+        "mode": "economy",
+        "alpha": 100.0,
+        "switch_penalty": 10000.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 6194.3125,
+          "median_margin": 2009.0,
+          "worst_margin": -52353.0,
+          "cvar10_margin": -20429.625,
+          "choice_counts": {
+            "base": 138,
+            "a120": 0,
+            "b120": 0,
+            "c120": 22
+          }
+        }
+      },
+      {
+        "family": "v59",
+        "history": "pre120",
+        "mode": "economy",
+        "alpha": 100.0,
+        "switch_penalty": 10000.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 6004.21875,
+          "median_margin": 1950.5,
+          "worst_margin": -52353.0,
+          "cvar10_margin": -20429.625,
+          "choice_counts": {
+            "base": 139,
+            "a120": 0,
+            "b120": 1,
+            "c120": 20
+          }
+        }
+      },
+      {
+        "family": "v67",
+        "history": "pre_and_at",
+        "mode": "economy",
+        "alpha": 100.0,
+        "switch_penalty": 10000.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 5653.73125,
+          "median_margin": 2609.5,
+          "worst_margin": -52486.0,
+          "cvar10_margin": -21095.1875,
+          "choice_counts": {
+            "base": 138,
+            "a120": 0,
+            "b120": 0,
+            "c120": 22
+          }
+        }
+      },
+      {
+        "family": "v67",
+        "history": "pre120",
+        "mode": "economy",
+        "alpha": 100.0,
+        "switch_penalty": 5000.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 5467.30625,
+          "median_margin": 2609.5,
+          "worst_margin": -52486.0,
+          "cvar10_margin": -21605.9375,
+          "choice_counts": {
+            "base": 134,
+            "a120": 0,
+            "b120": 4,
+            "c120": 22
+          }
+        }
+      },
+      {
+        "family": "v67",
+        "history": "pre120",
+        "mode": "economy",
+        "alpha": 10.0,
+        "switch_penalty": 10000.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 5381.34375,
+          "median_margin": 2609.5,
+          "worst_margin": -52486.0,
+          "cvar10_margin": -21334.75,
+          "choice_counts": {
+            "base": 134,
+            "a120": 0,
+            "b120": 2,
+            "c120": 24
+          }
+        }
+      },
+      {
+        "family": "v67",
+        "history": "at120",
+        "mode": "economy",
+        "alpha": 0.1,
+        "switch_penalty": 10000.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 5355.075,
+          "median_margin": 2609.5,
+          "worst_margin": -53926.0,
+          "cvar10_margin": -21102.875,
+          "choice_counts": {
+            "base": 134,
+            "a120": 0,
+            "b120": 4,
+            "c120": 22
+          }
+        }
+      },
+      {
+        "family": "v59",
+        "history": "pre120",
+        "mode": "economy",
+        "alpha": 100.0,
+        "switch_penalty": 5000.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 6066.4875,
+          "median_margin": 2009.0,
+          "worst_margin": -53950.0,
+          "cvar10_margin": -20649.5,
+          "choice_counts": {
+            "base": 132,
+            "a120": 0,
+            "b120": 7,
+            "c120": 21
+          }
+        }
+      },
+      {
+        "family": "v59",
+        "history": "pre_and_at",
+        "mode": "economy",
+        "alpha": 1000.0,
+        "switch_penalty": 0.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 5995.0125,
+          "median_margin": 2009.0,
+          "worst_margin": -53950.0,
+          "cvar10_margin": -20472.5,
+          "choice_counts": {
+            "base": 131,
+            "a120": 0,
+            "b120": 8,
+            "c120": 21
+          }
+        }
+      },
+      {
+        "family": "v59",
+        "history": "pre120",
+        "mode": "economy",
+        "alpha": 100.0,
+        "switch_penalty": 2500.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 5989.375,
+          "median_margin": 2009.0,
+          "worst_margin": -53950.0,
+          "cvar10_margin": -20649.5,
+          "choice_counts": {
+            "base": 131,
+            "a120": 0,
+            "b120": 7,
+            "c120": 22
+          }
+        }
+      },
+      {
+        "family": "v59",
+        "history": "pre120",
+        "mode": "economy",
+        "alpha": 0.1,
+        "switch_penalty": 2500.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 5424.25,
+          "median_margin": 2009.0,
+          "worst_margin": -53950.0,
+          "cvar10_margin": -23844.75,
+          "choice_counts": {
+            "base": 109,
+            "a120": 2,
+            "b120": 23,
+            "c120": 26
+          }
+        }
+      },
+      {
+        "family": "v59",
+        "history": "pre_and_at",
+        "mode": "economy",
+        "alpha": 1.0,
+        "switch_penalty": 2500.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 5162.625,
+          "median_margin": 1909.0,
+          "worst_margin": -53950.0,
+          "cvar10_margin": -23725.0625,
+          "choice_counts": {
+            "base": 103,
+            "a120": 3,
+            "b120": 29,
+            "c120": 25
+          }
+        }
+      },
+      {
+        "family": "v59",
+        "history": "pre120",
+        "mode": "economy",
+        "alpha": 10.0,
+        "switch_penalty": 0.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 5117.7125,
+          "median_margin": 2079.5,
+          "worst_margin": -53950.0,
+          "cvar10_margin": -23402.4375,
+          "choice_counts": {
+            "base": 101,
+            "a120": 3,
+            "b120": 29,
+            "c120": 27
+          }
+        }
+      },
+      {
+        "family": "v67",
+        "history": "at120",
+        "mode": "economy",
+        "alpha": 1.0,
+        "switch_penalty": 0.0,
+        "score": {
+          "games": 160,
+          "wins": 105,
+          "draws": 0,
+          "losses": 55,
+          "win_rate": 0.65625,
+          "mean_margin": 5346.74375,
+          "median_margin": 2515.0,
+          "worst_margin": -30337.0,
+          "cvar10_margin": -16714.5625,
+          "choice_counts": {
+            "base": 77,
+            "a120": 4,
+            "b120": 48,
+            "c120": 31
+          }
+        }
+      },
+      {
+        "family": "v67",
+        "history": "at120",
+        "mode": "economy",
+        "alpha": 100.0,
+        "switch_penalty": 2500.0,
+        "score": {
+          "games": 160,
+          "wins": 105,
+          "draws": 0,
+          "losses": 55,
+          "win_rate": 0.65625,
+          "mean_margin": 5537.875,
+          "median_margin": 2251.0,
+          "worst_margin": -31605.0,
+          "cvar10_margin": -18785.375,
+          "choice_counts": {
+            "base": 126,
+            "a120": 0,
+            "b120": 9,
+            "c120": 25
+          }
+        }
+      },
+      {
+        "family": "v67",
+        "history": "at120",
+        "mode": "economy",
+        "alpha": 10.0,
+        "switch_penalty": 0.0,
+        "score": {
+          "games": 160,
+          "wins": 105,
+          "draws": 0,
+          "losses": 55,
+          "win_rate": 0.65625,
+          "mean_margin": 5181.4875,
+          "median_margin": 2515.0,
+          "worst_margin": -31605.0,
+          "cvar10_margin": -17368.375,
+          "choice_counts": {
+            "base": 84,
+            "a120": 2,
+            "b120": 41,
+            "c120": 33
+          }
+        }
+      },
+      {
+        "family": "v67",
+        "history": "pre_and_at",
+        "mode": "economy",
+        "alpha": 10.0,
+        "switch_penalty": 10000.0,
+        "score": {
+          "games": 160,
+          "wins": 105,
+          "draws": 0,
+          "losses": 55,
+          "win_rate": 0.65625,
+          "mean_margin": 5173.13125,
+          "median_margin": 2260.0,
+          "worst_margin": -31605.0,
+          "cvar10_margin": -19619.5625,
+          "choice_counts": {
+            "base": 126,
+            "a120": 0,
+            "b120": 9,
+            "c120": 25
+          }
+        }
+      },
+      {
+        "family": "v59",
+        "history": "at120",
+        "mode": "economy",
+        "alpha": 0.1,
+        "switch_penalty": 0.0,
+        "score": {
+          "games": 160,
+          "wins": 105,
+          "draws": 0,
+          "losses": 55,
+          "win_rate": 0.65625,
+          "mean_margin": 5915.375,
+          "median_margin": 1909.0,
+          "worst_margin": -31739.0,
+          "cvar10_margin": -17703.5625,
+          "choice_counts": {
+            "base": 100,
+            "a120": 0,
+            "b120": 28,
+            "c120": 32
+          }
+        }
+      }
+    ],
+    "diagnostics": {
+      "v59": {
+        "selected_lofo_configuration": {
+          "family": "v59",
+          "history": "pre_and_at",
+          "mode": "economy",
+          "alpha": 100.0,
+          "switch_penalty": 0.0,
+          "score": {
+            "games": 160,
+            "wins": 108,
+            "draws": 0,
+            "losses": 52,
+            "win_rate": 0.675,
+            "mean_margin": 5928.75,
+            "median_margin": 2133.0,
+            "worst_margin": -31739.0,
+            "cvar10_margin": -18731.3125,
+            "choice_counts": {
+              "base": 113,
+              "a120": 0,
+              "b120": 18,
+              "c120": 29
+            }
+          }
+        },
+        "top_ridge_route_discriminators": [
+          {
+            "feature": "s96_market_price_WOOL_norm",
+            "route_discrimination": 2646.8573379048353
+          },
+          {
+            "feature": "s120_market_price_WOOL_norm",
+            "route_discrimination": 2646.8573379048335
+          },
+          {
+            "feature": "s120_market_price_MILK_norm",
+            "route_discrimination": 2250.8527530932283
+          },
+          {
+            "feature": "s96_market_price_MILK_norm",
+            "route_discrimination": 2250.8527530932283
+          },
+          {
+            "feature": "s96_market_price_STRAWBERRY_norm",
+            "route_discrimination": 1707.8198930459007
+          },
+          {
+            "feature": "s120_market_price_STRAWBERRY_norm",
+            "route_discrimination": 1707.8198930459
+          },
+          {
+            "feature": "s96_market_price_FERTILIZER_norm",
+            "route_discrimination": 1616.8994041977592
+          },
+          {
+            "feature": "s120_money_diff_norm",
+            "route_discrimination": 1472.0620977340382
+          },
+          {
+            "feature": "s120_opponent_money_norm",
+            "route_discrimination": 1462.7768557130398
+          },
+          {
+            "feature": "s24_money_diff_norm",
+            "route_discrimination": 1345.741516342323
+          },
+          {
+            "feature": "s24_opponent_money_norm",
+            "route_discrimination": 1307.2549150416687
+          },
+          {
+            "feature": "s24_candidate_money_norm",
+            "route_discrimination": 1200.4520700806454
+          },
+          {
+            "feature": "s72_market_price_WHEAT_norm",
+            "route_discrimination": 1005.3781983533122
+          },
+          {
+            "feature": "s72_market_price_FERTILIZER_norm",
+            "route_discrimination": 968.7467042726935
+          },
+          {
+            "feature": "s96_market_price_WHEAT_norm",
+            "route_discrimination": 962.3841583813916
+          },
+          {
+            "feature": "s120_market_price_WHEAT_norm",
+            "route_discrimination": 932.2736737043506
+          },
+          {
+            "feature": "s96_market_price_TOMATO_norm",
+            "route_discrimination": 873.775011752809
+          },
+          {
+            "feature": "s120_market_price_TOMATO_norm",
+            "route_discrimination": 873.7750117528078
+          },
+          {
+            "feature": "s120_market_price_EGG_norm",
+            "route_discrimination": 858.3489539465018
+          },
+          {
+            "feature": "s96_market_price_EGG_norm",
+            "route_discrimination": 858.3489539465018
+          }
+        ],
+        "top_univariate_route_advantage_correlations": {
+          "a120": [
+            {
+              "feature": "s96_market_price_STRAWBERRY_norm",
+              "correlation": -0.31619579985148494
+            },
+            {
+              "feature": "s120_market_price_STRAWBERRY_norm",
+              "correlation": -0.3161957998514849
+            },
+            {
+              "feature": "s96_market_price_MILK_norm",
+              "correlation": -0.28207155968294806
+            },
+            {
+              "feature": "s120_market_price_MILK_norm",
+              "correlation": -0.28207155968294806
+            },
+            {
+              "feature": "s96_market_price_FERTILIZER_norm",
+              "correlation": 0.19853032922188568
+            },
+            {
+              "feature": "s48_market_price_WHEAT_norm",
+              "correlation": -0.16866868677482014
+            },
+            {
+              "feature": "s120_market_price_WOOL_norm",
+              "correlation": 0.15944303979665403
+            },
+            {
+              "feature": "s96_market_price_WOOL_norm",
+              "correlation": 0.15944303979665397
+            },
+            {
+              "feature": "s24_money_diff_norm",
+              "correlation": 0.15724892344716546
+            },
+            {
+              "feature": "s24_opponent_money_norm",
+              "correlation": -0.15291739648682143
+            },
+            {
+              "feature": "s72_market_price_WHEAT_norm",
+              "correlation": -0.1336257967953325
+            },
+            {
+              "feature": "s96_market_price_TOMATO_norm",
+              "correlation": -0.1320141339727413
+            }
+          ],
+          "b120": [
+            {
+              "feature": "s24_candidate_money_norm",
+              "correlation": 0.20919384767088967
+            },
+            {
+              "feature": "s72_shed_WHEAT_norm",
+              "correlation": 0.19424068780664727
+            },
+            {
+              "feature": "s96_shed_WHEAT_norm",
+              "correlation": 0.19424068780664727
+            },
+            {
+              "feature": "s48_shed_WHEAT_norm",
+              "correlation": 0.19424068780664722
+            },
+            {
+              "feature": "s120_shed_WHEAT_norm",
+              "correlation": 0.19424068780664722
+            },
+            {
+              "feature": "s48_seeds_WHEAT_norm",
+              "correlation": 0.19424068780664716
+            },
+            {
+              "feature": "s72_candidate_money_norm",
+              "correlation": 0.18397630961724182
+            },
+            {
+              "feature": "s48_candidate_money_norm",
+              "correlation": 0.16976225079694193
+            },
+            {
+              "feature": "s120_candidate_money_norm",
+              "correlation": 0.1600918983830395
+            },
+            {
+              "feature": "s96_candidate_money_norm",
+              "correlation": 0.1600918983830393
+            },
+            {
+              "feature": "s96_market_price_TOMATO_norm",
+              "correlation": -0.1470275591584491
+            },
+            {
+              "feature": "s120_market_price_TOMATO_norm",
+              "correlation": -0.1470275591584491
+            }
+          ],
+          "c120": [
+            {
+              "feature": "s120_market_price_WOOL_norm",
+              "correlation": 0.4468702805083991
+            },
+            {
+              "feature": "s96_market_price_WOOL_norm",
+              "correlation": 0.44687028050839894
+            },
+            {
+              "feature": "s96_market_price_MILK_norm",
+              "correlation": -0.37690708663241645
+            },
+            {
+              "feature": "s120_market_price_MILK_norm",
+              "correlation": -0.3769070866324163
+            },
+            {
+              "feature": "s96_market_price_STRAWBERRY_norm",
+              "correlation": -0.34127549963906206
+            },
+            {
+              "feature": "s120_market_price_STRAWBERRY_norm",
+              "correlation": -0.34127549963906206
+            },
+            {
+              "feature": "s48_shed_WHEAT_norm",
+              "correlation": 0.20345268808574835
+            },
+            {
+              "feature": "s48_seeds_WHEAT_norm",
+              "correlation": 0.20345268808574835
+            },
+            {
+              "feature": "s72_shed_WHEAT_norm",
+              "correlation": 0.20345268808574835
+            },
+            {
+              "feature": "s96_shed_WHEAT_norm",
+              "correlation": 0.20345268808574835
+            },
+            {
+              "feature": "s120_shed_WHEAT_norm",
+              "correlation": 0.20345268808574835
+            },
+            {
+              "feature": "s24_market_price_WHEAT_norm",
+              "correlation": -0.18673834976993633
+            }
+          ]
+        }
+      },
+      "v67": {
+        "selected_lofo_configuration": {
+          "family": "v67",
+          "history": "at120",
+          "mode": "economy",
+          "alpha": 1.0,
+          "switch_penalty": 10000.0,
+          "score": {
+            "games": 160,
+            "wins": 107,
+            "draws": 0,
+            "losses": 53,
+            "win_rate": 0.66875,
+            "mean_margin": 5656.86875,
+            "median_margin": 2609.5,
+            "worst_margin": -31605.0,
+            "cvar10_margin": -18399.125,
+            "choice_counts": {
+              "base": 134,
+              "a120": 0,
+              "b120": 2,
+              "c120": 24
+            }
+          }
+        },
+        "top_ridge_route_discriminators": [
+          {
+            "feature": "s120_market_price_WOOL_norm",
+            "route_discrimination": 7912.09023942905
+          },
+          {
+            "feature": "s120_shed_WHEAT_norm",
+            "route_discrimination": 7249.21452574161
+          },
+          {
+            "feature": "s120_market_price_MILK_norm",
+            "route_discrimination": 6983.7062768653905
+          },
+          {
+            "feature": "s120_market_price_EGG_norm",
+            "route_discrimination": 5460.336556631356
+          },
+          {
+            "feature": "s120_market_price_TOMATO_norm",
+            "route_discrimination": 4574.726075714765
+          },
+          {
+            "feature": "s120_market_price_STRAWBERRY_norm",
+            "route_discrimination": 4458.915109836414
+          },
+          {
+            "feature": "s120_market_price_FERTILIZER_norm",
+            "route_discrimination": 4161.234504339619
+          },
+          {
+            "feature": "s120_candidate_money_norm",
+            "route_discrimination": 3109.4952267611934
+          },
+          {
+            "feature": "s120_money_diff_norm",
+            "route_discrimination": 2792.6093528551746
+          },
+          {
+            "feature": "s120_opponent_money_norm",
+            "route_discrimination": 2760.7748972290633
+          },
+          {
+            "feature": "s120_market_price_WHEAT_norm",
+            "route_discrimination": 2291.919100648824
+          },
+          {
+            "feature": "s120_market_price_CARROT_norm",
+            "route_discrimination": 2244.9308282266434
+          },
+          {
+            "feature": "s120_player",
+            "route_discrimination": 1254.0194620788716
+          },
+          {
+            "feature": "s120_market_price_MELON_norm",
+            "route_discrimination": 3.4586431938686004e-22
+          },
+          {
+            "feature": "s120_step_norm",
+            "route_discrimination": 2.767524458222511e-22
+          },
+          {
+            "feature": "s120_day_norm",
+            "route_discrimination": 2.0750577541523089e-22
+          },
+          {
+            "feature": "s120_shed_FERTILIZER_norm",
+            "route_discrimination": 8.648513931945346e-24
+          },
+          {
+            "feature": "s120_inventory_GOOSE_norm",
+            "route_discrimination": 0.0
+          },
+          {
+            "feature": "s120_seeds_STRAWBERRY_norm",
+            "route_discrimination": 0.0
+          },
+          {
+            "feature": "s120_seeds_MELON_norm",
+            "route_discrimination": 0.0
+          }
+        ],
+        "top_univariate_route_advantage_correlations": {
+          "a120": [
+            {
+              "feature": "s120_market_price_STRAWBERRY_norm",
+              "correlation": -0.2897574214936416
+            },
+            {
+              "feature": "s120_market_price_MILK_norm",
+              "correlation": -0.25194955276811526
+            },
+            {
+              "feature": "s120_shed_WHEAT_norm",
+              "correlation": -0.1497512492034773
+            },
+            {
+              "feature": "s120_market_price_WOOL_norm",
+              "correlation": 0.146380795676346
+            },
+            {
+              "feature": "s120_market_price_TOMATO_norm",
+              "correlation": -0.14235402174921713
+            },
+            {
+              "feature": "s120_market_price_WHEAT_norm",
+              "correlation": -0.10828475574303503
+            },
+            {
+              "feature": "s120_market_price_EGG_norm",
+              "correlation": 0.0948589030609477
+            },
+            {
+              "feature": "s120_candidate_money_norm",
+              "correlation": -0.08456993242933741
+            },
+            {
+              "feature": "s120_money_diff_norm",
+              "correlation": -0.08437035977257742
+            },
+            {
+              "feature": "s120_opponent_money_norm",
+              "correlation": 0.08222495997863159
+            },
+            {
+              "feature": "s120_market_price_FERTILIZER_norm",
+              "correlation": -0.05330618204179554
+            },
+            {
+              "feature": "s120_player",
+              "correlation": 0.04153970096460828
+            }
+          ],
+          "b120": [
+            {
+              "feature": "s120_market_price_TOMATO_norm",
+              "correlation": -0.22883471035819603
+            },
+            {
+              "feature": "s120_market_price_STRAWBERRY_norm",
+              "correlation": -0.12674310269188138
+            },
+            {
+              "feature": "s120_shed_WHEAT_norm",
+              "correlation": 0.1251032326475185
+            },
+            {
+              "feature": "s120_candidate_money_norm",
+              "correlation": 0.11969175750271875
+            },
+            {
+              "feature": "s120_market_price_MILK_norm",
+              "correlation": 0.10009044208611954
+            },
+            {
+              "feature": "s120_market_price_EGG_norm",
+              "correlation": 0.08398145953180458
+            },
+            {
+              "feature": "s120_player",
+              "correlation": 0.06371062484960471
+            },
+            {
+              "feature": "s120_market_price_WHEAT_norm",
+              "correlation": -0.04040376366678164
+            },
+            {
+              "feature": "s120_market_price_CARROT_norm",
+              "correlation": -0.0402597705993384
+            },
+            {
+              "feature": "s120_opponent_money_norm",
+              "correlation": 0.031844408909054794
+            },
+            {
+              "feature": "s120_money_diff_norm",
+              "correlation": -0.029408891715225566
+            },
+            {
+              "feature": "s120_market_price_WOOL_norm",
+              "correlation": -0.021838845952649077
+            }
+          ],
+          "c120": [
+            {
+              "feature": "s120_market_price_WOOL_norm",
+              "correlation": 0.4591603642473405
+            },
+            {
+              "feature": "s120_market_price_MILK_norm",
+              "correlation": -0.372074892333251
+            },
+            {
+              "feature": "s120_market_price_STRAWBERRY_norm",
+              "correlation": -0.3397306154802109
+            },
+            {
+              "feature": "s120_market_price_WHEAT_norm",
+              "correlation": -0.16408894006300165
+            },
+            {
+              "feature": "s120_money_diff_norm",
+              "correlation": 0.16281377958758056
+            },
+            {
+              "feature": "s120_market_price_TOMATO_norm",
+              "correlation": -0.16196218958377803
+            },
+            {
+              "feature": "s120_opponent_money_norm",
+              "correlation": -0.16058142120690444
+            },
+            {
+              "feature": "s120_market_price_EGG_norm",
+              "correlation": 0.14074571341753747
+            },
+            {
+              "feature": "s120_shed_WHEAT_norm",
+              "correlation": 0.12430077881752483
+            },
+            {
+              "feature": "s120_candidate_money_norm",
+              "correlation": 0.0738033065234572
+            },
+            {
+              "feature": "s120_market_price_FERTILIZER_norm",
+              "correlation": -0.05783091153187118
+            },
+            {
+              "feature": "s120_market_price_CARROT_norm",
+              "correlation": -0.055938980759323506
+            }
+          ]
+        }
+      }
+    }
+  },
+  "rows": [
+    {
+      "episode_id": 99765179,
+      "top1_seat": 1,
+      "team_id": 16727266,
+      "team_name": "ebisu_ya",
+      "selected_route": "base",
+      "actual": {
+        "v59": 15685.0,
+        "v67": -2777.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 15685.0,
+          "a120": -29894.0,
+          "b120": 496.0,
+          "c120": -36244.0
+        },
+        "v67": {
+          "base": -2777.0,
+          "a120": -29906.0,
+          "b120": -2673.0,
+          "c120": -36244.0
+        }
+      }
+    },
+    {
+      "episode_id": 99765183,
+      "top1_seat": 0,
+      "team_id": 16705390,
+      "team_name": "Subramanya N",
+      "selected_route": "base",
+      "actual": {
+        "v59": -15582.0,
+        "v67": -16544.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -15582.0,
+          "a120": 5356.0,
+          "b120": -21648.0,
+          "c120": -5982.0
+        },
+        "v67": {
+          "base": -16544.0,
+          "a120": 5296.0,
+          "b120": -21694.0,
+          "c120": -5982.0
+        }
+      }
+    },
+    {
+      "episode_id": 99788036,
+      "top1_seat": 1,
+      "team_id": 16714457,
+      "team_name": "Crop Dusta",
+      "selected_route": "base",
+      "actual": {
+        "v59": -9841.0,
+        "v67": -10831.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -9841.0,
+          "a120": -12527.0,
+          "b120": -3087.0,
+          "c120": 3724.0
+        },
+        "v67": {
+          "base": -10831.0,
+          "a120": -12602.0,
+          "b120": -3032.0,
+          "c120": 3724.0
+        }
+      }
+    },
+    {
+      "episode_id": 99790205,
+      "top1_seat": 0,
+      "team_id": 16623716,
+      "team_name": "tetsuya",
+      "selected_route": "base",
+      "actual": {
+        "v59": 22846.0,
+        "v67": 21858.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 22846.0,
+          "a120": -46514.0,
+          "b120": 227.0,
+          "c120": 1715.0
+        },
+        "v67": {
+          "base": 21858.0,
+          "a120": -46578.0,
+          "b120": 105.0,
+          "c120": 1715.0
+        }
+      }
+    },
+    {
+      "episode_id": 99808519,
+      "top1_seat": 0,
+      "team_id": 16727266,
+      "team_name": "ebisu_ya",
+      "selected_route": "base",
+      "actual": {
+        "v59": -4057.0,
+        "v67": -2393.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -4057.0,
+          "a120": -20764.0,
+          "b120": -7433.0,
+          "c120": -13145.0
+        },
+        "v67": {
+          "base": -2393.0,
+          "a120": -20793.0,
+          "b120": -2699.0,
+          "c120": -13145.0
+        }
+      }
+    },
+    {
+      "episode_id": 99808519,
+      "top1_seat": 1,
+      "team_id": 16665224,
+      "team_name": "tyz123456",
+      "selected_route": "base",
+      "actual": {
+        "v59": -1144.0,
+        "v67": -1739.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -1144.0,
+          "a120": -12320.0,
+          "b120": 2108.0,
+          "c120": -8446.0
+        },
+        "v67": {
+          "base": -1739.0,
+          "a120": -12292.0,
+          "b120": 2195.0,
+          "c120": -8446.0
+        }
+      }
+    },
+    {
+      "episode_id": 99808522,
+      "top1_seat": 1,
+      "team_id": 16705390,
+      "team_name": "Subramanya N",
+      "selected_route": "base",
+      "actual": {
+        "v59": 17365.0,
+        "v67": 16239.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 17365.0,
+          "a120": -6122.0,
+          "b120": 14908.0,
+          "c120": 8175.0
+        },
+        "v67": {
+          "base": 16239.0,
+          "a120": -6131.0,
+          "b120": 14642.0,
+          "c120": 8175.0
+        }
+      }
+    },
+    {
+      "episode_id": 99833633,
+      "top1_seat": 1,
+      "team_id": 16714457,
+      "team_name": "Crop Dusta",
+      "selected_route": "base",
+      "actual": {
+        "v59": 8657.0,
+        "v67": 7617.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 8657.0,
+          "a120": 14940.0,
+          "b120": 18312.0,
+          "c120": 48603.0
+        },
+        "v67": {
+          "base": 7617.0,
+          "a120": 14919.0,
+          "b120": 19168.0,
+          "c120": 48603.0
+        }
+      }
+    },
+    {
+      "episode_id": 99833639,
+      "top1_seat": 1,
+      "team_id": 16714457,
+      "team_name": "Crop Dusta",
+      "selected_route": "base",
+      "actual": {
+        "v59": 57534.0,
+        "v67": 56311.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 57534.0,
+          "a120": 28085.0,
+          "b120": 42281.0,
+          "c120": 6196.0
+        },
+        "v67": {
+          "base": 56311.0,
+          "a120": 28039.0,
+          "b120": 42268.0,
+          "c120": 6196.0
+        }
+      }
+    },
+    {
+      "episode_id": 99835928,
+      "top1_seat": 0,
+      "team_id": 16623716,
+      "team_name": "tetsuya",
+      "selected_route": "base",
+      "actual": {
+        "v59": -12398.0,
+        "v67": -12579.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -12398.0,
+          "a120": -18049.0,
+          "b120": 10880.0,
+          "c120": -17536.0
+        },
+        "v67": {
+          "base": -12579.0,
+          "a120": -18090.0,
+          "b120": 10804.0,
+          "c120": -17536.0
+        }
+      }
+    },
+    {
+      "episode_id": 99835928,
+      "top1_seat": 1,
+      "team_id": 16727266,
+      "team_name": "ebisu_ya",
+      "selected_route": "base",
+      "actual": {
+        "v59": 17172.0,
+        "v67": 17995.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 17172.0,
+          "a120": -52590.0,
+          "b120": 10387.0,
+          "c120": -18044.0
+        },
+        "v67": {
+          "base": 17995.0,
+          "a120": -52582.0,
+          "b120": 10637.0,
+          "c120": -18044.0
+        }
+      }
+    },
+    {
+      "episode_id": 99856427,
+      "top1_seat": 0,
+      "team_id": 16730065,
+      "team_name": "Blu3s",
+      "selected_route": "base",
+      "actual": {
+        "v59": -555.0,
+        "v67": -6363.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -555.0,
+          "a120": -10000.0,
+          "b120": -19719.0,
+          "c120": -4880.0
+        },
+        "v67": {
+          "base": -6363.0,
+          "a120": -10008.0,
+          "b120": -18233.0,
+          "c120": -4880.0
+        }
+      }
+    },
+    {
+      "episode_id": 99856427,
+      "top1_seat": 1,
+      "team_id": 16665224,
+      "team_name": "tyz123456",
+      "selected_route": "base",
+      "actual": {
+        "v59": 7939.0,
+        "v67": 6757.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 7939.0,
+          "a120": -5837.0,
+          "b120": 6956.0,
+          "c120": 15960.0
+        },
+        "v67": {
+          "base": 6757.0,
+          "a120": -5870.0,
+          "b120": 6056.0,
+          "c120": 15960.0
+        }
+      }
+    },
+    {
+      "episode_id": 99856428,
+      "top1_seat": 1,
+      "team_id": 16730065,
+      "team_name": "Blu3s",
+      "selected_route": "base",
+      "actual": {
+        "v59": 60862.0,
+        "v67": 15720.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 60862.0,
+          "a120": 19573.0,
+          "b120": -21215.0,
+          "c120": -7609.0
+        },
+        "v67": {
+          "base": 15720.0,
+          "a120": 19568.0,
+          "b120": -21146.0,
+          "c120": -7568.0
+        }
+      }
+    },
+    {
+      "episode_id": 99858733,
+      "top1_seat": 1,
+      "team_id": 16623716,
+      "team_name": "tetsuya",
+      "selected_route": "base",
+      "actual": {
+        "v59": 10807.0,
+        "v67": 10731.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 10807.0,
+          "a120": -672.0,
+          "b120": 5699.0,
+          "c120": 13337.0
+        },
+        "v67": {
+          "base": 10731.0,
+          "a120": -764.0,
+          "b120": 5537.0,
+          "c120": 13337.0
+        }
+      }
+    },
+    {
+      "episode_id": 99858734,
+      "top1_seat": 1,
+      "team_id": 16705390,
+      "team_name": "Subramanya N",
+      "selected_route": "base",
+      "actual": {
+        "v59": 36988.0,
+        "v67": 36975.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 36988.0,
+          "a120": 14237.0,
+          "b120": 36440.0,
+          "c120": 20506.0
+        },
+        "v67": {
+          "base": 36975.0,
+          "a120": 14165.0,
+          "b120": 36447.0,
+          "c120": 20506.0
+        }
+      }
+    },
+    {
+      "episode_id": 99874547,
+      "top1_seat": 1,
+      "team_id": 16762957,
+      "team_name": "Yizuki",
+      "selected_route": "base",
+      "actual": {
+        "v59": 41810.0,
+        "v67": 49211.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 41810.0,
+          "a120": -23884.0,
+          "b120": 18644.0,
+          "c120": 6195.0
+        },
+        "v67": {
+          "base": 49211.0,
+          "a120": -23939.0,
+          "b120": 21614.0,
+          "c120": 6195.0
+        }
+      }
+    },
+    {
+      "episode_id": 99879123,
+      "top1_seat": 1,
+      "team_id": 16730065,
+      "team_name": "Blu3s",
+      "selected_route": "base",
+      "actual": {
+        "v59": -3544.0,
+        "v67": -3545.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -3544.0,
+          "a120": -15172.0,
+          "b120": -10360.0,
+          "c120": -20047.0
+        },
+        "v67": {
+          "base": -3545.0,
+          "a120": -15219.0,
+          "b120": -10128.0,
+          "c120": -20047.0
+        }
+      }
+    },
+    {
+      "episode_id": 99888333,
+      "top1_seat": 0,
+      "team_id": 16727266,
+      "team_name": "ebisu_ya",
+      "selected_route": "c120",
+      "actual": {
+        "v59": 28596.0,
+        "v67": 28596.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 8725.0,
+          "a120": -4210.0,
+          "b120": 5042.0,
+          "c120": 28596.0
+        },
+        "v67": {
+          "base": 8436.0,
+          "a120": -4396.0,
+          "b120": 4863.0,
+          "c120": 28596.0
+        }
+      }
+    },
+    {
+      "episode_id": 99890702,
+      "top1_seat": 0,
+      "team_id": 16714457,
+      "team_name": "Crop Dusta",
+      "selected_route": "base",
+      "actual": {
+        "v59": -29671.0,
+        "v67": -30337.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -29671.0,
+          "a120": 27232.0,
+          "b120": 11450.0,
+          "c120": 6278.0
+        },
+        "v67": {
+          "base": -30337.0,
+          "a120": 27217.0,
+          "b120": 11422.0,
+          "c120": 6278.0
+        }
+      }
+    },
+    {
+      "episode_id": 99890707,
+      "top1_seat": 0,
+      "team_id": 16714457,
+      "team_name": "Crop Dusta",
+      "selected_route": "base",
+      "actual": {
+        "v59": 57574.0,
+        "v67": 56563.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 57574.0,
+          "a120": 27831.0,
+          "b120": 50254.0,
+          "c120": 34340.0
+        },
+        "v67": {
+          "base": 56563.0,
+          "a120": 27844.0,
+          "b120": 50146.0,
+          "c120": 34340.0
+        }
+      }
+    },
+    {
+      "episode_id": 99895145,
+      "top1_seat": 1,
+      "team_id": 16762957,
+      "team_name": "Yizuki",
+      "selected_route": "base",
+      "actual": {
+        "v59": 1437.0,
+        "v67": 2870.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 1437.0,
+          "a120": -19934.0,
+          "b120": 1374.0,
+          "c120": -80.0
+        },
+        "v67": {
+          "base": 2870.0,
+          "a120": -19989.0,
+          "b120": 2183.0,
+          "c120": -80.0
+        }
+      }
+    },
+    {
+      "episode_id": 99911145,
+      "top1_seat": 1,
+      "team_id": 16732578,
+      "team_name": "nao.kwmr",
+      "selected_route": "base",
+      "actual": {
+        "v59": 33.0,
+        "v67": 6347.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 33.0,
+          "a120": -38905.0,
+          "b120": -5024.0,
+          "c120": -14389.0
+        },
+        "v67": {
+          "base": 6347.0,
+          "a120": -38901.0,
+          "b120": 5730.0,
+          "c120": -14389.0
+        }
+      }
+    },
+    {
+      "episode_id": 99918115,
+      "top1_seat": 1,
+      "team_id": 16665224,
+      "team_name": "tyz123456",
+      "selected_route": "base",
+      "actual": {
+        "v59": 11203.0,
+        "v67": 22163.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 11203.0,
+          "a120": 14589.0,
+          "b120": 19815.0,
+          "c120": 12722.0
+        },
+        "v67": {
+          "base": 22163.0,
+          "a120": 14558.0,
+          "b120": 933.0,
+          "c120": 12722.0
+        }
+      }
+    },
+    {
+      "episode_id": 99918119,
+      "top1_seat": 0,
+      "team_id": 16730065,
+      "team_name": "Blu3s",
+      "selected_route": "base",
+      "actual": {
+        "v59": -15135.0,
+        "v67": -15142.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -15135.0,
+          "a120": -15377.0,
+          "b120": 41214.0,
+          "c120": -3439.0
+        },
+        "v67": {
+          "base": -15142.0,
+          "a120": -15329.0,
+          "b120": 19413.0,
+          "c120": -3439.0
+        }
+      }
+    },
+    {
+      "episode_id": 99920420,
+      "top1_seat": 1,
+      "team_id": 16623716,
+      "team_name": "tetsuya",
+      "selected_route": "base",
+      "actual": {
+        "v59": -17643.0,
+        "v67": -17728.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -17643.0,
+          "a120": 7118.0,
+          "b120": -21847.0,
+          "c120": -5850.0
+        },
+        "v67": {
+          "base": -17728.0,
+          "a120": 7218.0,
+          "b120": -22033.0,
+          "c120": -5850.0
+        }
+      }
+    },
+    {
+      "episode_id": 99920421,
+      "top1_seat": 0,
+      "team_id": 16705390,
+      "team_name": "Subramanya N",
+      "selected_route": "base",
+      "actual": {
+        "v59": -52353.0,
+        "v67": -52486.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -52353.0,
+          "a120": -49346.0,
+          "b120": -53950.0,
+          "c120": 335.0
+        },
+        "v67": {
+          "base": -52486.0,
+          "a120": -49425.0,
+          "b120": -53926.0,
+          "c120": 335.0
+        }
+      }
+    },
+    {
+      "episode_id": 99924745,
+      "top1_seat": 1,
+      "team_id": 16762957,
+      "team_name": "Yizuki",
+      "selected_route": "base",
+      "actual": {
+        "v59": 2164.0,
+        "v67": 14778.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 2164.0,
+          "a120": -36807.0,
+          "b120": 5721.0,
+          "c120": -22362.0
+        },
+        "v67": {
+          "base": 14778.0,
+          "a120": -36813.0,
+          "b120": 762.0,
+          "c120": -22362.0
+        }
+      }
+    },
+    {
+      "episode_id": 99929439,
+      "top1_seat": 0,
+      "team_id": 16732578,
+      "team_name": "nao.kwmr",
+      "selected_route": "base",
+      "actual": {
+        "v59": 9669.0,
+        "v67": 15098.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 9669.0,
+          "a120": -8257.0,
+          "b120": 5669.0,
+          "c120": -429.0
+        },
+        "v67": {
+          "base": 15098.0,
+          "a120": -8261.0,
+          "b120": 12547.0,
+          "c120": -429.0
+        }
+      }
+    },
+    {
+      "episode_id": 99931728,
+      "top1_seat": 1,
+      "team_id": 16686827,
+      "team_name": "Kronki",
+      "selected_route": "base",
+      "actual": {
+        "v59": 2311.0,
+        "v67": 1382.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 2311.0,
+          "a120": 1656.0,
+          "b120": 4103.0,
+          "c120": 7899.0
+        },
+        "v67": {
+          "base": 1382.0,
+          "a120": 1582.0,
+          "b120": 4748.0,
+          "c120": 7899.0
+        }
+      }
+    },
+    {
+      "episode_id": 99938600,
+      "top1_seat": 1,
+      "team_id": 16670032,
+      "team_name": "Kenjo1209",
+      "selected_route": "base",
+      "actual": {
+        "v59": 1044.0,
+        "v67": 5250.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 1044.0,
+          "a120": -25629.0,
+          "b120": 865.0,
+          "c120": 1483.0
+        },
+        "v67": {
+          "base": 5250.0,
+          "a120": -25630.0,
+          "b120": -1221.0,
+          "c120": 1483.0
+        }
+      }
+    },
+    {
+      "episode_id": 99940872,
+      "top1_seat": 0,
+      "team_id": 16673205,
+      "team_name": "Arda Ceylan",
+      "selected_route": "base",
+      "actual": {
+        "v59": 681.0,
+        "v67": 2070.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 681.0,
+          "a120": -40357.0,
+          "b120": 2558.0,
+          "c120": -6277.0
+        },
+        "v67": {
+          "base": 2070.0,
+          "a120": -40364.0,
+          "b120": 1489.0,
+          "c120": -6277.0
+        }
+      }
+    },
+    {
+      "episode_id": 99940887,
+      "top1_seat": 0,
+      "team_id": 16623716,
+      "team_name": "tetsuya",
+      "selected_route": "base",
+      "actual": {
+        "v59": 9780.0,
+        "v67": 9819.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 9780.0,
+          "a120": -27441.0,
+          "b120": -3610.0,
+          "c120": -18578.0
+        },
+        "v67": {
+          "base": 9819.0,
+          "a120": -27521.0,
+          "b120": -3626.0,
+          "c120": -18578.0
+        }
+      }
+    },
+    {
+      "episode_id": 99943175,
+      "top1_seat": 0,
+      "team_id": 16686827,
+      "team_name": "Kronki",
+      "selected_route": "base",
+      "actual": {
+        "v59": 4413.0,
+        "v67": 313.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 4413.0,
+          "a120": -37839.0,
+          "b120": 6095.0,
+          "c120": -3937.0
+        },
+        "v67": {
+          "base": 313.0,
+          "a120": -37839.0,
+          "b120": 2468.0,
+          "c120": -3937.0
+        }
+      }
+    },
+    {
+      "episode_id": 99943175,
+      "top1_seat": 1,
+      "team_id": 16623608,
+      "team_name": "Dmitry Larko",
+      "selected_route": "base",
+      "actual": {
+        "v59": 1961.0,
+        "v67": 1948.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 1961.0,
+          "a120": -47439.0,
+          "b120": 2685.0,
+          "c120": -5013.0
+        },
+        "v67": {
+          "base": 1948.0,
+          "a120": -47441.0,
+          "b120": 3559.0,
+          "c120": -5013.0
+        }
+      }
+    },
+    {
+      "episode_id": 99945458,
+      "top1_seat": 0,
+      "team_id": 16623608,
+      "team_name": "Dmitry Larko",
+      "selected_route": "c120",
+      "actual": {
+        "v59": 573.0,
+        "v67": 573.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -35565.0,
+          "a120": -37914.0,
+          "b120": -32435.0,
+          "c120": 573.0
+        },
+        "v67": {
+          "base": -35540.0,
+          "a120": -37959.0,
+          "b120": -32231.0,
+          "c120": 573.0
+        }
+      }
+    },
+    {
+      "episode_id": 99952356,
+      "top1_seat": 0,
+      "team_id": 16727266,
+      "team_name": "ebisu_ya",
+      "selected_route": "base",
+      "actual": {
+        "v59": 8491.0,
+        "v67": 8438.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 8491.0,
+          "a120": -55529.0,
+          "b120": 1992.0,
+          "c120": -31609.0
+        },
+        "v67": {
+          "base": 8438.0,
+          "a120": -55528.0,
+          "b120": 2604.0,
+          "c120": -31609.0
+        }
+      }
+    },
+    {
+      "episode_id": 99952356,
+      "top1_seat": 1,
+      "team_id": 16665224,
+      "team_name": "tyz123456",
+      "selected_route": "base",
+      "actual": {
+        "v59": 79.0,
+        "v67": -328.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 79.0,
+          "a120": -21502.0,
+          "b120": -9310.0,
+          "c120": -23520.0
+        },
+        "v67": {
+          "base": -328.0,
+          "a120": -21505.0,
+          "b120": -9383.0,
+          "c120": -23520.0
+        }
+      }
+    },
+    {
+      "episode_id": 99954642,
+      "top1_seat": 0,
+      "team_id": 16644287,
+      "team_name": "Ryo Hasegawa",
+      "selected_route": "base",
+      "actual": {
+        "v59": -1388.0,
+        "v67": -1378.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -1388.0,
+          "a120": -10488.0,
+          "b120": 26808.0,
+          "c120": -19222.0
+        },
+        "v67": {
+          "base": -1378.0,
+          "a120": -10500.0,
+          "b120": 26697.0,
+          "c120": -19222.0
+        }
+      }
+    },
+    {
+      "episode_id": 99954642,
+      "top1_seat": 1,
+      "team_id": 16714457,
+      "team_name": "Crop Dusta",
+      "selected_route": "base",
+      "actual": {
+        "v59": 34982.0,
+        "v67": 34013.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 34982.0,
+          "a120": 21539.0,
+          "b120": 62265.0,
+          "c120": 36150.0
+        },
+        "v67": {
+          "base": 34013.0,
+          "a120": 21530.0,
+          "b120": 62269.0,
+          "c120": 36150.0
+        }
+      }
+    },
+    {
+      "episode_id": 99954645,
+      "top1_seat": 0,
+      "team_id": 16644287,
+      "team_name": "Ryo Hasegawa",
+      "selected_route": "base",
+      "actual": {
+        "v59": -13452.0,
+        "v67": -13516.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -13452.0,
+          "a120": -9437.0,
+          "b120": 18971.0,
+          "c120": -14663.0
+        },
+        "v67": {
+          "base": -13516.0,
+          "a120": -9457.0,
+          "b120": 18912.0,
+          "c120": -14663.0
+        }
+      }
+    },
+    {
+      "episode_id": 99954645,
+      "top1_seat": 1,
+      "team_id": 16705390,
+      "team_name": "Subramanya N",
+      "selected_route": "base",
+      "actual": {
+        "v59": 35176.0,
+        "v67": 34555.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 35176.0,
+          "a120": 29536.0,
+          "b120": 29178.0,
+          "c120": 31590.0
+        },
+        "v67": {
+          "base": 34555.0,
+          "a120": 29464.0,
+          "b120": 29206.0,
+          "c120": 31590.0
+        }
+      }
+    },
+    {
+      "episode_id": 99966068,
+      "top1_seat": 1,
+      "team_id": 16623608,
+      "team_name": "Dmitry Larko",
+      "selected_route": "base",
+      "actual": {
+        "v59": 3697.0,
+        "v67": 5344.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 3697.0,
+          "a120": -53308.0,
+          "b120": -2680.0,
+          "c120": -23522.0
+        },
+        "v67": {
+          "base": 5344.0,
+          "a120": -53306.0,
+          "b120": -1575.0,
+          "c120": -23522.0
+        }
+      }
+    },
+    {
+      "episode_id": 99974958,
+      "top1_seat": 0,
+      "team_id": 16670032,
+      "team_name": "Kenjo1209",
+      "selected_route": "base",
+      "actual": {
+        "v59": -74.0,
+        "v67": 2218.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -74.0,
+          "a120": -45862.0,
+          "b120": -1116.0,
+          "c120": -26423.0
+        },
+        "v67": {
+          "base": 2218.0,
+          "a120": -45859.0,
+          "b120": -3557.0,
+          "c120": -26423.0
+        }
+      }
+    },
+    {
+      "episode_id": 99979758,
+      "top1_seat": 0,
+      "team_id": 16686827,
+      "team_name": "Kronki",
+      "selected_route": "c120",
+      "actual": {
+        "v59": 33067.0,
+        "v67": 33067.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 12565.0,
+          "a120": -1557.0,
+          "b120": 9605.0,
+          "c120": 33067.0
+        },
+        "v67": {
+          "base": 13483.0,
+          "a120": -1643.0,
+          "b120": 10188.0,
+          "c120": 33067.0
+        }
+      }
+    },
+    {
+      "episode_id": 99979758,
+      "top1_seat": 1,
+      "team_id": 16730065,
+      "team_name": "Blu3s",
+      "selected_route": "base",
+      "actual": {
+        "v59": -939.0,
+        "v67": -1079.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -939.0,
+          "a120": -13766.0,
+          "b120": -9907.0,
+          "c120": -54782.0
+        },
+        "v67": {
+          "base": -1079.0,
+          "a120": -13818.0,
+          "b120": -7090.0,
+          "c120": -54782.0
+        }
+      }
+    },
+    {
+      "episode_id": 99984108,
+      "top1_seat": 1,
+      "team_id": 16673205,
+      "team_name": "Arda Ceylan",
+      "selected_route": "base",
+      "actual": {
+        "v59": 297.0,
+        "v67": 1881.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 297.0,
+          "a120": -28953.0,
+          "b120": -7163.0,
+          "c120": -7706.0
+        },
+        "v67": {
+          "base": 1881.0,
+          "a120": -28931.0,
+          "b120": -6997.0,
+          "c120": -7706.0
+        }
+      }
+    },
+    {
+      "episode_id": 99986387,
+      "top1_seat": 0,
+      "team_id": 16663649,
+      "team_name": "Akhil Chinta",
+      "selected_route": "base",
+      "actual": {
+        "v59": 20296.0,
+        "v67": 20256.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 20296.0,
+          "a120": 7659.0,
+          "b120": 11703.0,
+          "c120": -57.0
+        },
+        "v67": {
+          "base": 20256.0,
+          "a120": 7638.0,
+          "b120": 11906.0,
+          "c120": -57.0
+        }
+      }
+    },
+    {
+      "episode_id": 99986486,
+      "top1_seat": 1,
+      "team_id": 16732578,
+      "team_name": "nao.kwmr",
+      "selected_route": "c120",
+      "actual": {
+        "v59": -15748.0,
+        "v67": -15718.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -21200.0,
+          "a120": -37281.0,
+          "b120": -28407.0,
+          "c120": -15748.0
+        },
+        "v67": {
+          "base": -21497.0,
+          "a120": -37302.0,
+          "b120": -28087.0,
+          "c120": -15718.0
+        }
+      }
+    },
+    {
+      "episode_id": 99986522,
+      "top1_seat": 0,
+      "team_id": 16623608,
+      "team_name": "Dmitry Larko",
+      "selected_route": "base",
+      "actual": {
+        "v59": -313.0,
+        "v67": 77.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -313.0,
+          "a120": 700.0,
+          "b120": 3589.0,
+          "c120": -12705.0
+        },
+        "v67": {
+          "base": 77.0,
+          "a120": 619.0,
+          "b120": 5328.0,
+          "c120": -12705.0
+        }
+      }
+    },
+    {
+      "episode_id": 99986522,
+      "top1_seat": 1,
+      "team_id": 16762957,
+      "team_name": "Yizuki",
+      "selected_route": "base",
+      "actual": {
+        "v59": 2057.0,
+        "v67": 8394.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 2057.0,
+          "a120": 245.0,
+          "b120": 185.0,
+          "c120": -16329.0
+        },
+        "v67": {
+          "base": 8394.0,
+          "a120": 225.0,
+          "b120": 3576.0,
+          "c120": -16329.0
+        }
+      }
+    },
+    {
+      "episode_id": 99986573,
+      "top1_seat": 0,
+      "team_id": 16623608,
+      "team_name": "Dmitry Larko",
+      "selected_route": "base",
+      "actual": {
+        "v59": 10937.0,
+        "v67": 11203.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 10937.0,
+          "a120": -54900.0,
+          "b120": 10222.0,
+          "c120": 24969.0
+        },
+        "v67": {
+          "base": 11203.0,
+          "a120": -54900.0,
+          "b120": 10367.0,
+          "c120": 24969.0
+        }
+      }
+    },
+    {
+      "episode_id": 99986573,
+      "top1_seat": 1,
+      "team_id": 16730065,
+      "team_name": "Blu3s",
+      "selected_route": "base",
+      "actual": {
+        "v59": -6591.0,
+        "v67": -6714.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -6591.0,
+          "a120": -16176.0,
+          "b120": -21478.0,
+          "c120": -13453.0
+        },
+        "v67": {
+          "base": -6714.0,
+          "a120": -16220.0,
+          "b120": -19918.0,
+          "c120": -13453.0
+        }
+      }
+    },
+    {
+      "episode_id": 99988684,
+      "top1_seat": 1,
+      "team_id": 16762957,
+      "team_name": "Yizuki",
+      "selected_route": "c120",
+      "actual": {
+        "v59": -1594.0,
+        "v67": -1594.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 2489.0,
+          "a120": -32540.0,
+          "b120": 962.0,
+          "c120": -1594.0
+        },
+        "v67": {
+          "base": 4374.0,
+          "a120": -32566.0,
+          "b120": 1611.0,
+          "c120": -1594.0
+        }
+      }
+    },
+    {
+      "episode_id": 99990974,
+      "top1_seat": 1,
+      "team_id": 16663649,
+      "team_name": "Akhil Chinta",
+      "selected_route": "base",
+      "actual": {
+        "v59": 9015.0,
+        "v67": -67.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 9015.0,
+          "a120": -9906.0,
+          "b120": -58.0,
+          "c120": -2679.0
+        },
+        "v67": {
+          "base": -67.0,
+          "a120": -9914.0,
+          "b120": 131.0,
+          "c120": -2679.0
+        }
+      }
+    },
+    {
+      "episode_id": 99995549,
+      "top1_seat": 0,
+      "team_id": 16686827,
+      "team_name": "Kronki",
+      "selected_route": "base",
+      "actual": {
+        "v59": -539.0,
+        "v67": 2252.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -539.0,
+          "a120": -9790.0,
+          "b120": 176.0,
+          "c120": -26168.0
+        },
+        "v67": {
+          "base": 2252.0,
+          "a120": -9794.0,
+          "b120": 670.0,
+          "c120": -26168.0
+        }
+      }
+    },
+    {
+      "episode_id": 99997839,
+      "top1_seat": 1,
+      "team_id": 16673205,
+      "team_name": "Arda Ceylan",
+      "selected_route": "base",
+      "actual": {
+        "v59": -819.0,
+        "v67": 59.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -819.0,
+          "a120": -86142.0,
+          "b120": -953.0,
+          "c120": -13837.0
+        },
+        "v67": {
+          "base": 59.0,
+          "a120": -86142.0,
+          "b120": -698.0,
+          "c120": -13837.0
+        }
+      }
+    },
+    {
+      "episode_id": 99997940,
+      "top1_seat": 1,
+      "team_id": 16663649,
+      "team_name": "Akhil Chinta",
+      "selected_route": "base",
+      "actual": {
+        "v59": 6717.0,
+        "v67": 10090.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 6717.0,
+          "a120": -9974.0,
+          "b120": 10084.0,
+          "c120": 6309.0
+        },
+        "v67": {
+          "base": 10090.0,
+          "a120": -9982.0,
+          "b120": 9114.0,
+          "c120": 6309.0
+        }
+      }
+    },
+    {
+      "episode_id": 100000132,
+      "top1_seat": 0,
+      "team_id": 16727266,
+      "team_name": "ebisu_ya",
+      "selected_route": "base",
+      "actual": {
+        "v59": -16831.0,
+        "v67": -17164.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -16831.0,
+          "a120": -32982.0,
+          "b120": -10163.0,
+          "c120": 3159.0
+        },
+        "v67": {
+          "base": -17164.0,
+          "a120": -33000.0,
+          "b120": -10166.0,
+          "c120": 3159.0
+        }
+      }
+    },
+    {
+      "episode_id": 100000289,
+      "top1_seat": 0,
+      "team_id": 16623716,
+      "team_name": "tetsuya",
+      "selected_route": "base",
+      "actual": {
+        "v59": 45177.0,
+        "v67": 45117.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 45177.0,
+          "a120": 14269.0,
+          "b120": 38489.0,
+          "c120": 62024.0
+        },
+        "v67": {
+          "base": 45117.0,
+          "a120": 14123.0,
+          "b120": 38432.0,
+          "c120": 62024.0
+        }
+      }
+    },
+    {
+      "episode_id": 100004715,
+      "top1_seat": 1,
+      "team_id": 16665224,
+      "team_name": "tyz123456",
+      "selected_route": "base",
+      "actual": {
+        "v59": -3036.0,
+        "v67": -2666.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -3036.0,
+          "a120": -38365.0,
+          "b120": -556.0,
+          "c120": -17568.0
+        },
+        "v67": {
+          "base": -2666.0,
+          "a120": -38359.0,
+          "b120": -402.0,
+          "c120": -17568.0
+        }
+      }
+    },
+    {
+      "episode_id": 100006958,
+      "top1_seat": 0,
+      "team_id": 16673205,
+      "team_name": "Arda Ceylan",
+      "selected_route": "c120",
+      "actual": {
+        "v59": -3018.0,
+        "v67": -3018.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -28860.0,
+          "a120": -33538.0,
+          "b120": -25521.0,
+          "c120": -3018.0
+        },
+        "v67": {
+          "base": -28432.0,
+          "a120": -33567.0,
+          "b120": -25294.0,
+          "c120": -3018.0
+        }
+      }
+    },
+    {
+      "episode_id": 100007008,
+      "top1_seat": 1,
+      "team_id": 16704466,
+      "team_name": "QQ Farming",
+      "selected_route": "base",
+      "actual": {
+        "v59": -7816.0,
+        "v67": -8212.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -7816.0,
+          "a120": -25251.0,
+          "b120": -90359.0,
+          "c120": -10429.0
+        },
+        "v67": {
+          "base": -8212.0,
+          "a120": -25255.0,
+          "b120": -90365.0,
+          "c120": -10429.0
+        }
+      }
+    },
+    {
+      "episode_id": 100011524,
+      "top1_seat": 1,
+      "team_id": 16732578,
+      "team_name": "nao.kwmr",
+      "selected_route": "base",
+      "actual": {
+        "v59": 10840.0,
+        "v67": 12151.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 10840.0,
+          "a120": -20824.0,
+          "b120": 9546.0,
+          "c120": -6904.0
+        },
+        "v67": {
+          "base": 12151.0,
+          "a120": -20819.0,
+          "b120": 11219.0,
+          "c120": -6904.0
+        }
+      }
+    },
+    {
+      "episode_id": 100011672,
+      "top1_seat": 1,
+      "team_id": 16732578,
+      "team_name": "nao.kwmr",
+      "selected_route": "base",
+      "actual": {
+        "v59": 7428.0,
+        "v67": 3961.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 7428.0,
+          "a120": -20948.0,
+          "b120": 5985.0,
+          "c120": -14305.0
+        },
+        "v67": {
+          "base": 3961.0,
+          "a120": -20926.0,
+          "b120": 5359.0,
+          "c120": -14305.0
+        }
+      }
+    },
+    {
+      "episode_id": 100013872,
+      "top1_seat": 0,
+      "team_id": 16686827,
+      "team_name": "Kronki",
+      "selected_route": "c120",
+      "actual": {
+        "v59": 20394.0,
+        "v67": 20381.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 413.0,
+          "a120": -3671.0,
+          "b120": 847.0,
+          "c120": 20394.0
+        },
+        "v67": {
+          "base": 1495.0,
+          "a120": -3678.0,
+          "b120": 936.0,
+          "c120": 20381.0
+        }
+      }
+    },
+    {
+      "episode_id": 100013965,
+      "top1_seat": 0,
+      "team_id": 16714457,
+      "team_name": "Crop Dusta",
+      "selected_route": "base",
+      "actual": {
+        "v59": -14322.0,
+        "v67": -15289.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -14322.0,
+          "a120": -14130.0,
+          "b120": -13090.0,
+          "c120": -6649.0
+        },
+        "v67": {
+          "base": -15289.0,
+          "a120": -14147.0,
+          "b120": -13122.0,
+          "c120": -6649.0
+        }
+      }
+    },
+    {
+      "episode_id": 100013965,
+      "top1_seat": 1,
+      "team_id": 16644287,
+      "team_name": "Ryo Hasegawa",
+      "selected_route": "base",
+      "actual": {
+        "v59": 174.0,
+        "v67": 253.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 174.0,
+          "a120": -6075.0,
+          "b120": 2574.0,
+          "c120": -2006.0
+        },
+        "v67": {
+          "base": 253.0,
+          "a120": -6237.0,
+          "b120": 2582.0,
+          "c120": -2006.0
+        }
+      }
+    },
+    {
+      "episode_id": 100013966,
+      "top1_seat": 0,
+      "team_id": 16730065,
+      "team_name": "Blu3s",
+      "selected_route": "base",
+      "actual": {
+        "v59": -2763.0,
+        "v67": -696.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -2763.0,
+          "a120": -28082.0,
+          "b120": -19866.0,
+          "c120": -55863.0
+        },
+        "v67": {
+          "base": -696.0,
+          "a120": -28088.0,
+          "b120": -19677.0,
+          "c120": -55863.0
+        }
+      }
+    },
+    {
+      "episode_id": 100013971,
+      "top1_seat": 0,
+      "team_id": 16644287,
+      "team_name": "Ryo Hasegawa",
+      "selected_route": "c120",
+      "actual": {
+        "v59": 1830.0,
+        "v67": 1830.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -22500.0,
+          "a120": -34320.0,
+          "b120": -6729.0,
+          "c120": 1830.0
+        },
+        "v67": {
+          "base": -23367.0,
+          "a120": -34372.0,
+          "b120": -6776.0,
+          "c120": 1830.0
+        }
+      }
+    },
+    {
+      "episode_id": 100013971,
+      "top1_seat": 1,
+      "team_id": 16705390,
+      "team_name": "Subramanya N",
+      "selected_route": "base",
+      "actual": {
+        "v59": 60473.0,
+        "v67": 60187.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 60473.0,
+          "a120": 35215.0,
+          "b120": 33354.0,
+          "c120": 27391.0
+        },
+        "v67": {
+          "base": 60187.0,
+          "a120": 35159.0,
+          "b120": 33365.0,
+          "c120": 27391.0
+        }
+      }
+    },
+    {
+      "episode_id": 100013973,
+      "top1_seat": 0,
+      "team_id": 16644287,
+      "team_name": "Ryo Hasegawa",
+      "selected_route": "base",
+      "actual": {
+        "v59": 28384.0,
+        "v67": 28396.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 28384.0,
+          "a120": -20575.0,
+          "b120": 21292.0,
+          "c120": -16577.0
+        },
+        "v67": {
+          "base": 28396.0,
+          "a120": -20580.0,
+          "b120": 21254.0,
+          "c120": -16577.0
+        }
+      }
+    },
+    {
+      "episode_id": 100013973,
+      "top1_seat": 1,
+      "team_id": 16705390,
+      "team_name": "Subramanya N",
+      "selected_route": "base",
+      "actual": {
+        "v59": 20728.0,
+        "v67": 19744.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 20728.0,
+          "a120": -8848.0,
+          "b120": 18238.0,
+          "c120": -4158.0
+        },
+        "v67": {
+          "base": 19744.0,
+          "a120": -8642.0,
+          "b120": 18443.0,
+          "c120": -4158.0
+        }
+      }
+    },
+    {
+      "episode_id": 100016098,
+      "top1_seat": 1,
+      "team_id": 16663649,
+      "team_name": "Akhil Chinta",
+      "selected_route": "base",
+      "actual": {
+        "v59": 14897.0,
+        "v67": 21234.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 14897.0,
+          "a120": -23156.0,
+          "b120": 20475.0,
+          "c120": -13243.0
+        },
+        "v67": {
+          "base": 21234.0,
+          "a120": -23157.0,
+          "b120": 20537.0,
+          "c120": -13243.0
+        }
+      }
+    },
+    {
+      "episode_id": 100016262,
+      "top1_seat": 1,
+      "team_id": 16673205,
+      "team_name": "Arda Ceylan",
+      "selected_route": "base",
+      "actual": {
+        "v59": 354.0,
+        "v67": 514.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 354.0,
+          "a120": -29116.0,
+          "b120": 1572.0,
+          "c120": -3562.0
+        },
+        "v67": {
+          "base": 514.0,
+          "a120": -29120.0,
+          "b120": 1936.0,
+          "c120": -3562.0
+        }
+      }
+    },
+    {
+      "episode_id": 100018451,
+      "top1_seat": 0,
+      "team_id": 16704466,
+      "team_name": "QQ Farming",
+      "selected_route": "base",
+      "actual": {
+        "v59": 187.0,
+        "v67": -52.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 187.0,
+          "a120": -10327.0,
+          "b120": 7548.0,
+          "c120": 8241.0
+        },
+        "v67": {
+          "base": -52.0,
+          "a120": -10322.0,
+          "b120": 7661.0,
+          "c120": 8241.0
+        }
+      }
+    },
+    {
+      "episode_id": 100018528,
+      "top1_seat": 0,
+      "team_id": 16623608,
+      "team_name": "Dmitry Larko",
+      "selected_route": "c120",
+      "actual": {
+        "v59": -599.0,
+        "v67": -599.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -2576.0,
+          "a120": -35698.0,
+          "b120": -22081.0,
+          "c120": -599.0
+        },
+        "v67": {
+          "base": -2877.0,
+          "a120": -35741.0,
+          "b120": -22059.0,
+          "c120": -599.0
+        }
+      }
+    },
+    {
+      "episode_id": 100018528,
+      "top1_seat": 1,
+      "team_id": 16670032,
+      "team_name": "Kenjo1209",
+      "selected_route": "c120",
+      "actual": {
+        "v59": 6053.0,
+        "v67": 6053.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -3661.0,
+          "a120": -33690.0,
+          "b120": -7725.0,
+          "c120": 6053.0
+        },
+        "v67": {
+          "base": -4246.0,
+          "a120": -33740.0,
+          "b120": -7734.0,
+          "c120": 6053.0
+        }
+      }
+    },
+    {
+      "episode_id": 100020733,
+      "top1_seat": 0,
+      "team_id": 16732578,
+      "team_name": "nao.kwmr",
+      "selected_route": "c120",
+      "actual": {
+        "v59": 5906.0,
+        "v67": 5906.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -9015.0,
+          "a120": -27393.0,
+          "b120": -29263.0,
+          "c120": 5906.0
+        },
+        "v67": {
+          "base": -9086.0,
+          "a120": -27438.0,
+          "b120": -28887.0,
+          "c120": 5906.0
+        }
+      }
+    },
+    {
+      "episode_id": 100022955,
+      "top1_seat": 0,
+      "team_id": 16704466,
+      "team_name": "QQ Farming",
+      "selected_route": "base",
+      "actual": {
+        "v59": 10311.0,
+        "v67": 10554.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 10311.0,
+          "a120": -4764.0,
+          "b120": -282.0,
+          "c120": 19303.0
+        },
+        "v67": {
+          "base": 10554.0,
+          "a120": -4784.0,
+          "b120": -23.0,
+          "c120": 19303.0
+        }
+      }
+    },
+    {
+      "episode_id": 100025241,
+      "top1_seat": 1,
+      "team_id": 16704466,
+      "team_name": "QQ Farming",
+      "selected_route": "base",
+      "actual": {
+        "v59": -6821.0,
+        "v67": -7423.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -6821.0,
+          "a120": -16656.0,
+          "b120": -11449.0,
+          "c120": 12801.0
+        },
+        "v67": {
+          "base": -7423.0,
+          "a120": -16684.0,
+          "b120": -11378.0,
+          "c120": 12801.0
+        }
+      }
+    },
+    {
+      "episode_id": 100025297,
+      "top1_seat": 0,
+      "team_id": 16670032,
+      "team_name": "Kenjo1209",
+      "selected_route": "base",
+      "actual": {
+        "v59": 4447.0,
+        "v67": 5253.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 4447.0,
+          "a120": -23158.0,
+          "b120": 3179.0,
+          "c120": -19903.0
+        },
+        "v67": {
+          "base": 5253.0,
+          "a120": -23217.0,
+          "b120": -1610.0,
+          "c120": -19903.0
+        }
+      }
+    },
+    {
+      "episode_id": 100029868,
+      "top1_seat": 0,
+      "team_id": 16715733,
+      "team_name": "peikopon",
+      "selected_route": "base",
+      "actual": {
+        "v59": 16390.0,
+        "v67": 4378.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 16390.0,
+          "a120": -17731.0,
+          "b120": -11232.0,
+          "c120": -8469.0
+        },
+        "v67": {
+          "base": 4378.0,
+          "a120": -17791.0,
+          "b120": 1482.0,
+          "c120": -8469.0
+        }
+      }
+    },
+    {
+      "episode_id": 100029868,
+      "top1_seat": 1,
+      "team_id": 16623716,
+      "team_name": "tetsuya",
+      "selected_route": "base",
+      "actual": {
+        "v59": -18182.0,
+        "v67": -18239.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -18182.0,
+          "a120": -7312.0,
+          "b120": -20910.0,
+          "c120": -4384.0
+        },
+        "v67": {
+          "base": -18239.0,
+          "a120": -7313.0,
+          "b120": -21018.0,
+          "c120": -4384.0
+        }
+      }
+    },
+    {
+      "episode_id": 100032174,
+      "top1_seat": 0,
+      "team_id": 16665224,
+      "team_name": "tyz123456",
+      "selected_route": "base",
+      "actual": {
+        "v59": 61.0,
+        "v67": -438.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 61.0,
+          "a120": -42961.0,
+          "b120": -929.0,
+          "c120": -8659.0
+        },
+        "v67": {
+          "base": -438.0,
+          "a120": -42951.0,
+          "b120": -776.0,
+          "c120": -8659.0
+        }
+      }
+    },
+    {
+      "episode_id": 100032174,
+      "top1_seat": 1,
+      "team_id": 16715733,
+      "team_name": "peikopon",
+      "selected_route": "base",
+      "actual": {
+        "v59": -1134.0,
+        "v67": -1376.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -1134.0,
+          "a120": -72198.0,
+          "b120": -2211.0,
+          "c120": -31631.0
+        },
+        "v67": {
+          "base": -1376.0,
+          "a120": -72198.0,
+          "b120": 6650.0,
+          "c120": -31631.0
+        }
+      }
+    },
+    {
+      "episode_id": 100034375,
+      "top1_seat": 1,
+      "team_id": 16685548,
+      "team_name": "Erfan Eshratifar",
+      "selected_route": "c120",
+      "actual": {
+        "v59": 21415.0,
+        "v67": 21415.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 9206.0,
+          "a120": -11279.0,
+          "b120": -1135.0,
+          "c120": 21415.0
+        },
+        "v67": {
+          "base": 8829.0,
+          "a120": -11244.0,
+          "b120": -1010.0,
+          "c120": 21415.0
+        }
+      }
+    },
+    {
+      "episode_id": 100034464,
+      "top1_seat": 0,
+      "team_id": 16715733,
+      "team_name": "peikopon",
+      "selected_route": "base",
+      "actual": {
+        "v59": -7860.0,
+        "v67": -10666.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -7860.0,
+          "a120": -46294.0,
+          "b120": 4345.0,
+          "c120": -10688.0
+        },
+        "v67": {
+          "base": -10666.0,
+          "a120": -46292.0,
+          "b120": 4646.0,
+          "c120": -10688.0
+        }
+      }
+    },
+    {
+      "episode_id": 100034464,
+      "top1_seat": 1,
+      "team_id": 16670032,
+      "team_name": "Kenjo1209",
+      "selected_route": "base",
+      "actual": {
+        "v59": 3166.0,
+        "v67": -5541.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 3166.0,
+          "a120": -18770.0,
+          "b120": 1559.0,
+          "c120": -14149.0
+        },
+        "v67": {
+          "base": -5541.0,
+          "a120": -18749.0,
+          "b120": -10843.0,
+          "c120": -14149.0
+        }
+      }
+    },
+    {
+      "episode_id": 100036744,
+      "top1_seat": 0,
+      "team_id": 16715733,
+      "team_name": "peikopon",
+      "selected_route": "base",
+      "actual": {
+        "v59": 1174.0,
+        "v67": 3228.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 1174.0,
+          "a120": -48230.0,
+          "b120": 1332.0,
+          "c120": -25501.0
+        },
+        "v67": {
+          "base": 3228.0,
+          "a120": -48232.0,
+          "b120": 1581.0,
+          "c120": -25501.0
+        }
+      }
+    },
+    {
+      "episode_id": 100036744,
+      "top1_seat": 1,
+      "team_id": 16685548,
+      "team_name": "Erfan Eshratifar",
+      "selected_route": "base",
+      "actual": {
+        "v59": 1940.0,
+        "v67": 1005.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 1940.0,
+          "a120": -11658.0,
+          "b120": -7537.0,
+          "c120": -36857.0
+        },
+        "v67": {
+          "base": 1005.0,
+          "a120": -11702.0,
+          "b120": -7459.0,
+          "c120": -36857.0
+        }
+      }
+    },
+    {
+      "episode_id": 100038967,
+      "top1_seat": 0,
+      "team_id": 16704466,
+      "team_name": "QQ Farming",
+      "selected_route": "base",
+      "actual": {
+        "v59": 27865.0,
+        "v67": 27189.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 27865.0,
+          "a120": -8057.0,
+          "b120": 22428.0,
+          "c120": 2204.0
+        },
+        "v67": {
+          "base": 27189.0,
+          "a120": -8033.0,
+          "b120": 22542.0,
+          "c120": 2171.0
+        }
+      }
+    },
+    {
+      "episode_id": 100041261,
+      "top1_seat": 0,
+      "team_id": 16762957,
+      "team_name": "Yizuki",
+      "selected_route": "base",
+      "actual": {
+        "v59": 16904.0,
+        "v67": 17565.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 16904.0,
+          "a120": 360.0,
+          "b120": 13066.0,
+          "c120": 4566.0
+        },
+        "v67": {
+          "base": 17565.0,
+          "a120": 352.0,
+          "b120": 13397.0,
+          "c120": 4566.0
+        }
+      }
+    },
+    {
+      "episode_id": 100043537,
+      "top1_seat": 1,
+      "team_id": 16670032,
+      "team_name": "Kenjo1209",
+      "selected_route": "base",
+      "actual": {
+        "v59": 71336.0,
+        "v67": 55424.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 71336.0,
+          "a120": 205.0,
+          "b120": 43520.0,
+          "c120": -1363.0
+        },
+        "v67": {
+          "base": 55424.0,
+          "a120": 474.0,
+          "b120": 53045.0,
+          "c120": -1363.0
+        }
+      }
+    },
+    {
+      "episode_id": 100045826,
+      "top1_seat": 0,
+      "team_id": 16727266,
+      "team_name": "ebisu_ya",
+      "selected_route": "base",
+      "actual": {
+        "v59": 12672.0,
+        "v67": 12922.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 12672.0,
+          "a120": -13201.0,
+          "b120": 10739.0,
+          "c120": -696.0
+        },
+        "v67": {
+          "base": 12922.0,
+          "a120": -13205.0,
+          "b120": 10937.0,
+          "c120": -696.0
+        }
+      }
+    },
+    {
+      "episode_id": 100045947,
+      "top1_seat": 0,
+      "team_id": 16686827,
+      "team_name": "Kronki",
+      "selected_route": "base",
+      "actual": {
+        "v59": -29.0,
+        "v67": 799.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -29.0,
+          "a120": -55625.0,
+          "b120": 593.0,
+          "c120": -29674.0
+        },
+        "v67": {
+          "base": 799.0,
+          "a120": -55624.0,
+          "b120": 1141.0,
+          "c120": -29674.0
+        }
+      }
+    },
+    {
+      "episode_id": 100045947,
+      "top1_seat": 1,
+      "team_id": 16715733,
+      "team_name": "peikopon",
+      "selected_route": "base",
+      "actual": {
+        "v59": -386.0,
+        "v67": 3155.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -386.0,
+          "a120": -46413.0,
+          "b120": -3935.0,
+          "c120": -20136.0
+        },
+        "v67": {
+          "base": 3155.0,
+          "a120": -46413.0,
+          "b120": -1280.0,
+          "c120": -20136.0
+        }
+      }
+    },
+    {
+      "episode_id": 100048121,
+      "top1_seat": 1,
+      "team_id": 16663649,
+      "team_name": "Akhil Chinta",
+      "selected_route": "c120",
+      "actual": {
+        "v59": 8925.0,
+        "v67": 8925.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -29286.0,
+          "a120": -22281.0,
+          "b120": -32070.0,
+          "c120": 8925.0
+        },
+        "v67": {
+          "base": -29253.0,
+          "a120": -22298.0,
+          "b120": -32058.0,
+          "c120": 8925.0
+        }
+      }
+    },
+    {
+      "episode_id": 100050323,
+      "top1_seat": 1,
+      "team_id": 16685548,
+      "team_name": "Erfan Eshratifar",
+      "selected_route": "base",
+      "actual": {
+        "v59": -5498.0,
+        "v67": -5985.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -5498.0,
+          "a120": -21858.0,
+          "b120": -1115.0,
+          "c120": -31637.0
+        },
+        "v67": {
+          "base": -5985.0,
+          "a120": -21869.0,
+          "b120": -949.0,
+          "c120": -31637.0
+        }
+      }
+    },
+    {
+      "episode_id": 100050395,
+      "top1_seat": 0,
+      "team_id": 16715733,
+      "team_name": "peikopon",
+      "selected_route": "base",
+      "actual": {
+        "v59": 6752.0,
+        "v67": 9270.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 6752.0,
+          "a120": -25834.0,
+          "b120": 4596.0,
+          "c120": -6079.0
+        },
+        "v67": {
+          "base": 9270.0,
+          "a120": -25833.0,
+          "b120": 6588.0,
+          "c120": -6079.0
+        }
+      }
+    },
+    {
+      "episode_id": 100052686,
+      "top1_seat": 1,
+      "team_id": 16671476,
+      "team_name": "Mingkang YAN",
+      "selected_route": "base",
+      "actual": {
+        "v59": -5461.0,
+        "v67": -5306.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -5461.0,
+          "a120": -28028.0,
+          "b120": -18794.0,
+          "c120": 17140.0
+        },
+        "v67": {
+          "base": -5306.0,
+          "a120": -28032.0,
+          "b120": -18673.0,
+          "c120": 17134.0
+        }
+      }
+    },
+    {
+      "episode_id": 100054967,
+      "top1_seat": 1,
+      "team_id": 16671476,
+      "team_name": "Mingkang YAN",
+      "selected_route": "base",
+      "actual": {
+        "v59": -4119.0,
+        "v67": -3817.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -4119.0,
+          "a120": -37527.0,
+          "b120": -15441.0,
+          "c120": -22680.0
+        },
+        "v67": {
+          "base": -3817.0,
+          "a120": -37528.0,
+          "b120": -15363.0,
+          "c120": -22700.0
+        }
+      }
+    },
+    {
+      "episode_id": 100057268,
+      "top1_seat": 0,
+      "team_id": 16671476,
+      "team_name": "Mingkang YAN",
+      "selected_route": "base",
+      "actual": {
+        "v59": 28011.0,
+        "v67": -16717.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 28011.0,
+          "a120": 9533.0,
+          "b120": -38975.0,
+          "c120": -21988.0
+        },
+        "v67": {
+          "base": -16717.0,
+          "a120": 9463.0,
+          "b120": -38983.0,
+          "c120": -22031.0
+        }
+      }
+    },
+    {
+      "episode_id": 100057268,
+      "top1_seat": 1,
+      "team_id": 16623608,
+      "team_name": "Dmitry Larko",
+      "selected_route": "base",
+      "actual": {
+        "v59": 672.0,
+        "v67": -478.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 672.0,
+          "a120": 13563.0,
+          "b120": -1801.0,
+          "c120": 21891.0
+        },
+        "v67": {
+          "base": -478.0,
+          "a120": 13716.0,
+          "b120": -3043.0,
+          "c120": 21891.0
+        }
+      }
+    },
+    {
+      "episode_id": 100059563,
+      "top1_seat": 0,
+      "team_id": 16671476,
+      "team_name": "Mingkang YAN",
+      "selected_route": "base",
+      "actual": {
+        "v59": 49985.0,
+        "v67": 36653.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 49985.0,
+          "a120": 8322.0,
+          "b120": 7896.0,
+          "c120": -10259.0
+        },
+        "v67": {
+          "base": 36653.0,
+          "a120": 8303.0,
+          "b120": 8847.0,
+          "c120": -10267.0
+        }
+      }
+    },
+    {
+      "episode_id": 100059563,
+      "top1_seat": 1,
+      "team_id": 16670032,
+      "team_name": "Kenjo1209",
+      "selected_route": "c120",
+      "actual": {
+        "v59": 8419.0,
+        "v67": 8419.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -11442.0,
+          "a120": -20748.0,
+          "b120": -19169.0,
+          "c120": 8419.0
+        },
+        "v67": {
+          "base": -12204.0,
+          "a120": -20736.0,
+          "b120": -18878.0,
+          "c120": 8419.0
+        }
+      }
+    },
+    {
+      "episode_id": 100061763,
+      "top1_seat": 1,
+      "team_id": 16663649,
+      "team_name": "Akhil Chinta",
+      "selected_route": "base",
+      "actual": {
+        "v59": 952.0,
+        "v67": 1909.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 952.0,
+          "a120": -9453.0,
+          "b120": 707.0,
+          "c120": -3059.0
+        },
+        "v67": {
+          "base": 1909.0,
+          "a120": -9465.0,
+          "b120": 8443.0,
+          "c120": -3059.0
+        }
+      }
+    },
+    {
+      "episode_id": 100061842,
+      "top1_seat": 1,
+      "team_id": 16671476,
+      "team_name": "Mingkang YAN",
+      "selected_route": "base",
+      "actual": {
+        "v59": -2686.0,
+        "v67": -2822.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -2686.0,
+          "a120": -20721.0,
+          "b120": -5554.0,
+          "c120": -34176.0
+        },
+        "v67": {
+          "base": -2822.0,
+          "a120": -20708.0,
+          "b120": -4155.0,
+          "c120": -34176.0
+        }
+      }
+    },
+    {
+      "episode_id": 100064207,
+      "top1_seat": 0,
+      "team_id": 16671476,
+      "team_name": "Mingkang YAN",
+      "selected_route": "base",
+      "actual": {
+        "v59": -2248.0,
+        "v67": -2234.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -2248.0,
+          "a120": -6619.0,
+          "b120": -4227.0,
+          "c120": -2593.0
+        },
+        "v67": {
+          "base": -2234.0,
+          "a120": -6621.0,
+          "b120": -2931.0,
+          "c120": -2593.0
+        }
+      }
+    },
+    {
+      "episode_id": 100066330,
+      "top1_seat": 0,
+      "team_id": 16685548,
+      "team_name": "Erfan Eshratifar",
+      "selected_route": "base",
+      "actual": {
+        "v59": -4979.0,
+        "v67": -5418.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -4979.0,
+          "a120": -17430.0,
+          "b120": -3793.0,
+          "c120": -24450.0
+        },
+        "v67": {
+          "base": -5418.0,
+          "a120": -17465.0,
+          "b120": -3876.0,
+          "c120": -24450.0
+        }
+      }
+    },
+    {
+      "episode_id": 100068507,
+      "top1_seat": 0,
+      "team_id": 16704466,
+      "team_name": "QQ Farming",
+      "selected_route": "c120",
+      "actual": {
+        "v59": 21951.0,
+        "v67": 21951.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 9154.0,
+          "a120": -7028.0,
+          "b120": 7165.0,
+          "c120": 21951.0
+        },
+        "v67": {
+          "base": 9392.0,
+          "a120": -7008.0,
+          "b120": 8278.0,
+          "c120": 21951.0
+        }
+      }
+    },
+    {
+      "episode_id": 100070920,
+      "top1_seat": 1,
+      "team_id": 16732578,
+      "team_name": "nao.kwmr",
+      "selected_route": "c120",
+      "actual": {
+        "v59": 38389.0,
+        "v67": 38389.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 6384.0,
+          "a120": 387.0,
+          "b120": 2698.0,
+          "c120": 38389.0
+        },
+        "v67": {
+          "base": 6977.0,
+          "a120": 385.0,
+          "b120": 3494.0,
+          "c120": 38389.0
+        }
+      }
+    },
+    {
+      "episode_id": 100073094,
+      "top1_seat": 0,
+      "team_id": 16685548,
+      "team_name": "Erfan Eshratifar",
+      "selected_route": "c120",
+      "actual": {
+        "v59": 4676.0,
+        "v67": 4676.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 4546.0,
+          "a120": -16643.0,
+          "b120": -235.0,
+          "c120": 4676.0
+        },
+        "v67": {
+          "base": 3750.0,
+          "a120": -16738.0,
+          "b120": -164.0,
+          "c120": 4676.0
+        }
+      }
+    },
+    {
+      "episode_id": 100075388,
+      "top1_seat": 1,
+      "team_id": 16704466,
+      "team_name": "QQ Farming",
+      "selected_route": "base",
+      "actual": {
+        "v59": 1514.0,
+        "v67": 1584.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 1514.0,
+          "a120": -9334.0,
+          "b120": -969.0,
+          "c120": -3033.0
+        },
+        "v67": {
+          "base": 1584.0,
+          "a120": -9331.0,
+          "b120": -567.0,
+          "c120": -3033.0
+        }
+      }
+    },
+    {
+      "episode_id": 100075619,
+      "top1_seat": 0,
+      "team_id": 16714457,
+      "team_name": "Crop Dusta",
+      "selected_route": "base",
+      "actual": {
+        "v59": 31741.0,
+        "v67": 30357.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 31741.0,
+          "a120": -17069.0,
+          "b120": 19656.0,
+          "c120": 9090.0
+        },
+        "v67": {
+          "base": 30357.0,
+          "a120": -16981.0,
+          "b120": 19662.0,
+          "c120": 9090.0
+        }
+      }
+    },
+    {
+      "episode_id": 100075619,
+      "top1_seat": 1,
+      "team_id": 16644287,
+      "team_name": "Ryo Hasegawa",
+      "selected_route": "base",
+      "actual": {
+        "v59": 5683.0,
+        "v67": 5835.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 5683.0,
+          "a120": -17206.0,
+          "b120": 4034.0,
+          "c120": -42383.0
+        },
+        "v67": {
+          "base": 5835.0,
+          "a120": -17264.0,
+          "b120": 4102.0,
+          "c120": -42383.0
+        }
+      }
+    },
+    {
+      "episode_id": 100075620,
+      "top1_seat": 0,
+      "team_id": 16686827,
+      "team_name": "Kronki",
+      "selected_route": "base",
+      "actual": {
+        "v59": 12856.0,
+        "v67": 13216.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 12856.0,
+          "a120": -72098.0,
+          "b120": 10903.0,
+          "c120": 17483.0
+        },
+        "v67": {
+          "base": 13216.0,
+          "a120": -72098.0,
+          "b120": 11148.0,
+          "c120": 17483.0
+        }
+      }
+    },
+    {
+      "episode_id": 100075620,
+      "top1_seat": 1,
+      "team_id": 16730065,
+      "team_name": "Blu3s",
+      "selected_route": "base",
+      "actual": {
+        "v59": -3440.0,
+        "v67": -3363.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -3440.0,
+          "a120": -49958.0,
+          "b120": -16866.0,
+          "c120": -50414.0
+        },
+        "v67": {
+          "base": -3363.0,
+          "a120": -49953.0,
+          "b120": -14895.0,
+          "c120": -50414.0
+        }
+      }
+    },
+    {
+      "episode_id": 100075622,
+      "top1_seat": 0,
+      "team_id": 16644287,
+      "team_name": "Ryo Hasegawa",
+      "selected_route": "base",
+      "actual": {
+        "v59": 4447.0,
+        "v67": 4563.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 4447.0,
+          "a120": -24062.0,
+          "b120": 865.0,
+          "c120": -14019.0
+        },
+        "v67": {
+          "base": 4563.0,
+          "a120": -24142.0,
+          "b120": 869.0,
+          "c120": -14019.0
+        }
+      }
+    },
+    {
+      "episode_id": 100075623,
+      "top1_seat": 0,
+      "team_id": 16665224,
+      "team_name": "tyz123456",
+      "selected_route": "base",
+      "actual": {
+        "v59": 8112.0,
+        "v67": 5094.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 8112.0,
+          "a120": -58872.0,
+          "b120": -3729.0,
+          "c120": -19582.0
+        },
+        "v67": {
+          "base": 5094.0,
+          "a120": -58873.0,
+          "b120": 2771.0,
+          "c120": -19582.0
+        }
+      }
+    },
+    {
+      "episode_id": 100075623,
+      "top1_seat": 1,
+      "team_id": 16705390,
+      "team_name": "Subramanya N",
+      "selected_route": "base",
+      "actual": {
+        "v59": -12181.0,
+        "v67": -12148.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -12181.0,
+          "a120": -10536.0,
+          "b120": -1546.0,
+          "c120": -15170.0
+        },
+        "v67": {
+          "base": -12148.0,
+          "a120": -10611.0,
+          "b120": -1315.0,
+          "c120": -15170.0
+        }
+      }
+    },
+    {
+      "episode_id": 100075627,
+      "top1_seat": 0,
+      "team_id": 16644287,
+      "team_name": "Ryo Hasegawa",
+      "selected_route": "base",
+      "actual": {
+        "v59": -416.0,
+        "v67": -470.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -416.0,
+          "a120": -43142.0,
+          "b120": -2478.0,
+          "c120": -54436.0
+        },
+        "v67": {
+          "base": -470.0,
+          "a120": -43162.0,
+          "b120": -2653.0,
+          "c120": -54436.0
+        }
+      }
+    },
+    {
+      "episode_id": 100077800,
+      "top1_seat": 0,
+      "team_id": 16673205,
+      "team_name": "Arda Ceylan",
+      "selected_route": "base",
+      "actual": {
+        "v59": 535.0,
+        "v67": -777.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 535.0,
+          "a120": 2352.0,
+          "b120": -15589.0,
+          "c120": -1332.0
+        },
+        "v67": {
+          "base": -777.0,
+          "a120": 2347.0,
+          "b120": -15074.0,
+          "c120": -1332.0
+        }
+      }
+    },
+    {
+      "episode_id": 100082369,
+      "top1_seat": 1,
+      "team_id": 16641077,
+      "team_name": "lucaskna",
+      "selected_route": "base",
+      "actual": {
+        "v59": 1290.0,
+        "v67": 956.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 1290.0,
+          "a120": -25396.0,
+          "b120": 202.0,
+          "c120": -21133.0
+        },
+        "v67": {
+          "base": 956.0,
+          "a120": -25425.0,
+          "b120": 1449.0,
+          "c120": -21133.0
+        }
+      }
+    },
+    {
+      "episode_id": 100084650,
+      "top1_seat": 0,
+      "team_id": 16641077,
+      "team_name": "lucaskna",
+      "selected_route": "base",
+      "actual": {
+        "v59": -496.0,
+        "v67": -446.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -496.0,
+          "a120": -13604.0,
+          "b120": 2496.0,
+          "c120": 4496.0
+        },
+        "v67": {
+          "base": -446.0,
+          "a120": -13660.0,
+          "b120": 4274.0,
+          "c120": 4496.0
+        }
+      }
+    },
+    {
+      "episode_id": 100084650,
+      "top1_seat": 1,
+      "team_id": 16663649,
+      "team_name": "Akhil Chinta",
+      "selected_route": "base",
+      "actual": {
+        "v59": 1857.0,
+        "v67": 4123.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 1857.0,
+          "a120": -3805.0,
+          "b120": 1631.0,
+          "c120": 17709.0
+        },
+        "v67": {
+          "base": 4123.0,
+          "a120": -3779.0,
+          "b120": 8390.0,
+          "c120": 17709.0
+        }
+      }
+    },
+    {
+      "episode_id": 100084749,
+      "top1_seat": 0,
+      "team_id": 16670032,
+      "team_name": "Kenjo1209",
+      "selected_route": "base",
+      "actual": {
+        "v59": 1859.0,
+        "v67": 3665.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 1859.0,
+          "a120": -7927.0,
+          "b120": 1227.0,
+          "c120": -14392.0
+        },
+        "v67": {
+          "base": 3665.0,
+          "a120": -8154.0,
+          "b120": -6170.0,
+          "c120": -14392.0
+        }
+      }
+    },
+    {
+      "episode_id": 100084749,
+      "top1_seat": 1,
+      "team_id": 16715733,
+      "team_name": "peikopon",
+      "selected_route": "base",
+      "actual": {
+        "v59": -2474.0,
+        "v67": -2756.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -2474.0,
+          "a120": -27672.0,
+          "b120": 3943.0,
+          "c120": -14017.0
+        },
+        "v67": {
+          "base": -2756.0,
+          "a120": -27699.0,
+          "b120": 5002.0,
+          "c120": -14017.0
+        }
+      }
+    },
+    {
+      "episode_id": 100084756,
+      "top1_seat": 1,
+      "team_id": 16671476,
+      "team_name": "Mingkang YAN",
+      "selected_route": "base",
+      "actual": {
+        "v59": -31739.0,
+        "v67": -31605.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -31739.0,
+          "a120": -16099.0,
+          "b120": 23646.0,
+          "c120": 5695.0
+        },
+        "v67": {
+          "base": -31605.0,
+          "a120": -16109.0,
+          "b120": 13687.0,
+          "c120": 5695.0
+        }
+      }
+    },
+    {
+      "episode_id": 100086949,
+      "top1_seat": 1,
+      "team_id": 16641077,
+      "team_name": "lucaskna",
+      "selected_route": "base",
+      "actual": {
+        "v59": 1388.0,
+        "v67": 4317.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 1388.0,
+          "a120": -23167.0,
+          "b120": 108.0,
+          "c120": -6792.0
+        },
+        "v67": {
+          "base": 4317.0,
+          "a120": -23173.0,
+          "b120": 430.0,
+          "c120": -6792.0
+        }
+      }
+    },
+    {
+      "episode_id": 100089236,
+      "top1_seat": 0,
+      "team_id": 16663649,
+      "team_name": "Akhil Chinta",
+      "selected_route": "c120",
+      "actual": {
+        "v59": 35403.0,
+        "v67": 35403.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 858.0,
+          "a120": -12040.0,
+          "b120": -1518.0,
+          "c120": 35403.0
+        },
+        "v67": {
+          "base": 345.0,
+          "a120": -12046.0,
+          "b120": 420.0,
+          "c120": 35403.0
+        }
+      }
+    },
+    {
+      "episode_id": 100089236,
+      "top1_seat": 1,
+      "team_id": 16641077,
+      "team_name": "lucaskna",
+      "selected_route": "c120",
+      "actual": {
+        "v59": 38498.0,
+        "v67": 38498.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 1350.0,
+          "a120": -15782.0,
+          "b120": 262.0,
+          "c120": 38498.0
+        },
+        "v67": {
+          "base": 1053.0,
+          "a120": -15831.0,
+          "b120": 1708.0,
+          "c120": 38498.0
+        }
+      }
+    },
+    {
+      "episode_id": 100091529,
+      "top1_seat": 1,
+      "team_id": 16641077,
+      "team_name": "lucaskna",
+      "selected_route": "base",
+      "actual": {
+        "v59": -1222.0,
+        "v67": -1750.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -1222.0,
+          "a120": -5955.0,
+          "b120": 1501.0,
+          "c120": 5283.0
+        },
+        "v67": {
+          "base": -1750.0,
+          "a120": -5985.0,
+          "b120": 5617.0,
+          "c120": 5283.0
+        }
+      }
+    },
+    {
+      "episode_id": 100093708,
+      "top1_seat": 1,
+      "team_id": 16762957,
+      "team_name": "Yizuki",
+      "selected_route": "base",
+      "actual": {
+        "v59": 4559.0,
+        "v67": 12869.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 4559.0,
+          "a120": -113656.0,
+          "b120": 3289.0,
+          "c120": -17958.0
+        },
+        "v67": {
+          "base": 12869.0,
+          "a120": -113656.0,
+          "b120": -2034.0,
+          "c120": -17958.0
+        }
+      }
+    },
+    {
+      "episode_id": 100093836,
+      "top1_seat": 0,
+      "team_id": 16641077,
+      "team_name": "lucaskna",
+      "selected_route": "base",
+      "actual": {
+        "v59": -8036.0,
+        "v67": -8432.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -8036.0,
+          "a120": -1038.0,
+          "b120": -12259.0,
+          "c120": 3139.0
+        },
+        "v67": {
+          "base": -8432.0,
+          "a120": -1070.0,
+          "b120": -12061.0,
+          "c120": 3139.0
+        }
+      }
+    },
+    {
+      "episode_id": 100093845,
+      "top1_seat": 0,
+      "team_id": 16623716,
+      "team_name": "tetsuya",
+      "selected_route": "base",
+      "actual": {
+        "v59": -456.0,
+        "v67": -913.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -456.0,
+          "a120": -25188.0,
+          "b120": -11270.0,
+          "c120": -13201.0
+        },
+        "v67": {
+          "base": -913.0,
+          "a120": -25285.0,
+          "b120": -11476.0,
+          "c120": -13201.0
+        }
+      }
+    },
+    {
+      "episode_id": 100102864,
+      "top1_seat": 1,
+      "team_id": 16685548,
+      "team_name": "Erfan Eshratifar",
+      "selected_route": "base",
+      "actual": {
+        "v59": 3639.0,
+        "v67": 2835.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 3639.0,
+          "a120": -12044.0,
+          "b120": -438.0,
+          "c120": -43492.0
+        },
+        "v67": {
+          "base": 2835.0,
+          "a120": -12098.0,
+          "b120": -226.0,
+          "c120": -43492.0
+        }
+      }
+    },
+    {
+      "episode_id": 100105297,
+      "top1_seat": 0,
+      "team_id": 16623608,
+      "team_name": "Dmitry Larko",
+      "selected_route": "c120",
+      "actual": {
+        "v59": 19711.0,
+        "v67": 19711.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 5123.0,
+          "a120": -13622.0,
+          "b120": 782.0,
+          "c120": 19711.0
+        },
+        "v67": {
+          "base": 3808.0,
+          "a120": -13627.0,
+          "b120": 844.0,
+          "c120": 19711.0
+        }
+      }
+    },
+    {
+      "episode_id": 100105297,
+      "top1_seat": 1,
+      "team_id": 16704466,
+      "team_name": "QQ Farming",
+      "selected_route": "base",
+      "actual": {
+        "v59": 4728.0,
+        "v67": 4880.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 4728.0,
+          "a120": -24539.0,
+          "b120": 7584.0,
+          "c120": 680.0
+        },
+        "v67": {
+          "base": 4880.0,
+          "a120": -24534.0,
+          "b120": 8747.0,
+          "c120": 680.0
+        }
+      }
+    },
+    {
+      "episode_id": 100112030,
+      "top1_seat": 0,
+      "team_id": 16762957,
+      "team_name": "Yizuki",
+      "selected_route": "base",
+      "actual": {
+        "v59": 2623.0,
+        "v67": 7406.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 2623.0,
+          "a120": -51863.0,
+          "b120": -5745.0,
+          "c120": -16055.0
+        },
+        "v67": {
+          "base": 7406.0,
+          "a120": -51838.0,
+          "b120": 2970.0,
+          "c120": -16055.0
+        }
+      }
+    },
+    {
+      "episode_id": 100112115,
+      "top1_seat": 0,
+      "team_id": 16727266,
+      "team_name": "ebisu_ya",
+      "selected_route": "base",
+      "actual": {
+        "v59": 358.0,
+        "v67": 912.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 358.0,
+          "a120": -32024.0,
+          "b120": 1049.0,
+          "c120": -29971.0
+        },
+        "v67": {
+          "base": 912.0,
+          "a120": -32030.0,
+          "b120": 1415.0,
+          "c120": -29971.0
+        }
+      }
+    },
+    {
+      "episode_id": 100116735,
+      "top1_seat": 0,
+      "team_id": 16641077,
+      "team_name": "lucaskna",
+      "selected_route": "base",
+      "actual": {
+        "v59": 4468.0,
+        "v67": 4805.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 4468.0,
+          "a120": -36623.0,
+          "b120": -779.0,
+          "c120": -26439.0
+        },
+        "v67": {
+          "base": 4805.0,
+          "a120": -36622.0,
+          "b120": 502.0,
+          "c120": -26439.0
+        }
+      }
+    },
+    {
+      "episode_id": 100121194,
+      "top1_seat": 1,
+      "team_id": 16685548,
+      "team_name": "Erfan Eshratifar",
+      "selected_route": "base",
+      "actual": {
+        "v59": 9221.0,
+        "v67": 8480.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 9221.0,
+          "a120": -25736.0,
+          "b120": 2013.0,
+          "c120": 5804.0
+        },
+        "v67": {
+          "base": 8480.0,
+          "a120": -25751.0,
+          "b120": 1959.0,
+          "c120": 5804.0
+        }
+      }
+    },
+    {
+      "episode_id": 100123565,
+      "top1_seat": 0,
+      "team_id": 16671476,
+      "team_name": "Mingkang YAN",
+      "selected_route": "base",
+      "actual": {
+        "v59": 6860.0,
+        "v67": 8999.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 6860.0,
+          "a120": -17836.0,
+          "b120": -5901.0,
+          "c120": -9168.0
+        },
+        "v67": {
+          "base": 8999.0,
+          "a120": -17838.0,
+          "b120": -5781.0,
+          "c120": -9168.0
+        }
+      }
+    },
+    {
+      "episode_id": 100123565,
+      "top1_seat": 1,
+      "team_id": 16686827,
+      "team_name": "Kronki",
+      "selected_route": "base",
+      "actual": {
+        "v59": 7349.0,
+        "v67": 15878.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 7349.0,
+          "a120": -65925.0,
+          "b120": 11407.0,
+          "c120": 17281.0
+        },
+        "v67": {
+          "base": 15878.0,
+          "a120": -65925.0,
+          "b120": 11516.0,
+          "c120": 17281.0
+        }
+      }
+    },
+    {
+      "episode_id": 100125767,
+      "top1_seat": 0,
+      "team_id": 16685548,
+      "team_name": "Erfan Eshratifar",
+      "selected_route": "base",
+      "actual": {
+        "v59": 7739.0,
+        "v67": 6745.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 7739.0,
+          "a120": -18683.0,
+          "b120": -5067.0,
+          "c120": -27530.0
+        },
+        "v67": {
+          "base": 6745.0,
+          "a120": -18686.0,
+          "b120": -5025.0,
+          "c120": -27530.0
+        }
+      }
+    },
+    {
+      "episode_id": 100125767,
+      "top1_seat": 1,
+      "team_id": 16671767,
+      "team_name": "Kaileh57",
+      "selected_route": "base",
+      "actual": {
+        "v59": 10740.0,
+        "v67": 8029.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 10740.0,
+          "a120": -41976.0,
+          "b120": 1441.0,
+          "c120": -35783.0
+        },
+        "v67": {
+          "base": 8029.0,
+          "a120": -41979.0,
+          "b120": 7397.0,
+          "c120": -35783.0
+        }
+      }
+    },
+    {
+      "episode_id": 100128053,
+      "top1_seat": 1,
+      "team_id": 16671767,
+      "team_name": "Kaileh57",
+      "selected_route": "base",
+      "actual": {
+        "v59": 2809.0,
+        "v67": 1367.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 2809.0,
+          "a120": -25465.0,
+          "b120": 1820.0,
+          "c120": 19837.0
+        },
+        "v67": {
+          "base": 1367.0,
+          "a120": -25470.0,
+          "b120": 1932.0,
+          "c120": 19837.0
+        }
+      }
+    },
+    {
+      "episode_id": 100130341,
+      "top1_seat": 0,
+      "team_id": 16671767,
+      "team_name": "Kaileh57",
+      "selected_route": "base",
+      "actual": {
+        "v59": 5438.0,
+        "v67": 5872.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 5438.0,
+          "a120": -19965.0,
+          "b120": 4816.0,
+          "c120": -12216.0
+        },
+        "v67": {
+          "base": 5872.0,
+          "a120": -19965.0,
+          "b120": 5340.0,
+          "c120": -12216.0
+        }
+      }
+    },
+    {
+      "episode_id": 100130341,
+      "top1_seat": 1,
+      "team_id": 16673205,
+      "team_name": "Arda Ceylan",
+      "selected_route": "base",
+      "actual": {
+        "v59": 640.0,
+        "v67": 2268.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 640.0,
+          "a120": -88630.0,
+          "b120": 2643.0,
+          "c120": -20937.0
+        },
+        "v67": {
+          "base": 2268.0,
+          "a120": -88630.0,
+          "b120": 2766.0,
+          "c120": -20937.0
+        }
+      }
+    },
+    {
+      "episode_id": 100132630,
+      "top1_seat": 0,
+      "team_id": 16671767,
+      "team_name": "Kaileh57",
+      "selected_route": "base",
+      "actual": {
+        "v59": 3041.0,
+        "v67": 696.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 3041.0,
+          "a120": -19803.0,
+          "b120": 1302.0,
+          "c120": -195.0
+        },
+        "v67": {
+          "base": 696.0,
+          "a120": -19784.0,
+          "b120": 3470.0,
+          "c120": -208.0
+        }
+      }
+    },
+    {
+      "episode_id": 100134929,
+      "top1_seat": 1,
+      "team_id": 16671767,
+      "team_name": "Kaileh57",
+      "selected_route": "base",
+      "actual": {
+        "v59": -973.0,
+        "v67": 1203.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -973.0,
+          "a120": -37255.0,
+          "b120": 2321.0,
+          "c120": 18703.0
+        },
+        "v67": {
+          "base": 1203.0,
+          "a120": -37256.0,
+          "b120": 2776.0,
+          "c120": 18703.0
+        }
+      }
+    },
+    {
+      "episode_id": 100134962,
+      "top1_seat": 0,
+      "team_id": 16715733,
+      "team_name": "peikopon",
+      "selected_route": "base",
+      "actual": {
+        "v59": -26611.0,
+        "v67": -26928.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -26611.0,
+          "a120": -23299.0,
+          "b120": -25040.0,
+          "c120": 995.0
+        },
+        "v67": {
+          "base": -26928.0,
+          "a120": -23305.0,
+          "b120": -24860.0,
+          "c120": 995.0
+        }
+      }
+    },
+    {
+      "episode_id": 100134962,
+      "top1_seat": 1,
+      "team_id": 16665224,
+      "team_name": "tyz123456",
+      "selected_route": "base",
+      "actual": {
+        "v59": -25185.0,
+        "v67": -25383.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -25185.0,
+          "a120": -26239.0,
+          "b120": -24046.0,
+          "c120": 3278.0
+        },
+        "v67": {
+          "base": -25383.0,
+          "a120": -26197.0,
+          "b120": -23930.0,
+          "c120": 3306.0
+        }
+      }
+    },
+    {
+      "episode_id": 100137213,
+      "top1_seat": 1,
+      "team_id": 16671767,
+      "team_name": "Kaileh57",
+      "selected_route": "base",
+      "actual": {
+        "v59": 8582.0,
+        "v67": 2771.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 8582.0,
+          "a120": -16124.0,
+          "b120": -2167.0,
+          "c120": -7674.0
+        },
+        "v67": {
+          "base": 2771.0,
+          "a120": -16201.0,
+          "b120": -333.0,
+          "c120": -7674.0
+        }
+      }
+    },
+    {
+      "episode_id": 100139497,
+      "top1_seat": 1,
+      "team_id": 16671767,
+      "team_name": "Kaileh57",
+      "selected_route": "base",
+      "actual": {
+        "v59": -565.0,
+        "v67": 2250.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -565.0,
+          "a120": -20950.0,
+          "b120": 1395.0,
+          "c120": 1949.0
+        },
+        "v67": {
+          "base": 2250.0,
+          "a120": -20960.0,
+          "b120": 4767.0,
+          "c120": 1949.0
+        }
+      }
+    },
+    {
+      "episode_id": 100141792,
+      "top1_seat": 0,
+      "team_id": 16671767,
+      "team_name": "Kaileh57",
+      "selected_route": "base",
+      "actual": {
+        "v59": 2214.0,
+        "v67": 5653.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 2214.0,
+          "a120": -5567.0,
+          "b120": 5.0,
+          "c120": 2552.0
+        },
+        "v67": {
+          "base": 5653.0,
+          "a120": -5573.0,
+          "b120": 1632.0,
+          "c120": 2552.0
+        }
+      }
+    },
+    {
+      "episode_id": 100141792,
+      "top1_seat": 1,
+      "team_id": 16641077,
+      "team_name": "lucaskna",
+      "selected_route": "base",
+      "actual": {
+        "v59": 2102.0,
+        "v67": 2448.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": 2102.0,
+          "a120": -4956.0,
+          "b120": 1097.0,
+          "c120": 7217.0
+        },
+        "v67": {
+          "base": 2448.0,
+          "a120": -4968.0,
+          "b120": 2955.0,
+          "c120": 7217.0
+        }
+      }
+    },
+    {
+      "episode_id": 100141816,
+      "top1_seat": 1,
+      "team_id": 16732578,
+      "team_name": "nao.kwmr",
+      "selected_route": "base",
+      "actual": {
+        "v59": -143.0,
+        "v67": 2893.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -143.0,
+          "a120": -9793.0,
+          "b120": -440.0,
+          "c120": 1315.0
+        },
+        "v67": {
+          "base": 2893.0,
+          "a120": -9737.0,
+          "b120": 5284.0,
+          "c120": 1315.0
+        }
+      }
+    },
+    {
+      "episode_id": 100144011,
+      "top1_seat": 1,
+      "team_id": 16673205,
+      "team_name": "Arda Ceylan",
+      "selected_route": "c120",
+      "actual": {
+        "v59": 228.0,
+        "v67": 228.0
+      },
+      "fixed_route_margins": {
+        "v59": {
+          "base": -27323.0,
+          "a120": -30125.0,
+          "b120": -30577.0,
+          "c120": 228.0
+        },
+        "v67": {
+          "base": -27692.0,
+          "a120": -30138.0,
+          "b120": -30395.0,
+          "c120": 228.0
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "The 160 rows were already unblinded and are development data, so all oracle and LOFO numbers are diagnostic rather than untouched-holdout evidence.",
+    "The route oracle chooses after seeing each route final margin and is an unattainable upper bound, not a deployable policy.",
+    "Frozen replay continuation evaluates response to recorded opponent actions; it is not live Kaggle proof against adaptive counterplay.",
+    "Feature correlations and ridge importance are associations in this development set, not causal guarantees."
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "kind": "development_only_per_replay_causal_oracle",
+  "agent": "artifacts/v67_front_run_20260826/all_v16.py",
+  "datasets": {
+    "old_report": "rl/evaluations/v67_all_v16_old80_20260826.json",
+    "fresh_report": "rl/evaluations/v67_all_v16_fresh95_20260826.json",
+    "old_league": "replays/top20_live_20260826/manifest.json",
+    "fresh_league": "replays/top20_live_holdout_offset4_20260826/manifest.json"
+  },
+  "constraints": {
+    "step_from": 672,
+    "opponent_action_features": false,
+    "future_action_features": false,
+    "team_episode_seed_features": false,
+    "cross_step_inventory_borrowing": false,
+    "fixed_baseline_proposals_replayed": true,
+    "oracle_selects_best_fixed_causal_intervention_per_replay": true
+  },
+  "gate": {
+    "required_unique_rescued_episodes": 3,
+    "required_unique_rescued_teams": 3,
+    "allowed_regressions": 1,
+    "oracle_regressions": 0,
+    "unique_rescued_episodes": 1,
+    "unique_rescued_teams": 1,
+    "pass": false
+  },
+  "menu_size": 36,
+  "shallow_limit": 5000.0,
+  "episodes": [
+    {
+      "split": "fresh95",
+      "team_id": 16670032,
+      "team_name": "Kenjo1209",
+      "episode_id": 99630587,
+      "top1_seat": 0,
+      "baseline_margin": -214.0,
+      "best_margin": 191.0,
+      "improvement": 405.0,
+      "fixed_action_baseline_margin": -214.0,
+      "fixed_action_baseline_exact": true,
+      "rescued": true,
+      "best_spec": {
+        "kind": "one_shot",
+        "step": 695,
+        "items": "premium",
+        "cap": null,
+        "placement": "prepend",
+        "rank": "elasticity"
+      },
+      "menu_evaluations": 13
+    },
+    {
+      "split": "fresh95",
+      "team_id": 16711376,
+      "team_name": "Arman Tuganbaev",
+      "episode_id": 99616937,
+      "top1_seat": 1,
+      "baseline_margin": -1072.0,
+      "best_margin": -868.0,
+      "improvement": 204.0,
+      "fixed_action_baseline_margin": -1072.0,
+      "fixed_action_baseline_exact": true,
+      "rescued": false,
+      "best_spec": {
+        "kind": "one_shot",
+        "step": 717,
+        "items": "premium",
+        "cap": null,
+        "placement": "prepend",
+        "rank": "elasticity"
+      },
+      "menu_evaluations": 36
+    },
+    {
+      "split": "old80",
+      "team_id": 16727266,
+      "team_name": "ebisu_ya",
+      "episode_id": 99578041,
+      "top1_seat": 1,
+      "baseline_margin": -1373.0,
+      "best_margin": -1195.0,
+      "improvement": 178.0,
+      "fixed_action_baseline_margin": -1373.0,
+      "fixed_action_baseline_exact": true,
+      "rescued": false,
+      "best_spec": {
+        "kind": "one_shot",
+        "step": 709,
+        "items": "premium",
+        "cap": null,
+        "placement": "prepend",
+        "rank": "elasticity"
+      },
+      "menu_evaluations": 36
+    },
+    {
+      "split": "fresh95",
+      "team_id": 16665224,
+      "team_name": "tyz123456",
+      "episode_id": 99616937,
+      "top1_seat": 0,
+      "baseline_margin": -1957.0,
+      "best_margin": -1896.0,
+      "improvement": 61.0,
+      "fixed_action_baseline_margin": -1957.0,
+      "fixed_action_baseline_exact": true,
+      "rescued": false,
+      "best_spec": {
+        "kind": "reorder",
+        "rank": "elasticity",
+        "sell_first": false
+      },
+      "menu_evaluations": 36
+    },
+    {
+      "split": "old80",
+      "team_id": 16714457,
+      "team_name": "Crop Dusta",
+      "episode_id": 99594187,
+      "top1_seat": 1,
+      "baseline_margin": -2170.0,
+      "best_margin": -2160.0,
+      "improvement": 10.0,
+      "fixed_action_baseline_margin": -2170.0,
+      "fixed_action_baseline_exact": true,
+      "rescued": false,
+      "best_spec": {
+        "kind": "one_shot",
+        "step": 709,
+        "items": "premium",
+        "cap": null,
+        "placement": "prepend",
+        "rank": "elasticity"
+      },
+      "menu_evaluations": 36
+    },
+    {
+      "split": "old80",
+      "team_id": 16644287,
+      "team_name": "Ryo Hasegawa",
+      "episode_id": 99555424,
+      "top1_seat": 0,
+      "baseline_margin": -2736.0,
+      "best_margin": -2624.0,
+      "improvement": 112.0,
+      "fixed_action_baseline_margin": -2736.0,
+      "fixed_action_baseline_exact": true,
+      "rescued": false,
+      "best_spec": {
+        "kind": "one_shot",
+        "step": 709,
+        "items": "all",
+        "cap": null,
+        "placement": "prepend",
+        "rank": "elasticity"
+      },
+      "menu_evaluations": 36
+    },
+    {
+      "split": "old80",
+      "team_id": 16727266,
+      "team_name": "ebisu_ya",
+      "episode_id": 99550684,
+      "top1_seat": 1,
+      "baseline_margin": -3044.0,
+      "best_margin": -2987.0,
+      "improvement": 57.0,
+      "fixed_action_baseline_margin": -3044.0,
+      "fixed_action_baseline_exact": true,
+      "rescued": false,
+      "best_spec": {
+        "kind": "one_shot",
+        "step": 695,
+        "items": "all",
+        "cap": null,
+        "placement": "prepend",
+        "rank": "elasticity"
+      },
+      "menu_evaluations": 36
+    }
+  ]
+}

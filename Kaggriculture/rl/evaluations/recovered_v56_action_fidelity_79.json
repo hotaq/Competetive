@@ -1,0 +1,7818 @@
+{
+  "agent_file": "artifacts/recovered_v56_source/main.py",
+  "episodes": 79,
+  "total_steps": 56801,
+  "exact_steps": 48468,
+  "exact_rate": 0.8532948363585148,
+  "exact_episodes": 0,
+  "rows": [
+    {
+      "episode_id": 90211071,
+      "steps": 719,
+      "exact_steps": 625,
+      "exact_rate": 0.8692628650904033,
+      "first_mismatch": {
+        "step": 161,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WHEAT",
+              1
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WHEAT",
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 90206023,
+      "steps": 719,
+      "exact_steps": 636,
+      "exact_rate": 0.8845618915159944,
+      "first_mismatch": {
+        "step": 238,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": []
+        },
+        "actual": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": []
+        }
+      }
+    },
+    {
+      "episode_id": 90198930,
+      "steps": 719,
+      "exact_steps": 624,
+      "exact_rate": 0.8678720445062587,
+      "first_mismatch": {
+        "step": 208,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "COLLECT_FERTILIZER"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              1
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "COLLECT_FERTILIZER"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 90198233,
+      "steps": 719,
+      "exact_steps": 591,
+      "exact_rate": 0.8219749652294854,
+      "first_mismatch": {
+        "step": 159,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_ANIMAL",
+              "COW",
+              1
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WATER"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_ANIMAL",
+              "COW",
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 90191836,
+      "steps": 719,
+      "exact_steps": 626,
+      "exact_rate": 0.8706536856745479,
+      "first_mismatch": {
+        "step": 237,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        },
+        "actual": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        }
+      }
+    },
+    {
+      "episode_id": 90187571,
+      "steps": 719,
+      "exact_steps": 633,
+      "exact_rate": 0.8803894297635605,
+      "first_mismatch": {
+        "step": 208,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "COLLECT_FERTILIZER"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              1
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "COLLECT_FERTILIZER"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 90185404,
+      "steps": 719,
+      "exact_steps": 630,
+      "exact_rate": 0.8762169680111266,
+      "first_mismatch": {
+        "step": 210,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "SOUTH"
+          ],
+          "hands": [
+            [
+              "WATER"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        },
+        "actual": {
+          "farmer": [
+            "SOUTH"
+          ],
+          "hands": [
+            [
+              "WATER"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        }
+      }
+    },
+    {
+      "episode_id": 90180526,
+      "steps": 719,
+      "exact_steps": 544,
+      "exact_rate": 0.7566063977746871,
+      "first_mismatch": {
+        "step": 159,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WATER"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_ANIMAL",
+              "COW",
+              1
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WATER"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_ANIMAL",
+              "COW",
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 90177819,
+      "steps": 719,
+      "exact_steps": 638,
+      "exact_rate": 0.8873435326842837,
+      "first_mismatch": {
+        "step": 238,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": []
+        },
+        "actual": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": []
+        }
+      }
+    },
+    {
+      "episode_id": 90146611,
+      "steps": 719,
+      "exact_steps": 583,
+      "exact_rate": 0.8108484005563282,
+      "first_mismatch": {
+        "step": 285,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "SOUTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              2
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "SOUTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              2
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 90145221,
+      "steps": 719,
+      "exact_steps": 576,
+      "exact_rate": 0.8011126564673157,
+      "first_mismatch": {
+        "step": 161,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WHEAT",
+              1
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WHEAT",
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 90132766,
+      "steps": 719,
+      "exact_steps": 535,
+      "exact_rate": 0.7440890125173852,
+      "first_mismatch": {
+        "step": 237,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        },
+        "actual": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        }
+      }
+    },
+    {
+      "episode_id": 90117815,
+      "steps": 719,
+      "exact_steps": 646,
+      "exact_rate": 0.8984700973574409,
+      "first_mismatch": {
+        "step": 261,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "COW",
+              1
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              3
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "COW",
+              1
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              3
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 90109003,
+      "steps": 719,
+      "exact_steps": 638,
+      "exact_rate": 0.8873435326842837,
+      "first_mismatch": {
+        "step": 261,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "COW",
+              1
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              3
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "COW",
+              1
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              3
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 90106255,
+      "steps": 719,
+      "exact_steps": 639,
+      "exact_rate": 0.8887343532684284,
+      "first_mismatch": {
+        "step": 159,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WATER"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_ANIMAL",
+              "COW",
+              1
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_ANIMAL",
+              "COW",
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 90097454,
+      "steps": 719,
+      "exact_steps": 619,
+      "exact_rate": 0.8609179415855355,
+      "first_mismatch": {
+        "step": 285,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "SOUTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              2
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "SOUTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              2
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 90095374,
+      "steps": 719,
+      "exact_steps": 604,
+      "exact_rate": 0.8400556328233658,
+      "first_mismatch": {
+        "step": 261,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "COW",
+              1
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              3
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "COW",
+              1
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              3
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 90091933,
+      "steps": 719,
+      "exact_steps": 639,
+      "exact_rate": 0.8887343532684284,
+      "first_mismatch": {
+        "step": 261,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "COW",
+              1
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              3
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "COW",
+              1
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              3
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 90085759,
+      "steps": 719,
+      "exact_steps": 651,
+      "exact_rate": 0.9054242002781642,
+      "first_mismatch": {
+        "step": 303,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        },
+        "actual": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        }
+      }
+    },
+    {
+      "episode_id": 90078414,
+      "steps": 719,
+      "exact_steps": 543,
+      "exact_rate": 0.7552155771905424,
+      "first_mismatch": {
+        "step": 261,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "COW",
+              1
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              3
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "COW",
+              1
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              3
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 90076292,
+      "steps": 719,
+      "exact_steps": 568,
+      "exact_rate": 0.7899860917941586,
+      "first_mismatch": {
+        "step": 261,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "COW",
+              1
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              3
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "COW",
+              1
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              3
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 90067582,
+      "steps": 719,
+      "exact_steps": 623,
+      "exact_rate": 0.866481223922114,
+      "first_mismatch": {
+        "step": 237,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        },
+        "actual": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        }
+      }
+    },
+    {
+      "episode_id": 90066960,
+      "steps": 719,
+      "exact_steps": 631,
+      "exact_rate": 0.8776077885952712,
+      "first_mismatch": {
+        "step": 285,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "SOUTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              2
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "SOUTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              2
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 90049081,
+      "steps": 719,
+      "exact_steps": 622,
+      "exact_rate": 0.8650904033379694,
+      "first_mismatch": {
+        "step": 237,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        },
+        "actual": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        }
+      }
+    },
+    {
+      "episode_id": 90044214,
+      "steps": 719,
+      "exact_steps": 612,
+      "exact_rate": 0.8511821974965229,
+      "first_mismatch": {
+        "step": 261,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "COW",
+              1
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              3
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "COW",
+              1
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              3
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 90040826,
+      "steps": 719,
+      "exact_steps": 664,
+      "exact_rate": 0.9235048678720446,
+      "first_mismatch": {
+        "step": 258,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "EAST"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              1
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              1
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "EAST"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              1
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 90028594,
+      "steps": 719,
+      "exact_steps": 619,
+      "exact_rate": 0.8609179415855355,
+      "first_mismatch": {
+        "step": 261,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "COW",
+              1
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              3
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "COW",
+              1
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              3
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 90020635,
+      "steps": 719,
+      "exact_steps": 643,
+      "exact_rate": 0.894297635605007,
+      "first_mismatch": {
+        "step": 307,
+        "component": "farmer",
+        "expected": {
+          "farmer": [
+            "SOUTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              1
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 90018660,
+      "steps": 719,
+      "exact_steps": 631,
+      "exact_rate": 0.8776077885952712,
+      "first_mismatch": {
+        "step": 237,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        },
+        "actual": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        }
+      }
+    },
+    {
+      "episode_id": 90018630,
+      "steps": 719,
+      "exact_steps": 633,
+      "exact_rate": 0.8803894297635605,
+      "first_mismatch": {
+        "step": 261,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "COW",
+              1
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              3
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "COW",
+              1
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              3
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 90016032,
+      "steps": 719,
+      "exact_steps": 633,
+      "exact_rate": 0.8803894297635605,
+      "first_mismatch": {
+        "step": 303,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        },
+        "actual": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        }
+      }
+    },
+    {
+      "episode_id": 89993402,
+      "steps": 719,
+      "exact_steps": 618,
+      "exact_rate": 0.8595271210013908,
+      "first_mismatch": {
+        "step": 237,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        },
+        "actual": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        }
+      }
+    },
+    {
+      "episode_id": 89990149,
+      "steps": 719,
+      "exact_steps": 623,
+      "exact_rate": 0.866481223922114,
+      "first_mismatch": {
+        "step": 238,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": []
+        },
+        "actual": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": []
+        }
+      }
+    },
+    {
+      "episode_id": 89989498,
+      "steps": 719,
+      "exact_steps": 611,
+      "exact_rate": 0.8497913769123783,
+      "first_mismatch": {
+        "step": 261,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "COW",
+              1
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              3
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "COW",
+              1
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              3
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 89966302,
+      "steps": 719,
+      "exact_steps": 563,
+      "exact_rate": 0.7830319888734353,
+      "first_mismatch": {
+        "step": 257,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "DROP"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "MELON",
+              6
+            ],
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              11
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              1
+            ],
+            [
+              "BUY_SEED",
+              "MELON",
+              3
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "DROP"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "MELON",
+              6
+            ],
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              11
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              1
+            ],
+            [
+              "BUY_SEED",
+              "MELON",
+              3
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 89944468,
+      "steps": 719,
+      "exact_steps": 436,
+      "exact_rate": 0.6063977746870653,
+      "first_mismatch": {
+        "step": 257,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "DROP"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "MELON",
+              6
+            ],
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              11
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              1
+            ],
+            [
+              "BUY_SEED",
+              "MELON",
+              3
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "DROP"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "MELON",
+              6
+            ],
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              11
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              1
+            ],
+            [
+              "BUY_SEED",
+              "MELON",
+              3
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 89925665,
+      "steps": 719,
+      "exact_steps": 605,
+      "exact_rate": 0.8414464534075105,
+      "first_mismatch": {
+        "step": 285,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "SOUTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              2
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "SOUTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              2
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 89925033,
+      "steps": 719,
+      "exact_steps": 565,
+      "exact_rate": 0.7858136300417247,
+      "first_mismatch": {
+        "step": 303,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        },
+        "actual": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        }
+      }
+    },
+    {
+      "episode_id": 89924410,
+      "steps": 719,
+      "exact_steps": 650,
+      "exact_rate": 0.9040333796940194,
+      "first_mismatch": {
+        "step": 213,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "CARE"
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": []
+        },
+        "actual": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "CARE"
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": []
+        }
+      }
+    },
+    {
+      "episode_id": 89889303,
+      "steps": 719,
+      "exact_steps": 614,
+      "exact_rate": 0.8539638386648123,
+      "first_mismatch": {
+        "step": 285,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "SOUTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              2
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "SOUTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              2
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 89879706,
+      "steps": 719,
+      "exact_steps": 612,
+      "exact_rate": 0.8511821974965229,
+      "first_mismatch": {
+        "step": 303,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        },
+        "actual": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        }
+      }
+    },
+    {
+      "episode_id": 89873109,
+      "steps": 719,
+      "exact_steps": 616,
+      "exact_rate": 0.8567454798331016,
+      "first_mismatch": {
+        "step": 237,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        },
+        "actual": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        }
+      }
+    },
+    {
+      "episode_id": 89870707,
+      "steps": 719,
+      "exact_steps": 615,
+      "exact_rate": 0.8553546592489569,
+      "first_mismatch": {
+        "step": 238,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": []
+        },
+        "actual": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": []
+        }
+      }
+    },
+    {
+      "episode_id": 89869560,
+      "steps": 719,
+      "exact_steps": 666,
+      "exact_rate": 0.9262865090403338,
+      "first_mismatch": {
+        "step": 237,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        },
+        "actual": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        }
+      }
+    },
+    {
+      "episode_id": 89868964,
+      "steps": 719,
+      "exact_steps": 581,
+      "exact_rate": 0.808066759388039,
+      "first_mismatch": {
+        "step": 285,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "SOUTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              2
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "SOUTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              2
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 89868371,
+      "steps": 719,
+      "exact_steps": 569,
+      "exact_rate": 0.7913769123783032,
+      "first_mismatch": {
+        "step": 303,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        },
+        "actual": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        }
+      }
+    },
+    {
+      "episode_id": 89867776,
+      "steps": 719,
+      "exact_steps": 659,
+      "exact_rate": 0.9165507649513213,
+      "first_mismatch": {
+        "step": 237,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        },
+        "actual": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        }
+      }
+    },
+    {
+      "episode_id": 89867183,
+      "steps": 719,
+      "exact_steps": 620,
+      "exact_rate": 0.8623087621696801,
+      "first_mismatch": {
+        "step": 303,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        },
+        "actual": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        }
+      }
+    },
+    {
+      "episode_id": 89866584,
+      "steps": 719,
+      "exact_steps": 516,
+      "exact_rate": 0.717663421418637,
+      "first_mismatch": {
+        "step": 307,
+        "component": "farmer",
+        "expected": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              1
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "SOUTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 89866580,
+      "steps": 719,
+      "exact_steps": 617,
+      "exact_rate": 0.8581363004172462,
+      "first_mismatch": {
+        "step": 307,
+        "component": "farmer",
+        "expected": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              1
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 89865992,
+      "steps": 719,
+      "exact_steps": 614,
+      "exact_rate": 0.8539638386648123,
+      "first_mismatch": {
+        "step": 307,
+        "component": "farmer",
+        "expected": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              1
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "SOUTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 89865390,
+      "steps": 719,
+      "exact_steps": 588,
+      "exact_rate": 0.8178025034770514,
+      "first_mismatch": {
+        "step": 303,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        },
+        "actual": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        }
+      }
+    },
+    {
+      "episode_id": 89864789,
+      "steps": 719,
+      "exact_steps": 623,
+      "exact_rate": 0.866481223922114,
+      "first_mismatch": {
+        "step": 237,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        },
+        "actual": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        }
+      }
+    },
+    {
+      "episode_id": 89864193,
+      "steps": 719,
+      "exact_steps": 548,
+      "exact_rate": 0.7621696801112656,
+      "first_mismatch": {
+        "step": 303,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        },
+        "actual": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        }
+      }
+    },
+    {
+      "episode_id": 89863572,
+      "steps": 719,
+      "exact_steps": 672,
+      "exact_rate": 0.9346314325452016,
+      "first_mismatch": {
+        "step": 257,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "DROP"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "MELON",
+              6
+            ],
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              11
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              1
+            ],
+            [
+              "BUY_SEED",
+              "MELON",
+              3
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "DROP"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "MELON",
+              6
+            ],
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              11
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              1
+            ],
+            [
+              "BUY_SEED",
+              "MELON",
+              3
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 89862977,
+      "steps": 719,
+      "exact_steps": 614,
+      "exact_rate": 0.8539638386648123,
+      "first_mismatch": {
+        "step": 305,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "EAST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              12
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "EAST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              12
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 89862374,
+      "steps": 719,
+      "exact_steps": 588,
+      "exact_rate": 0.8178025034770514,
+      "first_mismatch": {
+        "step": 307,
+        "component": "farmer",
+        "expected": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              1
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "SOUTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 89861782,
+      "steps": 719,
+      "exact_steps": 554,
+      "exact_rate": 0.7705146036161336,
+      "first_mismatch": {
+        "step": 303,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        },
+        "actual": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        }
+      }
+    },
+    {
+      "episode_id": 89861189,
+      "steps": 719,
+      "exact_steps": 611,
+      "exact_rate": 0.8497913769123783,
+      "first_mismatch": {
+        "step": 237,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        },
+        "actual": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        }
+      }
+    },
+    {
+      "episode_id": 89860600,
+      "steps": 719,
+      "exact_steps": 658,
+      "exact_rate": 0.9151599443671766,
+      "first_mismatch": {
+        "step": 213,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "CARE"
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": []
+        },
+        "actual": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "CARE"
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": []
+        }
+      }
+    },
+    {
+      "episode_id": 89860001,
+      "steps": 719,
+      "exact_steps": 653,
+      "exact_rate": 0.9082058414464534,
+      "first_mismatch": {
+        "step": 159,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WATER"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_ANIMAL",
+              "COW",
+              1
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_ANIMAL",
+              "COW",
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 89859401,
+      "steps": 719,
+      "exact_steps": 656,
+      "exact_rate": 0.9123783031988874,
+      "first_mismatch": {
+        "step": 161,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WHEAT",
+              1
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WHEAT",
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 89858811,
+      "steps": 719,
+      "exact_steps": 666,
+      "exact_rate": 0.9262865090403338,
+      "first_mismatch": {
+        "step": 258,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "EAST"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              1
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              1
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "EAST"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              1
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 89858209,
+      "steps": 719,
+      "exact_steps": 606,
+      "exact_rate": 0.8428372739916551,
+      "first_mismatch": {
+        "step": 303,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        },
+        "actual": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        }
+      }
+    },
+    {
+      "episode_id": 89857590,
+      "steps": 719,
+      "exact_steps": 665,
+      "exact_rate": 0.9248956884561892,
+      "first_mismatch": {
+        "step": 258,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "EAST"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              1
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              1
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "EAST"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              1
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 89856999,
+      "steps": 719,
+      "exact_steps": 583,
+      "exact_rate": 0.8108484005563282,
+      "first_mismatch": {
+        "step": 261,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "COW",
+              1
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              3
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "COW",
+              1
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_SEED",
+              "STRAWBERRY",
+              3
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 89856409,
+      "steps": 719,
+      "exact_steps": 650,
+      "exact_rate": 0.9040333796940194,
+      "first_mismatch": {
+        "step": 164,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "WATER"
+          ],
+          "hands": [
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              1
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "WATER"
+          ],
+          "hands": [
+            [
+              "EAST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 89855827,
+      "steps": 719,
+      "exact_steps": 649,
+      "exact_rate": 0.9026425591098748,
+      "first_mismatch": {
+        "step": 159,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_ANIMAL",
+              "COW",
+              1
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WATER"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_ANIMAL",
+              "COW",
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 89855224,
+      "steps": 719,
+      "exact_steps": 642,
+      "exact_rate": 0.8929068150208623,
+      "first_mismatch": {
+        "step": 237,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        },
+        "actual": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": []
+        }
+      }
+    },
+    {
+      "episode_id": 89854638,
+      "steps": 719,
+      "exact_steps": 589,
+      "exact_rate": 0.8191933240611962,
+      "first_mismatch": {
+        "step": 32,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "WATER"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              1
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 89854046,
+      "steps": 719,
+      "exact_steps": 621,
+      "exact_rate": 0.8636995827538247,
+      "first_mismatch": {
+        "step": 259,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "HARVEST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "HARVEST"
+            ],
+            [
+              "DROP"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              4
+            ],
+            [
+              "SELL",
+              "MELON",
+              16
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "HARVEST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "HARVEST"
+            ],
+            [
+              "DROP"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              4
+            ],
+            [
+              "SELL",
+              "MELON",
+              16
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 89853458,
+      "steps": 719,
+      "exact_steps": 629,
+      "exact_rate": 0.874826147426982,
+      "first_mismatch": {
+        "step": 161,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WHEAT",
+              1
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WHEAT",
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 89852869,
+      "steps": 719,
+      "exact_steps": 641,
+      "exact_rate": 0.8915159944367177,
+      "first_mismatch": {
+        "step": 257,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "DROP"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "MELON",
+              6
+            ],
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              11
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              1
+            ],
+            [
+              "BUY_SEED",
+              "MELON",
+              3
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "DROP"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "MELON",
+              6
+            ],
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              11
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              1
+            ],
+            [
+              "BUY_SEED",
+              "MELON",
+              3
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 89852253,
+      "steps": 719,
+      "exact_steps": 626,
+      "exact_rate": 0.8706536856745479,
+      "first_mismatch": {
+        "step": 161,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WHEAT",
+              1
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WHEAT",
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 89851668,
+      "steps": 719,
+      "exact_steps": 599,
+      "exact_rate": 0.8331015299026425,
+      "first_mismatch": {
+        "step": 161,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WHEAT",
+              1
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WHEAT",
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 89851085,
+      "steps": 719,
+      "exact_steps": 579,
+      "exact_rate": 0.8052851182197497,
+      "first_mismatch": {
+        "step": 159,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WATER"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_ANIMAL",
+              "COW",
+              1
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_ANIMAL",
+              "COW",
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 89850492,
+      "steps": 719,
+      "exact_steps": 621,
+      "exact_rate": 0.8636995827538247,
+      "first_mismatch": {
+        "step": 116,
+        "component": "farmer",
+        "expected": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": []
+        },
+        "actual": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": []
+        }
+      }
+    },
+    {
+      "episode_id": 89849899,
+      "steps": 719,
+      "exact_steps": 662,
+      "exact_rate": 0.9207232267037552,
+      "first_mismatch": {
+        "step": 159,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_ANIMAL",
+              "COW",
+              1
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "NORTH"
+          ],
+          "hands": [
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WATER"
+            ]
+          ],
+          "market": [
+            [
+              "BUY_ANIMAL",
+              "COW",
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 89849311,
+      "steps": 719,
+      "exact_steps": 606,
+      "exact_rate": 0.8428372739916551,
+      "first_mismatch": {
+        "step": 67,
+        "component": "hands",
+        "expected": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "NORTH"
+            ]
+          ],
+          "market": []
+        },
+        "actual": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": []
+        }
+      }
+    }
+  ]
+}

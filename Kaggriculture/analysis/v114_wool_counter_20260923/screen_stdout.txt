@@ -1,0 +1,73 @@
+  block 1/4 baked+played  42.8 bakes/s
+  block 2/4 baked+played  42.8 bakes/s
+  block 3/4 baked+played  42.4 bakes/s
+  block 4/4 baked+played  42.3 bakes/s
+E0 replay-vs-bake mismatches: 0/2800
+router-parity mismatches (py vs rust): 0/28
+wrote 8428 rows to analysis/v114_wool_counter_20260923/screen.json in 66.7s
+{
+ "n_pairs": 2800,
+ "mean_paired_diff": -6489.5875,
+ "ci95": [
+  -8920.789285714285,
+  -4159.490357142857
+ ],
+ "point_base": 0.8907142857142857,
+ "point_cand": 0.8239285714285715,
+ "point_omar": 0.8539285714285715,
+ "point_diff": -0.06678571428571423,
+ "per_opponent": {
+  "arda_ceylan__ep110788999__seat0": {
+   "n": 400,
+   "mean_diff": -5725.2475
+  },
+  "binghua__ep110782412__seat1": {
+   "n": 400,
+   "mean_diff": -6654.29
+  },
+  "ebi__ep110789011__seat1": {
+   "n": 400,
+   "mean_diff": -6562.9575
+  },
+  "sida_zuo__ep110781293__seat1": {
+   "n": 400,
+   "mean_diff": -6888.41
+  },
+  "thunder_thunder__ep110768104__seat0": {
+   "n": 400,
+   "mean_diff": -7210.085
+  },
+  "wool_ep112504824__seat0": {
+   "n": 400,
+   "mean_diff": -5734.9775
+  },
+  "ymg_aq__ep110781289__seat0": {
+   "n": 400,
+   "mean_diff": -6651.145
+  }
+ },
+ "seat_mean_diff": {
+  "0": -6493.908571428571,
+  "1": -6485.266428571428
+ },
+ "h2h_wool": {
+  "0": {
+   "n": 200,
+   "mean_margin": 729.435
+  },
+  "1": {
+   "n": 200,
+   "mean_margin": 707.565
+  }
+ },
+ "counter_totals": {
+  "wool_held_units": 7540,
+  "land_dropped": 0
+ },
+ "games_baked": 2800,
+ "G1": false,
+ "G2": false,
+ "G3": false,
+ "H2H": true,
+ "OVERALL": false
+}

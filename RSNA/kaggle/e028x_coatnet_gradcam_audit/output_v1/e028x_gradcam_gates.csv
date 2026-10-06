@@ -1,0 +1,17 @@
+gate,passed
+forward_features_is_4d,True
+all_cam_values_finite,True
+all_cam_maps_non_degenerate,True
+attention_values_finite,True
+attention_sums_to_one,True
+deletion_rows_exact,True
+deletion_values_finite,False
+randomization_rows_exact,True
+target_specificity_correlations_finite,True
+determinism_max_abs_le_1e_5,True
+deletion_bootstrap_win_rate_ge_075,False
+positive_deletion_targets_ge_9,True
+randomization_median_correlation_le_070,True
+target_specificity_median_correlation_lt_080,True
+cross_series_window_count_zero,True
+zero_slice_window_count_zero,True

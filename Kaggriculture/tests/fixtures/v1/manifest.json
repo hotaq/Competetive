@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "fixtures": [
+    { "path": "valid/observation.json", "schema": "observation", "valid": true, "sha256": "8ec8aa2528d568ab1e6ed9c4c4bbb1a86e60e4d15dccb8acd34cf0a6351cf767" },
+    { "path": "valid/macro_action_selling.json", "schema": "macro_action", "valid": true, "sha256": "38ec085b43df15db9364e98496d5c06191c5bdfff9ad2308040f9f8ba2c45079" },
+    { "path": "valid/macro_action_crop_production.json", "schema": "macro_action", "valid": true, "sha256": "b49318ec802b05ba1777275d057abea09143768b590476b572b57daa236407b0" },
+    { "path": "valid/macro_action_animal_production.json", "schema": "macro_action", "valid": true, "sha256": "713fff0731a3c8ae3c7736e7d43eae2338b6e2c441456282c726f5ba08585eda" },
+    { "path": "valid/macro_action_workforce.json", "schema": "macro_action", "valid": true, "sha256": "4cdfece4868d189019fd902dcba85e6e5145f95c0fa3868809dda0eb703f08cf" },
+    { "path": "valid/macro_action_inventory_buffer.json", "schema": "macro_action", "valid": true, "sha256": "4330641659edd972b5f890ff574c4002da7c7f22f313311149dd6f35e6c8f433" },
+    { "path": "valid/macro_action_land_expansion.json", "schema": "macro_action", "valid": true, "sha256": "95bd1760bda4aa47c7f2582d600fd9eb96c88a897c9ba0964d94b52c4910eabb" },
+    { "path": "valid/macro_action_recovery.json", "schema": "macro_action", "valid": true, "sha256": "3914cae9b9f43cbd9e5651deacf56477ce0c9cc408b2fd3d73224babd2d66911" },
+    { "path": "valid/joint_action.json", "schema": "joint_action", "valid": true, "sha256": "c8459ffcc16888ae7acf8682d82b6007df051955d107c40ef83f202021703329" },
+    { "path": "valid/execution_report.json", "schema": "execution_report", "valid": true, "sha256": "5e0909d68bb0201d30b42b7a87ee90d2b79257337e0e9ae20bd5dc7c4f628740" },
+    { "path": "invalid/macro_action_version.json", "schema": "macro_action", "valid": false, "sha256": "4cb794f9d379194a5e2c638c9b82779fdf59db257e3a8b2d90537d7048d4710b" },
+    { "path": "invalid/macro_action_unknown_kind.json", "schema": "macro_action", "valid": false, "sha256": "82fc17fe73c16eabdf29d54d633cdacf28fe639fec7a2d0342201e4dd291c6dd" },
+    { "path": "invalid/macro_action_extra_field.json", "schema": "macro_action", "valid": false, "sha256": "e05f0acf6a446538e5509a7793a0d05291c528268c3dd4df2b5eb4fdc62e4e99" },
+    { "path": "invalid/macro_action_zero_quantity.json", "schema": "macro_action", "valid": false, "sha256": "6f6a5806c958f2c57f9d5a20860504cc2f4fdd0209dc5abd33da0327332040d1" },
+    { "path": "invalid/observation_extra_field.json", "schema": "observation", "valid": false, "sha256": "ec60f9d9584e8ec0b66aecf34e658da83e188c0a7d3965243b8b4d1da0016960" },
+    { "path": "invalid/observation_negative_inventory.json", "schema": "observation", "valid": false, "sha256": "5f3aa2e43dfd95a71216b8528269dadd86841b0d4b0632346421867e84f40ac6" },
+    { "path": "invalid/joint_action_unknown_order.json", "schema": "joint_action", "valid": false, "sha256": "a9130dad8390a844815a34507cf1c47cd69e1ba7d24a2ebdfb80c5d44bda902e" },
+    { "path": "invalid/execution_report_bad_code.json", "schema": "execution_report", "valid": false, "sha256": "ed0316da3e841a389df487fe15c51587eb972c83f0b47bbc103efc05c2c30434" }
+  ]
+}

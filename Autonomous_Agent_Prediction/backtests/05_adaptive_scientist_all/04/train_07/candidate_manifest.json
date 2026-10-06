@@ -1,0 +1,86 @@
+{
+  "classes": [
+    0,
+    1
+  ],
+  "rows": 10000,
+  "features": 17,
+  "candidates": [
+    {
+      "file": "candidate_blend_lightgbm_native_catboost_d6.csv",
+      "name": "blend_lightgbm_native_catboost_d6",
+      "family": "blend",
+      "oof_auc": 0.82852603,
+      "fold_auc": [],
+      "fold_auc_std": null,
+      "test_rank_correlation_to_best": 0.99437737
+    },
+    {
+      "file": "candidate_blend_core_interaction.csv",
+      "name": "blend_core_interaction",
+      "family": "interaction_blend",
+      "oof_auc": 0.82682882,
+      "fold_auc": [],
+      "fold_auc_std": null,
+      "test_rank_correlation_to_best": 0.9988774
+    },
+    {
+      "file": "candidate_lightgbm_native.csv",
+      "name": "lightgbm_native",
+      "family": "lightgbm",
+      "oof_auc": 0.82584424,
+      "fold_auc": [
+        0.83037459,
+        0.83141002,
+        0.81559725,
+        0.81401259,
+        0.83926243
+      ],
+      "fold_auc_std": 0.00975834,
+      "test_rank_correlation_to_best": 1.0
+    },
+    {
+      "file": "candidate_hist_gradient.csv",
+      "name": "hist_gradient",
+      "family": "histogram",
+      "oof_auc": 0.81593552,
+      "fold_auc": [
+        0.81694347,
+        0.82467604,
+        0.80519072,
+        0.80816832,
+        0.82633183
+      ],
+      "fold_auc_std": 0.00849403,
+      "test_rank_correlation_to_best": 0.97136031
+    }
+  ],
+  "diagnostics": {
+    "best_core": {
+      "name": "lightgbm_native",
+      "family": "lightgbm",
+      "oof_auc": 0.82584424
+    },
+    "blend_gate": {
+      "accepted": true,
+      "name": "blend_lightgbm_native_catboost_d6",
+      "oof_auc": 0.82852603,
+      "gain": 0.00268179,
+      "test_rank_correlation_to_best": 0.99437737
+    },
+    "interaction_gate": {
+      "accepted": true,
+      "name": "interaction_te",
+      "oof_auc": 0.81924609,
+      "standalone_gain": -0.00659815,
+      "blend_auc": 0.82682882,
+      "blend_gain": 0.00098458,
+      "fold_auc_std": 0.01165674,
+      "test_rank_correlation": 0.97180606,
+      "stable": true,
+      "diverse": true,
+      "improves": true
+    }
+  },
+  "failures": []
+}

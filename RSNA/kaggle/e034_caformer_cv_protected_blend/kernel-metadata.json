@@ -1,0 +1,24 @@
+{
+  "id": "chinnaphatkhun/rsna-knee-e034-caformer-cv-protected-blend",
+  "title": "RSNA Knee E034 CAFormer CV Protected Blend",
+  "code_file": "e034-caformer-cv-protected-blend.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "machine_shape": "NvidiaTeslaT4",
+  "competition_sources": [
+    "rsna-knee-abnormality-detection"
+  ],
+  "dataset_sources": [
+    "dreaddevelopment/knee-raptor-corpus",
+    "dreaddevelopment/knee-raptor-corpus-ext",
+    "pilkwang/rsna-knee-llm-labels",
+    "lixin73/rsna-knee-llm-report-labels-sol56",
+    "stevenleehans/rsna-knee-llm-report-labels"
+  ],
+  "kernel_sources": [],
+  "model_sources": []
+}

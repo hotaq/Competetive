@@ -1,0 +1,27 @@
+{
+  "exact_e020": {
+    "crop_mm": 140.0,
+    "k_eval": 42,
+    "model_size": 384,
+    "stack_depth": 64,
+    "stored_size": 336
+  },
+  "experiment": "E023 RSNA Knee preprocessing visual audit",
+  "observations": {
+    "ambiguous_series_study_rate": 0.4508736101656456,
+    "crop_truncation_rate": 0.04296875,
+    "cross_series_window_rate": 0.14285714285714285,
+    "median_two_stage_edge_ratio": 0.48692359030246735,
+    "missing_slot_study_rate": 0.281597458588609,
+    "public_corpus_depths": [],
+    "spacing_anisotropy_rate": 0.0,
+    "zero_slice_window_rate": 0.05555555555555555
+  },
+  "recommended_next_branch": "rebuild exact 64-slice corpus with series-aware valid window centres; then warm-start CoAtNet",
+  "selected_studies": [
+    "1.2.826.0.1.3680043.8.498.36679002788952511154610176614545192374",
+    "1.2.826.0.1.3680043.8.498.63564058504808107209753434989270686941",
+    "1.2.826.0.1.3680043.8.498.11315871586936178043350206344448851055"
+  ],
+  "submission_created": false
+}

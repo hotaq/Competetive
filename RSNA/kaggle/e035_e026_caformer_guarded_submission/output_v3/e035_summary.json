@@ -1,0 +1,59 @@
+{
+  "experiment": "E035_E026_CAFO_GUARDED_SUBMISSION",
+  "decision": "READY_TO_SUBMIT_E035",
+  "anchor": {
+    "kernel": "chinnaphatkhun/rsna-knee-e026-safe-window-inference",
+    "public_score": 0.927,
+    "sha256": "46f9f3ff35baaff39fed8cf9ef8122b4553cb1218df805c61b7ce434c8ddd271"
+  },
+  "training": {
+    "study_count": 640,
+    "train_ids_sha256": "8b92e40d67ca3b52da820b8d4b9049e2a276307ba208fe80667f100b91b68020",
+    "gold_excluded": true,
+    "head_seeds": [
+      35001,
+      35002
+    ],
+    "full_fit_diagnostic_macro_auc": 0.873563195142088,
+    "checkpoint_sha256": "29ba27966da2328372b2f08389ab5cfa566cb7667b83b687a0402530087d2704",
+    "checkpoint_source": "E035 v2 exported before its missing-anchor failure"
+  },
+  "test": {
+    "study_count": 3,
+    "valid_encoded": 3,
+    "failure_count": 0
+  },
+  "guard": {
+    "ACL": 0.5,
+    "MCL": 0.0,
+    "Medial Meniscus": 0.75,
+    "Lateral Meniscus": 0.75,
+    "Medial OA": 0.5,
+    "Lateral OA": 0.75,
+    "PF OA": 0.75,
+    "Effusion": 0.5,
+    "Synovitis": 0.0,
+    "Baker's": 0.5,
+    "Contusion": 0.0,
+    "Fracture": 0.0
+  },
+  "protected_targets": [
+    "MCL",
+    "Synovitis",
+    "Contusion",
+    "Fracture"
+  ],
+  "changed_rank_targets": [
+    "ACL",
+    "Medial Meniscus",
+    "Lateral Meniscus",
+    "Medial OA",
+    "PF OA",
+    "Baker's"
+  ],
+  "submission_sha256": "d088c389a0e212f41afb3bff7472ec6a84a55994430c629ebda81eccfed5f67d",
+  "limitations": [
+    "E034 validated CAFormer against a frozen CoAtNet head, not the fine-tuned E026 checkpoint.",
+    "This is a leaderboard probe and not a promoted model claim."
+  ]
+}

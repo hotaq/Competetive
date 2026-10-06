@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-08-23T14:30:40.421374+00:00",
+  "environment": "kaggle_environments:kaggriculture",
+  "method": "live_two_player_seat_swapped",
+  "candidate": {
+    "agent_file": "/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/submissions/meta_v17_budget_opening_w12_standalone/main.py",
+    "sha256": "547680f5b3e9eb996e150d30ac7ae12d204d45c88fce421a1f848b3ff6a03738"
+  },
+  "reference": {
+    "agent_file": "/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/submissions/meta_v16_rc6_adaptive_market_standalone/main.py",
+    "sha256": "c8afcbb8f90861cd92131012146e573752820b80fbd939ace3c7503aea83cd5e"
+  },
+  "configuration": {
+    "starting_seed": 1201,
+    "paired_seeds": 2,
+    "games": 4
+  },
+  "summary": {
+    "wins": 0,
+    "draws": 0,
+    "losses": 4,
+    "win_rate": 0.0,
+    "mean_margin": -2275.25,
+    "median_margin": -1454.0,
+    "worst_margin": -5340.0,
+    "cvar10_margin": -5340.0,
+    "mean_money": 67381.75,
+    "worst_money": 51032.0,
+    "all_done": true,
+    "max_action_ms": 62.6346659992123
+  },
+  "paired_seeds": [
+    {
+      "seed": 1201,
+      "games": 2,
+      "mean_margin": -853.0,
+      "worst_margin": -853.0
+    },
+    {
+      "seed": 1202,
+      "games": 2,
+      "mean_margin": -3697.5,
+      "worst_margin": -5340.0
+    }
+  ],
+  "games": [
+    {
+      "seed": 1201,
+      "candidate_seat": 0,
+      "candidate_money": 51032.0,
+      "reference_money": 51885.0,
+      "margin": -853.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 42.75637499813456
+    },
+    {
+      "seed": 1201,
+      "candidate_seat": 1,
+      "candidate_money": 51032.0,
+      "reference_money": 51885.0,
+      "margin": -853.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 0.6253339961403981
+    },
+    {
+      "seed": 1202,
+      "candidate_seat": 0,
+      "candidate_money": 82744.0,
+      "reference_money": 88084.0,
+      "margin": -5340.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 62.6346659992123
+    },
+    {
+      "seed": 1202,
+      "candidate_seat": 1,
+      "candidate_money": 84719.0,
+      "reference_money": 86774.0,
+      "margin": -2055.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 0.6653750024270266
+    }
+  ]
+}

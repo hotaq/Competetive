@@ -1,0 +1,107 @@
+{
+  "best_epoch": 0,
+  "best_weights_restored_from_epoch": 0,
+  "epochs": [
+    {
+      "epoch": 0,
+      "loss": 0.7137760443147272,
+      "seconds": 681.2642712593079,
+      "seed": 2702,
+      "valid_delta_vs_zero": -0.0001655716181885314,
+      "valid_macro_auc": 0.8898955657342594
+    },
+    {
+      "epoch": 1,
+      "loss": 0.698322705924511,
+      "seconds": 681.0878171920776,
+      "seed": 2702,
+      "valid_delta_vs_zero": -0.0032672002904067243,
+      "valid_macro_auc": 0.8867939370620412
+    },
+    {
+      "epoch": 2,
+      "loss": 0.6888927795225754,
+      "seconds": 681.0893890857697,
+      "seed": 2702,
+      "valid_delta_vs_zero": -0.004354539660223367,
+      "valid_macro_auc": 0.8857065976922246
+    },
+    {
+      "epoch": 3,
+      "loss": 0.6735226224409416,
+      "seconds": 677.8891353607178,
+      "seed": 2702,
+      "valid_delta_vs_zero": -0.005252358165748761,
+      "valid_macro_auc": 0.8848087791866992
+    },
+    {
+      "epoch": 4,
+      "loss": 0.6647913831984624,
+      "seconds": 678.0091245174408,
+      "seed": 2702,
+      "valid_delta_vs_zero": -0.005185067567130219,
+      "valid_macro_auc": 0.8848760697853177
+    }
+  ],
+  "gold58_veto": {
+    "best_macro_auc": 0.9172344266617868,
+    "delta": -0.00019544580820274327,
+    "min_target_delta": -0.018633540372670843,
+    "zero_macro_auc": 0.9174298724699895
+  },
+  "losses": [
+    0.7137760443147272,
+    0.698322705924511,
+    0.6888927795225754,
+    0.6735226224409416,
+    0.6647913831984624
+  ],
+  "resources": {
+    "peak_gpu_gib": 6.0687642097473145,
+    "studies_per_second": 0.7530809549181947,
+    "train_minutes": 56.656148835023245
+  },
+  "seed": 2702,
+  "updates": {
+    "applied_optimizer_steps": 1275,
+    "backbone_changed_tensors": 403,
+    "expected_optimizer_steps": 1280,
+    "final_loss_scale": 2048.0,
+    "gradient_norms_finite": true,
+    "head_changed_tensors": 8,
+    "optimizer_parameter_match": true,
+    "optimizer_steps": 1280,
+    "scaler_skip_rate": 0.00390625,
+    "skipped_optimizer_steps": 5,
+    "tensors_identical_to_zero_step": 0
+  },
+  "valid": {
+    "best_macro_auc": 0.8898955657342594,
+    "bootstrap": {
+      "ci95": [
+        -0.004399145124745935,
+        0.004162365236109706
+      ],
+      "mean_delta": -0.00013772199317807815,
+      "valid_repeats": 2000,
+      "win_rate": 0.488
+    },
+    "delta": -0.0001655716181885314,
+    "min_target_delta": -0.0061911300619112986,
+    "per_target_delta": {
+      "ACL": -0.0061911300619112986,
+      "Baker's": 0.00284282646487366,
+      "Contusion": -0.002547021943573702,
+      "Effusion": 0.010076994536379447,
+      "Fracture": -0.005640037124295061,
+      "Lateral Meniscus": 0.00287820287820284,
+      "Lateral OA": -0.004774305555555469,
+      "MCL": 0.005899035734543534,
+      "Medial Meniscus": -0.000748605912459066,
+      "Medial OA": 0.0005758986418390455,
+      "PF OA": -0.003866513233601876,
+      "Synovitis": -0.0004922038427055409
+    },
+    "zero_macro_auc": 0.890061137352448
+  }
+}

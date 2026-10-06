@@ -1,0 +1,163 @@
+task,status,base_cost,base_points,input_h,input_w,output_h,output_w,reason,right,wrong
+task001,error:ValueError,4649,16.555593,3,3,9,9,unsupported opset for input Slice: 9,,
+task003,verify_failed,10232,15.766725,6,3,9,3,first mismatch example 0,0,265
+task006,verify_failed,2368,17.230199,3,7,3,3,first mismatch example 0,0,266
+task007,verify_failed,9289,15.863414,7,7,7,7,first mismatch example 0,0,266
+task010,error:Fail,63553,13.940371,9,9,9,9,[ONNXRuntimeError] : 1 : FAIL : Node () Op (Mul) [ShapeInferenceError] Incompatible dimensions,,
+task011,verify_failed,95362,13.534565,11,11,11,11,first mismatch example 0,0,267
+task012,verify_failed,32756,14.603159,12,12,12,12,first mismatch example 0,0,265
+task015,verify_failed,17561,15.226564,9,9,9,9,first mismatch example 0,0,265
+task020,verify_failed,443885,11.996679,10,10,10,10,first mismatch example 0,0,266
+task022,error:Fail,501997,11.873651,11,11,3,3,[ONNXRuntimeError] : 1 : FAIL : Node () Op (Mul) [ShapeInferenceError] Incompatible dimensions,,
+task026,verify_failed,5157,16.451890,5,7,5,3,first mismatch example 0,0,268
+task027,error:Fail,66999,13.887567,10,10,10,10,[ONNXRuntimeError] : 1 : FAIL : Node () Op (Sub) [ShapeInferenceError] Incompatible dimensions,,
+task028,verify_failed,22968,14.958143,10,10,10,10,first mismatch example 0,0,265
+task034,error:Fail,301189,12.384507,9,9,9,9,[ONNXRuntimeError] : 1 : FAIL : Node () Op (Mul) [ShapeInferenceError] Incompatible dimensions,,
+task035,verify_failed,52582,14.129871,10,10,10,10,first mismatch example 0,0,266
+task037,verify_failed,459987,11.961046,10,10,10,10,first mismatch example 0,0,266
+task038,verify_failed,7973,16.016184,9,9,1,5,first mismatch example 0,0,266
+task039,error:Fail,159959,13.017327,10,10,3,3,[ONNXRuntimeError] : 1 : FAIL : Node () Op (Add) [ShapeInferenceError] Incompatible dimensions,,
+task040,verify_failed,68599,13.863967,10,10,10,10,first mismatch example 0,0,266
+task041,verify_failed,49693,14.186381,10,10,10,10,first mismatch example 0,0,266
+task042,verify_failed,54117,14.101096,10,10,10,10,first mismatch example 0,0,266
+task044,verify_failed,33971,14.566738,10,10,10,10,first mismatch example 0,0,266
+task045,error:Fail,137447,13.169006,10,10,10,10,[ONNXRuntimeError] : 1 : FAIL : Node () Op (Add) [ShapeInferenceError] Incompatible dimensions,,
+task047,verify_failed,10795,15.713162,9,9,9,9,first mismatch example 0,0,265
+task052,verify_failed,2202,17.302879,3,3,3,3,first mismatch example 0,0,267
+task053,error:InvalidArgument,30,21.598803,3,3,3,3,"[ONNXRuntimeError] : 2 : INVALID_ARGUMENT : Non-zero status code returned while running Gather node. Name:'' Status Message: indices element out of data bounds, idx=29 must be within the inclusive range [-3,2]",,
+task056,error:RuntimeException,27060,14.794188,3,3,1,1,"[ONNXRuntimeError] : 6 : RUNTIME_EXCEPTION : Non-zero status code returned while running Reshape node. Name:'' Status Message: /Users/cloudtest/vss/_work/1/s/onnxruntime/core/providers/cpu/tensor/reshape_helper.h:47 onnxruntime::ReshapeHelper::ReshapeHelper(const TensorShape &, TensorShapeVector &, bool) input_shape_size == size was false. The input tensor cannot be reshaped to the requested shape",,
+task057,verify_failed,90861,13.582914,8,8,3,6,first mismatch example 0,0,265
+task059,verify_failed,240294,12.610382,11,11,11,11,first mismatch example 0,0,266
+task060,error:RuntimeException,168392,12.965950,5,11,5,11,"[ONNXRuntimeError] : 6 : RUNTIME_EXCEPTION : Non-zero status code returned while running Reshape node. Name:'' Status Message: /Users/cloudtest/vss/_work/1/s/onnxruntime/core/providers/cpu/tensor/reshape_helper.h:47 onnxruntime::ReshapeHelper::ReshapeHelper(const TensorShape &, TensorShapeVector &, bool) input_shape_size == size was false. The input tensor cannot be reshaped to the requested shape",,
+task062,verify_failed,78773,13.725674,10,10,10,10,first mismatch example 0,0,267
+task068,verify_failed,26223,14.825608,10,10,10,10,first mismatch example 0,0,266
+task069,verify_failed,181981,12.888342,10,10,10,10,first mismatch example 0,0,264
+task072,verify_failed,6252,16.259343,13,5,6,5,first mismatch example 0,0,268
+task073,verify_failed,7828,16.034538,5,5,5,5,first mismatch example 0,0,15
+task075,verify_failed,87639,13.619019,9,13,9,13,first mismatch example 0,0,265
+task078,verify_failed,22049,14.998977,10,10,10,10,first mismatch example 0,0,266
+task079,verify_failed,60095,13.996318,14,14,3,3,first mismatch example 0,0,266
+task081,verify_failed,11261,15.670899,7,7,7,7,first mismatch example 0,0,264
+task083,verify_failed,5877,16.321198,3,4,6,8,first mismatch example 0,0,266
+task087,verify_failed,504,18.777424,3,3,3,3,first mismatch example 0,0,266
+task089,verify_failed,687453,11.559251,13,13,13,13,first mismatch example 0,0,267
+task093,error:ValidationError,436165,12.014224,14,14,14,14,task093_crop_starts initializer name is not unique,,
+task094,error:Fail,155481,13.045721,15,15,15,15,[ONNXRuntimeError] : 1 : FAIL : Node () Op (Mul) [ShapeInferenceError] Incompatible dimensions,,
+task095,verify_failed,7242,16.112347,9,9,9,9,first mismatch example 0,0,265
+task099,verify_failed,54813,14.088317,10,10,10,10,first mismatch example 0,0,265
+task100,verify_failed,73556,13.794198,10,10,2,2,first mismatch example 0,0,266
+task102,error:Fail,68745,13.861841,12,12,12,12,[ONNXRuntimeError] : 1 : FAIL : Node (background_out) Op (Sub) [ShapeInferenceError] Incompatible dimensions,,
+task103,error:InvalidGraph,41095,14.376358,3,3,1,1,[ONNXRuntimeError] : 10 : INVALID_GRAPH : This is an invalid model. Type Error: Type 'tensor(int8)' of input parameter (output_core_1x1) of operator (Pad) in node (task103_pad_crop_to_static30) is invalid.,,
+task104,verify_failed,8146,15.994718,3,3,9,9,first mismatch example 0,0,7
+task111,verify_failed,51806,14.144739,10,10,3,3,first mismatch example 0,0,265
+task116,error:InvalidArgument,30,21.598803,3,4,6,4,"[ONNXRuntimeError] : 2 : INVALID_ARGUMENT : Non-zero status code returned while running Gather node. Name:'task116_single_axis_gather' Status Message: indices element out of data bounds, idx=6 must be within the inclusive range [-3,2]",,
+task119,verify_failed,437954,12.010131,12,12,12,12,first mismatch example 0,0,266
+task121,verify_failed,59580,14.004925,13,13,3,3,first mismatch example 0,0,266
+task123,verify_failed,4334,16.625754,5,5,10,10,first mismatch example 0,0,265
+task125,verify_failed,46651,14.249550,15,15,15,15,first mismatch example 0,0,265
+task128,error:Fail,494709,11.888275,15,15,15,15,[ONNXRuntimeError] : 1 : FAIL : Node () Op (MatMul) [ShapeInferenceError] Incompatible dimensions for matrix multiplication,,
+task129,verify_failed,19064,15.144443,3,3,3,3,first mismatch example 0,0,265
+task130,verify_failed,17739,15.216479,9,9,3,3,first mismatch example 0,0,265
+task135,verify_failed,414,18.974134,9,9,3,3,first mismatch example 0,0,266
+task136,verify_failed,36328,14.499656,10,10,10,10,first mismatch example 0,0,266
+task139,verify_failed,17633,15.222473,9,9,9,9,first mismatch example 0,0,265
+task140,verify_failed,504,18.777424,3,3,3,3,first mismatch example 0,0,265
+task142,verify_failed,4428,16.604297,3,3,6,6,first mismatch example 0,0,266
+task143,verify_failed,46326,14.256541,10,10,10,10,first mismatch example 0,0,266
+task144,verify_failed,5250,16.434017,9,4,4,4,first mismatch example 0,0,267
+task146,verify_failed,110452,13.387664,9,3,3,3,first mismatch example 0,0,267
+task149,verify_failed,14949,15.387600,11,11,3,3,first mismatch example 0,0,267
+task152,verify_failed,4428,16.604297,3,3,6,6,first mismatch example 0,0,267
+task153,verify_failed,13135,15.516964,10,10,3,3,first mismatch example 0,0,265
+task154,error:Fail,163540,12.995187,15,15,15,15,[ONNXRuntimeError] : 1 : FAIL : Node () Op (Sub) [ShapeInferenceError] Incompatible dimensions,,
+task156,verify_failed,22323,14.986627,10,10,10,10,first mismatch example 0,0,265
+task157,verify_failed,133164,13.200663,10,15,10,15,first mismatch example 0,0,265
+task160,error:ValidationError,149480,13.085082,10,10,10,10,task160_crop_starts initializer name is not unique,,
+task163,verify_failed,73240,13.798503,11,11,11,11,first mismatch example 0,0,267
+task164,error:InvalidArgument,30,21.598803,3,3,3,6,"[ONNXRuntimeError] : 2 : INVALID_ARGUMENT : Non-zero status code returned while running Gather node. Name:'task164_single_axis_gather' Status Message: indices element out of data bounds, idx=6 must be within the inclusive range [-3,2]",,
+task167,verify_failed,45180,14.281590,3,3,3,3,first mismatch example 0,0,268
+task168,verify_failed,339589,12.264509,10,10,10,10,first mismatch example 0,0,265
+task169,error:ValidationError,488209,11.901501,10,10,10,10,task169_crop_starts initializer name is not unique,,
+task172,error:InvalidArgument,30,21.598803,3,3,6,3,"[ONNXRuntimeError] : 2 : INVALID_ARGUMENT : Non-zero status code returned while running Gather node. Name:'task172_single_axis_gather' Status Message: indices element out of data bounds, idx=6 must be within the inclusive range [-3,2]",,
+task180,verify_failed,24807,14.881119,8,8,4,4,first mismatch example 0,0,268
+task181,verify_failed,97814,13.509177,6,9,6,9,first mismatch example 0,0,266
+task186,verify_failed,41426,14.368336,3,3,3,3,first mismatch example 0,0,267
+task189,verify_failed,62795,13.952369,9,9,6,6,first mismatch example 0,0,266
+task190,verify_failed,78594,13.727949,10,10,10,10,first mismatch example 0,0,266
+task194,verify_failed,12246,15.587045,3,3,6,6,first mismatch example 0,0,266
+task200,error:RuntimeException,84137,13.659798,10,10,10,10,"[ONNXRuntimeError] : 6 : RUNTIME_EXCEPTION : Non-zero status code returned while running Reshape node. Name:'' Status Message: /Users/cloudtest/vss/_work/1/s/onnxruntime/core/providers/cpu/tensor/reshape_helper.h:47 onnxruntime::ReshapeHelper::ReshapeHelper(const TensorShape &, TensorShapeVector &, bool) input_shape_size == size was false. The input tensor cannot be reshaped to the requested shape",,
+task207,verify_failed,3725,16.777178,5,5,2,2,first mismatch example 0,0,265
+task210,error:InvalidArgument,30,21.598803,3,3,6,3,"[ONNXRuntimeError] : 2 : INVALID_ARGUMENT : Non-zero status code returned while running Gather node. Name:'task210_single_axis_gather' Status Message: indices element out of data bounds, idx=6 must be within the inclusive range [-3,2]",,
+task211,error:RuntimeException,76563,13.754131,3,2,9,4,"[ONNXRuntimeError] : 6 : RUNTIME_EXCEPTION : Non-zero status code returned while running Reshape node. Name:'' Status Message: /Users/cloudtest/vss/_work/1/s/onnxruntime/core/providers/cpu/tensor/reshape_helper.h:47 onnxruntime::ReshapeHelper::ReshapeHelper(const TensorShape &, TensorShapeVector &, bool) input_shape_size == size was false. The input tensor cannot be reshaped to the requested shape",,
+task212,error:ValidationError,494044,11.889620,10,10,10,10,task212_crop_starts initializer name is not unique,,
+task214,verify_failed,6968,16.150916,3,11,3,11,first mismatch example 0,0,266
+task217,verify_failed,26314,14.822144,9,9,9,9,first mismatch example 0,0,266
+task219,verify_failed,75552,13.767424,15,10,15,10,first mismatch example 0,0,265
+task223,verify_failed,3628,16.803563,3,3,9,9,first mismatch example 0,0,265
+task225,verify_failed,46296,14.257189,6,6,6,6,first mismatch example 0,0,265
+task226,verify_failed,15490,15.352050,10,10,10,10,first mismatch example 0,0,133
+task227,verify_failed,2740,17.084287,8,4,4,4,first mismatch example 0,0,267
+task228,verify_failed,55746,14.071439,10,10,10,10,first mismatch example 0,0,266
+task229,verify_failed,2978,17.000993,3,3,3,3,first mismatch example 0,0,267
+task235,error:RuntimeException,120889,13.297372,4,14,3,3,"[ONNXRuntimeError] : 6 : RUNTIME_EXCEPTION : Non-zero status code returned while running Reshape node. Name:'' Status Message: /Users/cloudtest/vss/_work/1/s/onnxruntime/core/providers/cpu/tensor/reshape_helper.h:47 onnxruntime::ReshapeHelper::ReshapeHelper(const TensorShape &, TensorShapeVector &, bool) input_shape_size == size was false. The input tensor cannot be reshaped to the requested shape",,
+task236,verify_failed,5090,16.464967,9,4,4,4,first mismatch example 0,0,267
+task250,error:Fail,257772,12.540169,10,10,10,10,[ONNXRuntimeError] : 1 : FAIL : Node () Op (MatMul) [ShapeInferenceError] Incompatible dimensions for matrix multiplication,,
+task253,verify_failed,79678,13.714251,13,13,4,4,first mismatch example 0,0,265
+task254,error:Fail,67701,13.877144,9,9,9,9,[ONNXRuntimeError] : 1 : FAIL : Node () Op (Concat) [ShapeInferenceError] Can't merge shape info. Both inferred and declared dimension have values but they differ. Inferred=30 Declared=9 Dimension=2,,
+task257,verify_failed,1749,17.533201,9,9,4,4,first mismatch example 0,0,269
+task260,verify_failed,31308,14.648371,10,10,10,10,first mismatch example 0,0,266
+task262,verify_failed,2108,17.346505,3,3,3,3,first mismatch example 0,0,11
+task266,verify_failed,1386,17.765823,3,5,3,5,first mismatch example 0,0,20
+task267,error:Fail,131422,13.213831,7,7,7,7,[ONNXRuntimeError] : 1 : FAIL : Node () Op (Mul) [ShapeInferenceError] Incompatible dimensions,,
+task270,verify_failed,67382,13.881867,15,15,15,15,first mismatch example 0,0,266
+task271,verify_failed,67380,13.881896,9,9,3,3,first mismatch example 0,0,267
+task273,error:Fail,127826,13.241575,10,10,10,10,[ONNXRuntimeError] : 1 : FAIL : Node (bottom_corners) Op (And) [ShapeInferenceError] Incompatible dimensions,,
+task277,verify_failed,83497,13.667434,10,10,10,10,first mismatch example 0,0,266
+task282,verify_failed,9130,15.880679,9,9,9,9,first mismatch example 0,0,265
+task283,error:Fail,121042,13.296107,10,10,10,10,[ONNXRuntimeError] : 1 : FAIL : Node () Op (Add) [ShapeInferenceError] Incompatible dimensions,,
+task294,error:Fail,125542,13.259604,10,10,10,10,[ONNXRuntimeError] : 1 : FAIL : Node () Op (Add) [ShapeInferenceError] Incompatible dimensions,,
+task296,verify_failed,44543,14.295790,5,7,3,3,first mismatch example 0,0,268
+task299,error:ValidationError,62345,13.959561,6,6,6,6,task299_crop_starts initializer name is not unique,,
+task302,error:ValidationError,265545,12.510460,12,12,12,12,task302_crop_starts initializer name is not unique,,
+task304,verify_failed,16517,15.287855,3,3,9,9,first mismatch example 0,0,266
+task311,error:InvalidArgument,30,21.598803,3,3,3,6,"[ONNXRuntimeError] : 2 : INVALID_ARGUMENT : Non-zero status code returned while running Gather node. Name:'task311_single_axis_gather' Status Message: indices element out of data bounds, idx=6 must be within the inclusive range [-3,2]",,
+task312,verify_failed,30493,14.674748,12,12,12,12,first mismatch example 0,0,265
+task314,verify_failed,18092,15.196775,8,8,8,8,first mismatch example 0,0,266
+task315,verify_failed,15455,15.354312,3,3,9,9,first mismatch example 0,0,266
+task316,verify_failed,9043,15.890254,10,10,3,3,first mismatch example 0,0,266
+task317,verify_failed,6027,16.295995,9,9,9,9,first mismatch example 0,0,265
+task318,verify_failed,5170,16.449372,9,4,4,4,first mismatch example 0,0,267
+task321,verify_failed,12371,15.576890,4,14,4,4,first mismatch example 0,0,267
+task322,verify_failed,1757,17.528637,3,3,3,3,first mismatch example 0,0,266
+task323,verify_failed,100314,13.483939,13,13,13,13,first mismatch example 0,0,172
+task327,verify_failed,23146,14.950423,3,3,6,6,first mismatch example 0,0,265
+task330,verify_failed,511340,11.855210,10,10,10,10,first mismatch example 0,0,266
+task331,verify_failed,9428,15.848561,10,10,10,10,first mismatch example 0,0,265
+task333,verify_failed,30632,14.670200,10,10,10,10,first mismatch example 0,0,265
+task334,verify_failed,45035,14.284805,5,5,3,3,first mismatch example 0,0,271
+task336,error:Fail,187569,12.858098,10,10,10,10,[ONNXRuntimeError] : 1 : FAIL : Node () Op (Mul) [ShapeInferenceError] Incompatible dimensions,,
+task341,error:Fail,143304,13.127276,10,10,10,10,[ONNXRuntimeError] : 1 : FAIL : Node () Op (Mul) [ShapeInferenceError] Incompatible dimensions,,
+task342,verify_failed,183165,12.881857,10,10,10,10,first mismatch example 0,0,266
+task343,error:Fail,54707,14.090253,5,15,5,15,[ONNXRuntimeError] : 1 : FAIL : Node () Op (Sub) [ShapeInferenceError] Incompatible dimensions,,
+task345,error:Fail,76648,13.753021,10,10,10,10,[ONNXRuntimeError] : 1 : FAIL : Node () Op (Mul) [ShapeInferenceError] Incompatible dimensions,,
+task347,verify_failed,1618,17.611054,3,6,3,3,first mismatch example 0,0,269
+task354,verify_failed,65611,13.908501,10,10,10,10,first mismatch example 0,0,266
+task356,verify_failed,35122,14.533417,10,10,10,10,first mismatch example 0,0,266
+task360,verify_failed,13252,15.508096,10,9,10,4,first mismatch example 0,0,266
+task361,verify_failed,30108,14.687454,10,10,10,10,first mismatch example 0,0,266
+task362,verify_failed,20685,15.062836,10,10,10,10,first mismatch example 0,0,267
+task363,error:Fail,63651,13.938830,10,10,10,10,[ONNXRuntimeError] : 1 : FAIL : Node () Op (MatMul) [ShapeInferenceError] Incompatible dimensions for matrix multiplication,,
+task368,verify_failed,83268,13.670180,10,10,10,10,first mismatch example 0,0,265
+task369,verify_failed,23518,14.934479,10,10,10,10,first mismatch example 0,0,265
+task372,verify_failed,15137,15.375103,11,11,5,11,first mismatch example 0,0,266
+task373,verify_failed,1936,17.431621,2,6,2,6,first mismatch example 0,0,75
+task374,verify_failed,72060,13.814746,10,10,10,10,first mismatch example 0,0,267
+task380,verify_failed,1089,18.006985,3,3,3,3,first mismatch example 0,0,267
+task381,error:Fail,117337,13.327195,10,10,10,10,[ONNXRuntimeError] : 1 : FAIL : Node () Op (Concat) [ShapeInferenceError] Can't merge shape info. Both inferred and declared dimension have values but they differ. Inferred=10 Declared=30 Dimension=3,,
+task385,error:InvalidArgument,30,21.598803,10,4,10,4,"[ONNXRuntimeError] : 2 : INVALID_ARGUMENT : Non-zero status code returned while running Gather node. Name:'' Status Message: indices element out of data bounds, idx=10 must be within the inclusive range [-10,9]",,
+task386,verify_failed,3262,16.909904,4,7,4,3,first mismatch example 0,0,268
+task390,verify_failed,29389,14.711624,15,15,15,15,first mismatch example 0,0,266
+task392,verify_failed,22107,14.996350,10,10,10,10,first mismatch example 0,0,266
+task393,verify_failed,41485,14.366913,12,12,3,1,first mismatch example 0,0,265
+task395,verify_failed,1564,17.644998,6,3,3,3,first mismatch example 0,0,268
+task397,error:ValidationError,325991,12.305375,10,10,10,10,task397_crop_starts initializer name is not unique,,

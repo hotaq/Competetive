@@ -1,0 +1,421 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-08-22T04:21:15.813442+00:00",
+  "environment": "kaggle_environments:kaggriculture",
+  "method": "live_two_player_seat_swapped",
+  "candidate": {
+    "agent_file": "/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/experiments/v16_rc5_sync_day17_cap3_v3.py",
+    "sha256": "e02a783de141102efbbf95ea8a51218299d78df646f10adf618ae3dd0f3d2273"
+  },
+  "reference": {
+    "agent_file": "/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/submissions/top1_v12_ryo_selector_b120_repaired_standalone/main.py",
+    "sha256": "670c85ca7c81d150fbebb4083eaec37f667c3c7305dfdc55a41feed3919e4d02"
+  },
+  "configuration": {
+    "starting_seed": 267647873,
+    "paired_seeds": 12,
+    "games": 24
+  },
+  "summary": {
+    "wins": 18,
+    "draws": 0,
+    "losses": 6,
+    "win_rate": 0.75,
+    "mean_margin": 5158.208333333333,
+    "median_margin": 7274.0,
+    "worst_margin": -17730.0,
+    "cvar10_margin": -15372.333333333334,
+    "mean_money": 87514.5,
+    "worst_money": 49824.0,
+    "all_done": true,
+    "max_action_ms": 151.41641700756736
+  },
+  "paired_seeds": [
+    {
+      "seed": 267647873,
+      "games": 2,
+      "mean_margin": 7274.0,
+      "worst_margin": 7274.0
+    },
+    {
+      "seed": 267647874,
+      "games": 2,
+      "mean_margin": 15048.0,
+      "worst_margin": 15048.0
+    },
+    {
+      "seed": 267647875,
+      "games": 2,
+      "mean_margin": -10657.0,
+      "worst_margin": -10657.0
+    },
+    {
+      "seed": 267647876,
+      "games": 2,
+      "mean_margin": 18897.0,
+      "worst_margin": 18897.0
+    },
+    {
+      "seed": 267647877,
+      "games": 2,
+      "mean_margin": 7708.5,
+      "worst_margin": 2695.0
+    },
+    {
+      "seed": 267647878,
+      "games": 2,
+      "mean_margin": 19206.0,
+      "worst_margin": 19206.0
+    },
+    {
+      "seed": 267647879,
+      "games": 2,
+      "mean_margin": -1822.0,
+      "worst_margin": -1822.0
+    },
+    {
+      "seed": 267647880,
+      "games": 2,
+      "mean_margin": 8276.0,
+      "worst_margin": 8276.0
+    },
+    {
+      "seed": 267647881,
+      "games": 2,
+      "mean_margin": 8095.0,
+      "worst_margin": 8058.0
+    },
+    {
+      "seed": 267647882,
+      "games": 2,
+      "mean_margin": -17730.0,
+      "worst_margin": -17730.0
+    },
+    {
+      "seed": 267647883,
+      "games": 2,
+      "mean_margin": 1962.0,
+      "worst_margin": 1962.0
+    },
+    {
+      "seed": 267647884,
+      "games": 2,
+      "mean_margin": 5641.0,
+      "worst_margin": 5641.0
+    }
+  ],
+  "games": [
+    {
+      "seed": 267647873,
+      "candidate_seat": 0,
+      "candidate_money": 58367.0,
+      "reference_money": 51093.0,
+      "margin": 7274.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 0.7467090035788715
+    },
+    {
+      "seed": 267647873,
+      "candidate_seat": 1,
+      "candidate_money": 58367.0,
+      "reference_money": 51093.0,
+      "margin": 7274.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 0.13629099703393877
+    },
+    {
+      "seed": 267647874,
+      "candidate_seat": 0,
+      "candidate_money": 97253.0,
+      "reference_money": 82205.0,
+      "margin": 15048.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 1.2519169977167621
+    },
+    {
+      "seed": 267647874,
+      "candidate_seat": 1,
+      "candidate_money": 97253.0,
+      "reference_money": 82205.0,
+      "margin": 15048.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 0.08033300400711596
+    },
+    {
+      "seed": 267647875,
+      "candidate_seat": 0,
+      "candidate_money": 104175.0,
+      "reference_money": 114832.0,
+      "margin": -10657.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 69.72745899111032
+    },
+    {
+      "seed": 267647875,
+      "candidate_seat": 1,
+      "candidate_money": 104175.0,
+      "reference_money": 114832.0,
+      "margin": -10657.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 0.08525000885128975
+    },
+    {
+      "seed": 267647876,
+      "candidate_seat": 0,
+      "candidate_money": 88341.0,
+      "reference_money": 69444.0,
+      "margin": 18897.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 0.961042009294033
+    },
+    {
+      "seed": 267647876,
+      "candidate_seat": 1,
+      "candidate_money": 88341.0,
+      "reference_money": 69444.0,
+      "margin": 18897.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 0.12162499479018152
+    },
+    {
+      "seed": 267647877,
+      "candidate_seat": 0,
+      "candidate_money": 97953.0,
+      "reference_money": 85231.0,
+      "margin": 12722.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 128.83899999724235
+    },
+    {
+      "seed": 267647877,
+      "candidate_seat": 1,
+      "candidate_money": 106547.0,
+      "reference_money": 103852.0,
+      "margin": 2695.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 0.1450830022804439
+    },
+    {
+      "seed": 267647878,
+      "candidate_seat": 0,
+      "candidate_money": 126162.0,
+      "reference_money": 106956.0,
+      "margin": 19206.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 1.1172090016771108
+    },
+    {
+      "seed": 267647878,
+      "candidate_seat": 1,
+      "candidate_money": 126162.0,
+      "reference_money": 106956.0,
+      "margin": 19206.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 0.08724999497644603
+    },
+    {
+      "seed": 267647879,
+      "candidate_seat": 0,
+      "candidate_money": 72003.0,
+      "reference_money": 73825.0,
+      "margin": -1822.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 151.41641700756736
+    },
+    {
+      "seed": 267647879,
+      "candidate_seat": 1,
+      "candidate_money": 72003.0,
+      "reference_money": 73825.0,
+      "margin": -1822.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 1.1194170074304566
+    },
+    {
+      "seed": 267647880,
+      "candidate_seat": 0,
+      "candidate_money": 69691.0,
+      "reference_money": 61415.0,
+      "margin": 8276.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 0.6631249998463318
+    },
+    {
+      "seed": 267647880,
+      "candidate_seat": 1,
+      "candidate_money": 69691.0,
+      "reference_money": 61415.0,
+      "margin": 8276.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 0.11283400817774236
+    },
+    {
+      "seed": 267647881,
+      "candidate_seat": 0,
+      "candidate_money": 109228.0,
+      "reference_money": 101096.0,
+      "margin": 8132.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 0.9750000026542693
+    },
+    {
+      "seed": 267647881,
+      "candidate_seat": 1,
+      "candidate_money": 109378.0,
+      "reference_money": 101320.0,
+      "margin": 8058.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 0.10599999222904444
+    },
+    {
+      "seed": 267647882,
+      "candidate_seat": 0,
+      "candidate_money": 81454.0,
+      "reference_money": 99184.0,
+      "margin": -17730.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 6.305416012764908
+    },
+    {
+      "seed": 267647882,
+      "candidate_seat": 1,
+      "candidate_money": 81454.0,
+      "reference_money": 99184.0,
+      "margin": -17730.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 0.2211250102845952
+    },
+    {
+      "seed": 267647883,
+      "candidate_seat": 0,
+      "candidate_money": 49824.0,
+      "reference_money": 47862.0,
+      "margin": 1962.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 10.33745899621863
+    },
+    {
+      "seed": 267647883,
+      "candidate_seat": 1,
+      "candidate_money": 49824.0,
+      "reference_money": 47862.0,
+      "margin": 1962.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 0.14262500917539
+    },
+    {
+      "seed": 267647884,
+      "candidate_seat": 0,
+      "candidate_money": 91351.0,
+      "reference_money": 85710.0,
+      "margin": 5641.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 0.7539579964941368
+    },
+    {
+      "seed": 267647884,
+      "candidate_seat": 1,
+      "candidate_money": 91351.0,
+      "reference_money": 85710.0,
+      "margin": 5641.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 0.1238750119227916
+    }
+  ]
+}

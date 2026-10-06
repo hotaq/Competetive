@@ -1,0 +1,92 @@
+{
+  "classes": [
+    0,
+    1
+  ],
+  "rows": 10000,
+  "features": 9,
+  "candidates": [
+    {
+      "file": "candidate_meta_logstack.csv",
+      "name": "meta_logstack",
+      "family": "meta",
+      "oof_auc": 0.688288,
+      "fold_auc": [
+        0.6708,
+        0.6844,
+        0.752,
+        0.6476,
+        0.6848
+      ],
+      "fold_auc_std": 0.03477691,
+      "test_rank_correlation_to_best": 0.92099907
+    },
+    {
+      "file": "candidate_blend_core_interaction.csv",
+      "name": "blend_core_interaction",
+      "family": "interaction_blend",
+      "oof_auc": 0.6744,
+      "fold_auc": [],
+      "fold_auc_std": null,
+      "test_rank_correlation_to_best": 0.99315228
+    },
+    {
+      "file": "candidate_catboost_d8.csv",
+      "name": "catboost_d8",
+      "family": "catboost",
+      "oof_auc": 0.672168,
+      "fold_auc": [
+        0.692,
+        0.6364,
+        0.7232,
+        0.7128,
+        0.7882
+      ],
+      "fold_auc_std": 0.04906512,
+      "test_rank_correlation_to_best": 1.0
+    },
+    {
+      "file": "candidate_logistic.csv",
+      "name": "logistic",
+      "family": "linear",
+      "oof_auc": 0.662016,
+      "fold_auc": [
+        0.6476,
+        0.624,
+        0.6276,
+        0.7044,
+        0.7208
+      ],
+      "fold_auc_std": 0.04012094,
+      "test_rank_correlation_to_best": 0.81472727
+    }
+  ],
+  "diagnostics": {
+    "best_core": {
+      "name": "catboost_d8",
+      "family": "catboost",
+      "oof_auc": 0.672168
+    },
+    "blend_gate": {
+      "accepted": true,
+      "name": "meta_logstack",
+      "oof_auc": 0.688288,
+      "gain": 0.01612,
+      "test_rank_correlation_to_best": 0.92099907
+    },
+    "interaction_gate": {
+      "accepted": true,
+      "name": "interaction_te",
+      "oof_auc": 0.6368,
+      "standalone_gain": -0.035368,
+      "blend_auc": 0.6744,
+      "blend_gain": 0.002232,
+      "fold_auc_std": 0.02785718,
+      "test_rank_correlation": 0.80649107,
+      "stable": true,
+      "diverse": true,
+      "improves": true
+    }
+  },
+  "failures": []
+}

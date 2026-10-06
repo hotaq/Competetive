@@ -1,0 +1,9 @@
+{
+  "name": "meta_v19_adaptive_rollout_local",
+  "agent_file": "submissions/meta_v19_adaptive_rollout_local/main.py",
+  "policies": ["v16", "v12"],
+  "opponent_models": ["ryo", "repaired", "dual"],
+  "selector_checkpoint": "rl/checkpoints/v19_rollout_value_selector_v4_safe95.json",
+  "horizon": 719,
+  "workers": 6
+}

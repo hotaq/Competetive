@@ -1,0 +1,53 @@
+{
+  "agents": [
+    {
+      "episode_id": 393519448,
+      "agent_file": "artifacts/program_93519448_cluster_robust/program_393519448.py",
+      "agent_sha256": "7127d17e2f3c6add43188c3d505195397264405ebce1080a7c81164991ed5b24",
+      "program": {
+        "program_id": 393519448,
+        "name": "specialist-93519448-cluster-robust",
+        "segments": [
+          {
+            "start_step": 0,
+            "source_episode_id": 93816256
+          },
+          {
+            "start_step": 97,
+            "source_episode_id": 93547215
+          },
+          {
+            "start_step": 312,
+            "source_episode_id": 93634131
+          }
+        ],
+        "mutations": [
+          {
+            "kind": "remove_market_order",
+            "step": 527,
+            "order_index": 1,
+            "expected": [
+              "SELL",
+              "WHEAT",
+              7
+            ]
+          },
+          {
+            "kind": "remove_market_order",
+            "step": 672,
+            "order_index": 5,
+            "expected": [
+              "SELL",
+              "WHEAT",
+              3
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "holdout": false,
+  "source_population": "artifacts/replay_tape_population_v10_train95/manifest.json",
+  "program_config": "rl/program_93519448_cluster_robust.json",
+  "common_prefix_step": 97
+}

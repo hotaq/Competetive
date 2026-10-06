@@ -1,0 +1,376 @@
+{
+  "blend_signal_gates": {
+    "blend_bootstrap_ci_low_positive": true,
+    "blend_bootstrap_win_ge_090": true,
+    "blend_fold_wins_ge_4": true,
+    "blend_min_target_delta_ge_minus0005": false,
+    "blend_oof_gain_ge_001": false,
+    "blend_target_wins_ge_8": true
+  },
+  "bootstrap": {
+    "caformer_vs_coatnet": {
+      "ci_high": 0.0169085259299697,
+      "ci_low": -0.008711289520335052,
+      "mean_delta": 0.004440815779819052,
+      "repeats_valid": 2000,
+      "win_rate": 0.754
+    },
+    "protected_blend_vs_coatnet": {
+      "ci_high": 0.01750007865255338,
+      "ci_low": 0.0018874392569411232,
+      "mean_delta": 0.009663206728594376,
+      "repeats_valid": 2000,
+      "win_rate": 0.9935
+    }
+  },
+  "caformer_signal_gates": {
+    "caformer_bootstrap_ci_low_positive": false,
+    "caformer_bootstrap_win_ge_090": false,
+    "caformer_fold_wins_ge_4": false,
+    "caformer_min_target_delta_ge_minus003": false,
+    "caformer_oof_gain_ge_001": false,
+    "caformer_robust_targets_ge_6": false,
+    "caformer_target_wins_ge_8": true
+  },
+  "checkpoint_exported": false,
+  "configuration": {
+    "alpha_grid": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "cv_n": 640,
+    "inner_epochs": 35,
+    "inner_folds": 4,
+    "inner_min_gain": 0.003,
+    "outer_epochs": 60,
+    "outer_folds": 5,
+    "outer_head_seeds": [
+      34001,
+      34002
+    ],
+    "resolution": 384,
+    "windows": 24
+  },
+  "decision": "STOP_E034_CAFO_CV_FAILED",
+  "experiment": "E034 nested five-fold CAFormer CV and protected blend",
+  "feature_cache_exported": false,
+  "gold": {
+    "ids_used_for_exclusion_only": true,
+    "image_encoding_count": 0,
+    "label_evaluation_count": 0,
+    "prediction_artifact_created": false
+  },
+  "identity": {
+    "all_ids_sha256": "ce332c0a673abde31856db1b3b86fba9e0a2f73d38fff23c7b02c51b869f3c30",
+    "counts": {
+      "cv": 640,
+      "gold_excluded": 58,
+      "outer_folds": 5
+    },
+    "cv_ids_sha256": "8b92e40d67ca3b52da820b8d4b9049e2a276307ba208fe80667f100b91b68020",
+    "extra_ids_sha256": "65a32fe80ad4cffd20b847b3c36bda7b0c33178fff652d8828a4b0d4e1ccf9bb",
+    "gold_exclusion_only": true,
+    "gold_ids_sha256": "3918e0c230d6c8d16e073b3c2537d173011b705c71b494493591e6afa5f510ea",
+    "gold_image_encoding_count": 0,
+    "gold_label_evaluation_count": 0,
+    "identity_exact": true,
+    "outer_balance": {
+      "max_prevalence_deviation": 0.04843750596046448,
+      "mean_prevalence_deviation": 0.021041667088866234
+    },
+    "outer_fold_class_counts": [
+      [
+        [
+          30,
+          98
+        ],
+        [
+          23,
+          105
+        ],
+        [
+          53,
+          75
+        ],
+        [
+          28,
+          100
+        ],
+        [
+          50,
+          78
+        ],
+        [
+          36,
+          92
+        ],
+        [
+          57,
+          71
+        ],
+        [
+          81,
+          47
+        ],
+        [
+          95,
+          33
+        ],
+        [
+          38,
+          90
+        ],
+        [
+          33,
+          95
+        ],
+        [
+          11,
+          117
+        ]
+      ],
+      [
+        [
+          26,
+          102
+        ],
+        [
+          18,
+          110
+        ],
+        [
+          61,
+          67
+        ],
+        [
+          31,
+          97
+        ],
+        [
+          54,
+          74
+        ],
+        [
+          38,
+          90
+        ],
+        [
+          60,
+          68
+        ],
+        [
+          84,
+          44
+        ],
+        [
+          95,
+          33
+        ],
+        [
+          38,
+          90
+        ],
+        [
+          29,
+          99
+        ],
+        [
+          11,
+          117
+        ]
+      ],
+      [
+        [
+          32,
+          96
+        ],
+        [
+          16,
+          112
+        ],
+        [
+          59,
+          69
+        ],
+        [
+          33,
+          95
+        ],
+        [
+          48,
+          80
+        ],
+        [
+          38,
+          90
+        ],
+        [
+          61,
+          67
+        ],
+        [
+          79,
+          49
+        ],
+        [
+          88,
+          40
+        ],
+        [
+          27,
+          101
+        ],
+        [
+          28,
+          100
+        ],
+        [
+          6,
+          122
+        ]
+      ],
+      [
+        [
+          34,
+          94
+        ],
+        [
+          23,
+          105
+        ],
+        [
+          63,
+          65
+        ],
+        [
+          32,
+          96
+        ],
+        [
+          49,
+          79
+        ],
+        [
+          42,
+          86
+        ],
+        [
+          59,
+          69
+        ],
+        [
+          72,
+          56
+        ],
+        [
+          84,
+          44
+        ],
+        [
+          33,
+          95
+        ],
+        [
+          29,
+          99
+        ],
+        [
+          9,
+          119
+        ]
+      ],
+      [
+        [
+          30,
+          98
+        ],
+        [
+          21,
+          107
+        ],
+        [
+          56,
+          72
+        ],
+        [
+          38,
+          90
+        ],
+        [
+          47,
+          81
+        ],
+        [
+          38,
+          90
+        ],
+        [
+          54,
+          74
+        ],
+        [
+          74,
+          54
+        ],
+        [
+          83,
+          45
+        ],
+        [
+          30,
+          98
+        ],
+        [
+          33,
+          95
+        ],
+        [
+          7,
+          121
+        ]
+      ]
+    ],
+    "outer_fold_ids_sha256": [
+      "c7959a23d6b85f2c4acaa4c5e59d21a3c07674978f25f9b41fab349750893bfe",
+      "b15b35dd7af9f639aaa57b1cb4142823fcdbce926594ecf7b9835100395fcb1c",
+      "f1113791353687d6cdf32deb520e2a896817b17f98ece161f1d5b6f90e9aea74",
+      "5f4c35b249ad41b997b0c5eb8097f81291659dbb3a3cf9ffed63c73511bc4286",
+      "ca7aa5caf915d48c40f53af9870094099e76819c6f27533687d155d1aba14cfc"
+    ],
+    "seed": 31021,
+    "train_ids_sha256": "0bdc475565a2ff7ea1afc5be9aec69aab0aa615050df796aeac6af4fd2fb051c",
+    "validation_ids_sha256": "223ed533e435180acf9f086fff74a12de527977f9bcff7641db7b06d11739565"
+  },
+  "oof": {
+    "caformer_fold_wins": 3,
+    "caformer_gain": 0.0044148287751197834,
+    "caformer_macro_auc": 0.6937178735215578,
+    "caformer_min_target_delta": -0.05590298962782192,
+    "caformer_robust_target_count": 3,
+    "caformer_target_wins": 9,
+    "coatnet_macro_auc": 0.689303044746438,
+    "prediction_correlation": 0.7243958156994325,
+    "protected_blend_fold_wins": 4,
+    "protected_blend_gain": 0.009755397416737921,
+    "protected_blend_macro_auc": 0.6990584421631759,
+    "protected_blend_min_target_delta": -0.02909548505186088,
+    "protected_blend_target_wins": 8
+  },
+  "required_gates": {
+    "all_fold_targets_two_classes": true,
+    "all_heads_updated": true,
+    "attention_nondegenerate": true,
+    "cache_contract_exact": true,
+    "features_finite_nondegenerate": true,
+    "gold_images_never_encoded": true,
+    "gold_labels_never_evaluated": true,
+    "identity_exact": true,
+    "model_shapes_exact": true,
+    "outer_fold_coverage_exact": true,
+    "outer_oof_complete": true
+  },
+  "submission_created": false
+}

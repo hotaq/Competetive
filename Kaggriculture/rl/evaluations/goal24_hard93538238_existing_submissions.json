@@ -1,0 +1,933 @@
+{
+  "evaluation_manifests": [
+    "replays/top1_goal24_v10_20260817/manifest_93538238.json"
+  ],
+  "exclude_source_episode": false,
+  "population": "artifacts/submission_population_existing/manifest.json",
+  "rankings": [
+    {
+      "agent": {
+        "agent_file": "submissions/hierarchical_tree_tape_v10_cv92/main.py",
+        "episode_id": 5
+      },
+      "episodes": [
+        {
+          "candidate_margin": -8174.0,
+          "candidate_money": 100437.0,
+          "episode_id": 93538238,
+          "fallback_components": 0,
+          "farmer_sanitized_steps": 7,
+          "hands_sanitized_steps": 94,
+          "market_sanitized_steps": 158,
+          "normalized_steps": 0,
+          "original_opponent_money": 77828.0,
+          "original_top1_money": 87147.0,
+          "sanitized_steps": 234,
+          "seed": 49180566,
+          "steps": 719,
+          "tape_top1_money": 108611.0,
+          "top1_seat": 0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -8174.0,
+        "draws": 0,
+        "fallback_components": 0,
+        "farmer_sanitized_steps": 7,
+        "games": 1,
+        "hands_sanitized_steps": 94,
+        "losses": 1,
+        "market_sanitized_steps": 158,
+        "mean_margin": -8174.0,
+        "mean_money": 100437.0,
+        "median_margin": -8174.0,
+        "normalized_steps": 0,
+        "sanitized_steps": 234,
+        "win_rate": 0.0,
+        "wins": 0,
+        "worst_margin": -8174.0,
+        "worst_money": 100437.0
+      }
+    },
+    {
+      "agent": {
+        "agent_file": "submissions/tape_selector_v9_16_safe/main.py",
+        "episode_id": 13
+      },
+      "episodes": [
+        {
+          "candidate_margin": -8362.0,
+          "candidate_money": 97373.0,
+          "episode_id": 93538238,
+          "fallback_components": 0,
+          "farmer_sanitized_steps": 30,
+          "hands_sanitized_steps": 194,
+          "market_sanitized_steps": 152,
+          "normalized_steps": 0,
+          "original_opponent_money": 77828.0,
+          "original_top1_money": 87147.0,
+          "sanitized_steps": 306,
+          "seed": 49180566,
+          "steps": 719,
+          "tape_top1_money": 105735.0,
+          "top1_seat": 0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -8362.0,
+        "draws": 0,
+        "fallback_components": 0,
+        "farmer_sanitized_steps": 30,
+        "games": 1,
+        "hands_sanitized_steps": 194,
+        "losses": 1,
+        "market_sanitized_steps": 152,
+        "mean_margin": -8362.0,
+        "mean_money": 97373.0,
+        "median_margin": -8362.0,
+        "normalized_steps": 0,
+        "sanitized_steps": 306,
+        "win_rate": 0.0,
+        "wins": 0,
+        "worst_margin": -8362.0,
+        "worst_money": 97373.0
+      }
+    },
+    {
+      "agent": {
+        "agent_file": "submissions/temporal_gate2_v10_step192/main.py",
+        "episode_id": 15
+      },
+      "episodes": [
+        {
+          "candidate_margin": -8362.0,
+          "candidate_money": 97373.0,
+          "episode_id": 93538238,
+          "fallback_components": 0,
+          "farmer_sanitized_steps": 30,
+          "hands_sanitized_steps": 194,
+          "market_sanitized_steps": 152,
+          "normalized_steps": 0,
+          "original_opponent_money": 77828.0,
+          "original_top1_money": 87147.0,
+          "sanitized_steps": 306,
+          "seed": 49180566,
+          "steps": 719,
+          "tape_top1_money": 105735.0,
+          "top1_seat": 0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -8362.0,
+        "draws": 0,
+        "fallback_components": 0,
+        "farmer_sanitized_steps": 30,
+        "games": 1,
+        "hands_sanitized_steps": 194,
+        "losses": 1,
+        "market_sanitized_steps": 152,
+        "mean_margin": -8362.0,
+        "mean_money": 97373.0,
+        "median_margin": -8362.0,
+        "normalized_steps": 0,
+        "sanitized_steps": 306,
+        "win_rate": 0.0,
+        "wins": 0,
+        "worst_margin": -8362.0,
+        "worst_money": 97373.0
+      }
+    },
+    {
+      "agent": {
+        "agent_file": "submissions/temporal_gate2_v10_validation_selected/main.py",
+        "episode_id": 16
+      },
+      "episodes": [
+        {
+          "candidate_margin": -8362.0,
+          "candidate_money": 97373.0,
+          "episode_id": 93538238,
+          "fallback_components": 0,
+          "farmer_sanitized_steps": 30,
+          "hands_sanitized_steps": 194,
+          "market_sanitized_steps": 152,
+          "normalized_steps": 0,
+          "original_opponent_money": 77828.0,
+          "original_top1_money": 87147.0,
+          "sanitized_steps": 306,
+          "seed": 49180566,
+          "steps": 719,
+          "tape_top1_money": 105735.0,
+          "top1_seat": 0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -8362.0,
+        "draws": 0,
+        "fallback_components": 0,
+        "farmer_sanitized_steps": 30,
+        "games": 1,
+        "hands_sanitized_steps": 194,
+        "losses": 1,
+        "market_sanitized_steps": 152,
+        "mean_margin": -8362.0,
+        "mean_money": 97373.0,
+        "median_margin": -8362.0,
+        "normalized_steps": 0,
+        "sanitized_steps": 306,
+        "win_rate": 0.0,
+        "wins": 0,
+        "worst_margin": -8362.0,
+        "worst_money": 97373.0
+      }
+    },
+    {
+      "agent": {
+        "agent_file": "submissions/tape_selector_v9/main.py",
+        "episode_id": 10
+      },
+      "episodes": [
+        {
+          "candidate_margin": -13009.0,
+          "candidate_money": 102303.0,
+          "episode_id": 93538238,
+          "fallback_components": 0,
+          "farmer_sanitized_steps": 16,
+          "hands_sanitized_steps": 61,
+          "market_sanitized_steps": 135,
+          "normalized_steps": 0,
+          "original_opponent_money": 77828.0,
+          "original_top1_money": 87147.0,
+          "sanitized_steps": 193,
+          "seed": 49180566,
+          "steps": 719,
+          "tape_top1_money": 115312.0,
+          "top1_seat": 0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -13009.0,
+        "draws": 0,
+        "fallback_components": 0,
+        "farmer_sanitized_steps": 16,
+        "games": 1,
+        "hands_sanitized_steps": 61,
+        "losses": 1,
+        "market_sanitized_steps": 135,
+        "mean_margin": -13009.0,
+        "mean_money": 102303.0,
+        "median_margin": -13009.0,
+        "normalized_steps": 0,
+        "sanitized_steps": 193,
+        "win_rate": 0.0,
+        "wins": 0,
+        "worst_margin": -13009.0,
+        "worst_money": 102303.0
+      }
+    },
+    {
+      "agent": {
+        "agent_file": "submissions/robust_cluster_tape_v10/main.py",
+        "episode_id": 8
+      },
+      "episodes": [
+        {
+          "candidate_margin": -13629.0,
+          "candidate_money": 63411.0,
+          "episode_id": 93538238,
+          "fallback_components": 0,
+          "farmer_sanitized_steps": 7,
+          "hands_sanitized_steps": 103,
+          "market_sanitized_steps": 138,
+          "normalized_steps": 0,
+          "original_opponent_money": 77828.0,
+          "original_top1_money": 87147.0,
+          "sanitized_steps": 230,
+          "seed": 49180566,
+          "steps": 719,
+          "tape_top1_money": 77040.0,
+          "top1_seat": 0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -13629.0,
+        "draws": 0,
+        "fallback_components": 0,
+        "farmer_sanitized_steps": 7,
+        "games": 1,
+        "hands_sanitized_steps": 103,
+        "losses": 1,
+        "market_sanitized_steps": 138,
+        "mean_margin": -13629.0,
+        "mean_money": 63411.0,
+        "median_margin": -13629.0,
+        "normalized_steps": 0,
+        "sanitized_steps": 230,
+        "win_rate": 0.0,
+        "wins": 0,
+        "worst_margin": -13629.0,
+        "worst_money": 63411.0
+      }
+    },
+    {
+      "agent": {
+        "agent_file": "submissions/robust_cluster_tape_v10_standalone/main.py",
+        "episode_id": 9
+      },
+      "episodes": [
+        {
+          "candidate_margin": -13629.0,
+          "candidate_money": 63411.0,
+          "episode_id": 93538238,
+          "fallback_components": 0,
+          "farmer_sanitized_steps": 7,
+          "hands_sanitized_steps": 103,
+          "market_sanitized_steps": 138,
+          "normalized_steps": 0,
+          "original_opponent_money": 77828.0,
+          "original_top1_money": 87147.0,
+          "sanitized_steps": 230,
+          "seed": 49180566,
+          "steps": 719,
+          "tape_top1_money": 77040.0,
+          "top1_seat": 0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -13629.0,
+        "draws": 0,
+        "fallback_components": 0,
+        "farmer_sanitized_steps": 7,
+        "games": 1,
+        "hands_sanitized_steps": 103,
+        "losses": 1,
+        "market_sanitized_steps": 138,
+        "mean_margin": -13629.0,
+        "mean_money": 63411.0,
+        "median_margin": -13629.0,
+        "normalized_steps": 0,
+        "sanitized_steps": 230,
+        "win_rate": 0.0,
+        "wins": 0,
+        "worst_margin": -13629.0,
+        "worst_money": 63411.0
+      }
+    },
+    {
+      "agent": {
+        "agent_file": "submissions/experimental_receding_93519448/main.py",
+        "episode_id": 4
+      },
+      "episodes": [
+        {
+          "candidate_margin": -14454.0,
+          "candidate_money": 86294.0,
+          "episode_id": 93538238,
+          "fallback_components": 0,
+          "farmer_sanitized_steps": 9,
+          "hands_sanitized_steps": 104,
+          "market_sanitized_steps": 158,
+          "normalized_steps": 0,
+          "original_opponent_money": 77828.0,
+          "original_top1_money": 87147.0,
+          "sanitized_steps": 228,
+          "seed": 49180566,
+          "steps": 719,
+          "tape_top1_money": 100748.0,
+          "top1_seat": 0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -14454.0,
+        "draws": 0,
+        "fallback_components": 0,
+        "farmer_sanitized_steps": 9,
+        "games": 1,
+        "hands_sanitized_steps": 104,
+        "losses": 1,
+        "market_sanitized_steps": 158,
+        "mean_margin": -14454.0,
+        "mean_money": 86294.0,
+        "median_margin": -14454.0,
+        "normalized_steps": 0,
+        "sanitized_steps": 228,
+        "win_rate": 0.0,
+        "wins": 0,
+        "worst_margin": -14454.0,
+        "worst_money": 86294.0
+      }
+    },
+    {
+      "agent": {
+        "agent_file": "submissions/experimental_program_93519448/main.py",
+        "episode_id": 2
+      },
+      "episodes": [
+        {
+          "candidate_margin": -14599.0,
+          "candidate_money": 86155.0,
+          "episode_id": 93538238,
+          "fallback_components": 0,
+          "farmer_sanitized_steps": 9,
+          "hands_sanitized_steps": 104,
+          "market_sanitized_steps": 158,
+          "normalized_steps": 0,
+          "original_opponent_money": 77828.0,
+          "original_top1_money": 87147.0,
+          "sanitized_steps": 228,
+          "seed": 49180566,
+          "steps": 719,
+          "tape_top1_money": 100754.0,
+          "top1_seat": 0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -14599.0,
+        "draws": 0,
+        "fallback_components": 0,
+        "farmer_sanitized_steps": 9,
+        "games": 1,
+        "hands_sanitized_steps": 104,
+        "losses": 1,
+        "market_sanitized_steps": 158,
+        "mean_margin": -14599.0,
+        "mean_money": 86155.0,
+        "median_margin": -14599.0,
+        "normalized_steps": 0,
+        "sanitized_steps": 228,
+        "win_rate": 0.0,
+        "wins": 0,
+        "worst_margin": -14599.0,
+        "worst_money": 86155.0
+      }
+    },
+    {
+      "agent": {
+        "agent_file": "submissions/tape_selector_v9_16/main.py",
+        "episode_id": 11
+      },
+      "episodes": [
+        {
+          "candidate_margin": -14851.0,
+          "candidate_money": 103062.0,
+          "episode_id": 93538238,
+          "fallback_components": 0,
+          "farmer_sanitized_steps": 7,
+          "hands_sanitized_steps": 68,
+          "market_sanitized_steps": 172,
+          "normalized_steps": 0,
+          "original_opponent_money": 77828.0,
+          "original_top1_money": 87147.0,
+          "sanitized_steps": 234,
+          "seed": 49180566,
+          "steps": 719,
+          "tape_top1_money": 117913.0,
+          "top1_seat": 0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -14851.0,
+        "draws": 0,
+        "fallback_components": 0,
+        "farmer_sanitized_steps": 7,
+        "games": 1,
+        "hands_sanitized_steps": 68,
+        "losses": 1,
+        "market_sanitized_steps": 172,
+        "mean_margin": -14851.0,
+        "mean_money": 103062.0,
+        "median_margin": -14851.0,
+        "normalized_steps": 0,
+        "sanitized_steps": 234,
+        "win_rate": 0.0,
+        "wins": 0,
+        "worst_margin": -14851.0,
+        "worst_money": 103062.0
+      }
+    },
+    {
+      "agent": {
+        "agent_file": "submissions/tape_selector_v9_16_risk/main.py",
+        "episode_id": 12
+      },
+      "episodes": [
+        {
+          "candidate_margin": -14851.0,
+          "candidate_money": 103062.0,
+          "episode_id": 93538238,
+          "fallback_components": 0,
+          "farmer_sanitized_steps": 7,
+          "hands_sanitized_steps": 68,
+          "market_sanitized_steps": 172,
+          "normalized_steps": 0,
+          "original_opponent_money": 77828.0,
+          "original_top1_money": 87147.0,
+          "sanitized_steps": 234,
+          "seed": 49180566,
+          "steps": 719,
+          "tape_top1_money": 117913.0,
+          "top1_seat": 0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -14851.0,
+        "draws": 0,
+        "fallback_components": 0,
+        "farmer_sanitized_steps": 7,
+        "games": 1,
+        "hands_sanitized_steps": 68,
+        "losses": 1,
+        "market_sanitized_steps": 172,
+        "mean_margin": -14851.0,
+        "mean_money": 103062.0,
+        "median_margin": -14851.0,
+        "normalized_steps": 0,
+        "sanitized_steps": 234,
+        "win_rate": 0.0,
+        "wins": 0,
+        "worst_margin": -14851.0,
+        "worst_money": 103062.0
+      }
+    },
+    {
+      "agent": {
+        "agent_file": "submissions/experimental_receding_93515895/main.py",
+        "episode_id": 3
+      },
+      "episodes": [
+        {
+          "candidate_margin": -15135.0,
+          "candidate_money": 93209.0,
+          "episode_id": 93538238,
+          "fallback_components": 0,
+          "farmer_sanitized_steps": 7,
+          "hands_sanitized_steps": 90,
+          "market_sanitized_steps": 151,
+          "normalized_steps": 0,
+          "original_opponent_money": 77828.0,
+          "original_top1_money": 87147.0,
+          "sanitized_steps": 220,
+          "seed": 49180566,
+          "steps": 719,
+          "tape_top1_money": 108344.0,
+          "top1_seat": 0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -15135.0,
+        "draws": 0,
+        "fallback_components": 0,
+        "farmer_sanitized_steps": 7,
+        "games": 1,
+        "hands_sanitized_steps": 90,
+        "losses": 1,
+        "market_sanitized_steps": 151,
+        "mean_margin": -15135.0,
+        "mean_money": 93209.0,
+        "median_margin": -15135.0,
+        "normalized_steps": 0,
+        "sanitized_steps": 220,
+        "win_rate": 0.0,
+        "wins": 0,
+        "worst_margin": -15135.0,
+        "worst_money": 93209.0
+      }
+    },
+    {
+      "agent": {
+        "agent_file": "submissions/tape_selector_v9_16_safe40/main.py",
+        "episode_id": 14
+      },
+      "episodes": [
+        {
+          "candidate_margin": -16013.0,
+          "candidate_money": 102501.0,
+          "episode_id": 93538238,
+          "fallback_components": 0,
+          "farmer_sanitized_steps": 11,
+          "hands_sanitized_steps": 88,
+          "market_sanitized_steps": 178,
+          "normalized_steps": 0,
+          "original_opponent_money": 77828.0,
+          "original_top1_money": 87147.0,
+          "sanitized_steps": 252,
+          "seed": 49180566,
+          "steps": 719,
+          "tape_top1_money": 118514.0,
+          "top1_seat": 0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -16013.0,
+        "draws": 0,
+        "fallback_components": 0,
+        "farmer_sanitized_steps": 11,
+        "games": 1,
+        "hands_sanitized_steps": 88,
+        "losses": 1,
+        "market_sanitized_steps": 178,
+        "mean_margin": -16013.0,
+        "mean_money": 102501.0,
+        "median_margin": -16013.0,
+        "normalized_steps": 0,
+        "sanitized_steps": 252,
+        "win_rate": 0.0,
+        "wins": 0,
+        "worst_margin": -16013.0,
+        "worst_money": 102501.0
+      }
+    },
+    {
+      "agent": {
+        "agent_file": "submissions/temporal_tape_selector_v9_16_56/main.py",
+        "episode_id": 17
+      },
+      "episodes": [
+        {
+          "candidate_margin": -16013.0,
+          "candidate_money": 102501.0,
+          "episode_id": 93538238,
+          "fallback_components": 0,
+          "farmer_sanitized_steps": 11,
+          "hands_sanitized_steps": 88,
+          "market_sanitized_steps": 178,
+          "normalized_steps": 0,
+          "original_opponent_money": 77828.0,
+          "original_top1_money": 87147.0,
+          "sanitized_steps": 252,
+          "seed": 49180566,
+          "steps": 719,
+          "tape_top1_money": 118514.0,
+          "top1_seat": 0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -16013.0,
+        "draws": 0,
+        "fallback_components": 0,
+        "farmer_sanitized_steps": 11,
+        "games": 1,
+        "hands_sanitized_steps": 88,
+        "losses": 1,
+        "market_sanitized_steps": 178,
+        "mean_margin": -16013.0,
+        "mean_money": 102501.0,
+        "median_margin": -16013.0,
+        "normalized_steps": 0,
+        "sanitized_steps": 252,
+        "win_rate": 0.0,
+        "wins": 0,
+        "worst_margin": -16013.0,
+        "worst_money": 102501.0
+      }
+    },
+    {
+      "agent": {
+        "agent_file": "submissions/temporal_tape_selector_v9_16_56_risk/main.py",
+        "episode_id": 18
+      },
+      "episodes": [
+        {
+          "candidate_margin": -16013.0,
+          "candidate_money": 102501.0,
+          "episode_id": 93538238,
+          "fallback_components": 0,
+          "farmer_sanitized_steps": 11,
+          "hands_sanitized_steps": 88,
+          "market_sanitized_steps": 178,
+          "normalized_steps": 0,
+          "original_opponent_money": 77828.0,
+          "original_top1_money": 87147.0,
+          "sanitized_steps": 252,
+          "seed": 49180566,
+          "steps": 719,
+          "tape_top1_money": 118514.0,
+          "top1_seat": 0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -16013.0,
+        "draws": 0,
+        "fallback_components": 0,
+        "farmer_sanitized_steps": 11,
+        "games": 1,
+        "hands_sanitized_steps": 88,
+        "losses": 1,
+        "market_sanitized_steps": 178,
+        "mean_margin": -16013.0,
+        "mean_money": 102501.0,
+        "median_margin": -16013.0,
+        "normalized_steps": 0,
+        "sanitized_steps": 252,
+        "win_rate": 0.0,
+        "wins": 0,
+        "worst_margin": -16013.0,
+        "worst_money": 102501.0
+      }
+    },
+    {
+      "agent": {
+        "agent_file": "submissions/temporal_tape_selector_v9_16_56_sparse/main.py",
+        "episode_id": 20
+      },
+      "episodes": [
+        {
+          "candidate_margin": -16013.0,
+          "candidate_money": 102501.0,
+          "episode_id": 93538238,
+          "fallback_components": 0,
+          "farmer_sanitized_steps": 11,
+          "hands_sanitized_steps": 88,
+          "market_sanitized_steps": 178,
+          "normalized_steps": 0,
+          "original_opponent_money": 77828.0,
+          "original_top1_money": 87147.0,
+          "sanitized_steps": 252,
+          "seed": 49180566,
+          "steps": 719,
+          "tape_top1_money": 118514.0,
+          "top1_seat": 0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -16013.0,
+        "draws": 0,
+        "fallback_components": 0,
+        "farmer_sanitized_steps": 11,
+        "games": 1,
+        "hands_sanitized_steps": 88,
+        "losses": 1,
+        "market_sanitized_steps": 178,
+        "mean_margin": -16013.0,
+        "mean_money": 102501.0,
+        "median_margin": -16013.0,
+        "normalized_steps": 0,
+        "sanitized_steps": 252,
+        "win_rate": 0.0,
+        "wins": 0,
+        "worst_margin": -16013.0,
+        "worst_money": 102501.0
+      }
+    },
+    {
+      "agent": {
+        "agent_file": "submissions/temporal_tape_selector_v9_21_safe64_sparse/main.py",
+        "episode_id": 21
+      },
+      "episodes": [
+        {
+          "candidate_margin": -16013.0,
+          "candidate_money": 102501.0,
+          "episode_id": 93538238,
+          "fallback_components": 0,
+          "farmer_sanitized_steps": 11,
+          "hands_sanitized_steps": 88,
+          "market_sanitized_steps": 178,
+          "normalized_steps": 0,
+          "original_opponent_money": 77828.0,
+          "original_top1_money": 87147.0,
+          "sanitized_steps": 252,
+          "seed": 49180566,
+          "steps": 719,
+          "tape_top1_money": 118514.0,
+          "top1_seat": 0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -16013.0,
+        "draws": 0,
+        "fallback_components": 0,
+        "farmer_sanitized_steps": 11,
+        "games": 1,
+        "hands_sanitized_steps": 88,
+        "losses": 1,
+        "market_sanitized_steps": 178,
+        "mean_margin": -16013.0,
+        "mean_money": 102501.0,
+        "median_margin": -16013.0,
+        "normalized_steps": 0,
+        "sanitized_steps": 252,
+        "win_rate": 0.0,
+        "wins": 0,
+        "worst_margin": -16013.0,
+        "worst_money": 102501.0
+      }
+    },
+    {
+      "agent": {
+        "agent_file": "submissions/receding_tape_v9_24/main.py",
+        "episode_id": 7
+      },
+      "episodes": [
+        {
+          "candidate_margin": -24217.0,
+          "candidate_money": 54534.0,
+          "episode_id": 93538238,
+          "fallback_components": 0,
+          "farmer_sanitized_steps": 48,
+          "hands_sanitized_steps": 264,
+          "market_sanitized_steps": 149,
+          "normalized_steps": 0,
+          "original_opponent_money": 77828.0,
+          "original_top1_money": 87147.0,
+          "sanitized_steps": 336,
+          "seed": 49180566,
+          "steps": 719,
+          "tape_top1_money": 78751.0,
+          "top1_seat": 0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -24217.0,
+        "draws": 0,
+        "fallback_components": 0,
+        "farmer_sanitized_steps": 48,
+        "games": 1,
+        "hands_sanitized_steps": 264,
+        "losses": 1,
+        "market_sanitized_steps": 149,
+        "mean_margin": -24217.0,
+        "mean_money": 54534.0,
+        "median_margin": -24217.0,
+        "normalized_steps": 0,
+        "sanitized_steps": 336,
+        "win_rate": 0.0,
+        "wins": 0,
+        "worst_margin": -24217.0,
+        "worst_money": 54534.0
+      }
+    },
+    {
+      "agent": {
+        "agent_file": "submissions/dynamic_tape_retriever_v10/main.py",
+        "episode_id": 1
+      },
+      "episodes": [
+        {
+          "candidate_margin": -32728.0,
+          "candidate_money": 48313.0,
+          "episode_id": 93538238,
+          "fallback_components": 0,
+          "farmer_sanitized_steps": 71,
+          "hands_sanitized_steps": 362,
+          "market_sanitized_steps": 152,
+          "normalized_steps": 0,
+          "original_opponent_money": 77828.0,
+          "original_top1_money": 87147.0,
+          "sanitized_steps": 402,
+          "seed": 49180566,
+          "steps": 719,
+          "tape_top1_money": 81041.0,
+          "top1_seat": 0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -32728.0,
+        "draws": 0,
+        "fallback_components": 0,
+        "farmer_sanitized_steps": 71,
+        "games": 1,
+        "hands_sanitized_steps": 362,
+        "losses": 1,
+        "market_sanitized_steps": 152,
+        "mean_margin": -32728.0,
+        "mean_money": 48313.0,
+        "median_margin": -32728.0,
+        "normalized_steps": 0,
+        "sanitized_steps": 402,
+        "win_rate": 0.0,
+        "wins": 0,
+        "worst_margin": -32728.0,
+        "worst_money": 48313.0
+      }
+    },
+    {
+      "agent": {
+        "agent_file": "submissions/live_response_ppo_v8/main.py",
+        "episode_id": 6
+      },
+      "episodes": [
+        {
+          "candidate_margin": -56587.0,
+          "candidate_money": 23679.0,
+          "episode_id": 93538238,
+          "fallback_components": 0,
+          "farmer_sanitized_steps": 0,
+          "hands_sanitized_steps": 0,
+          "market_sanitized_steps": 0,
+          "normalized_steps": 0,
+          "original_opponent_money": 77828.0,
+          "original_top1_money": 87147.0,
+          "sanitized_steps": 0,
+          "seed": 49180566,
+          "steps": 719,
+          "tape_top1_money": 80266.0,
+          "top1_seat": 0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -56587.0,
+        "draws": 0,
+        "fallback_components": 0,
+        "farmer_sanitized_steps": 0,
+        "games": 1,
+        "hands_sanitized_steps": 0,
+        "losses": 1,
+        "market_sanitized_steps": 0,
+        "mean_margin": -56587.0,
+        "mean_money": 23679.0,
+        "median_margin": -56587.0,
+        "normalized_steps": 0,
+        "sanitized_steps": 0,
+        "win_rate": 0.0,
+        "wins": 0,
+        "worst_margin": -56587.0,
+        "worst_money": 23679.0
+      }
+    },
+    {
+      "agent": {
+        "agent_file": "submissions/temporal_tape_selector_v9_16_56_risk_market/main.py",
+        "episode_id": 19
+      },
+      "episodes": [
+        {
+          "candidate_margin": -152958.0,
+          "candidate_money": 228.0,
+          "episode_id": 93538238,
+          "fallback_components": 0,
+          "farmer_sanitized_steps": 264,
+          "hands_sanitized_steps": 542,
+          "market_sanitized_steps": 38,
+          "normalized_steps": 0,
+          "original_opponent_money": 77828.0,
+          "original_top1_money": 87147.0,
+          "sanitized_steps": 582,
+          "seed": 49180566,
+          "steps": 719,
+          "tape_top1_money": 153186.0,
+          "top1_seat": 0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -152958.0,
+        "draws": 0,
+        "fallback_components": 0,
+        "farmer_sanitized_steps": 264,
+        "games": 1,
+        "hands_sanitized_steps": 542,
+        "losses": 1,
+        "market_sanitized_steps": 38,
+        "mean_margin": -152958.0,
+        "mean_money": 228.0,
+        "median_margin": -152958.0,
+        "normalized_steps": 0,
+        "sanitized_steps": 582,
+        "win_rate": 0.0,
+        "wins": 0,
+        "worst_margin": -152958.0,
+        "worst_money": 228.0
+      }
+    }
+  ]
+}

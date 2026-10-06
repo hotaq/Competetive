@@ -1,0 +1,40 @@
+{
+  "batch_size": 4,
+  "checkpoint_sha256": "c35a13b00ea073b04818780c354b97e5b9f13580a01bcada5e6f2c371f963b33",
+  "elapsed_seconds": 4844.3355457782745,
+  "left": 1,
+  "output_sha256": "55ba32369a6900e5f7662c14eedaa521f41ce7a3e551eed44392dac82e117125",
+  "pixel_contract": {
+    "cast_resize": "uint8_truncate_then_cv2_INTER_AREA_224",
+    "depth": "24_floor_linspace_else_repeat_last",
+    "laterality": "image_center_canonical_right_no_horizontal_augmentation",
+    "normalization": "per_slice_minmax",
+    "order": "InstanceNumber_80pct_else_filename"
+  },
+  "plane_presence": {
+    "Axial": 3,
+    "Coronal": 3,
+    "Sagittal": 3
+  },
+  "prediction_max": 0.9816450476646423,
+  "prediction_min": 0.03953372314572334,
+  "prediction_std_by_target": {
+    "ACL": 0.05617518723011017,
+    "Baker's": 0.4249003827571869,
+    "Contusion": 0.08537986129522324,
+    "Effusion": 0.128392294049263,
+    "Fracture": 0.06908214837312698,
+    "Lateral Meniscus": 0.13220003247261047,
+    "Lateral OA": 0.1217522919178009,
+    "MCL": 0.053425323218107224,
+    "Medial Meniscus": 0.1999095380306244,
+    "Medial OA": 0.2708572745323181,
+    "PF OA": 0.10178844630718231,
+    "Synovitis": 0.1670139878988266
+  },
+  "right": 2,
+  "schema": "hs-anatomy-query-v15-inference-v1",
+  "status": "HS_V15_ANATOMY_QUERY_INFERENCE_COMPLETE",
+  "studies": 3,
+  "unresolved_laterality": 0
+}

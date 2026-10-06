@@ -1,0 +1,22 @@
+{
+  "detectors": [
+    "zscore",
+    "iqr",
+    "mad",
+    "mahalanobis",
+    "knn",
+    "lof"
+  ],
+  "threshold_quantile": 0.995,
+  "candidate_variants": {
+    "candidate_vote_2": 642,
+    "candidate_vote_3": 571,
+    "candidate_vote_4": 415,
+    "candidate_rules_only": 718,
+    "candidate_vote_4_or_rules": 847,
+    "candidate_vote_3_or_rules": 1003,
+    "candidate_vote_2_or_rules": 1074,
+    "candidate_vote_3_or_mqtt_or_syn_stream": 3764
+  },
+  "submission_written": false
+}

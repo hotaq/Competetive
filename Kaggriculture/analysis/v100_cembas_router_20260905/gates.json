@@ -1,0 +1,132 @@
+{
+  "games": 100000,
+  "gates": {
+    "G1": {
+      "diff": 0.0113,
+      "ci": [
+        0.00895,
+        0.0138
+      ],
+      "pass": false
+    },
+    "G2": {
+      "per_opponent": {
+        "a_poor_vul__ep102980038__seat1": 0.0,
+        "ai\u662f\u6211\u7684\u8c46\u5305__ep105803010__seat0": 0.0004999999999999449,
+        "andrey_tikhomirov__ep105796705__seat0": 0.07499999999999996,
+        "baran_aky\u0131ld\u0131z__ep105805663__seat1": 0.008500000000000008,
+        "giulio_ravasio__ep105784996__seat1": 0.0020000000000000018,
+        "keiz__ep105793106__seat0": 0.0,
+        "lagrangianlocomotive__ep105793292__seat0": 0.0,
+        "peikopon__ep105807824__seat0": 0.01649999999999996,
+        "yuk__ep105790347__seat0": 0.0,
+        "yukino__ep103129686__seat0": 0.010499999999999954
+      },
+      "pass": true
+    },
+    "G3": {
+      "violations": 0,
+      "pass": true
+    },
+    "G4": {
+      "base_minus_v97": 0.55665,
+      "ci": [
+        0.54585,
+        0.56775
+      ],
+      "base_vs_yuk": 1.0,
+      "base_vs_lagrangian": 0.9925,
+      "pass": true
+    }
+  },
+  "decision": "BUILD base tape",
+  "arms": {
+    "base": {
+      "point": 0.83635,
+      "mean_margin": 24280.3763,
+      "money": 97965.2552
+    },
+    "lagrangian": {
+      "point": 0.5915,
+      "mean_margin": 7802.3991,
+      "money": 89670.87445
+    },
+    "v100": {
+      "point": 0.84765,
+      "mean_margin": 24999.5092,
+      "money": 98479.43375
+    },
+    "v97": {
+      "point": 0.2797,
+      "mean_margin": -10620.95095,
+      "money": 83892.0986
+    },
+    "yuk": {
+      "point": 0.59855,
+      "mean_margin": -18151.59,
+      "money": 75545.9
+    }
+  },
+  "per_opponent": {
+    "base": {
+      "a_poor_vul__ep102980038__seat1": 0.9975,
+      "ai\u662f\u6211\u7684\u8c46\u5305__ep105803010__seat0": 0.9625,
+      "andrey_tikhomirov__ep105796705__seat0": 0.646,
+      "baran_aky\u0131ld\u0131z__ep105805663__seat1": 0.4395,
+      "giulio_ravasio__ep105784996__seat1": 0.756,
+      "keiz__ep105793106__seat0": 0.9985,
+      "lagrangianlocomotive__ep105793292__seat0": 0.9925,
+      "peikopon__ep105807824__seat0": 0.5975,
+      "yuk__ep105790347__seat0": 1.0,
+      "yukino__ep103129686__seat0": 0.9735
+    },
+    "lagrangian": {
+      "a_poor_vul__ep102980038__seat1": 0.996,
+      "ai\u662f\u6211\u7684\u8c46\u5305__ep105803010__seat0": 0.4605,
+      "andrey_tikhomirov__ep105796705__seat0": 0.532,
+      "baran_aky\u0131ld\u0131z__ep105805663__seat1": 0.4425,
+      "giulio_ravasio__ep105784996__seat1": 0.4495,
+      "keiz__ep105793106__seat0": 0.993,
+      "lagrangianlocomotive__ep105793292__seat0": 0.5,
+      "peikopon__ep105807824__seat0": 0.2985,
+      "yuk__ep105790347__seat0": 0.245,
+      "yukino__ep103129686__seat0": 0.998
+    },
+    "v100": {
+      "a_poor_vul__ep102980038__seat1": 0.9975,
+      "ai\u662f\u6211\u7684\u8c46\u5305__ep105803010__seat0": 0.963,
+      "andrey_tikhomirov__ep105796705__seat0": 0.721,
+      "baran_aky\u0131ld\u0131z__ep105805663__seat1": 0.448,
+      "giulio_ravasio__ep105784996__seat1": 0.758,
+      "keiz__ep105793106__seat0": 0.9985,
+      "lagrangianlocomotive__ep105793292__seat0": 0.9925,
+      "peikopon__ep105807824__seat0": 0.614,
+      "yuk__ep105790347__seat0": 1.0,
+      "yukino__ep103129686__seat0": 0.984
+    },
+    "v97": {
+      "a_poor_vul__ep102980038__seat1": 0.3225,
+      "ai\u662f\u6211\u7684\u8c46\u5305__ep105803010__seat0": 0.115,
+      "andrey_tikhomirov__ep105796705__seat0": 0.09,
+      "baran_aky\u0131ld\u0131z__ep105805663__seat1": 0.5745,
+      "giulio_ravasio__ep105784996__seat1": 0.515,
+      "keiz__ep105793106__seat0": 0.3475,
+      "lagrangianlocomotive__ep105793292__seat0": 0.0025,
+      "peikopon__ep105807824__seat0": 0.195,
+      "yuk__ep105790347__seat0": 0.0025,
+      "yukino__ep103129686__seat0": 0.6325
+    },
+    "yuk": {
+      "a_poor_vul__ep102980038__seat1": 0.9955,
+      "ai\u662f\u6211\u7684\u8c46\u5305__ep105803010__seat0": 0.879,
+      "andrey_tikhomirov__ep105796705__seat0": 0.0,
+      "baran_aky\u0131ld\u0131z__ep105805663__seat1": 0.507,
+      "giulio_ravasio__ep105784996__seat1": 0.3595,
+      "keiz__ep105793106__seat0": 0.9915,
+      "lagrangianlocomotive__ep105793292__seat0": 0.755,
+      "peikopon__ep105807824__seat0": 0.0,
+      "yuk__ep105790347__seat0": 0.5,
+      "yukino__ep103129686__seat0": 0.998
+    }
+  }
+}

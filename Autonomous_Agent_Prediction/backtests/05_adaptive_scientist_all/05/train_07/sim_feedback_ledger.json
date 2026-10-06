@@ -1,0 +1,65 @@
+{
+  "ledger_version": 1,
+  "submissions": [
+    {
+      "candidate": "fallback",
+      "file": "fallback_submission.csv",
+      "family": "fallback",
+      "oof_auc": 0.5,
+      "fold_auc_std": null,
+      "prediction_correlation": null,
+      "submission_id": "sub_0",
+      "public_score": 0.5,
+      "feedback_valid": true,
+      "submission_order": 0
+    },
+    {
+      "candidate": "catboost_d6",
+      "file": "candidate_catboost_d6.csv",
+      "family": "catboost",
+      "oof_auc": 0.82331581,
+      "fold_auc_std": 0.00862401,
+      "prediction_correlation": null,
+      "submission_id": "sub_1",
+      "public_score": 0.8300719741069249,
+      "feedback_valid": true,
+      "submission_order": 1
+    },
+    {
+      "candidate": "lightgbm_native",
+      "file": "candidate_lightgbm_native.csv",
+      "family": "lightgbm",
+      "oof_auc": 0.82584424,
+      "fold_auc_std": 0.00975834,
+      "prediction_correlation": null,
+      "submission_id": "sub_2",
+      "public_score": 0.8313752695528323,
+      "feedback_valid": true,
+      "submission_order": 2
+    },
+    {
+      "candidate": "logistic",
+      "file": "candidate_logistic.csv",
+      "family": "linear",
+      "oof_auc": 0.73152774,
+      "fold_auc_std": 0.01140696,
+      "prediction_correlation": null,
+      "submission_id": "sub_3",
+      "public_score": 0.7396064028549596,
+      "feedback_valid": true,
+      "submission_order": 3
+    },
+    {
+      "candidate": "meta_logstack",
+      "file": "candidate_meta_logstack.csv",
+      "family": "meta",
+      "oof_auc": 0.82852682,
+      "fold_auc_std": 0.00367114,
+      "prediction_correlation": null,
+      "submission_id": "sub_4",
+      "public_score": 0.8341423719048933,
+      "feedback_valid": true,
+      "submission_order": 4
+    }
+  ]
+}

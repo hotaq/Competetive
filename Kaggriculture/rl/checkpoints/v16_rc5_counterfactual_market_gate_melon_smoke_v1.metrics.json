@@ -1,0 +1,157 @@
+{
+  "dataset": {
+    "holdout_rows": 10,
+    "path": "/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/rl/datasets/v16_rc5_market_leave_one_out_melon_v1.npz",
+    "rows": 46,
+    "sha256": "82db2ebc2bfc5301c49d60d5bffbf640a9901a424a0bfd5d15b137076c2d813c",
+    "train_rows": 36
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "loss": 0.6883270144462585
+    },
+    {
+      "epoch": 15,
+      "loss": 0.616986095905304
+    },
+    {
+      "epoch": 30,
+      "loss": 0.5708120465278625
+    },
+    {
+      "epoch": 45,
+      "loss": 0.5356346964836121
+    },
+    {
+      "epoch": 60,
+      "loss": 0.5089083313941956
+    },
+    {
+      "epoch": 75,
+      "loss": 0.4885396659374237
+    },
+    {
+      "epoch": 90,
+      "loss": 0.4725777506828308
+    },
+    {
+      "epoch": 105,
+      "loss": 0.4597080647945404
+    },
+    {
+      "epoch": 120,
+      "loss": 0.44903564453125
+    },
+    {
+      "epoch": 135,
+      "loss": 0.4399595260620117
+    },
+    {
+      "epoch": 150,
+      "loss": 0.4320698380470276
+    },
+    {
+      "epoch": 165,
+      "loss": 0.42508262395858765
+    },
+    {
+      "epoch": 180,
+      "loss": 0.418797105550766
+    },
+    {
+      "epoch": 195,
+      "loss": 0.413068950176239
+    },
+    {
+      "epoch": 210,
+      "loss": 0.4077928960323334
+    },
+    {
+      "epoch": 225,
+      "loss": 0.4028901159763336
+    },
+    {
+      "epoch": 240,
+      "loss": 0.39830195903778076
+    },
+    {
+      "epoch": 255,
+      "loss": 0.3939826786518097
+    },
+    {
+      "epoch": 270,
+      "loss": 0.38989731669425964
+    },
+    {
+      "epoch": 285,
+      "loss": 0.3860178589820862
+    },
+    {
+      "epoch": 300,
+      "loss": 0.3823222517967224
+    }
+  ],
+  "holdout": {
+    "accepted_beneficial": 0,
+    "accepted_delta_mean": 0.0,
+    "accepted_delta_sum": 0.0,
+    "accepted_harmful": 0,
+    "accepted_neutral": 0,
+    "accepted_positive_seeds": 0,
+    "accepted_rows": 0,
+    "maximum_probability": 4.248354255291589e-18,
+    "positive_rows": 0,
+    "positive_seeds": 0,
+    "rows": 10,
+    "worst_accepted_delta": 0.0
+  },
+  "initial_checkpoint": {
+    "embedded_report_present": true,
+    "path": "/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/rl/checkpoints/v16_rc5_teacher_gate_ppo_market_diff_conf99_e3.npz",
+    "sha256": "b237e4e5b29591e45d1439f2d27c2155104de8663b0981fb4e19bb90a7f8c8e4"
+  },
+  "method": "counterfactual_leave_one_out_frozen_encoder_market_head",
+  "model_config": {
+    "action_dim": 16,
+    "hidden_dim": 64,
+    "observation_dim": 2048
+  },
+  "promotion": {
+    "minimum_positive_seeds_per_split": 2,
+    "offline_passed": false,
+    "promoted": false,
+    "requires_live_paired_evaluation": true
+  },
+  "selection": {
+    "fixed_runtime_threshold": 0.5,
+    "raw_probability_threshold": 1.0,
+    "rule": "training threshold must accept positive labels and zero harmful labels",
+    "threshold_logit_shift": 100.0
+  },
+  "train": {
+    "accepted_beneficial": 0,
+    "accepted_delta_mean": 0.0,
+    "accepted_delta_sum": 0.0,
+    "accepted_harmful": 0,
+    "accepted_neutral": 0,
+    "accepted_positive_seeds": 0,
+    "accepted_rows": 0,
+    "maximum_probability": 4.248354255291589e-18,
+    "positive_rows": 4,
+    "positive_seeds": 1,
+    "rows": 36,
+    "worst_accepted_delta": 0.0
+  },
+  "training": {
+    "epochs": 300,
+    "initial_acceptance": 0.01,
+    "l2_anchor": 0.001,
+    "learning_rate": 0.02,
+    "margin_scale": 1000.0,
+    "max_margin_weight": 25.0,
+    "minimum_positive_seeds_per_split": 2,
+    "neutral_weight": 0.1,
+    "seed": 1729
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kaggriculture.local/schemas/v1/execution_report.schema.json",
+  "title": "Kaggriculture execution report v1",
+  "$defs": {
+    "count": { "minimum": 0, "type": "integer" },
+    "kind": {
+      "enum": ["CROP_PRODUCTION", "ANIMAL_PRODUCTION", "WORKFORCE", "SELLING", "INVENTORY_BUFFER", "LAND_EXPANSION", "RECOVERY"],
+      "type": "string"
+    },
+    "status": { "enum": ["PLANNED", "BLOCKED"], "type": "string" },
+    "entry": {
+      "additionalProperties": false,
+      "properties": {
+        "target_index": { "$ref": "#/$defs/count" },
+        "kind": { "$ref": "#/$defs/kind" },
+        "status": { "$ref": "#/$defs/status" },
+        "code": {
+          "enum": ["KG-EXEC-PLANNED", "KG-EXEC-INVENTORY", "KG-EXEC-MARKET-LIMIT", "KG-EXEC-TARGET-DEFERRED"],
+          "type": "string"
+        }
+      },
+      "required": ["target_index", "kind", "status", "code"],
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": 1, "type": "integer" },
+    "player": { "maximum": 1, "minimum": 0, "type": "integer" },
+    "status": { "$ref": "#/$defs/status" },
+    "target_count": { "$ref": "#/$defs/count" },
+    "planned_count": { "$ref": "#/$defs/count" },
+    "blocked_count": { "$ref": "#/$defs/count" },
+    "fallback_count": { "$ref": "#/$defs/count" },
+    "entries": { "items": { "$ref": "#/$defs/entry" }, "type": "array" }
+  },
+  "required": ["schema_version", "player", "status", "target_count", "planned_count", "blocked_count", "fallback_count", "entries"],
+  "type": "object"
+}

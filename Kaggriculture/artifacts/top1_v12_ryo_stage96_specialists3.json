@@ -1,0 +1,62 @@
+{
+  "agents": [
+    {
+      "agent_file": "artifacts/top1_v12_ryo_tape_population96/tape_95703024.py",
+      "agent_sha256": "ed5623eecc5095d6bd8942b4f8544c5f46ce3f2c1cc43c00f2946c5722ae792d",
+      "competition": "kaggriculture",
+      "episode_id": 95703024,
+      "seed": 1252731387,
+      "source_sha256": "c845b0a0ad7ecd55bdaa3e0a4158a0cb61085cf14c1a7860bbeca2bca3682e14",
+      "submission_id": 55614463,
+      "top1_seat": 1
+    },
+    {
+      "agent_file": "artifacts/top1_v12_ryo_tape_population96/tape_94661382.py",
+      "agent_sha256": "853aa0dd01ce5c8854f0d0c0c688a5c69e6c743ef56bcdb32d5487448efe5291",
+      "competition": "kaggriculture",
+      "episode_id": 94661382,
+      "seed": 931537454,
+      "source_sha256": "a4069c2533a5d748603e60120990bbe674a37d187448af5a875c5e4a53d5737f",
+      "submission_id": 55614463,
+      "top1_seat": 1
+    },
+    {
+      "agent_file": "artifacts/top1_v12_ryo_tape_population96/tape_94726918.py",
+      "agent_sha256": "db4d5c861a68332ae1efe70cb5a3a1e4eb4a10bcd77bf7b033839b80045e2643",
+      "competition": "kaggriculture",
+      "episode_id": 94726918,
+      "seed": 569041663,
+      "source_sha256": "ad84555e447b07ccc36ebb6b923874152f29d3388d3f5cc4c1a7aa0d51943d9b",
+      "submission_id": 55614463,
+      "top1_seat": 0
+    }
+  ],
+  "exact_validated": true,
+  "holdout": false,
+  "schema_version": 2,
+  "source_manifests": [
+    "replays/top1_v12_ryo_development_20260821/manifest.json"
+  ],
+  "source_submissions": [
+    {
+      "date": "2026-08-19T04:08:02.207Z",
+      "public_score": 3168.3,
+      "submission_id": 55614463
+    }
+  ],
+  "compatibility_filter": {
+    "source_population": "artifacts/top1_v12_ryo_tape_population96/manifest.json",
+    "base_episode_id": 94451134,
+    "branch_step": 96,
+    "source_agents": 96,
+    "compatible_agents": 74
+  },
+  "selection": {
+    "source_population": "artifacts/top1_v12_compatible94451134_b96.json",
+    "episode_ids": [
+      95703024,
+      94661382,
+      94726918
+    ]
+  }
+}

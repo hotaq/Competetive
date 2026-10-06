@@ -1,0 +1,154 @@
+{
+  "base_seed": 450000,
+  "bc": {
+    "accuracy": 1.0,
+    "cross_entropy": 0.147775309566329,
+    "epochs": 1500
+  },
+  "episodes": 216,
+  "history": [
+    {
+      "actions": {
+        "melon10_cow8_w8_b16_l2": 6,
+        "melon6_cow4_w4": 13,
+        "melon6_cow5_w7_b10": 5,
+        "melon6_cow6_w6_b18": 12
+      },
+      "episodes": 36,
+      "iteration": 0,
+      "mean_margin": 23819.444444444445,
+      "mean_money": 49516.13888888889,
+      "mean_reward": 3.3566116666666668,
+      "update": {
+        "entropy": 0.3184790871292803,
+        "mean_probability_of_sampled_action": 0.7413499802429379,
+        "teacher_accuracy": 1.0,
+        "validation_teacher_accuracy": 1.0,
+        "value_mse": 14.920015881679145
+      },
+      "wins": 33,
+      "worst_margin": -1896.0,
+      "worst_money": 21278.0
+    },
+    {
+      "actions": {
+        "melon10_cow8_w8_b16_l2": 4,
+        "melon6_cow4_w4": 12,
+        "melon6_cow5_w7_b10": 6,
+        "melon6_cow6_w6_b18": 14
+      },
+      "episodes": 36,
+      "iteration": 1,
+      "mean_margin": 24537.666666666668,
+      "mean_money": 51933.63888888889,
+      "mean_reward": 3.4574172222222224,
+      "update": {
+        "entropy": 0.31582125687218426,
+        "mean_probability_of_sampled_action": 0.715349212481777,
+        "teacher_accuracy": 1.0,
+        "validation_teacher_accuracy": 1.0,
+        "value_mse": 13.862660779676784
+      },
+      "wins": 30,
+      "worst_margin": -2976.0,
+      "worst_money": 22885.0
+    },
+    {
+      "actions": {
+        "melon10_cow8_w8_b16_l2": 6,
+        "melon6_cow4_w4": 12,
+        "melon6_cow5_w7_b10": 6,
+        "melon6_cow6_w6_b18": 12
+      },
+      "episodes": 36,
+      "iteration": 2,
+      "mean_margin": 23238.86111111111,
+      "mean_money": 49726.63888888889,
+      "mean_reward": 3.234599444444444,
+      "update": {
+        "entropy": 0.30440883910200384,
+        "mean_probability_of_sampled_action": 0.8267446342408045,
+        "teacher_accuracy": 1.0,
+        "validation_teacher_accuracy": 1.0,
+        "value_mse": 12.22120953912321
+      },
+      "wins": 29,
+      "worst_margin": -3985.0,
+      "worst_money": 21141.0
+    },
+    {
+      "actions": {
+        "melon10_cow8_w8_b16_l2": 6,
+        "melon6_cow4_w4": 11,
+        "melon6_cow5_w7_b10": 6,
+        "melon6_cow6_w6_b18": 13
+      },
+      "episodes": 36,
+      "iteration": 3,
+      "mean_margin": 19700.38888888889,
+      "mean_money": 47431.02777777778,
+      "mean_reward": 2.8729094444444443,
+      "update": {
+        "entropy": 0.303500177595189,
+        "mean_probability_of_sampled_action": 0.8031066675350657,
+        "teacher_accuracy": 1.0,
+        "validation_teacher_accuracy": 1.0,
+        "value_mse": 8.46723128411804
+      },
+      "wins": 30,
+      "worst_margin": -3015.0,
+      "worst_money": 22535.0
+    },
+    {
+      "actions": {
+        "melon10_cow8_w8_b16_l2": 6,
+        "melon6_cow4_w4": 12,
+        "melon6_cow5_w7_b10": 5,
+        "melon6_cow6_w6_b18": 13
+      },
+      "episodes": 36,
+      "iteration": 4,
+      "mean_margin": 21983.444444444445,
+      "mean_money": 47039.47222222222,
+      "mean_reward": 3.12497,
+      "update": {
+        "entropy": 0.31074237240025304,
+        "mean_probability_of_sampled_action": 0.8425036649503017,
+        "teacher_accuracy": 1.0,
+        "validation_teacher_accuracy": 1.0,
+        "value_mse": 8.5961068217902
+      },
+      "wins": 31,
+      "worst_margin": -627.0,
+      "worst_money": 21062.0
+    },
+    {
+      "actions": {
+        "melon10_cow8_w8_b16_l2": 6,
+        "melon6_cow4_w4": 10,
+        "melon6_cow5_w7_b10": 7,
+        "melon6_cow6_w6_b18": 13
+      },
+      "episodes": 36,
+      "iteration": 5,
+      "mean_margin": 17396.166666666668,
+      "mean_money": 44139.38888888889,
+      "mean_reward": 2.57726,
+      "update": {
+        "entropy": 0.3144043765761284,
+        "mean_probability_of_sampled_action": 0.8408539547007765,
+        "teacher_accuracy": 1.0,
+        "validation_teacher_accuracy": 1.0,
+        "value_mse": 5.455839268869479
+      },
+      "wins": 30,
+      "worst_margin": -2744.0,
+      "worst_money": 20844.0
+    }
+  ],
+  "iterations": 6,
+  "model": "live-response-contextual-ppo-v2",
+  "seed": 91,
+  "seeds_per_opponent": 3,
+  "selected_safe_iteration": 5
+}

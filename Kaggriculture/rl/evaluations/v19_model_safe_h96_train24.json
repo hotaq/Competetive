@@ -1,0 +1,859 @@
+{
+  "candidates": [
+    {
+      "name": "v16",
+      "path": "submissions/meta_v16_rc6_adaptive_market_standalone/main.py"
+    },
+    {
+      "name": "v12",
+      "path": "submissions/top1_v12_ryo_b96_dual_b144_retriever_exact_safe_local/main.py"
+    },
+    {
+      "name": "v11",
+      "path": "submissions/top1_v11_branch168_spatial/main.py"
+    }
+  ],
+  "episodes": [
+    {
+      "actual_margins": {
+        "v11": -7425.0,
+        "v12": 33080.0,
+        "v16": 13195.0
+      },
+      "candidate_seat": 1,
+      "episode_id": 97619249,
+      "oracle": "v12",
+      "oracle_actual_margin": 33080.0,
+      "predictions": {
+        "v11": {
+          "candidate_money": 162.0,
+          "elapsed_ms": 49.00570899917511,
+          "margin": -742.0,
+          "reference_money": 904.0
+        },
+        "v12": {
+          "candidate_money": 908.0,
+          "elapsed_ms": 102.12004200002411,
+          "margin": 0.0,
+          "reference_money": 908.0
+        },
+        "v16": {
+          "candidate_money": 32.0,
+          "elapsed_ms": 56.4284169995517,
+          "margin": -868.0,
+          "reference_money": 900.0
+        }
+      },
+      "seed": 453460382,
+      "selected": "v12",
+      "selected_actual_margin": 33080.0
+    },
+    {
+      "actual_margins": {
+        "v11": 6410.0,
+        "v12": 13977.0,
+        "v16": 23074.0
+      },
+      "candidate_seat": 0,
+      "episode_id": 97569024,
+      "oracle": "v16",
+      "oracle_actual_margin": 23074.0,
+      "predictions": {
+        "v11": {
+          "candidate_money": 162.0,
+          "elapsed_ms": 46.43466699963028,
+          "margin": -742.0,
+          "reference_money": 904.0
+        },
+        "v12": {
+          "candidate_money": 908.0,
+          "elapsed_ms": 103.87420799997926,
+          "margin": 0.0,
+          "reference_money": 908.0
+        },
+        "v16": {
+          "candidate_money": 31.0,
+          "elapsed_ms": 56.54424999920593,
+          "margin": -869.0,
+          "reference_money": 900.0
+        }
+      },
+      "seed": 232763495,
+      "selected": "v12",
+      "selected_actual_margin": 13977.0
+    },
+    {
+      "actual_margins": {
+        "v11": -6813.0,
+        "v12": 40992.0,
+        "v16": 3491.0
+      },
+      "candidate_seat": 1,
+      "episode_id": 97518737,
+      "oracle": "v12",
+      "oracle_actual_margin": 40992.0,
+      "predictions": {
+        "v11": {
+          "candidate_money": 162.0,
+          "elapsed_ms": 49.09387499901641,
+          "margin": -742.0,
+          "reference_money": 904.0
+        },
+        "v12": {
+          "candidate_money": 908.0,
+          "elapsed_ms": 91.90320800007612,
+          "margin": 0.0,
+          "reference_money": 908.0
+        },
+        "v16": {
+          "candidate_money": 31.0,
+          "elapsed_ms": 59.38895899998897,
+          "margin": -869.0,
+          "reference_money": 900.0
+        }
+      },
+      "seed": 793050203,
+      "selected": "v12",
+      "selected_actual_margin": 40992.0
+    },
+    {
+      "actual_margins": {
+        "v11": -1910.0,
+        "v12": 21083.0,
+        "v16": 12368.0
+      },
+      "candidate_seat": 1,
+      "episode_id": 97518736,
+      "oracle": "v12",
+      "oracle_actual_margin": 21083.0,
+      "predictions": {
+        "v11": {
+          "candidate_money": 162.0,
+          "elapsed_ms": 51.829915999405785,
+          "margin": -742.0,
+          "reference_money": 904.0
+        },
+        "v12": {
+          "candidate_money": 908.0,
+          "elapsed_ms": 133.55037499968603,
+          "margin": 0.0,
+          "reference_money": 908.0
+        },
+        "v16": {
+          "candidate_money": 31.0,
+          "elapsed_ms": 52.43329099903349,
+          "margin": -869.0,
+          "reference_money": 900.0
+        }
+      },
+      "seed": 997015316,
+      "selected": "v12",
+      "selected_actual_margin": 21083.0
+    },
+    {
+      "actual_margins": {
+        "v11": -2326.0,
+        "v12": 20875.0,
+        "v16": 15754.0
+      },
+      "candidate_seat": 0,
+      "episode_id": 97468615,
+      "oracle": "v12",
+      "oracle_actual_margin": 20875.0,
+      "predictions": {
+        "v11": {
+          "candidate_money": 162.0,
+          "elapsed_ms": 43.196041999181034,
+          "margin": -742.0,
+          "reference_money": 904.0
+        },
+        "v12": {
+          "candidate_money": 908.0,
+          "elapsed_ms": 99.95420799896237,
+          "margin": 0.0,
+          "reference_money": 908.0
+        },
+        "v16": {
+          "candidate_money": 31.0,
+          "elapsed_ms": 48.53512500085344,
+          "margin": -869.0,
+          "reference_money": 900.0
+        }
+      },
+      "seed": 812168593,
+      "selected": "v12",
+      "selected_actual_margin": 20875.0
+    },
+    {
+      "actual_margins": {
+        "v11": 20883.0,
+        "v12": 2680.0,
+        "v16": 19323.0
+      },
+      "candidate_seat": 0,
+      "episode_id": 97468613,
+      "oracle": "v11",
+      "oracle_actual_margin": 20883.0,
+      "predictions": {
+        "v11": {
+          "candidate_money": 162.0,
+          "elapsed_ms": 45.04658400037442,
+          "margin": -742.0,
+          "reference_money": 904.0
+        },
+        "v12": {
+          "candidate_money": 811.0,
+          "elapsed_ms": 103.48579099991184,
+          "margin": -98.0,
+          "reference_money": 909.0
+        },
+        "v16": {
+          "candidate_money": 32.0,
+          "elapsed_ms": 56.240916999740875,
+          "margin": -868.0,
+          "reference_money": 900.0
+        }
+      },
+      "seed": 2077823252,
+      "selected": "v12",
+      "selected_actual_margin": 2680.0
+    },
+    {
+      "actual_margins": {
+        "v11": -23473.0,
+        "v12": 5887.0,
+        "v16": 8311.0
+      },
+      "candidate_seat": 0,
+      "episode_id": 97422923,
+      "oracle": "v16",
+      "oracle_actual_margin": 8311.0,
+      "predictions": {
+        "v11": {
+          "candidate_money": 162.0,
+          "elapsed_ms": 47.403499998836196,
+          "margin": -742.0,
+          "reference_money": 904.0
+        },
+        "v12": {
+          "candidate_money": 908.0,
+          "elapsed_ms": 99.41029100082233,
+          "margin": 0.0,
+          "reference_money": 908.0
+        },
+        "v16": {
+          "candidate_money": 32.0,
+          "elapsed_ms": 45.77895799957332,
+          "margin": -868.0,
+          "reference_money": 900.0
+        }
+      },
+      "seed": 2067603183,
+      "selected": "v12",
+      "selected_actual_margin": 5887.0
+    },
+    {
+      "actual_margins": {
+        "v11": 10889.0,
+        "v12": 629.0,
+        "v16": 22968.0
+      },
+      "candidate_seat": 0,
+      "episode_id": 97386449,
+      "oracle": "v16",
+      "oracle_actual_margin": 22968.0,
+      "predictions": {
+        "v11": {
+          "candidate_money": 162.0,
+          "elapsed_ms": 48.79287500079954,
+          "margin": -742.0,
+          "reference_money": 904.0
+        },
+        "v12": {
+          "candidate_money": 908.0,
+          "elapsed_ms": 104.39016700001957,
+          "margin": 0.0,
+          "reference_money": 908.0
+        },
+        "v16": {
+          "candidate_money": 31.0,
+          "elapsed_ms": 55.35991699980514,
+          "margin": -869.0,
+          "reference_money": 900.0
+        }
+      },
+      "seed": 1641349431,
+      "selected": "v12",
+      "selected_actual_margin": 629.0
+    },
+    {
+      "actual_margins": {
+        "v11": 26064.0,
+        "v12": 29883.0,
+        "v16": 8491.0
+      },
+      "candidate_seat": 0,
+      "episode_id": 97386448,
+      "oracle": "v12",
+      "oracle_actual_margin": 29883.0,
+      "predictions": {
+        "v11": {
+          "candidate_money": 162.0,
+          "elapsed_ms": 45.59154099842999,
+          "margin": -742.0,
+          "reference_money": 904.0
+        },
+        "v12": {
+          "candidate_money": 908.0,
+          "elapsed_ms": 113.65083399869036,
+          "margin": 0.0,
+          "reference_money": 908.0
+        },
+        "v16": {
+          "candidate_money": 31.0,
+          "elapsed_ms": 56.45304100107751,
+          "margin": -869.0,
+          "reference_money": 900.0
+        }
+      },
+      "seed": 1175352353,
+      "selected": "v12",
+      "selected_actual_margin": 29883.0
+    },
+    {
+      "actual_margins": {
+        "v11": 9380.0,
+        "v12": -2301.0,
+        "v16": 13274.0
+      },
+      "candidate_seat": 0,
+      "episode_id": 97352285,
+      "oracle": "v16",
+      "oracle_actual_margin": 13274.0,
+      "predictions": {
+        "v11": {
+          "candidate_money": 162.0,
+          "elapsed_ms": 53.99237500023446,
+          "margin": -742.0,
+          "reference_money": 904.0
+        },
+        "v12": {
+          "candidate_money": 908.0,
+          "elapsed_ms": 113.21975000100792,
+          "margin": 0.0,
+          "reference_money": 908.0
+        },
+        "v16": {
+          "candidate_money": 31.0,
+          "elapsed_ms": 55.18441700041876,
+          "margin": -869.0,
+          "reference_money": 900.0
+        }
+      },
+      "seed": 1033118282,
+      "selected": "v12",
+      "selected_actual_margin": -2301.0
+    },
+    {
+      "actual_margins": {
+        "v11": -13658.0,
+        "v12": 8409.0,
+        "v16": -15517.0
+      },
+      "candidate_seat": 1,
+      "episode_id": 97352280,
+      "oracle": "v12",
+      "oracle_actual_margin": 8409.0,
+      "predictions": {
+        "v11": {
+          "candidate_money": 162.0,
+          "elapsed_ms": 51.42491700098617,
+          "margin": -742.0,
+          "reference_money": 904.0
+        },
+        "v12": {
+          "candidate_money": 908.0,
+          "elapsed_ms": 103.27708300064842,
+          "margin": 0.0,
+          "reference_money": 908.0
+        },
+        "v16": {
+          "candidate_money": 31.0,
+          "elapsed_ms": 66.0797079999611,
+          "margin": -869.0,
+          "reference_money": 900.0
+        }
+      },
+      "seed": 375047238,
+      "selected": "v12",
+      "selected_actual_margin": 8409.0
+    },
+    {
+      "actual_margins": {
+        "v11": -2325.0,
+        "v12": 2409.0,
+        "v16": 3582.0
+      },
+      "candidate_seat": 1,
+      "episode_id": 97317972,
+      "oracle": "v16",
+      "oracle_actual_margin": 3582.0,
+      "predictions": {
+        "v11": {
+          "candidate_money": 162.0,
+          "elapsed_ms": 46.32962499999849,
+          "margin": -742.0,
+          "reference_money": 904.0
+        },
+        "v12": {
+          "candidate_money": 908.0,
+          "elapsed_ms": 95.6674999997631,
+          "margin": 0.0,
+          "reference_money": 908.0
+        },
+        "v16": {
+          "candidate_money": 31.0,
+          "elapsed_ms": 50.82570900049177,
+          "margin": -869.0,
+          "reference_money": 900.0
+        }
+      },
+      "seed": 672496714,
+      "selected": "v12",
+      "selected_actual_margin": 2409.0
+    },
+    {
+      "actual_margins": {
+        "v11": -7188.0,
+        "v12": 8892.0,
+        "v16": 9327.0
+      },
+      "candidate_seat": 1,
+      "episode_id": 97317971,
+      "oracle": "v16",
+      "oracle_actual_margin": 9327.0,
+      "predictions": {
+        "v11": {
+          "candidate_money": 162.0,
+          "elapsed_ms": 48.573916999885114,
+          "margin": -742.0,
+          "reference_money": 904.0
+        },
+        "v12": {
+          "candidate_money": 908.0,
+          "elapsed_ms": 112.86716599897773,
+          "margin": 0.0,
+          "reference_money": 908.0
+        },
+        "v16": {
+          "candidate_money": 31.0,
+          "elapsed_ms": 52.68166700079746,
+          "margin": -869.0,
+          "reference_money": 900.0
+        }
+      },
+      "seed": 1955932322,
+      "selected": "v12",
+      "selected_actual_margin": 8892.0
+    },
+    {
+      "actual_margins": {
+        "v11": 40.0,
+        "v12": 16379.0,
+        "v16": 10205.0
+      },
+      "candidate_seat": 0,
+      "episode_id": 97281485,
+      "oracle": "v12",
+      "oracle_actual_margin": 16379.0,
+      "predictions": {
+        "v11": {
+          "candidate_money": 162.0,
+          "elapsed_ms": 48.118291999344365,
+          "margin": -742.0,
+          "reference_money": 904.0
+        },
+        "v12": {
+          "candidate_money": 908.0,
+          "elapsed_ms": 93.69729100035329,
+          "margin": 0.0,
+          "reference_money": 908.0
+        },
+        "v16": {
+          "candidate_money": 32.0,
+          "elapsed_ms": 59.85987500025658,
+          "margin": -868.0,
+          "reference_money": 900.0
+        }
+      },
+      "seed": 1086865858,
+      "selected": "v12",
+      "selected_actual_margin": 16379.0
+    },
+    {
+      "actual_margins": {
+        "v11": 11835.0,
+        "v12": -630.0,
+        "v16": -3966.0
+      },
+      "candidate_seat": 0,
+      "episode_id": 97245055,
+      "oracle": "v11",
+      "oracle_actual_margin": 11835.0,
+      "predictions": {
+        "v11": {
+          "candidate_money": 162.0,
+          "elapsed_ms": 48.42008300147427,
+          "margin": -742.0,
+          "reference_money": 904.0
+        },
+        "v12": {
+          "candidate_money": 908.0,
+          "elapsed_ms": 104.74279200025194,
+          "margin": 0.0,
+          "reference_money": 908.0
+        },
+        "v16": {
+          "candidate_money": 31.0,
+          "elapsed_ms": 55.68016700090084,
+          "margin": -869.0,
+          "reference_money": 900.0
+        }
+      },
+      "seed": 1502054695,
+      "selected": "v12",
+      "selected_actual_margin": -630.0
+    },
+    {
+      "actual_margins": {
+        "v11": -13790.0,
+        "v12": 20008.0,
+        "v16": 3893.0
+      },
+      "candidate_seat": 1,
+      "episode_id": 97213079,
+      "oracle": "v12",
+      "oracle_actual_margin": 20008.0,
+      "predictions": {
+        "v11": {
+          "candidate_money": 162.0,
+          "elapsed_ms": 44.948624999960884,
+          "margin": -742.0,
+          "reference_money": 904.0
+        },
+        "v12": {
+          "candidate_money": 908.0,
+          "elapsed_ms": 108.20304200024111,
+          "margin": 0.0,
+          "reference_money": 908.0
+        },
+        "v16": {
+          "candidate_money": 31.0,
+          "elapsed_ms": 47.42558299949451,
+          "margin": -869.0,
+          "reference_money": 900.0
+        }
+      },
+      "seed": 1480960664,
+      "selected": "v12",
+      "selected_actual_margin": 20008.0
+    },
+    {
+      "actual_margins": {
+        "v11": -14066.0,
+        "v12": 17516.0,
+        "v16": 5022.0
+      },
+      "candidate_seat": 0,
+      "episode_id": 97213078,
+      "oracle": "v12",
+      "oracle_actual_margin": 17516.0,
+      "predictions": {
+        "v11": {
+          "candidate_money": 162.0,
+          "elapsed_ms": 46.00683399985428,
+          "margin": -742.0,
+          "reference_money": 904.0
+        },
+        "v12": {
+          "candidate_money": 908.0,
+          "elapsed_ms": 103.26087499925052,
+          "margin": 0.0,
+          "reference_money": 908.0
+        },
+        "v16": {
+          "candidate_money": 32.0,
+          "elapsed_ms": 56.3932080003724,
+          "margin": -868.0,
+          "reference_money": 900.0
+        }
+      },
+      "seed": 1688970909,
+      "selected": "v12",
+      "selected_actual_margin": 17516.0
+    },
+    {
+      "actual_margins": {
+        "v11": -13467.0,
+        "v12": 34436.0,
+        "v16": 2305.0
+      },
+      "candidate_seat": 1,
+      "episode_id": 97181129,
+      "oracle": "v12",
+      "oracle_actual_margin": 34436.0,
+      "predictions": {
+        "v11": {
+          "candidate_money": 162.0,
+          "elapsed_ms": 52.99887500041223,
+          "margin": -742.0,
+          "reference_money": 904.0
+        },
+        "v12": {
+          "candidate_money": 908.0,
+          "elapsed_ms": 107.72829199959233,
+          "margin": 0.0,
+          "reference_money": 908.0
+        },
+        "v16": {
+          "candidate_money": 31.0,
+          "elapsed_ms": 49.66820799927518,
+          "margin": -869.0,
+          "reference_money": 900.0
+        }
+      },
+      "seed": 428154018,
+      "selected": "v12",
+      "selected_actual_margin": 34436.0
+    },
+    {
+      "actual_margins": {
+        "v11": 14342.0,
+        "v12": 10967.0,
+        "v16": 7770.0
+      },
+      "candidate_seat": 0,
+      "episode_id": 97151460,
+      "oracle": "v11",
+      "oracle_actual_margin": 14342.0,
+      "predictions": {
+        "v11": {
+          "candidate_money": 162.0,
+          "elapsed_ms": 82.04133400067803,
+          "margin": -742.0,
+          "reference_money": 904.0
+        },
+        "v12": {
+          "candidate_money": 908.0,
+          "elapsed_ms": 172.77945800015004,
+          "margin": 0.0,
+          "reference_money": 908.0
+        },
+        "v16": {
+          "candidate_money": 31.0,
+          "elapsed_ms": 65.66045799991116,
+          "margin": -869.0,
+          "reference_money": 900.0
+        }
+      },
+      "seed": 985792246,
+      "selected": "v12",
+      "selected_actual_margin": 10967.0
+    },
+    {
+      "actual_margins": {
+        "v11": 5873.0,
+        "v12": 7419.0,
+        "v16": 18894.0
+      },
+      "candidate_seat": 1,
+      "episode_id": 97151458,
+      "oracle": "v16",
+      "oracle_actual_margin": 18894.0,
+      "predictions": {
+        "v11": {
+          "candidate_money": 162.0,
+          "elapsed_ms": 149.52249999987544,
+          "margin": -742.0,
+          "reference_money": 904.0
+        },
+        "v12": {
+          "candidate_money": 908.0,
+          "elapsed_ms": 241.78687499988882,
+          "margin": 0.0,
+          "reference_money": 908.0
+        },
+        "v16": {
+          "candidate_money": 32.0,
+          "elapsed_ms": 112.7884580000682,
+          "margin": -868.0,
+          "reference_money": 900.0
+        }
+      },
+      "seed": 1177337722,
+      "selected": "v12",
+      "selected_actual_margin": 7419.0
+    },
+    {
+      "actual_margins": {
+        "v11": 21313.0,
+        "v12": -5336.0,
+        "v16": 14432.0
+      },
+      "candidate_seat": 0,
+      "episode_id": 97115102,
+      "oracle": "v11",
+      "oracle_actual_margin": 21313.0,
+      "predictions": {
+        "v11": {
+          "candidate_money": 162.0,
+          "elapsed_ms": 186.70087499958754,
+          "margin": -742.0,
+          "reference_money": 904.0
+        },
+        "v12": {
+          "candidate_money": 908.0,
+          "elapsed_ms": 177.24162500053353,
+          "margin": 0.0,
+          "reference_money": 908.0
+        },
+        "v16": {
+          "candidate_money": 31.0,
+          "elapsed_ms": 128.61854099901393,
+          "margin": -869.0,
+          "reference_money": 900.0
+        }
+      },
+      "seed": 2083631826,
+      "selected": "v12",
+      "selected_actual_margin": -5336.0
+    },
+    {
+      "actual_margins": {
+        "v11": 3464.0,
+        "v12": 1924.0,
+        "v16": 21444.0
+      },
+      "candidate_seat": 1,
+      "episode_id": 97078515,
+      "oracle": "v16",
+      "oracle_actual_margin": 21444.0,
+      "predictions": {
+        "v11": {
+          "candidate_money": 162.0,
+          "elapsed_ms": 107.13195899916172,
+          "margin": -742.0,
+          "reference_money": 904.0
+        },
+        "v12": {
+          "candidate_money": 908.0,
+          "elapsed_ms": 256.18595800006005,
+          "margin": 0.0,
+          "reference_money": 908.0
+        },
+        "v16": {
+          "candidate_money": 31.0,
+          "elapsed_ms": 155.2797920012381,
+          "margin": -869.0,
+          "reference_money": 900.0
+        }
+      },
+      "seed": 30711084,
+      "selected": "v12",
+      "selected_actual_margin": 1924.0
+    },
+    {
+      "actual_margins": {
+        "v11": 532.0,
+        "v12": 32858.0,
+        "v16": 13067.0
+      },
+      "candidate_seat": 0,
+      "episode_id": 97032982,
+      "oracle": "v12",
+      "oracle_actual_margin": 32858.0,
+      "predictions": {
+        "v11": {
+          "candidate_money": 162.0,
+          "elapsed_ms": 74.71204099965689,
+          "margin": -742.0,
+          "reference_money": 904.0
+        },
+        "v12": {
+          "candidate_money": 908.0,
+          "elapsed_ms": 170.52904100091837,
+          "margin": 0.0,
+          "reference_money": 908.0
+        },
+        "v16": {
+          "candidate_money": 31.0,
+          "elapsed_ms": 92.95125000062399,
+          "margin": -869.0,
+          "reference_money": 900.0
+        }
+      },
+      "seed": 770901935,
+      "selected": "v12",
+      "selected_actual_margin": 32858.0
+    },
+    {
+      "actual_margins": {
+        "v11": 12638.0,
+        "v12": 24171.0,
+        "v16": 6691.0
+      },
+      "candidate_seat": 0,
+      "episode_id": 96982840,
+      "oracle": "v12",
+      "oracle_actual_margin": 24171.0,
+      "predictions": {
+        "v11": {
+          "candidate_money": 163.0,
+          "elapsed_ms": 48.33233400131576,
+          "margin": -644.0,
+          "reference_money": 807.0
+        },
+        "v12": {
+          "candidate_money": 909.0,
+          "elapsed_ms": 109.82083399903786,
+          "margin": 98.0,
+          "reference_money": 811.0
+        },
+        "v16": {
+          "candidate_money": 32.0,
+          "elapsed_ms": 60.367500000211294,
+          "margin": -868.0,
+          "reference_money": 900.0
+        }
+      },
+      "seed": 1532381129,
+      "selected": "v12",
+      "selected_actual_margin": 24171.0
+    }
+  ],
+  "horizon": 96,
+  "manifest": "analysis/top1_ryo_20260823_current/manifest.json",
+  "reference": {
+    "name": "ryo_route",
+    "path": "submissions/meta_v17_ryo_latest_route_local/main.py"
+  },
+  "schema_version": 1,
+  "selector_mode": "safe-three",
+  "summary": {
+    "games": 24,
+    "oracle_actual_mean_margin": 20372.375,
+    "oracle_actual_wins": 24,
+    "oracle_actual_worst_margin": 3582.0,
+    "oracle_matches": 12,
+    "selected_actual_losses": 3,
+    "selected_actual_mean_margin": 14425.291666666666,
+    "selected_actual_wins": 21,
+    "selected_actual_worst_margin": -5336.0,
+    "selection_counts": {
+      "v11": 0,
+      "v12": 24,
+      "v16": 0
+    },
+    "simulation_elapsed_ms": 6135.623416997987
+  }
+}

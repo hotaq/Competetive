@@ -1,0 +1,115 @@
+{
+  "model": "robust-q-decision-tree",
+  "branch_step": 163,
+  "feature_steps": [
+    96,
+    163
+  ],
+  "feature_encoder": "retriever",
+  "action_ids": [
+    93816256,
+    93518562,
+    93520335,
+    93501610,
+    93724855,
+    93546314,
+    93734648
+  ],
+  "config": {
+    "max_depth": 3,
+    "min_leaf": 2,
+    "margin_weight": 0.05,
+    "risk_coefficient": 0.25
+  },
+  "tree": {
+    "feature_index": 280,
+    "threshold": 0.0079925,
+    "left": {
+      "feature_index": 280,
+      "threshold": 0.0079575,
+      "left": {
+        "action_index": 1
+      },
+      "right": {
+        "feature_index": 281,
+        "threshold": 0.007975,
+        "left": {
+          "action_index": 5
+        },
+        "right": {
+          "action_index": 6
+        }
+      }
+    },
+    "right": {
+      "feature_index": 11,
+      "threshold": 0.02525,
+      "left": {
+        "action_index": 4
+      },
+      "right": {
+        "action_index": 2
+      }
+    }
+  },
+  "training_context_episode_ids": [
+    93494430,
+    93495340,
+    93496227,
+    93497123,
+    93498033,
+    93498936,
+    93499826,
+    93500721,
+    93501610,
+    93502507,
+    93503406,
+    93504316,
+    93505205,
+    93506095,
+    93506163,
+    93506985
+  ],
+  "validation_context_episode_ids": [
+    93480183,
+    93481053,
+    93481927,
+    93482814,
+    93483706,
+    93484593,
+    93485494,
+    93486381,
+    93487265,
+    93488158,
+    93488275,
+    93489034,
+    93489928
+  ],
+  "validation": {
+    "feature_steps": [
+      96,
+      163
+    ],
+    "config": {
+      "max_depth": 3,
+      "min_leaf": 2,
+      "margin_weight": 0.05,
+      "risk_coefficient": 0.25
+    },
+    "games": 13,
+    "wins": 11,
+    "draws": 0,
+    "losses": 2,
+    "win_rate": 0.8461538461538461,
+    "mean_margin": 9899.76923076923,
+    "worst_margin": -9205.0,
+    "cvar10_margin": -5451.5,
+    "actions": {
+      "93518562": 1,
+      "93520335": 2,
+      "93724855": 3,
+      "93546314": 5,
+      "93734648": 2
+    }
+  }
+}

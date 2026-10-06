@@ -1,0 +1,27 @@
+{
+  "common_prefix_step": 97,
+  "programs": [
+    {
+      "program_id": 393538238,
+      "name": "goal24-93538238-q12-stage2",
+      "segments": [
+        {"start_step": 0, "source_episode_id": 93816256},
+        {"start_step": 97, "source_episode_id": 93513211}
+      ],
+      "mutations": [
+        {
+          "kind": "remove_market_order",
+          "step": 197,
+          "order_index": 1,
+          "expected": ["BUY_SEED", "STRAWBERRY", 2]
+        },
+        {
+          "kind": "remove_market_order",
+          "step": 576,
+          "order_index": 0,
+          "expected": ["SELL", "FERTILIZER", 17]
+        }
+      ]
+    }
+  ]
+}

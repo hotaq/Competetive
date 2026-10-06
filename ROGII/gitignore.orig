@@ -1,0 +1,12 @@
+.DS_Store
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Kaggle data and generated artifacts
+data/raw/
+submissions/*.csv
+!submissions/.gitkeep
+

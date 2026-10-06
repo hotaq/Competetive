@@ -1,0 +1,1614 @@
+{
+  "candidate": "submissions/meta_v67_quantity_conserving_front_run_standalone/main.py",
+  "reference": "submissions/meta_v16_rc6_adaptive_market_standalone/main.py",
+  "configuration": {
+    "starting_seed": 27083001,
+    "paired_seeds": 12
+  },
+  "summary": {
+    "games": 24,
+    "median_starved": 59.0,
+    "min_starved": 51,
+    "max_starved": 190,
+    "median_ready": 591.0,
+    "min_ready": 457,
+    "max_ready": 608,
+    "median_ready_idle": 436.0,
+    "min_ready_idle": 314,
+    "max_ready_idle": 454,
+    "median_no_tile": 70.0,
+    "min_no_tile": 52,
+    "max_no_tile": 77,
+    "median_plant_tokens": 203.0,
+    "min_plant_tokens": 185,
+    "max_plant_tokens": 204,
+    "median_plants": 203.0,
+    "min_plants": 185,
+    "max_plants": 204,
+    "median_seeds_bought": 213.0,
+    "min_seeds_bought": 186,
+    "max_seeds_bought": 214,
+    "median_seed_zero": 60.0,
+    "min_seed_zero": 58,
+    "max_seed_zero": 208,
+    "median_margin": 9074.5,
+    "min_margin": -3525.0,
+    "max_margin": 20543.0,
+    "median_ready_idle_rate": 0.7377326565143824,
+    "median_starved_by_quarter": [
+      49.0,
+      2.0,
+      0.0,
+      0.0
+    ],
+    "median_plants_by_quarter": [
+      37.0,
+      56.0,
+      37.0,
+      74.0
+    ],
+    "all_complete": true
+  },
+  "games": [
+    {
+      "seed": 27083001,
+      "candidate_seat": 0,
+      "candidate_money": 51395.0,
+      "reference_money": 42388.0,
+      "margin": 9007.0,
+      "final_step": 719,
+      "starved": 51,
+      "starved_by_quarter": [
+        49,
+        2,
+        0,
+        0
+      ],
+      "ready": 591,
+      "ready_by_quarter": [
+        105,
+        178,
+        180,
+        128
+      ],
+      "ready_idle": 436,
+      "ready_idle_by_quarter": [
+        74,
+        137,
+        149,
+        76
+      ],
+      "no_tile": 77,
+      "no_tile_by_quarter": [
+        26,
+        0,
+        0,
+        51
+      ],
+      "plant_tokens": 204,
+      "plant_tokens_by_quarter": [
+        38,
+        55,
+        39,
+        72
+      ],
+      "plants": 204,
+      "plants_by_quarter": [
+        37,
+        56,
+        37,
+        74
+      ],
+      "seeds_bought": 214,
+      "seeds_bought_by_quarter": [
+        46,
+        58,
+        41,
+        69
+      ],
+      "seed_zero": 58,
+      "seed_zero_by_quarter": [
+        56,
+        2,
+        0,
+        0
+      ],
+      "ready_idle_rate": 0.7377326565143824
+    },
+    {
+      "seed": 27083001,
+      "candidate_seat": 1,
+      "candidate_money": 51395.0,
+      "reference_money": 42388.0,
+      "margin": 9007.0,
+      "final_step": 719,
+      "starved": 51,
+      "starved_by_quarter": [
+        49,
+        2,
+        0,
+        0
+      ],
+      "ready": 591,
+      "ready_by_quarter": [
+        105,
+        178,
+        180,
+        128
+      ],
+      "ready_idle": 436,
+      "ready_idle_by_quarter": [
+        74,
+        137,
+        149,
+        76
+      ],
+      "no_tile": 77,
+      "no_tile_by_quarter": [
+        26,
+        0,
+        0,
+        51
+      ],
+      "plant_tokens": 204,
+      "plant_tokens_by_quarter": [
+        38,
+        55,
+        39,
+        72
+      ],
+      "plants": 204,
+      "plants_by_quarter": [
+        37,
+        56,
+        37,
+        74
+      ],
+      "seeds_bought": 214,
+      "seeds_bought_by_quarter": [
+        46,
+        58,
+        41,
+        69
+      ],
+      "seed_zero": 58,
+      "seed_zero_by_quarter": [
+        56,
+        2,
+        0,
+        0
+      ],
+      "ready_idle_rate": 0.7377326565143824
+    },
+    {
+      "seed": 27083002,
+      "candidate_seat": 0,
+      "candidate_money": 107711.0,
+      "reference_money": 93073.0,
+      "margin": 14638.0,
+      "final_step": 719,
+      "starved": 51,
+      "starved_by_quarter": [
+        49,
+        2,
+        0,
+        0
+      ],
+      "ready": 591,
+      "ready_by_quarter": [
+        105,
+        178,
+        180,
+        128
+      ],
+      "ready_idle": 436,
+      "ready_idle_by_quarter": [
+        74,
+        137,
+        149,
+        76
+      ],
+      "no_tile": 77,
+      "no_tile_by_quarter": [
+        26,
+        0,
+        0,
+        51
+      ],
+      "plant_tokens": 204,
+      "plant_tokens_by_quarter": [
+        38,
+        55,
+        39,
+        72
+      ],
+      "plants": 204,
+      "plants_by_quarter": [
+        37,
+        56,
+        37,
+        74
+      ],
+      "seeds_bought": 214,
+      "seeds_bought_by_quarter": [
+        46,
+        58,
+        41,
+        69
+      ],
+      "seed_zero": 58,
+      "seed_zero_by_quarter": [
+        56,
+        2,
+        0,
+        0
+      ],
+      "ready_idle_rate": 0.7377326565143824
+    },
+    {
+      "seed": 27083002,
+      "candidate_seat": 1,
+      "candidate_money": 107711.0,
+      "reference_money": 93073.0,
+      "margin": 14638.0,
+      "final_step": 719,
+      "starved": 51,
+      "starved_by_quarter": [
+        49,
+        2,
+        0,
+        0
+      ],
+      "ready": 591,
+      "ready_by_quarter": [
+        105,
+        178,
+        180,
+        128
+      ],
+      "ready_idle": 436,
+      "ready_idle_by_quarter": [
+        74,
+        137,
+        149,
+        76
+      ],
+      "no_tile": 77,
+      "no_tile_by_quarter": [
+        26,
+        0,
+        0,
+        51
+      ],
+      "plant_tokens": 204,
+      "plant_tokens_by_quarter": [
+        38,
+        55,
+        39,
+        72
+      ],
+      "plants": 204,
+      "plants_by_quarter": [
+        37,
+        56,
+        37,
+        74
+      ],
+      "seeds_bought": 214,
+      "seeds_bought_by_quarter": [
+        46,
+        58,
+        41,
+        69
+      ],
+      "seed_zero": 58,
+      "seed_zero_by_quarter": [
+        56,
+        2,
+        0,
+        0
+      ],
+      "ready_idle_rate": 0.7377326565143824
+    },
+    {
+      "seed": 27083003,
+      "candidate_seat": 0,
+      "candidate_money": 119013.0,
+      "reference_money": 105620.0,
+      "margin": 13393.0,
+      "final_step": 719,
+      "starved": 190,
+      "starved_by_quarter": [
+        49,
+        40,
+        59,
+        42
+      ],
+      "ready": 459,
+      "ready_by_quarter": [
+        105,
+        140,
+        121,
+        93
+      ],
+      "ready_idle": 316,
+      "ready_idle_by_quarter": [
+        73,
+        110,
+        88,
+        45
+      ],
+      "no_tile": 70,
+      "no_tile_by_quarter": [
+        26,
+        0,
+        0,
+        44
+      ],
+      "plant_tokens": 185,
+      "plant_tokens_by_quarter": [
+        40,
+        38,
+        44,
+        63
+      ],
+      "plants": 185,
+      "plants_by_quarter": [
+        39,
+        39,
+        44,
+        63
+      ],
+      "seeds_bought": 186,
+      "seeds_bought_by_quarter": [
+        45,
+        34,
+        46,
+        61
+      ],
+      "seed_zero": 208,
+      "seed_zero_by_quarter": [
+        49,
+        40,
+        59,
+        60
+      ],
+      "ready_idle_rate": 0.6884531590413944
+    },
+    {
+      "seed": 27083003,
+      "candidate_seat": 1,
+      "candidate_money": 119013.0,
+      "reference_money": 105620.0,
+      "margin": 13393.0,
+      "final_step": 719,
+      "starved": 190,
+      "starved_by_quarter": [
+        49,
+        40,
+        59,
+        42
+      ],
+      "ready": 459,
+      "ready_by_quarter": [
+        105,
+        140,
+        121,
+        93
+      ],
+      "ready_idle": 316,
+      "ready_idle_by_quarter": [
+        73,
+        110,
+        88,
+        45
+      ],
+      "no_tile": 70,
+      "no_tile_by_quarter": [
+        26,
+        0,
+        0,
+        44
+      ],
+      "plant_tokens": 185,
+      "plant_tokens_by_quarter": [
+        40,
+        38,
+        44,
+        63
+      ],
+      "plants": 185,
+      "plants_by_quarter": [
+        39,
+        39,
+        44,
+        63
+      ],
+      "seeds_bought": 186,
+      "seeds_bought_by_quarter": [
+        45,
+        34,
+        46,
+        61
+      ],
+      "seed_zero": 208,
+      "seed_zero_by_quarter": [
+        49,
+        40,
+        59,
+        60
+      ],
+      "ready_idle_rate": 0.6884531590413944
+    },
+    {
+      "seed": 27083004,
+      "candidate_seat": 0,
+      "candidate_money": 95189.0,
+      "reference_money": 97394.0,
+      "margin": -2205.0,
+      "final_step": 719,
+      "starved": 59,
+      "starved_by_quarter": [
+        57,
+        2,
+        0,
+        0
+      ],
+      "ready": 608,
+      "ready_by_quarter": [
+        122,
+        178,
+        180,
+        128
+      ],
+      "ready_idle": 454,
+      "ready_idle_by_quarter": [
+        92,
+        137,
+        149,
+        76
+      ],
+      "no_tile": 52,
+      "no_tile_by_quarter": [
+        1,
+        0,
+        0,
+        51
+      ],
+      "plant_tokens": 203,
+      "plant_tokens_by_quarter": [
+        37,
+        55,
+        39,
+        72
+      ],
+      "plants": 203,
+      "plants_by_quarter": [
+        36,
+        56,
+        37,
+        74
+      ],
+      "seeds_bought": 213,
+      "seeds_bought_by_quarter": [
+        45,
+        58,
+        41,
+        69
+      ],
+      "seed_zero": 60,
+      "seed_zero_by_quarter": [
+        58,
+        2,
+        0,
+        0
+      ],
+      "ready_idle_rate": 0.7467105263157895
+    },
+    {
+      "seed": 27083004,
+      "candidate_seat": 1,
+      "candidate_money": 95189.0,
+      "reference_money": 97394.0,
+      "margin": -2205.0,
+      "final_step": 719,
+      "starved": 59,
+      "starved_by_quarter": [
+        57,
+        2,
+        0,
+        0
+      ],
+      "ready": 608,
+      "ready_by_quarter": [
+        122,
+        178,
+        180,
+        128
+      ],
+      "ready_idle": 454,
+      "ready_idle_by_quarter": [
+        92,
+        137,
+        149,
+        76
+      ],
+      "no_tile": 52,
+      "no_tile_by_quarter": [
+        1,
+        0,
+        0,
+        51
+      ],
+      "plant_tokens": 203,
+      "plant_tokens_by_quarter": [
+        37,
+        55,
+        39,
+        72
+      ],
+      "plants": 203,
+      "plants_by_quarter": [
+        36,
+        56,
+        37,
+        74
+      ],
+      "seeds_bought": 213,
+      "seeds_bought_by_quarter": [
+        45,
+        58,
+        41,
+        69
+      ],
+      "seed_zero": 60,
+      "seed_zero_by_quarter": [
+        58,
+        2,
+        0,
+        0
+      ],
+      "ready_idle_rate": 0.7467105263157895
+    },
+    {
+      "seed": 27083005,
+      "candidate_seat": 0,
+      "candidate_money": 52335.0,
+      "reference_money": 55739.0,
+      "margin": -3404.0,
+      "final_step": 719,
+      "starved": 59,
+      "starved_by_quarter": [
+        57,
+        2,
+        0,
+        0
+      ],
+      "ready": 608,
+      "ready_by_quarter": [
+        122,
+        178,
+        180,
+        128
+      ],
+      "ready_idle": 453,
+      "ready_idle_by_quarter": [
+        91,
+        137,
+        149,
+        76
+      ],
+      "no_tile": 52,
+      "no_tile_by_quarter": [
+        1,
+        0,
+        0,
+        51
+      ],
+      "plant_tokens": 203,
+      "plant_tokens_by_quarter": [
+        37,
+        55,
+        39,
+        72
+      ],
+      "plants": 203,
+      "plants_by_quarter": [
+        36,
+        56,
+        37,
+        74
+      ],
+      "seeds_bought": 213,
+      "seeds_bought_by_quarter": [
+        45,
+        58,
+        41,
+        69
+      ],
+      "seed_zero": 60,
+      "seed_zero_by_quarter": [
+        58,
+        2,
+        0,
+        0
+      ],
+      "ready_idle_rate": 0.7450657894736842
+    },
+    {
+      "seed": 27083005,
+      "candidate_seat": 1,
+      "candidate_money": 85045.0,
+      "reference_money": 85689.0,
+      "margin": -644.0,
+      "final_step": 719,
+      "starved": 59,
+      "starved_by_quarter": [
+        57,
+        2,
+        0,
+        0
+      ],
+      "ready": 608,
+      "ready_by_quarter": [
+        122,
+        178,
+        180,
+        128
+      ],
+      "ready_idle": 454,
+      "ready_idle_by_quarter": [
+        92,
+        137,
+        149,
+        76
+      ],
+      "no_tile": 52,
+      "no_tile_by_quarter": [
+        1,
+        0,
+        0,
+        51
+      ],
+      "plant_tokens": 203,
+      "plant_tokens_by_quarter": [
+        37,
+        55,
+        39,
+        72
+      ],
+      "plants": 203,
+      "plants_by_quarter": [
+        36,
+        56,
+        37,
+        74
+      ],
+      "seeds_bought": 213,
+      "seeds_bought_by_quarter": [
+        45,
+        58,
+        41,
+        69
+      ],
+      "seed_zero": 60,
+      "seed_zero_by_quarter": [
+        58,
+        2,
+        0,
+        0
+      ],
+      "ready_idle_rate": 0.7467105263157895
+    },
+    {
+      "seed": 27083006,
+      "candidate_seat": 0,
+      "candidate_money": 107559.0,
+      "reference_money": 87016.0,
+      "margin": 20543.0,
+      "final_step": 719,
+      "starved": 189,
+      "starved_by_quarter": [
+        49,
+        39,
+        59,
+        42
+      ],
+      "ready": 460,
+      "ready_by_quarter": [
+        105,
+        141,
+        121,
+        93
+      ],
+      "ready_idle": 315,
+      "ready_idle_by_quarter": [
+        73,
+        109,
+        88,
+        45
+      ],
+      "no_tile": 70,
+      "no_tile_by_quarter": [
+        26,
+        0,
+        0,
+        44
+      ],
+      "plant_tokens": 185,
+      "plant_tokens_by_quarter": [
+        40,
+        38,
+        44,
+        63
+      ],
+      "plants": 185,
+      "plants_by_quarter": [
+        39,
+        39,
+        44,
+        63
+      ],
+      "seeds_bought": 186,
+      "seeds_bought_by_quarter": [
+        45,
+        34,
+        46,
+        61
+      ],
+      "seed_zero": 207,
+      "seed_zero_by_quarter": [
+        49,
+        39,
+        59,
+        60
+      ],
+      "ready_idle_rate": 0.6847826086956522
+    },
+    {
+      "seed": 27083006,
+      "candidate_seat": 1,
+      "candidate_money": 118285.0,
+      "reference_money": 100378.0,
+      "margin": 17907.0,
+      "final_step": 719,
+      "starved": 189,
+      "starved_by_quarter": [
+        49,
+        39,
+        59,
+        42
+      ],
+      "ready": 460,
+      "ready_by_quarter": [
+        105,
+        141,
+        121,
+        93
+      ],
+      "ready_idle": 317,
+      "ready_idle_by_quarter": [
+        73,
+        111,
+        88,
+        45
+      ],
+      "no_tile": 70,
+      "no_tile_by_quarter": [
+        26,
+        0,
+        0,
+        44
+      ],
+      "plant_tokens": 185,
+      "plant_tokens_by_quarter": [
+        40,
+        38,
+        44,
+        63
+      ],
+      "plants": 185,
+      "plants_by_quarter": [
+        39,
+        39,
+        44,
+        63
+      ],
+      "seeds_bought": 186,
+      "seeds_bought_by_quarter": [
+        45,
+        34,
+        46,
+        61
+      ],
+      "seed_zero": 207,
+      "seed_zero_by_quarter": [
+        49,
+        39,
+        59,
+        60
+      ],
+      "ready_idle_rate": 0.6891304347826087
+    },
+    {
+      "seed": 27083007,
+      "candidate_seat": 0,
+      "candidate_money": 116169.0,
+      "reference_money": 99782.0,
+      "margin": 16387.0,
+      "final_step": 719,
+      "starved": 190,
+      "starved_by_quarter": [
+        49,
+        40,
+        59,
+        42
+      ],
+      "ready": 459,
+      "ready_by_quarter": [
+        105,
+        140,
+        121,
+        93
+      ],
+      "ready_idle": 316,
+      "ready_idle_by_quarter": [
+        73,
+        110,
+        88,
+        45
+      ],
+      "no_tile": 70,
+      "no_tile_by_quarter": [
+        26,
+        0,
+        0,
+        44
+      ],
+      "plant_tokens": 185,
+      "plant_tokens_by_quarter": [
+        40,
+        38,
+        44,
+        63
+      ],
+      "plants": 185,
+      "plants_by_quarter": [
+        39,
+        39,
+        44,
+        63
+      ],
+      "seeds_bought": 186,
+      "seeds_bought_by_quarter": [
+        45,
+        34,
+        46,
+        61
+      ],
+      "seed_zero": 208,
+      "seed_zero_by_quarter": [
+        49,
+        40,
+        59,
+        60
+      ],
+      "ready_idle_rate": 0.6884531590413944
+    },
+    {
+      "seed": 27083007,
+      "candidate_seat": 1,
+      "candidate_money": 113745.0,
+      "reference_money": 94236.0,
+      "margin": 19509.0,
+      "final_step": 719,
+      "starved": 190,
+      "starved_by_quarter": [
+        49,
+        40,
+        59,
+        42
+      ],
+      "ready": 457,
+      "ready_by_quarter": [
+        105,
+        138,
+        121,
+        93
+      ],
+      "ready_idle": 314,
+      "ready_idle_by_quarter": [
+        73,
+        108,
+        88,
+        45
+      ],
+      "no_tile": 72,
+      "no_tile_by_quarter": [
+        26,
+        2,
+        0,
+        44
+      ],
+      "plant_tokens": 185,
+      "plant_tokens_by_quarter": [
+        40,
+        38,
+        44,
+        63
+      ],
+      "plants": 185,
+      "plants_by_quarter": [
+        39,
+        39,
+        44,
+        63
+      ],
+      "seeds_bought": 186,
+      "seeds_bought_by_quarter": [
+        45,
+        34,
+        46,
+        61
+      ],
+      "seed_zero": 208,
+      "seed_zero_by_quarter": [
+        49,
+        40,
+        59,
+        60
+      ],
+      "ready_idle_rate": 0.687089715536105
+    },
+    {
+      "seed": 27083008,
+      "candidate_seat": 0,
+      "candidate_money": 62725.0,
+      "reference_money": 66250.0,
+      "margin": -3525.0,
+      "final_step": 719,
+      "starved": 59,
+      "starved_by_quarter": [
+        57,
+        2,
+        0,
+        0
+      ],
+      "ready": 608,
+      "ready_by_quarter": [
+        122,
+        178,
+        180,
+        128
+      ],
+      "ready_idle": 454,
+      "ready_idle_by_quarter": [
+        92,
+        137,
+        149,
+        76
+      ],
+      "no_tile": 52,
+      "no_tile_by_quarter": [
+        1,
+        0,
+        0,
+        51
+      ],
+      "plant_tokens": 203,
+      "plant_tokens_by_quarter": [
+        37,
+        55,
+        39,
+        72
+      ],
+      "plants": 203,
+      "plants_by_quarter": [
+        36,
+        56,
+        37,
+        74
+      ],
+      "seeds_bought": 213,
+      "seeds_bought_by_quarter": [
+        45,
+        58,
+        41,
+        69
+      ],
+      "seed_zero": 60,
+      "seed_zero_by_quarter": [
+        58,
+        2,
+        0,
+        0
+      ],
+      "ready_idle_rate": 0.7467105263157895
+    },
+    {
+      "seed": 27083008,
+      "candidate_seat": 1,
+      "candidate_money": 62725.0,
+      "reference_money": 66250.0,
+      "margin": -3525.0,
+      "final_step": 719,
+      "starved": 59,
+      "starved_by_quarter": [
+        57,
+        2,
+        0,
+        0
+      ],
+      "ready": 608,
+      "ready_by_quarter": [
+        122,
+        178,
+        180,
+        128
+      ],
+      "ready_idle": 454,
+      "ready_idle_by_quarter": [
+        92,
+        137,
+        149,
+        76
+      ],
+      "no_tile": 52,
+      "no_tile_by_quarter": [
+        1,
+        0,
+        0,
+        51
+      ],
+      "plant_tokens": 203,
+      "plant_tokens_by_quarter": [
+        37,
+        55,
+        39,
+        72
+      ],
+      "plants": 203,
+      "plants_by_quarter": [
+        36,
+        56,
+        37,
+        74
+      ],
+      "seeds_bought": 213,
+      "seeds_bought_by_quarter": [
+        45,
+        58,
+        41,
+        69
+      ],
+      "seed_zero": 60,
+      "seed_zero_by_quarter": [
+        58,
+        2,
+        0,
+        0
+      ],
+      "ready_idle_rate": 0.7467105263157895
+    },
+    {
+      "seed": 27083009,
+      "candidate_seat": 0,
+      "candidate_money": 118525.0,
+      "reference_money": 113330.0,
+      "margin": 5195.0,
+      "final_step": 719,
+      "starved": 190,
+      "starved_by_quarter": [
+        49,
+        40,
+        59,
+        42
+      ],
+      "ready": 459,
+      "ready_by_quarter": [
+        105,
+        140,
+        121,
+        93
+      ],
+      "ready_idle": 317,
+      "ready_idle_by_quarter": [
+        73,
+        110,
+        88,
+        46
+      ],
+      "no_tile": 70,
+      "no_tile_by_quarter": [
+        26,
+        0,
+        0,
+        44
+      ],
+      "plant_tokens": 185,
+      "plant_tokens_by_quarter": [
+        40,
+        38,
+        44,
+        63
+      ],
+      "plants": 185,
+      "plants_by_quarter": [
+        39,
+        39,
+        44,
+        63
+      ],
+      "seeds_bought": 186,
+      "seeds_bought_by_quarter": [
+        45,
+        34,
+        46,
+        61
+      ],
+      "seed_zero": 208,
+      "seed_zero_by_quarter": [
+        49,
+        40,
+        59,
+        60
+      ],
+      "ready_idle_rate": 0.690631808278867
+    },
+    {
+      "seed": 27083009,
+      "candidate_seat": 1,
+      "candidate_money": 118525.0,
+      "reference_money": 113330.0,
+      "margin": 5195.0,
+      "final_step": 719,
+      "starved": 190,
+      "starved_by_quarter": [
+        49,
+        40,
+        59,
+        42
+      ],
+      "ready": 459,
+      "ready_by_quarter": [
+        105,
+        140,
+        121,
+        93
+      ],
+      "ready_idle": 316,
+      "ready_idle_by_quarter": [
+        73,
+        110,
+        88,
+        45
+      ],
+      "no_tile": 70,
+      "no_tile_by_quarter": [
+        26,
+        0,
+        0,
+        44
+      ],
+      "plant_tokens": 185,
+      "plant_tokens_by_quarter": [
+        40,
+        38,
+        44,
+        63
+      ],
+      "plants": 185,
+      "plants_by_quarter": [
+        39,
+        39,
+        44,
+        63
+      ],
+      "seeds_bought": 186,
+      "seeds_bought_by_quarter": [
+        45,
+        34,
+        46,
+        61
+      ],
+      "seed_zero": 208,
+      "seed_zero_by_quarter": [
+        49,
+        40,
+        59,
+        60
+      ],
+      "ready_idle_rate": 0.6884531590413944
+    },
+    {
+      "seed": 27083010,
+      "candidate_seat": 0,
+      "candidate_money": 131332.0,
+      "reference_money": 122190.0,
+      "margin": 9142.0,
+      "final_step": 719,
+      "starved": 51,
+      "starved_by_quarter": [
+        49,
+        2,
+        0,
+        0
+      ],
+      "ready": 591,
+      "ready_by_quarter": [
+        105,
+        178,
+        180,
+        128
+      ],
+      "ready_idle": 436,
+      "ready_idle_by_quarter": [
+        74,
+        137,
+        149,
+        76
+      ],
+      "no_tile": 77,
+      "no_tile_by_quarter": [
+        26,
+        0,
+        0,
+        51
+      ],
+      "plant_tokens": 204,
+      "plant_tokens_by_quarter": [
+        38,
+        55,
+        39,
+        72
+      ],
+      "plants": 204,
+      "plants_by_quarter": [
+        37,
+        56,
+        37,
+        74
+      ],
+      "seeds_bought": 214,
+      "seeds_bought_by_quarter": [
+        46,
+        58,
+        41,
+        69
+      ],
+      "seed_zero": 58,
+      "seed_zero_by_quarter": [
+        56,
+        2,
+        0,
+        0
+      ],
+      "ready_idle_rate": 0.7377326565143824
+    },
+    {
+      "seed": 27083010,
+      "candidate_seat": 1,
+      "candidate_money": 131332.0,
+      "reference_money": 122190.0,
+      "margin": 9142.0,
+      "final_step": 719,
+      "starved": 51,
+      "starved_by_quarter": [
+        49,
+        2,
+        0,
+        0
+      ],
+      "ready": 591,
+      "ready_by_quarter": [
+        105,
+        178,
+        180,
+        128
+      ],
+      "ready_idle": 436,
+      "ready_idle_by_quarter": [
+        74,
+        137,
+        149,
+        76
+      ],
+      "no_tile": 77,
+      "no_tile_by_quarter": [
+        26,
+        0,
+        0,
+        51
+      ],
+      "plant_tokens": 204,
+      "plant_tokens_by_quarter": [
+        38,
+        55,
+        39,
+        72
+      ],
+      "plants": 204,
+      "plants_by_quarter": [
+        37,
+        56,
+        37,
+        74
+      ],
+      "seeds_bought": 214,
+      "seeds_bought_by_quarter": [
+        46,
+        58,
+        41,
+        69
+      ],
+      "seed_zero": 58,
+      "seed_zero_by_quarter": [
+        56,
+        2,
+        0,
+        0
+      ],
+      "ready_idle_rate": 0.7377326565143824
+    },
+    {
+      "seed": 27083011,
+      "candidate_seat": 0,
+      "candidate_money": 100399.0,
+      "reference_money": 103761.0,
+      "margin": -3362.0,
+      "final_step": 719,
+      "starved": 59,
+      "starved_by_quarter": [
+        57,
+        2,
+        0,
+        0
+      ],
+      "ready": 608,
+      "ready_by_quarter": [
+        122,
+        178,
+        180,
+        128
+      ],
+      "ready_idle": 454,
+      "ready_idle_by_quarter": [
+        92,
+        137,
+        149,
+        76
+      ],
+      "no_tile": 52,
+      "no_tile_by_quarter": [
+        1,
+        0,
+        0,
+        51
+      ],
+      "plant_tokens": 203,
+      "plant_tokens_by_quarter": [
+        37,
+        55,
+        39,
+        72
+      ],
+      "plants": 203,
+      "plants_by_quarter": [
+        36,
+        56,
+        37,
+        74
+      ],
+      "seeds_bought": 213,
+      "seeds_bought_by_quarter": [
+        45,
+        58,
+        41,
+        69
+      ],
+      "seed_zero": 60,
+      "seed_zero_by_quarter": [
+        58,
+        2,
+        0,
+        0
+      ],
+      "ready_idle_rate": 0.7467105263157895
+    },
+    {
+      "seed": 27083011,
+      "candidate_seat": 1,
+      "candidate_money": 100399.0,
+      "reference_money": 103761.0,
+      "margin": -3362.0,
+      "final_step": 719,
+      "starved": 59,
+      "starved_by_quarter": [
+        57,
+        2,
+        0,
+        0
+      ],
+      "ready": 608,
+      "ready_by_quarter": [
+        122,
+        178,
+        180,
+        128
+      ],
+      "ready_idle": 454,
+      "ready_idle_by_quarter": [
+        92,
+        137,
+        149,
+        76
+      ],
+      "no_tile": 52,
+      "no_tile_by_quarter": [
+        1,
+        0,
+        0,
+        51
+      ],
+      "plant_tokens": 203,
+      "plant_tokens_by_quarter": [
+        37,
+        55,
+        39,
+        72
+      ],
+      "plants": 203,
+      "plants_by_quarter": [
+        36,
+        56,
+        37,
+        74
+      ],
+      "seeds_bought": 213,
+      "seeds_bought_by_quarter": [
+        45,
+        58,
+        41,
+        69
+      ],
+      "seed_zero": 60,
+      "seed_zero_by_quarter": [
+        58,
+        2,
+        0,
+        0
+      ],
+      "ready_idle_rate": 0.7467105263157895
+    },
+    {
+      "seed": 27083012,
+      "candidate_seat": 0,
+      "candidate_money": 127846.0,
+      "reference_money": 112398.0,
+      "margin": 15448.0,
+      "final_step": 719,
+      "starved": 59,
+      "starved_by_quarter": [
+        57,
+        2,
+        0,
+        0
+      ],
+      "ready": 608,
+      "ready_by_quarter": [
+        122,
+        178,
+        180,
+        128
+      ],
+      "ready_idle": 454,
+      "ready_idle_by_quarter": [
+        92,
+        137,
+        149,
+        76
+      ],
+      "no_tile": 52,
+      "no_tile_by_quarter": [
+        1,
+        0,
+        0,
+        51
+      ],
+      "plant_tokens": 203,
+      "plant_tokens_by_quarter": [
+        37,
+        55,
+        39,
+        72
+      ],
+      "plants": 203,
+      "plants_by_quarter": [
+        36,
+        56,
+        37,
+        74
+      ],
+      "seeds_bought": 213,
+      "seeds_bought_by_quarter": [
+        45,
+        58,
+        41,
+        69
+      ],
+      "seed_zero": 60,
+      "seed_zero_by_quarter": [
+        58,
+        2,
+        0,
+        0
+      ],
+      "ready_idle_rate": 0.7467105263157895
+    },
+    {
+      "seed": 27083012,
+      "candidate_seat": 1,
+      "candidate_money": 127846.0,
+      "reference_money": 112398.0,
+      "margin": 15448.0,
+      "final_step": 719,
+      "starved": 59,
+      "starved_by_quarter": [
+        57,
+        2,
+        0,
+        0
+      ],
+      "ready": 608,
+      "ready_by_quarter": [
+        122,
+        178,
+        180,
+        128
+      ],
+      "ready_idle": 454,
+      "ready_idle_by_quarter": [
+        92,
+        137,
+        149,
+        76
+      ],
+      "no_tile": 52,
+      "no_tile_by_quarter": [
+        1,
+        0,
+        0,
+        51
+      ],
+      "plant_tokens": 203,
+      "plant_tokens_by_quarter": [
+        37,
+        55,
+        39,
+        72
+      ],
+      "plants": 203,
+      "plants_by_quarter": [
+        36,
+        56,
+        37,
+        74
+      ],
+      "seeds_bought": 213,
+      "seeds_bought_by_quarter": [
+        45,
+        58,
+        41,
+        69
+      ],
+      "seed_zero": 60,
+      "seed_zero_by_quarter": [
+        58,
+        2,
+        0,
+        0
+      ],
+      "ready_idle_rate": 0.7467105263157895
+    }
+  ]
+}

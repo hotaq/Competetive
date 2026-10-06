@@ -1,0 +1,98 @@
+{
+  "agent_file": "submissions/meta_v59_causal_route_selector_b120_local/main.py",
+  "episodes": 1,
+  "total_steps": 719,
+  "exact_steps": 556,
+  "exact_rate": 0.7732962447844228,
+  "exact_episodes": 0,
+  "rows": [
+    {
+      "episode_id": 100159725,
+      "steps": 719,
+      "exact_steps": 556,
+      "exact_rate": 0.7732962447844228,
+      "first_mismatch": {
+        "step": 157,
+        "component": "market",
+        "expected": {
+          "farmer": [
+            "PLACE",
+            "FERTILIZER",
+            2
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "HARVEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              4
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              4
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "PLACE",
+            "FERTILIZER",
+            2
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "HARVEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              2
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              4
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "name": "meta_v17_land120_wheat15_standalone",
+  "agent_file": "submissions/meta_v17_land120_wheat15_standalone/main.py",
+  "sha256": "544d5608aa6adc67efd23db29dcbf5f1b554c71e046b4c54156476eb5c04c378",
+  "base": {
+    "agent_file": "submissions/meta_v16_rc6_adaptive_market_standalone/main.py",
+    "sha256": "c8afcbb8f90861cd92131012146e573752820b80fbd939ace3c7503aea83cd5e"
+  },
+  "opening": {
+    "reference_replay": "analysis/top1_ryo_20260823_current/97619249.json",
+    "reference_replay_sha256": "d5cfd1ba294a9833c4ac0ae2a160edcc3982dfdbca7179a097db3db26ad83ab9",
+    "reference_seat": 0,
+    "decision_steps": [],
+    "action_count": 0,
+    "actions_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "verified_episode_ids": []
+  },
+  "land": {
+    "decision_step": 120,
+    "replay_frame": 121,
+    "replaces_base_first_land": true,
+    "funding_wheat_sale": 15
+  }
+}

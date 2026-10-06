@@ -1,0 +1,41 @@
+{
+  "classes": [
+    0,
+    1
+  ],
+  "rows": 10000,
+  "features": 30,
+  "candidates": [
+    {
+      "file": "candidate_blend_top4.csv",
+      "name": "blend_top4",
+      "oof_auc": 0.869456
+    },
+    {
+      "file": "candidate_blend_top3.csv",
+      "name": "blend_top3",
+      "oof_auc": 0.868984
+    },
+    {
+      "file": "candidate_blend_pair.csv",
+      "name": "blend_pair",
+      "oof_auc": 0.86576
+    },
+    {
+      "file": "candidate_catboost_d8.csv",
+      "name": "catboost_d8",
+      "oof_auc": 0.863568
+    },
+    {
+      "file": "candidate_catboost_d6.csv",
+      "name": "catboost_d6",
+      "oof_auc": 0.860576
+    },
+    {
+      "file": "candidate_logistic.csv",
+      "name": "logistic",
+      "oof_auc": 0.841696
+    }
+  ],
+  "failures": []
+}

@@ -1,0 +1,54 @@
+{
+  "alpha": 0.6,
+  "teacher": "raptor_ft_coatnet_v4_full.pt, all series-safe windows (E037 A1 + E038 B4)",
+  "teacher_calibration": "per-target quantile map onto consensus marginal (fit on the 4,349 train studies)",
+  "rows": 4407,
+  "refined_rows": 4349,
+  "gold58_mix_auc": 0.9281608244306335,
+  "mean_abs_shift_per_target": {
+    "ACL": 0.0622,
+    "MCL": 0.0681,
+    "Medial Meniscus": 0.072,
+    "Lateral Meniscus": 0.0584,
+    "Medial OA": 0.0904,
+    "Lateral OA": 0.0939,
+    "PF OA": 0.0982,
+    "Effusion": 0.1177,
+    "Synovitis": 0.083,
+    "Baker's": 0.0799,
+    "Contusion": 0.077,
+    "Fracture": 0.0585
+  },
+  "prevalence_consensus": {
+    "ACL": 0.2537,
+    "MCL": 0.1902,
+    "Medial Meniscus": 0.4675,
+    "Lateral Meniscus": 0.2413,
+    "Medial OA": 0.4046,
+    "Lateral OA": 0.324,
+    "PF OA": 0.4742,
+    "Effusion": 0.5554,
+    "Synovitis": 0.5534,
+    "Baker's": 0.3528,
+    "Contusion": 0.2806,
+    "Fracture": 0.2014
+  },
+  "prevalence_refined": {
+    "ACL": 0.2536,
+    "MCL": 0.1901,
+    "Medial Meniscus": 0.4675,
+    "Lateral Meniscus": 0.2412,
+    "Medial OA": 0.4045,
+    "Lateral OA": 0.3239,
+    "PF OA": 0.4741,
+    "Effusion": 0.5553,
+    "Synovitis": 0.5533,
+    "Baker's": 0.3527,
+    "Contusion": 0.2805,
+    "Fracture": 0.2013
+  },
+  "sha256": {
+    "labels_e041_refined.parquet": "4fff4ad285698ce22c72962f02c70c39dddb683c4b46cc715cca2816bd0b6933",
+    "labels_e041_control.parquet": "cbfec70a0cbefb378607bd230e39675462a41e3d9262d1bdb2530998fc0c0cfb"
+  }
+}

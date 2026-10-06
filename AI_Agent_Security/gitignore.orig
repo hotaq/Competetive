@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+.aicomp/
+
+# Competition data and generated artifacts
+data/raw/kaggle/*
+!data/raw/kaggle/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+experiments/*
+!experiments/.gitkeep
+submissions/*
+!submissions/.gitkeep
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Models and large archives
+*.gguf
+*.safetensors
+*.zip
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+kaggle.json
+
+# OS/editor
+.DS_Store
+.idea/
+.vscode/

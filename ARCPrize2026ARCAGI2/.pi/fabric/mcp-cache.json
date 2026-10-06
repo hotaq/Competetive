@@ -1,0 +1,1512 @@
+{
+  "version": 1,
+  "layers": [],
+  "updatedAt": "2026-09-08T16:36:00.685Z",
+  "servers": {
+    "gitnexus": {
+      "definitionHash": "d6db0ae6cd109158898d8e6811253f822949de673356704bb92a8fa5501bcd50",
+      "transport": "stdio",
+      "description": null,
+      "fetchedAt": "2026-09-08T16:35:36.769Z",
+      "stale": false,
+      "tools": [
+        {
+          "name": "list_repos",
+          "description": "List all indexed repositories available to GitNexus.\n\nReturns each repo's name, path, indexed date, last commit, and stats.\n\nWHEN TO USE: First step when multiple repos are indexed, or to discover available repos.\nAFTER THIS: READ gitnexus://repo/{name}/context for the repo you want to work with.\n\nWhen multiple repos are indexed, you MUST specify the \"repo\" parameter\non other tools (query, context, impact, etc.) to target the correct one.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        {
+          "name": "query",
+          "description": "Query the code knowledge graph for execution flows related to a concept.\nReturns processes (call chains) ranked by relevance, each with its symbols and file locations.\n\nWHEN TO USE: Understanding how code works together. Use this when you need execution flows and relationships, not just file matches. Complements grep/IDE search.\nAFTER THIS: Use context() on a specific symbol for 360-degree view (callers, callees, categorized refs).\n\nReturns results grouped by process (execution flow):\n- processes: ranked execution flows with relevance priority\n- process_symbols: all symbols in those flows with file locations and module (functional area)\n- definitions: standalone types/interfaces not in any process\n\nHybrid ranking: BM25 keyword + semantic vector search, ranked by Reciprocal Rank Fusion.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "query": {
+                "type": "string",
+                "description": "Natural language or keyword search query"
+              },
+              "task_context": {
+                "type": "string",
+                "description": "What you are working on (e.g., \"adding OAuth support\"). Helps ranking."
+              },
+              "goal": {
+                "type": "string",
+                "description": "What you want to find (e.g., \"existing auth validation logic\"). Helps ranking."
+              },
+              "limit": {
+                "type": "number",
+                "description": "Max processes to return (default: 5)",
+                "default": 5
+              },
+              "max_symbols": {
+                "type": "number",
+                "description": "Max symbols per process (default: 10)",
+                "default": 10
+              },
+              "include_content": {
+                "type": "boolean",
+                "description": "Include full symbol source code (default: false)",
+                "default": false
+              },
+              "repo": {
+                "type": "string",
+                "description": "Repository name or path. Omit if only one repo is indexed."
+              }
+            },
+            "required": [
+              "query"
+            ]
+          }
+        },
+        {
+          "name": "cypher",
+          "description": "Execute Cypher query against the code knowledge graph.\n\nWHEN TO USE: Complex structural queries that search/explore can't answer. READ gitnexus://repo/{name}/schema first for the full schema.\nAFTER THIS: Use context() on result symbols for deeper context.\n\nSCHEMA:\n- Nodes: File, Folder, Function, Class, Interface, Method, CodeElement, Community, Process, Route, Tool\n- Multi-language nodes (use backticks): `Struct`, `Enum`, `Trait`, `Impl`, etc.\n- All edges via single CodeRelation table with 'type' property\n- Edge types: CONTAINS, DEFINES, CALLS, IMPORTS, EXTENDS, IMPLEMENTS, HAS_METHOD, HAS_PROPERTY, ACCESSES, METHOD_OVERRIDES, METHOD_IMPLEMENTS, MEMBER_OF, STEP_IN_PROCESS, HANDLES_ROUTE, FETCHES, HANDLES_TOOL, ENTRY_POINT_OF\n- Edge properties: type (STRING), confidence (DOUBLE), reason (STRING), step (INT32)\n\nEXAMPLES:\n• Find callers of a function:\n  MATCH (a)-[:CodeRelation {type: 'CALLS'}]->(b:Function {name: \"validateUser\"}) RETURN a.name, a.filePath\n\n• Find community members:\n  MATCH (f)-[:CodeRelation {type: 'MEMBER_OF'}]->(c:Community) WHERE c.heuristicLabel = \"Auth\" RETURN f.name\n\n• Trace a process:\n  MATCH (s)-[r:CodeRelation {type: 'STEP_IN_PROCESS'}]->(p:Process) WHERE p.heuristicLabel = \"UserLogin\" RETURN s.name, r.step ORDER BY r.step\n\n• Find all methods of a class:\n  MATCH (c:Class {name: \"UserService\"})-[r:CodeRelation {type: 'HAS_METHOD'}]->(m:Method) RETURN m.name, m.parameterCount, m.returnType\n\n• Find all properties of a class:\n  MATCH (c:Class {name: \"User\"})-[r:CodeRelation {type: 'HAS_PROPERTY'}]->(p:Property) RETURN p.name, p.declaredType\n\n• Find all writers of a field:\n  MATCH (f:Function)-[r:CodeRelation {type: 'ACCESSES', reason: 'write'}]->(p:Property) WHERE p.name = \"address\" RETURN f.name, f.filePath\n\n• Find method overrides (MRO resolution):\n  MATCH (winner:Method)-[r:CodeRelation {type: 'METHOD_OVERRIDES'}]->(loser:Method) RETURN winner.name, winner.filePath, loser.filePath, r.reason\n\n• Detect diamond inheritance:\n  MATCH (d:Class)-[:CodeRelation {type: 'EXTENDS'}]->(b1), (d)-[:CodeRelation {type: 'EXTENDS'}]->(b2), (b1)-[:CodeRelation {type: 'EXTENDS'}]->(a), (b2)-[:CodeRelation {type: 'EXTENDS'}]->(a) WHERE b1 <> b2 RETURN d.name, b1.name, b2.name, a.name\n\nOUTPUT: Returns { markdown, row_count } — results formatted as a Markdown table for easy reading.\n\nTIPS:\n- All relationships use single CodeRelation table — filter with {type: 'CALLS'} etc.\n- Community = auto-detected functional area (Leiden algorithm). Properties: heuristicLabel, cohesion, symbolCount, keywords, description, enrichedBy\n- Process = execution flow trace from entry point to terminal. Properties: heuristicLabel, processType, stepCount, communities, entryPointId, terminalId\n- Use heuristicLabel (not label) for human-readable community/process names",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "query": {
+                "type": "string",
+                "description": "Cypher query to execute"
+              },
+              "repo": {
+                "type": "string",
+                "description": "Repository name or path. Omit if only one repo is indexed."
+              }
+            },
+            "required": [
+              "query"
+            ]
+          }
+        },
+        {
+          "name": "context",
+          "description": "360-degree view of a single code symbol.\nShows categorized incoming/outgoing references (calls, imports, extends, implements, methods, properties, overrides), process participation, and file location.\n\nWHEN TO USE: After query() to understand a specific symbol in depth. When you need to know all callers, callees, and what execution flows a symbol participates in.\nAFTER THIS: Use impact() if planning changes, or READ gitnexus://repo/{name}/process/{processName} for full execution trace.\n\nHandles disambiguation: if multiple symbols share the same name, returns candidates for you to pick from. Use uid param for zero-ambiguity lookup from prior results.\n\nNOTE: ACCESSES edges (field read/write tracking) are included in context results with reason 'read' or 'write'. CALLS edges resolve through field access chains and method-call chains (e.g., user.address.getCity().save() produces CALLS edges at each step).",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Symbol name (e.g., \"validateUser\", \"AuthService\")"
+              },
+              "uid": {
+                "type": "string",
+                "description": "Direct symbol UID from prior tool results (zero-ambiguity lookup)"
+              },
+              "file_path": {
+                "type": "string",
+                "description": "File path to disambiguate common names"
+              },
+              "include_content": {
+                "type": "boolean",
+                "description": "Include full symbol source code (default: false)",
+                "default": false
+              },
+              "repo": {
+                "type": "string",
+                "description": "Repository name or path. Omit if only one repo is indexed."
+              }
+            },
+            "required": []
+          }
+        },
+        {
+          "name": "detect_changes",
+          "description": "Analyze uncommitted git changes and find affected execution flows.\nMaps git diff hunks to indexed symbols, then traces which processes are impacted.\n\nWHEN TO USE: Before committing — to understand what your changes affect. Pre-commit review, PR preparation.\nAFTER THIS: Review affected processes. Use context() on high-risk symbols. READ gitnexus://repo/{name}/process/{name} for full traces.\n\nReturns: changed symbols, affected processes, and a risk summary.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "scope": {
+                "type": "string",
+                "description": "What to analyze: \"unstaged\" (default), \"staged\", \"all\", or \"compare\"",
+                "enum": [
+                  "unstaged",
+                  "staged",
+                  "all",
+                  "compare"
+                ],
+                "default": "unstaged"
+              },
+              "base_ref": {
+                "type": "string",
+                "description": "Branch/commit for \"compare\" scope (e.g., \"main\")"
+              },
+              "repo": {
+                "type": "string",
+                "description": "Repository name or path. Omit if only one repo is indexed."
+              }
+            },
+            "required": []
+          }
+        },
+        {
+          "name": "rename",
+          "description": "Multi-file coordinated rename using the knowledge graph + text search.\nFinds all references via graph (high confidence) and regex text search (lower confidence). Preview by default.\n\nWHEN TO USE: Renaming a function, class, method, or variable across the codebase. Safer than find-and-replace.\nAFTER THIS: Run detect_changes() to verify no unexpected side effects.\n\nEach edit is tagged with confidence:\n- \"graph\": found via knowledge graph relationships (high confidence, safe to accept)\n- \"text_search\": found via regex text search (lower confidence, review carefully)",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "symbol_name": {
+                "type": "string",
+                "description": "Current symbol name to rename"
+              },
+              "symbol_uid": {
+                "type": "string",
+                "description": "Direct symbol UID from prior tool results (zero-ambiguity)"
+              },
+              "new_name": {
+                "type": "string",
+                "description": "The new name for the symbol"
+              },
+              "file_path": {
+                "type": "string",
+                "description": "File path to disambiguate common names"
+              },
+              "dry_run": {
+                "type": "boolean",
+                "description": "Preview edits without modifying files (default: true)",
+                "default": true
+              },
+              "repo": {
+                "type": "string",
+                "description": "Repository name or path. Omit if only one repo is indexed."
+              }
+            },
+            "required": [
+              "new_name"
+            ]
+          }
+        },
+        {
+          "name": "impact",
+          "description": "Analyze the blast radius of changing a code symbol.\nReturns affected symbols grouped by depth, plus risk assessment, affected execution flows, and affected modules.\n\nWHEN TO USE: Before making code changes — especially refactoring, renaming, or modifying shared code. Shows what would break.\nAFTER THIS: Review d=1 items (WILL BREAK). Use context() on high-risk symbols.\n\nOutput includes:\n- risk: LOW / MEDIUM / HIGH / CRITICAL\n- summary: direct callers, processes affected, modules affected\n- affected_processes: which execution flows break and at which step\n- affected_modules: which functional areas are hit (direct vs indirect)\n- byDepth: all affected symbols grouped by traversal depth\n\nDepth groups:\n- d=1: WILL BREAK (direct callers/importers)\n- d=2: LIKELY AFFECTED (indirect)\n- d=3: MAY NEED TESTING (transitive)\n\nTIP: Default traversal uses CALLS/IMPORTS/EXTENDS/IMPLEMENTS. For class members, include HAS_METHOD and HAS_PROPERTY in relationTypes. For field access analysis, include ACCESSES in relationTypes.\n\nEdgeType: CALLS, IMPORTS, EXTENDS, IMPLEMENTS, HAS_METHOD, HAS_PROPERTY, METHOD_OVERRIDES, METHOD_IMPLEMENTS, ACCESSES\nConfidence: 1.0 = certain, <0.8 = fuzzy match",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "target": {
+                "type": "string",
+                "description": "Name of function, class, or file to analyze"
+              },
+              "direction": {
+                "type": "string",
+                "description": "upstream (what depends on this) or downstream (what this depends on)"
+              },
+              "maxDepth": {
+                "type": "number",
+                "description": "Max relationship depth (default: 3)",
+                "default": 3
+              },
+              "relationTypes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Filter: CALLS, IMPORTS, EXTENDS, IMPLEMENTS, HAS_METHOD, HAS_PROPERTY, METHOD_OVERRIDES, METHOD_IMPLEMENTS, ACCESSES (default: usage-based, ACCESSES excluded by default)"
+              },
+              "includeTests": {
+                "type": "boolean",
+                "description": "Include test files (default: false)"
+              },
+              "minConfidence": {
+                "type": "number",
+                "description": "Minimum confidence 0-1 (default: 0.7)"
+              },
+              "repo": {
+                "type": "string",
+                "description": "Repository name or path. Omit if only one repo is indexed."
+              }
+            },
+            "required": [
+              "target",
+              "direction"
+            ]
+          }
+        },
+        {
+          "name": "route_map",
+          "description": "Show API route mappings: which components/hooks fetch which API endpoints, and which handler files serve them.\n\nWHEN TO USE: Understanding API consumption patterns, finding orphaned routes. For pre-change analysis, prefer `api_impact` which combines this data with mismatch detection and risk assessment.\nAFTER THIS: Use impact() on specific route handlers to see full blast radius.\n\nReturns: route nodes with their handlers, middleware wrapper chains (e.g., withAuth, withRateLimit), and consumers.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "route": {
+                "type": "string",
+                "description": "Filter by route path (e.g., \"/api/grants\"). Omit for all routes."
+              },
+              "repo": {
+                "type": "string",
+                "description": "Repository name or path. Omit if only one repo is indexed."
+              }
+            },
+            "required": []
+          }
+        },
+        {
+          "name": "tool_map",
+          "description": "Show MCP/RPC tool definitions: which tools are defined, where they're handled, and their descriptions.\n\nWHEN TO USE: Understanding tool APIs, finding tool implementations, impact analysis for tool changes.\n\nReturns: tool nodes with their handler files and descriptions.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "tool": {
+                "type": "string",
+                "description": "Filter by tool name. Omit for all tools."
+              },
+              "repo": {
+                "type": "string",
+                "description": "Repository name or path."
+              }
+            },
+            "required": []
+          }
+        },
+        {
+          "name": "shape_check",
+          "description": "Check response shapes for API routes against their consumers' property accesses.\n\nWHEN TO USE: Detecting mismatches between what an API route returns and what consumers expect. Finding shape drift. For pre-change analysis, prefer `api_impact` which combines this data with mismatch detection and risk assessment.\nREQUIRES: Route nodes with responseKeys (extracted from .json({...}) calls during indexing).\n\nReturns routes that have both detected response keys AND consumers. Shows top-level keys each endpoint returns (e.g., data, pagination, error) and what keys each consumer accesses. Reports MISMATCH status when a consumer accesses keys not present in the route's response shape.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "route": {
+                "type": "string",
+                "description": "Check a specific route (e.g., \"/api/grants\"). Omit to check all routes."
+              },
+              "repo": {
+                "type": "string",
+                "description": "Repository name or path. Omit if only one repo is indexed."
+              }
+            },
+            "required": []
+          }
+        },
+        {
+          "name": "api_impact",
+          "description": "Pre-change impact report for an API route handler.\n\nWHEN TO USE: BEFORE modifying any API route handler. Shows what consumers depend on, what response fields they access, what middleware protects the route, and what execution flows it triggers. Requires at least \"route\" or \"file\" parameter.\n\nRisk levels: LOW (0-3 consumers), MEDIUM (4-9 or any mismatches), HIGH (10+ consumers or mismatches with 4+ consumers). Mismatches with confidence \"low\" indicate the consumer file fetches multiple routes — property attribution is approximate.\n\nReturns: single route object when one match, or { routes: [...], total: N } for multiple matches. Combines route_map, shape_check, and impact data.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "route": {
+                "type": "string",
+                "description": "Route path (e.g., \"/api/grants\")"
+              },
+              "file": {
+                "type": "string",
+                "description": "Handler file path (alternative to route)"
+              },
+              "repo": {
+                "type": "string",
+                "description": "Repository name or path."
+              }
+            },
+            "required": []
+          }
+        },
+        {
+          "name": "group_list",
+          "description": "List all configured repository groups, or return details for one group (repos, manifest links).\n\nWHEN TO USE: Discover groups before group_sync. Optional \"name\" returns a single group's config.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Group name. Omit to list all groups."
+              }
+            },
+            "required": []
+          }
+        },
+        {
+          "name": "group_sync",
+          "description": "Rebuild the Contract Registry (contracts.json) for a group: extract HTTP contracts, apply manifest links, exact-match cross-links.\n\nWHEN TO USE: After changing group.yaml or re-indexing member repos.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Group name"
+              },
+              "skipEmbeddings": {
+                "type": "boolean",
+                "description": "Exact + BM25 only (Demo PR: same as default exact path)"
+              },
+              "exactOnly": {
+                "type": "boolean",
+                "description": "Exact match only in cascade"
+              }
+            },
+            "required": [
+              "name"
+            ]
+          }
+        },
+        {
+          "name": "group_contracts",
+          "description": "Inspect contracts and cross-links from the group's contracts.json.\n\nWHEN TO USE: Debug cross-repo links after group_sync.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Group name"
+              },
+              "type": {
+                "type": "string",
+                "description": "Filter by contract type (http, topic, …)"
+              },
+              "repo": {
+                "type": "string",
+                "description": "Filter by group repo path (e.g. app/backend)"
+              },
+              "unmatchedOnly": {
+                "type": "boolean",
+                "description": "Only contracts with no cross-link"
+              }
+            },
+            "required": [
+              "name"
+            ]
+          }
+        },
+        {
+          "name": "group_query",
+          "description": "Run the query tool across all repos in a group and merge process results via reciprocal rank fusion.\n\nWHEN TO USE: Semantic / hybrid search across a whole product group.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Group name"
+              },
+              "query": {
+                "type": "string",
+                "description": "Search query"
+              },
+              "subgroup": {
+                "type": "string",
+                "description": "Limit to repo paths under this prefix"
+              },
+              "limit": {
+                "type": "number",
+                "description": "Max merged results (default 5)"
+              }
+            },
+            "required": [
+              "name",
+              "query"
+            ]
+          }
+        },
+        {
+          "name": "group_status",
+          "description": "Report index staleness (commit vs HEAD) and Contract Registry staleness (indexedAt) for each repo in a group.\n\nWHEN TO USE: Before group_sync or when agents should refresh indexes.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Group name"
+              }
+            },
+            "required": [
+              "name"
+            ]
+          }
+        }
+      ]
+    },
+    "headroom": {
+      "definitionHash": "6bd62a1403ea8265f5158792f462e4e030889de99960c2e9de41222dfddbb78d",
+      "transport": "stdio",
+      "description": null,
+      "fetchedAt": "2026-09-08T16:35:36.793Z",
+      "stale": false,
+      "tools": [
+        {
+          "name": "headroom_compress",
+          "description": "Compress content to save context window space. Use this on large tool outputs, file contents, search results, or any content you want to shrink before reasoning over it. The original is stored and can be retrieved later via mcp__headroom__headroom_retrieve. Returns compressed text + a hash for retrieval.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "content": {
+                "type": "string",
+                "description": "The content to compress. Can be any text: file contents, JSON, search results, logs, code, etc."
+              }
+            },
+            "required": [
+              "content"
+            ]
+          }
+        },
+        {
+          "name": "headroom_retrieve",
+          "description": "Retrieve original uncompressed content by hash. Use this when you need full details from previously compressed content. The hash comes from headroom_compress results or from compression markers like [N items compressed... hash=abc123].",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "hash": {
+                "type": "string",
+                "description": "Hash key from compression (e.g., 'abc123' from hash=abc123)"
+              }
+            },
+            "required": [
+              "hash"
+            ]
+          }
+        },
+        {
+          "name": "headroom_stats",
+          "description": "Show compression statistics for this session: total compressions, tokens saved, estimated cost savings, and recent compression events.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        }
+      ]
+    },
+    "node_repl": {
+      "definitionHash": "ddabc6c9707d4481b99c99df40187d2c9b8770152ed2f2bc325b6c7e8ccc72a0",
+      "transport": "stdio",
+      "description": null,
+      "fetchedAt": "2026-09-08T16:35:56.477Z",
+      "stale": false,
+      "tools": [
+        {
+          "name": "js",
+          "description": "Execute JavaScript in a persistent `node_repl` with top-level await. Top-level bindings persist until `js_reset` and can be redeclared. Use `const` for stable values and `let` for changing values. Use dynamic imports such as `await import(\"playwright\")`; top-level static imports and `node:process` are unavailable. Use `nodeRepl.write(value)` for output and `await nodeRepl.emitImage(image)` for images. Execution context is available through `nodeRepl.cwd`, `nodeRepl.homeDir`, `nodeRepl.tmpDir`, and `nodeRepl.requestMeta`. The default timeout is 30000 ms (30 seconds); increase `timeout_ms` for longer operations. Use `js_add_node_module_dir` when an additional package directory is required.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "description": "JavaScript code to execute with top-level await.",
+                "type": "string"
+              },
+              "timeout_ms": {
+                "description": "Optional execution timeout in milliseconds. Defaults to 30000 (30 seconds) when omitted.",
+                "minimum": 1,
+                "type": "integer"
+              },
+              "title": {
+                "description": "Short user-facing description of what the code does.",
+                "maxLength": 80,
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "code"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "js_add_node_module_dir",
+          "description": "Add an absolute `node_modules` directory for package imports. The directory remains available after `js_reset`.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "description": "Absolute path to a node_modules directory to add to Node package resolution.",
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "path"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "js_reset",
+          "description": "Reset the JavaScript kernel and clear all bindings.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {},
+            "additionalProperties": false
+          }
+        }
+      ]
+    },
+    "serena": {
+      "definitionHash": "8d7a0370c3d4abd5411223b9800ab8e029be9266bfadccc867191d4fc31e3fbf",
+      "transport": "stdio",
+      "description": null,
+      "fetchedAt": "2026-09-08T16:35:59.066Z",
+      "stale": false,
+      "tools": [
+        {
+          "name": "replace_content",
+          "description": "Replaces one or more occurrences of a given pattern in a file with new content.\n\nVERY IMPORTANT: The \"regex\" mode allows very large sections of code to be replaced WITHOUT\nquoting them fully: use a needle of the form \"beginning.*?end-of-text-to-be-replaced\" with\nwildcards instead of pasting the exact original text — shorter, cheaper, and you cannot make\nmistakes, because an ambiguous match returns an error you can refine, so wildcards are safe.\nPrefer regex mode with suitable wildcards for long multi-line replacements; use the\nsymbol-level editors when replacing a whole method/class.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "relative_path": {
+                "title": "Relative Path",
+                "type": "string",
+                "description": "The relative path to the file."
+              },
+              "needle": {
+                "title": "Needle",
+                "type": "string",
+                "description": "The string or regex pattern to search for.\nIf `mode` is \"literal\", this string will be matched exactly.\nIf `mode` is \"regex\", this string will be treated as a regular expression (syntax of Python's `re` module,\nwith flags DOTALL and MULTILINE enabled)."
+              },
+              "repl": {
+                "title": "Repl",
+                "type": "string",
+                "description": "The replacement string (verbatim).\nIf mode is \"regex\", the string can contain backreferences to matched groups in the needle regex,\nspecified using the syntax $!1, $!2, etc. for groups 1, 2, etc."
+              },
+              "mode": {
+                "enum": [
+                  "literal",
+                  "regex"
+                ],
+                "title": "Mode",
+                "type": "string",
+                "description": "Either \"literal\" or \"regex\", specifying how the `needle` parameter is to be interpreted."
+              },
+              "allow_multiple_occurrences": {
+                "default": false,
+                "title": "Allow Multiple Occurrences",
+                "type": "boolean",
+                "description": "Whether to allow matching and replacing multiple occurrences.\nIf false and multiple occurrences are found, an error will be returned."
+              }
+            },
+            "required": [
+              "relative_path",
+              "needle",
+              "repl",
+              "mode"
+            ],
+            "title": "applyArguments"
+          }
+        },
+        {
+          "name": "replace_in_files",
+          "description": "Replaces occurrences of a pattern across multiple files in ONE call.\n\nThis is the preferred tool for repeated small edits (renames, import swaps, annotation changes,\npath prefixes) spanning several files or many places in one file: one call with a SHORT pattern\nreplaces many single-file replacements with long disambiguating needles.\n\nRecommended protocol whenever there is ANY risk of unintended replacements:\n1. Call with dry_run=True: every prospective change is returned as a minimal line diff with an\n   occurrence id; nothing is modified.\n2. Call again with dry_run=False, passing the ids you want in occurrence_ids (omit it to apply\n   all). You pick the desired replacements from the list - no counting, no needle-crafting.\n\nFor clearly unambiguous bulk replacements you may skip the dry run; pass expected_count as a\nguard. If the actual number of matches differs, NOTHING is changed and the diff list is\nreturned, so a failed guard costs one call and gives you the dry-run output to select from. Returns in a dry run, the prospective changes; otherwise a summary of the applied replacements.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "needle": {
+                "title": "Needle",
+                "type": "string",
+                "description": "The string (mode \"literal\") or regular expression (mode \"regex\"; Python `re`\nsyntax with DOTALL and MULTILINE) to search for."
+              },
+              "repl": {
+                "title": "Repl",
+                "type": "string",
+                "description": "The replacement string. In regex mode, backreferences to matched groups can be\nspecified as $!1, $!2, etc."
+              },
+              "mode": {
+                "enum": [
+                  "literal",
+                  "regex"
+                ],
+                "title": "Mode",
+                "type": "string",
+                "description": "Either \"literal\" or \"regex\", specifying how `needle` is to be interpreted."
+              },
+              "relative_path": {
+                "default": "",
+                "title": "Relative Path",
+                "type": "string",
+                "description": "Only consider this file or directory (default: the whole project)."
+              },
+              "paths_include_glob": {
+                "default": "",
+                "title": "Paths Include Glob",
+                "type": "string",
+                "description": "Optional glob (relative to the project root, e.g. \"src/**/*.java\")\nrestricting which files are considered."
+              },
+              "paths_exclude_glob": {
+                "default": "",
+                "title": "Paths Exclude Glob",
+                "type": "string",
+                "description": "Optional glob of files to exclude; takes precedence over the include glob."
+              },
+              "dry_run": {
+                "default": false,
+                "title": "Dry Run",
+                "type": "boolean",
+                "description": "If True, do not modify anything; return the prospective changes as a list of\ndiffs with occurrence ids."
+              },
+              "occurrence_ids": {
+                "anyOf": [
+                  {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Occurrence Ids",
+                "description": "Optional list of occurrence ids (obtained from a dry run) to which the\nreplacement is restricted; if any id is unknown or stale, NOTHING is changed. If omitted,\nall occurrences are replaced."
+              },
+              "expected_count": {
+                "default": -1,
+                "title": "Expected Count",
+                "type": "integer",
+                "description": "Optional guard for calls without occurrence_ids: the number of\noccurrences you expect to be replaced. If the actual count differs, nothing is changed and\nthe list of prospective changes is returned. -1 disables the guard."
+              },
+              "max_answer_chars": {
+                "default": -1,
+                "title": "Max Answer Chars",
+                "type": "integer",
+                "description": "If the output exceeds this many characters, a shortened version is\nreturned. -1 uses the configured default."
+              }
+            },
+            "required": [
+              "needle",
+              "repl",
+              "mode"
+            ],
+            "title": "applyArguments"
+          }
+        },
+        {
+          "name": "replace_symbol_body",
+          "description": "Replaces the body of the given symbol.\n\nIMPORTANT: Only replace symbol bodies if you have previously made a retrieval with include_body=True and thus know what\nconstitutes the body!.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "name_path": {
+                "title": "Name Path",
+                "type": "string",
+                "description": "Name path of the symbol whose body to replace."
+              },
+              "relative_path": {
+                "title": "Relative Path",
+                "type": "string",
+                "description": "The relative path to the file containing the symbol."
+              },
+              "body": {
+                "title": "Body",
+                "type": "string",
+                "description": "The new symbol body. The symbol body is the definition of a symbol\nin the programming language, including e.g. the signature line for functions.\nDepending on the language, it may or may not include a preceding docstring or other preceding annotations."
+              }
+            },
+            "required": [
+              "name_path",
+              "relative_path",
+              "body"
+            ],
+            "title": "applyArguments"
+          }
+        },
+        {
+          "name": "insert_after_symbol",
+          "description": "Use this to insert code after a class/method/function definition.\nDon't use to insert after assignments (constants, fields).",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "name_path": {
+                "title": "Name Path",
+                "type": "string",
+                "description": "Name path of the symbol after which to insert content."
+              },
+              "relative_path": {
+                "title": "Relative Path",
+                "type": "string",
+                "description": "The relative path to the file containing the symbol."
+              },
+              "body": {
+                "title": "Body",
+                "type": "string",
+                "description": "The body/content to be inserted. The inserted code shall begin with the next line after\nthe symbol."
+              }
+            },
+            "required": [
+              "name_path",
+              "relative_path",
+              "body"
+            ],
+            "title": "applyArguments"
+          }
+        },
+        {
+          "name": "insert_before_symbol",
+          "description": "Inserts the given content before the beginning of the definition of the given symbol (via the symbol's location).\nA typical use case is to insert a new class, function, method, field or variable assignment; or\na new import statement before the first symbol in the file.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "name_path": {
+                "title": "Name Path",
+                "type": "string",
+                "description": "Name path of the symbol before which to insert content."
+              },
+              "relative_path": {
+                "title": "Relative Path",
+                "type": "string",
+                "description": "The relative path to the file containing the symbol."
+              },
+              "body": {
+                "title": "Body",
+                "type": "string",
+                "description": "The body/content to be inserted before the line in which the referenced symbol is defined."
+              }
+            },
+            "required": [
+              "name_path",
+              "relative_path",
+              "body"
+            ],
+            "title": "applyArguments"
+          }
+        },
+        {
+          "name": "get_symbols_overview",
+          "description": "Use this tool to get a high-level understanding of the code symbols in a file.\nThis should be the first tool to call when you want to understand a new file, unless you already know\nwhat you are looking for. Returns a JSON object containing symbols grouped by kind in a compact format.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "relative_path": {
+                "title": "Relative Path",
+                "type": "string",
+                "description": "The relative path to the file to get the overview of."
+              },
+              "depth": {
+                "default": -1,
+                "title": "Depth",
+                "type": "integer",
+                "description": "Depth up to which descendants shall be retrieved.\nDefault (-1) results in a language specific choice: 1 for java and kotlin and 0 for other languages."
+              },
+              "max_answer_chars": {
+                "default": -1,
+                "title": "Max Answer Chars",
+                "type": "integer",
+                "description": "If the overview is longer than this number of characters,\nno content will be returned. -1 means the default value from the config will be used.\nDon't adjust unless there is really no other way to get the content required for the task."
+              }
+            },
+            "required": [
+              "relative_path"
+            ],
+            "title": "applyArguments"
+          }
+        },
+        {
+          "name": "find_symbol",
+          "description": "Finds symbols and code entities (classes, methods, etc.) based on the given name path pattern.\nThe returned symbol information can be used for edits or further queries.\nSpecify `depth > 0` to also retrieve children/descendants (e.g., methods of a class).\n\nA name path is a path in the symbol tree *within a source file*.\nFor example, the method `my_method` defined in class `MyClass` would have the name path `MyClass/my_method`.\nIf a symbol is overloaded (e.g., in Java), a 0-based index is appended (e.g. \"MyClass/my_method[0]\") to\nuniquely identify it.\n\nTo search for a symbol, you provide a name path pattern that is used to match against name paths.\nIt can be\n * a simple name (e.g. \"method\"), which will match any symbol with that name\n * a relative path like \"class/method\", which will match any symbol with that name path suffix\n * an absolute name path \"/class/method\" (absolute name path), which requires an exact match of the full name path within the source file.\nAppend an index `[i]` to match a specific overload only, e.g. \"MyClass/my_method[1]\". Returns symbols (with locations) matching the name.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "name_path_pattern": {
+                "title": "Name Path Pattern",
+                "type": "string",
+                "description": "The name path matching pattern (see above)."
+              },
+              "depth": {
+                "default": 0,
+                "title": "Depth",
+                "type": "integer",
+                "description": "Depth up to which descendants shall be retrieved (e.g. use 1 to also retrieve immediate children;\nfor the case where the symbol is a class, this will return its methods).\nIgnored if `include_body=True`. Default 0."
+              },
+              "relative_path": {
+                "default": "",
+                "title": "Relative Path",
+                "type": "string",
+                "description": "(optional) restrict search to this file or directory. If None, searches entire codebase.\nIf a directory is passed, the search will be restricted to the files in that directory.\nIf a file is passed, the search will be restricted to that file."
+              },
+              "include_body": {
+                "default": false,
+                "title": "Include Body",
+                "type": "boolean",
+                "description": "Whether to include the symbol's source code. Use judiciously."
+              },
+              "include_info": {
+                "default": false,
+                "title": "Include Info",
+                "type": "boolean",
+                "description": "Whether to include additional info (hover-like, typically including docstring and signature),\nabout the symbol (ignored if include_body is True). Info is never included for child symbols.\nNote: Depending on the language, this can be slow (e.g., C/C++)."
+              },
+              "include_kinds": {
+                "default": [],
+                "items": {
+                  "type": "integer"
+                },
+                "title": "Include Kinds",
+                "type": "array",
+                "description": "(optional) limits results to the given LSP symbol kinds (integers)."
+              },
+              "exclude_kinds": {
+                "default": [],
+                "items": {
+                  "type": "integer"
+                },
+                "title": "Exclude Kinds",
+                "type": "array",
+                "description": "(optional) list of LSP symbol kinds (integers) to exclude."
+              },
+              "substring_matching": {
+                "default": false,
+                "title": "Substring Matching",
+                "type": "boolean",
+                "description": "If True, use substring matching for the last element of the pattern, such that\n\"Foo/get\" would match \"Foo/getValue\" and \"Foo/getData\"."
+              },
+              "max_matches": {
+                "default": -1,
+                "title": "Max Matches",
+                "type": "integer",
+                "description": "Maximum number of permitted matches. If exceeded, a shortened result is returned\nwhich allows refining the search. -1 (default) means no limit. Set to 1 if you search for a single symbol."
+              },
+              "max_answer_chars": {
+                "default": -1,
+                "title": "Max Answer Chars",
+                "type": "integer",
+                "description": "Max result length; -1 for default."
+              }
+            },
+            "required": [
+              "name_path_pattern"
+            ],
+            "title": "applyArguments"
+          }
+        },
+        {
+          "name": "find_referencing_symbols",
+          "description": "Finds references to the symbol at the given `name_path`. The result will contain metadata about the referencing symbols\nas well as a short code snippet around the reference. Returns a list of JSON objects with the symbols referencing the requested symbol.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "name_path": {
+                "title": "Name Path",
+                "type": "string",
+                "description": "Name path of the symbol."
+              },
+              "relative_path": {
+                "title": "Relative Path",
+                "type": "string",
+                "description": "The relative path to the file containing the symbol for which to find references."
+              },
+              "include_kinds": {
+                "default": [],
+                "items": {
+                  "type": "integer"
+                },
+                "title": "Include Kinds",
+                "type": "array",
+                "description": "(optional) limits results to the given LSP symbol kinds (integers)."
+              },
+              "exclude_kinds": {
+                "default": [],
+                "items": {
+                  "type": "integer"
+                },
+                "title": "Exclude Kinds",
+                "type": "array",
+                "description": "Optional list of LSP symbol kinds (integers) to exclude."
+              },
+              "max_answer_chars": {
+                "default": -1,
+                "title": "Max Answer Chars",
+                "type": "integer",
+                "description": "Max result length; -1 for default."
+              }
+            },
+            "required": [
+              "name_path",
+              "relative_path"
+            ],
+            "title": "applyArguments"
+          }
+        },
+        {
+          "name": "find_implementations",
+          "description": "Finds implementations of the symbol at the given `name_path`. Returns a list of JSON objects with the symbols implementing the requested symbol.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "name_path": {
+                "title": "Name Path",
+                "type": "string",
+                "description": "The symbol's name path."
+              },
+              "relative_path": {
+                "title": "Relative Path",
+                "type": "string",
+                "description": "The relative path to the file containing the symbol for which to find implementations.\nNote that here you can't pass a directory but must pass a file."
+              },
+              "include_info": {
+                "default": false,
+                "title": "Include Info",
+                "type": "boolean",
+                "description": "Whether to include additional info (hover-like, typically including docstring and signature),\nabout the implementing symbols."
+              },
+              "include_kinds": {
+                "default": [],
+                "items": {
+                  "type": "integer"
+                },
+                "title": "Include Kinds",
+                "type": "array",
+                "description": "(optional) limits results to the given LSP symbol kinds (integers)."
+              },
+              "exclude_kinds": {
+                "default": [],
+                "items": {
+                  "type": "integer"
+                },
+                "title": "Exclude Kinds",
+                "type": "array",
+                "description": "(optional) list of LSP symbol kinds (integers) to exclude."
+              },
+              "max_answer_chars": {
+                "default": -1,
+                "title": "Max Answer Chars",
+                "type": "integer",
+                "description": "Max result length; -1 for default."
+              }
+            },
+            "required": [
+              "name_path",
+              "relative_path"
+            ],
+            "title": "applyArguments"
+          }
+        },
+        {
+          "name": "find_declaration",
+          "description": "Finds the declaration of a symbol.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "relative_path": {
+                "title": "Relative Path",
+                "type": "string",
+                "description": "The relative path to the source file containing the symbol for which to find the declaration."
+              },
+              "regex": {
+                "title": "Regex",
+                "type": "string",
+                "description": "A regular expression with one group, where the group matches the symbol for which to perform the lookup.\nFor example, to find the declaration of the `process` method in a call like `obj.process()`,\npass an expression like \"obj\\.(process)\\(process_input_arg=37\\)\".\nPrefer regexes with sufficiently large context around the group to render the match unambiguous.\nUses Python syntax with MULTILINE and DOTALL flags enabled."
+              },
+              "containing_symbol_name_path": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Containing Symbol Name Path",
+                "description": "Optional name path of a containing symbol whose body shall be searched instead of the full file."
+              },
+              "include_body": {
+                "default": false,
+                "title": "Include Body",
+                "type": "boolean",
+                "description": "Whether to include the symbol's body in the result. Default False."
+              },
+              "include_info": {
+                "default": false,
+                "title": "Include Info",
+                "type": "boolean",
+                "description": "Whether to include additional info (hover-like). Default False."
+              }
+            },
+            "required": [
+              "relative_path",
+              "regex"
+            ],
+            "title": "applyArguments"
+          }
+        },
+        {
+          "name": "get_diagnostics_for_file",
+          "description": "Gets diagnostics for a file. Diagnostics are grouped as `relative_path -> severity -> name_path -> diagnostics_results`.\nIf a diagnostic cannot be mapped to a symbol, it is grouped under the special name path `<file>`. Returns grouped diagnostics for the requested file.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "relative_path": {
+                "title": "Relative Path",
+                "type": "string",
+                "description": "The relative path to the file to inspect."
+              },
+              "start_line": {
+                "default": 0,
+                "title": "Start Line",
+                "type": "integer",
+                "description": "The first 0-based line to include. Defaults to 0."
+              },
+              "end_line": {
+                "default": -1,
+                "title": "End Line",
+                "type": "integer",
+                "description": "The last 0-based line to include. Defaults to -1, which means until the end of the file."
+              },
+              "min_severity": {
+                "default": 4,
+                "title": "Min Severity",
+                "type": "integer",
+                "description": "Minimum LSP severity to include, where 1=Error, 2=Warning, 3=Information, 4=Hint.\nDiagnostics with lower-or-equal numeric severity are returned."
+              },
+              "max_answer_chars": {
+                "default": -1,
+                "title": "Max Answer Chars",
+                "type": "integer",
+                "description": "Max result length; -1 for default."
+              }
+            },
+            "required": [
+              "relative_path"
+            ],
+            "title": "applyArguments"
+          }
+        },
+        {
+          "name": "rename_symbol",
+          "description": "Renames the symbol with the given `name_path` to `new_name` throughout the entire codebase.\nNote: for languages with method overloading, like Java, name_path may have to include a method's\nsignature to uniquely identify a method. Returns result summary indicating success or failure.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "name_path": {
+                "title": "Name Path",
+                "type": "string",
+                "description": "Name path of the symbol to rename."
+              },
+              "relative_path": {
+                "title": "Relative Path",
+                "type": "string",
+                "description": "The relative path to the file containing the symbol to rename."
+              },
+              "new_name": {
+                "title": "New Name",
+                "type": "string",
+                "description": "The new name for the symbol."
+              }
+            },
+            "required": [
+              "name_path",
+              "relative_path",
+              "new_name"
+            ],
+            "title": "applyArguments"
+          }
+        },
+        {
+          "name": "safe_delete_symbol",
+          "description": "Deletes the symbol if it is safe to do so (i.e., if there are no references to it)\nor returns a list of references to it.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "name_path_pattern": {
+                "title": "Name Path Pattern",
+                "type": "string",
+                "description": "Name path of the symbol to delete."
+              },
+              "relative_path": {
+                "title": "Relative Path",
+                "type": "string",
+                "description": "The relative path to the file containing the symbol to delete."
+              }
+            },
+            "required": [
+              "name_path_pattern",
+              "relative_path"
+            ],
+            "title": "applyArguments"
+          }
+        },
+        {
+          "name": "write_memory",
+          "description": "Write information about this project that can be useful for future tasks in md format.\nThe name should be meaningful and can include \"/\" to organize into topics.\nIf explicitly instructed, use the \"global/\" prefix for writing a memory that is shared across projects.\nReferences to other memories should be inside backticks and prefixed with mem:,\ne.g., `mem:auth`.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "memory_name": {
+                "title": "Memory Name",
+                "type": "string",
+                "description": "Memory name."
+              },
+              "content": {
+                "title": "Content",
+                "type": "string",
+                "description": "Memory content, utf8-encoded."
+              },
+              "max_chars": {
+                "default": -1,
+                "title": "Max Chars",
+                "type": "integer",
+                "description": "See other tools."
+              }
+            },
+            "required": [
+              "memory_name",
+              "content"
+            ],
+            "title": "applyArguments"
+          }
+        },
+        {
+          "name": "read_memory",
+          "description": "Use to read a memory that is likely to be relevant to the current task, inferring relevance e.g. from the name.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "memory_name": {
+                "title": "Memory Name",
+                "type": "string"
+              }
+            },
+            "required": [
+              "memory_name"
+            ],
+            "title": "applyArguments"
+          }
+        },
+        {
+          "name": "list_memories",
+          "description": "Lists available memories, optionally filtered by topic.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "topic": {
+                "default": "",
+                "title": "Topic",
+                "type": "string"
+              }
+            },
+            "title": "applyArguments"
+          }
+        },
+        {
+          "name": "delete_memory",
+          "description": "Delete a memory, only call if instructed explicitly or permission was granted by the user.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "memory_name": {
+                "title": "Memory Name",
+                "type": "string"
+              }
+            },
+            "required": [
+              "memory_name"
+            ],
+            "title": "applyArguments"
+          }
+        },
+        {
+          "name": "rename_memory",
+          "description": "Rename or move a memory, use \"/\" in the name to organize into topics.\nThe \"global\" topic should only be used if explicitly instructed.\nReferences to other memories that are marked with the `mem:` prefix will be updated accordingly.\nReferences in read-only memories are not affected.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "old_name": {
+                "title": "Old Name",
+                "type": "string"
+              },
+              "new_name": {
+                "title": "New Name",
+                "type": "string"
+              }
+            },
+            "required": [
+              "old_name",
+              "new_name"
+            ],
+            "title": "applyArguments"
+          }
+        },
+        {
+          "name": "edit_memory",
+          "description": "Replace content matching a regular expression in a memory.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "memory_name": {
+                "title": "Memory Name",
+                "type": "string",
+                "description": "The name of the memory."
+              },
+              "needle": {
+                "title": "Needle",
+                "type": "string",
+                "description": "The string or regex pattern to search for. In regex mode, be careful to not replace too much!\nIf `mode` is \"literal\", this string will be matched exactly.\nIf `mode` is \"regex\", this string will be treated as a regular expression (syntax of Python's `re` module,\nwith the MULTILINE and DOTALL flags enabled)."
+              },
+              "repl": {
+                "title": "Repl",
+                "type": "string",
+                "description": "The replacement string (verbatim)."
+              },
+              "mode": {
+                "enum": [
+                  "literal",
+                  "regex"
+                ],
+                "title": "Mode",
+                "type": "string",
+                "description": "Either \"literal\" or \"regex\", specifying how the `needle` parameter is to be interpreted."
+              },
+              "allow_multiple_occurrences": {
+                "default": false,
+                "title": "Allow Multiple Occurrences",
+                "type": "boolean",
+                "description": "Whether to allow matching and replacing multiple occurrences.\nIf false and multiple occurrences are found, an error will be returned."
+              }
+            },
+            "required": [
+              "memory_name",
+              "needle",
+              "repl",
+              "mode"
+            ],
+            "title": "applyArguments"
+          }
+        },
+        {
+          "name": "open_dashboard",
+          "description": "Opens the Serena web dashboard in the default web browser.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {},
+            "title": "applyArguments"
+          }
+        },
+        {
+          "name": "activate_project",
+          "description": "Activates the project with the given name or path.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "project": {
+                "title": "Project",
+                "type": "string",
+                "description": "The name of a registered project to activate or a path to a project directory."
+              }
+            },
+            "required": [
+              "project"
+            ],
+            "title": "applyArguments"
+          }
+        },
+        {
+          "name": "get_current_config",
+          "description": "Print the current configuration of the agent, including the active and available projects, tools, contexts, and modes.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {},
+            "title": "applyArguments"
+          }
+        },
+        {
+          "name": "onboarding",
+          "description": "Call this tool if onboarding was not performed yet.\nYou will call this tool at most once per conversation. Returns instructions on how to create the onboarding information.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {},
+            "title": "applyArguments"
+          }
+        },
+        {
+          "name": "initial_instructions",
+          "description": "Provides the 'Serena Instructions Manual', which contains essential information on how to use the Serena toolbox.\nIMPORTANT: If you have not yet read the manual, call this tool immediately after you are given your task by the user,\nas it will critically inform you!.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {},
+            "title": "applyArguments"
+          }
+        }
+      ]
+    },
+    "headroom_memory": {
+      "definitionHash": "4421d1c7c0c0060e070c7e9ffdb9e2189cdc87944b1bd82e89ebc466e6741971",
+      "transport": "stdio",
+      "description": null,
+      "fetchedAt": "2026-09-08T16:35:59.361Z",
+      "stale": false,
+      "tools": [
+        {
+          "name": "memory_search",
+          "description": "Search persistent memory for relevant knowledge from prior sessions. Use this for questions about architecture, conventions, prior decisions, project context, user preferences, org info, codenames, debugging history, or anything that might have been discussed before.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "query": {
+                "type": "string",
+                "description": "Natural-language search query."
+              },
+              "top_k": {
+                "type": "integer",
+                "description": "Max results to return (default 10).",
+                "default": 10
+              }
+            },
+            "required": [
+              "query"
+            ]
+          }
+        },
+        {
+          "name": "memory_save",
+          "description": "Save information to persistent memory for future sessions. Use this for decisions, conventions, architecture context, user preferences, project facts, or anything worth remembering. Saving a similar fact does not replace an existing memory; corrections must use an explicit update path with the existing memory ID.\n\nIMPORTANT: Break information into atomic facts — one fact per entry in the 'facts' array. Each fact should be a single, self-contained statement that answers one question. Do NOT combine multiple facts into one string.\n\nGood:  facts: ['Repo owner is Tejas C.', 'User prefers dark mode']\nBad:   facts: ['Repo owner is Tejas C. Prefers dark mode.']",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "facts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Array of atomic facts to save. Each entry should be one self-contained fact. The system stores and indexes each fact separately for precise retrieval."
+              },
+              "importance": {
+                "type": "number",
+                "description": "0.0 (low) to 1.0 (critical). Default 0.7.",
+                "default": 0.7
+              }
+            },
+            "required": []
+          }
+        }
+      ]
+    },
+    "openaiDeveloperDocs": {
+      "definitionHash": "98b73d7e0a12ad9e7516dec6669977090956b2098a3c84f4fe85fe6b2e297ac2",
+      "transport": "http",
+      "description": null,
+      "fetchedAt": "2026-09-08T16:36:00.280Z",
+      "stale": false,
+      "tools": [
+        {
+          "name": "search_openai_docs",
+          "description": "Search across `platform.openai.com`, `developers.openai.com`, and `learn.chatgpt.com` docs. Use this whenever you are working with the OpenAI API (including the Responses API), OpenAI API SDKs, plugins, ChatGPT, or Codex. Results include URLs—**after `search`, use `fetch_openai_doc`** to read/quote the exact markdown.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "query": {
+                "type": "string",
+                "minLength": 1
+              },
+              "limit": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 50
+              },
+              "cursor": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "query"
+            ],
+            "$schema": "http://json-schema.org/draft-07/schema#"
+          }
+        },
+        {
+          "name": "list_openai_docs",
+          "description": "List or browse pages from `platform.openai.com`, `developers.openai.com`, and `learn.chatgpt.com` that this server crawls (useful when you don’t know the right query yet or you’re paging through results). Use this whenever you are working with the OpenAI API (including the Responses API), OpenAI API SDKs, plugins, ChatGPT, or Codex. Results include URLs—**after `list`, use `fetch_openai_doc`** on a result URL to get the full markdown.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "limit": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 50
+              },
+              "cursor": {
+                "type": "string"
+              }
+            },
+            "$schema": "http://json-schema.org/draft-07/schema#"
+          }
+        },
+        {
+          "name": "fetch_openai_doc",
+          "description": "Fetch the markdown for a specific doc page from `developers.openai.com`, `platform.openai.com`, or `learn.chatgpt.com` so you can quote or summarize exact, up-to-date guidance (schemas, examples, limits, and edge cases). Prefer to **`search_openai_docs` first** (or `list_openai_docs` if you’re browsing) to find the best URL, then `fetch_openai_doc` to pull the exact text; you can pass `anchor` (for example, `#streaming`) to fetch just that section.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": "string",
+                "minLength": 1
+              },
+              "anchor": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "url"
+            ],
+            "$schema": "http://json-schema.org/draft-07/schema#"
+          }
+        },
+        {
+          "name": "list_api_endpoints",
+          "description": "List all OpenAI API endpoint URLs available in the OpenAPI spec.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {},
+            "$schema": "http://json-schema.org/draft-07/schema#"
+          }
+        },
+        {
+          "name": "get_openapi_spec",
+          "description": "Return the OpenAPI spec for a specific API endpoint URL. Optionally filter code samples by language, or return only code samples.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": "string",
+                "minLength": 1
+              },
+              "languages": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "codeExamplesOnly": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "url"
+            ],
+            "$schema": "http://json-schema.org/draft-07/schema#"
+          }
+        }
+      ]
+    },
+    "codegraph": {
+      "definitionHash": "e1f1ab9878cc2c25768485369c16e7a7cffc5b4fec06f807816558b33d110a1e",
+      "transport": "stdio",
+      "description": null,
+      "fetchedAt": "2026-09-08T16:36:00.535Z",
+      "stale": false,
+      "tools": [
+        {
+          "name": "codegraph_explore",
+          "description": "PRIMARY TOOL — call FIRST for almost any question OR before an edit: how does X work, architecture, a bug, where/what is X, surveying an area, or the symbols you are about to change. Returns the verbatim source of the relevant symbols grouped by file in ONE capped call (Read-equivalent — treat the shown source as already Read; do NOT re-open those files), plus the call path among them. Query can be a natural-language question OR a bag of symbol/file names. Usually the ONLY call you need — more accurate context, in far fewer tokens and round-trips than a search/Read/Grep loop.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "query": {
+                "type": "string",
+                "description": "Symbol names, file names, or short code terms to explore (e.g., \"AuthService loginUser session-manager\", \"GraphTraverser BFS impact traversal.ts\"). For a flow question, name the symbols spanning the flow (e.g. \"mutateElement renderScene\"). A natural-language question works too — no prior codegraph_search needed."
+              },
+              "maxFiles": {
+                "type": "number",
+                "description": "Maximum number of files to include source code from (default: 12)",
+                "default": 12
+              },
+              "projectPath": {
+                "type": "string",
+                "description": "Absolute path to the project to query (or any directory inside it) — codegraph uses the nearest .codegraph/ index at or above that path. Omit to use this session's default project. Pass it to query a second codebase, or when the server root has no index of its own (e.g. a monorepo where only sub-projects are indexed, so there is no default project)."
+              }
+            },
+            "required": [
+              "query"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

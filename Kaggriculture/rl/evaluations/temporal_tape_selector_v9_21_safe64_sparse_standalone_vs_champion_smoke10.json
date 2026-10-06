@@ -1,0 +1,168 @@
+{
+  "challenger": "live_response_ppo_v8_standalone",
+  "champion": "profile_ppo_v1",
+  "environment": "kaggle_environments:kaggriculture",
+  "games": [
+    {
+      "challenger_money": 158005.0,
+      "challenger_seat": 0,
+      "champion_money": 39578.0,
+      "margin": 118427.0,
+      "max_action_ms": 0.4111250163987279,
+      "seed": 540000,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719
+    },
+    {
+      "challenger_money": 158005.0,
+      "challenger_seat": 1,
+      "champion_money": 39578.0,
+      "margin": 118427.0,
+      "max_action_ms": 0.2159159630537033,
+      "seed": 540000,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719
+    },
+    {
+      "challenger_money": 136120.0,
+      "challenger_seat": 0,
+      "champion_money": 27926.0,
+      "margin": 108194.0,
+      "max_action_ms": 0.1438329927623272,
+      "seed": 540001,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719
+    },
+    {
+      "challenger_money": 136129.0,
+      "challenger_seat": 1,
+      "champion_money": 28006.0,
+      "margin": 108123.0,
+      "max_action_ms": 0.37995807360857725,
+      "seed": 540001,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719
+    },
+    {
+      "challenger_money": 175561.0,
+      "challenger_seat": 0,
+      "champion_money": 43144.0,
+      "margin": 132417.0,
+      "max_action_ms": 0.1502500381320715,
+      "seed": 540002,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719
+    },
+    {
+      "challenger_money": 175561.0,
+      "challenger_seat": 1,
+      "champion_money": 43144.0,
+      "margin": 132417.0,
+      "max_action_ms": 0.19862502813339233,
+      "seed": 540002,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719
+    },
+    {
+      "challenger_money": 133767.0,
+      "challenger_seat": 0,
+      "champion_money": 44380.0,
+      "margin": 89387.0,
+      "max_action_ms": 0.19516691099852324,
+      "seed": 540003,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719
+    },
+    {
+      "challenger_money": 155438.0,
+      "challenger_seat": 1,
+      "champion_money": 46054.0,
+      "margin": 109384.0,
+      "max_action_ms": 0.14358293265104294,
+      "seed": 540003,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719
+    },
+    {
+      "challenger_money": 159082.0,
+      "challenger_seat": 0,
+      "champion_money": 42522.0,
+      "margin": 116560.0,
+      "max_action_ms": 0.12362492270767689,
+      "seed": 540004,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719
+    },
+    {
+      "challenger_money": 159082.0,
+      "challenger_seat": 1,
+      "champion_money": 42522.0,
+      "margin": 116560.0,
+      "max_action_ms": 0.37945806980133057,
+      "seed": 540004,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719
+    }
+  ],
+  "summary": {
+    "action_latency_ms": {
+      "limit": 1000.0,
+      "max": 0.4111250163987279,
+      "p50": 0.013083103112876415,
+      "p95": 0.020749983377754688,
+      "p99": 0.05097175366245206
+    },
+    "all_games_completed": true,
+    "cvar10_margin": 89387.0,
+    "cvar10_money": 133767.0,
+    "draws": 0,
+    "game_count": 10,
+    "losses": 0,
+    "mean_margin": 114989.6,
+    "mean_money": 154675.0,
+    "p10_margin": 106249.4,
+    "p10_money": 135884.7,
+    "paired_seed_gate": {
+      "better": 5,
+      "equal": 0,
+      "mean_margin": 114989.6,
+      "seed_count": 5,
+      "worse": 0,
+      "worst_margin": 99385.5
+    },
+    "win_rate": 1.0,
+    "wins": 10,
+    "worst_margin": 89387.0,
+    "worst_money": 133767.0
+  }
+}

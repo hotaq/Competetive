@@ -1,0 +1,21 @@
+{
+  "id": "chinnaphatkhun/rsna-knee-e035-e026-caformer-guarded",
+  "title": "RSNA Knee E035 E026 CAFormer Guarded",
+  "code_file": "e035-e026-caformer-guarded-submission.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "machine_shape": "NvidiaTeslaT4",
+  "competition_sources": ["rsna-knee-abnormality-detection"],
+  "dataset_sources": [
+    "dreaddevelopment/raptor-knee-widedense",
+    "chinnaphatkhun/rsna-knee-e035-assets"
+  ],
+  "kernel_sources": [],
+  "model_sources": [
+    "skarin/caformer-b36-sail-in22k-ft-in1k-384/Transformers/default/1"
+  ]
+}

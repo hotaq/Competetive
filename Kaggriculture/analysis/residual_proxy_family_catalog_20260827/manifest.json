@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "status": "complete_analysis_only",
+  "purpose": "executable opponent-family catalog for V67 residual RL",
+  "created_date": "2026-08-27",
+  "engine": {
+    "name": "kaggriculture_rs",
+    "episode_steps": 720,
+    "weed_spawn_chance": 0.005,
+    "action_execution": "Engine.sanitize_action then Engine.step"
+  },
+  "development_split": {
+    "predeclared_before_execution": true,
+    "seeds": [27100100, 27100101, 27100102, 27100103],
+    "seats_per_seed": [0, 1],
+    "games_per_executable_proxy": 8,
+    "total_games": 40,
+    "consumption_state": "consumed_development_only",
+    "promotion_eligible": false
+  },
+  "baseline": {
+    "path": "submissions/meta_v67_quantity_conserving_front_run_standalone/main.py",
+    "sha256": "300983ffa3da614ad5e7b9958c76104d9f613fcaf7169e69963ea634ee0a093b"
+  },
+  "catalog": {
+    "genuinely_distinct_family_count": 4,
+    "executable_agent_count": 5,
+    "representatives": ["v22", "v12_ryo", "v44_route", "robust_cluster"],
+    "families": [
+      {
+        "family": "v16_route_family",
+        "representative": "v22",
+        "aliases": ["v16"],
+        "rationale": "V16 and V22 differ on only 0.0348% of 5752 sanitized action dictionaries and have timed-operation L1 distance 0.00017",
+        "status": "usable_engine_sanitized",
+        "sanitizer_caveat": "2716 of 5752 proxy steps changed, 47.22%, mostly farmer and hands",
+        "v22_vs_v67": {
+          "wins": 3,
+          "losses": 5,
+          "mean_margin": -1001.875,
+          "worst_margin": -5698.0
+        }
+      },
+      {
+        "family": "ryo_selector_family",
+        "representative": "v12_ryo",
+        "aliases": [],
+        "rationale": "state selector over repaired Ryo-derived continuations after step 120",
+        "status": "usable_legality_clean_in_screen",
+        "sanitizer_caveat": "0 of 5752 proxy steps changed",
+        "vs_v67": {
+          "wins": 3,
+          "losses": 5,
+          "mean_margin": -5618.25,
+          "worst_margin": -30545.0
+        }
+      },
+      {
+        "family": "route_99612231_family",
+        "representative": "v44_route",
+        "aliases": [],
+        "rationale": "distinct orphan-recovered route 99612231 with clean execution",
+        "status": "usable_weaker_stressor",
+        "sanitizer_caveat": "0 of 5752 proxy steps changed",
+        "vs_v67": {
+          "wins": 0,
+          "losses": 8,
+          "mean_margin": -9358.25,
+          "worst_margin": -23935.0
+        }
+      },
+      {
+        "family": "robust_cluster_family",
+        "representative": "robust_cluster",
+        "aliases": [],
+        "rationale": "cluster-selected multi-tape continuation with distinct high-volume wheat market behavior",
+        "status": "usable_engine_sanitized_weaker_stressor",
+        "sanitizer_caveat": "1577 of 5752 proxy steps changed, 27.42%, mostly market",
+        "vs_v67": {
+          "wins": 0,
+          "losses": 8,
+          "mean_margin": -10938.0,
+          "worst_margin": -32378.0
+        }
+      }
+    ]
+  },
+  "agents": {
+    "v16": {
+      "path": "submissions/meta_v16_rc5_robust_base_standalone/main.py",
+      "sha256": "f029fa0cb66a9eb509afbe44e3f59b800332d0419db91607183410e4089c4d19",
+      "standalone_smoke": "pass",
+      "all_games_complete": true,
+      "active_step_rate": 0.9690542420027817,
+      "sanitizer_changed_step_rate": 0.4721835883171071
+    },
+    "v22": {
+      "path": "submissions/meta_v22_v16_land3_terminal_rule_standalone/main.py",
+      "sha256": "5d5c615a296d984402f886b5f998a54e211dd6138e7818793733069d0d1476ba",
+      "standalone_smoke": "pass",
+      "all_games_complete": true,
+      "active_step_rate": 0.9690542420027817,
+      "sanitizer_changed_step_rate": 0.4721835883171071
+    },
+    "v12_ryo": {
+      "path": "submissions/top1_v12_ryo_selector_b120_repaired_standalone/main.py",
+      "sha256": "670c85ca7c81d150fbebb4083eaec37f667c3c7305dfdc55a41feed3919e4d02",
+      "standalone_smoke": "pass",
+      "all_games_complete": true,
+      "active_step_rate": 0.9951321279554938,
+      "sanitizer_changed_step_rate": 0.0
+    },
+    "v44_route": {
+      "path": "submissions/meta_v44_route99612231_orphan_standalone/main.py",
+      "sha256": "cd2eda3600b4d4849f40a74d25f350239528541e52be0aecf85215fe7aa9afb2",
+      "standalone_smoke": "pass",
+      "all_games_complete": true,
+      "active_step_rate": 1.0,
+      "sanitizer_changed_step_rate": 0.0
+    },
+    "robust_cluster": {
+      "path": "submissions/robust_cluster_tape_v10_standalone/main.py",
+      "sha256": "27cb59ba30d42464985db5fa58f858f79c6ddae95e1eeff2bd4b4275523805f6",
+      "standalone_smoke": "pass",
+      "all_games_complete": true,
+      "active_step_rate": 0.9624478442280946,
+      "sanitizer_changed_step_rate": 0.2741655076495132
+    },
+    "live_response_ppo_v8": {
+      "path": "submissions/live_response_ppo_v8/main.py",
+      "sha256": "24ac3a6fb03ae1c08a09e9f912c0d0b7e02a78233f352fcc42b735d59ad57a79",
+      "standalone_smoke": "fail",
+      "status": "rejected_non_standalone",
+      "reason": "main.py loads missing external model rl/checkpoints/live_response_ppo_v8.npz"
+    }
+  },
+  "exact_action_evidence": {
+    "path": "analysis/residual_proxy_family_catalog_20260827/exact_actions.json.gz",
+    "streams_per_game": [
+      "proxy_proposed",
+      "proxy_sanitized",
+      "baseline_proposed",
+      "baseline_sanitized"
+    ],
+    "action_dictionary_count": 115040,
+    "gzip_sha256": "4abeacf88ad1c895bbe98b019cf896160da20a1f40e2198e2a2292b1d1014a53",
+    "uncompressed_sha256": "ec7c6322a1cb5eb82cb3b3809c029b8f2fae88ffb8fe08c97724cd3d0cb2ae4d"
+  },
+  "commands": {
+    "build": ".venv/bin/python analysis/residual_proxy_family_catalog_20260827/build_catalog.py",
+    "lint": ".venv/bin/ruff check analysis/residual_proxy_family_catalog_20260827/build_catalog.py",
+    "format_check": ".venv/bin/ruff format --check analysis/residual_proxy_family_catalog_20260827/build_catalog.py",
+    "independent_live_template": ".venv/bin/python scripts/evaluate_file_agents_rust_live.py --candidate <standalone-main.py> --reference submissions/meta_v67_quantity_conserving_front_run_standalone/main.py --seed 27100100 --paired-seeds 4 --candidate-repair none --reference-repair none --output <live-result.json>",
+    "independent_live_invocations": {
+      "v16": ["submissions/meta_v16_rc5_robust_base_standalone/main.py", "analysis/residual_proxy_family_catalog_20260827/live_v16_vs_v67.json"],
+      "v22": ["submissions/meta_v22_v16_land3_terminal_rule_standalone/main.py", "analysis/residual_proxy_family_catalog_20260827/live_v22_vs_v67.json"],
+      "v12_ryo": ["submissions/top1_v12_ryo_selector_b120_repaired_standalone/main.py", "analysis/residual_proxy_family_catalog_20260827/live_v12_ryo_vs_v67.json"],
+      "v44_route": ["submissions/meta_v44_route99612231_orphan_standalone/main.py", "analysis/residual_proxy_family_catalog_20260827/live_v44_route_vs_v67.json"],
+      "robust_cluster": ["submissions/robust_cluster_tape_v10_standalone/main.py", "analysis/residual_proxy_family_catalog_20260827/live_robust_cluster_vs_v67.json"]
+    }
+  },
+  "artifact_hashes": {
+    "build_catalog.py": "45d5bd8d294dac7dfcbbfae05da7323d971a283a964b8fa5a6a0e25dc479df83",
+    "screen_results.json": "e69780dfcfc38cd2a0940fd47469cf33756b5330001eb7ca1094ec87ffb463c9",
+    "exact_actions.json.gz": "4abeacf88ad1c895bbe98b019cf896160da20a1f40e2198e2a2292b1d1014a53",
+    "REPORT.md": "8a5c356e5952e0335699634bec13b4054b04f50f7c65634129e03bed1eafcb23",
+    "live_v16_vs_v67.json": "29b3d2ec83507b63cdfa3a8a0729e10d3acc6ad0acfd89c8c8c96188b2f12b94",
+    "live_v22_vs_v67.json": "a256cab9df5b1d2b62875d6a2a3b4675df71f00edc1f1d6bb9b699dde7e26e3e",
+    "live_v12_ryo_vs_v67.json": "8eafa81dc330c918c3d92f6beec5378dbd820681bb0a360231953297f89c6ca4",
+    "live_v44_route_vs_v67.json": "da828aa85b52910f561350c73617d2b074aef30ed15a5321fc926626940d39b8",
+    "live_robust_cluster_vs_v67.json": "037b093dda0299252105f8f37217dbcc9242141728ea2e14a400adfee7194d2f"
+  },
+  "validation": {
+    "ruff_check": "pass",
+    "ruff_format_check": "pass",
+    "standalone_smoke_pass_count_including_v67": 6,
+    "standalone_smoke_reject_count": 1,
+    "all_40_games_reached_step_719": true,
+    "independent_harness_summaries_match": true
+  },
+  "guardrails": {
+    "sealed_inputs_opened": [],
+    "forbidden_inputs": [
+      "all replay episode IDs",
+      "all 56-ID sets",
+      "old/fresh/novel holdouts",
+      "live Kaggle action or reward traces"
+    ],
+    "training_performed": false,
+    "submission_created": false,
+    "upload_performed": false,
+    "development_only_not_promotion_evidence": true
+  }
+}

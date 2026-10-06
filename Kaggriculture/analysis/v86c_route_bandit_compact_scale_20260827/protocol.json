@@ -1,0 +1,914 @@
+{
+  "schema_version": "v86c-compact-family-scale-prereg-v1",
+  "status": "frozen_before_any_v86c_game_or_economic_outcome",
+  "created_date": "2026-08-27",
+  "purpose": "Fresh disjoint-seed compact-evidence successor to the V86-B V4 route-bandit contract. V86-C changes only seeds and evidence serialization/resource gates; families, actions, model, CV, economic gates, alias rules, and support gates remain unchanged.",
+  "semantic_parent_contract": {
+    "name": "V86-B alias-family-scale preregistration V4",
+    "exact_copy_scope": [
+      "candidate",
+      "families",
+      "actions and runtime-route mapping",
+      "feature encoder",
+      "fixed model and intervention rule",
+      "cross-validation",
+      "adequacy and economic gates",
+      "selector accounting",
+      "alias truth table",
+      "global and per-family support gates",
+      "promotion-grade extra gates"
+    ],
+    "only_permitted_changes": [
+      "fresh development seeds 27100500..27100507",
+      "compact evidence serialization",
+      "pre-full-grid resource gates"
+    ],
+    "only_pinned_v86b_artifact": {
+      "path": "analysis/v86b_route_bandit_alias_scale_20260827/RESOURCE_STOP_REPORT.md",
+      "sha256": "89dcc3b2cdb26f5da420f6b7a73d3907148acdfffcf5eded30bfb4a873631e16",
+      "permitted_use": "Mechanical evidence that V86-B stopped before the full grid because raw trajectory serialization was not viable; it supplies no game label, margin, threshold, action choice, model decision, or CV result."
+    }
+  },
+  "guardrails": {
+    "sealed_holdout_must_remain_unopened": true,
+    "checkpoint_forbidden": true,
+    "runtime_agent_forbidden": true,
+    "submission_forbidden": true,
+    "kaggle_upload_forbidden": true,
+    "posthoc_model_or_threshold_tuning_forbidden": true,
+    "v84_outcomes_excluded_from_fit": true,
+    "v86a_dataset_and_results_must_not_be_opened": true,
+    "v86a_dataset_and_results_must_not_be_parsed": true,
+    "v86a_dataset_results_labels_margins_and_economic_outcomes_must_not_be_used": true,
+    "v86b_dataset_and_results_must_not_be_opened": true,
+    "v86b_dataset_and_results_must_not_be_parsed": true,
+    "v86b_smoke_labels_margins_and_economic_outcomes_must_not_be_read_or_used": true,
+    "full_trajectories_must_exist_only_in_worker_memory": true,
+    "worker_must_compact_before_ipc": true,
+    "parent_must_never_receive_or_accumulate_full_trajectories": true,
+    "raw_full_action_observation_and_state_arrays_must_not_be_serialized": true,
+    "family_action_model_cv_economic_alias_or_support_gate_changes_forbidden_after_freeze": true
+  },
+  "outcome_isolation": {
+    "only_permitted_predecessor_outcome_related_artifact": "analysis/v86b_route_bandit_alias_scale_20260827/RESOURCE_STOP_REPORT.md",
+    "forbidden_v86a_inputs": [
+      "analysis/v86_route_bandit_family_scale_20260827/dataset.json",
+      "analysis/v86_route_bandit_family_scale_20260827/dataset_smoke.json",
+      "any V86-A result, label, margin, reward, score, oracle, rescue, selector, or CV artifact"
+    ],
+    "forbidden_v86b_inputs": [
+      "analysis/v86b_route_bandit_alias_scale_20260827/dataset_smoke.json",
+      "analysis/v86b_route_bandit_alias_scale_20260827/dataset.json",
+      "any V86-B result, smoke label, margin, reward, score, oracle, rescue, selector, or CV artifact"
+    ],
+    "enforcement": "V86-C collection, evaluation, review, and decisions may not open, import, hash, parse, copy, aggregate, inspect, or use any forbidden input. Fresh V86-C labels may come only from the frozen seeds in this protocol after contract freeze.",
+    "filesystem_read_policy": {
+      "repository_policy": "default_deny",
+      "denylist_precedes_allowlist": true,
+      "denylist": [
+        "analysis/v86_route_bandit_family_scale_20260827/dataset.json",
+        "analysis/v86_route_bandit_family_scale_20260827/dataset_smoke.json",
+        "analysis/v86_route_bandit_family_scale_20260827/*result*",
+        "analysis/v86b_route_bandit_alias_scale_20260827/dataset.json",
+        "analysis/v86b_route_bandit_alias_scale_20260827/dataset_smoke.json",
+        "analysis/v86b_route_bandit_alias_scale_20260827/*result*",
+        "analysis/sealed_candidate_holdout_55797143_metadata_20260827/**",
+        "any V86-A or V86-B file containing a label, margin, reward, score, oracle, rescue, selector decision, or CV outcome"
+      ],
+      "repository_read_allowlist": [
+        "analysis/v86c_route_bandit_compact_scale_20260827/protocol.json",
+        "analysis/v86c_route_bandit_compact_scale_20260827/PRE_REGISTRATION.md",
+        "analysis/v86c_route_bandit_compact_scale_20260827/CONTRACT_FREEZE_RECEIPT.md",
+        "analysis/v86c_route_bandit_compact_scale_20260827/<frozen_collector>.py",
+        "analysis/v86c_route_bandit_compact_scale_20260827/<frozen_evaluator>.py",
+        "analysis/v86b_route_bandit_alias_scale_20260827/RESOURCE_STOP_REPORT.md",
+        "the exact candidate, action-route, family, feature-encoder, engine-helper, Rust package, and native-extension paths pinned in this protocol"
+      ],
+      "system_runtime_reads": "Interpreter, standard-library, and installed-package reads outside the repository are allowed only as runtime dependencies; canonical paths must be audited and they may not point into a competition data, prior outcome, cache, or sealed-holdout directory.",
+      "enforcement_mechanism": "The frozen collector must intercept and canonicalize actual file-open/import reads in the parent and every worker. Before returning any record it must reject a denylisted, non-allowlisted, unresolved, symlink-escaped, or post-freeze-drifted repository path.",
+      "self_report_is_not_evidence": "A prior_outcome_reads field, declaration, or empty list cannot satisfy this gate.",
+      "post_run_audit": "After smoke, first full run, and independent rerun, reconcile the observed canonical read manifest against the allowlist and denylist, hash every permitted repository source, require zero denied/unknown reads and zero source drift, and include the compact read-audit digest and verdict in the deterministic core."
+    }
+  },
+  "claim_ownership_contract": {
+    "collector_must_not_fit_or_run_selector_cv": true,
+    "collector_owned_boolean_claims": [
+      "mechanical_pass",
+      "alias_pass",
+      "support_pass",
+      "adequacy_pass",
+      "read_policy_pass",
+      "resource_pass"
+    ],
+    "collector_must_write_null_until_evaluator": [
+      "selector_pass",
+      "promotion_grade_pass",
+      "independent_rerun_match"
+    ],
+    "collector_independent_rerun_match_value": null,
+    "independent_rerun_match_rule": "Both primary and independent collections are separate FULL runs with identical frozen inputs and no predecessor-dataset read. Collector always writes null. Evaluator alone compares their deterministic-core SHA-256 values and writes the boolean result without mutating either dataset.",
+    "evaluator_rule": "Evaluator requires collector selector_pass, promotion_grade_pass, and independent_rerun_match to be null. It validates both FULL collections and their source pins, compares deterministic cores, then and only then runs the frozen selector CV and writes final boolean rerun, selector, and promotion claims into results without mutating either dataset.",
+    "claimed_recomputed_mismatch_scope": "Mismatch is a blocker only for collector-owned non-null claims. Evaluator-owned null placeholders are not compared as false booleans."
+  },
+  "candidate": {
+    "name": "V67",
+    "path": "submissions/meta_v67_quantity_conserving_front_run_standalone/main.py",
+    "sha256": "300983ffa3da614ad5e7b9958c76104d9f613fcaf7169e69963ea634ee0a093b"
+  },
+  "actions": [
+    {
+      "id": "KEEP_V67"
+    },
+    {
+      "id": "FORCE_B120_SUFFIX",
+      "runtime_route_key": "b120",
+      "source_path": "artifacts/top20_live_tapes80_20260826/tape_99600846_s0.py",
+      "source_sha256": "3fdf8cc7634eb9f60fcdecaefdd62ac95d3f04509d0c2bb4f82bebb1c763b627"
+    },
+    {
+      "id": "FORCE_C120_SUFFIX",
+      "runtime_route_key": "c120",
+      "source_path": "artifacts/top20_live_tapes80_20260826/tape_99596430_s1.py",
+      "source_sha256": "6510a81b1114e4cbdf899afb194d3bd015abcf8cd010579a8de4a0fe93d9226f"
+    }
+  ],
+  "action_runtime_route_mapping": {
+    "FORCE_B120_SUFFIX": "b120",
+    "FORCE_C120_SUFFIX": "c120"
+  },
+  "families": [
+    {
+      "id": "v16_route_family",
+      "representative": "v22",
+      "path": "submissions/meta_v22_v16_land3_terminal_rule_standalone/main.py",
+      "sha256": "5d5c615a296d984402f886b5f998a54e211dd6138e7818793733069d0d1476ba",
+      "source_group": "legacy-distinct-family"
+    },
+    {
+      "id": "ryo_selector_family",
+      "representative": "v12_ryo",
+      "path": "submissions/top1_v12_ryo_selector_b120_repaired_standalone/main.py",
+      "sha256": "670c85ca7c81d150fbebb4083eaec37f667c3c7305dfdc55a41feed3919e4d02",
+      "source_group": "legacy-distinct-family"
+    },
+    {
+      "id": "route_99612231_family",
+      "representative": "v44_route",
+      "path": "submissions/meta_v44_route99612231_orphan_standalone/main.py",
+      "sha256": "cd2eda3600b4d4849f40a74d25f350239528541e52be0aecf85215fe7aa9afb2",
+      "source_group": "legacy-distinct-family"
+    },
+    {
+      "id": "robust_cluster_family",
+      "representative": "robust_cluster",
+      "path": "submissions/robust_cluster_tape_v10_standalone/main.py",
+      "sha256": "27cb59ba30d42464985db5fa58f858f79c6ddae95e1eeff2bd4b4275523805f6",
+      "source_group": "legacy-distinct-family"
+    },
+    {
+      "id": "top20_crop_dusta_55714246",
+      "representative": "tape_99594187_s1",
+      "path": "artifacts/top20_live_tapes80_20260826/tape_99594187_s1.py",
+      "sha256": "5caefeb46cec9f03f5ca80c1ba32bc57e294370685ae06d12ab7be202590a75a",
+      "source_group": "submission-55714246"
+    },
+    {
+      "id": "top20_tetsuya_55734995",
+      "representative": "tape_99591726_s0",
+      "path": "artifacts/top20_live_tapes80_20260826/tape_99591726_s0.py",
+      "sha256": "f5ac53cd9dc1b2ec9b43837b6d6d7c77431aaf873ba3c45dbe316fa55af87f0e",
+      "source_group": "submission-55734995"
+    },
+    {
+      "id": "top20_milan_leonard_55774239",
+      "representative": "tape_99566769_s1",
+      "path": "artifacts/top20_live_tapes80_20260826/tape_99566769_s1.py",
+      "sha256": "caf952fb35080020a52e839950a4913d30557b248d2b153afbc46ef7282d9c3b",
+      "source_group": "submission-55774239"
+    },
+    {
+      "id": "top20_arda_ceylan_55742738",
+      "representative": "tape_99582725_s0",
+      "path": "artifacts/top20_live_tapes80_20260826/tape_99582725_s0.py",
+      "sha256": "8e2801c8c1c4292dc5679207e722a548d84933d9caac128c2bdbedb848583915",
+      "source_group": "submission-55742738"
+    }
+  ],
+  "family_replacement_rule": "No replacement is permitted. Any import, callable, hash, or completion failure stops V86-C before economic evaluation because the exact eight V86-B V4 families are frozen.",
+  "fresh_development_seeds": [
+    27100500,
+    27100501,
+    27100502,
+    27100503,
+    27100504,
+    27100505,
+    27100506,
+    27100507
+  ],
+  "seats": [
+    0,
+    1
+  ],
+  "expected_contexts": 128,
+  "expected_full_games": 384,
+  "observation_steps": [
+    24,
+    48,
+    72,
+    96,
+    120
+  ],
+  "feature_encoder": {
+    "name": "V85 encode_selector_features",
+    "features_per_observation": 81,
+    "total_features": 405,
+    "model_input_identifiers_forbidden": true
+  },
+  "model": {
+    "type": "dual_ridge_absolute_and_delta_heads",
+    "alpha": 1000.0,
+    "beta": 2.0,
+    "switch_threshold": 2500.0,
+    "actions": [
+      "KEEP_V67",
+      "FORCE_B120_SUFFIX",
+      "FORCE_C120_SUFFIX"
+    ],
+    "intervention_rule": "absolute_lcb > 0 and delta_lcb > 2500; equality abstains",
+    "tie_break": [
+      "higher_delta_lcb",
+      "higher_absolute_lcb",
+      "FORCE_B120_SUFFIX_before_FORCE_C120_SUFFIX"
+    ],
+    "hyperparameter_search": false
+  },
+  "cross_validation": {
+    "unit": "family_seed_cluster",
+    "folds": 64,
+    "held_rows_per_fold": 2,
+    "training_exclusion": "exclude every row in held family and every row with held seed",
+    "expected_training_rows": 98,
+    "uncertainty": "delete-one-training-family jackknife plus family-grouped OOF RMSE"
+  },
+  "compact_evidence_contract": {
+    "worker_memory_rule": "Complete raw action, observation, and engine-state trajectories may exist only transiently inside the worker evaluating one context. The worker must compact and validate the context before IPC, destroy every full trajectory, and return only the exact-key compact context record.",
+    "ipc_boundary": {
+      "worker_must_compact_before_ipc": true,
+      "worker_return_type": "one minified exact-key compact context record",
+      "context_record_max_bytes": 65536,
+      "context_record_max_display": "64 KiB",
+      "parent_full_trajectory_receive_forbidden": true,
+      "parent_full_trajectory_accumulation_forbidden": true,
+      "parent_may_accumulate_only_validated_compact_records": true,
+      "pickle_or_object_graph_transfer_forbidden": true
+    },
+    "serialized_full_trajectory_arrays_forbidden": true,
+    "exact_step_domains": {
+      "full_action_trace_rows_per_seat": 719,
+      "full_action_trace_steps_inclusive": [
+        0,
+        718
+      ],
+      "full_observation_trace_rows_per_seat": 719,
+      "full_observation_trace_steps_inclusive": [
+        0,
+        718
+      ],
+      "full_state_trace_rows_per_seat": 719,
+      "full_state_trace_steps_inclusive": [
+        0,
+        718
+      ],
+      "action_prefix_rows_per_seat": 120,
+      "action_prefix_steps_inclusive": [
+        0,
+        119
+      ],
+      "observation_and_state_prefix_rows_per_seat": 121,
+      "observation_and_state_prefix_boundary": "initial/pre-action rows through and including the pre-action step-120 row",
+      "feature_snapshot_steps": [
+        24,
+        48,
+        72,
+        96,
+        120
+      ],
+      "feature_snapshot_timing": "pre-action at every listed step"
+    },
+    "serialized_per_arm_per_context_required": {
+      "component_digests": {
+        "components": [
+          "candidate raw action trajectory",
+          "candidate proposed action trajectory",
+          "candidate executed action trajectory",
+          "opponent proposed action trajectory",
+          "opponent executed action trajectory",
+          "canonical both-seat observation trajectory",
+          "canonical engine-state trajectory"
+        ],
+        "manifest_granularity": "one manifest per seat and component; aggregate two-seat lengths or hashes are insufficient",
+        "fields_per_component_per_seat": [
+          "seat id",
+          "exact row count",
+          "exact canonical byte length",
+          "SHA-256 of exact canonical payload"
+        ]
+      },
+      "prefix_proofs": [
+        "per-seat per-component prefix row count, canonical byte length, and SHA-256 through the frozen action or observation/state boundary",
+        "full-joint prefix SHA-256",
+        "pairwise KEEP/B/C component equality booleans",
+        "pairwise KEEP/B/C full-joint equality booleans"
+      ],
+      "first_difference_evidence": [
+        "nullable earliest candidate raw-action difference versus KEEP",
+        "nullable earliest candidate proposed-action difference versus KEEP",
+        "nullable earliest candidate executed-action difference versus KEEP",
+        "explicit before-120, at-or-after-120, or null classification",
+        "for a non-null difference d, an equal-prefix commitment over [0,d), a KEEP row-d commitment, and a forced row-d commitment; the two row-d commitments must differ",
+        "for a null difference, equal full row count, canonical byte length, and SHA-256"
+      ],
+      "candidate_execution_audit": [
+        "one domain-separated SHA-256 commitment over exactly 719 observed per-step candidate audit rows for steps 0..718",
+        "exact start, exclusive stop, audit row count, completed-transition count, sanitizer-changed-step count, fallback count, exception count, and partial-action count",
+        "candidate proposed and executed component manifests must have identical row count, canonical byte length, and SHA-256 when sanitizer-changed-step count is zero"
+      ],
+      "worker_read_audit": [
+        "one per-context list of unique sorted source-pin indices actually read by that worker",
+        "one SHA-256 over the canonical selected source-pin manifests",
+        "zero denied, unknown, and source-drift counts plus a post-run pass boolean",
+        "top-level observed-read manifests must equal the sorted union of all parent and worker observed repository reads and reconcile to the frozen source pins"
+      ],
+      "route_lifecycle": [
+        "route request",
+        "selected route",
+        "forced injection count and step",
+        "organic selection count and step",
+        "route state",
+        "option start count",
+        "option completion count",
+        "route drift count",
+        "route stability through completion"
+      ],
+      "final_outcome": [
+        "final step",
+        "canonical final-state SHA-256",
+        "player-0 money",
+        "player-1 money",
+        "signed candidate margin"
+      ],
+      "features": [
+        "five serialized 81-value feature snapshots at pre-action steps 24, 48, 72, 96, and 120",
+        "one serialized 405-value concatenated feature vector",
+        "SHA-256 of the serialized feature snapshots and SHA-256 of the serialized 405-value vector",
+        "feature finiteness and shape verdicts"
+      ],
+      "labels": [
+        "KEEP/B/C margins",
+        "forced-arm paired deltas versus KEEP",
+        "alias observed zero-paired-delta labels",
+        "oracle rescue and selector accounting labels"
+      ],
+      "source_evidence": [
+        "all frozen source paths and SHA-256 pins",
+        "pre-run and post-run source-drift verdicts"
+      ]
+    },
+    "serialized_raw_arrays_forbidden": [
+      "complete candidate raw action arrays",
+      "complete candidate proposed action arrays",
+      "complete candidate executed action arrays",
+      "complete opponent proposed action arrays",
+      "complete opponent executed action arrays",
+      "complete observation arrays for either seat",
+      "complete engine-state arrays"
+    ],
+    "exact_key_schema": {
+      "unknown_keys_forbidden": true,
+      "top_level_exact_keys": [
+        "schema_version",
+        "protocol_sha256",
+        "collector_sha256",
+        "evaluator_sha256",
+        "run_identity",
+        "source_pins",
+        "read_audit",
+        "contexts",
+        "aggregate_claims",
+        "resource_audit",
+        "deterministic_core_sha256"
+      ],
+      "run_identity_exact_keys": [
+        "run_kind",
+        "expected_contexts",
+        "expected_games"
+      ],
+      "source_pin_exact_keys": [
+        "canonical_path",
+        "canonical_byte_length",
+        "sha256"
+      ],
+      "context_exact_keys": [
+        "context_id_sha256",
+        "family_id",
+        "seed",
+        "candidate_seat",
+        "worker_read_audit",
+        "feature_snapshots",
+        "features_405",
+        "arms",
+        "forced_comparisons",
+        "labels",
+        "claimed_verdicts"
+      ],
+      "arm_exact_keys": [
+        "action_id",
+        "component_manifests",
+        "prefix_manifests",
+        "full_joint_prefix_sha256",
+        "feature_snapshots_sha256",
+        "features_405_sha256",
+        "candidate_execution_audit",
+        "route_lifecycle",
+        "final"
+      ],
+      "candidate_execution_audit_exact_keys": [
+        "start_step",
+        "stop_step_exclusive",
+        "audit_row_count",
+        "completed_transitions",
+        "sanitizer_changed_step_count",
+        "fallback_count",
+        "exception_count",
+        "partial_action_count",
+        "audit_sha256"
+      ],
+      "worker_read_audit_exact_keys": [
+        "policy_sha256",
+        "observed_source_pin_indices",
+        "observed_read_manifest_sha256",
+        "denied_read_count",
+        "unknown_read_count",
+        "source_drift_count",
+        "post_run_pass"
+      ],
+      "component_manifest_exact_keys": [
+        "component",
+        "seat",
+        "row_count",
+        "canonical_byte_length",
+        "sha256"
+      ],
+      "prefix_manifest_exact_keys": [
+        "component",
+        "seat",
+        "start_step",
+        "stop_step_exclusive",
+        "row_count",
+        "canonical_byte_length",
+        "sha256"
+      ],
+      "forced_comparison_exact_keys": [
+        "action_id",
+        "raw_action_first_difference",
+        "proposed_action_first_difference",
+        "executed_action_first_difference",
+        "route_relation",
+        "prefix_component_manifests_equal",
+        "full_joint_prefix_equal",
+        "full_component_manifests_equal",
+        "final_equal",
+        "feature_snapshots_equal",
+        "features_405_equal",
+        "claimed_alias_verdict"
+      ],
+      "first_difference_exact_keys": [
+        "difference_step",
+        "classification",
+        "equal_prefix_commitment",
+        "keep_row_commitment",
+        "forced_row_commitment",
+        "null_full_equality"
+      ],
+      "equal_prefix_commitment_exact_keys": [
+        "start_step",
+        "stop_step_exclusive",
+        "row_count",
+        "keep_canonical_byte_length",
+        "forced_canonical_byte_length",
+        "keep_sha256",
+        "forced_sha256",
+        "hashes_equal"
+      ],
+      "row_commitment_exact_keys": [
+        "step",
+        "canonical_byte_length",
+        "sha256"
+      ],
+      "null_full_equality_exact_keys": [
+        "keep_row_count",
+        "forced_row_count",
+        "keep_canonical_byte_length",
+        "forced_canonical_byte_length",
+        "keep_sha256",
+        "forced_sha256",
+        "equal"
+      ],
+      "route_lifecycle_exact_keys": [
+        "requested_route",
+        "selected_route",
+        "forced_injection_count",
+        "forced_injection_step",
+        "organic_selection_count",
+        "organic_selection_step",
+        "route_state",
+        "option_start_count",
+        "option_completion_count",
+        "route_drift_count",
+        "stable_through_completion"
+      ],
+      "final_exact_keys": [
+        "final_step",
+        "final_state_sha256",
+        "player_0_money",
+        "player_1_money",
+        "candidate_margin"
+      ],
+      "feature_snapshot_exact_keys": [
+        "step",
+        "values_81"
+      ],
+      "labels_exact_keys": [
+        "keep_margin",
+        "b120_margin",
+        "c120_margin",
+        "b120_paired_delta",
+        "c120_paired_delta",
+        "keep_loss",
+        "oracle_rescue_actions"
+      ],
+      "claimed_verdicts_exact_keys": [
+        "mechanical_pass",
+        "prefix_pass",
+        "route_pass",
+        "alias_pass"
+      ],
+      "aggregate_claims_exact_keys": [
+        "mechanical_pass",
+        "alias_pass",
+        "support_pass",
+        "adequacy_pass",
+        "selector_pass",
+        "promotion_grade_pass",
+        "read_policy_pass",
+        "resource_pass",
+        "independent_rerun_match"
+      ],
+      "resource_audit_exact_keys": [
+        "maximum_context_record_bytes",
+        "smoke_minified_bytes",
+        "projected_full_minified_bytes",
+        "actual_full_minified_bytes",
+        "context_cap_pass",
+        "smoke_cap_pass",
+        "projected_full_cap_pass",
+        "actual_full_cap_pass"
+      ],
+      "read_audit_exact_keys": [
+        "policy_sha256",
+        "observed_read_manifests",
+        "denied_read_count",
+        "unknown_read_count",
+        "source_drift_count",
+        "post_run_pass"
+      ],
+      "observed_read_manifest_exact_keys": [
+        "canonical_path",
+        "canonical_byte_length",
+        "sha256"
+      ],
+      "component_enum": [
+        "candidate_raw_action",
+        "candidate_proposed_action",
+        "candidate_executed_action",
+        "opponent_proposed_action",
+        "opponent_executed_action",
+        "observation",
+        "engine_state"
+      ],
+      "array_lengths_and_caps": {
+        "contexts_smoke_exact": 1,
+        "contexts_full_exact": 128,
+        "source_pins_exact": 23,
+        "observed_read_manifests_exact": 23,
+        "worker_observed_source_pin_indices_max": 23,
+        "arms_exact": 3,
+        "component_manifests_per_arm_exact": 9,
+        "prefix_manifests_per_arm_exact": 9,
+        "forced_comparisons_exact": 2,
+        "feature_snapshots_exact": 5,
+        "values_per_snapshot_exact": 81,
+        "features_405_exact": 405,
+        "oracle_rescue_actions_max": 2,
+        "generic_array_max": 405
+      },
+      "string_and_scalar_caps": {
+        "sha256": "exactly 64 lowercase hexadecimal characters",
+        "canonical_path_max_utf8_bytes": 512,
+        "identifier_max_utf8_bytes": 96,
+        "route_or_enum_max_utf8_bytes": 32,
+        "arbitrary_free_text_forbidden": true,
+        "all_numeric_values_must_be_finite": true,
+        "maximum_object_nesting_depth": 8
+      },
+      "forbidden_output_key_names_or_substrings": [
+        "trace",
+        "traces",
+        "trajectory",
+        "trajectories",
+        "route_history",
+        "selection_events",
+        "raw_actions",
+        "observations",
+        "states",
+        "blob",
+        "payload"
+      ],
+      "forbidden_output_payloads": [
+        "raw or full action, observation, or state rows",
+        "stringified JSON arrays or objects",
+        "pickle, marshal, MessagePack, NumPy, ZIP, gzip, zlib, or other compressed bytes",
+        "base64, base85, hexadecimal, escaped, or otherwise encoded full trajectories",
+        "opaque binary or text blobs; 64-character lowercase hexadecimal is permitted only in declared SHA-256 fields"
+      ],
+      "nullable_witness_rule": "Every first-difference object retains every exact key. For non-null d, null_full_equality is null and both row commitments plus the [0,d) equal-prefix commitment are present. For null difference_step, classification is null, both row commitments are null, and null_full_equality is present and equal=true.",
+      "minified_json_required": true,
+      "record_overflow_verdict": "BLOCK_BEFORE_IPC"
+    },
+    "evaluator_recomputation_contract": {
+      "stored_claims_are_non_authoritative": true,
+      "exact_key_and_cap_validation_first": true,
+      "recompute_from_compact_evidence": [
+        "component and prefix equality from exact row counts, canonical byte lengths, and SHA-256 digests",
+        "first-difference validity from [0,d) equal-prefix commitments and differing row-d commitments, or null full-equality commitments",
+        "route lifecycle, alias truth table, global and per-family support",
+        "margins and paired deltas from final money values",
+        "fixed-model clustered CV decisions and selector accounting from 405 features and recomputed labels",
+        "adequacy, economic, promotion-grade, read-policy, resource, and deterministic-rerun verdicts"
+      ],
+      "claimed_and_recomputed_verdicts_must_match": true,
+      "mismatch_verdict": "BLOCK"
+    },
+    "deterministic_core": {
+      "hash_algorithm": "SHA-256",
+      "canonical_encoding": "deterministic canonical JSON with sorted object keys and fixed separators",
+      "must_cover": [
+        "all compact per-component exact lengths and SHA-256 digests",
+        "all component and full-joint prefix hashes and equality booleans",
+        "all first-difference evidence",
+        "all route lifecycle evidence",
+        "all final-state hashes, money values, and signed margins",
+        "all five feature snapshots and all 405 feature values",
+        "all labels, paired deltas, oracle rescue labels, and selector accounting",
+        "all source hashes, observed-read-manifest digests, allowlist/denylist verdicts, and source-drift verdicts",
+        "all exact-key, string/array cap, forbidden-key/payload, IPC-boundary, evaluator-recomputation, mechanical, alias, nondegeneracy, adequacy, economic, and resource verdicts"
+      ],
+      "must_not_cover_by_serialization": "No raw full action, observation, or engine-state trajectory array may enter any output artifact, including the deterministic core payload.",
+      "independent_full_rerun_required": true,
+      "rerun_rule": "After the first complete 128-context collection, start a fresh independent process, reload every source, rerun all 384 games, reconstruct every compact proof and label, and require byte-identical deterministic core SHA-256. Re-rendering the first output is insufficient.",
+      "proof_trust_boundary": "Because compact outputs intentionally omit raw trajectories, lifecycle and first-difference summaries are trusted only when emitted before IPC by a collector whose source hash was frozen before smoke, linked to exact per-seat component/prefix commitments, recomputed by the frozen evaluator, and reproduced by the required fresh same-source full rerun.",
+      "collector_freeze_before_smoke_required": true
+    }
+  },
+  "resource_gates": {
+    "compact_context_max_bytes": 65536,
+    "compact_context_max_display": "64 KiB",
+    "smoke_contexts": 1,
+    "smoke_games": 3,
+    "smoke_minified_output_max_bytes": 131072,
+    "smoke_minified_output_max_display": "128 KiB",
+    "full_contexts": 128,
+    "full_minified_dataset_max_bytes": 10485760,
+    "full_minified_dataset_max_display": "10 MiB",
+    "pre_full_projection_formula": "minified fixed top-level overhead plus 128 times the one-context compact record byte length",
+    "full_grid_authorization": "Before IPC the smoke worker must produce a context record no larger than 64 KiB. The complete one-context smoke artifact must be minified JSON no larger than 128 KiB. Its schema-based 128-context projection must be no larger than 10 MiB. All applicable mechanical, compact-schema, read-policy, and post-run audit gates must pass before the full grid may start.",
+    "full_grid_completion_gate": "The actual complete 128-context minified dataset must be no larger than 10 MiB; no unminified, compressed, encoded, or sidecar trajectory artifact is permitted.",
+    "failure_action": "STOP before IPC on a context overflow, before the full grid on a smoke or projection failure, and before CV on an actual full-dataset size failure. Do not inspect smoke economic labels and do not revise families, actions, model, CV, economic, alias, or support gates post hoc. A storage-only successor requires a new pre-outcome freeze and fresh seeds."
+  },
+  "mechanical_gates": {
+    "all_games_final_step": 719,
+    "candidate_prefix_parity_through_step": 119,
+    "candidate_prefix_parity_basis": "full_joint_prefix_gate_for_every_KEEP_B_C_arm",
+    "full_joint_prefix_gate": {
+      "arms": [
+        "KEEP_V67",
+        "FORCE_B120_SUFFIX",
+        "FORCE_C120_SUFFIX"
+      ],
+      "comparison": "all three arms must be pairwise identical; equality against KEEP_V67 alone is sufficient only when both forced arms independently equal KEEP_V67",
+      "candidate_and_opponent_action_steps_inclusive": [
+        0,
+        119
+      ],
+      "observation_and_state_boundary": "complete canonical trajectory from the initial state through the pre-action observation/state presented at step 120",
+      "feature_snapshot_steps": [
+        24,
+        48,
+        72,
+        96,
+        120
+      ],
+      "step_120_feature_snapshot_timing": "captured before applying the action at step 120",
+      "required_equal_components": [
+        "candidate raw action trace for steps 0..119",
+        "candidate proposed action trace for steps 0..119",
+        "candidate executed action trace for steps 0..119",
+        "opponent proposed action trace for steps 0..119",
+        "opponent executed action trace for steps 0..119",
+        "canonical observation trajectory for both seats through the pre-action step-120 observation",
+        "canonical engine state trajectory through the pre-action step-120 state",
+        "feature snapshots at steps 24, 48, 72, 96, and pre-action 120"
+      ],
+      "canonical_sha256_digest_and_length_per_component_required": true,
+      "any_component_value_length_or_digest_mismatch_verdict": "BLOCK"
+    },
+    "candidate_sanitizer_changes": 0,
+    "candidate_fallbacks": 0,
+    "candidate_exceptions": 0,
+    "candidate_partial_actions": 0,
+    "finite_feature_shape": [
+      128,
+      405
+    ],
+    "deterministic_core_hash_rerun": true,
+    "deterministic_core_required_components": [
+      "compact full-joint KEEP/B/C prefix proofs, per-component lengths and SHA-256 digests, equality booleans, and prefix verdict",
+      "route request, selected route, injection step, route state, start/completion counts, stability, and no-drift evidence",
+      "candidate raw, proposed, and executed trajectory exact lengths and SHA-256 digests plus first-difference evidence",
+      "opponent proposed and executed trajectory exact lengths and SHA-256 digests",
+      "canonical both-seat observation and state trajectory exact lengths and SHA-256 digests",
+      "canonical final-state SHA-256, both players' money, and signed candidate margin",
+      "five observation-step feature snapshots and final 405-value feature vector",
+      "KEEP/B/C margins, labels, paired deltas, and selector accounting",
+      "source hashes and pre/post source-drift verdicts",
+      "observed-read audit digest plus allowlist/denylist verdicts",
+      "exact-key/cap/forbidden-payload and worker-before-IPC verdicts",
+      "frozen-evaluator recomputed mechanical, alias-truth-table, nondegeneracy, adequacy, economic, and resource verdicts"
+    ],
+    "keep_route_gate": {
+      "route_choice_must_be_absent_through_step": 119,
+      "organic_route_selection_count": 1,
+      "organic_route_selection_step": 120,
+      "forced_injection_forbidden": true,
+      "selected_route_must_remain_stable_through_completion": true,
+      "route_choice_drift_count_per_context": 0
+    },
+    "forced_option_alias_rule": {
+      "applies_to": [
+        "FORCE_B120_SUFFIX",
+        "FORCE_C120_SUFFIX"
+      ],
+      "forced_injection_count_per_context": 1,
+      "forced_injection_step": 120,
+      "forced_option_start_count_per_context": 1,
+      "forced_option_completion_count_per_context": 1,
+      "forced_route_choice_before_step_120_forbidden": true,
+      "route_choice_drift_count_per_context": 0,
+      "selected_route_must_remain_stable_through_completion": true,
+      "requested_route_must_equal_selected_route": true,
+      "candidate_executed_difference_required_for_valid_non_alias": true,
+      "candidate_executed_first_difference_definition": "earliest step where the forced candidate executed action differs from the KEEP_V67 candidate executed action",
+      "candidate_executed_first_difference_minimum_step_for_valid_non_alias": 120,
+      "raw_proposed_opponent_state_observation_or_feature_only_difference_cannot_establish_non_alias_support": true,
+      "full_trajectory_equality": {
+        "scope": "required only to validate VALID_ALIAS when KEEP and the forced option selected the same runtime route",
+        "required_components": [
+          "candidate raw action trace for every step",
+          "candidate proposed action trace for every step",
+          "candidate executed action trace for every step",
+          "opponent proposed action trace for every step",
+          "opponent executed action trace for every step",
+          "canonical observation trajectory for both seats",
+          "canonical state trajectory for both seats",
+          "canonical final state",
+          "both players' final money and signed candidate margin",
+          "feature snapshots at steps 24, 48, 72, 96, and 120"
+        ],
+        "canonical_serialization": "deterministic canonical JSON with stable key order, explicit nulls, exact integer/boolean/string values, and ordered step arrays",
+        "equal_only_if_every_required_component_and_length_matches": true,
+        "sha256_digest_per_component_required": true,
+        "non_alias_support_excluded": true
+      },
+      "truth_table": [
+        {
+          "keep_route_relation": "same_as_forced_selected_route",
+          "full_trajectory_relation": "identical",
+          "candidate_executed_relation": "identical",
+          "verdict": "VALID_ALIAS"
+        },
+        {
+          "keep_route_relation": "same_as_forced_selected_route",
+          "full_trajectory_relation": "different",
+          "candidate_executed_relation": "any",
+          "verdict": "BLOCK"
+        },
+        {
+          "keep_route_relation": "different_from_forced_selected_route",
+          "full_trajectory_relation": "any",
+          "candidate_executed_relation": "identical",
+          "verdict": "BLOCK"
+        },
+        {
+          "keep_route_relation": "different_from_forced_selected_route",
+          "full_trajectory_relation": "not_used_for_support",
+          "candidate_executed_relation": "different",
+          "candidate_executed_first_difference_step": ">=120",
+          "verdict": "VALID_NON_ALIAS"
+        },
+        {
+          "keep_route_relation": "any",
+          "full_trajectory_relation": "any",
+          "candidate_executed_relation": "different",
+          "candidate_executed_first_difference_step": "<120",
+          "verdict": "BLOCK"
+        }
+      ],
+      "alias_rows_are_retained": true,
+      "alias_rows_receive_observed_zero_paired_delta": true,
+      "alias_rows_must_not_be_dropped_reweighted_or_relabelled": true
+    },
+    "global_route_nondegeneracy": {
+      "support_definition": "A context counts as different only when the forced candidate executed-action trace differs from KEEP_V67 at least once and its earliest executed-action difference is step 120 or later.",
+      "post_branch_support_basis": "From step 120 onward, only candidate executed-action differences establish VALID_NON_ALIAS support and contribute to global or per-family nondegeneracy counts.",
+      "raw_proposed_opponent_state_observation_feature_or_route_state_only_differences_do_not_count": true,
+      "different_route_with_identical_candidate_executed_trace_blocks_and_does_not_count": true,
+      "denominator_contexts_per_forced_action": 128,
+      "minimum_different_fraction_per_forced_action": 0.9,
+      "minimum_different_contexts_per_forced_action": 116,
+      "each_forced_action_must_differ_in_every_family": true,
+      "family_count": 8,
+      "contexts_per_family": 16,
+      "minimum_different_contexts_per_action_per_family": 12,
+      "minimum_different_fraction_per_action_per_family": 0.75
+    }
+  },
+  "adequacy_gates": {
+    "minimum_keep_loss_rows": 12,
+    "minimum_keep_loss_family_seed_clusters": 6,
+    "minimum_keep_loss_families": 3,
+    "minimum_oracle_rescue_fraction": 0.75,
+    "minimum_oracle_rescue_families": 3
+  },
+  "selector_accounting_semantics": {
+    "selected_forced_alias_counts_as_intervention": true,
+    "selected_forced_alias_observed_paired_delta": 0,
+    "selected_forced_alias_fails_every_intervention_actual_paired_delta_strictly_positive": true,
+    "alias_must_not_be_reclassified_as_keep_or_abstain": true
+  },
+  "selector_go_gates": {
+    "minimum_interventions": 1,
+    "maximum_interventions": 32,
+    "every_intervention_actual_paired_delta_strictly_positive": true,
+    "every_intervention_selected_margin_strictly_positive": true,
+    "minimum_keep_loss_rescue_fraction": 0.75,
+    "minimum_rescued_family_seed_clusters": 6,
+    "minimum_selected_wins": 122,
+    "minimum_wins_per_family": 15,
+    "family_wins_worst_and_mean_never_worse_than_keep": true
+  },
+  "promotion_grade_extra_gates": {
+    "wins": 128,
+    "positive_worst_margin_in_every_family": true
+  },
+  "pinned_reference_sources": {
+    "v86b_resource_stop_report": {
+      "path": "analysis/v86b_route_bandit_alias_scale_20260827/RESOURCE_STOP_REPORT.md",
+      "sha256": "89dcc3b2cdb26f5da420f6b7a73d3907148acdfffcf5eded30bfb4a873631e16"
+    },
+    "v85_feature_encoder_reference": {
+      "path": "analysis/v85_route_bandit_cv_20260827/collect_features.py",
+      "sha256": "a5d69bd1c447f7b0f5a5eebf0020a71163778e66dc5bedd9b999771e3d1749ef"
+    },
+    "v84_route_executor_reference": {
+      "path": "analysis/v84_route_option_onpolicy_oracle_20260827/run_oracle.py",
+      "sha256": "9fc45c32923aeba7891a04a2d4e09e4f6b159266b1c7a81ecb42761deb5081a6"
+    },
+    "selector_encoder_source": {
+      "path": "src/kaggriculture_rl/learning/tape_selector.py",
+      "sha256": "71172b8a853d2e63798e20c6e2cd7b64763d79d4c11e9ba01822669a0382c31f"
+    },
+    "engine_helper_source": {
+      "path": "scripts/evaluate_file_agent_vs_replay.py",
+      "sha256": "03fcb73cd657e09b4c74498e71ad093813d16c8dad669aeb78f4013b2ed9966f"
+    },
+    "rust_python_package": {
+      "path": "bindings/python/kaggriculture_rs/__init__.py",
+      "sha256": "672f7aa733ccdf6146bb001b8f465ffbb9a94d5e1bfed3f4041ff0e8a5688adb"
+    },
+    "rust_python_extension": {
+      "path": "bindings/python/kaggriculture_rs/_native.abi3.so",
+      "sha256": "315f30f12797c64ed1038347af1496d0ba18f9dc5ce3adcd15977a741f84acdd"
+    }
+  },
+  "stop_rule": "Any forbidden V86-A or V86-B dataset/result/smoke-label read, parse, or use; allowlist/denylist or post-run read-audit miss; predecessor pin mismatch; source-hash drift; compact context above 64 KiB before IPC; one-context minified smoke above 128 KiB; projected or actual 128-context minified dataset above 10 MiB; parent receipt or accumulation of full trajectories; unknown schema key, cap violation, forbidden trace/trajectory/history/event key or payload, compressed or encoded blob; raw full trajectory serialization; evaluator recomputation mismatch; full-joint KEEP/B/C prefix mismatch through the pre-action step-120 boundary; invalid first-difference commitment; KEEP forced injection or route drift; action-to-runtime-route mapping miss; alias-truth-table miss; alias full-trajectory equality omission; candidate executed difference before step 120; executed-trace nondegeneracy miss; adequacy miss; selector gate miss; or independent full-rerun deterministic-core mismatch stops the exact fixed V85 ridge branch with no posthoc tuning. Passing V86-C authorizes only one separately predeclared disjoint family-and-seed validation. V86-C itself cannot authorize a checkpoint, sealed holdout, submission, or Kaggle upload."
+}

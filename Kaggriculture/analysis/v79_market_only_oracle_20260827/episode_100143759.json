@@ -1,0 +1,1506 @@
+{
+  "analysis": "v79_market_only_hindsight_oracle",
+  "candidate_written": false,
+  "deployable": false,
+  "elapsed_seconds": 24.660235458,
+  "episodes": [
+    {
+      "baseline": {
+        "accepted_unit_change_steps": 0,
+        "action_deltas": [],
+        "candidate_money": 91930.0,
+        "final_shed": {
+          "MILK": 0,
+          "WOOL": 0
+        },
+        "margin": 23005.0,
+        "non_target_market_mismatch_steps": 0,
+        "opponent_money": 68925.0,
+        "proposed_unit_mismatch_steps": 0,
+        "sanitized_steps": 0,
+        "target_accepted_requested": {
+          "MILK": 114,
+          "WOOL": 246
+        },
+        "target_changed_steps": 0,
+        "target_requested": {
+          "MILK": 114,
+          "WOOL": 246
+        }
+      },
+      "candidate_seat": 1,
+      "category": "control",
+      "delta_margin": 1447.0,
+      "episode_id": 100143759,
+      "no_regression": true,
+      "opponent_tape_seat": 0,
+      "oracle": {
+        "accepted_unit_change_steps": 0,
+        "action_deltas": [
+          {
+            "baseline": [
+              [
+                "SELL",
+                "WOOL",
+                5
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 183,
+              "WOOL": 235
+            },
+            "shed": {
+              "MILK": 0,
+              "WOOL": 0
+            },
+            "step": 153
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "WOOL",
+                12
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 183,
+              "WOOL": 234
+            },
+            "shed": {
+              "MILK": 0,
+              "WOOL": 0
+            },
+            "step": 156
+          },
+          {
+            "baseline": [],
+            "oracle": [
+              [
+                "SELL",
+                "WOOL",
+                11
+              ]
+            ],
+            "prices": {
+              "MILK": 183,
+              "WOOL": 234
+            },
+            "shed": {
+              "MILK": 0,
+              "WOOL": 11
+            },
+            "step": 157
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "WOOL",
+                6
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 183,
+              "WOOL": 231
+            },
+            "shed": {
+              "MILK": 0,
+              "WOOL": 0
+            },
+            "step": 159
+          },
+          {
+            "baseline": [],
+            "oracle": [
+              [
+                "SELL",
+                "WOOL",
+                6
+              ]
+            ],
+            "prices": {
+              "MILK": 183,
+              "WOOL": 231
+            },
+            "shed": {
+              "MILK": 0,
+              "WOOL": 6
+            },
+            "step": 160
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "WOOL",
+                8
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 143,
+              "WOOL": 240
+            },
+            "shed": {
+              "MILK": 0,
+              "WOOL": 0
+            },
+            "step": 229
+          },
+          {
+            "baseline": [],
+            "oracle": [
+              [
+                "SELL",
+                "WOOL",
+                8
+              ]
+            ],
+            "prices": {
+              "MILK": 143,
+              "WOOL": 240
+            },
+            "shed": {
+              "MILK": 0,
+              "WOOL": 8
+            },
+            "step": 230
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "WOOL",
+                8
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 143,
+              "WOOL": 240
+            },
+            "shed": {
+              "MILK": 0,
+              "WOOL": 0
+            },
+            "step": 237
+          },
+          {
+            "baseline": [],
+            "oracle": [
+              [
+                "SELL",
+                "WOOL",
+                6
+              ]
+            ],
+            "prices": {
+              "MILK": 143,
+              "WOOL": 240
+            },
+            "shed": {
+              "MILK": 0,
+              "WOOL": 6
+            },
+            "step": 238
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "WOOL",
+                8
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 120,
+              "WOOL": 244
+            },
+            "shed": {
+              "MILK": 0,
+              "WOOL": 0
+            },
+            "step": 309
+          },
+          {
+            "baseline": [],
+            "oracle": [
+              [
+                "SELL",
+                "WOOL",
+                8
+              ]
+            ],
+            "prices": {
+              "MILK": 120,
+              "WOOL": 244
+            },
+            "shed": {
+              "MILK": 0,
+              "WOOL": 8
+            },
+            "step": 310
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "WOOL",
+                5
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 116,
+              "WOOL": 245
+            },
+            "shed": {
+              "MILK": 0,
+              "WOOL": 0
+            },
+            "step": 326
+          },
+          {
+            "baseline": [],
+            "oracle": [
+              [
+                "SELL",
+                "WOOL",
+                4
+              ]
+            ],
+            "prices": {
+              "MILK": 116,
+              "WOOL": 245
+            },
+            "shed": {
+              "MILK": 0,
+              "WOOL": 4
+            },
+            "step": 327
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "MILK",
+                6
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 105,
+              "WOOL": 246
+            },
+            "shed": {
+              "MILK": 0,
+              "WOOL": 0
+            },
+            "step": 369
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "MILK",
+                6
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 87,
+              "WOOL": 246
+            },
+            "shed": {
+              "MILK": 6,
+              "WOOL": 0
+            },
+            "step": 372
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "MILK",
+                6
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 87,
+              "WOOL": 247
+            },
+            "shed": {
+              "MILK": 12,
+              "WOOL": 0
+            },
+            "step": 380
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "WOOL",
+                10
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 87,
+              "WOOL": 247
+            },
+            "shed": {
+              "MILK": 18,
+              "WOOL": 0
+            },
+            "step": 381
+          },
+          {
+            "baseline": [],
+            "oracle": [
+              [
+                "SELL",
+                "WOOL",
+                9
+              ]
+            ],
+            "prices": {
+              "MILK": 87,
+              "WOOL": 247
+            },
+            "shed": {
+              "MILK": 18,
+              "WOOL": 9
+            },
+            "step": 382
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "WOOL",
+                6
+              ]
+            ],
+            "oracle": [
+              [
+                "SELL",
+                "MILK",
+                18
+              ]
+            ],
+            "prices": {
+              "MILK": 87,
+              "WOOL": 247
+            },
+            "shed": {
+              "MILK": 18,
+              "WOOL": 0
+            },
+            "step": 383
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "WOOL",
+                10
+              ]
+            ],
+            "oracle": [
+              [
+                "SELL",
+                "WOOL",
+                14
+              ]
+            ],
+            "prices": {
+              "MILK": 51,
+              "WOOL": 247
+            },
+            "shed": {
+              "MILK": 0,
+              "WOOL": 14
+            },
+            "step": 385
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "WOOL",
+                6
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 32,
+              "WOOL": 247
+            },
+            "shed": {
+              "MILK": 0,
+              "WOOL": 0
+            },
+            "step": 396
+          },
+          {
+            "baseline": [],
+            "oracle": [
+              [
+                "SELL",
+                "WOOL",
+                6
+              ]
+            ],
+            "prices": {
+              "MILK": 32,
+              "WOOL": 247
+            },
+            "shed": {
+              "MILK": 0,
+              "WOOL": 6
+            },
+            "step": 397
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "WOOL",
+                4
+              ],
+              [
+                "SELL",
+                "MILK",
+                6
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 32,
+              "WOOL": 247
+            },
+            "shed": {
+              "MILK": 0,
+              "WOOL": 0
+            },
+            "step": 404
+          },
+          {
+            "baseline": [],
+            "oracle": [
+              [
+                "SELL",
+                "WOOL",
+                4
+              ]
+            ],
+            "prices": {
+              "MILK": 32,
+              "WOOL": 247
+            },
+            "shed": {
+              "MILK": 6,
+              "WOOL": 4
+            },
+            "step": 405
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "WOOL",
+                4
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 32,
+              "WOOL": 247
+            },
+            "shed": {
+              "MILK": 6,
+              "WOOL": 0
+            },
+            "step": 406
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "WOOL",
+                6
+              ]
+            ],
+            "oracle": [
+              [
+                "SELL",
+                "WOOL",
+                4
+              ]
+            ],
+            "prices": {
+              "MILK": 32,
+              "WOOL": 247
+            },
+            "shed": {
+              "MILK": 6,
+              "WOOL": 4
+            },
+            "step": 407
+          },
+          {
+            "baseline": [],
+            "oracle": [
+              [
+                "SELL",
+                "WOOL",
+                6
+              ]
+            ],
+            "prices": {
+              "MILK": 24,
+              "WOOL": 247
+            },
+            "shed": {
+              "MILK": 6,
+              "WOOL": 6
+            },
+            "step": 409
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "MILK",
+                3
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 15,
+              "WOOL": 248
+            },
+            "shed": {
+              "MILK": 6,
+              "WOOL": 0
+            },
+            "step": 431
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "MILK",
+                6
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 17,
+              "WOOL": 248
+            },
+            "shed": {
+              "MILK": 15,
+              "WOOL": 0
+            },
+            "step": 433
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "WOOL",
+                8
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 1,
+              "WOOL": 249
+            },
+            "shed": {
+              "MILK": 15,
+              "WOOL": 0
+            },
+            "step": 452
+          },
+          {
+            "baseline": [],
+            "oracle": [
+              [
+                "SELL",
+                "WOOL",
+                8
+              ]
+            ],
+            "prices": {
+              "MILK": 1,
+              "WOOL": 249
+            },
+            "shed": {
+              "MILK": 15,
+              "WOOL": 8
+            },
+            "step": 453
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "WOOL",
+                7
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 1,
+              "WOOL": 249
+            },
+            "shed": {
+              "MILK": 15,
+              "WOOL": 0
+            },
+            "step": 454
+          },
+          {
+            "baseline": [],
+            "oracle": [
+              [
+                "SELL",
+                "WOOL",
+                7
+              ]
+            ],
+            "prices": {
+              "MILK": 1,
+              "WOOL": 249
+            },
+            "shed": {
+              "MILK": 15,
+              "WOOL": 7
+            },
+            "step": 455
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "WOOL",
+                7
+              ],
+              [
+                "SELL",
+                "MILK",
+                9
+              ]
+            ],
+            "oracle": [
+              [
+                "SELL",
+                "WOOL",
+                7
+              ]
+            ],
+            "prices": {
+              "MILK": 3,
+              "WOOL": 249
+            },
+            "shed": {
+              "MILK": 18,
+              "WOOL": 7
+            },
+            "step": 457
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "WOOL",
+                4
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 3,
+              "WOOL": 249
+            },
+            "shed": {
+              "MILK": 18,
+              "WOOL": 0
+            },
+            "step": 470
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "MILK",
+                3
+              ]
+            ],
+            "oracle": [
+              [
+                "SELL",
+                "WOOL",
+                4
+              ]
+            ],
+            "prices": {
+              "MILK": 3,
+              "WOOL": 249
+            },
+            "shed": {
+              "MILK": 18,
+              "WOOL": 4
+            },
+            "step": 471
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "MILK",
+                6
+              ]
+            ],
+            "oracle": [
+              [
+                "SELL",
+                "MILK",
+                21
+              ]
+            ],
+            "prices": {
+              "MILK": 1,
+              "WOOL": 249
+            },
+            "shed": {
+              "MILK": 21,
+              "WOOL": 0
+            },
+            "step": 479
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "MILK",
+                3
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 1,
+              "WOOL": 250
+            },
+            "shed": {
+              "MILK": 6,
+              "WOOL": 0
+            },
+            "step": 502
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "WOOL",
+                4
+              ],
+              [
+                "SELL",
+                "MILK",
+                6
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 3,
+              "WOOL": 251
+            },
+            "shed": {
+              "MILK": 9,
+              "WOOL": 0
+            },
+            "step": 524
+          },
+          {
+            "baseline": [],
+            "oracle": [
+              [
+                "SELL",
+                "WOOL",
+                4
+              ]
+            ],
+            "prices": {
+              "MILK": 3,
+              "WOOL": 252
+            },
+            "shed": {
+              "MILK": 15,
+              "WOOL": 4
+            },
+            "step": 525
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "MILK",
+                3
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 1,
+              "WOOL": 251
+            },
+            "shed": {
+              "MILK": 15,
+              "WOOL": 0
+            },
+            "step": 527
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "WOOL",
+                19
+              ]
+            ],
+            "oracle": [
+              [
+                "SELL",
+                "WOOL",
+                15
+              ]
+            ],
+            "prices": {
+              "MILK": 3,
+              "WOOL": 252
+            },
+            "shed": {
+              "MILK": 18,
+              "WOOL": 15
+            },
+            "step": 529
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "WOOL",
+                4
+              ],
+              [
+                "SELL",
+                "MILK",
+                3
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 1,
+              "WOOL": 251
+            },
+            "shed": {
+              "MILK": 18,
+              "WOOL": 0
+            },
+            "step": 548
+          },
+          {
+            "baseline": [],
+            "oracle": [
+              [
+                "SELL",
+                "WOOL",
+                4
+              ]
+            ],
+            "prices": {
+              "MILK": 1,
+              "WOOL": 252
+            },
+            "shed": {
+              "MILK": 21,
+              "WOOL": 4
+            },
+            "step": 549
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "MILK",
+                6
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 1,
+              "WOOL": 252
+            },
+            "shed": {
+              "MILK": 21,
+              "WOOL": 0
+            },
+            "step": 574
+          },
+          {
+            "baseline": [],
+            "oracle": [
+              [
+                "SELL",
+                "MILK",
+                27
+              ]
+            ],
+            "prices": {
+              "MILK": 1,
+              "WOOL": 252
+            },
+            "shed": {
+              "MILK": 27,
+              "WOOL": 0
+            },
+            "step": 575
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "MILK",
+                3
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 3,
+              "WOOL": 252
+            },
+            "shed": {
+              "MILK": 3,
+              "WOOL": 0
+            },
+            "step": 577
+          },
+          {
+            "baseline": [],
+            "oracle": [
+              [
+                "SELL",
+                "WOOL",
+                8
+              ]
+            ],
+            "prices": {
+              "MILK": 3,
+              "WOOL": 253
+            },
+            "shed": {
+              "MILK": 3,
+              "WOOL": 8
+            },
+            "step": 598
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "MILK",
+                6
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 3,
+              "WOOL": 253
+            },
+            "shed": {
+              "MILK": 3,
+              "WOOL": 0
+            },
+            "step": 599
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "MILK",
+                6
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 1,
+              "WOOL": 253
+            },
+            "shed": {
+              "MILK": 6,
+              "WOOL": 0
+            },
+            "step": 618
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "WOOL",
+                4
+              ],
+              [
+                "SELL",
+                "MILK",
+                3
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 1,
+              "WOOL": 253
+            },
+            "shed": {
+              "MILK": 12,
+              "WOOL": 0
+            },
+            "step": 622
+          },
+          {
+            "baseline": [],
+            "oracle": [
+              [
+                "SELL",
+                "WOOL",
+                4
+              ]
+            ],
+            "prices": {
+              "MILK": 1,
+              "WOOL": 253
+            },
+            "shed": {
+              "MILK": 15,
+              "WOOL": 4
+            },
+            "step": 623
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "MILK",
+                3
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 1,
+              "WOOL": 254
+            },
+            "shed": {
+              "MILK": 15,
+              "WOOL": 0
+            },
+            "step": 645
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "WOOL",
+                8
+              ]
+            ],
+            "oracle": [
+              [
+                "SELL",
+                "WOOL",
+                4
+              ]
+            ],
+            "prices": {
+              "MILK": 3,
+              "WOOL": 254
+            },
+            "shed": {
+              "MILK": 18,
+              "WOOL": 4
+            },
+            "step": 649
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "WOOL",
+                3
+              ],
+              [
+                "SELL",
+                "MILK",
+                6
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 1,
+              "WOOL": 254
+            },
+            "shed": {
+              "MILK": 18,
+              "WOOL": 0
+            },
+            "step": 667
+          },
+          {
+            "baseline": [],
+            "oracle": [
+              [
+                "SELL",
+                "WOOL",
+                3
+              ]
+            ],
+            "prices": {
+              "MILK": 1,
+              "WOOL": 254
+            },
+            "shed": {
+              "MILK": 24,
+              "WOOL": 3
+            },
+            "step": 668
+          },
+          {
+            "baseline": [],
+            "oracle": [
+              [
+                "SELL",
+                "MILK",
+                24
+              ]
+            ],
+            "prices": {
+              "MILK": 1,
+              "WOOL": 255
+            },
+            "shed": {
+              "MILK": 24,
+              "WOOL": 0
+            },
+            "step": 671
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "WOOL",
+                20
+              ],
+              [
+                "SELL",
+                "MILK",
+                3
+              ]
+            ],
+            "oracle": [
+              [
+                "SELL",
+                "WOOL",
+                20
+              ]
+            ],
+            "prices": {
+              "MILK": 3,
+              "WOOL": 255
+            },
+            "shed": {
+              "MILK": 3,
+              "WOOL": 20
+            },
+            "step": 673
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "WOOL",
+                4
+              ],
+              [
+                "SELL",
+                "MILK",
+                3
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 1,
+              "WOOL": 255
+            },
+            "shed": {
+              "MILK": 3,
+              "WOOL": 0
+            },
+            "step": 694
+          },
+          {
+            "baseline": [],
+            "oracle": [
+              [
+                "SELL",
+                "WOOL",
+                4
+              ]
+            ],
+            "prices": {
+              "MILK": 1,
+              "WOOL": 255
+            },
+            "shed": {
+              "MILK": 6,
+              "WOOL": 4
+            },
+            "step": 695
+          },
+          {
+            "baseline": [],
+            "oracle": [
+              [
+                "SELL",
+                "WOOL",
+                7
+              ]
+            ],
+            "prices": {
+              "MILK": 1,
+              "WOOL": 255
+            },
+            "shed": {
+              "MILK": 6,
+              "WOOL": 7
+            },
+            "step": 696
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "WOOL",
+                7
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 3,
+              "WOOL": 255
+            },
+            "shed": {
+              "MILK": 6,
+              "WOOL": 0
+            },
+            "step": 697
+          },
+          {
+            "baseline": [
+              [
+                "SELL",
+                "MILK",
+                9
+              ]
+            ],
+            "oracle": [],
+            "prices": {
+              "MILK": 1,
+              "WOOL": 255
+            },
+            "shed": {
+              "MILK": 6,
+              "WOOL": 0
+            },
+            "step": 713
+          },
+          {
+            "baseline": [],
+            "oracle": [
+              [
+                "SELL",
+                "MILK",
+                12
+              ]
+            ],
+            "prices": {
+              "MILK": 1,
+              "WOOL": 255
+            },
+            "shed": {
+              "MILK": 12,
+              "WOOL": 0
+            },
+            "step": 718
+          }
+        ],
+        "candidate_money": 93693.0,
+        "final_shed": {
+          "MILK": 0,
+          "WOOL": 0
+        },
+        "margin": 24452.0,
+        "non_target_market_mismatch_steps": 0,
+        "opponent_money": 69241.0,
+        "proposed_unit_mismatch_steps": 0,
+        "sanitized_steps": 0,
+        "target_accepted_requested": {
+          "MILK": 102,
+          "WOOL": 234
+        },
+        "target_changed_steps": 64,
+        "target_requested": {
+          "MILK": 102,
+          "WOOL": 234
+        }
+      },
+      "replay_path": "replays/submission_55797143_public_refresh_after22_20260826/100143759.json",
+      "replay_sha256": "3b0de8348aa999611bf3a671880e748c643b266dece5b1ca775186235de24226",
+      "rescued": false,
+      "search": {
+        "algorithm": "independent scans + top-K cross + two deterministic coordinate passes",
+        "evaluated_schedules": 4000,
+        "max_evaluations": 4000,
+        "menu_sizes": {
+          "MILK": 907,
+          "WOOL": 907
+        },
+        "passes": [
+          {
+            "evaluated": 907,
+            "item": "MILK",
+            "margin_after": 23244.0,
+            "margin_before": 23005.0,
+            "selected": "periodic:p72:ph18:cap32:price0:s120:e718:tf1:append",
+            "stage": "independent"
+          },
+          {
+            "evaluated": 907,
+            "item": "WOOL",
+            "margin_after": 23017.0,
+            "margin_before": 23005.0,
+            "selected": "periodic:p1:ph0:cap32:price0:s120:e718:tf1:prepend",
+            "stage": "independent"
+          },
+          {
+            "evaluated": 907,
+            "item": "MILK",
+            "margin_after": 24452.0,
+            "margin_before": 24452.0,
+            "selected": "periodic:p96:ph95:cap32:price0:s120:e718:tf1:append",
+            "stage": "coordinate_1"
+          },
+          {
+            "evaluated": 907,
+            "item": "WOOL",
+            "margin_after": 24452.0,
+            "margin_before": 24452.0,
+            "selected": "periodic:p1:ph0:cap32:price0:s120:e718:tf1:prepend",
+            "stage": "coordinate_1"
+          },
+          {
+            "evaluated": 115,
+            "item": "MILK",
+            "margin_after": 24452.0,
+            "margin_before": 24452.0,
+            "selected": "periodic:p96:ph95:cap32:price0:s120:e718:tf1:append",
+            "stage": "coordinate_2"
+          }
+        ],
+        "top_k": 16
+      },
+      "selected_rules": {
+        "MILK": {
+          "label": "periodic:p96:ph95:cap32:price0:s120:e718:tf1:append",
+          "rule": {
+            "cap": 32,
+            "minimum_price": 0,
+            "mode": "periodic",
+            "period": 96,
+            "phase": 95,
+            "placement": "append",
+            "start": 120,
+            "stop": 718,
+            "terminal_flush": true
+          }
+        },
+        "WOOL": {
+          "label": "periodic:p1:ph0:cap32:price0:s120:e718:tf1:prepend",
+          "rule": {
+            "cap": 32,
+            "minimum_price": 0,
+            "mode": "periodic",
+            "period": 1,
+            "phase": 0,
+            "placement": "prepend",
+            "start": 120,
+            "stop": 718,
+            "terminal_flush": true
+          }
+        }
+      }
+    }
+  ],
+  "forbidden_data_used": false,
+  "inputs": {
+    "agent": {
+      "path": "submissions/meta_v67_quantity_conserving_front_run_standalone/main.py",
+      "sha256": "300983ffa3da614ad5e7b9958c76104d9f613fcaf7169e69963ea634ee0a093b"
+    },
+    "gate": {
+      "path": "analysis/v67_live_loss_audit_20260826/gate8_manifest_suggestion.json",
+      "sha256": "4e9268c02575ea9bb6b2e9aaff8714910bc2fed3d3d886a05355dbb47edc8be2"
+    },
+    "native_engine": {
+      "path": "bindings/python/kaggriculture_rs/_native.abi3.so",
+      "sha256": "315f30f12797c64ed1038347af1496d0ba18f9dc5ce3adcd15977a741f84acdd"
+    },
+    "parity": {
+      "path": "replays/submission_55797143_public_refresh_after22_20260826/v67_uploaded_action_parity.json",
+      "sha256": "f3efa8d3188de670b7b4facb03ac5dc57ff29b307908e5ea656b38630d5e5abd"
+    },
+    "rust_engine_source": "rust/kaggriculture-engine"
+  },
+  "schema_version": 1,
+  "scope": "consumed gate8 only; uploaded V67 farmer/hand actions and every non-target market order frozen",
+  "search_budget": {
+    "algorithm": "independent full menus + top-K cross + two coordinate passes",
+    "future_information_used": true,
+    "global_optimum_proven": false,
+    "identity_specific_selection": true,
+    "max_evaluations_per_episode": 4000,
+    "top_k": 16
+  },
+  "status": "STOP_MARKET_ONLY_PATH",
+  "summary": {
+    "all_accepted_unit_change_steps": 0,
+    "all_non_target_market_mismatch_steps": 0,
+    "all_proposed_unit_mismatch_steps": 0,
+    "all_sanitized_steps": 0,
+    "baseline_wins": 1,
+    "baseline_worst_margin": 23005.0,
+    "control_games": 1,
+    "control_no_regression": 1,
+    "games": 1,
+    "oracle_wins": 1,
+    "oracle_worst_margin": 24452.0,
+    "target_games": 0,
+    "target_rescues": 0
+  },
+  "uploaded": false,
+  "warning": "Per-episode hindsight selection on consumed data; never package, promote, or upload."
+}

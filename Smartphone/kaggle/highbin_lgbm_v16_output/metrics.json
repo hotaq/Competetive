@@ -1,0 +1,71 @@
+{
+  "protocol": {
+    "source_topic": "https://www.kaggle.com/competitions/playground-series-s6e8/discussion/737422",
+    "folds": "StratifiedKFold(5, shuffle=True, random_state=42)",
+    "fixed_training_schedule": true,
+    "label_use_in_frequency_encoding": false,
+    "frequency_scope": "train+test covariates only",
+    "submission_made": false
+  },
+  "lightgbm_version": "4.6.0",
+  "params": {
+    "objective": "binary",
+    "metric": "auc",
+    "learning_rate": 0.04625773730092041,
+    "num_leaves": 96,
+    "min_child_samples": 267,
+    "reg_lambda": 5.236015002068583,
+    "colsample_bytree": 0.47316360386000655,
+    "n_estimators": 2100,
+    "max_bin": 2047,
+    "random_state": 42,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "force_col_wise": true
+  },
+  "rows": {
+    "train": 691369,
+    "test": 296302
+  },
+  "feature_counts": {
+    "raw": 12,
+    "freq3": 15
+  },
+  "raw_oof_auc": 0.9664298146310843,
+  "raw_fold_auc": [
+    0.9656549680381121,
+    0.9664342494981626,
+    0.966667175501309,
+    0.9671513153620981,
+    0.9662460290899593
+  ],
+  "raw_fold_seconds": [
+    126.28344058990479,
+    124.06637358665466,
+    124.72680974006653,
+    123.07736778259277,
+    123.24970149993896
+  ],
+  "freq3_oof_auc": 0.9666444506598497,
+  "freq3_fold_auc": [
+    0.9659722451494874,
+    0.9666947335085504,
+    0.9667998520728512,
+    0.9673177310575898,
+    0.9664448204170732
+  ],
+  "freq3_fold_seconds": [
+    131.85098791122437,
+    143.40381503105164,
+    132.98193287849426,
+    128.73928809165955,
+    134.4879891872406
+  ],
+  "freq3_delta_vs_raw": 0.00021463602876536925,
+  "spearman_raw_freq3": 0.9959034754969192,
+  "runtime_seconds": 1304.7817995548248,
+  "sha256": {
+    "oof.csv": "8b7f0a1b7a069c6255f635d422caa777dc052ca48b1377d1111756cc8d237c02",
+    "test_predictions.csv": "69d73409a982fe2e7e7f522b3ce1e361b8f50d17cd7e6d6c5c92c056064c8215"
+  }
+}

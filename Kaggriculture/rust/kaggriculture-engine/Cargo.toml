@@ -1,0 +1,17 @@
+[package]
+name = "kaggriculture-engine"
+version = "0.1.0"
+edition = "2024"
+description = "Deterministic Rust simulation core for Kaggriculture"
+license = "Apache-2.0"
+
+[lib]
+name = "kaggriculture_engine"
+
+[dependencies]
+indexmap = { version = "=2.14.0", features = ["serde"] }
+serde = { version = "=1.0.229", features = ["derive"] }
+serde_json = "=1.0.151"
+
+[dev-dependencies]
+serde_json = "=1.0.151"

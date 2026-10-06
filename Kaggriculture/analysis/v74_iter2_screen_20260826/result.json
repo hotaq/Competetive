@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "scope": "authorized_old80_two_replay_screen_only",
+  "candidate": "submissions/meta_v74_closed_loop_completion_local/main.py",
+  "all_gates_pass": false,
+  "stop": true,
+  "cases": [
+    {
+      "label": "median",
+      "episode_id": 99614514,
+      "seed": 1146132647,
+      "candidate_money": 2925.0,
+      "tape_top1_money": 141575.0,
+      "candidate_margin": -138650.0,
+      "money_gate": 53036.0,
+      "money_gate_pass": false,
+      "final_state_step": 719,
+      "land_at_192": 1,
+      "final_land": 3,
+      "final_live": {
+        "COW": 0,
+        "SHEEP": 0
+      },
+      "final_stranded": {
+        "COW": 0,
+        "SHEEP": 0
+      },
+      "longest_stranded": {
+        "COW": 0,
+        "SHEEP": 0
+      },
+      "min_money_after_fixed_purchase": 2388.0,
+      "post_handoff_normalized": 0,
+      "post_handoff_sanitized": 0,
+      "fallback_components": 0,
+      "active_switches": 35,
+      "planner_report_entries": {
+        "PLANNED:KG-EXEC-PLANNED": 300
+      }
+    },
+    {
+      "label": "worst",
+      "episode_id": 99589578,
+      "seed": 1652896423,
+      "candidate_money": 4167.0,
+      "tape_top1_money": 183263.0,
+      "candidate_margin": -179096.0,
+      "money_gate": 53533.0,
+      "money_gate_pass": false,
+      "final_state_step": 719,
+      "land_at_192": 1,
+      "land_gate_pass": false,
+      "final_land": 3,
+      "final_live": {
+        "COW": 0,
+        "SHEEP": 0
+      },
+      "final_stranded": {
+        "COW": 0,
+        "SHEEP": 0
+      },
+      "longest_stranded": {
+        "COW": 0,
+        "SHEEP": 0
+      },
+      "min_money_after_fixed_purchase": 2520.0,
+      "post_handoff_normalized": 0,
+      "post_handoff_sanitized": 0,
+      "fallback_components": 0,
+      "active_switches": 35,
+      "planner_report_entries": {
+        "PLANNED:KG-EXEC-PLANNED": 300
+      }
+    }
+  ],
+  "passed_structural_checks": [
+    "both cases completed at final state step 719",
+    "post-handoff normalization, sanitization, and fallback were zero",
+    "no animal was stranded in either trace",
+    "actual money after fixed-price purchase never crossed below 400"
+  ],
+  "hard_failures": [
+    "median money 2925 was below 53036",
+    "worst money 4167 was below 53533",
+    "worst land at step 192 was one rather than at least two"
+  ],
+  "stop_condition_applied": "No full old80, fresh, third, future, hidden holdout, or upload was run after this failure."
+}

@@ -1,0 +1,58 @@
+{
+  "classes": [
+    0,
+    1
+  ],
+  "rows": 10000,
+  "features": 21,
+  "candidates": [
+    {
+      "file": "candidate_meta_logstack.csv",
+      "name": "meta_logstack",
+      "family": "meta",
+      "oof_auc": 0.88923549,
+      "fold_auc": [
+        0.86709807,
+        0.87170721,
+        0.90119048,
+        0.89383394,
+        0.91411909
+      ],
+      "fold_auc_std": 0.01777605,
+      "test_rank_correlation_to_best": 0.98546129
+    },
+    {
+      "file": "candidate_extra_trees.csv",
+      "name": "extra_trees",
+      "family": "bagging",
+      "oof_auc": 0.88201033,
+      "fold_auc": [
+        0.89389823,
+        0.87230243,
+        0.88250916,
+        0.86791819,
+        0.89168201
+      ],
+      "fold_auc_std": 0.01026974,
+      "test_rank_correlation_to_best": 1.0
+    }
+  ],
+  "diagnostics": {
+    "best_core": {
+      "name": "extra_trees",
+      "family": "bagging",
+      "oof_auc": 0.88201033
+    },
+    "blend_gate": {
+      "accepted": true,
+      "name": "meta_logstack",
+      "oof_auc": 0.88923549,
+      "gain": 0.00722515,
+      "test_rank_correlation_to_best": 0.98546129
+    },
+    "interaction_gate": {
+      "accepted": false
+    }
+  },
+  "failures": []
+}

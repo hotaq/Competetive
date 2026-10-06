@@ -1,0 +1,112 @@
+{
+  "name": "v67_late_regime_causal_gate8",
+  "created_at": "2026-08-26",
+  "status": "suggestion_only",
+  "purpose": "Development-only replay-tape causal screen for a late market-regime patch. This is not a promotion, holdout, or upload gate.",
+  "evaluation_semantics": "Candidate must occupy agent_seat; replay actions are held fixed only on opponent_tape_seat. Do not use the source manifest top1_seat as the candidate seat.",
+  "source_manifest": "replays/submission_55797143_public_refresh_after22_20260826/manifest.json",
+  "baseline_agent": {
+    "path": "submissions/meta_v67_quantity_conserving_front_run_standalone/main.py",
+    "sha256": "300983ffa3da614ad5e7b9958c76104d9f613fcaf7169e69963ea634ee0a093b"
+  },
+  "target_losses": [
+    {
+      "episode_id": 100159725,
+      "agent_seat": 0,
+      "opponent_tape_seat": 1,
+      "opponent": "wqlun06",
+      "baseline_margin": -6859.0,
+      "replay_sha256": "2016357995951b4ed48f5ffd54d70c9ad9d1b224adff7a33943c3f8e592fd243",
+      "reason": "same-policy-family market-regime loss"
+    },
+    {
+      "episode_id": 100184942,
+      "agent_seat": 1,
+      "opponent_tape_seat": 0,
+      "opponent": "Jasper Turnidge",
+      "baseline_margin": -5470.0,
+      "replay_sha256": "753383925b79cdcebbb8214c67afaf99fa5ff6d3337ecceebce5d4de4be9dd07",
+      "reason": "wool-scarce milk-glut late loss"
+    },
+    {
+      "episode_id": 100187229,
+      "agent_seat": 0,
+      "opponent_tape_seat": 1,
+      "opponent": "Ayaan Ghosh",
+      "baseline_margin": -21061.0,
+      "replay_sha256": "0fc0e6ee2ee30f900f37781bb150aba2ac685b59ce49e70b12d961e536f0f24c",
+      "reason": "worst late opponent-surge loss"
+    },
+    {
+      "episode_id": 100196432,
+      "agent_seat": 1,
+      "opponent_tape_seat": 0,
+      "opponent": "bangqun ZHAO",
+      "baseline_margin": -2479.0,
+      "replay_sha256": "756ad37232656018ec1c66bd0ad37244b77652ce5d7381aaa5214aca6406fe20",
+      "reason": "same-policy-family late flip loss"
+    }
+  ],
+  "regression_controls": [
+    {
+      "episode_id": 100168881,
+      "agent_seat": 0,
+      "opponent_tape_seat": 1,
+      "opponent": "newbyy",
+      "baseline_margin": 18079.0,
+      "replay_sha256": "1132fcfffb2033f8d591778c14eda74442d4e035ea623f2efb6ca60c56c602a1",
+      "reason": "96.9 percent opponent-action match to wqlun06 with opposite outcome"
+    },
+    {
+      "episode_id": 100182646,
+      "agent_seat": 0,
+      "opponent_tape_seat": 1,
+      "opponent": "RhoenSprudel",
+      "baseline_margin": 9765.0,
+      "replay_sha256": "b857736f6b524d1cc04a84930f43e42221a2792c28f4d05b521328ed0aabdf10",
+      "reason": "Jasper-like opponent-policy-family winning control"
+    },
+    {
+      "episode_id": 100143759,
+      "agent_seat": 1,
+      "opponent_tape_seat": 0,
+      "opponent": "Mateus Cruz, Msc.",
+      "baseline_margin": 23005.0,
+      "replay_sha256": "3b0de8348aa999611bf3a671880e748c643b266dece5b1ca775186235de24226",
+      "reason": "YARN_STORE x4 win prevents a simplistic yarn-count overfit"
+    },
+    {
+      "episode_id": 100166584,
+      "agent_seat": 1,
+      "opponent_tape_seat": 0,
+      "opponent": "Azelearn",
+      "baseline_margin": 602.0,
+      "replay_sha256": "a0a8f0c57ccb0f6fc2a957087ca85e1361c2b6ff3610ce1e5831e4a18558446e",
+      "reason": "seat-1 razor-thin winning control"
+    }
+  ],
+  "hard_requirements": {
+    "games": 8,
+    "wins": 8,
+    "target_loss_rescues": 4,
+    "regression_control_wins": 4,
+    "worst_margin_strictly_greater_than": 0.0,
+    "aggregate_mean_margin_delta_vs_v67_minimum": 0.0,
+    "each_regression_control_margin_delta_minimum": 0.0,
+    "normalized_steps": 0,
+    "sanitized_steps": 0,
+    "fallback_components": 0
+  },
+  "stop_conditions": [
+    "Any target remains a draw or loss.",
+    "Any regression control margin decreases.",
+    "Any normalization, sanitizer replacement, or fallback occurs.",
+    "Any result is evaluated using a newly opened holdout to tune this candidate."
+  ],
+  "after_pass": "Record only as a causal-screen pass. Require a separately predeclared episode-disjoint evaluation before any promotion decision.",
+  "forbidden": [
+    "Do not claim live generalization from this gate.",
+    "Do not promote from this gate alone.",
+    "Do not upload from this gate alone."
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "left": "submissions/meta_v67_quantity_conserving_front_run_standalone/main.py",
+  "right": "submissions/meta_v59_causal_route_selector_b120_local/main.py",
+  "replay": "replays/submission_55797143_public_snapshot11_20260826_222722_bkk/100143759.json",
+  "seat": 1,
+  "steps": 719,
+  "exact_steps": 718,
+  "mismatch_steps": 1,
+  "first_mismatches": [
+    {
+      "frame": 313,
+      "step": 312,
+      "left": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          5
+        ],
+        "hands": [],
+        "market": [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            1
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "SELL",
+            "WOOL",
+            7
+          ]
+        ]
+      },
+      "right": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          5
+        ],
+        "hands": [],
+        "market": [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            1
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      }
+    }
+  ]
+}

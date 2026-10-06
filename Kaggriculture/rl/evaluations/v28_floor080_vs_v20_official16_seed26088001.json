@@ -1,0 +1,469 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-08-25T18:33:28.119445+00:00",
+  "environment": "kaggle_environments:kaggriculture",
+  "method": "live_two_player_seat_swapped",
+  "candidate": {
+    "agent_file": "/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/submissions/meta_v28_taiseiu_sale_floor_080_local/main.py",
+    "sha256": "6c0a88f09e5fdce64eaf0fd1935309efe1f0a3f790364900144917469cdc3bcf"
+  },
+  "reference": {
+    "agent_file": "/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/submissions/meta_v20_taiseiu_99306813_repaired_local/main.py",
+    "sha256": "a8f2584af0206ad2b1f0cab918c326bc0b97f12dd0fd01c44cbdb54b03dce613"
+  },
+  "configuration": {
+    "starting_seed": 26088001,
+    "paired_seeds": 8,
+    "games": 16
+  },
+  "summary": {
+    "wins": 0,
+    "draws": 0,
+    "losses": 16,
+    "win_rate": 0.0,
+    "mean_margin": -45318.0625,
+    "median_margin": -42381.0,
+    "worst_margin": -65623.0,
+    "cvar10_margin": -65623.0,
+    "mean_money": 49963.375,
+    "worst_money": 26750.0,
+    "all_done": true,
+    "max_action_ms": 19.303375000163214
+  },
+  "paired_seeds": [
+    {
+      "seed": 26088001,
+      "games": 2,
+      "mean_margin": -59839.5,
+      "worst_margin": -59849.0
+    },
+    {
+      "seed": 26088002,
+      "games": 2,
+      "mean_margin": -37384.5,
+      "worst_margin": -37386.0
+    },
+    {
+      "seed": 26088003,
+      "games": 2,
+      "mean_margin": -56246.0,
+      "worst_margin": -59232.0
+    },
+    {
+      "seed": 26088004,
+      "games": 2,
+      "mean_margin": -65623.0,
+      "worst_margin": -65623.0
+    },
+    {
+      "seed": 26088005,
+      "games": 2,
+      "mean_margin": -32433.0,
+      "worst_margin": -32433.0
+    },
+    {
+      "seed": 26088006,
+      "games": 2,
+      "mean_margin": -37145.0,
+      "worst_margin": -37145.0
+    },
+    {
+      "seed": 26088007,
+      "games": 2,
+      "mean_margin": -26497.5,
+      "worst_margin": -26862.0
+    },
+    {
+      "seed": 26088008,
+      "games": 2,
+      "mean_margin": -47376.0,
+      "worst_margin": -47376.0
+    }
+  ],
+  "games": [
+    {
+      "seed": 26088001,
+      "candidate_seat": 0,
+      "initial_prices": {
+        "WHEAT": 25.0,
+        "CARROT": 35.0,
+        "TOMATO": 60.0,
+        "STRAWBERRY": 120.0,
+        "MELON": 250.0,
+        "EGG": 50.0,
+        "MILK": 160.0,
+        "WOOL": 200.0,
+        "FERTILIZER": 100.0
+      },
+      "candidate_money": 80937.0,
+      "reference_money": 140767.0,
+      "margin": -59830.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 19.303375000163214
+    },
+    {
+      "seed": 26088001,
+      "candidate_seat": 1,
+      "initial_prices": {
+        "WHEAT": 25.0,
+        "CARROT": 35.0,
+        "TOMATO": 60.0,
+        "STRAWBERRY": 120.0,
+        "MELON": 250.0,
+        "EGG": 50.0,
+        "MILK": 160.0,
+        "WOOL": 200.0,
+        "FERTILIZER": 100.0
+      },
+      "candidate_money": 81289.0,
+      "reference_money": 141138.0,
+      "margin": -59849.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 0.27004100047633983
+    },
+    {
+      "seed": 26088002,
+      "candidate_seat": 0,
+      "initial_prices": {
+        "WHEAT": 25.0,
+        "CARROT": 35.0,
+        "TOMATO": 60.0,
+        "STRAWBERRY": 120.0,
+        "MELON": 250.0,
+        "EGG": 50.0,
+        "MILK": 160.0,
+        "WOOL": 200.0,
+        "FERTILIZER": 100.0
+      },
+      "candidate_money": 39824.0,
+      "reference_money": 77207.0,
+      "margin": -37383.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 11.375040998245822
+    },
+    {
+      "seed": 26088002,
+      "candidate_seat": 1,
+      "initial_prices": {
+        "WHEAT": 25.0,
+        "CARROT": 35.0,
+        "TOMATO": 60.0,
+        "STRAWBERRY": 120.0,
+        "MELON": 250.0,
+        "EGG": 50.0,
+        "MILK": 160.0,
+        "WOOL": 200.0,
+        "FERTILIZER": 100.0
+      },
+      "candidate_money": 39823.0,
+      "reference_money": 77209.0,
+      "margin": -37386.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 0.9367080019728746
+    },
+    {
+      "seed": 26088003,
+      "candidate_seat": 0,
+      "initial_prices": {
+        "WHEAT": 25.0,
+        "CARROT": 35.0,
+        "TOMATO": 60.0,
+        "STRAWBERRY": 120.0,
+        "MELON": 250.0,
+        "EGG": 50.0,
+        "MILK": 160.0,
+        "WOOL": 200.0,
+        "FERTILIZER": 100.0
+      },
+      "candidate_money": 68448.0,
+      "reference_money": 127680.0,
+      "margin": -59232.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 0.9918750001816079
+    },
+    {
+      "seed": 26088003,
+      "candidate_seat": 1,
+      "initial_prices": {
+        "WHEAT": 25.0,
+        "CARROT": 35.0,
+        "TOMATO": 60.0,
+        "STRAWBERRY": 120.0,
+        "MELON": 250.0,
+        "EGG": 50.0,
+        "MILK": 160.0,
+        "WOOL": 200.0,
+        "FERTILIZER": 100.0
+      },
+      "candidate_money": 59906.0,
+      "reference_money": 113166.0,
+      "margin": -53260.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 0.6451660010498017
+    },
+    {
+      "seed": 26088004,
+      "candidate_seat": 0,
+      "initial_prices": {
+        "WHEAT": 25.0,
+        "CARROT": 35.0,
+        "TOMATO": 60.0,
+        "STRAWBERRY": 120.0,
+        "MELON": 250.0,
+        "EGG": 50.0,
+        "MILK": 160.0,
+        "WOOL": 200.0,
+        "FERTILIZER": 100.0
+      },
+      "candidate_money": 48135.0,
+      "reference_money": 113758.0,
+      "margin": -65623.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 12.032375001581386
+    },
+    {
+      "seed": 26088004,
+      "candidate_seat": 1,
+      "initial_prices": {
+        "WHEAT": 25.0,
+        "CARROT": 35.0,
+        "TOMATO": 60.0,
+        "STRAWBERRY": 120.0,
+        "MELON": 250.0,
+        "EGG": 50.0,
+        "MILK": 160.0,
+        "WOOL": 200.0,
+        "FERTILIZER": 100.0
+      },
+      "candidate_money": 48135.0,
+      "reference_money": 113758.0,
+      "margin": -65623.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 0.5756669997936115
+    },
+    {
+      "seed": 26088005,
+      "candidate_seat": 0,
+      "initial_prices": {
+        "WHEAT": 25.0,
+        "CARROT": 35.0,
+        "TOMATO": 60.0,
+        "STRAWBERRY": 120.0,
+        "MELON": 250.0,
+        "EGG": 50.0,
+        "MILK": 160.0,
+        "WOOL": 200.0,
+        "FERTILIZER": 100.0
+      },
+      "candidate_money": 26750.0,
+      "reference_money": 59183.0,
+      "margin": -32433.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 0.8172079978976399
+    },
+    {
+      "seed": 26088005,
+      "candidate_seat": 1,
+      "initial_prices": {
+        "WHEAT": 25.0,
+        "CARROT": 35.0,
+        "TOMATO": 60.0,
+        "STRAWBERRY": 120.0,
+        "MELON": 250.0,
+        "EGG": 50.0,
+        "MILK": 160.0,
+        "WOOL": 200.0,
+        "FERTILIZER": 100.0
+      },
+      "candidate_money": 26750.0,
+      "reference_money": 59183.0,
+      "margin": -32433.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 0.5247079971013591
+    },
+    {
+      "seed": 26088006,
+      "candidate_seat": 0,
+      "initial_prices": {
+        "WHEAT": 25.0,
+        "CARROT": 35.0,
+        "TOMATO": 60.0,
+        "STRAWBERRY": 120.0,
+        "MELON": 250.0,
+        "EGG": 50.0,
+        "MILK": 160.0,
+        "WOOL": 200.0,
+        "FERTILIZER": 100.0
+      },
+      "candidate_money": 54025.0,
+      "reference_money": 91170.0,
+      "margin": -37145.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 0.6471670021710452
+    },
+    {
+      "seed": 26088006,
+      "candidate_seat": 1,
+      "initial_prices": {
+        "WHEAT": 25.0,
+        "CARROT": 35.0,
+        "TOMATO": 60.0,
+        "STRAWBERRY": 120.0,
+        "MELON": 250.0,
+        "EGG": 50.0,
+        "MILK": 160.0,
+        "WOOL": 200.0,
+        "FERTILIZER": 100.0
+      },
+      "candidate_money": 54025.0,
+      "reference_money": 91170.0,
+      "margin": -37145.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 0.8783330013102386
+    },
+    {
+      "seed": 26088007,
+      "candidate_seat": 0,
+      "initial_prices": {
+        "WHEAT": 25.0,
+        "CARROT": 35.0,
+        "TOMATO": 60.0,
+        "STRAWBERRY": 120.0,
+        "MELON": 250.0,
+        "EGG": 50.0,
+        "MILK": 160.0,
+        "WOOL": 200.0,
+        "FERTILIZER": 100.0
+      },
+      "candidate_money": 36211.0,
+      "reference_money": 62344.0,
+      "margin": -26133.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 2.0830000030400697
+    },
+    {
+      "seed": 26088007,
+      "candidate_seat": 1,
+      "initial_prices": {
+        "WHEAT": 25.0,
+        "CARROT": 35.0,
+        "TOMATO": 60.0,
+        "STRAWBERRY": 120.0,
+        "MELON": 250.0,
+        "EGG": 50.0,
+        "MILK": 160.0,
+        "WOOL": 200.0,
+        "FERTILIZER": 100.0
+      },
+      "candidate_money": 35918.0,
+      "reference_money": 62780.0,
+      "margin": -26862.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 1.5872920012043323
+    },
+    {
+      "seed": 26088008,
+      "candidate_seat": 0,
+      "initial_prices": {
+        "WHEAT": 25.0,
+        "CARROT": 35.0,
+        "TOMATO": 60.0,
+        "STRAWBERRY": 120.0,
+        "MELON": 250.0,
+        "EGG": 50.0,
+        "MILK": 160.0,
+        "WOOL": 200.0,
+        "FERTILIZER": 100.0
+      },
+      "candidate_money": 49619.0,
+      "reference_money": 96995.0,
+      "margin": -47376.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 1.6029580001486465
+    },
+    {
+      "seed": 26088008,
+      "candidate_seat": 1,
+      "initial_prices": {
+        "WHEAT": 25.0,
+        "CARROT": 35.0,
+        "TOMATO": 60.0,
+        "STRAWBERRY": 120.0,
+        "MELON": 250.0,
+        "EGG": 50.0,
+        "MILK": 160.0,
+        "WOOL": 200.0,
+        "FERTILIZER": 100.0
+      },
+      "candidate_money": 49619.0,
+      "reference_money": 96995.0,
+      "margin": -47376.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 0.6750419997842982
+    }
+  ]
+}

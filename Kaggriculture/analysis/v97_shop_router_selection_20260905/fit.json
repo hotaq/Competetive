@@ -1,0 +1,750 @@
+{
+ "first_shop": {
+  "BAKERY": {
+   "family": 0,
+   "incumbent_family": 0,
+   "options": {
+    "0": {
+     "n": 3679,
+     "point": 0.7774
+    },
+    "1": {
+     "n": 3679,
+     "point": 0.6227
+    }
+   }
+  },
+  "BRUNCH_SPOT": {
+   "family": 0,
+   "incumbent_family": 0,
+   "options": {
+    "0": {
+     "n": 3573,
+     "point": 0.7652
+    },
+    "1": {
+     "n": 3573,
+     "point": 0.5749
+    }
+   }
+  },
+  "FARMERS_MARKET": {
+   "family": 0,
+   "incumbent_family": 0,
+   "options": {
+    "0": {
+     "n": 3268,
+     "point": 0.7684
+    },
+    "1": {
+     "n": 3268,
+     "point": 0.6092
+    }
+   }
+  },
+  "ICE_CREAM_SHOP": {
+   "family": 0,
+   "incumbent_family": 0,
+   "options": {
+    "0": {
+     "n": 3294,
+     "point": 0.7335
+    },
+    "1": {
+     "n": 3294,
+     "point": 0.6472
+    }
+   }
+  },
+  "PET_CAFE": {
+   "family": 0,
+   "incumbent_family": 0,
+   "options": {
+    "0": {
+     "n": 3517,
+     "point": 0.7853
+    },
+    "1": {
+     "n": 3517,
+     "point": 0.681
+    }
+   }
+  },
+  "PIZZA_SHOP": {
+   "family": 0,
+   "incumbent_family": 0,
+   "options": {
+    "0": {
+     "n": 3351,
+     "point": 0.7786
+    },
+    "1": {
+     "n": 3351,
+     "point": 0.7028
+    }
+   }
+  },
+  "SMOOTHIE_SHOP": {
+   "family": 0,
+   "incumbent_family": 0,
+   "options": {
+    "0": {
+     "n": 3170,
+     "point": 0.7533
+    },
+    "1": {
+     "n": 3170,
+     "point": 0.6909
+    }
+   }
+  },
+  "YARN_STORE": {
+   "family": 0,
+   "incumbent_family": 1,
+   "options": {
+    "0": {
+     "n": 3148,
+     "point": 0.9806
+    },
+    "1": {
+     "n": 3148,
+     "point": 0.7697
+    }
+   }
+  }
+ },
+ "cells": {
+  "BAKERY__BAKERY": {
+   "incumbent": 2,
+   "chosen": 2,
+   "n": 522,
+   "incumbent_point": 0.7989,
+   "chosen_point": 0.7989,
+   "checks": {}
+  },
+  "BAKERY__BRUNCH_SPOT": {
+   "incumbent": 0,
+   "chosen": 0,
+   "n": 508,
+   "incumbent_point": 0.7933,
+   "chosen_point": 0.7933,
+   "checks": {}
+  },
+  "BAKERY__FARMERS_MARKET": {
+   "incumbent": 0,
+   "chosen": 0,
+   "n": 611,
+   "incumbent_point": 0.8085,
+   "chosen_point": 0.8085,
+   "checks": {}
+  },
+  "BAKERY__ICE_CREAM_SHOP": {
+   "incumbent": 0,
+   "chosen": 0,
+   "n": 440,
+   "incumbent_point": 0.7727,
+   "chosen_point": 0.7727,
+   "checks": {}
+  },
+  "BAKERY__PET_CAFE": {
+   "incumbent": 3,
+   "chosen": 3,
+   "n": 474,
+   "incumbent_point": 0.6646,
+   "chosen_point": 0.6646,
+   "checks": {}
+  },
+  "BAKERY__PIZZA_SHOP": {
+   "incumbent": 4,
+   "chosen": 4,
+   "n": 396,
+   "incumbent_point": 0.8005,
+   "chosen_point": 0.8005,
+   "checks": {}
+  },
+  "BAKERY__SMOOTHIE_SHOP": {
+   "incumbent": 0,
+   "chosen": 0,
+   "n": 403,
+   "incumbent_point": 0.7767,
+   "chosen_point": 0.7767,
+   "checks": {}
+  },
+  "BAKERY__YARN_STORE": {
+   "incumbent": 2,
+   "chosen": 2,
+   "n": 325,
+   "incumbent_point": 0.8031,
+   "chosen_point": 0.8031,
+   "checks": {}
+  },
+  "BRUNCH_SPOT__BAKERY": {
+   "incumbent": 0,
+   "chosen": 0,
+   "n": 565,
+   "incumbent_point": 0.715,
+   "chosen_point": 0.715,
+   "checks": {}
+  },
+  "BRUNCH_SPOT__BRUNCH_SPOT": {
+   "incumbent": 5,
+   "chosen": 5,
+   "n": 408,
+   "incumbent_point": 0.7426,
+   "chosen_point": 0.7426,
+   "checks": {}
+  },
+  "BRUNCH_SPOT__FARMERS_MARKET": {
+   "incumbent": 5,
+   "chosen": 0,
+   "n": 508,
+   "incumbent_point": 0.687,
+   "chosen_point": 0.7854,
+   "checks": {
+    "a_poor_vul__ep102980038__seat1": 0.0,
+    "kenjo1209__ep102165685__seat1": 0.0167,
+    "kenjo1209__ep102449287__seat1": 0.0,
+    "milan_leonard__ep102297457__seat1": 0.0833,
+    "mtn__ep102598799__seat1": 0.4,
+    "one_for_all__ep102721568__seat0": 0.0167,
+    "subramanya_n__ep102288474__seat1": 0.0,
+    "ueddy__ep103145299__seat1": 0.2333,
+    "yusuke_hayashi__ep102775250__seat0": 0.0833
+   }
+  },
+  "BRUNCH_SPOT__ICE_CREAM_SHOP": {
+   "incumbent": 0,
+   "chosen": 0,
+   "n": 325,
+   "incumbent_point": 0.7754,
+   "chosen_point": 0.7754,
+   "checks": {}
+  },
+  "BRUNCH_SPOT__PET_CAFE": {
+   "incumbent": 0,
+   "chosen": 0,
+   "n": 476,
+   "incumbent_point": 0.7437,
+   "chosen_point": 0.7437,
+   "checks": {}
+  },
+  "BRUNCH_SPOT__PIZZA_SHOP": {
+   "incumbent": 0,
+   "chosen": 0,
+   "n": 470,
+   "incumbent_point": 0.7553,
+   "chosen_point": 0.7553,
+   "checks": {}
+  },
+  "BRUNCH_SPOT__SMOOTHIE_SHOP": {
+   "incumbent": 0,
+   "chosen": 0,
+   "n": 433,
+   "incumbent_point": 0.7206,
+   "chosen_point": 0.7206,
+   "checks": {}
+  },
+  "BRUNCH_SPOT__YARN_STORE": {
+   "incumbent": 2,
+   "chosen": 2,
+   "n": 388,
+   "incumbent_point": 0.9149,
+   "chosen_point": 0.9149,
+   "checks": {}
+  },
+  "FARMERS_MARKET__BAKERY": {
+   "incumbent": 0,
+   "chosen": 0,
+   "n": 358,
+   "incumbent_point": 0.7765,
+   "chosen_point": 0.7765,
+   "checks": {}
+  },
+  "FARMERS_MARKET__BRUNCH_SPOT": {
+   "incumbent": 5,
+   "chosen": 5,
+   "n": 358,
+   "incumbent_point": 0.7514,
+   "chosen_point": 0.7514,
+   "checks": {}
+  },
+  "FARMERS_MARKET__FARMERS_MARKET": {
+   "incumbent": 5,
+   "chosen": 5,
+   "n": 418,
+   "incumbent_point": 0.7225,
+   "chosen_point": 0.7225,
+   "checks": {}
+  },
+  "FARMERS_MARKET__ICE_CREAM_SHOP": {
+   "incumbent": 0,
+   "chosen": 0,
+   "n": 546,
+   "incumbent_point": 0.7784,
+   "chosen_point": 0.7784,
+   "checks": {}
+  },
+  "FARMERS_MARKET__PET_CAFE": {
+   "incumbent": 0,
+   "chosen": 0,
+   "n": 416,
+   "incumbent_point": 0.7837,
+   "chosen_point": 0.7837,
+   "checks": {}
+  },
+  "FARMERS_MARKET__PIZZA_SHOP": {
+   "incumbent": 0,
+   "chosen": 0,
+   "n": 388,
+   "incumbent_point": 0.7371,
+   "chosen_point": 0.7371,
+   "checks": {}
+  },
+  "FARMERS_MARKET__SMOOTHIE_SHOP": {
+   "incumbent": 0,
+   "chosen": 0,
+   "n": 360,
+   "incumbent_point": 0.725,
+   "chosen_point": 0.725,
+   "checks": {}
+  },
+  "FARMERS_MARKET__YARN_STORE": {
+   "incumbent": 2,
+   "chosen": 2,
+   "n": 424,
+   "incumbent_point": 0.8585,
+   "chosen_point": 0.8585,
+   "checks": {}
+  },
+  "ICE_CREAM_SHOP__BAKERY": {
+   "incumbent": 0,
+   "chosen": 0,
+   "n": 278,
+   "incumbent_point": 0.7698,
+   "chosen_point": 0.7698,
+   "checks": {}
+  },
+  "ICE_CREAM_SHOP__BRUNCH_SPOT": {
+   "incumbent": 0,
+   "chosen": 0,
+   "n": 396,
+   "incumbent_point": 0.7197,
+   "chosen_point": 0.7197,
+   "checks": {}
+  },
+  "ICE_CREAM_SHOP__FARMERS_MARKET": {
+   "incumbent": 0,
+   "chosen": 0,
+   "n": 414,
+   "incumbent_point": 0.6884,
+   "chosen_point": 0.6884,
+   "checks": {}
+  },
+  "ICE_CREAM_SHOP__ICE_CREAM_SHOP": {
+   "incumbent": 6,
+   "chosen": 7,
+   "n": 268,
+   "incumbent_point": 0.7537,
+   "chosen_point": 0.8433,
+   "checks": {
+    "a_poor_vul__ep102980038__seat1": 0.2857,
+    "kenjo1209__ep102165685__seat1": 0.0357,
+    "kenjo1209__ep102449287__seat1": 0.0,
+    "milan_leonard__ep102297457__seat1": 0.0,
+    "mtn__ep102598799__seat1": 0.2143,
+    "one_for_all__ep102721568__seat0": 0.25,
+    "subramanya_n__ep102288474__seat1": 0.0,
+    "ueddy__ep103145299__seat1": 0.0714,
+    "yusuke_hayashi__ep102775250__seat0": 0.0
+   }
+  },
+  "ICE_CREAM_SHOP__PET_CAFE": {
+   "incumbent": 0,
+   "chosen": 0,
+   "n": 544,
+   "incumbent_point": 0.6728,
+   "chosen_point": 0.6728,
+   "checks": {}
+  },
+  "ICE_CREAM_SHOP__PIZZA_SHOP": {
+   "incumbent": 7,
+   "chosen": 7,
+   "n": 500,
+   "incumbent_point": 0.68,
+   "chosen_point": 0.68,
+   "checks": {}
+  },
+  "ICE_CREAM_SHOP__SMOOTHIE_SHOP": {
+   "incumbent": 6,
+   "chosen": 6,
+   "n": 438,
+   "incumbent_point": 0.6758,
+   "chosen_point": 0.6758,
+   "checks": {}
+  },
+  "ICE_CREAM_SHOP__YARN_STORE": {
+   "incumbent": 2,
+   "chosen": 2,
+   "n": 456,
+   "incumbent_point": 0.886,
+   "chosen_point": 0.886,
+   "checks": {}
+  },
+  "PET_CAFE__BAKERY": {
+   "incumbent": 3,
+   "chosen": 3,
+   "n": 542,
+   "incumbent_point": 0.7048,
+   "chosen_point": 0.7048,
+   "checks": {}
+  },
+  "PET_CAFE__BRUNCH_SPOT": {
+   "incumbent": 0,
+   "chosen": 0,
+   "n": 656,
+   "incumbent_point": 0.7683,
+   "chosen_point": 0.7683,
+   "checks": {}
+  },
+  "PET_CAFE__FARMERS_MARKET": {
+   "incumbent": 0,
+   "chosen": 0,
+   "n": 284,
+   "incumbent_point": 0.7183,
+   "chosen_point": 0.7183,
+   "checks": {}
+  },
+  "PET_CAFE__ICE_CREAM_SHOP": {
+   "incumbent": 0,
+   "chosen": 0,
+   "n": 431,
+   "incumbent_point": 0.7726,
+   "chosen_point": 0.7726,
+   "checks": {}
+  },
+  "PET_CAFE__PET_CAFE": {
+   "incumbent": 0,
+   "chosen": 10,
+   "n": 392,
+   "incumbent_point": 0.7679,
+   "chosen_point": 0.9031,
+   "checks": {
+    "a_poor_vul__ep102980038__seat1": 0.0476,
+    "kenjo1209__ep102165685__seat1": 0.0952,
+    "kenjo1209__ep102449287__seat1": 0.1905,
+    "milan_leonard__ep102297457__seat1": 0.1905,
+    "mtn__ep102598799__seat1": 0.0,
+    "one_for_all__ep102721568__seat0": 0.0,
+    "subramanya_n__ep102288474__seat1": 0.2679,
+    "ueddy__ep103145299__seat1": 0.2381,
+    "yusuke_hayashi__ep102775250__seat0": 0.1429
+   }
+  },
+  "PET_CAFE__PIZZA_SHOP": {
+   "incumbent": 0,
+   "chosen": 0,
+   "n": 376,
+   "incumbent_point": 0.7793,
+   "chosen_point": 0.7793,
+   "checks": {}
+  },
+  "PET_CAFE__SMOOTHIE_SHOP": {
+   "incumbent": 0,
+   "chosen": 0,
+   "n": 328,
+   "incumbent_point": 0.7774,
+   "chosen_point": 0.7774,
+   "checks": {}
+  },
+  "PET_CAFE__YARN_STORE": {
+   "incumbent": 8,
+   "chosen": 8,
+   "n": 508,
+   "incumbent_point": 0.8602,
+   "chosen_point": 0.8602,
+   "checks": {}
+  },
+  "PIZZA_SHOP__BAKERY": {
+   "incumbent": 4,
+   "chosen": 4,
+   "n": 464,
+   "incumbent_point": 0.8534,
+   "chosen_point": 0.8534,
+   "checks": {}
+  },
+  "PIZZA_SHOP__BRUNCH_SPOT": {
+   "incumbent": 0,
+   "chosen": 0,
+   "n": 422,
+   "incumbent_point": 0.7773,
+   "chosen_point": 0.7773,
+   "checks": {}
+  },
+  "PIZZA_SHOP__FARMERS_MARKET": {
+   "incumbent": 0,
+   "chosen": 0,
+   "n": 424,
+   "incumbent_point": 0.7146,
+   "chosen_point": 0.7146,
+   "checks": {}
+  },
+  "PIZZA_SHOP__ICE_CREAM_SHOP": {
+   "incumbent": 0,
+   "chosen": 0,
+   "n": 418,
+   "incumbent_point": 0.6818,
+   "chosen_point": 0.6818,
+   "checks": {}
+  },
+  "PIZZA_SHOP__PET_CAFE": {
+   "incumbent": 0,
+   "chosen": 0,
+   "n": 371,
+   "incumbent_point": 0.7817,
+   "chosen_point": 0.7817,
+   "checks": {}
+  },
+  "PIZZA_SHOP__PIZZA_SHOP": {
+   "incumbent": 4,
+   "chosen": 4,
+   "n": 400,
+   "incumbent_point": 0.7375,
+   "chosen_point": 0.7375,
+   "checks": {}
+  },
+  "PIZZA_SHOP__SMOOTHIE_SHOP": {
+   "incumbent": 0,
+   "chosen": 0,
+   "n": 333,
+   "incumbent_point": 0.6396,
+   "chosen_point": 0.6396,
+   "checks": {}
+  },
+  "PIZZA_SHOP__YARN_STORE": {
+   "incumbent": 2,
+   "chosen": 12,
+   "n": 519,
+   "incumbent_point": 0.896,
+   "chosen_point": 0.9615,
+   "checks": {
+    "a_poor_vul__ep102980038__seat1": 0.3214,
+    "kenjo1209__ep102165685__seat1": 0.0,
+    "kenjo1209__ep102449287__seat1": 0.0,
+    "milan_leonard__ep102297457__seat1": 0.0,
+    "mtn__ep102598799__seat1": -0.0179,
+    "one_for_all__ep102721568__seat0": 0.0,
+    "subramanya_n__ep102288474__seat1": 0.0,
+    "ueddy__ep103145299__seat1": 0.0,
+    "yusuke_hayashi__ep102775250__seat0": 0.3036
+   }
+  },
+  "SMOOTHIE_SHOP__BAKERY": {
+   "incumbent": 0,
+   "chosen": 0,
+   "n": 377,
+   "incumbent_point": 0.7613,
+   "chosen_point": 0.7613,
+   "checks": {}
+  },
+  "SMOOTHIE_SHOP__BRUNCH_SPOT": {
+   "incumbent": 0,
+   "chosen": 0,
+   "n": 304,
+   "incumbent_point": 0.6941,
+   "chosen_point": 0.6941,
+   "checks": {}
+  },
+  "SMOOTHIE_SHOP__FARMERS_MARKET": {
+   "incumbent": 0,
+   "chosen": 0,
+   "n": 323,
+   "incumbent_point": 0.7926,
+   "chosen_point": 0.7926,
+   "checks": {}
+  },
+  "SMOOTHIE_SHOP__ICE_CREAM_SHOP": {
+   "incumbent": 6,
+   "chosen": 6,
+   "n": 394,
+   "incumbent_point": 0.6904,
+   "chosen_point": 0.6904,
+   "checks": {}
+  },
+  "SMOOTHIE_SHOP__PET_CAFE": {
+   "incumbent": 0,
+   "chosen": 0,
+   "n": 511,
+   "incumbent_point": 0.7241,
+   "chosen_point": 0.7241,
+   "checks": {}
+  },
+  "SMOOTHIE_SHOP__PIZZA_SHOP": {
+   "incumbent": 7,
+   "chosen": 7,
+   "n": 506,
+   "incumbent_point": 0.6779,
+   "chosen_point": 0.6779,
+   "checks": {}
+  },
+  "SMOOTHIE_SHOP__SMOOTHIE_SHOP": {
+   "incumbent": 6,
+   "chosen": 6,
+   "n": 297,
+   "incumbent_point": 0.7475,
+   "chosen_point": 0.7475,
+   "checks": {}
+  },
+  "SMOOTHIE_SHOP__YARN_STORE": {
+   "incumbent": 9,
+   "chosen": 9,
+   "n": 458,
+   "incumbent_point": 0.9323,
+   "chosen_point": 0.9323,
+   "checks": {}
+  },
+  "YARN_STORE__BAKERY": {
+   "incumbent": 0,
+   "chosen": 20,
+   "n": 350,
+   "incumbent_point": 0.2286,
+   "chosen_point": 0.9714,
+   "checks": {
+    "a_poor_vul__ep102980038__seat1": 1.0,
+    "kenjo1209__ep102165685__seat1": 1.0,
+    "kenjo1209__ep102449287__seat1": 0.9737,
+    "milan_leonard__ep102297457__seat1": 0.7632,
+    "mtn__ep102598799__seat1": 0.0,
+    "one_for_all__ep102721568__seat0": 0.0,
+    "subramanya_n__ep102288474__seat1": 0.913,
+    "ueddy__ep103145299__seat1": 1.0,
+    "yusuke_hayashi__ep102775250__seat0": 1.0
+   }
+  },
+  "YARN_STORE__BRUNCH_SPOT": {
+   "incumbent": 0,
+   "chosen": 10,
+   "n": 476,
+   "incumbent_point": 0.2584,
+   "chosen_point": 0.979,
+   "checks": {
+    "a_poor_vul__ep102980038__seat1": 0.9444,
+    "kenjo1209__ep102165685__seat1": 0.9444,
+    "kenjo1209__ep102449287__seat1": 0.9259,
+    "milan_leonard__ep102297457__seat1": 0.9259,
+    "mtn__ep102598799__seat1": 0.0,
+    "one_for_all__ep102721568__seat0": 0.037,
+    "subramanya_n__ep102288474__seat1": 0.7955,
+    "ueddy__ep103145299__seat1": 0.963,
+    "yusuke_hayashi__ep102775250__seat0": 0.963
+   }
+  },
+  "YARN_STORE__FARMERS_MARKET": {
+   "incumbent": 0,
+   "chosen": 10,
+   "n": 348,
+   "incumbent_point": 0.2672,
+   "chosen_point": 0.9856,
+   "checks": {
+    "a_poor_vul__ep102980038__seat1": 0.9211,
+    "kenjo1209__ep102165685__seat1": 1.0,
+    "kenjo1209__ep102449287__seat1": 0.9737,
+    "milan_leonard__ep102297457__seat1": 0.9211,
+    "mtn__ep102598799__seat1": 0.0,
+    "one_for_all__ep102721568__seat0": 0.0263,
+    "subramanya_n__ep102288474__seat1": 0.6818,
+    "ueddy__ep103145299__seat1": 0.9737,
+    "yusuke_hayashi__ep102775250__seat0": 0.9737
+   }
+  },
+  "YARN_STORE__ICE_CREAM_SHOP": {
+   "incumbent": 0,
+   "chosen": 10,
+   "n": 400,
+   "incumbent_point": 0.285,
+   "chosen_point": 0.9925,
+   "checks": {
+    "a_poor_vul__ep102980038__seat1": 0.9545,
+    "kenjo1209__ep102165685__seat1": 1.0,
+    "kenjo1209__ep102449287__seat1": 0.9773,
+    "milan_leonard__ep102297457__seat1": 0.9773,
+    "mtn__ep102598799__seat1": 0.0227,
+    "one_for_all__ep102721568__seat0": 0.3409,
+    "subramanya_n__ep102288474__seat1": 0.2083,
+    "ueddy__ep103145299__seat1": 0.9545,
+    "yusuke_hayashi__ep102775250__seat0": 0.9773
+   }
+  },
+  "YARN_STORE__PET_CAFE": {
+   "incumbent": 0,
+   "chosen": 10,
+   "n": 578,
+   "incumbent_point": 0.2422,
+   "chosen_point": 0.9965,
+   "checks": {
+    "a_poor_vul__ep102980038__seat1": 0.9844,
+    "kenjo1209__ep102165685__seat1": 0.9531,
+    "kenjo1209__ep102449287__seat1": 1.0,
+    "milan_leonard__ep102297457__seat1": 0.9688,
+    "mtn__ep102598799__seat1": 0.0,
+    "one_for_all__ep102721568__seat0": 0.0,
+    "subramanya_n__ep102288474__seat1": 0.8788,
+    "ueddy__ep103145299__seat1": 1.0,
+    "yusuke_hayashi__ep102775250__seat0": 1.0
+   }
+  },
+  "YARN_STORE__PIZZA_SHOP": {
+   "incumbent": 0,
+   "chosen": 10,
+   "n": 330,
+   "incumbent_point": 0.2636,
+   "chosen_point": 0.997,
+   "checks": {
+    "a_poor_vul__ep102980038__seat1": 1.0,
+    "kenjo1209__ep102165685__seat1": 1.0,
+    "kenjo1209__ep102449287__seat1": 1.0,
+    "milan_leonard__ep102297457__seat1": 1.0,
+    "mtn__ep102598799__seat1": 0.0,
+    "one_for_all__ep102721568__seat0": 0.25,
+    "subramanya_n__ep102288474__seat1": 0.4524,
+    "ueddy__ep103145299__seat1": 0.9722,
+    "yusuke_hayashi__ep102775250__seat0": 0.9722
+   }
+  },
+  "YARN_STORE__SMOOTHIE_SHOP": {
+   "incumbent": 0,
+   "chosen": 10,
+   "n": 342,
+   "incumbent_point": 0.2836,
+   "chosen_point": 1.0,
+   "checks": {
+    "a_poor_vul__ep102980038__seat1": 1.0,
+    "kenjo1209__ep102165685__seat1": 1.0,
+    "kenjo1209__ep102449287__seat1": 1.0,
+    "milan_leonard__ep102297457__seat1": 1.0,
+    "mtn__ep102598799__seat1": 0.0,
+    "one_for_all__ep102721568__seat0": 0.1111,
+    "subramanya_n__ep102288474__seat1": 0.4815,
+    "ueddy__ep103145299__seat1": 1.0,
+    "yusuke_hayashi__ep102775250__seat0": 0.9722
+   }
+  },
+  "YARN_STORE__YARN_STORE": {
+   "incumbent": 0,
+   "chosen": 10,
+   "n": 324,
+   "incumbent_point": 0.2222,
+   "chosen_point": 0.9074,
+   "checks": {
+    "a_poor_vul__ep102980038__seat1": 1.0,
+    "kenjo1209__ep102165685__seat1": 1.0,
+    "kenjo1209__ep102449287__seat1": 1.0,
+    "milan_leonard__ep102297457__seat1": 0.1667,
+    "mtn__ep102598799__seat1": 0.0,
+    "one_for_all__ep102721568__seat0": 0.0,
+    "subramanya_n__ep102288474__seat1": 1.0,
+    "ueddy__ep103145299__seat1": 1.0,
+    "yusuke_hayashi__ep102775250__seat0": 1.0
+   }
+  }
+ }
+}

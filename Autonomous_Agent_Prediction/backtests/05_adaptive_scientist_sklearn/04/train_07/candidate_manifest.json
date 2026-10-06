@@ -1,0 +1,58 @@
+{
+  "classes": [
+    0,
+    1
+  ],
+  "rows": 10000,
+  "features": 17,
+  "candidates": [
+    {
+      "file": "candidate_meta_logstack.csv",
+      "name": "meta_logstack",
+      "family": "meta",
+      "oof_auc": 0.81688538,
+      "fold_auc": [
+        0.81869468,
+        0.82166371,
+        0.81185455,
+        0.81702048,
+        0.81499094
+      ],
+      "fold_auc_std": 0.00331705,
+      "test_rank_correlation_to_best": 0.99701259
+    },
+    {
+      "file": "candidate_hist_gradient.csv",
+      "name": "hist_gradient",
+      "family": "histogram",
+      "oof_auc": 0.81593552,
+      "fold_auc": [
+        0.81694347,
+        0.82467604,
+        0.80519072,
+        0.80816832,
+        0.82633183
+      ],
+      "fold_auc_std": 0.00849403,
+      "test_rank_correlation_to_best": 1.0
+    }
+  ],
+  "diagnostics": {
+    "best_core": {
+      "name": "hist_gradient",
+      "family": "histogram",
+      "oof_auc": 0.81593552
+    },
+    "blend_gate": {
+      "accepted": true,
+      "name": "meta_logstack",
+      "oof_auc": 0.81688538,
+      "gain": 0.00094987,
+      "test_rank_correlation_to_best": 0.99701259
+    },
+    "interaction_gate": {
+      "accepted": false
+    }
+  },
+  "failures": []
+}

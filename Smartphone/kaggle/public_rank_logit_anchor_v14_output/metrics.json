@@ -1,0 +1,56 @@
+{
+  "method": "algebraic reconstruction; no model fitting",
+  "frozen_folds": "StratifiedKFold(5, shuffle=True, random_state=42)",
+  "source_notebook": "https://www.kaggle.com/code/dariushafshar/0-97125-rank-logit-fusion-forkable",
+  "scored_parent_notebook": "https://www.kaggle.com/code/hboyang/s6e8-rank-logit-regime-fusion-lb0-97125",
+  "reported_parent_public_lb": 0.97125,
+  "source_alpha": 0.5,
+  "target_alpha": 0.7,
+  "source_alpha_oof_auc": 0.9703976503407707,
+  "target_alpha_reconstructed_oof_auc": 0.9704211377086109,
+  "target_minus_source_oof_delta": 2.3487367840191453e-05,
+  "reconstruction_max_abs_error": 0.0,
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "alpha050_auc": 0.9698164609341392,
+      "alpha070_auc": 0.9698541745755028,
+      "delta": 3.771364136362365e-05
+    },
+    {
+      "fold": 2,
+      "alpha050_auc": 0.9705316047453028,
+      "alpha070_auc": 0.9705592343014693,
+      "delta": 2.7629556166530733e-05
+    },
+    {
+      "fold": 3,
+      "alpha050_auc": 0.9704724476120135,
+      "alpha070_auc": 0.9705052205717555,
+      "delta": 3.277295974202232e-05
+    },
+    {
+      "fold": 4,
+      "alpha050_auc": 0.9710375644910327,
+      "alpha070_auc": 0.9710584442180242,
+      "delta": 2.0879726991496206e-05
+    },
+    {
+      "fold": 5,
+      "alpha050_auc": 0.9701500474349091,
+      "alpha070_auc": 0.9701391735366299,
+      "delta": -1.0873898279140093e-05
+    }
+  ],
+  "submission_spearman": 0.9999951678337246,
+  "submission_max_abs_difference": 0.0213937131710214,
+  "sha256": {
+    "oof_anchor_alpha050.npy": "357136e43c28de98e83ee50607f73103f70dfb08d784d0758e7b6cca458a57d0",
+    "oof_anchor_alpha070.npy": "3017c6e0fc38912bb99d73f5c89bc2cea09c584f789f25493fdbc1564c3236a4",
+    "oof_mix.npy": "bee3592e52ac042b4ca55b227020f39e95f3cb5d9787bbbe964f27a553fd34a8",
+    "train_keys.parquet": "3e425bbba3a7fa99ced88c132fa21a6a47a000f9be5e99d38dca7a0742fe7925",
+    "submission_alpha050.csv": "b302741f49f3fbeb71e4dd47289adabbdf77762b40e616fe3bb7f8904c546046",
+    "submission_alpha070.csv": "d62fd0792a10bcfb00be6d1ab6487c569fcf4a059868bea83588601dfe345bab"
+  },
+  "caveat": "The alpha=0.70 OOF is reconstructed from the published alpha=0.50 fork artifacts and public source code; it was not directly exported by the scored parent run."
+}

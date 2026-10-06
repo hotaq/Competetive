@@ -1,0 +1,53 @@
+{
+  "blend_macro_auc_shift": -0.0648908816182808,
+  "gold58_blend_macro_auc": 0.6900616998010126,
+  "gold58_mil_positive_negative_gap_mean": 0.0969337026278178,
+  "gold58_mil_prediction_std_mean": 0.13917651834587255,
+  "gold58_strongest_mil_targets": [
+    {
+      "auc": 0.8279069767441861,
+      "positive_negative_gap": 0.26235857605934143,
+      "target": "Medial OA"
+    },
+    {
+      "auc": 0.7988394584139265,
+      "positive_negative_gap": 0.17373621463775635,
+      "target": "Lateral OA"
+    },
+    {
+      "auc": 0.7526881720430108,
+      "positive_negative_gap": 0.09795457124710083,
+      "target": "Synovitis"
+    },
+    {
+      "auc": 0.6947115384615383,
+      "positive_negative_gap": 0.1217854917049408,
+      "target": "Medial Meniscus"
+    }
+  ],
+  "gold58_weakest_mil_targets": [
+    {
+      "auc": 0.5011337868480725,
+      "positive_negative_gap": 0.0008485317230224609,
+      "target": "MCL"
+    },
+    {
+      "auc": 0.5747549019607844,
+      "positive_negative_gap": 0.034985125064849854,
+      "target": "ACL"
+    },
+    {
+      "auc": 0.6221322537112011,
+      "positive_negative_gap": 0.05921328067779541,
+      "target": "Contusion"
+    },
+    {
+      "auc": 0.6375000000000001,
+      "positive_negative_gap": 0.04856020212173462,
+      "target": "Fracture"
+    }
+  ],
+  "validation_blend_macro_auc": 0.7549525814192934,
+  "validation_soft_label_ambiguous_025_075_mean": 0.318359375,
+  "validation_soft_label_ambiguous_040_060_mean": 0.044921875
+}

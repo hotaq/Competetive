@@ -1,0 +1,38 @@
+task,source,ok,reason,file_bytes,sha256,right,wrong,examples,input_shape,output_shape,ops,macs,memory,params,cost,points
+task005,base,0,first mismatch example 0,457,94108081085abb1a3e87a9a6ecede9721dd001206c71d8397b678f1a411cba1f,0,266,266,1x10x30x30,1x10x30x30,Constant;Conv,,,,,
+task008,base,0,error:iteration over a 0-d array,176902,4dfadef3de0cea5df8415fcfd1c1d0ca43c3226c68f5d76063e3952c62efde59,266,0,266,1x10x30x30,1x10x30x30,Add;Cast;Concat;Constant;Conv;Gather;Greater;Less;Mul;Pad;ReduceSum;Slice;Sub;Sum,,,,,
+task016,base,1,ok,366,4e4273303594948982efa3626fede5f42c4e89342b1c375612a6db29564f8a7b,267,0,267,1x10x30x30,1x10x30x30,Constant;Gather,0,80,10,90,20.500190
+task017,base,0,first mismatch example 0,457,94108081085abb1a3e87a9a6ecede9721dd001206c71d8397b678f1a411cba1f,0,266,266,1x10x30x30,1x10x30x30,Constant;Conv,,,,,
+task029,base,0,error:list index out of range,19108,8374d249672bdf15c99a2b74e9bb6647704ca4927c8c3c2575567faade93dc63,266,0,266,1x10x30x30,1x10x30x30,Add;ArgMax;Cast;Constant;Conv;Equal;Gather;Greater;Less;Mul;Pad;ReduceMax;ReduceMin;ReduceSum;Squeeze;Sub;Unsqueeze,,,,,
+task053,base,1,ok,381,7db58b591bb6bca0f6049654971990532a7c1a67640d10f6ef2257046f71ce10,60,0,60,1x10x30x30,1x10x30x30,Constant;Gather,0,240,30,270,19.401578
+task055,base,0,error:list index out of range,41679,2467f68329574e95aa3b6a370fc648e8396164a0f054db029da3be68f5a6f406,263,0,263,1x10x30x30,1x10x30x30,Add;Cast;Concat;Constant;Conv;Equal;Gather;Mul;Sub,,,,,
+task061,base,0,first mismatch example 0,457,94108081085abb1a3e87a9a6ecede9721dd001206c71d8397b678f1a411cba1f,0,267,267,1x10x30x30,1x10x30x30,Constant;Conv,,,,,
+task067,base,0,error:list index out of range,1813,f9634ccdd63c6503ac80e1d9fc3ef124f2d4da2418fe3d3afc5cd48aeac7f844,266,0,266,1x10x30x30,1x10x30x30,Add;Cast;Constant;Conv;Div;Greater;Mul;ReduceMax;ReduceSum,,,,,
+task084,base,1,ok,8454,c9dd4741169b6ce1f8418b09791acac0e34e3d5462b62fed4f539e8e5262b154,175,0,175,1x10x30x30,1x10x30x30,Add;And;Cast;Concat;Constant;Equal;Greater;Less;Mul;Or;ReduceMax;ReduceSum;Split;Sub;Unsqueeze,28834,142364,900,172098,12.944181
+task087,base,0,error:iteration over a 0-d array,1277,be5e366f33e68af2434b0524c03caf8635ebecc1958d13cab0bf1629e4445a7c,266,0,266,1x10x30x30,1x10x30x30,Constant;Pad;Slice,,,,,
+task109,base,0,first mismatch example 0,457,94108081085abb1a3e87a9a6ecede9721dd001206c71d8397b678f1a411cba1f,0,266,266,1x10x30x30,1x10x30x30,Constant;Conv,,,,,
+task114,base,0,first mismatch example 0,457,94108081085abb1a3e87a9a6ecede9721dd001206c71d8397b678f1a411cba1f,0,266,266,1x10x30x30,1x10x30x30,Constant;Conv,,,,,
+task116,base,0,error:iteration over a 0-d array,1429,41b6e2a15262d9793261d015392870be8ec5438008481a974bd659045e289519,267,0,267,1x10x30x30,1x10x30x30,Concat;Constant;Gather;Pad;Slice,,,,,
+task129,base,1,ok,4829,35b18cd13d3fc36f24f93365b9bd6a7bdf4595de24d59e6aaa242bb3c9ed643f,265,0,265,1x10x30x30,1x10x30x30,Add;Cast;Constant;Greater;Mul;ReduceMax;ReduceSum,18030,3738,900,22668,14.971290
+task135,base,0,error:iteration over a 0-d array,920,155f81667ff74f8f7c92f98bdcc296a713e1637effc7db24edd2cc3ac0454aed,266,0,266,1x10x30x30,1x10x30x30,Constant;Pad;Slice,,,,,
+task140,base,0,error:iteration over a 0-d array,1277,be5e366f33e68af2434b0524c03caf8635ebecc1958d13cab0bf1629e4445a7c,265,0,265,1x10x30x30,1x10x30x30,Constant;Pad;Slice,,,,,
+task145,base,0,error:list index out of range,66565,61f5d67297305ce27375527f2a711c190652d9690e7edb565dea0803992d27fe,267,0,267,1x10x30x30,1x10x30x30,Add;Cast;Concat;Constant;Equal;Gather;Mul;ReduceMax;ReduceMin;Sub,,,,,
+task159,base,0,first mismatch example 0,457,94108081085abb1a3e87a9a6ecede9721dd001206c71d8397b678f1a411cba1f,0,265,265,1x10x30x30,1x10x30x30,Constant;Conv,,,,,
+task164,base,0,error:iteration over a 0-d array,1418,7625ee939dcb3af7682f68d8cdc86fba5aad4a19a8fcf2aba20849ae60df2e4d,267,0,267,1x10x30x30,1x10x30x30,Concat;Constant;Gather;Pad;Slice,,,,,
+task172,base,0,error:iteration over a 0-d array,1418,ba30dcaf33fffa7c4ab19047d8cb34828ee92fe506506217113ce8ee37bba5bb,267,0,267,1x10x30x30,1x10x30x30,Concat;Constant;Gather;Pad;Slice,,,,,
+task179,base,0,error:iteration over a 0-d array,1060,04907a38d7fb4f2df6bb714bb8d1290619b264d80b897ebcaa45651c533ea100,267,0,267,1x10x30x30,1x10x30x30,Constant;Pad;Slice;Transpose,,,,,
+task185,base,0,error:iteration over a 0-d array,57074,1d39cb6707b7a1ab8479ee2466e18583cd26ab1fce30e9c33280b3479f4af77f,267,0,267,1x10x30x30,1x10x30x30,And;ArgMax;Cast;Concat;Constant;CumSum;Equal;Gather;Greater;Mul;Not;OneHot;Pad;ReduceSum;Reshape;Squeeze;Transpose;Unsqueeze;Where,,,,,
+task200,base,0,first mismatch example 0,457,94108081085abb1a3e87a9a6ecede9721dd001206c71d8397b678f1a411cba1f,0,84,84,1x10x30x30,1x10x30x30,Constant;Conv,,,,,
+task203,base,0,first mismatch example 0,457,94108081085abb1a3e87a9a6ecede9721dd001206c71d8397b678f1a411cba1f,0,267,267,1x10x30x30,1x10x30x30,Constant;Conv,,,,,
+task210,base,0,error:iteration over a 0-d array,1418,ba30dcaf33fffa7c4ab19047d8cb34828ee92fe506506217113ce8ee37bba5bb,266,0,266,1x10x30x30,1x10x30x30,Concat;Constant;Gather;Pad;Slice,,,,,
+task241,base,1,ok,346,605e3c8afaaf3386fd6937f1f42f803f5b4a066156d23b985c4065e5e24ae845,266,0,266,1x10x30x30,1x10x30x30,Identity;Transpose,0,36000,0,36000,14.508726
+task276,base,1,ok,381,b450f8c83252860973e36d46938d5d4f0f42c3637dbfd559f9166ec37ff02e1d,266,0,266,1x10x30x30,1x10x30x30,Constant;Gather,0,40,10,50,21.087977
+task309,base,1,ok,381,01f40b73f6c90696cb6ae56ea80e9f2944b8ff51938a6006cff8fea2fff7e8a3,265,0,265,1x10x30x30,1x10x30x30,Constant;Gather,0,40,10,50,21.087977
+task311,base,0,error:iteration over a 0-d array,1418,7625ee939dcb3af7682f68d8cdc86fba5aad4a19a8fcf2aba20849ae60df2e4d,266,0,266,1x10x30x30,1x10x30x30,Concat;Constant;Gather;Pad;Slice,,,,,
+task322,base,0,error:iteration over a 0-d array,2566,1b4d7b775a6e1a77a3c74a3dca676b5b9ff852af622534e063908687f88c1b0b,266,0,266,1x10x30x30,1x10x30x30,Cast;Concat;Constant;CumSum;Greater;Pad;ReduceMax;Slice;Sub,,,,,
+task326,base,0,error:iteration over a 0-d array,920,f026753a0b22e9d4dd8f77455cba1c9b4a1b9939fec07805ca52abfcacfcda06,266,0,266,1x10x30x30,1x10x30x30,Constant;Pad;Slice,,,,,
+task328,base,0,first mismatch example 0,457,94108081085abb1a3e87a9a6ecede9721dd001206c71d8397b678f1a411cba1f,0,267,267,1x10x30x30,1x10x30x30,Constant;Conv,,,,,
+task337,base,1,ok,366,24df0c1c52ef47b3e168de2dd62739f2c1094a90bf66edbc70a2f75baa7bf61d,266,0,266,1x10x30x30,1x10x30x30,Constant;Gather,0,80,10,90,20.500190
+task356,base,0,error:list index out of range,7636,642b18a7144a1c9ff2113fa235c2eee4061295d5c4354db2f2b1124726961c5e,266,0,266,1x10x30x30,1x10x30x30,Cast;Concat;Constant;Conv;Gather;Greater;MatMul;Max;Mul;Pad;ReduceSum;Sub;Transpose,,,,,
+task385,base,1,ok,381,6589acb45416c745313732fbd096403edac2d1b79d4151c6bc9507de80c7af75,265,0,265,1x10x30x30,1x10x30x30,Constant;Gather,0,240,30,270,19.401578
+task399,base,0,first mismatch example 0,457,94108081085abb1a3e87a9a6ecede9721dd001206c71d8397b678f1a411cba1f,0,273,273,1x10x30x30,1x10x30x30,Constant;Conv,,,,,

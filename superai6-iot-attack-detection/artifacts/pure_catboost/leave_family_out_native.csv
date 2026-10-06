@@ -1,0 +1,6 @@
+held_out_family,included_attack_families,evaluation_normal_rows,normal_fpr,held_out_family_recall,proxy_f1_at_10pct,proxy_f1_at_20pct
+syn_flood_row,"mqtt_invalid_control,mqtt_credential,mqtt_will_payload,mqtt_publish",36529,0.0,0.0,0.0,0.0
+mqtt_invalid_control,"syn_flood_row,mqtt_credential,mqtt_will_payload,mqtt_publish",15868,0.0,0.0,0.0,0.0
+mqtt_credential,"syn_flood_row,mqtt_invalid_control,mqtt_will_payload,mqtt_publish",15868,0.0,0.0,0.0,0.0
+mqtt_will_payload,"syn_flood_row,mqtt_invalid_control,mqtt_credential,mqtt_publish",15868,0.0,1.0,1.0,1.0
+mqtt_publish,"syn_flood_row,mqtt_invalid_control,mqtt_credential,mqtt_will_payload",15867,0.0,0.0,0.0,0.0

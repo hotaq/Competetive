@@ -1,0 +1,116 @@
+{
+  "model": "catboost_kgmon_snap_anchor_cpu",
+  "train_rows": 30000,
+  "test_rows": 270000,
+  "original_rows": 10000,
+  "features": 306,
+  "base_features_after_cross_drop": 294,
+  "cross_columns": 12,
+  "target_encoder_output_columns": 36,
+  "snap_columns": 33,
+  "digit_columns": 99,
+  "anchor_columns": 13,
+  "frequency_columns": 80,
+  "original_prior_columns": 20,
+  "bin_columns": 22,
+  "params": {
+    "folds": 2,
+    "iterations": 20,
+    "learning_rate": 0.045,
+    "depth": 8,
+    "l2_leaf_reg": 5.0,
+    "early_stopping_rounds": 10,
+    "orig_row_weight": 0.35,
+    "max_anchor_k": 5,
+    "max_crosses": 12,
+    "bin_count": 12,
+    "te_inner_folds": 3,
+    "include_snap_diff_digits": false,
+    "train_sample_rows": 30000,
+    "seed": 47,
+    "thread_count": 8,
+    "output_dir": "/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Irrigation/artifacts/catboost_kgmon_snap_anchor_cpu_smoke",
+    "copy_submission": false
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "raw_balanced_accuracy": 0.967801731828792,
+      "raw_accuracy": 0.9806666666666667,
+      "tree_count": 13,
+      "seconds": 1.4718859195709229
+    },
+    {
+      "fold": 2,
+      "raw_balanced_accuracy": 0.9554107071469132,
+      "raw_accuracy": 0.9802666666666666,
+      "tree_count": 16,
+      "seconds": 1.341568946838379
+    }
+  ],
+  "raw_oof": {
+    "balanced_accuracy": 0.9616061617046697,
+    "accuracy": 0.9804666666666667,
+    "recall_by_class": {
+      "Low": 0.9930740845869998,
+      "Medium": 0.9657444005270093,
+      "High": 0.926
+    },
+    "confusion_matrix": [
+      [
+        17493,
+        122,
+        0
+      ],
+      [
+        256,
+        10995,
+        134
+      ],
+      [
+        0,
+        74,
+        926
+      ]
+    ]
+  },
+  "bias": [
+    -0.3,
+    -0.508,
+    0.0
+  ],
+  "tuned_oof_balanced_accuracy": 0.9636099250827311,
+  "tuned_oof": {
+    "balanced_accuracy": 0.9636099250827311,
+    "accuracy": 0.9780666666666666,
+    "recall_by_class": {
+      "Low": 0.9938688617655407,
+      "Medium": 0.9569609134826527,
+      "High": 0.94
+    },
+    "confusion_matrix": [
+      [
+        17507,
+        107,
+        1
+      ],
+      [
+        258,
+        10895,
+        232
+      ],
+      [
+        0,
+        60,
+        940
+      ]
+    ]
+  },
+  "submission": "artifacts/catboost_kgmon_snap_anchor_cpu_smoke/submission_catboost_kgmon_snap_anchor_cpu.csv",
+  "elapsed_seconds": 7.957139015197754,
+  "test_label_counts": {
+    "Low": 159410,
+    "Medium": 100199,
+    "High": 10391
+  }
+}

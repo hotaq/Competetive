@@ -1,0 +1,11 @@
+"""Aggressive observable third-land expansion ablation."""
+
+from kaggriculture_rl.policy.market_rules import LandExpansionRule
+from submissions.meta_v16_rc6_adaptive_market_standalone.main import agent as _v16
+
+_LAND_RULE = LandExpansionRule(start_day=8, end_day=20, cash_reserve=0.0)
+
+
+def agent(observation, configuration=None):
+    del configuration
+    return _LAND_RULE.apply(observation, _v16(observation))

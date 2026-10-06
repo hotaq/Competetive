@@ -1,0 +1,983 @@
+{
+  "agent_file": "submissions/meta_v59_causal_route_selector_b120_local/main.py",
+  "episodes": 11,
+  "total_steps": 7909,
+  "exact_steps": 6373,
+  "exact_rate": 0.8057908711594386,
+  "exact_episodes": 0,
+  "rows": [
+    {
+      "episode_id": 100157447,
+      "steps": 719,
+      "exact_steps": 569,
+      "exact_rate": 0.7913769123783032,
+      "first_mismatch": {
+        "step": 157,
+        "component": "market",
+        "expected": {
+          "farmer": [
+            "PLACE",
+            "FERTILIZER",
+            2
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "HARVEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              4
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              4
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "PLACE",
+            "FERTILIZER",
+            2
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "HARVEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              2
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              4
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 100155161,
+      "steps": 719,
+      "exact_steps": 569,
+      "exact_rate": 0.7913769123783032,
+      "first_mismatch": {
+        "step": 157,
+        "component": "market",
+        "expected": {
+          "farmer": [
+            "PLACE",
+            "FERTILIZER",
+            2
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "HARVEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              4
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              4
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "PLACE",
+            "FERTILIZER",
+            2
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "HARVEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              2
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              4
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 100152875,
+      "steps": 719,
+      "exact_steps": 569,
+      "exact_rate": 0.7913769123783032,
+      "first_mismatch": {
+        "step": 157,
+        "component": "market",
+        "expected": {
+          "farmer": [
+            "PLACE",
+            "FERTILIZER",
+            2
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "HARVEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              4
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              4
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "PLACE",
+            "FERTILIZER",
+            2
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "HARVEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              2
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              4
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 100150600,
+      "steps": 719,
+      "exact_steps": 563,
+      "exact_rate": 0.7830319888734353,
+      "first_mismatch": {
+        "step": 157,
+        "component": "market",
+        "expected": {
+          "farmer": [
+            "PLACE",
+            "FERTILIZER",
+            2
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "HARVEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              4
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              4
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "PLACE",
+            "FERTILIZER",
+            2
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "HARVEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              2
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              4
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 100148313,
+      "steps": 719,
+      "exact_steps": 569,
+      "exact_rate": 0.7913769123783032,
+      "first_mismatch": {
+        "step": 157,
+        "component": "market",
+        "expected": {
+          "farmer": [
+            "PLACE",
+            "FERTILIZER",
+            2
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "HARVEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              4
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              4
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "PLACE",
+            "FERTILIZER",
+            2
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "HARVEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              2
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              4
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 100146030,
+      "steps": 719,
+      "exact_steps": 563,
+      "exact_rate": 0.7830319888734353,
+      "first_mismatch": {
+        "step": 157,
+        "component": "market",
+        "expected": {
+          "farmer": [
+            "PLACE",
+            "FERTILIZER",
+            2
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "HARVEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              4
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              4
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "PLACE",
+            "FERTILIZER",
+            2
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "HARVEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              2
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              4
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 100143759,
+      "steps": 719,
+      "exact_steps": 718,
+      "exact_rate": 0.9986091794158554,
+      "first_mismatch": {
+        "step": 312,
+        "component": "market",
+        "expected": {
+          "farmer": [
+            "PICKUP",
+            "WHEAT",
+            5
+          ],
+          "hands": [],
+          "market": [
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              1
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "PICKUP",
+            "WHEAT",
+            5
+          ],
+          "hands": [],
+          "market": [
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              1
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 100141793,
+      "steps": 719,
+      "exact_steps": 556,
+      "exact_rate": 0.7732962447844228,
+      "first_mismatch": {
+        "step": 157,
+        "component": "market",
+        "expected": {
+          "farmer": [
+            "PLACE",
+            "FERTILIZER",
+            2
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "HARVEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              4
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              4
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "PLACE",
+            "FERTILIZER",
+            2
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "HARVEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              2
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              4
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 100141497,
+      "steps": 719,
+      "exact_steps": 556,
+      "exact_rate": 0.7732962447844228,
+      "first_mismatch": {
+        "step": 157,
+        "component": "market",
+        "expected": {
+          "farmer": [
+            "PLACE",
+            "FERTILIZER",
+            2
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "HARVEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              4
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              4
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "PLACE",
+            "FERTILIZER",
+            2
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "HARVEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              2
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              4
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 100139217,
+      "steps": 719,
+      "exact_steps": 556,
+      "exact_rate": 0.7732962447844228,
+      "first_mismatch": {
+        "step": 157,
+        "component": "market",
+        "expected": {
+          "farmer": [
+            "PLACE",
+            "FERTILIZER",
+            2
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "HARVEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              4
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              4
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "PLACE",
+            "FERTILIZER",
+            2
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "HARVEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              2
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              4
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode_id": 100136938,
+      "steps": 719,
+      "exact_steps": 585,
+      "exact_rate": 0.8136300417246175,
+      "first_mismatch": {
+        "step": 157,
+        "component": "market",
+        "expected": {
+          "farmer": [
+            "PLACE",
+            "FERTILIZER",
+            2
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "HARVEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              4
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              4
+            ]
+          ]
+        },
+        "actual": {
+          "farmer": [
+            "PLACE",
+            "FERTILIZER",
+            2
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PASS"
+            ],
+            [
+              "HARVEST"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              2
+            ],
+            [
+              "BUY_ANIMAL",
+              "COW",
+              4
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

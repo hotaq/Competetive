@@ -1,0 +1,122 @@
+{
+  "games": 72000,
+  "gates": {
+    "G1": {
+      "diff": 0.1365,
+      "ci": [
+        0.12561111111111112,
+        0.1476111111111111
+      ],
+      "pass": true
+    },
+    "G2": {
+      "diff": 0.026333333333333334,
+      "ci": [
+        0.021611111111111112,
+        0.03133333333333333
+      ],
+      "pass": true
+    },
+    "G3": {
+      "per_opponent": {
+        "a_poor_vul__ep102980038__seat1": {
+          "v97": 0.312,
+          "live": 0.1685,
+          "two": 0.3125,
+          "pass": true
+        },
+        "kenjo1209__ep102165685__seat1": {
+          "v97": 0.8595,
+          "live": 0.575,
+          "two": 0.859,
+          "pass": true
+        },
+        "kenjo1209__ep102449287__seat1": {
+          "v97": 0.867,
+          "live": 0.8375,
+          "two": 0.801,
+          "pass": true
+        },
+        "milan_leonard__ep102297457__seat1": {
+          "v97": 0.863,
+          "live": 0.836,
+          "two": 0.793,
+          "pass": true
+        },
+        "mtn__ep102598799__seat1": {
+          "v97": 0.9055,
+          "live": 0.713,
+          "two": 0.897,
+          "pass": true
+        },
+        "one_for_all__ep102721568__seat0": {
+          "v97": 0.8215,
+          "live": 0.6645,
+          "two": 0.822,
+          "pass": true
+        },
+        "subramanya_n__ep102288474__seat1": {
+          "v97": 0.9245,
+          "live": 0.8605,
+          "two": 0.8995,
+          "pass": true
+        },
+        "ueddy__ep103145299__seat1": {
+          "v97": 0.7595,
+          "live": 0.502,
+          "two": 0.752,
+          "pass": true
+        },
+        "yusuke_hayashi__ep102775250__seat0": {
+          "v97": 0.837,
+          "live": 0.764,
+          "two": 0.7765,
+          "pass": true
+        }
+      },
+      "pass": true
+    },
+    "G4": {
+      "checked": 18000,
+      "violations": 0,
+      "pass": true
+    },
+    "G5": {
+      "available": true,
+      "n": 2400,
+      "v97": 0.96875,
+      "live": 0.880625,
+      "two": 0.97,
+      "pass": true
+    }
+  },
+  "upload_decision": true,
+  "arms": {
+    "base": {
+      "point": 0.6384444444444445,
+      "mean_margin": 5331.0085
+    },
+    "live": {
+      "point": 0.6578888888888889,
+      "mean_margin": 6373.191444444445
+    },
+    "two": {
+      "point": 0.7680555555555556,
+      "mean_margin": 10787.826944444445
+    },
+    "v97": {
+      "point": 0.7943888888888889,
+      "mean_margin": 11791.778555555555
+    }
+  },
+  "margin_diffs": {
+    "v97_minus_live": 5418.587111111111,
+    "v97_minus_two": 1003.9516111111111,
+    "two_minus_live": 4414.6355
+  },
+  "two_minus_live": [
+    0.11016666666666666,
+    0.10005555555555555,
+    0.12027777777777778
+  ]
+}

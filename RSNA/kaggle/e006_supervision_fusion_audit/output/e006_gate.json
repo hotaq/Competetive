@@ -1,0 +1,333 @@
+{
+  "decision": "stop_b3_supervision_gate",
+  "experiment": "E006 supervision fusion audit",
+  "fixed_v4_gate": {
+    "baseline_macro_auc": 0.8700395897324982,
+    "bootstrap": {
+      "ci_high": 0.042023311876127,
+      "ci_low": 0.003761855148370233,
+      "n": 5000,
+      "p_positive": 0.9906
+    },
+    "candidate_macro_auc": 0.8927073353343263,
+    "checks": {
+      "bootstrap_direction": true,
+      "coverage": true,
+      "macro_gain": true,
+      "no_target_collapse": false,
+      "prevalence": true
+    },
+    "coverage": 1.0,
+    "macro_gain": 0.02266774560182816,
+    "minimum_target_delta": -0.07826797385620898,
+    "name": "fixed_external_steven_v4",
+    "pass": false,
+    "per_target_delta": {
+      "ACL": -0.010310102301790414,
+      "Baker's": 0.011433172302737549,
+      "Contusion": 0.09184285500074962,
+      "Effusion": 0.047095359883083665,
+      "Fracture": -0.07826797385620898,
+      "Lateral Meniscus": 0.037449762513701135,
+      "Lateral OA": 0.044151038600622305,
+      "MCL": -0.007440476190476164,
+      "Medial Meniscus": 0.005389267990074331,
+      "Medial OA": 0.023846437799926234,
+      "PF OA": 0.010328185328185246,
+      "Synovitis": 0.09649542015133417
+    },
+    "prevalence": [
+      {
+        "allowed_high": 0.3367846607669617,
+        "allowed_low": 0.17603585205355116,
+        "candidate": 0.20943952802359883,
+        "pass": true,
+        "source_max": 0.30678466076696165,
+        "source_min": 0.20603585205355116,
+        "target": "ACL"
+      },
+      {
+        "allowed_high": 0.288906285454958,
+        "allowed_low": 0.11953483095076015,
+        "candidate": 0.15407306557749037,
+        "pass": true,
+        "source_max": 0.25890628545495803,
+        "source_min": 0.14953483095076014,
+        "target": "MCL"
+      },
+      {
+        "allowed_high": 0.6220127070569549,
+        "allowed_low": 0.3666417063762196,
+        "candidate": 0.4045836169729975,
+        "pass": true,
+        "source_max": 0.5920127070569549,
+        "source_min": 0.39664170637621965,
+        "target": "Medial Meniscus"
+      },
+      {
+        "allowed_high": 0.3901089176310415,
+        "allowed_low": 0.1227115951894713,
+        "candidate": 0.15679600635352847,
+        "pass": true,
+        "source_max": 0.3601089176310415,
+        "source_min": 0.1527115951894713,
+        "target": "Lateral Meniscus"
+      },
+      {
+        "allowed_high": 0.6118016791468119,
+        "allowed_low": 0.3373700930338098,
+        "candidate": 0.3728159745858861,
+        "pass": true,
+        "source_max": 0.5818016791468119,
+        "source_min": 0.36737009303380985,
+        "target": "Medial OA"
+      },
+      {
+        "allowed_high": 0.5671000680735194,
+        "allowed_low": 0.21665305196278647,
+        "candidate": 0.2741093714545042,
+        "pass": true,
+        "source_max": 0.5371000680735194,
+        "source_min": 0.24665305196278647,
+        "target": "Lateral OA"
+      },
+      {
+        "allowed_high": 0.6676219650555933,
+        "allowed_low": 0.42178125709099157,
+        "candidate": 0.4585886090310869,
+        "pass": true,
+        "source_max": 0.6376219650555933,
+        "source_min": 0.4517812570909916,
+        "target": "PF OA"
+      },
+      {
+        "allowed_high": 0.7309303380984797,
+        "allowed_low": 0.5642818243703199,
+        "candidate": 0.5976855003403676,
+        "pass": true,
+        "source_max": 0.7009303380984797,
+        "source_min": 0.59428182437032,
+        "target": "Effusion"
+      },
+      {
+        "allowed_high": 0.7214000453823463,
+        "allowed_low": 0.09616292262309961,
+        "candidate": 0.12638983435443613,
+        "pass": true,
+        "source_max": 0.6914000453823462,
+        "source_min": 0.1261629226230996,
+        "target": "Synovitis"
+      },
+      {
+        "allowed_high": 0.7597481279782164,
+        "allowed_low": 0.2171068754254595,
+        "candidate": 0.2471068754254595,
+        "pass": true,
+        "source_max": 0.7297481279782164,
+        "source_min": 0.2471068754254595,
+        "target": "Baker's"
+      },
+      {
+        "allowed_high": 0.5221715452688904,
+        "allowed_low": 0.14177218062173816,
+        "candidate": 0.1756296800544588,
+        "pass": true,
+        "source_max": 0.4921715452688904,
+        "source_min": 0.17177218062173816,
+        "target": "Contusion"
+      },
+      {
+        "allowed_high": 0.5351055139550716,
+        "allowed_low": 0.04125028363966417,
+        "candidate": 0.07215793056501021,
+        "pass": true,
+        "source_max": 0.5051055139550715,
+        "source_min": 0.07125028363966417,
+        "target": "Fracture"
+      }
+    ]
+  },
+  "input_sha256": {
+    "labels_llm_gpt56sol.csv": "a79b05e609336811d51c97f9a48f00ea8004244a1a80fe886504a62bb39867ae",
+    "llm_labels_v2.csv": "3c082a987939528a55202028f655bd6f9dc5c9e28eff5058bbae7ef088a9f144",
+    "llm_labels_v4_blend.csv": "eb4c2b29e7e84adbb4b5ccee825ca20ade6a43dbe295f13be442d549e4f5dca4",
+    "report_labels_v2.csv": "6f704a7bdb2f894cc49445b19ba7c4378c3f548d3449e00361e10044bee40920",
+    "train.csv": "8ca2203c0e9d61c080c7a314c7cdb51c1b03a1d9eb4770819f7f34af53ef4e33"
+  },
+  "macro_auc": {
+    "crossfit_three": 0.8282022914032997,
+    "equal_three": 0.834823380527972,
+    "lixin": 0.8351939306701702,
+    "pilkwang": 0.8700395897324982,
+    "steven_v2": 0.8873494977640523,
+    "steven_v4": 0.8927073353343263
+  },
+  "n_gold": 58,
+  "n_train": 4407,
+  "notes": [
+    "Gold58 is an audit ruler, not an image-model leaderboard estimate.",
+    "The primary fusion uses Steven v2, not v4, so Lixin is not double-counted.",
+    "If no candidate passes, generated labels are diagnostic and must not launch E007."
+  ],
+  "pass": false,
+  "primary_gate": {
+    "baseline_macro_auc": 0.8700395897324982,
+    "bootstrap": {
+      "ci_high": -0.021274382681652576,
+      "ci_low": -0.06230799944238513,
+      "n": 5000,
+      "p_positive": 0.0
+    },
+    "candidate_macro_auc": 0.8282022914032997,
+    "checks": {
+      "bootstrap_direction": false,
+      "coverage": true,
+      "macro_gain": false,
+      "no_target_collapse": false,
+      "prevalence": true
+    },
+    "coverage": 1.0,
+    "macro_gain": -0.04183729832919847,
+    "minimum_target_delta": -0.17774936061381075,
+    "name": "three_source_crossfit",
+    "pass": false,
+    "per_target_delta": {
+      "ACL": -0.08935421994884918,
+      "Baker's": -0.04200885668276977,
+      "Contusion": 0.023016944069575662,
+      "Effusion": -0.17774936061381075,
+      "Fracture": -0.11229575163398686,
+      "Lateral Meniscus": 0.009499451954694926,
+      "Lateral OA": -0.003237742830712431,
+      "MCL": -0.04712301587301582,
+      "Medial Meniscus": -0.02285592431761796,
+      "Medial OA": -0.0342930970837948,
+      "PF OA": -0.08362290862290878,
+      "Synovitis": 0.07797690163281568
+    },
+    "prevalence": [
+      {
+        "allowed_high": 0.3367846607669617,
+        "allowed_low": 0.17603585205355116,
+        "candidate": 0.22759246653051962,
+        "pass": true,
+        "source_max": 0.30678466076696165,
+        "source_min": 0.20603585205355116,
+        "target": "ACL"
+      },
+      {
+        "allowed_high": 0.288906285454958,
+        "allowed_low": 0.11953483095076015,
+        "candidate": 0.15883821193555706,
+        "pass": true,
+        "source_max": 0.25890628545495803,
+        "source_min": 0.14953483095076014,
+        "target": "MCL"
+      },
+      {
+        "allowed_high": 0.6220127070569549,
+        "allowed_low": 0.3666417063762196,
+        "candidate": 0.5119128658951668,
+        "pass": true,
+        "source_max": 0.5920127070569549,
+        "source_min": 0.39664170637621965,
+        "target": "Medial Meniscus"
+      },
+      {
+        "allowed_high": 0.3901089176310415,
+        "allowed_low": 0.1227115951894713,
+        "candidate": 0.19491717721806218,
+        "pass": true,
+        "source_max": 0.3601089176310415,
+        "source_min": 0.1527115951894713,
+        "target": "Lateral Meniscus"
+      },
+      {
+        "allowed_high": 0.6118016791468119,
+        "allowed_low": 0.3373700930338098,
+        "candidate": 0.37258906285454957,
+        "pass": true,
+        "source_max": 0.5818016791468119,
+        "source_min": 0.36737009303380985,
+        "target": "Medial OA"
+      },
+      {
+        "allowed_high": 0.5671000680735194,
+        "allowed_low": 0.21665305196278647,
+        "candidate": 0.269571136827774,
+        "pass": true,
+        "source_max": 0.5371000680735194,
+        "source_min": 0.24665305196278647,
+        "target": "Lateral OA"
+      },
+      {
+        "allowed_high": 0.6676219650555933,
+        "allowed_low": 0.42178125709099157,
+        "candidate": 0.4567733151803948,
+        "pass": true,
+        "source_max": 0.6376219650555933,
+        "source_min": 0.4517812570909916,
+        "target": "PF OA"
+      },
+      {
+        "allowed_high": 0.7309303380984797,
+        "allowed_low": 0.5642818243703199,
+        "candidate": 0.6019968232357613,
+        "pass": true,
+        "source_max": 0.7009303380984797,
+        "source_min": 0.59428182437032,
+        "target": "Effusion"
+      },
+      {
+        "allowed_high": 0.7214000453823463,
+        "allowed_low": 0.09616292262309961,
+        "candidate": 0.1284320399364647,
+        "pass": true,
+        "source_max": 0.6914000453823462,
+        "source_min": 0.1261629226230996,
+        "target": "Synovitis"
+      },
+      {
+        "allowed_high": 0.7597481279782164,
+        "allowed_low": 0.2171068754254595,
+        "candidate": 0.24846834581347857,
+        "pass": true,
+        "source_max": 0.7297481279782164,
+        "source_min": 0.2471068754254595,
+        "target": "Baker's"
+      },
+      {
+        "allowed_high": 0.5221715452688904,
+        "allowed_low": 0.14177218062173816,
+        "candidate": 0.2226004084411164,
+        "pass": true,
+        "source_max": 0.4921715452688904,
+        "source_min": 0.17177218062173816,
+        "target": "Contusion"
+      },
+      {
+        "allowed_high": 0.5351055139550716,
+        "allowed_low": 0.04125028363966417,
+        "candidate": 0.0717041071023372,
+        "pass": true,
+        "source_max": 0.5051055139550715,
+        "source_min": 0.07125028363966417,
+        "target": "Fracture"
+      }
+    ]
+  },
+  "promoted_source": null,
+  "source_overlap": {
+    "lixin": 4407,
+    "pilkwang": 4406,
+    "steven_v2": 4407,
+    "steven_v4": 4407
+  },
+  "thresholds": {
+    "minimum_bootstrap_probability_positive": 0.8,
+    "minimum_coverage": 0.999,
+    "minimum_macro_gain": 0.02,
+    "minimum_target_delta": -0.05,
+    "prevalence_margin": 0.03
+  }
+}

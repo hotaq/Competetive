@@ -1,0 +1,50 @@
+{
+  "base": "rl/evaluations/v16_fresh_test_top20_offset8_20260826.json",
+  "candidate": "rl/evaluations/v21_land3_fresh_test_top20_offset8_20260826.json",
+  "changed_games": [
+    {
+      "base_margin": -6216.0,
+      "candidate_margin": -5565.0,
+      "episode_id": 99101517,
+      "margin_delta": 651.0,
+      "money_delta": 6935.0,
+      "outcome": "loss_to_loss",
+      "snapshot_rank": 8,
+      "team_id": 16748154,
+      "team_name": "taiseiu"
+    },
+    {
+      "base_margin": 452.0,
+      "candidate_margin": 16636.0,
+      "episode_id": 99101517,
+      "margin_delta": 16184.0,
+      "money_delta": 36441.0,
+      "outcome": "win_to_win",
+      "snapshot_rank": 10,
+      "team_id": 16655477,
+      "team_name": "Aurora"
+    },
+    {
+      "base_margin": -13316.0,
+      "candidate_margin": 6306.0,
+      "episode_id": 99163111,
+      "margin_delta": 19622.0,
+      "money_delta": 10740.0,
+      "outcome": "loss_to_win",
+      "snapshot_rank": 17,
+      "team_id": 16662883,
+      "team_name": "OceanMix"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "changed_games": 3,
+    "games": 80,
+    "loss_to_win": 1,
+    "maximum_margin_delta": 19622.0,
+    "mean_margin_delta": 455.7125,
+    "median_margin_delta": 0.0,
+    "minimum_margin_delta": 0.0,
+    "win_to_loss": 0
+  }
+}

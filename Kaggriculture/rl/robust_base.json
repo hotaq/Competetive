@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-08-21",
+  "default_base": {
+    "name": "meta_v16_rc5_robust_base_standalone",
+    "agent_file": "submissions/meta_v16_rc5_robust_base_standalone/main.py",
+    "manifest": "submissions/meta_v16_rc5_robust_base_standalone/candidate.json",
+    "sha256": "f029fa0cb66a9eb509afbe44e3f59b800332d0419db91607183410e4089c4d19",
+    "validation_report": "rl/evaluations/meta_v16_rc5_vs_v12_live24_recheck.json"
+  },
+  "specialists": [
+    {
+      "name": "top1_v12_ryo_selector_b120_repaired_standalone",
+      "agent_file": "submissions/top1_v12_ryo_selector_b120_repaired_standalone/main.py",
+      "target": "Ryo-like opponent distribution",
+      "activation": "reference_only_until_state_compatible_gate_exists"
+    }
+  ],
+  "design_rule": "New RL or adaptive candidates start from the V16 state trajectory. Do not switch to a spatially incompatible tape midgame; adaptations must emit legal actions from the live state or prove state compatibility before takeover."
+}

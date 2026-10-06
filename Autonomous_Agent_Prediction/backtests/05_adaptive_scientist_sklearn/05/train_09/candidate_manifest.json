@@ -1,0 +1,137 @@
+{
+  "manifest_version": 1,
+  "classes": [
+    0,
+    1
+  ],
+  "rows": 10000,
+  "features": 18,
+  "recipe_id": "mixed-safe",
+  "planner": {
+    "source": "profile",
+    "valid": true,
+    "recipe_id": "mixed-safe"
+  },
+  "initial_candidates": [
+    "logistic",
+    "extra_trees",
+    "small_rbf_svm"
+  ],
+  "challenger_candidates": [
+    "hist_gradient",
+    "meta_logstack"
+  ],
+  "candidates": [
+    {
+      "file": "candidate_logistic.csv",
+      "state_file": "candidate_logistic.npz",
+      "name": "logistic",
+      "family": "linear",
+      "role": "anchor",
+      "oof_auc": 0.64202779,
+      "fold_auc": [
+        0.7049513,
+        0.62154046,
+        0.61277494,
+        0.62949436,
+        0.64275184
+      ],
+      "fold_auc_std": 0.03283919,
+      "test_rank_correlation_to_best": 1.0
+    },
+    {
+      "file": "candidate_extra_trees.csv",
+      "state_file": "candidate_extra_trees.npz",
+      "name": "extra_trees",
+      "family": "bagging",
+      "role": "anchor",
+      "oof_auc": 0.61284101,
+      "fold_auc": [
+        0.65584416,
+        0.6018992,
+        0.59487866,
+        0.58380002,
+        0.62428337
+      ],
+      "fold_auc_std": 0.02554798,
+      "test_rank_correlation_to_best": 0.83101926
+    },
+    {
+      "file": "candidate_small_rbf_svm.csv",
+      "state_file": "candidate_small_rbf_svm.npz",
+      "name": "small_rbf_svm",
+      "family": "kernel",
+      "role": "anchor",
+      "oof_auc": 0.59711255,
+      "fold_auc": [
+        0.61477273,
+        0.56440224,
+        0.60721532,
+        0.59353949,
+        0.60954136
+      ],
+      "fold_auc_std": 0.01815544,
+      "test_rank_correlation_to_best": 0.80508333
+    },
+    {
+      "file": "candidate_hist_gradient.csv",
+      "state_file": "candidate_hist_gradient.npz",
+      "name": "hist_gradient",
+      "family": "histogram",
+      "role": "challenger",
+      "oof_auc": 0.59067122,
+      "fold_auc": [
+        0.61891234,
+        0.59767876,
+        0.57479101,
+        0.59885561,
+        0.57936118
+      ],
+      "fold_auc_std": 0.01575426,
+      "test_rank_correlation_to_best": 0.81654015
+    },
+    {
+      "file": "candidate_meta_logstack.csv",
+      "state_file": "candidate_meta_logstack.npz",
+      "name": "meta_logstack",
+      "family": "meta",
+      "role": "challenger",
+      "oof_auc": 0.63624507,
+      "fold_auc": [
+        0.63425325,
+        0.67031897,
+        0.6665855,
+        0.60092525,
+        0.61392301
+      ],
+      "fold_auc_std": 0.0276649,
+      "test_rank_correlation_to_best": 0.99516184
+    }
+  ],
+  "diagnostics": {
+    "anchors": [
+      "logistic",
+      "extra_trees",
+      "small_rbf_svm"
+    ],
+    "guarded_selection": {
+      "best_core": {
+        "name": "logistic",
+        "family": "linear",
+        "oof_auc": 0.64202779
+      },
+      "blend_gate": {
+        "accepted": false,
+        "name": "blend_logistic_extra_trees",
+        "oof_auc": 0.64133991,
+        "gain": -0.00068788,
+        "test_rank_correlation_to_best": 0.99347573
+      },
+      "interaction_gate": {
+        "accepted": false
+      }
+    },
+    "recipe_candidates": []
+  },
+  "failures": []
+}

@@ -1,0 +1,189 @@
+{
+  "common_prefix_step": 97,
+  "programs": [
+    {
+      "program_id": 93816256,
+      "name": "base-93816256",
+      "segments": [
+        {"start_step": 0, "source_episode_id": 93816256}
+      ]
+    },
+    {
+      "program_id": 93518562,
+      "name": "suffix-93518562-at-163",
+      "segments": [
+        {"start_step": 0, "source_episode_id": 93816256},
+        {"start_step": 163, "source_episode_id": 93518562}
+      ]
+    },
+    {
+      "program_id": 93724855,
+      "name": "suffix-93724855-at-163",
+      "segments": [
+        {"start_step": 0, "source_episode_id": 93816256},
+        {"start_step": 163, "source_episode_id": 93724855}
+      ]
+    },
+    {
+      "program_id": 93734648,
+      "name": "suffix-93734648-at-163",
+      "segments": [
+        {"start_step": 0, "source_episode_id": 93816256},
+        {"start_step": 163, "source_episode_id": 93734648}
+      ]
+    },
+    {
+      "program_id": 93520335,
+      "name": "suffix-93520335-at-163",
+      "segments": [
+        {"start_step": 0, "source_episode_id": 93816256},
+        {"start_step": 163, "source_episode_id": 93520335}
+      ]
+    },
+    {
+      "program_id": 93494430,
+      "name": "suffix-93494430-at-163",
+      "segments": [
+        {"start_step": 0, "source_episode_id": 93816256},
+        {"start_step": 163, "source_episode_id": 93494430}
+      ]
+    },
+    {
+      "program_id": 93546314,
+      "name": "suffix-93546314-at-163",
+      "segments": [
+        {"start_step": 0, "source_episode_id": 93816256},
+        {"start_step": 163, "source_episode_id": 93546314}
+      ]
+    },
+    {
+      "program_id": 93501610,
+      "name": "suffix-93501610-at-163",
+      "segments": [
+        {"start_step": 0, "source_episode_id": 93816256},
+        {"start_step": 163, "source_episode_id": 93501610}
+      ]
+    },
+    {
+      "program_id": 93634131,
+      "name": "suffix-93634131-at-163",
+      "segments": [
+        {"start_step": 0, "source_episode_id": 93816256},
+        {"start_step": 163, "source_episode_id": 93634131}
+      ]
+    },
+    {
+      "program_id": 93498033,
+      "name": "suffix-93498033-at-163",
+      "segments": [
+        {"start_step": 0, "source_episode_id": 93816256},
+        {"start_step": 163, "source_episode_id": 93498033}
+      ]
+    },
+    {
+      "program_id": 93550871,
+      "name": "suffix-93550871-at-163",
+      "segments": [
+        {"start_step": 0, "source_episode_id": 93816256},
+        {"start_step": 163, "source_episode_id": 93550871}
+      ]
+    },
+    {
+      "program_id": 193516782,
+      "name": "specialist-93516782",
+      "segments": [
+        {"start_step": 0, "source_episode_id": 93816256},
+        {"start_step": 144, "source_episode_id": 93484593}
+      ]
+    },
+    {
+      "program_id": 193515895,
+      "name": "specialist-93515895",
+      "segments": [
+        {"start_step": 0, "source_episode_id": 93816256},
+        {"start_step": 97, "source_episode_id": 93486381},
+        {"start_step": 216, "source_episode_id": 93783010}
+      ]
+    },
+    {
+      "program_id": 193519448,
+      "name": "specialist-93519448",
+      "segments": [
+        {"start_step": 0, "source_episode_id": 93816256},
+        {"start_step": 97, "source_episode_id": 93547215},
+        {"start_step": 312, "source_episode_id": 93634131}
+      ],
+      "mutations": [
+        {
+          "kind": "remove_market_order",
+          "step": 672,
+          "order_index": 5,
+          "expected": ["SELL", "WHEAT", 3]
+        }
+      ]
+    },
+    {
+      "program_id": 293529305,
+      "name": "goal24-specialist-93529305",
+      "segments": [
+        {"start_step": 0, "source_episode_id": 93816256},
+        {"start_step": 97, "source_episode_id": 93501610}
+      ]
+    },
+    {
+      "program_id": 293536446,
+      "name": "goal24-specialist-93536446",
+      "segments": [
+        {"start_step": 0, "source_episode_id": 93816256},
+        {"start_step": 97, "source_episode_id": 93521238}
+      ]
+    },
+    {
+      "program_id": 293538238,
+      "name": "goal24-specialist-93538238",
+      "segments": [
+        {"start_step": 0, "source_episode_id": 93816256},
+        {"start_step": 97, "source_episode_id": 93513211}
+      ],
+      "mutations": [
+        {
+          "kind": "replace_market_quantity",
+          "step": 0,
+          "order_index": 8,
+          "expected": ["BUY_SEED", "MELON", 12],
+          "quantity": 10
+        }
+      ]
+    },
+    {
+      "program_id": 293542710,
+      "name": "goal24-specialist-93542710",
+      "segments": [
+        {"start_step": 0, "source_episode_id": 93816256},
+        {"start_step": 97, "source_episode_id": 93558043}
+      ]
+    },
+    {
+      "program_id": 393538238,
+      "name": "goal24-specialist-93538238-observable",
+      "segments": [
+        {"start_step": 0, "source_episode_id": 93816256},
+        {"start_step": 97, "source_episode_id": 93513211}
+      ],
+      "mutations": [
+        {
+          "kind": "remove_market_order",
+          "step": 197,
+          "order_index": 1,
+          "expected": ["BUY_SEED", "STRAWBERRY", 2]
+        },
+        {
+          "kind": "remove_market_order",
+          "step": 576,
+          "order_index": 0,
+          "expected": ["SELL", "FERTILIZER", 17]
+        }
+      ]
+    }
+  ]
+}

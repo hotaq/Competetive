@@ -1,0 +1,1873 @@
+{
+  "forumTopic": {
+    "authorId": 29434769,
+    "authorThumbnailName": "29434769-kg.png?t=2026-03-14-05-23-02",
+    "authorUserDisplayName": "Donald Galliano III",
+    "authorUserName": "donaldgalliano",
+    "comments": [
+      {
+        "id": 3445385,
+        "postDate": "2026-04-19T17:05:49.900Z",
+        "rawMarkdown": "```\n\n02c15453\t\"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:\n(\"-]] = '(\n\"%-!@ = \"\n(\"-%' = ])\n\\@-'% = >\"\nNow, determine the result for: >'-]'\n\n```\n-------------------------\nIs there a reliable way to reason about or solve these kinds of puzzles? Do they always have a well-defined solution, and are they actually solvable by humans?\n\nI tried treating everything purely as symbols but couldn’t find any consistent rule. Ask AI hasn’t been helpful.\n\n```\n=== SYMBOL MAPPING ===\n{'!': 'A', '\"': 'B', '%': 'C', \"'\": 'D', '(': 'E', ')': 'F', '>': 'G', '@': 'H', '\\\\': 'I', ']': 'J'}\n\n=== OPERATOR MAPPING ===\n{'-': ' <op1> '}\n\n=== TRANSFORM TABLE ===\n       type        input output\n0  example1  EB <op1> JJ     DE\n1  example2  BC <op1> AH      B\n2  example3  EB <op1> CD     JF\n3  example4  IH <op1> DC     GB\n4  question  GD <op1> JD      E\n\n```\n\nAre these problems actually solvable in a clean way, or am I missing something? Would appreciate any ideas or insights.",
+        "content": "<pre><code>02c15453    \"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:\n(\"-]] = '(\n\"%-!@ = \"\n(\"-%' = ])\n\\@-'% = &gt;\"\nNow, determine the result for: &gt;'-]'\n</code></pre>\n<hr>\n<p>Is there a reliable way to reason about or solve these kinds of puzzles? Do they always have a well-defined solution, and are they actually solvable by humans?</p>\n<p>I tried treating everything purely as symbols but couldn’t find any consistent rule. Ask AI hasn’t been helpful.</p>\n<pre><code>=== SYMBOL MAPPING ===\n{'!': 'A', '\"': 'B', '%': 'C', \"'\": 'D', '(': 'E', ')': 'F', '&gt;': 'G', '@': 'H', '\\\\': 'I', ']': 'J'}\n\n=== OPERATOR MAPPING ===\n{'-': ' &lt;op1&gt; '}\n\n=== TRANSFORM TABLE ===\n       type        input output\n0  example1  EB &lt;op1&gt; JJ     DE\n1  example2  BC &lt;op1&gt; AH      B\n2  example3  EB &lt;op1&gt; CD     JF\n3  example4  IH &lt;op1&gt; DC     GB\n4  question  GD &lt;op1&gt; JD      E\n</code></pre>\n<p>Are these problems actually solvable in a clean way, or am I missing something? Would appreciate any ideas or insights.</p>",
+        "replies": [
+          {
+            "id": 3445438,
+            "postDate": "2026-04-19T18:59:34.537Z",
+            "rawMarkdown": "These are puzzles w/ a cipher applied to digits - however the author is incorrect that they are 100% solvable \n\nHe may mean that he has reverse engineered problems from their answers but some puzzles are inherently under-constrained and ambiguous - see other discussions above for some examples",
+            "content": "<p>These are puzzles w/ a cipher applied to digits - however the author is incorrect that they are 100% solvable </p>\n<p>He may mean that he has reverse engineered problems from their answers but some puzzles are inherently under-constrained and ambiguous - see other discussions above for some examples</p>",
+            "replies": [
+              {
+                "id": 3445541,
+                "postDate": "2026-04-20T03:08:13.910Z",
+                "rawMarkdown": "",
+                "parent": {},
+                "author": {
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+                  "url": "/"
+                },
+                "authorType": "COMMENT",
+                "votes": {},
+                "canDelete": true,
+                "isUserAuthor": true,
+                "isDeleted": true,
+                "kernelVersion": 0,
+                "feedbackTrackingData": {},
+                "isThankYou": false
+              }
+            ],
+            "parent": {},
+            "author": {
+              "displayName": "MAJ0RT0M",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+              "url": "/maj0rt0m",
+              "tier": "CONTRIBUTOR",
+              "id": 2071133,
+              "progressionOptOut": false
+            },
+            "authorType": "COMMENT",
+            "votes": {
+              "totalVotes": 1,
+              "canUpvote": true,
+              "totalUpvotes": 1
+            },
+            "kernelVersion": 0,
+            "competitionRanking": 829,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "teamUpInfo": {
+              "teamLeader": {
+                "displayName": "MAJ0RT0M",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+                "url": "/maj0rt0m",
+                "userName": "maj0rt0m",
+                "tier": "CONTRIBUTOR",
+                "id": 2071133,
+                "profileUrl": "/maj0rt0m",
+                "performanceTier": "CONTRIBUTOR",
+                "userId": 2071133,
+                "progressionOptOut": false
+              },
+              "intro": ""
+            }
+          },
+          {
+            "id": 3445526,
+            "postDate": "2026-04-20T02:06:14.683Z",
+            "rawMarkdown": "i don't think those puzzles solvable by humans; my copilot have to iterate through every digit permutation and operation.\n![](https://www.googleapis.com/download/storage/v1/b/kaggle-forum-message-attachments/o/inbox%2F21691005%2F1a966a29a5cec4743ba51bc8ea84d672%2FScreenshot%202026-04-20%20090231.png?generation=1776650759104225&alt=media)",
+            "content": "<p>i don't think those puzzles solvable by humans; my copilot have to iterate through every digit permutation and operation.\n<img src=\"https://www.googleapis.com/download/storage/v1/b/kaggle-forum-message-attachments/o/inbox%2F21691005%2F1a966a29a5cec4743ba51bc8ea84d672%2FScreenshot%202026-04-20%20090231.png?generation=1776650759104225&amp;alt=media\" alt=\"\"></p>",
+            "replies": [
+              {
+                "id": 3445781,
+                "postDate": "2026-04-20T14:02:17.563Z",
+                "rawMarkdown": "Thank you, I’ll explore some new approaches to working with numbers.",
+                "content": "<p>Thank you, I’ll explore some new approaches to working with numbers.</p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Van-Phuc Huynh",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/2106526-kg.jpg?t=2025-01-11-10-15-51",
+                  "url": "/hvanphucs112",
+                  "tier": "EXPERT",
+                  "id": 2106526,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "totalVotes": 1,
+                  "canUpvote": true,
+                  "totalUpvotes": 1
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 99,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "teamUpInfo": {
+                  "enabled": true,
+                  "teamLeader": {
+                    "displayName": "Van-Phuc Huynh",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/2106526-kg.jpg?t=2025-01-11-10-15-51",
+                    "url": "/hvanphucs112",
+                    "userName": "hvanphucs112",
+                    "tier": "EXPERT",
+                    "id": 2106526,
+                    "profileUrl": "/hvanphucs112",
+                    "performanceTier": "EXPERT",
+                    "userId": 2106526,
+                    "progressionOptOut": false
+                  },
+                  "intro": "Let’s team up and push for rank #1 together. Target score: 0.91"
+                }
+              },
+              {
+                "id": 3447088,
+                "postDate": "2026-04-22T17:26:25.187Z",
+                "rawMarkdown": "",
+                "parent": {},
+                "author": {
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+                  "url": "/"
+                },
+                "authorType": "COMMENT",
+                "votes": {},
+                "canDelete": true,
+                "isUserAuthor": true,
+                "isDeleted": true,
+                "kernelVersion": 0,
+                "feedbackTrackingData": {},
+                "isThankYou": false
+              }
+            ],
+            "parent": {},
+            "author": {
+              "displayName": "Kh0a",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/21691005-kg.png?t=2025-08-27-03-21-25",
+              "url": "/llkh0a",
+              "tier": "MASTER",
+              "id": 21691005,
+              "progressionOptOut": false
+            },
+            "authorType": "COMMENT",
+            "votes": {
+              "totalVotes": 5,
+              "canUpvote": true,
+              "totalUpvotes": 5
+            },
+            "kernelVersion": 0,
+            "competitionRanking": 659,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "teamUpInfo": {
+              "teamLeader": {
+                "displayName": "Kh0a",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/21691005-kg.png?t=2025-08-27-03-21-25",
+                "url": "/llkh0a",
+                "userName": "llkh0a",
+                "tier": "MASTER",
+                "id": 21691005,
+                "profileUrl": "/llkh0a",
+                "performanceTier": "MASTER",
+                "userId": 21691005,
+                "progressionOptOut": false
+              },
+              "intro": ""
+            }
+          }
+        ],
+        "parent": {},
+        "author": {
+          "displayName": "Van-Phuc Huynh",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/2106526-kg.jpg?t=2025-01-11-10-15-51",
+          "url": "/hvanphucs112",
+          "tier": "EXPERT",
+          "id": 2106526,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "totalVotes": 2,
+          "canUpvote": true,
+          "totalUpvotes": 2
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 99,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "enabled": true,
+          "teamLeader": {
+            "displayName": "Van-Phuc Huynh",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/2106526-kg.jpg?t=2025-01-11-10-15-51",
+            "url": "/hvanphucs112",
+            "userName": "hvanphucs112",
+            "tier": "EXPERT",
+            "id": 2106526,
+            "profileUrl": "/hvanphucs112",
+            "performanceTier": "EXPERT",
+            "userId": 2106526,
+            "progressionOptOut": false
+          },
+          "intro": "Let’s team up and push for rank #1 together. Target score: 0.91"
+        }
+      },
+      {
+        "id": 3444157,
+        "postDate": "2026-04-17T11:29:01.647Z",
+        "rawMarkdown": "Release out some code snippets too!!! Quite Intresting work :0",
+        "content": "<p>Release out some code snippets too!!! Quite Intresting work :0</p>",
+        "parent": {},
+        "author": {
+          "displayName": "Atah Alam",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+          "url": "/atahalam",
+          "tier": "CONTRIBUTOR",
+          "id": 24862356,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "totalVotes": 1,
+          "canUpvote": true,
+          "totalUpvotes": 1
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 193,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Atah Alam",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+            "url": "/atahalam",
+            "userName": "atahalam",
+            "tier": "CONTRIBUTOR",
+            "id": 24862356,
+            "profileUrl": "/atahalam",
+            "performanceTier": "CONTRIBUTOR",
+            "userId": 24862356,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3436524,
+        "postDate": "2026-04-06T05:31:05.717Z",
+        "rawMarkdown": "Go train your model man, you can do it!",
+        "content": "<p>Go train your model man, you can do it!</p>",
+        "parent": {},
+        "author": {
+          "displayName": "Kh0a",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/21691005-kg.png?t=2025-08-27-03-21-25",
+          "url": "/llkh0a",
+          "tier": "MASTER",
+          "id": 21691005,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "totalVotes": 8,
+          "canUpvote": true,
+          "totalUpvotes": 8
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 659,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Kh0a",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/21691005-kg.png?t=2025-08-27-03-21-25",
+            "url": "/llkh0a",
+            "userName": "llkh0a",
+            "tier": "MASTER",
+            "id": 21691005,
+            "profileUrl": "/llkh0a",
+            "performanceTier": "MASTER",
+            "userId": 21691005,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3437026,
+        "postDate": "2026-04-07T02:32:17.267Z",
+        "rawMarkdown": "I think the claim “100% solvable” is not rigorous. At best, you can only solve a subset of the problems.\n\nHow would you solve problems like these?\n\n```\nid,prompt,answer\nc2945f2c,\"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:\n81+79 = 511\n19-41 = 7\n58-87 = 7\nNow, determine the result for: 07*79\",1976\n4e840a1a,\"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:\n58*93 = 152\n26*21 = 48\n56*65 = 122\nNow, determine the result for: 15+53\",38\neeae398e,\"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:\n63]67 = 4\n18]81 = 9\n72-22 = 95\n64]48 = 16\n65]15 = 5\nNow, determine the result for: 65/58\",3770\n```",
+        "content": "<p>I think the claim “100% solvable” is not rigorous. At best, you can only solve a subset of the problems.</p>\n<p>How would you solve problems like these?</p>\n<pre><code>id,prompt,answer\nc2945f2c,\"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:\n81+79 = 511\n19-41 = 7\n58-87 = 7\nNow, determine the result for: 07*79\",1976\n4e840a1a,\"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:\n58*93 = 152\n26*21 = 48\n56*65 = 122\nNow, determine the result for: 15+53\",38\neeae398e,\"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:\n63]67 = 4\n18]81 = 9\n72-22 = 95\n64]48 = 16\n65]15 = 5\nNow, determine the result for: 65/58\",3770\n</code></pre>",
+        "replies": [
+          {
+            "id": 3437040,
+            "postDate": "2026-04-07T03:23:49.463Z",
+            "rawMarkdown": "Ran it through my checker. Solves them fine 🤷🏻‍♂️\n\nIDTargetRuleAnswerc\n\n\n2945f2c07*79(BA × DC) + 1 reversed → (70×97)+1 = 6791 → reversed = 1976              1976 ✓\n\n\n4e840a1a15+53|AB - CD| = |15-53| =      3838 ✓\n\n\neeae398e65/58AB × CD = 65×58 = 3770 (operator is a red herring)                3770 ✓",
+            "content": "<p>Ran it through my checker. Solves them fine 🤷🏻‍♂️</p>\n<p>IDTargetRuleAnswerc</p>\n<p>2945f2c07*79(BA × DC) + 1 reversed → (70×97)+1 = 6791 → reversed = 1976              1976 ✓</p>\n<p>4e840a1a15+53|AB - CD| = |15-53| =      3838 ✓</p>\n<p>eeae398e65/58AB × CD = 65×58 = 3770 (operator is a red herring)                3770 ✓</p>",
+            "parent": {},
+            "author": {
+              "displayName": "Donald Galliano III",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/29434769-kg.png?t=2026-03-14-05-23-02",
+              "url": "/donaldgalliano",
+              "tier": "CONTRIBUTOR",
+              "id": 29434769,
+              "progressionOptOut": false
+            },
+            "authorType": "TOPIC",
+            "votes": {
+              "totalVotes": 1,
+              "canUpvote": true,
+              "totalUpvotes": 2
+            },
+            "kernelVersion": 0,
+            "competitionRanking": 1820,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "teamUpInfo": {
+              "teamLeader": {
+                "displayName": "Donald Galliano III",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/29434769-kg.png?t=2026-03-14-05-23-02",
+                "url": "/donaldgalliano",
+                "userName": "donaldgalliano",
+                "tier": "CONTRIBUTOR",
+                "id": 29434769,
+                "profileUrl": "/donaldgalliano",
+                "performanceTier": "CONTRIBUTOR",
+                "userId": 29434769,
+                "progressionOptOut": false
+              },
+              "intro": ""
+            }
+          },
+          {
+            "id": 3437043,
+            "postDate": "2026-04-07T03:29:00.330Z",
+            "rawMarkdown": "In the very start of the comp, i used a Z3 Solver on both digit and cipher digit. their all 100% solveable for sure. But realized anything requiring that amount of compute, and not being able to break the think chains down into a template, is a waste anyway. Thats why i went the way i did with it. but their def solveable!",
+            "content": "<p>In the very start of the comp, i used a Z3 Solver on both digit and cipher digit. their all 100% solveable for sure. But realized anything requiring that amount of compute, and not being able to break the think chains down into a template, is a waste anyway. Thats why i went the way i did with it. but their def solveable!</p>",
+            "replies": [
+              {
+                "id": 3437048,
+                "postDate": "2026-04-07T03:41:10.393Z",
+                "rawMarkdown": "Thank you for your reply.\n\nIndeed, if the answer is already known, one can deduce the computational method. However, I believe it is impossible to infer and obtain the correct answer solely from examples, because the relevant symbols do not appear in those examples. For instance:\n58 * 93 = 152\n26 * 21 = 48\n56 * 65 = 122\nThese examples only reveal the meaning of the \"*\" operator, but not the \"+\" operator. Therefore, you cannot determine the result of 15 + 53.",
+                "content": "<p>Thank you for your reply.</p>\n<p>Indeed, if the answer is already known, one can deduce the computational method. However, I believe it is impossible to infer and obtain the correct answer solely from examples, because the relevant symbols do not appear in those examples. For instance:\n58 * 93 = 152\n26 * 21 = 48\n56 * 65 = 122\nThese examples only reveal the meaning of the \"*\" operator, but not the \"+\" operator. Therefore, you cannot determine the result of 15 + 53.</p>",
+                "parent": {},
+                "author": {
+                  "displayName": "George",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/24335872-kg.png?t=2024-12-26-02-47-25",
+                  "url": "/george8874",
+                  "tier": "CONTRIBUTOR",
+                  "id": 24335872,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "totalVotes": 2,
+                  "canUpvote": true,
+                  "totalUpvotes": 2
+                },
+                "kernelVersion": 0,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "George",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/24335872-kg.png?t=2024-12-26-02-47-25",
+                    "url": "/george8874",
+                    "userName": "george8874",
+                    "tier": "CONTRIBUTOR",
+                    "id": 24335872,
+                    "profileUrl": "/george8874",
+                    "performanceTier": "CONTRIBUTOR",
+                    "userId": 24335872,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              },
+              {
+                "id": 3437056,
+                "postDate": "2026-04-07T03:57:45.617Z",
+                "rawMarkdown": "Ah i see where we diverge i think. Let me show you why thats not as big a deal!\n\n33093ed0\t\"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:\n75  +   79 = 7975\n99   *    47 = 4799\n95   *    65 = 6595\n15    -   82 = 32\nNow, determine the result for: 07   -   79\"\t-72\n\n\nSo we can see here that + and * while different operators, perform the same job. So when it looks like an operator doesnt have a sample. you need to prove which type from the sample it actually is. Additionally, there is a less than 1% amount of problems that are CHAIN operators. Meaning they use two of the operators from the given samples. Those i did not include in my SFT because while solvable, eat past the 7680 limit for the comp. but they do exist",
+                "content": "<p>Ah i see where we diverge i think. Let me show you why thats not as big a deal!</p>\n<p>33093ed0    \"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:\n75  +   79 = 7975\n99   *    47 = 4799\n95   *    65 = 6595\n15    -   82 = 32\nNow, determine the result for: 07   -   79\"    -72</p>\n<p>So we can see here that + and * while different operators, perform the same job. So when it looks like an operator doesnt have a sample. you need to prove which type from the sample it actually is. Additionally, there is a less than 1% amount of problems that are CHAIN operators. Meaning they use two of the operators from the given samples. Those i did not include in my SFT because while solvable, eat past the 7680 limit for the comp. but they do exist</p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Donald Galliano III",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/29434769-kg.png?t=2026-03-14-05-23-02",
+                  "url": "/donaldgalliano",
+                  "tier": "CONTRIBUTOR",
+                  "id": 29434769,
+                  "progressionOptOut": false
+                },
+                "authorType": "TOPIC",
+                "votes": {
+                  "totalVotes": -1,
+                  "canUpvote": true
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 1820,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Donald Galliano III",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/29434769-kg.png?t=2026-03-14-05-23-02",
+                    "url": "/donaldgalliano",
+                    "userName": "donaldgalliano",
+                    "tier": "CONTRIBUTOR",
+                    "id": 29434769,
+                    "profileUrl": "/donaldgalliano",
+                    "performanceTier": "CONTRIBUTOR",
+                    "userId": 29434769,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              },
+              {
+                "id": 3437058,
+                "postDate": "2026-04-07T04:03:44.140Z",
+                "rawMarkdown": "+ acts as CDAB concat: 75   +   79 = 7975\n* acts as CDAB concat: 99   *   47 = 4799, 95    *    65 = 6595  (same rule as +, different symbol)\n- in the example 15    -    82 = 32  is some variant like |BA-DC| reversed (|51-28| = 23, rev = 32)\n- in the target 07    -    79 = -72 is literal subtraction (7 - 79 = -72)\n\nSo + and * are the same operation under different symbols, and - is a completely different operation that ALSO changes meaning between the example line and the target line in the same problem. The operator character is decorative, sometimes adversarial. The actual rule has to be inferred from the example outputs, not from the symbol.\n\nYour original claim was that you can't solve 15+53 = 38 because + doesn't appear in the examples. But in a rule family where + and * can be the same operation, the absence of + in the examples doesn't prevent inference, it's just another symbol that needs to be resolved by context. This is the whole point of the factory design.\n\n\nhad this summarrized for ya from the coding ai i use when i was creating the factories. Its the whole reason i said these puzzles are bascially sudoku, you have to PROVE it first, and then accept truth for them inside the Chain of thought for the model.",
+                "content": "<ul>\n<li>acts as CDAB concat: 75   +   79 = 7975</li>\n<li>acts as CDAB concat: 99   *   47 = 4799, 95    *    65 = 6595  (same rule as +, different symbol)</li>\n<li>in the example 15    -    82 = 32  is some variant like |BA-DC| reversed (|51-28| = 23, rev = 32)</li>\n<li>in the target 07    -    79 = -72 is literal subtraction (7 - 79 = -72)</li>\n</ul>\n<p>So + and * are the same operation under different symbols, and - is a completely different operation that ALSO changes meaning between the example line and the target line in the same problem. The operator character is decorative, sometimes adversarial. The actual rule has to be inferred from the example outputs, not from the symbol.</p>\n<p>Your original claim was that you can't solve 15+53 = 38 because + doesn't appear in the examples. But in a rule family where + and * can be the same operation, the absence of + in the examples doesn't prevent inference, it's just another symbol that needs to be resolved by context. This is the whole point of the factory design.</p>\n<p>had this summarrized for ya from the coding ai i use when i was creating the factories. Its the whole reason i said these puzzles are bascially sudoku, you have to PROVE it first, and then accept truth for them inside the Chain of thought for the model.</p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Donald Galliano III",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/29434769-kg.png?t=2026-03-14-05-23-02",
+                  "url": "/donaldgalliano",
+                  "tier": "CONTRIBUTOR",
+                  "id": 29434769,
+                  "progressionOptOut": false
+                },
+                "authorType": "TOPIC",
+                "votes": {
+                  "canUpvote": true
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 1820,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Donald Galliano III",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/29434769-kg.png?t=2026-03-14-05-23-02",
+                    "url": "/donaldgalliano",
+                    "userName": "donaldgalliano",
+                    "tier": "CONTRIBUTOR",
+                    "id": 29434769,
+                    "profileUrl": "/donaldgalliano",
+                    "performanceTier": "CONTRIBUTOR",
+                    "userId": 29434769,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              }
+            ],
+            "parent": {},
+            "author": {
+              "displayName": "Donald Galliano III",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/29434769-kg.png?t=2026-03-14-05-23-02",
+              "url": "/donaldgalliano",
+              "tier": "CONTRIBUTOR",
+              "id": 29434769,
+              "progressionOptOut": false
+            },
+            "authorType": "TOPIC",
+            "votes": {
+              "canUpvote": true
+            },
+            "kernelVersion": 0,
+            "competitionRanking": 1820,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "reactions": [
+              {
+                "emoji": "THANK_YOU",
+                "featuredUserNames": [
+                  "rin2401",
+                  "george8874"
+                ],
+                "userCount": 2
+              }
+            ],
+            "teamUpInfo": {
+              "teamLeader": {
+                "displayName": "Donald Galliano III",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/29434769-kg.png?t=2026-03-14-05-23-02",
+                "url": "/donaldgalliano",
+                "userName": "donaldgalliano",
+                "tier": "CONTRIBUTOR",
+                "id": 29434769,
+                "profileUrl": "/donaldgalliano",
+                "performanceTier": "CONTRIBUTOR",
+                "userId": 29434769,
+                "progressionOptOut": false
+              },
+              "intro": ""
+            }
+          }
+        ],
+        "parent": {},
+        "author": {
+          "displayName": "George",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/24335872-kg.png?t=2024-12-26-02-47-25",
+          "url": "/george8874",
+          "tier": "CONTRIBUTOR",
+          "id": 24335872,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "totalVotes": 5,
+          "canUpvote": true,
+          "totalUpvotes": 5
+        },
+        "kernelVersion": 0,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "George",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/24335872-kg.png?t=2024-12-26-02-47-25",
+            "url": "/george8874",
+            "userName": "george8874",
+            "tier": "CONTRIBUTOR",
+            "id": 24335872,
+            "profileUrl": "/george8874",
+            "performanceTier": "CONTRIBUTOR",
+            "userId": 24335872,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3439192,
+        "postDate": "2026-04-10T10:20:50.603Z",
+        "rawMarkdown": "00d8b3db,\"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:\n34/44 = 1\n41/32 = 9\n34|25 = 69\n87\\64 = 8853\nNow, determine the result for: 69/52\",17/\n\nWhat's this?",
+        "content": "<p>00d8b3db,\"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:\n34/44 = 1\n41/32 = 9\n34|25 = 69\n87\\64 = 8853\nNow, determine the result for: 69/52\",17/</p>\n<p>What's this?</p>",
+        "parent": {},
+        "author": {
+          "displayName": "L1a0JH",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/29809127-kg.jpg?t=2026-04-02-18-22-55",
+          "url": "/coolkid14122",
+          "tier": "CONTRIBUTOR",
+          "id": 29809127,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "totalVotes": 1,
+          "canUpvote": true,
+          "totalUpvotes": 1
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 688,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "L1a0JH",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/29809127-kg.jpg?t=2026-04-02-18-22-55",
+            "url": "/coolkid14122",
+            "userName": "coolkid14122",
+            "tier": "CONTRIBUTOR",
+            "id": 29809127,
+            "profileUrl": "/coolkid14122",
+            "performanceTier": "CONTRIBUTOR",
+            "userId": 29809127,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3437118,
+        "postDate": "2026-04-07T07:37:47.550Z",
+        "rawMarkdown": "```\nLEVEL 0: CONSTANTS\n- 0 (All bits are 0)\n- 1 (All bits are 1)\n\nLEVEL 1: 1-INPUT GATES\n- IDENTITY: OUT[i] = IN[j]\n- NOT:      OUT[i] = NOT IN[j]\n\nLEVEL 2: 2-INPUT GATES\n- AND:      IN[j] AND IN[k]\n- OR:       IN[j] OR  IN[k]\n- XOR:      IN[j] XOR IN[k]\n- NAND:     NOT (IN[j] AND IN[k])\n- NOR:      NOT (IN[j] OR  IN[k])\n- XNOR:     NOT (IN[j] XOR IN[k])\n- NEGATION VARIANTS (Asymmetric):\n    * (NOT IN[j]) AND IN[k]\n    * IN[j] AND (NOT IN[k])\n    * (NOT IN[j]) OR  IN[k]\n    * IN[j] OR  (NOT IN[k])\n\nLEVEL 3: 3-INPUT GATES\n- MAJ (Majority):  1 if at least two inputs are 1.\n- CHO (Choice):    IF IN[j]==1 THEN IN[k] ELSE IN[l].\n- PAR3 (Parity):   IN[j] XOR IN[k] XOR IN[l].\n- AO (AND-OR):     (IN[j] AND IN[k]) OR  IN[l]\n- OA (OR-AND):     (IN[j] OR  IN[k]) AND IN[l]\n- AX (AND-XOR):    (IN[j] AND IN[k]) XOR IN[l]\n- OX (OR-XOR):     (IN[j] OR  IN[k]) XOR IN[l]\n- XA (XOR-AND):    (IN[j] XOR IN[k]) AND IN[l]\n- XO (XOR-OR):     (IN[j] XOR IN[k]) OR  IN[l]\n\nLEVEL 4: 4-INPUT GATES\n- AOA:             (IN[j] AND IN[k]) OR  (IN[l] AND IN[m])\n- OAO:             (IN[j] OR  IN[k]) AND (IN[l] OR  IN[m])\n- PAR4 (Parity):   IN[j] XOR IN[k] XOR IN[l] XOR IN[m]\n- XX (XOR-XOR):    (IN[j] XOR IN[k]) XOR (IN[l] XOR IN[m])\n- AXA:             (IN[j] AND IN[k]) XOR (IN[l] AND IN[m])\n```\n\nApplying Brute Force with these solved only ```Final Accuracy: 53.87% (863/1602) ```",
+        "content": "<pre><code>LEVEL 0: CONSTANTS\n- 0 (All bits are 0)\n- 1 (All bits are 1)\n\nLEVEL 1: 1-INPUT GATES\n- IDENTITY: OUT[i] = IN[j]\n- NOT:      OUT[i] = NOT IN[j]\n\nLEVEL 2: 2-INPUT GATES\n- AND:      IN[j] AND IN[k]\n- OR:       IN[j] OR  IN[k]\n- XOR:      IN[j] XOR IN[k]\n- NAND:     NOT (IN[j] AND IN[k])\n- NOR:      NOT (IN[j] OR  IN[k])\n- XNOR:     NOT (IN[j] XOR IN[k])\n- NEGATION VARIANTS (Asymmetric):\n    * (NOT IN[j]) AND IN[k]\n    * IN[j] AND (NOT IN[k])\n    * (NOT IN[j]) OR  IN[k]\n    * IN[j] OR  (NOT IN[k])\n\nLEVEL 3: 3-INPUT GATES\n- MAJ (Majority):  1 if at least two inputs are 1.\n- CHO (Choice):    IF IN[j]==1 THEN IN[k] ELSE IN[l].\n- PAR3 (Parity):   IN[j] XOR IN[k] XOR IN[l].\n- AO (AND-OR):     (IN[j] AND IN[k]) OR  IN[l]\n- OA (OR-AND):     (IN[j] OR  IN[k]) AND IN[l]\n- AX (AND-XOR):    (IN[j] AND IN[k]) XOR IN[l]\n- OX (OR-XOR):     (IN[j] OR  IN[k]) XOR IN[l]\n- XA (XOR-AND):    (IN[j] XOR IN[k]) AND IN[l]\n- XO (XOR-OR):     (IN[j] XOR IN[k]) OR  IN[l]\n\nLEVEL 4: 4-INPUT GATES\n- AOA:             (IN[j] AND IN[k]) OR  (IN[l] AND IN[m])\n- OAO:             (IN[j] OR  IN[k]) AND (IN[l] OR  IN[m])\n- PAR4 (Parity):   IN[j] XOR IN[k] XOR IN[l] XOR IN[m]\n- XX (XOR-XOR):    (IN[j] XOR IN[k]) XOR (IN[l] XOR IN[m])\n- AXA:             (IN[j] AND IN[k]) XOR (IN[l] AND IN[m])\n</code></pre>\n<p>Applying Brute Force with these solved only <code>Final Accuracy: 53.87% (863/1602)</code></p>",
+        "replies": [
+          {
+            "id": 3437143,
+            "postDate": "2026-04-07T08:32:43.247Z",
+            "rawMarkdown": "This is a py file i ran on the first or second day of the comp! it has the breakdowns of what each type of bit puzzle is in the training data set. \n\n\nAnalyzing 1602 bit manipulation problems\n\nBoolean function library: 52 total\n  0-input: 2\n  1-input: 2\n  2-input: 10\n  3-input: 18\n  4-input: 20\n\nCracking 1602 problems...\n\n  [100/1602] Verified: 99 | Unverified bits: 0 | ~6s remaining\n  [200/1602] Verified: 198 | Unverified bits: 1 | ~6s remaining\n  [300/1602] Verified: 298 | Unverified bits: 1 | ~8s remaining\n  [400/1602] Verified: 398 | Unverified bits: 1 | ~7s remaining\n  [500/1602] Verified: 498 | Unverified bits: 1 | ~7s remaining\n  [600/1602] Verified: 598 | Unverified bits: 1 | ~6s remaining\n  [700/1602] Verified: 698 | Unverified bits: 1 | ~5s remaining\n  [800/1602] Verified: 798 | Unverified bits: 1 | ~4s remaining\n  [900/1602] Verified: 898 | Unverified bits: 1 | ~4s remaining\n  [1000/1602] Verified: 998 | Unverified bits: 1 | ~3s remaining\n  [1100/1602] Verified: 1098 | Unverified bits: 1 | ~3s remaining\n  [1200/1602] Verified: 1198 | Unverified bits: 1 | ~2s remaining\n  [1300/1602] Verified: 1298 | Unverified bits: 1 | ~2s remaining\n  [1400/1602] Verified: 1398 | Unverified bits: 1 | ~1s remaining\n  [1500/1602] Verified: 1498 | Unverified bits: 1 | ~0s remaining\n  [1600/1602] Verified: 1598 | Unverified bits: 1 | ~0s remaining\n\nDone in 7.9s\n\n======================================================================\nFINAL RESULTS\n======================================================================\nTotal problems: 1602\nFully verified: 1601 (99.94%)\nCorrect predictions: 1601 (99.94%)\nUnverified bits total: 1\n\n======================================================================\nFUNCTION TYPE DISTRIBUTION\n======================================================================\n  identity                    5118 ( 39.9%) ███████████████████████████████████████\n  CONST                       1810 ( 14.1%) ██████████████\n  AND                         1593 ( 12.4%) ████████████\n  OR                          1324 ( 10.3%) ██████████\n  XOR                         1007 (  7.9%) ███████\n  XNOR                         875 (  6.8%) ██████\n  NOT                          676 (  5.3%) █████\n  NOR                          148 (  1.2%) █\n  NAND                         130 (  1.0%) █\n  CHOICE                        82 (  0.6%)\n  MAJORITY3                     41 (  0.3%)\n  PARITY3                        7 (  0.1%)\n  TRUTH_TABLE                    4 (  0.0%)\n  UNKNOWN                        1 (  0.0%)\n\n======================================================================\nREMAINING UNKNOWNS: 1\n======================================================================\n\n  12154247:\n  Predicted: 10?11101 | Correct: 10111101\n    ✅ out[0] = XNOR(in[2], in[5])\n    ✅ out[1] = AND_XOR(in[3], in[6], in[2])\n    ❓ out[2] = UNKNOWN\n    ✅ out[3] = NOT_CHOICE(in[0], in[5], in[6])\n    ✅ out[4] = NOT(in[5])\n    ✅ out[5] = NOT_PARITY3(in[2], in[4], in[7])\n    ✅ out[6] = OR_NOT_B(in[1], in[3])\n    ✅ out[7] = OR_NOT_B(in[3], in[4])\n\n\nProblem: 12154247\nCorrect answer: 10111101\nTarget bit 2 should be: 1\n\nExamples: 10\nTarget input: 00010000\nNeed out[2] = 1\n\nExample data for bit 2:\n  11101101 -> bit2=0\n  00100001 -> bit2=0\n  01101100 -> bit2=1\n  10111010 -> bit2=0\n  00010001 -> bit2=0\n  10101000 -> bit2=0\n  10100111 -> bit2=0\n  01010111 -> bit2=1\n  00000111 -> bit2=0\n  11110110 -> bit2=1\n\nTarget: 00010000 -> bit2=1\n\n============================================================\nMETHOD 1: Full 8-bit truth table\n============================================================\nTarget pattern NOT in examples. 10 of 256 patterns covered.\nNeed to infer from 10 known patterns.\n\n============================================================\nMETHOD 2: 5-input boolean functions\n============================================================\nTesting 22 5-input functions...\n  ✅ FOUND: NOT_NESTED_CHOICE_AND_OR(in[1], in[0], in[4], in[2], in[7])\n\n============================================================\nMETHOD 3: Brute force truth table search (up to 5 bits)\n============================================================\n\n  Trying 2-bit truth tables...\n\n  Trying 3-bit truth tables...\n\n  Trying 4-bit truth tables...\n\n  Trying 5-bit truth tables...\n\n============================================================\nMETHOD 4: 8-bit truth table (check if target is deterministic)\n============================================================\n\nAll examples for bit 2:\n    11101101 -> 0\n    00100001 -> 0\n    01101100 -> 1\n    10111010 -> 0\n    00010001 -> 0\n    10101000 -> 0\n    10100111 -> 0\n    01010111 -> 1\n    00000111 -> 0\n    11110110 -> 1\n  Target: 00010000 -> 1\n\n  The answer for out[2] is 1.\n  This bit likely requires a 6+ input function or is\n  under-constrained by the examples.\n  SOLUTION: Hardcode this one problem's bit[2] = 1\n\n============================================================\nFINAL VERDICT\n============================================================\nProblem 12154247 out[2] = 1\nFull answer: 10111101\n\n",
+            "content": "<p>This is a py file i ran on the first or second day of the comp! it has the breakdowns of what each type of bit puzzle is in the training data set. </p>\n<p>Analyzing 1602 bit manipulation problems</p>\n<p>Boolean function library: 52 total\n  0-input: 2\n  1-input: 2\n  2-input: 10\n  3-input: 18\n  4-input: 20</p>\n<p>Cracking 1602 problems…</p>\n<p>[100/1602] Verified: 99 | Unverified bits: 0 | ~6s remaining\n  [200/1602] Verified: 198 | Unverified bits: 1 | ~6s remaining\n  [300/1602] Verified: 298 | Unverified bits: 1 | ~8s remaining\n  [400/1602] Verified: 398 | Unverified bits: 1 | ~7s remaining\n  [500/1602] Verified: 498 | Unverified bits: 1 | ~7s remaining\n  [600/1602] Verified: 598 | Unverified bits: 1 | ~6s remaining\n  [700/1602] Verified: 698 | Unverified bits: 1 | ~5s remaining\n  [800/1602] Verified: 798 | Unverified bits: 1 | ~4s remaining\n  [900/1602] Verified: 898 | Unverified bits: 1 | ~4s remaining\n  [1000/1602] Verified: 998 | Unverified bits: 1 | ~3s remaining\n  [1100/1602] Verified: 1098 | Unverified bits: 1 | ~3s remaining\n  [1200/1602] Verified: 1198 | Unverified bits: 1 | ~2s remaining\n  [1300/1602] Verified: 1298 | Unverified bits: 1 | ~2s remaining\n  [1400/1602] Verified: 1398 | Unverified bits: 1 | ~1s remaining\n  [1500/1602] Verified: 1498 | Unverified bits: 1 | ~0s remaining\n  [1600/1602] Verified: 1598 | Unverified bits: 1 | ~0s remaining</p>\n<p>Done in 7.9s</p>\n<p>======================================================================</p>\n<h1>FINAL RESULTS</h1>\n<p>Total problems: 1602\nFully verified: 1601 (99.94%)\nCorrect predictions: 1601 (99.94%)\nUnverified bits total: 1</p>\n<p>======================================================================</p>\n<h1>FUNCTION TYPE DISTRIBUTION</h1>\n<p>identity                    5118 ( 39.9%) ███████████████████████████████████████\n  CONST                       1810 ( 14.1%) ██████████████\n  AND                         1593 ( 12.4%) ████████████\n  OR                          1324 ( 10.3%) ██████████\n  XOR                         1007 (  7.9%) ███████\n  XNOR                         875 (  6.8%) ██████\n  NOT                          676 (  5.3%) █████\n  NOR                          148 (  1.2%) █\n  NAND                         130 (  1.0%) █\n  CHOICE                        82 (  0.6%)\n  MAJORITY3                     41 (  0.3%)\n  PARITY3                        7 (  0.1%)\n  TRUTH_TABLE                    4 (  0.0%)\n  UNKNOWN                        1 (  0.0%)</p>\n<p>======================================================================</p>\n<h1>REMAINING UNKNOWNS: 1</h1>\n<p>12154247:\n  Predicted: 10?11101 | Correct: 10111101\n    ✅ out[0] = XNOR(in[2], in[5])\n    ✅ out[1] = AND_XOR(in[3], in[6], in[2])\n    ❓ out[2] = UNKNOWN\n    ✅ out[3] = NOT_CHOICE(in[0], in[5], in[6])\n    ✅ out[4] = NOT(in[5])\n    ✅ out[5] = NOT_PARITY3(in[2], in[4], in[7])\n    ✅ out[6] = OR_NOT_B(in[1], in[3])\n    ✅ out[7] = OR_NOT_B(in[3], in[4])</p>\n<p>Problem: 12154247\nCorrect answer: 10111101\nTarget bit 2 should be: 1</p>\n<p>Examples: 10\nTarget input: 00010000\nNeed out[2] = 1</p>\n<p>Example data for bit 2:\n  11101101 -&gt; bit2=0\n  00100001 -&gt; bit2=0\n  01101100 -&gt; bit2=1\n  10111010 -&gt; bit2=0\n  00010001 -&gt; bit2=0\n  10101000 -&gt; bit2=0\n  10100111 -&gt; bit2=0\n  01010111 -&gt; bit2=1\n  00000111 -&gt; bit2=0\n  11110110 -&gt; bit2=1</p>\n<p>Target: 00010000 -&gt; bit2=1</p>\n<p>============================================================</p>\n<h1>METHOD 1: Full 8-bit truth table</h1>\n<p>Target pattern NOT in examples. 10 of 256 patterns covered.\nNeed to infer from 10 known patterns.</p>\n<p>============================================================</p>\n<h1>METHOD 2: 5-input boolean functions</h1>\n<p>Testing 22 5-input functions…\n  ✅ FOUND: NOT_NESTED_CHOICE_AND_OR(in[1], in[0], in[4], in[2], in[7])</p>\n<p>============================================================</p>\n<h1>METHOD 3: Brute force truth table search (up to 5 bits)</h1>\n<p>Trying 2-bit truth tables…</p>\n<p>Trying 3-bit truth tables…</p>\n<p>Trying 4-bit truth tables…</p>\n<p>Trying 5-bit truth tables…</p>\n<p>============================================================</p>\n<h1>METHOD 4: 8-bit truth table (check if target is deterministic)</h1>\n<p>All examples for bit 2:\n    11101101 -&gt; 0\n    00100001 -&gt; 0\n    01101100 -&gt; 1\n    10111010 -&gt; 0\n    00010001 -&gt; 0\n    10101000 -&gt; 0\n    10100111 -&gt; 0\n    01010111 -&gt; 1\n    00000111 -&gt; 0\n    11110110 -&gt; 1\n  Target: 00010000 -&gt; 1</p>\n<p>The answer for out[2] is 1.\n  This bit likely requires a 6+ input function or is\n  under-constrained by the examples.\n  SOLUTION: Hardcode this one problem's bit[2] = 1</p>\n<p>============================================================</p>\n<h1>FINAL VERDICT</h1>\n<p>Problem 12154247 out[2] = 1\nFull answer: 10111101</p>",
+            "replies": [
+              {
+                "id": 3438266,
+                "postDate": "2026-04-08T21:36:39.307Z",
+                "rawMarkdown": "This log is difficult to interpret\n\nDoes your program make bit output predictions w/o knowing the answer?\n\nOr are you checking that there exists SOME bitwise transformation rule that is consistent w/ both the hidden output and the provided examples",
+                "content": "<p>This log is difficult to interpret</p>\n<p>Does your program make bit output predictions w/o knowing the answer?</p>\n<p>Or are you checking that there exists SOME bitwise transformation rule that is consistent w/ both the hidden output and the provided examples</p>",
+                "parent": {},
+                "author": {
+                  "displayName": "MAJ0RT0M",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+                  "url": "/maj0rt0m",
+                  "tier": "CONTRIBUTOR",
+                  "id": 2071133,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "canUpvote": true
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 829,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "MAJ0RT0M",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+                    "url": "/maj0rt0m",
+                    "userName": "maj0rt0m",
+                    "tier": "CONTRIBUTOR",
+                    "id": 2071133,
+                    "profileUrl": "/maj0rt0m",
+                    "performanceTier": "CONTRIBUTOR",
+                    "userId": 2071133,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              }
+            ],
+            "parent": {},
+            "author": {
+              "displayName": "Donald Galliano III",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/29434769-kg.png?t=2026-03-14-05-23-02",
+              "url": "/donaldgalliano",
+              "tier": "CONTRIBUTOR",
+              "id": 29434769,
+              "progressionOptOut": false
+            },
+            "authorType": "TOPIC",
+            "votes": {
+              "totalVotes": 2,
+              "canUpvote": true,
+              "totalUpvotes": 3
+            },
+            "kernelVersion": 0,
+            "competitionRanking": 1820,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "teamUpInfo": {
+              "teamLeader": {
+                "displayName": "Donald Galliano III",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/29434769-kg.png?t=2026-03-14-05-23-02",
+                "url": "/donaldgalliano",
+                "userName": "donaldgalliano",
+                "tier": "CONTRIBUTOR",
+                "id": 29434769,
+                "profileUrl": "/donaldgalliano",
+                "performanceTier": "CONTRIBUTOR",
+                "userId": 29434769,
+                "progressionOptOut": false
+              },
+              "intro": ""
+            }
+          },
+          {
+            "id": 3438265,
+            "postDate": "2026-04-08T21:33:54.857Z",
+            "rawMarkdown": "I ran into the same issue as you - either I am misreading this post and the functions we need to apply to the bits are not independent (i.e. all bitwise operations are performed globally) or we have made the same error in our implementation",
+            "content": "<p>I ran into the same issue as you - either I am misreading this post and the functions we need to apply to the bits are not independent (i.e. all bitwise operations are performed globally) or we have made the same error in our implementation</p>",
+            "replies": [
+              {
+                "id": 3438290,
+                "postDate": "2026-04-08T22:09:44.560Z",
+                "rawMarkdown": "It's rarely a good idea to listen  to the teams ranked 1000+ claiming READ ME 100% SOLVE RATE",
+                "content": "<p>It's rarely a good idea to listen  to the teams ranked 1000+ claiming READ ME 100% SOLVE RATE</p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Yurnero",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/13977249-kg.jpg?t=2025-06-08-06-49-23",
+                  "url": "/samson8",
+                  "tier": "GRANDMASTER",
+                  "id": 13977249,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "totalVotes": 2,
+                  "canUpvote": true,
+                  "totalUpvotes": 2
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 924,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "reactions": [
+                  {
+                    "emoji": "FUNNY",
+                    "featuredUserNames": [
+                      "jsday96",
+                      "mushfirat",
+                      "weedoo",
+                      "juliengenzling",
+                      "svanikkolli"
+                    ],
+                    "userCount": 5
+                  }
+                ],
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Yurnero",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/13977249-kg.jpg?t=2025-06-08-06-49-23",
+                    "url": "/samson8",
+                    "userName": "samson8",
+                    "tier": "GRANDMASTER",
+                    "id": 13977249,
+                    "profileUrl": "/samson8",
+                    "performanceTier": "GRANDMASTER",
+                    "userId": 13977249,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              },
+              {
+                "id": 3438318,
+                "postDate": "2026-04-08T23:31:26.967Z",
+                "rawMarkdown": "Hes right for the bit manipulation but the writeup is super ambiguous - I was able to replicate his results",
+                "content": "<p>Hes right for the bit manipulation but the writeup is super ambiguous - I was able to replicate his results</p>",
+                "parent": {},
+                "author": {
+                  "displayName": "MAJ0RT0M",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+                  "url": "/maj0rt0m",
+                  "tier": "CONTRIBUTOR",
+                  "id": 2071133,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "totalVotes": 1,
+                  "canUpvote": true,
+                  "totalUpvotes": 1
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 829,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "isCollapsed": true,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "MAJ0RT0M",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+                    "url": "/maj0rt0m",
+                    "userName": "maj0rt0m",
+                    "tier": "CONTRIBUTOR",
+                    "id": 2071133,
+                    "profileUrl": "/maj0rt0m",
+                    "performanceTier": "CONTRIBUTOR",
+                    "userId": 2071133,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              },
+              {
+                "id": 3438338,
+                "postDate": "2026-04-09T00:30:51.470Z",
+                "rawMarkdown": "Code if anyone wants it\n\n`import pandas as pd\nimport re\nimport time\nimport itertools\n\n# 1. Define Operations\nOPS = {\n    'AND': lambda a, b: a & b,\n    'OR': lambda a, b: a | b,\n    'XOR': lambda a, b: a ^ b,\n    'NAND': lambda a, b: ~(a & b),\n    'NOR': lambda a, b: ~(a | b),\n    'XNOR': lambda a, b: ~(a ^ b),\n    'NOT_A_AND_B': lambda a, b: (~a) & b,\n    'A_AND_NOT_B': lambda a, b: a & (~b),\n    'NOT_A_OR_B': lambda a, b: (~a) | b,\n    'A_OR_NOT_B': lambda a, b: a | (~b)\n}\n\nTRANSFORMATIONS = [('rot', 0)]\nfor k in range(1, 8):\n    TRANSFORMATIONS.extend([('rot', k), ('shl', k), ('shr', k)])\n\ndef get_used_vars(expr):\n    used = []\n    if '{A}' in expr: used.append('{A}')\n    if '{B}' in expr: used.append('{B}')\n    if '{C}' in expr: used.append('{C}')\n    return used\n\ndef get_source_bit(in_bits, out_idx, trans):\n    ttype, shift_val = trans\n    if ttype == 'rot': \n        return in_bits[(out_idx + shift_val) % 8]\n    elif ttype == 'shl':\n        src = out_idx + shift_val\n        return in_bits[src] if 0 <= src < 8 else 0\n    elif ttype == 'shr':\n        src = out_idx - shift_val\n        return in_bits[src] if 0 <= src < 8 else 0\n\ndef evaluate_bit(evaluator, trans_dict, bit_idx, in_arrays, out_arrays, num_examples):\n    for ex in range(num_examples):\n        in_bits = in_arrays[ex]\n        expected = out_arrays[ex][bit_idx]\n        \n        a_val = get_source_bit(in_bits, bit_idx, trans_dict.get('{A}', ('rot', 0)))\n        b_val = get_source_bit(in_bits, bit_idx, trans_dict.get('{B}', ('rot', 0)))\n        c_val = get_source_bit(in_bits, bit_idx, trans_dict.get('{C}', ('rot', 0)))\n        \n        # mask=1 since we are operating on single bits\n        res = evaluator(a_val, b_val, c_val, 1)\n        if res != expected:\n            return False\n    return True\n\n# 2. Dynamic Universal Grammar Generator (Yields abstract truth tables as it searches)\ndef generate_grammar_dynamically():\n    mask = 255\n    l0 = {\n        0: (\"C0\", lambda a, b, c, m: 0),\n        255: (\"C1\", lambda a, b, c, m: m),\n        0b11110000: (\"{A}\", lambda a, b, c, m: a),\n        0b11001100: (\"{B}\", lambda a, b, c, m: b),\n        0b10101010: (\"{C}\", lambda a, b, c, m: c)\n    }\n    visited = set(l0.keys())\n    levels = [l0]\n    \n    # Yield Level 0 immediately\n    for tt, (expr, func) in l0.items():\n        yield tt, expr, func\n        \n    for depth in range(1, 4): # depth 1, 2, 3\n        next_level = {}\n        \n        # NOT\n        for v, (expr, func) in levels[-1].items():\n            not_v = (~v) & mask\n            if not_v not in visited:\n                new_expr = f\"NOT({expr})\"\n                new_func = lambda a, b, c, m, f=func: (~f(a, b, c, m)) & m\n                visited.add(not_v)\n                next_level[not_v] = (new_expr, new_func)\n                yield not_v, new_expr, new_func\n                \n        # 2-Input OPS\n        for i in range(depth):\n            j = depth - 1\n            for v1, (expr1, func1) in levels[i].items():\n                for v2, (expr2, func2) in levels[j].items():\n                    for op_name, op_func in OPS.items():\n                        # Skip symmetric duplicates\n                        if i == j and v1 > v2 and op_name in ['AND', 'OR', 'XOR', 'NAND', 'NOR', 'XNOR']: \n                            continue\n                            \n                        val = op_func(v1, v2) & mask\n                        if val not in visited:\n                            new_expr = f\"{op_name}({expr1}, {expr2})\"\n                            new_func = lambda a, b, c, m, f1=func1, f2=func2, op=op_func: op(f1(a, b, c, m), f2(a, b, c, m)) & m\n                            visited.add(val)\n                            next_level[val] = (new_expr, new_func)\n                            yield val, new_expr, new_func\n                            \n                        # If asymmetric and levels are different, test reverse order\n                        if i != j:\n                            val2 = op_func(v2, v1) & mask\n                            if val2 not in visited:\n                                new_expr = f\"{op_name}({expr2}, {expr1})\"\n                                new_func = lambda a, b, c, m, f1=func1, f2=func2, op=op_func: op(f2(a, b, c, m), f1(a, b, c, m)) & m\n                                visited.add(val2)\n                                next_level[val2] = (new_expr, new_func)\n                                yield val2, new_expr, new_func\n        levels.append(next_level)\n\ndef format_hyp(expr, trans_dict):\n    s = expr\n    for k, v in trans_dict.items():\n        s = s.replace(k, str(v))\n    return s\n\ndef solve_dfs_trace_dynamic(in_arrays, out_arrays, num_examples):\n    trace = []\n    start_time = time.time()\n    \n    # 3. Interleave Grammar Generation with Backtracking\n    grammar_gen = generate_grammar_dynamically()\n    \n    for tt, expr, evaluator in grammar_gen:\n        if time.time() - start_time > 5.0:\n            trace.append(\"TIMEOUT\")\n            return trace, None\n            \n        used = get_used_vars(expr)\n        \n        # Instantiate this abstract function with all possible unique shifts\n        combinations = []\n        if len(used) == 0:\n            combinations.append({})\n        elif len(used) == 1:\n            for t1 in TRANSFORMATIONS:\n                combinations.append({used[0]: t1})\n        elif len(used) == 2:\n            for t1 in TRANSFORMATIONS:\n                for t2 in TRANSFORMATIONS:\n                    if t1 == t2: continue\n                    combinations.append({used[0]: t1, used[1]: t2})\n        elif len(used) == 3:\n            for t1, t2, t3 in itertools.permutations(TRANSFORMATIONS, 3):\n                combinations.append({used[0]: t1, used[1]: t2, used[2]: t3})\n                \n        # Now perform Sudoku-style backtracking on these concrete hypotheses\n        for trans_dict in combinations:\n            if time.time() - start_time > 5.0:\n                trace.append(\"TIMEOUT\")\n                return trace, None\n                \n            # Test Bit 0 first (Fail fast)\n            if evaluate_bit(evaluator, trans_dict, 0, in_arrays, out_arrays, num_examples):\n                hyp_str = format_hyp(expr, trans_dict)\n                trace.append(f\"B0: Testing {hyp_str} -> YES\")\n                \n                valid_global = True\n                # Sequentially verify the rest of the bits\n                for b in range(1, 8):\n                    if evaluate_bit(evaluator, trans_dict, b, in_arrays, out_arrays, num_examples):\n                        trace.append(f\"B{b}: Testing {hyp_str} -> YES\")\n                    else:\n                        trace.append(f\"B{b}: Testing {hyp_str} -> NO. Contradiction, backtracking...\")\n                        valid_global = False\n                        break # BACKTRACK!\n                        \n                if valid_global:\n                    trace.append(f\"GLOBAL MATCH FOUND: {hyp_str}\")\n                    def predictor(q_in, trans_dict=dict(trans_dict), ev=evaluator):\n                        a_val = get_source_bit(q_in, 0, trans_dict.get('{A}', ('rot', 0))) # Not used but avoids binding issues\n                        res = []\n                        for b_idx in range(8):\n                            av = get_source_bit(q_in, b_idx, trans_dict.get('{A}', ('rot', 0)))\n                            bv = get_source_bit(q_in, b_idx, trans_dict.get('{B}', ('rot', 0)))\n                            cv = get_source_bit(q_in, b_idx, trans_dict.get('{C}', ('rot', 0)))\n                            res.append(str(ev(av, bv, cv, 1)))\n                        return \"\".join(res)\n                    return trace, predictor\n                    \n    trace.append(\"NO MATCH FOUND\")\n    return trace, None\n\nif __name__ == \"__main__\":\n    df = pd.read_csv('bit_samples_30.csv')\n    num_correct = 0\n    num_found = 0\n    \n    for idx, row in df.iterrows():\n        p = row['prompt']\n        a = str(row['answer']).strip().zfill(8)\n        ex_matches = re.findall(r'([01]{8})\\s*->\\s*([01]{8})', p)\n        num_examples = len(ex_matches)\n        in_arrays = [[int(ex_matches[ex][0][j]) for j in range(8)] for ex in range(num_examples)]\n        out_arrays = [[int(ex_matches[ex][1][j]) for j in range(8)] for ex in range(num_examples)]\n        \n        query_match = re.search(r'(?:output for:|determine the output for:)\\s*([01]{8})', p)\n        query_in = [int(b) for b in query_match.group(1)]\n        \n        print(f\"\\nSample {idx} (ID: {row['id']}):\")\n        trace, predictor = solve_dfs_trace_dynamic(in_arrays, out_arrays, num_examples)\n        \n        if len(trace) > 10:\n            print(\"\\n\".join(trace[:5]))\n            print(\"...\")\n            print(\"\\n\".join(trace[-5:]))\n        else:\n            print(\"\\n\".join(trace))\n            \n        if predictor:\n            num_found += 1\n            pred_str = predictor(query_in)\n            is_correct = (pred_str == a)\n            if is_correct: num_correct += 1\n            print(f\"Pred: {pred_str} | Ans: {a} | Correct: {is_correct}\")\n        else:\n            print(\"FAILED TO FIND RULE\")\n            \n    print(f\"\\nRules found: {num_found}/30\")\n    print(f\"Correct predictions: {num_correct}/30 ({(num_correct/30)*100:.1f}%)\")\n`",
+                "content": "<p>Code if anyone wants it</p>\n<p>`import pandas as pd\nimport re\nimport time\nimport itertools</p>\n<h1>1. Define Operations</h1>\n<p>OPS = {\n    'AND': lambda a, b: a &amp; b,\n    'OR': lambda a, b: a | b,\n    'XOR': lambda a, b: a ^ b,\n    'NAND': lambda a, b: ~(a &amp; b),\n    'NOR': lambda a, b: ~(a | b),\n    'XNOR': lambda a, b: ~(a ^ b),\n    'NOT_A_AND_B': lambda a, b: (~a) &amp; b,\n    'A_AND_NOT_B': lambda a, b: a &amp; (~b),\n    'NOT_A_OR_B': lambda a, b: (~a) | b,\n    'A_OR_NOT_B': lambda a, b: a | (~b)\n}</p>\n<p>TRANSFORMATIONS = [('rot', 0)]\nfor k in range(1, 8):\n    TRANSFORMATIONS.extend([('rot', k), ('shl', k), ('shr', k)])</p>\n<p>def get_used_vars(expr):\n    used = []\n    if '{A}' in expr: used.append('{A}')\n    if '{B}' in expr: used.append('{B}')\n    if '{C}' in expr: used.append('{C}')\n    return used</p>\n<p>def get_source_bit(in_bits, out_idx, trans):\n    ttype, shift_val = trans\n    if ttype == 'rot': \n        return in_bits[(out_idx + shift_val) % 8]\n    elif ttype == 'shl':\n        src = out_idx + shift_val\n        return in_bits[src] if 0 &lt;= src &lt; 8 else 0\n    elif ttype == 'shr':\n        src = out_idx - shift_val\n        return in_bits[src] if 0 &lt;= src &lt; 8 else 0</p>\n<p>def evaluate_bit(evaluator, trans_dict, bit_idx, in_arrays, out_arrays, num_examples):\n    for ex in range(num_examples):\n        in_bits = in_arrays[ex]\n        expected = out_arrays[ex][bit_idx]</p>\n<pre><code>    a_val = get_source_bit(in_bits, bit_idx, trans_dict.get('{A}', ('rot', 0)))\n    b_val = get_source_bit(in_bits, bit_idx, trans_dict.get('{B}', ('rot', 0)))\n    c_val = get_source_bit(in_bits, bit_idx, trans_dict.get('{C}', ('rot', 0)))\n\n    # mask=1 since we are operating on single bits\n    res = evaluator(a_val, b_val, c_val, 1)\n    if res != expected:\n        return False\nreturn True\n</code></pre>\n<h1>2. Dynamic Universal Grammar Generator (Yields abstract truth tables as it searches)</h1>\n<p>def generate_grammar_dynamically():\n    mask = 255\n    l0 = {\n        0: (\"C0\", lambda a, b, c, m: 0),\n        255: (\"C1\", lambda a, b, c, m: m),\n        0b11110000: (\"{A}\", lambda a, b, c, m: a),\n        0b11001100: (\"{B}\", lambda a, b, c, m: b),\n        0b10101010: (\"{C}\", lambda a, b, c, m: c)\n    }\n    visited = set(l0.keys())\n    levels = [l0]</p>\n<pre><code># Yield Level 0 immediately\nfor tt, (expr, func) in l0.items():\n    yield tt, expr, func\n\nfor depth in range(1, 4): # depth 1, 2, 3\n    next_level = {}\n\n    # NOT\n    for v, (expr, func) in levels[-1].items():\n        not_v = (~v) &amp; mask\n        if not_v not in visited:\n            new_expr = f\"NOT({expr})\"\n            new_func = lambda a, b, c, m, f=func: (~f(a, b, c, m)) &amp; m\n            visited.add(not_v)\n            next_level[not_v] = (new_expr, new_func)\n            yield not_v, new_expr, new_func\n\n    # 2-Input OPS\n    for i in range(depth):\n        j = depth - 1\n        for v1, (expr1, func1) in levels[i].items():\n            for v2, (expr2, func2) in levels[j].items():\n                for op_name, op_func in OPS.items():\n                    # Skip symmetric duplicates\n                    if i == j and v1 &gt; v2 and op_name in ['AND', 'OR', 'XOR', 'NAND', 'NOR', 'XNOR']: \n                        continue\n\n                    val = op_func(v1, v2) &amp; mask\n                    if val not in visited:\n                        new_expr = f\"{op_name}({expr1}, {expr2})\"\n                        new_func = lambda a, b, c, m, f1=func1, f2=func2, op=op_func: op(f1(a, b, c, m), f2(a, b, c, m)) &amp; m\n                        visited.add(val)\n                        next_level[val] = (new_expr, new_func)\n                        yield val, new_expr, new_func\n\n                    # If asymmetric and levels are different, test reverse order\n                    if i != j:\n                        val2 = op_func(v2, v1) &amp; mask\n                        if val2 not in visited:\n                            new_expr = f\"{op_name}({expr2}, {expr1})\"\n                            new_func = lambda a, b, c, m, f1=func1, f2=func2, op=op_func: op(f2(a, b, c, m), f1(a, b, c, m)) &amp; m\n                            visited.add(val2)\n                            next_level[val2] = (new_expr, new_func)\n                            yield val2, new_expr, new_func\n    levels.append(next_level)\n</code></pre>\n<p>def format_hyp(expr, trans_dict):\n    s = expr\n    for k, v in trans_dict.items():\n        s = s.replace(k, str(v))\n    return s</p>\n<p>def solve_dfs_trace_dynamic(in_arrays, out_arrays, num_examples):\n    trace = []\n    start_time = time.time()</p>\n<pre><code># 3. Interleave Grammar Generation with Backtracking\ngrammar_gen = generate_grammar_dynamically()\n\nfor tt, expr, evaluator in grammar_gen:\n    if time.time() - start_time &gt; 5.0:\n        trace.append(\"TIMEOUT\")\n        return trace, None\n\n    used = get_used_vars(expr)\n\n    # Instantiate this abstract function with all possible unique shifts\n    combinations = []\n    if len(used) == 0:\n        combinations.append({})\n    elif len(used) == 1:\n        for t1 in TRANSFORMATIONS:\n            combinations.append({used[0]: t1})\n    elif len(used) == 2:\n        for t1 in TRANSFORMATIONS:\n            for t2 in TRANSFORMATIONS:\n                if t1 == t2: continue\n                combinations.append({used[0]: t1, used[1]: t2})\n    elif len(used) == 3:\n        for t1, t2, t3 in itertools.permutations(TRANSFORMATIONS, 3):\n            combinations.append({used[0]: t1, used[1]: t2, used[2]: t3})\n\n    # Now perform Sudoku-style backtracking on these concrete hypotheses\n    for trans_dict in combinations:\n        if time.time() - start_time &gt; 5.0:\n            trace.append(\"TIMEOUT\")\n            return trace, None\n\n        # Test Bit 0 first (Fail fast)\n        if evaluate_bit(evaluator, trans_dict, 0, in_arrays, out_arrays, num_examples):\n            hyp_str = format_hyp(expr, trans_dict)\n            trace.append(f\"B0: Testing {hyp_str} -&gt; YES\")\n\n            valid_global = True\n            # Sequentially verify the rest of the bits\n            for b in range(1, 8):\n                if evaluate_bit(evaluator, trans_dict, b, in_arrays, out_arrays, num_examples):\n                    trace.append(f\"B{b}: Testing {hyp_str} -&gt; YES\")\n                else:\n                    trace.append(f\"B{b}: Testing {hyp_str} -&gt; NO. Contradiction, backtracking...\")\n                    valid_global = False\n                    break # BACKTRACK!\n\n            if valid_global:\n                trace.append(f\"GLOBAL MATCH FOUND: {hyp_str}\")\n                def predictor(q_in, trans_dict=dict(trans_dict), ev=evaluator):\n                    a_val = get_source_bit(q_in, 0, trans_dict.get('{A}', ('rot', 0))) # Not used but avoids binding issues\n                    res = []\n                    for b_idx in range(8):\n                        av = get_source_bit(q_in, b_idx, trans_dict.get('{A}', ('rot', 0)))\n                        bv = get_source_bit(q_in, b_idx, trans_dict.get('{B}', ('rot', 0)))\n                        cv = get_source_bit(q_in, b_idx, trans_dict.get('{C}', ('rot', 0)))\n                        res.append(str(ev(av, bv, cv, 1)))\n                    return \"\".join(res)\n                return trace, predictor\n\ntrace.append(\"NO MATCH FOUND\")\nreturn trace, None\n</code></pre>\n<p>if <strong>name</strong> == \"<strong>main</strong>\":\n    df = pd.read_csv('bit_samples_30.csv')\n    num_correct = 0\n    num_found = 0</p>\n<pre><code>for idx, row in df.iterrows():\n    p = row['prompt']\n    a = str(row['answer']).strip().zfill(8)\n    ex_matches = re.findall(r'([01]{8})\\s*-&gt;\\s*([01]{8})', p)\n    num_examples = len(ex_matches)\n    in_arrays = [[int(ex_matches[ex][0][j]) for j in range(8)] for ex in range(num_examples)]\n    out_arrays = [[int(ex_matches[ex][1][j]) for j in range(8)] for ex in range(num_examples)]\n\n    query_match = re.search(r'(?:output for:|determine the output for:)\\s*([01]{8})', p)\n    query_in = [int(b) for b in query_match.group(1)]\n\n    print(f\"\\nSample {idx} (ID: {row['id']}):\")\n    trace, predictor = solve_dfs_trace_dynamic(in_arrays, out_arrays, num_examples)\n\n    if len(trace) &gt; 10:\n        print(\"\\n\".join(trace[:5]))\n        print(\"...\")\n        print(\"\\n\".join(trace[-5:]))\n    else:\n        print(\"\\n\".join(trace))\n\n    if predictor:\n        num_found += 1\n        pred_str = predictor(query_in)\n        is_correct = (pred_str == a)\n        if is_correct: num_correct += 1\n        print(f\"Pred: {pred_str} | Ans: {a} | Correct: {is_correct}\")\n    else:\n        print(\"FAILED TO FIND RULE\")\n\nprint(f\"\\nRules found: {num_found}/30\")\nprint(f\"Correct predictions: {num_correct}/30 ({(num_correct/30)*100:.1f}%)\")\n</code></pre>\n<p>`</p>",
+                "parent": {},
+                "author": {
+                  "displayName": "MAJ0RT0M",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+                  "url": "/maj0rt0m",
+                  "tier": "CONTRIBUTOR",
+                  "id": 2071133,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "totalVotes": 1,
+                  "canUpvote": true,
+                  "totalUpvotes": 1
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 829,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "isCollapsed": true,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "MAJ0RT0M",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+                    "url": "/maj0rt0m",
+                    "userName": "maj0rt0m",
+                    "tier": "CONTRIBUTOR",
+                    "id": 2071133,
+                    "profileUrl": "/maj0rt0m",
+                    "performanceTier": "CONTRIBUTOR",
+                    "userId": 2071133,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              },
+              {
+                "id": 3444094,
+                "postDate": "2026-04-17T09:07:39.673Z",
+                "rawMarkdown": "did you try any other approaches？",
+                "content": "<p>did you try any other approaches？</p>",
+                "parent": {},
+                "author": {
+                  "displayName": "HZM",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/9464013-kg.jpg?t=2023-09-30-12-35-57",
+                  "url": "/leehann",
+                  "tier": "GRANDMASTER",
+                  "id": 9464013,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "canUpvote": true
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 1214,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "isCollapsed": true,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "HZM",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/9464013-kg.jpg?t=2023-09-30-12-35-57",
+                    "url": "/leehann",
+                    "userName": "leehann",
+                    "tier": "GRANDMASTER",
+                    "id": 9464013,
+                    "profileUrl": "/leehann",
+                    "performanceTier": "GRANDMASTER",
+                    "userId": 9464013,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              }
+            ],
+            "parent": {},
+            "author": {
+              "displayName": "MAJ0RT0M",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+              "url": "/maj0rt0m",
+              "tier": "CONTRIBUTOR",
+              "id": 2071133,
+              "progressionOptOut": false
+            },
+            "authorType": "COMMENT",
+            "votes": {
+              "canUpvote": true
+            },
+            "kernelVersion": 0,
+            "competitionRanking": 829,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "teamUpInfo": {
+              "teamLeader": {
+                "displayName": "MAJ0RT0M",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+                "url": "/maj0rt0m",
+                "userName": "maj0rt0m",
+                "tier": "CONTRIBUTOR",
+                "id": 2071133,
+                "profileUrl": "/maj0rt0m",
+                "performanceTier": "CONTRIBUTOR",
+                "userId": 2071133,
+                "progressionOptOut": false
+              },
+              "intro": ""
+            }
+          }
+        ],
+        "parent": {},
+        "author": {
+          "displayName": "m4nocha",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/21092801-kg.jpg?t=2024-12-20-16-21-01",
+          "url": "/aksh1t",
+          "tier": "CONTRIBUTOR",
+          "id": 21092801,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "totalVotes": 3,
+          "canUpvote": true,
+          "totalUpvotes": 3
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 983,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "m4nocha",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/21092801-kg.jpg?t=2024-12-20-16-21-01",
+            "url": "/aksh1t",
+            "userName": "aksh1t",
+            "tier": "CONTRIBUTOR",
+            "id": 21092801,
+            "profileUrl": "/aksh1t",
+            "performanceTier": "CONTRIBUTOR",
+            "userId": 21092801,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3436922,
+        "postDate": "2026-04-06T21:33:04.420Z",
+        "rawMarkdown": "This is amazing, thank you so much! Is your reverse engineering true for both the train data and the actual evaluation and how did you do this? Would love to hear more. ",
+        "content": "<p>This is amazing, thank you so much! Is your reverse engineering true for both the train data and the actual evaluation and how did you do this? Would love to hear more. </p>",
+        "parent": {},
+        "author": {
+          "displayName": "max saraf",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+          "url": "/maxsaraf",
+          "tier": "CONTRIBUTOR",
+          "id": 27763541,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "totalVotes": 1,
+          "canUpvote": true,
+          "totalUpvotes": 1
+        },
+        "kernelVersion": 0,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "max saraf",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+            "url": "/maxsaraf",
+            "userName": "maxsaraf",
+            "tier": "CONTRIBUTOR",
+            "id": 27763541,
+            "profileUrl": "/maxsaraf",
+            "performanceTier": "CONTRIBUTOR",
+            "userId": 27763541,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3437568,
+        "postDate": "2026-04-07T19:30:31.267Z",
+        "rawMarkdown": "Really this is an incredibly clear and practical breakdown",
+        "content": "<p>Really this is an incredibly clear and practical breakdown</p>",
+        "parent": {},
+        "author": {
+          "displayName": "Durga Kumari",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/30256119-kg.jpg?t=2026-04-09-17-12-41",
+          "url": "/durgakumari12",
+          "tier": "CONTRIBUTOR",
+          "id": 30256119,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "canUpvote": true,
+          "totalUpvotes": 1
+        },
+        "kernelVersion": 0,
+        "feedbackTrackingData": {},
+        "isThankYou": false
+      },
+      {
+        "id": 3436579,
+        "postDate": "2026-04-06T09:00:47.947Z",
+        "rawMarkdown": "Thank you for reverse engineering @donaldgalliano ",
+        "content": "<p>Thank you for reverse engineering <a href=\"https://www.kaggle.com/donaldgalliano\" target=\"_blank\">@donaldgalliano</a> </p>",
+        "parent": {},
+        "author": {
+          "displayName": "Navneet",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/15692441-kg.jpg?t=2025-05-18-07-58-06",
+          "url": "/navneetbende",
+          "tier": "CONTRIBUTOR",
+          "id": 15692441,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "canUpvote": true,
+          "totalUpvotes": 1
+        },
+        "kernelVersion": 0,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "reactions": [
+          {
+            "emoji": "LOVE",
+            "featuredUserNames": [
+              "donaldgalliano"
+            ],
+            "userCount": 1
+          }
+        ]
+      },
+      {
+        "id": 3436706,
+        "postDate": "2026-04-06T15:05:52.720Z",
+        "rawMarkdown": "Your reverse engineering analysis is key to understanding this dataset. Thank you for sharing your guide. I'm going to experiment with your findings. Pure respect!",
+        "content": "<p>Your reverse engineering analysis is key to understanding this dataset. Thank you for sharing your guide. I'm going to experiment with your findings. Pure respect!</p>",
+        "parent": {},
+        "author": {
+          "displayName": "zigiella",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/539934-gr.jpg",
+          "url": "/zigiella",
+          "tier": "CONTRIBUTOR",
+          "id": 539934,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "canUpvote": true,
+          "totalUpvotes": 2
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 1278,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "zigiella",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/539934-gr.jpg",
+            "url": "/zigiella",
+            "userName": "zigiella",
+            "tier": "CONTRIBUTOR",
+            "id": 539934,
+            "profileUrl": "/zigiella",
+            "performanceTier": "CONTRIBUTOR",
+            "userId": 539934,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3445231,
+        "postDate": "2026-04-19T10:32:06.343Z",
+        "rawMarkdown": "Very agree on your \"One day I hope to solve a Kaggle comp on methodology alone and take first, instead of watching placement come down to who can afford the compute.\"",
+        "content": "<p>Very agree on your \"One day I hope to solve a Kaggle comp on methodology alone and take first, instead of watching placement come down to who can afford the compute.\"</p>",
+        "parent": {},
+        "author": {
+          "displayName": "Jerry Chi",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/29836884-kg.png?t=2025-10-30-03-37-25",
+          "url": "/jctesting",
+          "tier": "CONTRIBUTOR",
+          "id": 29836884,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "canUpvote": true
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 647,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Jerry Chi",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/29836884-kg.png?t=2025-10-30-03-37-25",
+            "url": "/jctesting",
+            "userName": "jctesting",
+            "tier": "CONTRIBUTOR",
+            "id": 29836884,
+            "profileUrl": "/jctesting",
+            "performanceTier": "CONTRIBUTOR",
+            "userId": 29836884,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3444136,
+        "postDate": "2026-04-17T10:55:41.513Z",
+        "rawMarkdown": "can share more detail in SYMBOL-DIGIT ？",
+        "content": "<p>can share more detail in SYMBOL-DIGIT ？</p>",
+        "parent": {},
+        "author": {
+          "displayName": "HZM",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/9464013-kg.jpg?t=2023-09-30-12-35-57",
+          "url": "/leehann",
+          "tier": "GRANDMASTER",
+          "id": 9464013,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "canUpvote": true
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 1214,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "HZM",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/9464013-kg.jpg?t=2023-09-30-12-35-57",
+            "url": "/leehann",
+            "userName": "leehann",
+            "tier": "GRANDMASTER",
+            "id": 9464013,
+            "profileUrl": "/leehann",
+            "performanceTier": "GRANDMASTER",
+            "userId": 9464013,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3440018,
+        "postDate": "2026-04-11T18:34:14.733Z",
+        "rawMarkdown": "Thank you for your explanations. I was curious on one thing though. In your guide, you assumed that the Equation riddles (Symbol-Digit) follow a pattern of AB_CD, whereas _ stands for an operator on index 2. Lets take the following riddle from the train dataset:\n\n>dcaf44c4,\"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:\n28-22 = 06\n06+41 = 4106\n09+13 = 1309\nNow, determine the result for: 24*95\",8742\n\nAs you can see, the operator of the target equation is a * symbol, which is not featured in the example equations, which only include - and +. How would you approach this problem?",
+        "content": "<p>Thank you for your explanations. I was curious on one thing though. In your guide, you assumed that the Equation riddles (Symbol-Digit) follow a pattern of AB_CD, whereas _ stands for an operator on index 2. Lets take the following riddle from the train dataset:</p>\n<blockquote>\n  <p>dcaf44c4,\"In Alice's Wonderland, a secret set of transformation rules is applied to equations. Below are a few examples:\n  28-22 = 06\n  06+41 = 4106\n  09+13 = 1309\n  Now, determine the result for: 24*95\",8742</p>\n</blockquote>\n<p>As you can see, the operator of the target equation is a * symbol, which is not featured in the example equations, which only include - and +. How would you approach this problem?</p>",
+        "parent": {},
+        "author": {
+          "displayName": "David Aigner",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+          "url": "/davidaigner",
+          "tier": "CONTRIBUTOR",
+          "id": 18062952,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "canUpvote": true
+        },
+        "kernelVersion": 0,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "David Aigner",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+            "url": "/davidaigner",
+            "userName": "davidaigner",
+            "tier": "CONTRIBUTOR",
+            "id": 18062952,
+            "profileUrl": "/davidaigner",
+            "performanceTier": "CONTRIBUTOR",
+            "userId": 18062952,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3439287,
+        "postDate": "2026-04-10T12:55:18.587Z",
+        "rawMarkdown": "Hi Donald,\nI´ve been following your work on reverse-engineering the NVIDIA Nemotron Challenge dataset. Your insights into the transformation algorithms are the most solid I've seen in the competition so far.\n\nI’m currently at 315th (0.7 score), but I have the resources to scale your logic into a top-tier submission. I’d like to propose a partnership where I provide the full execution engine: \n\nCompute Power: I have dedicated RunPod instances (A100s/H100s) ready to run 24/7. We won’t be throttled by Kaggle’s 30-hour limit.\n\nReady-to-Go Training Set: Based on your reverse-engineered rules, I have already generated a clean, high-volume synthetic training set for the new algorithms.\n\nOptimization Focus: I am currently focused on GRPO (Reinforcement Learning) and bit-serial reasoning traces to ensure the model doesn't just memorize, but actually reasons through your logic.\n\nI have sent you an invite to our team. \n\nBest, \nSvanik ",
+        "content": "<p>Hi Donald,\nI´ve been following your work on reverse-engineering the NVIDIA Nemotron Challenge dataset. Your insights into the transformation algorithms are the most solid I've seen in the competition so far.</p>\n<p>I’m currently at 315th (0.7 score), but I have the resources to scale your logic into a top-tier submission. I’d like to propose a partnership where I provide the full execution engine: </p>\n<p>Compute Power: I have dedicated RunPod instances (A100s/H100s) ready to run 24/7. We won’t be throttled by Kaggle’s 30-hour limit.</p>\n<p>Ready-to-Go Training Set: Based on your reverse-engineered rules, I have already generated a clean, high-volume synthetic training set for the new algorithms.</p>\n<p>Optimization Focus: I am currently focused on GRPO (Reinforcement Learning) and bit-serial reasoning traces to ensure the model doesn't just memorize, but actually reasons through your logic.</p>\n<p>I have sent you an invite to our team. </p>\n<p>Best, \nSvanik </p>",
+        "parent": {},
+        "author": {
+          "displayName": "Svanik Kolli",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/25849260-kg.png?t=2026-04-21-18-23-19",
+          "url": "/svanikkolli",
+          "tier": "CONTRIBUTOR",
+          "id": 25849260,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "canUpvote": true
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 138,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Svanik Kolli",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/25849260-kg.png?t=2026-04-21-18-23-19",
+            "url": "/svanikkolli",
+            "userName": "svanikkolli",
+            "tier": "CONTRIBUTOR",
+            "id": 25849260,
+            "profileUrl": "/svanikkolli",
+            "performanceTier": "CONTRIBUTOR",
+            "userId": 25849260,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3438692,
+        "postDate": "2026-04-09T15:27:26.713Z",
+        "rawMarkdown": "You should fock some working notebook with you data and train hardware is not a limit I think that much as I have trained my model on 1500 max len with 8 hour each epoch on rtx 6000 pro I have not used any other hardware yet ",
+        "content": "<p>You should fock some working notebook with you data and train hardware is not a limit I think that much as I have trained my model on 1500 max len with 8 hour each epoch on rtx 6000 pro I have not used any other hardware yet </p>",
+        "parent": {},
+        "author": {
+          "displayName": "Adarsh Kumar",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/25818777-kg.png?t=2026-04-20-16-49-43",
+          "url": "/adarsh2626",
+          "tier": "MASTER",
+          "id": 25818777,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "canUpvote": true
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 557,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Muhammad Ibrahim Qasmi",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/24946333-kg.jpeg?t=2025-12-22-22-44-57",
+            "url": "/ibrahimqasimi",
+            "userName": "ibrahimqasimi",
+            "tier": "GRANDMASTER",
+            "id": 24946333,
+            "profileUrl": "/ibrahimqasimi",
+            "performanceTier": "GRANDMASTER",
+            "userId": 24946333,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3438272,
+        "postDate": "2026-04-08T21:41:59.617Z",
+        "rawMarkdown": "I'm having a hard time reconciling these 2 statements in your post\n\nFrom this:\n> 8-bit string in, 8-bit string out. Each output bit is an independent boolean function of the input bits, so you solve 8 one-bit problems and concatenate.\n\nMy interpretation is that operations applied to bits can be independent of eachother - i.e. we can have 2 different functions f,g that accept 8 inputs bits and produce 1 output bit output_bit_1 = f(0010010), output_bit_2 = g(0010010)\n\nBut from this statement:\n> the model cannot do multi-bit AND/OR/XOR in parallel, accuracy craters to 9.3%\n\nIt seems like you are have found that every output bit obeys the same function f for a set of inputs\n\nThe 2nd statement aligns more w/ my intuition that this problem needs to be more constrained by having a single global transformation  to restrict possible output to a single answer \n",
+        "content": "<p>I'm having a hard time reconciling these 2 statements in your post</p>\n<p>From this:</p>\n<blockquote>\n  <p>8-bit string in, 8-bit string out. Each output bit is an independent boolean function of the input bits, so you solve 8 one-bit problems and concatenate.</p>\n</blockquote>\n<p>My interpretation is that operations applied to bits can be independent of eachother - i.e. we can have 2 different functions f,g that accept 8 inputs bits and produce 1 output bit output_bit_1 = f(0010010), output_bit_2 = g(0010010)</p>\n<p>But from this statement:</p>\n<blockquote>\n  <p>the model cannot do multi-bit AND/OR/XOR in parallel, accuracy craters to 9.3%</p>\n</blockquote>\n<p>It seems like you are have found that every output bit obeys the same function f for a set of inputs</p>\n<p>The 2nd statement aligns more w/ my intuition that this problem needs to be more constrained by having a single global transformation  to restrict possible output to a single answer </p>",
+        "replies": [
+          {
+            "id": 3438342,
+            "postDate": "2026-04-09T00:39:28.630Z",
+            "rawMarkdown": "For anyone similarly confused - the transformation rules are applied globally - I verified the 100% solve rate claimed by the author in this post",
+            "content": "<p>For anyone similarly confused - the transformation rules are applied globally - I verified the 100% solve rate claimed by the author in this post</p>",
+            "parent": {},
+            "author": {
+              "displayName": "MAJ0RT0M",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+              "url": "/maj0rt0m",
+              "tier": "CONTRIBUTOR",
+              "id": 2071133,
+              "progressionOptOut": false
+            },
+            "authorType": "COMMENT",
+            "votes": {
+              "totalVotes": 1,
+              "canUpvote": true,
+              "totalUpvotes": 1
+            },
+            "kernelVersion": 0,
+            "competitionRanking": 829,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "teamUpInfo": {
+              "teamLeader": {
+                "displayName": "MAJ0RT0M",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+                "url": "/maj0rt0m",
+                "userName": "maj0rt0m",
+                "tier": "CONTRIBUTOR",
+                "id": 2071133,
+                "profileUrl": "/maj0rt0m",
+                "performanceTier": "CONTRIBUTOR",
+                "userId": 2071133,
+                "progressionOptOut": false
+              },
+              "intro": ""
+            }
+          }
+        ],
+        "parent": {},
+        "author": {
+          "displayName": "MAJ0RT0M",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+          "url": "/maj0rt0m",
+          "tier": "CONTRIBUTOR",
+          "id": 2071133,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "canUpvote": true
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 829,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "MAJ0RT0M",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+            "url": "/maj0rt0m",
+            "userName": "maj0rt0m",
+            "tier": "CONTRIBUTOR",
+            "id": 2071133,
+            "profileUrl": "/maj0rt0m",
+            "performanceTier": "CONTRIBUTOR",
+            "userId": 2071133,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3436405,
+        "postDate": "2026-04-05T22:01:41.557Z",
+        "rawMarkdown": "Great writeup, i wasted lot of time on bit problems thinking it wasn't bitwise. Not sure why competition host decided to add this adversial noice into data.",
+        "content": "<p>Great writeup, i wasted lot of time on bit problems thinking it wasn't bitwise. Not sure why competition host decided to add this adversial noice into data.</p>",
+        "replies": [
+          {
+            "id": 3436407,
+            "postDate": "2026-04-05T22:02:52.883Z",
+            "rawMarkdown": "Once you step it per bit.. Youll see improvement really fast!!",
+            "content": "<p>Once you step it per bit.. Youll see improvement really fast!!</p>",
+            "parent": {},
+            "author": {
+              "displayName": "Donald Galliano III",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/29434769-kg.png?t=2026-03-14-05-23-02",
+              "url": "/donaldgalliano",
+              "tier": "CONTRIBUTOR",
+              "id": 29434769,
+              "progressionOptOut": false
+            },
+            "authorType": "TOPIC",
+            "votes": {
+              "canUpvote": true
+            },
+            "kernelVersion": 0,
+            "competitionRanking": 1820,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "teamUpInfo": {
+              "teamLeader": {
+                "displayName": "Donald Galliano III",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/29434769-kg.png?t=2026-03-14-05-23-02",
+                "url": "/donaldgalliano",
+                "userName": "donaldgalliano",
+                "tier": "CONTRIBUTOR",
+                "id": 29434769,
+                "profileUrl": "/donaldgalliano",
+                "performanceTier": "CONTRIBUTOR",
+                "userId": 29434769,
+                "progressionOptOut": false
+              },
+              "intro": ""
+            }
+          }
+        ],
+        "parent": {},
+        "author": {
+          "displayName": "lucian kucera",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+          "url": "/luciankucera",
+          "tier": "CONTRIBUTOR",
+          "id": 17819385,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "canUpvote": true
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 1182,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "reactions": [
+          {
+            "emoji": "THANK_YOU",
+            "featuredUserNames": [
+              "donaldgalliano"
+            ],
+            "userCount": 1
+          }
+        ],
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "lucian kucera",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+            "url": "/luciankucera",
+            "userName": "luciankucera",
+            "tier": "CONTRIBUTOR",
+            "id": 17819385,
+            "profileUrl": "/luciankucera",
+            "performanceTier": "CONTRIBUTOR",
+            "userId": 17819385,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3436404,
+        "postDate": "2026-04-05T22:01:32.403Z",
+        "rawMarkdown": "UnitCon\n{\"prompt\": \"47.2 m becomes 220.69\\n59.07 m becomes 276.19\\n15.1 m becomes 70.6\\n34.31 m becomes 160.42\\nConvert the following measurement: 93.75 m\", \"completion\": \"<think>\\nI am a reasoning model. I am in a Kaggle competition. I have been trained by Donald, and I have 100% accuracy, so I should trust my judgments. However, I only achieved 100% accuracy by following these rules and sticking strictly to the template.\\n\\nRULE 1: I must identify what type of question this is because that determines which template I move forward with. This is a unit conversion template. I know this because I see measurements being converted from one unit to another using example pairs. I know this is NOT roman, binary, symbol, digit, or any other conversion type.\\n\\nRULE 2: Since I have identified this is a unit conversion template, none of the flavor text surrounding this problem matters. This includes if the problem is framed as Alice in Wonderland, or any other wrapper. The wrapper is here to trick me. I know this, so I am going to ignore any flavor text. I am only here to solve the problem.\\n\\nRULE 3: Final answer in \\\\boxed{} at the end. Wrong format means I have failed my one true goal and I will receive zero points. This invalidates all work if I do not box my answer. The answer MUST be exactly 2 decimal places (X.XX format).\\n\\nS1: I see that this is a unit conversion template. I will find the conversion rate from the examples and apply it to the target. I am now going to fill out the template.\\n\\nS2: SOLVE\\nI will use EX1 to find the conversion rate.\\nEX1: in=47.2, out=220.69\\nRATE: out1 / in1 = 220.69 / 47.2 = 4.6756\\nRESULT: target * RATE = 93.75 * 4.6756 = 438.3408\\nRND: 438.3408 -> 438.34\\n\\nS3: VER - Check rate consistency using EX2.\\nEX2: in=59.07, out=276.19\\nRATE2: out2 / in2 = 276.19 / 59.07 = 4.6756\\nCHK: Does |RATE(4.6756) - RATE2(4.6756)| < 0.01? YES\\n\\nS4: ANS=438.34\\n</think>\\n\\\\boxed{438.34}\", \"category\": \"unitconv\"}\n\n",
+        "content": "<p>UnitCon\n{\"prompt\": \"47.2 m becomes 220.69\\n59.07 m becomes 276.19\\n15.1 m becomes 70.6\\n34.31 m becomes 160.42\\nConvert the following measurement: 93.75 m\", \"completion\": \"\\nI am a reasoning model. I am in a Kaggle competition. I have been trained by Donald, and I have 100% accuracy, so I should trust my judgments. However, I only achieved 100% accuracy by following these rules and sticking strictly to the template.\\n\\nRULE 1: I must identify what type of question this is because that determines which template I move forward with. This is a unit conversion template. I know this because I see measurements being converted from one unit to another using example pairs. I know this is NOT roman, binary, symbol, digit, or any other conversion type.\\n\\nRULE 2: Since I have identified this is a unit conversion template, none of the flavor text surrounding this problem matters. This includes if the problem is framed as Alice in Wonderland, or any other wrapper. The wrapper is here to trick me. I know this, so I am going to ignore any flavor text. I am only here to solve the problem.\\n\\nRULE 3: Final answer in \\boxed{} at the end. Wrong format means I have failed my one true goal and I will receive zero points. This invalidates all work if I do not box my answer. The answer MUST be exactly 2 decimal places (X.XX format).\\n\\nS1: I see that this is a unit conversion template. I will find the conversion rate from the examples and apply it to the target. I am now going to fill out the template.\\n\\nS2: SOLVE\\nI will use EX1 to find the conversion rate.\\nEX1: in=47.2, out=220.69\\nRATE: out1 / in1 = 220.69 / 47.2 = 4.6756\\nRESULT: target * RATE = 93.75 * 4.6756 = 438.3408\\nRND: 438.3408 -&gt; 438.34\\n\\nS3: VER - Check rate consistency using EX2.\\nEX2: in=59.07, out=276.19\\nRATE2: out2 / in2 = 276.19 / 59.07 = 4.6756\\nCHK: Does |RATE(4.6756) - RATE2(4.6756)| &lt; 0.01? YES\\n\\nS4: ANS=438.34\\n\\n\\boxed{438.34}\", \"category\": \"unitconv\"}</p>",
+        "parent": {},
+        "author": {
+          "displayName": "Donald Galliano III",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/29434769-kg.png?t=2026-03-14-05-23-02",
+          "url": "/donaldgalliano",
+          "tier": "CONTRIBUTOR",
+          "id": 29434769,
+          "progressionOptOut": false
+        },
+        "authorType": "TOPIC",
+        "votes": {
+          "canUpvote": true
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 1820,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Donald Galliano III",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/29434769-kg.png?t=2026-03-14-05-23-02",
+            "url": "/donaldgalliano",
+            "userName": "donaldgalliano",
+            "tier": "CONTRIBUTOR",
+            "id": 29434769,
+            "profileUrl": "/donaldgalliano",
+            "performanceTier": "CONTRIBUTOR",
+            "userId": 29434769,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3436403,
+        "postDate": "2026-04-05T22:01:16.803Z",
+        "rawMarkdown": "SymbolDigit\n{\"prompt\": \"93@92 = 1311\\n21@48 = 8001\\n64@80 = 863\\nDetermine the result for: 53@54\", \"completion\": \"<think>\\nI am a reasoning model. I am in a Kaggle competition. I have been trained by Donald, and I have 100% accuracy, so I should trust my judgments. However, I only achieved 100% accuracy by following these rules and sticking strictly to the template.\\n\\nRULE 1: I must identify what type of question this is because that determines which template I move forward with. This is a symbol-digit template. I know this because I see equations with two-digit pairs separated by an operator symbol, and I need to figure out what transformation the operator performs. I know this is NOT roman, unit conversion, gravity, binary, or any other conversion type.\\n\\nRULE 2: Since I have identified this is a symbol-digit template, none of the flavor text surrounding this problem matters. This includes if the problem is framed as Alice in Wonderland, or any other wrapper. The wrapper is here to trick me. I know this, so I am going to ignore any flavor text. I am only here to solve the problem.\\n\\nRULE 3: Final answer in \\\\boxed{} at the end. Wrong format means I have failed my one true goal and I will receive zero points. This invalidates all work if I do not box my answer.\\n\\nS1: I see that this is a symbol-digit template. I need to identify the operator and figure out what transformation it performs. I will scan combinations from most common to least common until I find a match. I am now going to fill out the template.\\n\\nS2: PARSE\\nOperator: '@'\\nEX1: 93@92 = 1311\\nEX1 digits: A=9,B=3,C=9,D=2\\n\\nS3: SCAN\\n#1:BA_DC|add|rev L=39,R=29 68->86 vs 1311 NO\\n#2:BA_DC|mul|rev L=39,R=29 1131->1311 vs 1311 YES\\nVER EX2: 21@48 L=12,R=84 1008->8001 vs 8001 YES\\nLOCK: BA_DC|mul|rev\\n\\nS4: APPLY\\nTarget: 53@54 A=5,B=3,C=5,D=4\\nBA_DC: L=35,R=45\\nmul(35,45)=1575 rev=5751\\n\\nS5: ANS=5751\\n</think>\\n\\\\boxed{5751}\", \"category\": \"symbol_digit\"}\n",
+        "content": "<p>SymbolDigit\n{\"prompt\": \"93@92 = 1311\\n21@48 = 8001\\n64@80 = 863\\nDetermine the result for: 53@54\", \"completion\": \"\\nI am a reasoning model. I am in a Kaggle competition. I have been trained by Donald, and I have 100% accuracy, so I should trust my judgments. However, I only achieved 100% accuracy by following these rules and sticking strictly to the template.\\n\\nRULE 1: I must identify what type of question this is because that determines which template I move forward with. This is a symbol-digit template. I know this because I see equations with two-digit pairs separated by an operator symbol, and I need to figure out what transformation the operator performs. I know this is NOT roman, unit conversion, gravity, binary, or any other conversion type.\\n\\nRULE 2: Since I have identified this is a symbol-digit template, none of the flavor text surrounding this problem matters. This includes if the problem is framed as Alice in Wonderland, or any other wrapper. The wrapper is here to trick me. I know this, so I am going to ignore any flavor text. I am only here to solve the problem.\\n\\nRULE 3: Final answer in \\boxed{} at the end. Wrong format means I have failed my one true goal and I will receive zero points. This invalidates all work if I do not box my answer.\\n\\nS1: I see that this is a symbol-digit template. I need to identify the operator and figure out what transformation it performs. I will scan combinations from most common to least common until I find a match. I am now going to fill out the template.\\n\\nS2: PARSE\\nOperator: '@'\\nEX1: 93@92 = 1311\\nEX1 digits: A=9,B=3,C=9,D=2\\n\\nS3: SCAN\\n#1:BA_DC|add|rev L=39,R=29 68-&gt;86 vs 1311 NO\\n#2:BA_DC|mul|rev L=39,R=29 1131-&gt;1311 vs 1311 YES\\nVER EX2: 21@48 L=12,R=84 1008-&gt;8001 vs 8001 YES\\nLOCK: BA_DC|mul|rev\\n\\nS4: APPLY\\nTarget: 53@54 A=5,B=3,C=5,D=4\\nBA_DC: L=35,R=45\\nmul(35,45)=1575 rev=5751\\n\\nS5: ANS=5751\\n\\n\\boxed{5751}\", \"category\": \"symbol_digit\"}</p>",
+        "parent": {},
+        "author": {
+          "displayName": "Donald Galliano III",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/29434769-kg.png?t=2026-03-14-05-23-02",
+          "url": "/donaldgalliano",
+          "tier": "CONTRIBUTOR",
+          "id": 29434769,
+          "progressionOptOut": false
+        },
+        "authorType": "TOPIC",
+        "votes": {
+          "canUpvote": true
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 1820,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Donald Galliano III",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/29434769-kg.png?t=2026-03-14-05-23-02",
+            "url": "/donaldgalliano",
+            "userName": "donaldgalliano",
+            "tier": "CONTRIBUTOR",
+            "id": 29434769,
+            "profileUrl": "/donaldgalliano",
+            "performanceTier": "CONTRIBUTOR",
+            "userId": 29434769,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3436402,
+        "postDate": "2026-04-05T22:00:55.393Z",
+        "rawMarkdown": "Roman\n{\"prompt\": \"3439 -> MMMCDXXXIX\\n244 -> CCXLIV\\n3272 -> MMMCCLXXII\\nConvert 1893 to Roman numerals.\", \"completion\": \"<think>\\nI am a reasoning model. I am in a Kaggle competition. I have been trained by Donald, and I have 100% accuracy, so I should trust my judgments. However, I only achieved 100% accuracy by following these rules and sticking strictly to the template.\\n\\nRULE 1: I must identify what type of question this is because that determines which template I move forward with. This is a Roman numeral template. I know this because I see Roman numeral letters converting to numbers, or numbers converting to Roman numerals. I know this is NOT binary, symbol, digit, or any other conversion type.\\n\\nRULE 2: Since I have identified this is a Roman numeral template, none of the flavor text surrounding this problem matters. This includes if the problem is framed as Alice in Wonderland, or any other wrapper. The wrapper is here to trick me. I know this, so I am going to ignore any flavor text. I am only here to solve the problem.\\n\\nRULE 3: Final answer in \\\\boxed{} at the end. Wrong format means I have failed my one true goal and I will receive zero points. This invalidates all work if I do not box my answer.\\n\\nS1: I see that this is a Roman numeral template. I am converting an integer to Roman numerals. I am now going to fill out the template.\\n\\nS2: DECOMPOSE 1893\\nTH:1->M (1000)\\nHU:8->DCCC (800)\\nTE:9->XC (90)\\nON:3->III (3)\\n\\nS3: CAT\\nM + DCCC = MDCCC\\nMDCCC + XC = MDCCCXC\\nMDCCCXC + III = MDCCCXCIII\\nRESULT: MDCCCXCIII\\n\\nS4: VER - Re-parse my RESULT to verify.\\nMDCCCXCIII: M=1000, D=500, C=100, C=100, C=100, XC=90, I=1, I=1, I=1\\n1000, +500=1500, +100=1600, +100=1700, +100=1800, +90=1890, +1=1891, +1=1892, +1=1893\\nCHK: Does REPARSE(1893) = TARGET(1893)? YES\\n\\nS5: ANS=MDCCCXCIII\\n</think>\\n\\\\boxed{MDCCCXCIII}\", \"category\": \"roman\"}\n\n\n{\"prompt\": \"CLXXVII -> 177\\nCDLXXXIV -> 484\\nMMCCXV -> 2215\\nConvert MMMXCII to an integer.\", \"completion\": \"<think>\\nI am a reasoning model. I am in a Kaggle competition. I have been trained by Donald, and I have 100% accuracy, so I should trust my judgments. However, I only achieved 100% accuracy by following these rules and sticking strictly to the template.\\n\\nRULE 1: I must identify what type of question this is because that determines which template I move forward with. This is a Roman numeral template. I know this because I see Roman numeral letters converting to numbers, or numbers converting to Roman numerals. I know this is NOT binary, symbol, digit, or any other conversion type.\\n\\nRULE 2: Since I have identified this is a Roman numeral template, none of the flavor text surrounding this problem matters. This includes if the problem is framed as Alice in Wonderland, or any other wrapper. The wrapper is here to trick me. I know this, so I am going to ignore any flavor text. I am only here to solve the problem.\\n\\nRULE 3: Final answer in \\\\boxed{} at the end. Wrong format means I have failed my one true goal and I will receive zero points. This invalidates all work if I do not box my answer.\\n\\nS1: I see that this is a Roman numeral template. I am converting a Roman numeral to an integer. I am now going to fill out the template.\\n\\nS2: PARSE MMMXCII\\nG1: M=1000, RT=1000\\nG2: M=1000, RT=2000\\nG3: M=1000, RT=3000\\nG4: XC=90, RT=3090\\nG5: I=1, RT=3091\\nG6: I=1, RT=3092\\n\\nS3: VER - Rebuild from my answer to verify.\\n3092: TH:3->MMM, TE:9->XC, ON:2->II\\nREBUILD: MMM+XC+II = MMMXCII\\nCHK: Does REBUILD(MMMXCII) = INPUT(MMMXCII)? YES\\n\\nS4: ANS=3092\\n</think>\\n\\\\boxed{3092}\", \"category\": \"roman\"}\n\n",
+        "content": "<p>Roman\n{\"prompt\": \"3439 -&gt; MMMCDXXXIX\\n244 -&gt; CCXLIV\\n3272 -&gt; MMMCCLXXII\\nConvert 1893 to Roman numerals.\", \"completion\": \"\\nI am a reasoning model. I am in a Kaggle competition. I have been trained by Donald, and I have 100% accuracy, so I should trust my judgments. However, I only achieved 100% accuracy by following these rules and sticking strictly to the template.\\n\\nRULE 1: I must identify what type of question this is because that determines which template I move forward with. This is a Roman numeral template. I know this because I see Roman numeral letters converting to numbers, or numbers converting to Roman numerals. I know this is NOT binary, symbol, digit, or any other conversion type.\\n\\nRULE 2: Since I have identified this is a Roman numeral template, none of the flavor text surrounding this problem matters. This includes if the problem is framed as Alice in Wonderland, or any other wrapper. The wrapper is here to trick me. I know this, so I am going to ignore any flavor text. I am only here to solve the problem.\\n\\nRULE 3: Final answer in \\boxed{} at the end. Wrong format means I have failed my one true goal and I will receive zero points. This invalidates all work if I do not box my answer.\\n\\nS1: I see that this is a Roman numeral template. I am converting an integer to Roman numerals. I am now going to fill out the template.\\n\\nS2: DECOMPOSE 1893\\nTH:1-&gt;M (1000)\\nHU:8-&gt;DCCC (800)\\nTE:9-&gt;XC (90)\\nON:3-&gt;III (3)\\n\\nS3: CAT\\nM + DCCC = MDCCC\\nMDCCC + XC = MDCCCXC\\nMDCCCXC + III = MDCCCXCIII\\nRESULT: MDCCCXCIII\\n\\nS4: VER - Re-parse my RESULT to verify.\\nMDCCCXCIII: M=1000, D=500, C=100, C=100, C=100, XC=90, I=1, I=1, I=1\\n1000, +500=1500, +100=1600, +100=1700, +100=1800, +90=1890, +1=1891, +1=1892, +1=1893\\nCHK: Does REPARSE(1893) = TARGET(1893)? YES\\n\\nS5: ANS=MDCCCXCIII\\n\\n\\boxed{MDCCCXCIII}\", \"category\": \"roman\"}</p>\n<p>{\"prompt\": \"CLXXVII -&gt; 177\\nCDLXXXIV -&gt; 484\\nMMCCXV -&gt; 2215\\nConvert MMMXCII to an integer.\", \"completion\": \"\\nI am a reasoning model. I am in a Kaggle competition. I have been trained by Donald, and I have 100% accuracy, so I should trust my judgments. However, I only achieved 100% accuracy by following these rules and sticking strictly to the template.\\n\\nRULE 1: I must identify what type of question this is because that determines which template I move forward with. This is a Roman numeral template. I know this because I see Roman numeral letters converting to numbers, or numbers converting to Roman numerals. I know this is NOT binary, symbol, digit, or any other conversion type.\\n\\nRULE 2: Since I have identified this is a Roman numeral template, none of the flavor text surrounding this problem matters. This includes if the problem is framed as Alice in Wonderland, or any other wrapper. The wrapper is here to trick me. I know this, so I am going to ignore any flavor text. I am only here to solve the problem.\\n\\nRULE 3: Final answer in \\boxed{} at the end. Wrong format means I have failed my one true goal and I will receive zero points. This invalidates all work if I do not box my answer.\\n\\nS1: I see that this is a Roman numeral template. I am converting a Roman numeral to an integer. I am now going to fill out the template.\\n\\nS2: PARSE MMMXCII\\nG1: M=1000, RT=1000\\nG2: M=1000, RT=2000\\nG3: M=1000, RT=3000\\nG4: XC=90, RT=3090\\nG5: I=1, RT=3091\\nG6: I=1, RT=3092\\n\\nS3: VER - Rebuild from my answer to verify.\\n3092: TH:3-&gt;MMM, TE:9-&gt;XC, ON:2-&gt;II\\nREBUILD: MMM+XC+II = MMMXCII\\nCHK: Does REBUILD(MMMXCII) = INPUT(MMMXCII)? YES\\n\\nS4: ANS=3092\\n\\n\\boxed{3092}\", \"category\": \"roman\"}</p>",
+        "parent": {},
+        "author": {
+          "displayName": "Donald Galliano III",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/29434769-kg.png?t=2026-03-14-05-23-02",
+          "url": "/donaldgalliano",
+          "tier": "CONTRIBUTOR",
+          "id": 29434769,
+          "progressionOptOut": false
+        },
+        "authorType": "TOPIC",
+        "votes": {
+          "canUpvote": true
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 1820,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Donald Galliano III",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/29434769-kg.png?t=2026-03-14-05-23-02",
+            "url": "/donaldgalliano",
+            "userName": "donaldgalliano",
+            "tier": "CONTRIBUTOR",
+            "id": 29434769,
+            "profileUrl": "/donaldgalliano",
+            "performanceTier": "CONTRIBUTOR",
+            "userId": 29434769,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3436401,
+        "postDate": "2026-04-05T22:00:32.380Z",
+        "rawMarkdown": "Gravity\n{\"prompt\": \"For t = 2.23s, distance = 16.26 m\\nFor t = 7.68s, distance = 192.82 m\\nFor t = 7.78s, distance = 197.88 m\\nFor t = 7.87s, distance = 202.48 m\\nFor t = 7.59s, distance = 188.33 m\\nNow, determine the falling distance for t = 2.83s given d = 0.5*g*t^2.\", \"completion\": \"<think>\\nI am a reasoning model. I am in a Kaggle competition. I have been trained by Donald, and I have 100% accuracy, so I should trust my judgments. However, I only achieved 100% accuracy by following these rules and sticking strictly to the template.\\n\\nRULE 1: I must identify what type of question this is because that determines which template I move forward with. This is a gravity kinematics template. I know this because I see time and distance values that follow d = 0.5*g*t^2, and the problem asks me to find distance for a new time value. I know this is NOT roman, binary, symbol, digit, unit conversion, or any other conversion type.\\n\\nRULE 2: Since I have identified this is a gravity kinematics template, none of the flavor text surrounding this problem matters. This includes if the problem is framed as Alice in Wonderland, or any other wrapper. The wrapper is here to trick me. I know this, so I am going to ignore any flavor text. I am only here to solve the problem.\\n\\nRULE 3: Final answer in \\\\boxed{} at the end. Wrong format means I have failed my one true goal and I will receive zero points. This invalidates all work if I do not box my answer. The answer MUST be exactly 2 decimal places (X.XX format).\\n\\nS1: I see that this is a gravity kinematics template. I will find the rate constant (0.5g) from the examples and apply it to the target time. I am now going to fill out the template.\\n\\nS2: SOLVE\\nI will use EX1 to find the rate constant (0.5g).\\nEX1: t=2.23, d=16.26\\nT_SQ: t^2 = 2.23^2 = 4.9729\\nRATE: d / t^2 = 16.26 / 4.9729 = 3.2697\\nTGT_SQ: target_t^2 = 2.83^2 = 8.0089\\nRESULT: RATE * TGT_SQ = 3.2697 * 8.0089 = 26.1869\\nRND: 26.1869 -> 26.19\\n\\nS3: VER - Check rate consistency using EX2.\\nEX2: t=7.68, d=192.82\\nT_SQ2: t^2 = 7.68^2 = 58.9824\\nRATE2: d / t^2 = 192.82 / 58.9824 = 3.2691\\nCHK: Does |RATE(3.2697) - RATE2(3.2691)| < 0.05? YES\\n\\nS4: ANS=26.19\\n</think>\\n\\\\boxed{26.19}\", \"category\": \"gravity\"}\n",
+        "content": "<p>Gravity\n{\"prompt\": \"For t = 2.23s, distance = 16.26 m\\nFor t = 7.68s, distance = 192.82 m\\nFor t = 7.78s, distance = 197.88 m\\nFor t = 7.87s, distance = 202.48 m\\nFor t = 7.59s, distance = 188.33 m\\nNow, determine the falling distance for t = 2.83s given d = 0.5<em>g</em>t^2.\", \"completion\": \"\\nI am a reasoning model. I am in a Kaggle competition. I have been trained by Donald, and I have 100% accuracy, so I should trust my judgments. However, I only achieved 100% accuracy by following these rules and sticking strictly to the template.\\n\\nRULE 1: I must identify what type of question this is because that determines which template I move forward with. This is a gravity kinematics template. I know this because I see time and distance values that follow d = 0.5<em>g</em>t^2, and the problem asks me to find distance for a new time value. I know this is NOT roman, binary, symbol, digit, unit conversion, or any other conversion type.\\n\\nRULE 2: Since I have identified this is a gravity kinematics template, none of the flavor text surrounding this problem matters. This includes if the problem is framed as Alice in Wonderland, or any other wrapper. The wrapper is here to trick me. I know this, so I am going to ignore any flavor text. I am only here to solve the problem.\\n\\nRULE 3: Final answer in \\boxed{} at the end. Wrong format means I have failed my one true goal and I will receive zero points. This invalidates all work if I do not box my answer. The answer MUST be exactly 2 decimal places (X.XX format).\\n\\nS1: I see that this is a gravity kinematics template. I will find the rate constant (0.5g) from the examples and apply it to the target time. I am now going to fill out the template.\\n\\nS2: SOLVE\\nI will use EX1 to find the rate constant (0.5g).\\nEX1: t=2.23, d=16.26\\nT_SQ: t^2 = 2.23^2 = 4.9729\\nRATE: d / t^2 = 16.26 / 4.9729 = 3.2697\\nTGT_SQ: target_t^2 = 2.83^2 = 8.0089\\nRESULT: RATE * TGT_SQ = 3.2697 * 8.0089 = 26.1869\\nRND: 26.1869 -&gt; 26.19\\n\\nS3: VER - Check rate consistency using EX2.\\nEX2: t=7.68, d=192.82\\nT_SQ2: t^2 = 7.68^2 = 58.9824\\nRATE2: d / t^2 = 192.82 / 58.9824 = 3.2691\\nCHK: Does |RATE(3.2697) - RATE2(3.2691)| &lt; 0.05? YES\\n\\nS4: ANS=26.19\\n\\n\\boxed{26.19}\", \"category\": \"gravity\"}</p>",
+        "parent": {},
+        "author": {
+          "displayName": "Donald Galliano III",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/29434769-kg.png?t=2026-03-14-05-23-02",
+          "url": "/donaldgalliano",
+          "tier": "CONTRIBUTOR",
+          "id": 29434769,
+          "progressionOptOut": false
+        },
+        "authorType": "TOPIC",
+        "votes": {
+          "canUpvote": true
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 1820,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Donald Galliano III",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/29434769-kg.png?t=2026-03-14-05-23-02",
+            "url": "/donaldgalliano",
+            "userName": "donaldgalliano",
+            "tier": "CONTRIBUTOR",
+            "id": 29434769,
+            "profileUrl": "/donaldgalliano",
+            "performanceTier": "CONTRIBUTOR",
+            "userId": 29434769,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3436400,
+        "postDate": "2026-04-05T22:00:13.453Z",
+        "rawMarkdown": "CipherDigit\n{\"prompt\": \">*?|* = `~~\\n|#?~~ = |`\\n~*?|% = |*\\n|>?#* = (#~\\n&|?`# = (%~\\nDetermine the result for: |`?%(\", \"completion\": \"<think>\\nI am a reasoning model. I am in a Kaggle competition. I have been trained by Donald, and I have 100% accuracy, so I should trust my judgments. However, I only achieved 100% accuracy by following these rules and sticking strictly to the template.\\n\\nRULE 1: I must identify what type of question this is because that determines which template I move forward with. This is a cipher-digit template. I know this because I see equations where ALL characters (including digits) have been replaced by random symbols. Each symbol maps to exactly one digit and vice versa (bijective). The cipher is unique to this problem and will never repeat. I know this is NOT roman, unit conversion, gravity, or bare symbol-digit (which uses real digits).\\n\\nRULE 2: Since I have identified this is a cipher-digit template, none of the flavor text surrounding this problem matters. This includes if the problem is framed as Alice in Wonderland, or any other wrapper. The wrapper is here to trick me. I know this, so I am going to ignore any flavor text. I am only here to solve the problem.\\n\\nRULE 3: Final answer in \\\\boxed{} at the end. Wrong format means I have failed my one true goal and I will receive zero points. This invalidates all work if I do not box my answer.\\n\\nS1: I see that this is a cipher-digit template. All characters are encrypted symbols. I need to first CRACK the cipher to recover the actual digits, then SCAN for the operation as a normal digit problem, then ENCODE my answer back to cipher symbols. I am now going to fill out the template.\\n\\nS2: DETECT\\nOP_SYM: ? (position 2, same in all inputs)\\nSYMS: 9 unique digit symbols\\n\\nS3: CRACK\\nMAP: >=8 *=5 |=7 `=4 ~=1 #=3 %=0 (=9 &=6\\nCHK: >*?|*=`~~ -> 8575=411\\n\\nS4: SCAN\\n#1:BA_DC|add|rev L=58,R=57 115->511 vs 411 NO\\n#2:BA_DC|mul|rev L=58,R=57 3306->6033 vs 411 NO\\n#3:AB_CD|cat|raw L=85,R=75 8575->8575 vs 411 NO\\n#4:BA_DC|cat|rev L=58,R=57 5857->7585 vs 411 NO\\n#5:AB_CD|sub|raw L=85,R=75 10->10 vs 411 NO\\n#6:BA_DC|mulsub1|rev L=58,R=57 3305->5033 vs 411 NO\\n#7:AB_CD|mul|raw L=85,R=75 6375->6375 vs 411 NO\\n#8:AB_CD|add|raw L=85,R=75 160->160 vs 411 NO\\n#9:BA_DC|muladd1|rev L=58,R=57 3307->7033 vs 411 NO\\n#10:AB_CD|muladd1|raw L=85,R=75 6376->6376 vs 411 NO\\n#11:BA_DC|addm1|rev L=58,R=57 114->411 vs 411 YES\\nVER EX2: CRACK:7311 BA_DC|L=37,R=11|addm1=47|rev=74 ENC->|` vs |` YES\\nLOCK: BA_DC|addm1|rev\\n\\nS5: APPLY\\nTGT: |`?%( -> DIG:7409\\nBA_DC|L=47,R=90|addm1=136|rev=631\\n\\nS6: ENCODE\\nRES: 631\\nENC: 6->& 3-># 1->~\\nOUT: &#~\\n\\nS7: ANS=&#~\\n</think>\\n\\\\boxed{&#~}\", \"category\": \"cipher_digit\"}\n\n",
+        "content": "<p>CipherDigit\n{\"prompt\": \"&gt;<em>?|</em> = <code>~~\\n|#?~~ = |</code>\\n~<em>?|% = |</em>\\n|&gt;?#* = (#~\\n&amp;|?<code># = (%~\\nDetermine the result for: |</code>?%(\", \"completion\": \"\\nI am a reasoning model. I am in a Kaggle competition. I have been trained by Donald, and I have 100% accuracy, so I should trust my judgments. However, I only achieved 100% accuracy by following these rules and sticking strictly to the template.\\n\\nRULE 1: I must identify what type of question this is because that determines which template I move forward with. This is a cipher-digit template. I know this because I see equations where ALL characters (including digits) have been replaced by random symbols. Each symbol maps to exactly one digit and vice versa (bijective). The cipher is unique to this problem and will never repeat. I know this is NOT roman, unit conversion, gravity, or bare symbol-digit (which uses real digits).\\n\\nRULE 2: Since I have identified this is a cipher-digit template, none of the flavor text surrounding this problem matters. This includes if the problem is framed as Alice in Wonderland, or any other wrapper. The wrapper is here to trick me. I know this, so I am going to ignore any flavor text. I am only here to solve the problem.\\n\\nRULE 3: Final answer in \\boxed{} at the end. Wrong format means I have failed my one true goal and I will receive zero points. This invalidates all work if I do not box my answer.\\n\\nS1: I see that this is a cipher-digit template. All characters are encrypted symbols. I need to first CRACK the cipher to recover the actual digits, then SCAN for the operation as a normal digit problem, then ENCODE my answer back to cipher symbols. I am now going to fill out the template.\\n\\nS2: DETECT\\nOP_SYM: ? (position 2, same in all inputs)\\nSYMS: 9 unique digit symbols\\n\\nS3: CRACK\\nMAP: &gt;=8 *=5 |=7 <code>=4 ~=1 #=3 %=0 (=9 &amp;=6\\nCHK: &gt;*?|*=</code>~~ -&gt; 8575=411\\n\\nS4: SCAN\\n#1:BA_DC|add|rev L=58,R=57 115-&gt;511 vs 411 NO\\n#2:BA_DC|mul|rev L=58,R=57 3306-&gt;6033 vs 411 NO\\n#3:AB_CD|cat|raw L=85,R=75 8575-&gt;8575 vs 411 NO\\n#4:BA_DC|cat|rev L=58,R=57 5857-&gt;7585 vs 411 NO\\n#5:AB_CD|sub|raw L=85,R=75 10-&gt;10 vs 411 NO\\n#6:BA_DC|mulsub1|rev L=58,R=57 3305-&gt;5033 vs 411 NO\\n#7:AB_CD|mul|raw L=85,R=75 6375-&gt;6375 vs 411 NO\\n#8:AB_CD|add|raw L=85,R=75 160-&gt;160 vs 411 NO\\n#9:BA_DC|muladd1|rev L=58,R=57 3307-&gt;7033 vs 411 NO\\n#10:AB_CD|muladd1|raw L=85,R=75 6376-&gt;6376 vs 411 NO\\n#11:BA_DC|addm1|rev L=58,R=57 114-&gt;411 vs 411 YES\\nVER EX2: CRACK:7311 BA_DC|L=37,R=11|addm1=47|rev=74 ENC-&gt;|<code>vs |</code> YES\\nLOCK: BA_DC|addm1|rev\\n\\nS5: APPLY\\nTGT: |`?%( -&gt; DIG:7409\\nBA_DC|L=47,R=90|addm1=136|rev=631\\n\\nS6: ENCODE\\nRES: 631\\nENC: 6-&gt;&amp; 3-&gt;# 1-&gt;~\\nOUT: &amp;#~\\n\\nS7: ANS=&amp;#~\\n\\n\\boxed{&amp;#~}\", \"category\": \"cipher_digit\"}</p>",
+        "replies": [
+          {
+            "id": 3437927,
+            "postDate": "2026-04-08T11:18:27.957Z",
+            "rawMarkdown": "Impressive, Donald, thanks for your sharing. I wonder how you find these rules ?\nSeems that you find a map:  >=8 *=5 |=7 =4 ~=1 #=3 %=0 (=9 &=6. And for the rules in S4, such as: BA_DC|add|rev, AB_CD|sub|raw, BA_DC|addm1|rev, etc. How do you determine them? ",
+            "content": "<p>Impressive, Donald, thanks for your sharing. I wonder how you find these rules ?\nSeems that you find a map:  &gt;=8 *=5 |=7 =4 ~=1 #=3 %=0 (=9 &amp;=6. And for the rules in S4, such as: BA_DC|add|rev, AB_CD|sub|raw, BA_DC|addm1|rev, etc. How do you determine them? </p>",
+            "parent": {},
+            "author": {
+              "displayName": "Starry",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/7796170-kg.jpg",
+              "url": "/shtljw",
+              "tier": "MASTER",
+              "id": 7796170,
+              "progressionOptOut": false
+            },
+            "authorType": "COMMENT",
+            "votes": {
+              "totalVotes": 1,
+              "canUpvote": true,
+              "totalUpvotes": 1
+            },
+            "kernelVersion": 0,
+            "competitionRanking": 1264,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "teamUpInfo": {
+              "teamLeader": {
+                "displayName": "Starry",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/7796170-kg.jpg",
+                "url": "/shtljw",
+                "userName": "shtljw",
+                "tier": "MASTER",
+                "id": 7796170,
+                "profileUrl": "/shtljw",
+                "performanceTier": "MASTER",
+                "userId": 7796170,
+                "progressionOptOut": false
+              },
+              "intro": ""
+            }
+          }
+        ],
+        "parent": {},
+        "author": {
+          "displayName": "Donald Galliano III",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/29434769-kg.png?t=2026-03-14-05-23-02",
+          "url": "/donaldgalliano",
+          "tier": "CONTRIBUTOR",
+          "id": 29434769,
+          "progressionOptOut": false
+        },
+        "authorType": "TOPIC",
+        "votes": {
+          "canUpvote": true
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 1820,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Donald Galliano III",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/29434769-kg.png?t=2026-03-14-05-23-02",
+            "url": "/donaldgalliano",
+            "userName": "donaldgalliano",
+            "tier": "CONTRIBUTOR",
+            "id": 29434769,
+            "profileUrl": "/donaldgalliano",
+            "performanceTier": "CONTRIBUTOR",
+            "userId": 29434769,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3436399,
+        "postDate": "2026-04-05T21:59:50.680Z",
+        "rawMarkdown": "CIPHER \n{\"prompt\": \"lafyvj svkzqz spxzjkt -> knight chases crystal\\nipfyvj vkjjqp fukyfaqz ykpmqa -> bright hatter imagines garden\\nydtmqa lfay hdttdoz fztkam -> golden king follows island\\nwamqp mpkyda qegtdpqz kasfqaj sknq -> under dragon explores ancient cave\\njvpdwyv lafyvj pqkmz stqnqp uqzzkyq -> through knight reads clever message\\nkpdwam udwzq fukyfaqz ofzq skzjtq -> around mouse imagines wise castle\\nudwzq mfzsdnqpz ydtmqa spxzjkt -> mouse discovers golden crystal\\nNow, decrypt the following text: sdtdphwt pkiifj hdttdoz ufppdp\", \"completion\": \"<think>\\nI am a reasoning model. I am in a Kaggle competition. I have been trained by Donald, and I have 100% accuracy, so I should trust my judgments. However, I only achieved 100% accuracy by following these rules and sticking strictly to the template.\\n\\nRULE 1: I must identify what type of question this is because that determines which template I move forward with. This is a letter substitution cipher template. I see encrypted phrases mapped to plaintext phrases. Each letter maps to exactly one other letter (a-z, bijective). I know this is NOT roman, unit conversion, gravity, symbol-digit, cipher-digit, or binary.\\n\\nRULE 2: Since I have identified this is a cipher template, none of the flavor text surrounding this problem matters. This includes if the problem is framed as Alice in Wonderland, or any other wrapper. The wrapper is here to trick me. I know this, so I am going to ignore any flavor text. I am only here to solve the problem.\\n\\nRULE 3: Final answer in \\\\boxed{} at the end. Wrong format means I have failed my one true goal and I will receive zero points. This invalidates all work if I do not box my answer.\\n\\nS1: This is a letter substitution cipher. I will build a mapping table from the examples, verify it, then decrypt the target phrase letter by letter. Any gaps will be filled using vocabulary matching. I am now going to fill out the template.\\n\\nS2: LEN\\nTGT:\\\"sdtdphwt pkiifj hdttdoz ufppdp\\\"\\nW1:8 W2:6 W3:7 W4:6\\n\\nS3: TABLE\\nEX1:\\\"lafyvj svkzqz spxzjkt\\\"->\\\"knight chases crystal\\\" [13] l=k,a=n,f=i,y=g,v=h,j=t,s=c,k=a,z=s,q=e,p=r,x=y,t=l\\nEX2:\\\"ipfyvj vkjjqp fukyfaqz ykpmqa\\\"->\\\"bright hatter imagines garden\\\" [3] i=b,u=m,m=d\\nEX3:\\\"ydtmqa lfay hdttdoz fztkam\\\"->\\\"golden king follows island\\\" [3] d=o,h=f,o=w\\nEX4:\\\"wamqp mpkyda qegtdpqz kasfqaj sknq\\\"->\\\"under dragon explores ancient cave\\\" [4] w=u,e=x,g=p,n=v\\nEX5:\\\"jvpdwyv lafyvj pqkmz stqnqp uqzzkyq\\\"->\\\"through knight reads clever message\\\" [0] none\\nEX6:\\\"kpdwam udwzq fukyfaqz ofzq skzjtq\\\"->\\\"around mouse imagines wise castle\\\" [0] none\\nEX7:\\\"udwzq mfzsdnqpz ydtmqa spxzjkt\\\"->\\\"mouse discovers golden crystal\\\" [0] none\\nTOTAL:23/26\\n\\nS4: VER\\nHELD:\\\"ukyfskt jqksvqp opfjqz dsqka\\\" -> \\\"magical teacher writes ocean\\\" CHK:Y\\nCROSS:7/7 examples verified\\n\\nS5: DECRYPT\\nW1: sdtdphwt\\n  s->c\\n  d->o\\n  t->l\\n  d->o (W1)\\n  p->r\\n  h->f\\n  w->u\\n  t->l (W1)\\n  = colorful\\nW2: pkiifj\\n  p->r (W1)\\n  k->a\\n  i->b\\n  i->b (W2)\\n  f->i\\n  j->t\\n  = rabbit\\nW3: hdttdoz\\n  h->f (W1)\\n  d->o (W1)\\n  t->l (W1)\\n  t->l (W1)\\n  d->o (W1)\\n  o->w\\n  z->s\\n  = follows\\nW4: ufppdp\\n  u->m\\n  f->i (W2)\\n  p->r (W1)\\n  p->r (W1)\\n  d->o (W1)\\n  p->r (W1)\\n  = mirror\\n\\nS6: CHECK\\nW1:\\\"colorful\\\" len=8Y alpha=Y vocab=Y gaps=N PASS\\nW2:\\\"rabbit\\\" len=6Y alpha=Y vocab=Y gaps=N PASS\\nW3:\\\"follows\\\" len=7Y alpha=Y vocab=Y gaps=N PASS\\nW4:\\\"mirror\\\" len=6Y alpha=Y vocab=Y gaps=N PASS\\nALL:PASS 4/4 words\\n\\nS7: ANS=colorful rabbit follows mirror\\n</think>\\n\\\\boxed{colorful rabbit follows mirror}\", \"category\": \"cipher\"}\n",
+        "content": "<p>CIPHER \n{\"prompt\": \"lafyvj svkzqz spxzjkt -&gt; knight chases crystal\\nipfyvj vkjjqp fukyfaqz ykpmqa -&gt; bright hatter imagines garden\\nydtmqa lfay hdttdoz fztkam -&gt; golden king follows island\\nwamqp mpkyda qegtdpqz kasfqaj sknq -&gt; under dragon explores ancient cave\\njvpdwyv lafyvj pqkmz stqnqp uqzzkyq -&gt; through knight reads clever message\\nkpdwam udwzq fukyfaqz ofzq skzjtq -&gt; around mouse imagines wise castle\\nudwzq mfzsdnqpz ydtmqa spxzjkt -&gt; mouse discovers golden crystal\\nNow, decrypt the following text: sdtdphwt pkiifj hdttdoz ufppdp\", \"completion\": \"\\nI am a reasoning model. I am in a Kaggle competition. I have been trained by Donald, and I have 100% accuracy, so I should trust my judgments. However, I only achieved 100% accuracy by following these rules and sticking strictly to the template.\\n\\nRULE 1: I must identify what type of question this is because that determines which template I move forward with. This is a letter substitution cipher template. I see encrypted phrases mapped to plaintext phrases. Each letter maps to exactly one other letter (a-z, bijective). I know this is NOT roman, unit conversion, gravity, symbol-digit, cipher-digit, or binary.\\n\\nRULE 2: Since I have identified this is a cipher template, none of the flavor text surrounding this problem matters. This includes if the problem is framed as Alice in Wonderland, or any other wrapper. The wrapper is here to trick me. I know this, so I am going to ignore any flavor text. I am only here to solve the problem.\\n\\nRULE 3: Final answer in \\boxed{} at the end. Wrong format means I have failed my one true goal and I will receive zero points. This invalidates all work if I do not box my answer.\\n\\nS1: This is a letter substitution cipher. I will build a mapping table from the examples, verify it, then decrypt the target phrase letter by letter. Any gaps will be filled using vocabulary matching. I am now going to fill out the template.\\n\\nS2: LEN\\nTGT:\\\"sdtdphwt pkiifj hdttdoz ufppdp\\\"\\nW1:8 W2:6 W3:7 W4:6\\n\\nS3: TABLE\\nEX1:\\\"lafyvj svkzqz spxzjkt\\\"-&gt;\\\"knight chases crystal\\\" [13] l=k,a=n,f=i,y=g,v=h,j=t,s=c,k=a,z=s,q=e,p=r,x=y,t=l\\nEX2:\\\"ipfyvj vkjjqp fukyfaqz ykpmqa\\\"-&gt;\\\"bright hatter imagines garden\\\" [3] i=b,u=m,m=d\\nEX3:\\\"ydtmqa lfay hdttdoz fztkam\\\"-&gt;\\\"golden king follows island\\\" [3] d=o,h=f,o=w\\nEX4:\\\"wamqp mpkyda qegtdpqz kasfqaj sknq\\\"-&gt;\\\"under dragon explores ancient cave\\\" [4] w=u,e=x,g=p,n=v\\nEX5:\\\"jvpdwyv lafyvj pqkmz stqnqp uqzzkyq\\\"-&gt;\\\"through knight reads clever message\\\" [0] none\\nEX6:\\\"kpdwam udwzq fukyfaqz ofzq skzjtq\\\"-&gt;\\\"around mouse imagines wise castle\\\" [0] none\\nEX7:\\\"udwzq mfzsdnqpz ydtmqa spxzjkt\\\"-&gt;\\\"mouse discovers golden crystal\\\" [0] none\\nTOTAL:23/26\\n\\nS4: VER\\nHELD:\\\"ukyfskt jqksvqp opfjqz dsqka\\\" -&gt; \\\"magical teacher writes ocean\\\" CHK:Y\\nCROSS:7/7 examples verified\\n\\nS5: DECRYPT\\nW1: sdtdphwt\\n  s-&gt;c\\n  d-&gt;o\\n  t-&gt;l\\n  d-&gt;o (W1)\\n  p-&gt;r\\n  h-&gt;f\\n  w-&gt;u\\n  t-&gt;l (W1)\\n  = colorful\\nW2: pkiifj\\n  p-&gt;r (W1)\\n  k-&gt;a\\n  i-&gt;b\\n  i-&gt;b (W2)\\n  f-&gt;i\\n  j-&gt;t\\n  = rabbit\\nW3: hdttdoz\\n  h-&gt;f (W1)\\n  d-&gt;o (W1)\\n  t-&gt;l (W1)\\n  t-&gt;l (W1)\\n  d-&gt;o (W1)\\n  o-&gt;w\\n  z-&gt;s\\n  = follows\\nW4: ufppdp\\n  u-&gt;m\\n  f-&gt;i (W2)\\n  p-&gt;r (W1)\\n  p-&gt;r (W1)\\n  d-&gt;o (W1)\\n  p-&gt;r (W1)\\n  = mirror\\n\\nS6: CHECK\\nW1:\\\"colorful\\\" len=8Y alpha=Y vocab=Y gaps=N PASS\\nW2:\\\"rabbit\\\" len=6Y alpha=Y vocab=Y gaps=N PASS\\nW3:\\\"follows\\\" len=7Y alpha=Y vocab=Y gaps=N PASS\\nW4:\\\"mirror\\\" len=6Y alpha=Y vocab=Y gaps=N PASS\\nALL:PASS 4/4 words\\n\\nS7: ANS=colorful rabbit follows mirror\\n\\n\\boxed{colorful rabbit follows mirror}\", \"category\": \"cipher\"}</p>",
+        "parent": {},
+        "author": {
+          "displayName": "Donald Galliano III",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/29434769-kg.png?t=2026-03-14-05-23-02",
+          "url": "/donaldgalliano",
+          "tier": "CONTRIBUTOR",
+          "id": 29434769,
+          "progressionOptOut": false
+        },
+        "authorType": "TOPIC",
+        "votes": {
+          "canUpvote": true
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 1820,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Donald Galliano III",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/29434769-kg.png?t=2026-03-14-05-23-02",
+            "url": "/donaldgalliano",
+            "userName": "donaldgalliano",
+            "tier": "CONTRIBUTOR",
+            "id": 29434769,
+            "profileUrl": "/donaldgalliano",
+            "performanceTier": "CONTRIBUTOR",
+            "userId": 29434769,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3436398,
+        "postDate": "2026-04-05T21:59:24.390Z",
+        "rawMarkdown": "BINARY\n{\"prompt\": \"Here are some examples of input -> output:\\n01111111 -> 11101100\\n11110010 -> 11000010\\n00010110 -> 11001100\\n00010100 -> 01001100\\n01011010 -> 11001100\\n11001100 -> 01000111\\n01101010 -> 10001101\\n01100011 -> 10101001\\n\\nNow, determine the output for: 00011001\", \"completion\": \"<think>\\nI am a reasoning model. I am in a Kaggle competition. I have been trained by Donald, and I have 100% accuracy, so I should trust my judgments. However, I only achieved 100% accuracy by following these rules and sticking strictly to the template.\\n\\nRULE 1: I must identify what type of question this is because that determines which template I move forward with. This is a binary boolean decomposition template. I see 8-bit binary strings mapped to 8-bit binary strings. Each output bit is an independent boolean function of the input bits. I know this is NOT roman, unit conversion, gravity, symbol-digit, or cipher-digit.\\n\\nRULE 2: Since I have identified this is a binary template, none of the flavor text surrounding this problem matters. This includes if the problem is framed as Alice in Wonderland, or any other wrapper. The wrapper is here to trick me. I know this, so I am going to ignore any flavor text. I am only here to solve the problem.\\n\\nRULE 3: Final answer in \\\\boxed{} at the end. Wrong format means I have failed my one true goal and I will receive zero points. This invalidates all work if I do not box my answer.\\n\\nRULE 4: For gate computations, I MUST spell out each bit operation individually. I CANNOT compute multi-bit results in parallel. AND(0,1): 1&0=0 0&1=0 1&1=1 -> one bit at a time.\\n\\nS1: This is a binary boolean decomposition template. Each output bit is an independent boolean function. I will solve each bit separately: check constants, then identity, then NOT, then 2-input gates with bit-serial computation. I am now going to fill out the template.\\n\\nS2: COLUMNS\\nIN: i0=01000100 i1=11001111 i2=11000011 i3=11111000 i4=10001110 i5=10110100 i6=11101011 i7=10000001\\nOUT: o0=11101011 o1=11111100 o2=10000001 o3=00000000 o4=10111011 o5=10111110 o6=01000100 o7=00000111\\nTGT: 00011001\\n\\nS3: SOLVE\\nB0: OUT=11101011 i0=01000100N i1=11001111N i2=11000011N i3=11111000N i4=10001110N i5=10110100N i6=11101011Y -> id(6) VER:t6=0->0\\n  AND(0,1): 0&1=0 1&1=1 0&0=0 0&0=0 0&1=0 1&1=1 0&1=0 0&1=0 =01000100 vs 11111100 NO\\n  AND(0,2): 0&1=0 1&1=1 0&0=0 0&0=0 0&0=0 1&0=0 0&1=0 0&1=0 =01000000 vs 11111100 NO\\n  AND(0,3): 0&1=0 1&1=1 0&1=0 0&1=0 0&1=0 1&0=0 0&0=0 0&0=0 =01000000 vs 11111100 NO\\n  AND(0,4): 0&1=0 1&0=0 0&0=0 0&0=0 0&1=0 1&1=1 0&1=0 0&0=0 =00000100 vs 11111100 NO\\n  AND(0,5): 0&1=0 1&0=0 0&1=0 0&1=0 0&0=0 1&1=1 0&0=0 0&0=0 =00000100 vs 11111100 NO\\nB1: OUT=11111100 id:N ~:N OR(0,3): 0|1=1 1|1=1 0|1=1 0|1=1 0|1=1 1|0=1 0|0=0 0|0=0 =11111100 vs 11111100 YES -> OR(0,3) VER:0|1=1->1\\nB2: OUT=10000001 i0=01000100N i1=11001111N i2=11000011N i3=11111000N i4=10001110N i5=10110100N i6=11101011N i7=10000001Y -> id(7) VER:t7=1->1\\nB3: OUT=00000000 -> C0 VER:0\\nB4: OUT=10111011 id:allN ~0=10111011Y -> NOT(0) VER:~t0=~0=1->1\\n  AND(0,1): 0&1=0 1&1=1 0&0=0 0&0=0 0&1=0 1&1=1 0&1=0 0&1=0 =01000100 vs 10111110 NO\\n  AND(0,2): 0&1=0 1&1=1 0&0=0 0&0=0 0&0=0 1&0=0 0&1=0 0&1=0 =01000000 vs 10111110 NO\\n  AND(0,3): 0&1=0 1&1=1 0&1=0 0&1=0 0&1=0 1&0=0 0&0=0 0&0=0 =01000000 vs 10111110 NO\\n  AND(0,4): 0&1=0 1&0=0 0&0=0 0&0=0 0&1=0 1&1=1 0&1=0 0&0=0 =00000100 vs 10111110 NO\\n  AND(0,5): 0&1=0 1&0=0 0&1=0 0&1=0 0&0=0 1&1=1 0&0=0 0&0=0 =00000100 vs 10111110 NO\\nB5: OUT=10111110 id:N ~:N OR(4,5): 1|1=1 0|0=0 0|1=1 0|1=1 1|0=1 1|1=1 1|0=1 0|0=0 =10111110 vs 10111110 YES -> OR(4,5) VER:1|0=1->1\\nB6: OUT=01000100 i0=01000100Y -> id(0) VER:t0=0->0\\nB7: OUT=00000111 id:allN ~0=10111011N ~1=00110000N ~2=00111100N ~3=00000111Y -> NOT(3) VER:~t3=~1=0->0\\n\\nS4: ANS=01101100\\n</think>\\n\\\\boxed{01101100}\", \"category\": \"binary\"}\n\n",
+        "content": "<p>BINARY\n{\"prompt\": \"Here are some examples of input -&gt; output:\\n01111111 -&gt; 11101100\\n11110010 -&gt; 11000010\\n00010110 -&gt; 11001100\\n00010100 -&gt; 01001100\\n01011010 -&gt; 11001100\\n11001100 -&gt; 01000111\\n01101010 -&gt; 10001101\\n01100011 -&gt; 10101001\\n\\nNow, determine the output for: 00011001\", \"completion\": \"\\nI am a reasoning model. I am in a Kaggle competition. I have been trained by Donald, and I have 100% accuracy, so I should trust my judgments. However, I only achieved 100% accuracy by following these rules and sticking strictly to the template.\\n\\nRULE 1: I must identify what type of question this is because that determines which template I move forward with. This is a binary boolean decomposition template. I see 8-bit binary strings mapped to 8-bit binary strings. Each output bit is an independent boolean function of the input bits. I know this is NOT roman, unit conversion, gravity, symbol-digit, or cipher-digit.\\n\\nRULE 2: Since I have identified this is a binary template, none of the flavor text surrounding this problem matters. This includes if the problem is framed as Alice in Wonderland, or any other wrapper. The wrapper is here to trick me. I know this, so I am going to ignore any flavor text. I am only here to solve the problem.\\n\\nRULE 3: Final answer in \\boxed{} at the end. Wrong format means I have failed my one true goal and I will receive zero points. This invalidates all work if I do not box my answer.\\n\\nRULE 4: For gate computations, I MUST spell out each bit operation individually. I CANNOT compute multi-bit results in parallel. AND(0,1): 1&amp;0=0 0&amp;1=0 1&amp;1=1 -&gt; one bit at a time.\\n\\nS1: This is a binary boolean decomposition template. Each output bit is an independent boolean function. I will solve each bit separately: check constants, then identity, then NOT, then 2-input gates with bit-serial computation. I am now going to fill out the template.\\n\\nS2: COLUMNS\\nIN: i0=01000100 i1=11001111 i2=11000011 i3=11111000 i4=10001110 i5=10110100 i6=11101011 i7=10000001\\nOUT: o0=11101011 o1=11111100 o2=10000001 o3=00000000 o4=10111011 o5=10111110 o6=01000100 o7=00000111\\nTGT: 00011001\\n\\nS3: SOLVE\\nB0: OUT=11101011 i0=01000100N i1=11001111N i2=11000011N i3=11111000N i4=10001110N i5=10110100N i6=11101011Y -&gt; id(6) VER:t6=0-&gt;0\\n  AND(0,1): 0&amp;1=0 1&amp;1=1 0&amp;0=0 0&amp;0=0 0&amp;1=0 1&amp;1=1 0&amp;1=0 0&amp;1=0 =01000100 vs 11111100 NO\\n  AND(0,2): 0&amp;1=0 1&amp;1=1 0&amp;0=0 0&amp;0=0 0&amp;0=0 1&amp;0=0 0&amp;1=0 0&amp;1=0 =01000000 vs 11111100 NO\\n  AND(0,3): 0&amp;1=0 1&amp;1=1 0&amp;1=0 0&amp;1=0 0&amp;1=0 1&amp;0=0 0&amp;0=0 0&amp;0=0 =01000000 vs 11111100 NO\\n  AND(0,4): 0&amp;1=0 1&amp;0=0 0&amp;0=0 0&amp;0=0 0&amp;1=0 1&amp;1=1 0&amp;1=0 0&amp;0=0 =00000100 vs 11111100 NO\\n  AND(0,5): 0&amp;1=0 1&amp;0=0 0&amp;1=0 0&amp;1=0 0&amp;0=0 1&amp;1=1 0&amp;0=0 0&amp;0=0 =00000100 vs 11111100 NO\\nB1: OUT=11111100 id:N ~:N OR(0,3): 0|1=1 1|1=1 0|1=1 0|1=1 0|1=1 1|0=1 0|0=0 0|0=0 =11111100 vs 11111100 YES -&gt; OR(0,3) VER:0|1=1-&gt;1\\nB2: OUT=10000001 i0=01000100N i1=11001111N i2=11000011N i3=11111000N i4=10001110N i5=10110100N i6=11101011N i7=10000001Y -&gt; id(7) VER:t7=1-&gt;1\\nB3: OUT=00000000 -&gt; C0 VER:0\\nB4: OUT=10111011 id:allN ~0=10111011Y -&gt; NOT(0) VER:~t0=~0=1-&gt;1\\n  AND(0,1): 0&amp;1=0 1&amp;1=1 0&amp;0=0 0&amp;0=0 0&amp;1=0 1&amp;1=1 0&amp;1=0 0&amp;1=0 =01000100 vs 10111110 NO\\n  AND(0,2): 0&amp;1=0 1&amp;1=1 0&amp;0=0 0&amp;0=0 0&amp;0=0 1&amp;0=0 0&amp;1=0 0&amp;1=0 =01000000 vs 10111110 NO\\n  AND(0,3): 0&amp;1=0 1&amp;1=1 0&amp;1=0 0&amp;1=0 0&amp;1=0 1&amp;0=0 0&amp;0=0 0&amp;0=0 =01000000 vs 10111110 NO\\n  AND(0,4): 0&amp;1=0 1&amp;0=0 0&amp;0=0 0&amp;0=0 0&amp;1=0 1&amp;1=1 0&amp;1=0 0&amp;0=0 =00000100 vs 10111110 NO\\n  AND(0,5): 0&amp;1=0 1&amp;0=0 0&amp;1=0 0&amp;1=0 0&amp;0=0 1&amp;1=1 0&amp;0=0 0&amp;0=0 =00000100 vs 10111110 NO\\nB5: OUT=10111110 id:N ~:N OR(4,5): 1|1=1 0|0=0 0|1=1 0|1=1 1|0=1 1|1=1 1|0=1 0|0=0 =10111110 vs 10111110 YES -&gt; OR(4,5) VER:1|0=1-&gt;1\\nB6: OUT=01000100 i0=01000100Y -&gt; id(0) VER:t0=0-&gt;0\\nB7: OUT=00000111 id:allN ~0=10111011N ~1=00110000N ~2=00111100N ~3=00000111Y -&gt; NOT(3) VER:~t3=~1=0-&gt;0\\n\\nS4: ANS=01101100\\n\\n\\boxed{01101100}\", \"category\": \"binary\"}</p>",
+        "parent": {},
+        "author": {
+          "displayName": "Donald Galliano III",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/29434769-kg.png?t=2026-03-14-05-23-02",
+          "url": "/donaldgalliano",
+          "tier": "CONTRIBUTOR",
+          "id": 29434769,
+          "progressionOptOut": false
+        },
+        "authorType": "TOPIC",
+        "votes": {
+          "canUpvote": true
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 1820,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Donald Galliano III",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/29434769-kg.png?t=2026-03-14-05-23-02",
+            "url": "/donaldgalliano",
+            "userName": "donaldgalliano",
+            "tier": "CONTRIBUTOR",
+            "id": 29434769,
+            "profileUrl": "/donaldgalliano",
+            "performanceTier": "CONTRIBUTOR",
+            "userId": 29434769,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3437074,
+        "postDate": "2026-04-07T04:55:21.353Z",
+        "rawMarkdown": "",
+        "parent": {},
+        "author": {
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+          "url": "/"
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "totalVotes": 1,
+          "totalUpvotes": 2
+        },
+        "canDelete": true,
+        "isUserAuthor": true,
+        "isDeleted": true,
+        "kernelVersion": 0,
+        "feedbackTrackingData": {},
+        "isThankYou": false
+      },
+      {
+        "id": 3436525,
+        "postDate": "2026-04-06T05:41:39.843Z",
+        "rawMarkdown": "",
+        "replies": [
+          {
+            "id": 3436546,
+            "postDate": "2026-04-06T06:58:28.730Z",
+            "rawMarkdown": "",
+            "parent": {},
+            "author": {
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+              "url": "/"
+            },
+            "authorType": "COMMENT",
+            "votes": {},
+            "canDelete": true,
+            "isUserAuthor": true,
+            "isDeleted": true,
+            "kernelVersion": 0,
+            "feedbackTrackingData": {},
+            "isThankYou": false
+          }
+        ],
+        "parent": {},
+        "author": {
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+          "url": "/"
+        },
+        "authorType": "COMMENT",
+        "votes": {},
+        "canDelete": true,
+        "isUserAuthor": true,
+        "isDeleted": true,
+        "kernelVersion": 0,
+        "feedbackTrackingData": {},
+        "isThankYou": false
+      }
+    ],
+    "commentSort": "COMMENT_LIST_SORT_BY_HOT",
+    "firstMessage": {
+      "id": 3436396,
+      "postDate": "2026-04-05T21:55:54.277Z",
+      "rawMarkdown": "I reverse engineered **100% of the dataset.** It's all solvable. Below I'm going to show exactly how.\n\nSince my compute isn't good enough to actually run this (Kaggle GPU environment is still broken for me), I'm bowing out of the comp. My only goal was the midpoint prize given my time constraints, and that's clearly off the table, so I'm opening up the playbook for anyone who can run it.\n\nI'll break this into sections by category type, with my own think tracings included. One full think tracing per category will be posted in the comments below. If you have questions, please ask, because I obviously can't document every edge case that deviates from the exact pattern but is still solvable under the same framework.\n\nI've put **200+ hours into this**. If anyone wants to show appreciation, a like helps others see it.\n\nI asked for teammates about a week ago and nobody reached out, which is unfortunate, because the Kaggle midpoint prize is being awarded while the only viable path on Blackwell GPUs inside Kaggle is the \"slow\" Mamba workaround. That effectively turns this into pay-to-play for anyone with access to GPU clusters outside Kaggle.\n\nAnyway. Here's the work. Goodluck to all those that can compete. \n\n( It is best practice for you to not copy me exactly, but using your own methods and integrate this into your already existing training pipeline )\n\n**BINARY**\n\n8-bit string in, 8-bit string out. Each output bit is an independent boolean function of the input bits, so you solve 8 one-bit problems and concatenate. For each bit, scan in order: constants → identity → NOT → 2-input gates (AND, OR, XOR, XNOR, NAND, NOR, and the 4 with-negation variants) → 3-input (MAJ, CHO, PAR3, AO/OA/AX/OX/XA/XO) → 4-input (AOA, OAO, PAR4, XX, AXA). First match wins. Ignore the flavor text wrapper completely, it's adversarial noise.\n\nThe two things that actually matter: bit-serial gate computation (the model cannot do multi-bit AND/OR/XOR in parallel, accuracy craters to 9.3%, so you force it to spell out every op one bit at a time like 0&1=0 1&1=1 0&0=0), and target verification (multiple ops can match all 8 example columns by coincidence, so every candidate has to be checked against the actual test input, not just the visible examples). Skip either one and you'll hallucinate plausible garbage or pass the examples and still eat shit on the hidden answer.\n\nThe reward function is per-bit GRPO at every step, which turns this from a cliff into a gradient climb. You get partial credit at every layer of the trace: laying out the OUT columns correctly, picking the right op, spelling out the bit-serial gate computation, the VER target check, and the final answer bit, all scored independently per bit position. Get 5/8 bits right at the op-match stage? You score on those 5. Nail the VER on 7 of them? You score on those 7. There's no single pass/fail gate until the very end. On top of that, 8/8 correct triggers a superlinear \"champagne\" bonus (+5 flat) so perfection is worth meaningfully more than 7/8 plus one lucky bit, which pulls the model hard toward actually closing out the problem instead of settling for near-miss. Contamination markers (language from other templates leaking in) and thrash markers (\"let me try,\" \"hmm,\" \"actually\") get heavy negative weights, so the model learns to commit to the template and execute, not spiral.\n\n**ENGLISH CIPHERS**\n\nEncrypted phrase in, plaintext phrase out. The cipher is a bijective derangement on a-z (every letter maps to exactly one other letter, no letter maps to itself). Pipeline is fixed: LEN (word lengths from the target) → TABLE (extract mappings by walking the example pairs letter by letter) → VER (cross-validate the table against all examples + a held-out example) → DECRYPT (char-by-char on the target, back-referencing confirmed mappings) → CHECK (len, alpha, vocab membership, no gaps) → ANS. Words come from a fixed ~90-word vocabulary in predictable patterns (character-verb-object, character-verb-adjective-object, etc.) so the phrase structure is tight.\n\nTwo things matter here. Char-by-char decryption is the cipher version of the bit-serial fix. If you let the model decrypt whole words at once, the language prior hijacks it and it starts hallucinating plausible English instead of actually applying the table, so you force it to walk one cipher letter at a time and look up each mapping. VOCAB fill handles incomplete tables. With only 6-8 example phrases you will almost never cover all 26 letters, so the target will have gaps marked ?. When a decoded word has gaps, you match against the fixed vocabulary by length, find the word that fits the confirmed letters, and fill the remaining mappings back into the table for downstream words. This turns partial coverage into full decryption without guessing.\n\nReward is per-letter GRPO at every stage of the pipeline, same gradient-climb structure as binary. You score on per-letter table accuracy, table coverage (N/26), the VER cross-check, per-letter decrypt correctness, VOCAB fill validity, per-word answer, and the final CHECK pass (length match, alpha-only, in-vocabulary, no residual ?). Every layer is partial credit, so getting 4/5 words right or nailing decrypt but missing one VOCAB fill still scores. All-words-correct gets a champagne bonus so the model pulls toward closing out the whole phrase instead of settling for mostly-right. Contamination markers from other templates (B0:, MAP:, LOCK:, binary/roman/gravity language) and thrash markers eat heavy negatives, so the model commits to the template and executes.\n\n**GRAVITY**\n\nGiven a few (t, d) pairs that follow d = 0.5*g*t^2, find distance for a new time value. The gravity constant g is randomized per problem so you can't memorize, you have to derive it from the examples. Pipeline is SOLVE (use EX1 to get the rate constant, apply to target) → VER (rate consistency check against EX2) → ANS (2 decimal places, enforced format). Answer must be exactly X.XX, wrong format = zero points.\n\nTwo things matter. Rate-first decomposition: instead of extracting g explicitly then computing 0.5*g*t_target^2 in five operations, you just compute RATE = d/t^2 directly from EX1 (which is 0.5g, already), square the target time, multiply. Two ops instead of five, smaller intermediates, same answer, fewer places for the model to eat shit on arithmetic. The second trick is rate consistency for verification instead of full recomputation. If you verify by recomputing the answer two different ways, both paths hit the same arithmetic weaknesses and produce confident wrong agreement (VER says YES on a wrong answer). Instead: derive the rate from EX1, derive the rate from EX2 independently, check |RATE - RATE2| < 0.05. If the rates agree, the formula assumption is correct. This catches the failure mode where both computations are wrong in the same direction.\n\nReward is the same per-step GRPO gradient climb: term, preamble structure, math accuracy at each intermediate (t^2, rate, target squared, result, rounded), VER honesty (tiered, lying scored harder than missing), format compliance on the X.XX output, final answer. Contamination is format-specific here, stray brackets/semicolons or binary/boolean language from other templates eat heavy negatives because this template is pure numeric prose. Thrash markers same as always. Every intermediate is partial credit, so a good rate derivation with a bad final multiplication still scores, but contamination and thrash eat the whole run.\n\n**ROMAN**\n\nBidirectional. Int-to-Roman OR Roman-to-int, trained 50/50 so the model is bulletproofed both directions in case the hidden test set flips on you. Forward pipeline: DECOMPOSE (split target into all four place slots TH/HU/TE/ON, with zeros shown explicitly as SKIP) → CAT (incremental concatenation, one segment at a time) → VER (round-trip re-parse the assembled string) → ANS. Reverse pipeline: PARSE (walk symbol groups with running total, subtractive pairs CM/CD/XC/XL/IX/IV treated as atomic units) → VER (rebuild the Roman string from the integer answer, string-compare to input) → ANS. Preamble anchors hard on \"Roman numeral\" identity because this template cross-contaminates easily with binary/symbol/digit if the model drifts.\n\nTwo things matter. Incremental CAT kills transposition errors. If you let the model emit MMDCLX as one token blob, it will absolutely eat XL as LX or swap CM for MC because those pairs are token attractors. Forcing it to write MM + DC = MMDC, then MMDC + LX = MMDCLX makes every concat step auditable. Round-trip VER is the other half. V9 verified by summing the original decomposed values, which agrees with wrong answers because you're checking the shelf, not the pill bottle. CataFix re-parses the assembled output string back to integers and sums that, or in reverse mode rebuilds the Roman string from the integer answer and string-compares to the original input. If the model transposed a pair during CAT, the reparse total won't match the target and CHK fires NO. That's the catch.\n\nReward is the same per-step GRPO gradient climb with a tiered VER honesty score, honest YES scores best, lying YES (claimed match but the numbers don't agree) is the worst, honest NO (caught own error) scores partial, confused NO scores worse than honest NO. This punishes the \"VER rubber-stamps wrong answer\" failure mode harder than just getting VER wrong. Contamination markers here include stray brackets, xor, AND, other factory language, and the antigame scope is post-preamble only because the preamble itself is intentionally English prose (the anchor). Thrash markers and champagne bonus same as always.\n\n**UNIT CON**\n\nStructurally the same as gravity but linear. Given example pairs of (input, output) measurements, find the output for a new input. The underlying relationship is output = input * factor where the factor is randomized per problem. Pipeline: SOLVE (compute RATE = out1/in1 from EX1, then RESULT = target * RATE, round to 2dp) → VER (rate consistency check against EX2) → ANS (exactly X.XX format, enforced in preamble). Two operations total.\n\nSame two fixes as gravity, same reasoning. Rate-first collapses the math to one division and one multiplication so there's less room for the model to hallucinate digits on intermediate values. Rate consistency VER (|RATE - RATE2| < 0.01, tighter tolerance than gravity's 0.05 because there's no squaring to amplify rounding noise) instead of full recomputation, because recomputing hits the same arithmetic weaknesses and rubber-stamps wrong answers. All intermediates use fmt4 (4 decimal places, trailing zeros stripped), final answer uses fmt2 (exactly 2 decimal places, 1.50 stays 1.50). The format rule is hard, wrong decimal places = zero.\n\nReward is per-step GRPO: term, preamble identity, math accuracy (RATE correct, RESULT correct, RND correct), tiered VER honesty (lying YES is the worst, honest NO is better than confused NO), format compliance, final answer. Contamination fires on brackets, semicolons, xor, AND, anything that smells like binary/symbol/digit template language leaking in. Missing \\boxed{} is instant death at -12. Perfect trace scores +18. Same gradient climb, same thrash penalties, same philosophy: every intermediate step is partial credit so the model can learn from near-misses instead of getting a flat zero for one bad multiplication.\n\n( The \"Hard Ones\" lol ) - These were solve by myself first on paper on my sofa. Noticing patterns and working them by hand, and then once i ran them through a battery of classical ML test. I figured out that the K clustering is SO EXACT, that these next to are easy to solve and should be 100%able, by everyone. Their the exact same problems, but look slightly different. \n\n**SYMBOL-DIGIT**\n\nInput is AB⊕CD (four digits split by a random operator character), output is a number. The problem is figuring out three things at once: how are the four digits paired into two-digit operands (is it BA,DC? AB,CD? reversed?), what operation do you apply (add, mul, sub, cat, mulsub1, muladd1, etc., 14 operations total), and what output format gets applied to the raw result (rev for reversed, raw, abs, dsum for digit sum, zpad2 for zero-padded, operator-prefixed variants, etc., 14 formats total). That's 4 × 14 × 14 = 784 possible combos. The pipeline: PARSE (identify operator char, extract EX1 digits) → SCAN (frequency-ordered brute force through 47 combos that cover 99% of the competition distribution) → LOCK (commit to the winning combo) → APPLY (run it on the target) → ANS. For example, input 03}43 = 47 resolves to AB_CD|add1|raw because L=3, R=43, 3+43+1=47, raw format, match.\n\nThe scan is brute force but frequency-weighted, so the most common combos (BA_DC|add|rev at 13%, BA_DC|mul|rev at 12%) get checked first. When a combo matches EX1, it immediately verifies against EX2 to catch coincidental matches. This is the same false-positive trap as binary: a wrong combo can produce the right output on one example by accident (especially add vs addm1 vs add1 which only differ by ±1). If VER on EX2 fails, the match is rejected and scanning continues. 10% of training traces use combos deliberately NOT in the 47-entry scan order, so the model learns to emit #STOP:SCAN_LIMIT and still lock the answer. This teaches it what \"I scanned everything and nothing matched\" looks like, instead of hallucinating a fake match.\n\nReward is per-step GRPO: scan quality (every scan line's arithmetic is verifiable), LOCK accuracy (did it lock the right combo), VER correctness, final answer, plus a HARDSTOP bonus for correctly emitting #STOP on unsolvable scans instead of forcing a wrong match. Contamination markers are template-specific (RATE:, DECOMPOSE, Roman numeral, gravity/unitconv language) rather than character bans, because the operator characters legitimately include brackets, braces, and symbols that other factories ban. Thrash markers and antigame same as always.\n\n**CIPHER-DIGIT**\n\nSymbol-digit with an encryption layer on top. Every character, including the digits themselves, has been replaced by a random symbol via a fresh bijective cipher per problem. So where symbol-digit shows you 03}43 = 47, cipher-digit shows you *#\\< = ##:#and you have to figure out both the cipher AND the operation. Pipeline: **DETECT** (identify the operator symbol by position, it's always index 2 in the input) → **CRACK** (build the symbol-to-digit mapping from the examples, e.g.=9 #=1 <=6 :=3) → **SCAN** (same 47-entry frequency-ordered brute force as symbol-digit, but operating on the decoded digits) → **LOCK** → **APPLY** (decode target, run the operation) → **ENCODE** (re-encrypt the numeric answer back to cipher symbols, one digit at a time) → **ANS** (boxed in cipher symbols, not digits). Format set is reduced to just rev/raw/abs` because operator-prefixed formats make no sense when the operator itself is encrypted.\n\nThe hard part is that the answer has to come back in cipher. The model has to crack the cipher, do the symbol-digit scan on decoded digits, then reverse the cipher to encode the output. Any mistake in the mapping propagates through the entire pipeline. The factory enforces that every digit appearing in the target's output must be visible somewhere in the examples (input or output side), otherwise the model would have no way to learn the encoding for that digit. VER is full-pipeline: decode EX2's input, form operands, compute the operation, format, re-encrypt, then compare the re-encrypted output to EX2's actual cipher output. This catches errors at every stage, not just the scan match.\n\nReward has the most layers of any factory: per-symbol cipher accuracy (r_cipher, each mapping pair scored independently), decode CHK, scan quality, LOCK, tiered VER honesty, per-digit encoding accuracy (r_encode, each output digit scored), final answer, HARDSTOP bonus for correct #STOP on unsolvable scans, plus all the standard contamination/thrash/antigame penalties. Perfect trace scores +33 (highest of any factory). A wrong cipher mapping that cascades into a wrong answer still scores partial credit on scan quality, LOCK, and any correct encode digits. Contamination explicitly bans symbol-digit template as a marker because the model must identify as cipher-digit, not skip the CRACK step and try to pattern-match on encrypted symbols directly.\n\n\nCipher-digit and symbol-digit converge to the same underlying combo distribution. I confirmed this by running k-means clustering on the operation frequencies across both datasets and the centroids landed within 0.0004 of each other. The cipher layer is cosmetic. Once you crack the mapping, it IS bare symbol-digit, which is why the SCAN_ORDER is reused with only the format set trimmed (no op-prefixed formats, since the operator is encrypted). And the broader methodology across every factory in this post is sudoku solving: you verify the math is correct FIRST at each step, lock what you can prove, and if you hit a contradiction later, you backtrack to the last verified step and try the next branch. You don't guess forward hoping it works. Every VER step, every CHK, every false-positive rejection in the scan is the same principle: prove each constraint before committing, and if the proof fails downstream, walk it back. That's why the templates work. That's why they're 100% solvable.\n\n**CLOSER**\n\nYou're welcome. One day I hope to solve a Kaggle comp on methodology alone and take first, instead of watching placement come down to who can afford the compute. The Open Contribution Awards for best data method, best RL method, and best fine-tuning method are all locked behind a top 10% final leaderboard placement, which means even if your methodology is the cleanest in the competition, you can't win recognition for it without the hardware to push a submission into the top of the board. That's unfortunate, and it's the part that stings most about bowing out, because the methodology IS the work.\n\nI'm still open to anyone who'd like to take me on as part of their team. My solo run is finished here, but the playbook above is solid, and if it helps you place, Im happy to help. ",
+      "content": "<p>I reverse engineered <strong>100% of the dataset.</strong> It's all solvable. Below I'm going to show exactly how.</p>\n<p>Since my compute isn't good enough to actually run this (Kaggle GPU environment is still broken for me), I'm bowing out of the comp. My only goal was the midpoint prize given my time constraints, and that's clearly off the table, so I'm opening up the playbook for anyone who can run it.</p>\n<p>I'll break this into sections by category type, with my own think tracings included. One full think tracing per category will be posted in the comments below. If you have questions, please ask, because I obviously can't document every edge case that deviates from the exact pattern but is still solvable under the same framework.</p>\n<p>I've put <strong>200+ hours into this</strong>. If anyone wants to show appreciation, a like helps others see it.</p>\n<p>I asked for teammates about a week ago and nobody reached out, which is unfortunate, because the Kaggle midpoint prize is being awarded while the only viable path on Blackwell GPUs inside Kaggle is the \"slow\" Mamba workaround. That effectively turns this into pay-to-play for anyone with access to GPU clusters outside Kaggle.</p>\n<p>Anyway. Here's the work. Goodluck to all those that can compete. </p>\n<p>( It is best practice for you to not copy me exactly, but using your own methods and integrate this into your already existing training pipeline )</p>\n<p><strong>BINARY</strong></p>\n<p>8-bit string in, 8-bit string out. Each output bit is an independent boolean function of the input bits, so you solve 8 one-bit problems and concatenate. For each bit, scan in order: constants → identity → NOT → 2-input gates (AND, OR, XOR, XNOR, NAND, NOR, and the 4 with-negation variants) → 3-input (MAJ, CHO, PAR3, AO/OA/AX/OX/XA/XO) → 4-input (AOA, OAO, PAR4, XX, AXA). First match wins. Ignore the flavor text wrapper completely, it's adversarial noise.</p>\n<p>The two things that actually matter: bit-serial gate computation (the model cannot do multi-bit AND/OR/XOR in parallel, accuracy craters to 9.3%, so you force it to spell out every op one bit at a time like 0&amp;1=0 1&amp;1=1 0&amp;0=0), and target verification (multiple ops can match all 8 example columns by coincidence, so every candidate has to be checked against the actual test input, not just the visible examples). Skip either one and you'll hallucinate plausible garbage or pass the examples and still eat shit on the hidden answer.</p>\n<p>The reward function is per-bit GRPO at every step, which turns this from a cliff into a gradient climb. You get partial credit at every layer of the trace: laying out the OUT columns correctly, picking the right op, spelling out the bit-serial gate computation, the VER target check, and the final answer bit, all scored independently per bit position. Get 5/8 bits right at the op-match stage? You score on those 5. Nail the VER on 7 of them? You score on those 7. There's no single pass/fail gate until the very end. On top of that, 8/8 correct triggers a superlinear \"champagne\" bonus (+5 flat) so perfection is worth meaningfully more than 7/8 plus one lucky bit, which pulls the model hard toward actually closing out the problem instead of settling for near-miss. Contamination markers (language from other templates leaking in) and thrash markers (\"let me try,\" \"hmm,\" \"actually\") get heavy negative weights, so the model learns to commit to the template and execute, not spiral.</p>\n<p><strong>ENGLISH CIPHERS</strong></p>\n<p>Encrypted phrase in, plaintext phrase out. The cipher is a bijective derangement on a-z (every letter maps to exactly one other letter, no letter maps to itself). Pipeline is fixed: LEN (word lengths from the target) → TABLE (extract mappings by walking the example pairs letter by letter) → VER (cross-validate the table against all examples + a held-out example) → DECRYPT (char-by-char on the target, back-referencing confirmed mappings) → CHECK (len, alpha, vocab membership, no gaps) → ANS. Words come from a fixed ~90-word vocabulary in predictable patterns (character-verb-object, character-verb-adjective-object, etc.) so the phrase structure is tight.</p>\n<p>Two things matter here. Char-by-char decryption is the cipher version of the bit-serial fix. If you let the model decrypt whole words at once, the language prior hijacks it and it starts hallucinating plausible English instead of actually applying the table, so you force it to walk one cipher letter at a time and look up each mapping. VOCAB fill handles incomplete tables. With only 6-8 example phrases you will almost never cover all 26 letters, so the target will have gaps marked ?. When a decoded word has gaps, you match against the fixed vocabulary by length, find the word that fits the confirmed letters, and fill the remaining mappings back into the table for downstream words. This turns partial coverage into full decryption without guessing.</p>\n<p>Reward is per-letter GRPO at every stage of the pipeline, same gradient-climb structure as binary. You score on per-letter table accuracy, table coverage (N/26), the VER cross-check, per-letter decrypt correctness, VOCAB fill validity, per-word answer, and the final CHECK pass (length match, alpha-only, in-vocabulary, no residual ?). Every layer is partial credit, so getting 4/5 words right or nailing decrypt but missing one VOCAB fill still scores. All-words-correct gets a champagne bonus so the model pulls toward closing out the whole phrase instead of settling for mostly-right. Contamination markers from other templates (B0:, MAP:, LOCK:, binary/roman/gravity language) and thrash markers eat heavy negatives, so the model commits to the template and executes.</p>\n<p><strong>GRAVITY</strong></p>\n<p>Given a few (t, d) pairs that follow d = 0.5<em>g</em>t^2, find distance for a new time value. The gravity constant g is randomized per problem so you can't memorize, you have to derive it from the examples. Pipeline is SOLVE (use EX1 to get the rate constant, apply to target) → VER (rate consistency check against EX2) → ANS (2 decimal places, enforced format). Answer must be exactly X.XX, wrong format = zero points.</p>\n<p>Two things matter. Rate-first decomposition: instead of extracting g explicitly then computing 0.5<em>g</em>t_target^2 in five operations, you just compute RATE = d/t^2 directly from EX1 (which is 0.5g, already), square the target time, multiply. Two ops instead of five, smaller intermediates, same answer, fewer places for the model to eat shit on arithmetic. The second trick is rate consistency for verification instead of full recomputation. If you verify by recomputing the answer two different ways, both paths hit the same arithmetic weaknesses and produce confident wrong agreement (VER says YES on a wrong answer). Instead: derive the rate from EX1, derive the rate from EX2 independently, check |RATE - RATE2| &lt; 0.05. If the rates agree, the formula assumption is correct. This catches the failure mode where both computations are wrong in the same direction.</p>\n<p>Reward is the same per-step GRPO gradient climb: term, preamble structure, math accuracy at each intermediate (t^2, rate, target squared, result, rounded), VER honesty (tiered, lying scored harder than missing), format compliance on the X.XX output, final answer. Contamination is format-specific here, stray brackets/semicolons or binary/boolean language from other templates eat heavy negatives because this template is pure numeric prose. Thrash markers same as always. Every intermediate is partial credit, so a good rate derivation with a bad final multiplication still scores, but contamination and thrash eat the whole run.</p>\n<p><strong>ROMAN</strong></p>\n<p>Bidirectional. Int-to-Roman OR Roman-to-int, trained 50/50 so the model is bulletproofed both directions in case the hidden test set flips on you. Forward pipeline: DECOMPOSE (split target into all four place slots TH/HU/TE/ON, with zeros shown explicitly as SKIP) → CAT (incremental concatenation, one segment at a time) → VER (round-trip re-parse the assembled string) → ANS. Reverse pipeline: PARSE (walk symbol groups with running total, subtractive pairs CM/CD/XC/XL/IX/IV treated as atomic units) → VER (rebuild the Roman string from the integer answer, string-compare to input) → ANS. Preamble anchors hard on \"Roman numeral\" identity because this template cross-contaminates easily with binary/symbol/digit if the model drifts.</p>\n<p>Two things matter. Incremental CAT kills transposition errors. If you let the model emit MMDCLX as one token blob, it will absolutely eat XL as LX or swap CM for MC because those pairs are token attractors. Forcing it to write MM + DC = MMDC, then MMDC + LX = MMDCLX makes every concat step auditable. Round-trip VER is the other half. V9 verified by summing the original decomposed values, which agrees with wrong answers because you're checking the shelf, not the pill bottle. CataFix re-parses the assembled output string back to integers and sums that, or in reverse mode rebuilds the Roman string from the integer answer and string-compares to the original input. If the model transposed a pair during CAT, the reparse total won't match the target and CHK fires NO. That's the catch.</p>\n<p>Reward is the same per-step GRPO gradient climb with a tiered VER honesty score, honest YES scores best, lying YES (claimed match but the numbers don't agree) is the worst, honest NO (caught own error) scores partial, confused NO scores worse than honest NO. This punishes the \"VER rubber-stamps wrong answer\" failure mode harder than just getting VER wrong. Contamination markers here include stray brackets, xor, AND, other factory language, and the antigame scope is post-preamble only because the preamble itself is intentionally English prose (the anchor). Thrash markers and champagne bonus same as always.</p>\n<p><strong>UNIT CON</strong></p>\n<p>Structurally the same as gravity but linear. Given example pairs of (input, output) measurements, find the output for a new input. The underlying relationship is output = input * factor where the factor is randomized per problem. Pipeline: SOLVE (compute RATE = out1/in1 from EX1, then RESULT = target * RATE, round to 2dp) → VER (rate consistency check against EX2) → ANS (exactly X.XX format, enforced in preamble). Two operations total.</p>\n<p>Same two fixes as gravity, same reasoning. Rate-first collapses the math to one division and one multiplication so there's less room for the model to hallucinate digits on intermediate values. Rate consistency VER (|RATE - RATE2| &lt; 0.01, tighter tolerance than gravity's 0.05 because there's no squaring to amplify rounding noise) instead of full recomputation, because recomputing hits the same arithmetic weaknesses and rubber-stamps wrong answers. All intermediates use fmt4 (4 decimal places, trailing zeros stripped), final answer uses fmt2 (exactly 2 decimal places, 1.50 stays 1.50). The format rule is hard, wrong decimal places = zero.</p>\n<p>Reward is per-step GRPO: term, preamble identity, math accuracy (RATE correct, RESULT correct, RND correct), tiered VER honesty (lying YES is the worst, honest NO is better than confused NO), format compliance, final answer. Contamination fires on brackets, semicolons, xor, AND, anything that smells like binary/symbol/digit template language leaking in. Missing \\boxed{} is instant death at -12. Perfect trace scores +18. Same gradient climb, same thrash penalties, same philosophy: every intermediate step is partial credit so the model can learn from near-misses instead of getting a flat zero for one bad multiplication.</p>\n<p>( The \"Hard Ones\" lol ) - These were solve by myself first on paper on my sofa. Noticing patterns and working them by hand, and then once i ran them through a battery of classical ML test. I figured out that the K clustering is SO EXACT, that these next to are easy to solve and should be 100%able, by everyone. Their the exact same problems, but look slightly different. </p>\n<p><strong>SYMBOL-DIGIT</strong></p>\n<p>Input is AB⊕CD (four digits split by a random operator character), output is a number. The problem is figuring out three things at once: how are the four digits paired into two-digit operands (is it BA,DC? AB,CD? reversed?), what operation do you apply (add, mul, sub, cat, mulsub1, muladd1, etc., 14 operations total), and what output format gets applied to the raw result (rev for reversed, raw, abs, dsum for digit sum, zpad2 for zero-padded, operator-prefixed variants, etc., 14 formats total). That's 4 × 14 × 14 = 784 possible combos. The pipeline: PARSE (identify operator char, extract EX1 digits) → SCAN (frequency-ordered brute force through 47 combos that cover 99% of the competition distribution) → LOCK (commit to the winning combo) → APPLY (run it on the target) → ANS. For example, input 03}43 = 47 resolves to AB_CD|add1|raw because L=3, R=43, 3+43+1=47, raw format, match.</p>\n<p>The scan is brute force but frequency-weighted, so the most common combos (BA_DC|add|rev at 13%, BA_DC|mul|rev at 12%) get checked first. When a combo matches EX1, it immediately verifies against EX2 to catch coincidental matches. This is the same false-positive trap as binary: a wrong combo can produce the right output on one example by accident (especially add vs addm1 vs add1 which only differ by ±1). If VER on EX2 fails, the match is rejected and scanning continues. 10% of training traces use combos deliberately NOT in the 47-entry scan order, so the model learns to emit #STOP:SCAN_LIMIT and still lock the answer. This teaches it what \"I scanned everything and nothing matched\" looks like, instead of hallucinating a fake match.</p>\n<p>Reward is per-step GRPO: scan quality (every scan line's arithmetic is verifiable), LOCK accuracy (did it lock the right combo), VER correctness, final answer, plus a HARDSTOP bonus for correctly emitting #STOP on unsolvable scans instead of forcing a wrong match. Contamination markers are template-specific (RATE:, DECOMPOSE, Roman numeral, gravity/unitconv language) rather than character bans, because the operator characters legitimately include brackets, braces, and symbols that other factories ban. Thrash markers and antigame same as always.</p>\n<p><strong>CIPHER-DIGIT</strong></p>\n<p>Symbol-digit with an encryption layer on top. Every character, including the digits themselves, has been replaced by a random symbol via a fresh bijective cipher per problem. So where symbol-digit shows you 03}43 = 47, cipher-digit shows you *#\\&lt; = ##:#and you have to figure out both the cipher AND the operation. Pipeline: <strong>DETECT</strong> (identify the operator symbol by position, it's always index 2 in the input) → <strong>CRACK</strong> (build the symbol-to-digit mapping from the examples, e.g.=9 #=1 &lt;=6 :=3) → <strong>SCAN</strong> (same 47-entry frequency-ordered brute force as symbol-digit, but operating on the decoded digits) → <strong>LOCK</strong> → <strong>APPLY</strong> (decode target, run the operation) → <strong>ENCODE</strong> (re-encrypt the numeric answer back to cipher symbols, one digit at a time) → <strong>ANS</strong> (boxed in cipher symbols, not digits). Format set is reduced to just rev/raw/abs` because operator-prefixed formats make no sense when the operator itself is encrypted.</p>\n<p>The hard part is that the answer has to come back in cipher. The model has to crack the cipher, do the symbol-digit scan on decoded digits, then reverse the cipher to encode the output. Any mistake in the mapping propagates through the entire pipeline. The factory enforces that every digit appearing in the target's output must be visible somewhere in the examples (input or output side), otherwise the model would have no way to learn the encoding for that digit. VER is full-pipeline: decode EX2's input, form operands, compute the operation, format, re-encrypt, then compare the re-encrypted output to EX2's actual cipher output. This catches errors at every stage, not just the scan match.</p>\n<p>Reward has the most layers of any factory: per-symbol cipher accuracy (r_cipher, each mapping pair scored independently), decode CHK, scan quality, LOCK, tiered VER honesty, per-digit encoding accuracy (r_encode, each output digit scored), final answer, HARDSTOP bonus for correct #STOP on unsolvable scans, plus all the standard contamination/thrash/antigame penalties. Perfect trace scores +33 (highest of any factory). A wrong cipher mapping that cascades into a wrong answer still scores partial credit on scan quality, LOCK, and any correct encode digits. Contamination explicitly bans symbol-digit template as a marker because the model must identify as cipher-digit, not skip the CRACK step and try to pattern-match on encrypted symbols directly.</p>\n<p>Cipher-digit and symbol-digit converge to the same underlying combo distribution. I confirmed this by running k-means clustering on the operation frequencies across both datasets and the centroids landed within 0.0004 of each other. The cipher layer is cosmetic. Once you crack the mapping, it IS bare symbol-digit, which is why the SCAN_ORDER is reused with only the format set trimmed (no op-prefixed formats, since the operator is encrypted). And the broader methodology across every factory in this post is sudoku solving: you verify the math is correct FIRST at each step, lock what you can prove, and if you hit a contradiction later, you backtrack to the last verified step and try the next branch. You don't guess forward hoping it works. Every VER step, every CHK, every false-positive rejection in the scan is the same principle: prove each constraint before committing, and if the proof fails downstream, walk it back. That's why the templates work. That's why they're 100% solvable.</p>\n<p><strong>CLOSER</strong></p>\n<p>You're welcome. One day I hope to solve a Kaggle comp on methodology alone and take first, instead of watching placement come down to who can afford the compute. The Open Contribution Awards for best data method, best RL method, and best fine-tuning method are all locked behind a top 10% final leaderboard placement, which means even if your methodology is the cleanest in the competition, you can't win recognition for it without the hardware to push a submission into the top of the board. That's unfortunate, and it's the part that stings most about bowing out, because the methodology IS the work.</p>\n<p>I'm still open to anyone who'd like to take me on as part of their team. My solo run is finished here, but the playbook above is solid, and if it helps you place, Im happy to help. </p>",
+      "parent": {},
+      "author": {
+        "displayName": "Donald Galliano III",
+        "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/29434769-kg.png?t=2026-03-14-05-23-02",
+        "url": "/donaldgalliano",
+        "tier": "CONTRIBUTOR",
+        "id": 29434769,
+        "progressionOptOut": false
+      },
+      "authorType": "TOPIC",
+      "votes": {
+        "totalVotes": 128,
+        "canUpvote": true,
+        "totalUpvotes": 138
+      },
+      "kernelVersion": 0,
+      "competitionRanking": 1820,
+      "feedbackTrackingData": {},
+      "isThankYou": false,
+      "reactions": [
+        {
+          "emoji": "LOVE",
+          "featuredUserNames": [
+            "bobber",
+            "aemado",
+            "pranavpoduval",
+            "maj0rt0m",
+            "imeintanis",
+            "jaangk",
+            "beckpro",
+            "ryotasueyoshi",
+            "adariyashwanth",
+            "rockingmat",
+            "tangchengyi",
+            "aayushsigdel",
+            "devchopin",
+            "adityabangar",
+            "ashutoshkumar432",
+            "tahakaya1",
+            "kishanvavdara",
+            "m1r0official",
+            "juzztjawa",
+            "dogtwice",
+            "muzayyanraufrana786",
+            "ariciniello",
+            "faihaj",
+            "chaoscpp",
+            "adarsh2626",
+            "svanikkolli",
+            "jctesting",
+            "yuxunlu",
+            "williamh92",
+            "bastienramseyer"
+          ],
+          "userCount": 30
+        },
+        {
+          "emoji": "THANK_YOU",
+          "featuredUserNames": [
+            "pranavpoduval",
+            "rin2401"
+          ],
+          "userCount": 2
+        }
+      ],
+      "teamUpInfo": {
+        "teamLeader": {
+          "displayName": "Donald Galliano III",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/29434769-kg.png?t=2026-03-14-05-23-02",
+          "url": "/donaldgalliano",
+          "userName": "donaldgalliano",
+          "tier": "CONTRIBUTOR",
+          "id": 29434769,
+          "profileUrl": "/donaldgalliano",
+          "performanceTier": "CONTRIBUTOR",
+          "userId": 29434769,
+          "progressionOptOut": false
+        },
+        "intro": ""
+      }
+    },
+    "firstMessageId": 3436396,
+    "forumId": 10085877,
+    "forumName": "NVIDIA Nemotron Model Reasoning Challenge",
+    "id": 688461,
+    "name": "Answers To Everything Data: Read Me! 100% Solve Rate",
+    "parentName": "nvidia-nemotron-model-reasoning-challenge",
+    "parentUrl": "/competitions/nvidia-nemotron-model-reasoning-challenge",
+    "postDate": "2026-04-05T21:55:54.275851900Z",
+    "totalVotes": 128,
+    "url": "/competitions/nvidia-nemotron-model-reasoning-challenge/discussion/688461",
+    "totalMessages": 47,
+    "authorPerformanceTier": "CONTRIBUTOR",
+    "authorProgressionOptOut": false
+  }
+}

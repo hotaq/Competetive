@@ -1,0 +1,116 @@
+{
+ "models": {
+  "mlp_naji_s42_h128": {
+   "cfg": {
+    "id": "mlp_naji_s42_h128",
+    "family": "mlp",
+    "features": "naji",
+    "seed": 42,
+    "tag": "h128",
+    "params": {
+     "hidden": [
+      128,
+      64
+     ],
+     "alpha": 0.0001,
+     "max_iter": 300,
+     "patience": 15,
+     "tol": 0.0003
+    }
+   },
+   "oof_auc": 0.943835,
+   "fold_auc": [
+    0.942867,
+    0.943746,
+    0.945231,
+    0.944155,
+    0.943989
+   ],
+   "iters": [
+    19,
+    23,
+    17,
+    17,
+    22
+   ]
+  },
+  "mlp_naji_s7_h128": {
+   "cfg": {
+    "id": "mlp_naji_s7_h128",
+    "family": "mlp",
+    "features": "naji",
+    "seed": 7,
+    "tag": "h128",
+    "params": {
+     "hidden": [
+      128,
+      64
+     ],
+     "alpha": 0.0001,
+     "max_iter": 300,
+     "patience": 15,
+     "tol": 0.0003
+    }
+   },
+   "oof_auc": 0.943922,
+   "fold_auc": [
+    0.94277,
+    0.94378,
+    0.945189,
+    0.944491,
+    0.944274
+   ],
+   "iters": [
+    17,
+    18,
+    17,
+    20,
+    17
+   ]
+  },
+  "mlp_te2_s42_h64": {
+   "cfg": {
+    "id": "mlp_te2_s42_h64",
+    "family": "mlp",
+    "features": "te2",
+    "seed": 42,
+    "tag": "h64",
+    "params": {
+     "hidden": [
+      64
+     ],
+     "alpha": 0.0001,
+     "max_iter": 300,
+     "patience": 15,
+     "tol": 0.0003
+    }
+   },
+   "oof_auc": 0.943244,
+   "fold_auc": [
+    0.942766,
+    0.943033,
+    0.943894,
+    0.943678,
+    0.943306
+   ],
+   "iters": [
+    20,
+    18,
+    21,
+    24,
+    27
+   ]
+  }
+ },
+ "history": [
+  {
+   "n_models": 3,
+   "blend_oof": 0.944586,
+   "weights": {
+    "mlp_naji_s7_h128": 0.3333,
+    "mlp_te2_s42_h64": 0.3333,
+    "mlp_naji_s42_h128": 0.3333
+   }
+  }
+ ]
+}

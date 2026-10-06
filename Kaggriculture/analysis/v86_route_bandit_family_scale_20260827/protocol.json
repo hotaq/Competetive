@@ -1,0 +1,198 @@
+{
+  "schema_version": "v86-family-scale-prereg-v1",
+  "status": "frozen_before_economic_outcomes",
+  "created_date": "2026-08-27",
+  "purpose": "Final cheap falsifier of the fixed V85 ridge route-bandit after adding genuinely distinct Top20 implementation families.",
+  "guardrails": {
+    "sealed_holdout_must_remain_unopened": true,
+    "checkpoint_forbidden": true,
+    "runtime_agent_forbidden": true,
+    "submission_forbidden": true,
+    "kaggle_upload_forbidden": true,
+    "posthoc_model_or_threshold_tuning_forbidden": true,
+    "old_v84_outcomes_excluded_from_fit": true
+  },
+  "candidate": {
+    "name": "V67",
+    "path": "submissions/meta_v67_quantity_conserving_front_run_standalone/main.py",
+    "sha256": "300983ffa3da614ad5e7b9958c76104d9f613fcaf7169e69963ea634ee0a093b"
+  },
+  "actions": [
+    {
+      "id": "KEEP_V67"
+    },
+    {
+      "id": "FORCE_B120_SUFFIX",
+      "source_path": "artifacts/top20_live_tapes80_20260826/tape_99600846_s0.py",
+      "source_sha256": "3fdf8cc7634eb9f60fcdecaefdd62ac95d3f04509d0c2bb4f82bebb1c763b627"
+    },
+    {
+      "id": "FORCE_C120_SUFFIX",
+      "source_path": "artifacts/top20_live_tapes80_20260826/tape_99596430_s1.py",
+      "source_sha256": "6510a81b1114e4cbdf899afb194d3bd015abcf8cd010579a8de4a0fe93d9226f"
+    }
+  ],
+  "families": [
+    {
+      "id": "v16_route_family",
+      "representative": "v22",
+      "path": "submissions/meta_v22_v16_land3_terminal_rule_standalone/main.py",
+      "sha256": "5d5c615a296d984402f886b5f998a54e211dd6138e7818793733069d0d1476ba",
+      "source_group": "legacy-distinct-family"
+    },
+    {
+      "id": "ryo_selector_family",
+      "representative": "v12_ryo",
+      "path": "submissions/top1_v12_ryo_selector_b120_repaired_standalone/main.py",
+      "sha256": "670c85ca7c81d150fbebb4083eaec37f667c3c7305dfdc55a41feed3919e4d02",
+      "source_group": "legacy-distinct-family"
+    },
+    {
+      "id": "route_99612231_family",
+      "representative": "v44_route",
+      "path": "submissions/meta_v44_route99612231_orphan_standalone/main.py",
+      "sha256": "cd2eda3600b4d4849f40a74d25f350239528541e52be0aecf85215fe7aa9afb2",
+      "source_group": "legacy-distinct-family"
+    },
+    {
+      "id": "robust_cluster_family",
+      "representative": "robust_cluster",
+      "path": "submissions/robust_cluster_tape_v10_standalone/main.py",
+      "sha256": "27cb59ba30d42464985db5fa58f858f79c6ddae95e1eeff2bd4b4275523805f6",
+      "source_group": "legacy-distinct-family"
+    },
+    {
+      "id": "top20_crop_dusta_55714246",
+      "representative": "tape_99594187_s1",
+      "path": "artifacts/top20_live_tapes80_20260826/tape_99594187_s1.py",
+      "sha256": "5caefeb46cec9f03f5ca80c1ba32bc57e294370685ae06d12ab7be202590a75a",
+      "source_group": "submission-55714246"
+    },
+    {
+      "id": "top20_tetsuya_55734995",
+      "representative": "tape_99591726_s0",
+      "path": "artifacts/top20_live_tapes80_20260826/tape_99591726_s0.py",
+      "sha256": "f5ac53cd9dc1b2ec9b43837b6d6d7c77431aaf873ba3c45dbe316fa55af87f0e",
+      "source_group": "submission-55734995"
+    },
+    {
+      "id": "top20_milan_leonard_55774239",
+      "representative": "tape_99566769_s1",
+      "path": "artifacts/top20_live_tapes80_20260826/tape_99566769_s1.py",
+      "sha256": "caf952fb35080020a52e839950a4913d30557b248d2b153afbc46ef7282d9c3b",
+      "source_group": "submission-55774239"
+    },
+    {
+      "id": "top20_arda_ceylan_55742738",
+      "representative": "tape_99582725_s0",
+      "path": "artifacts/top20_live_tapes80_20260826/tape_99582725_s0.py",
+      "sha256": "8e2801c8c1c4292dc5679207e722a548d84933d9caac128c2bdbedb848583915",
+      "source_group": "submission-55742738"
+    }
+  ],
+  "mechanical_only_backups_in_order": [
+    {
+      "id": "top20_subramanya_55616096",
+      "path": "artifacts/top20_live_tapes80_20260826/tape_99555428_s0.py",
+      "sha256": "f56399dd28975619e2846dfe3c477663317a1342d4c5271d7c45f01f071035a4"
+    },
+    {
+      "id": "top20_arman_55617399",
+      "path": "artifacts/top20_live_tapes80_20260826/tape_99566769_s0.py",
+      "sha256": "7e76de6a020af1f5dd83ba1da25b39d733ec146938b9e544071f144b96abc150"
+    }
+  ],
+  "backup_replacement_rule": "A core Top20 family may be replaced, in listed order only, when import, callable, or fresh-seed 719-completion mechanical admission fails before any margin table is read.",
+  "fresh_development_seeds": [
+    27100200,
+    27100201,
+    27100202,
+    27100203,
+    27100204,
+    27100205,
+    27100206,
+    27100207
+  ],
+  "seats": [
+    0,
+    1
+  ],
+  "expected_contexts": 128,
+  "expected_full_games": 384,
+  "observation_steps": [
+    24,
+    48,
+    72,
+    96,
+    120
+  ],
+  "feature_encoder": {
+    "name": "V85 encode_selector_features",
+    "features_per_observation": 81,
+    "total_features": 405,
+    "model_input_identifiers_forbidden": true
+  },
+  "model": {
+    "type": "dual_ridge_absolute_and_delta_heads",
+    "alpha": 1000.0,
+    "beta": 2.0,
+    "switch_threshold": 2500.0,
+    "actions": [
+      "KEEP_V67",
+      "FORCE_B120_SUFFIX",
+      "FORCE_C120_SUFFIX"
+    ],
+    "intervention_rule": "absolute_lcb > 0 and delta_lcb > 2500; equality abstains",
+    "tie_break": [
+      "higher_delta_lcb",
+      "higher_absolute_lcb",
+      "FORCE_B120_SUFFIX_before_FORCE_C120_SUFFIX"
+    ],
+    "hyperparameter_search": false
+  },
+  "cross_validation": {
+    "unit": "family_seed_cluster",
+    "folds": 64,
+    "held_rows_per_fold": 2,
+    "training_exclusion": "exclude every row in held family and every row with held seed",
+    "expected_training_rows": 98,
+    "uncertainty": "delete-one-training-family jackknife plus family-grouped OOF RMSE"
+  },
+  "mechanical_gates": {
+    "all_games_final_step": 719,
+    "candidate_prefix_parity_through_step": 119,
+    "non_keep_first_difference_minimum_step": 120,
+    "candidate_sanitizer_changes": 0,
+    "candidate_fallbacks": 0,
+    "candidate_exceptions": 0,
+    "candidate_partial_actions": 0,
+    "finite_feature_shape": [
+      128,
+      405
+    ],
+    "deterministic_core_hash_rerun": true
+  },
+  "adequacy_gates": {
+    "minimum_keep_loss_rows": 12,
+    "minimum_keep_loss_family_seed_clusters": 6,
+    "minimum_keep_loss_families": 3,
+    "minimum_oracle_rescue_fraction": 0.75,
+    "minimum_oracle_rescue_families": 3
+  },
+  "selector_go_gates": {
+    "minimum_interventions": 1,
+    "maximum_interventions": 32,
+    "every_intervention_actual_paired_delta_strictly_positive": true,
+    "every_intervention_selected_margin_strictly_positive": true,
+    "minimum_keep_loss_rescue_fraction": 0.75,
+    "minimum_rescued_family_seed_clusters": 6,
+    "minimum_selected_wins": 122,
+    "minimum_wins_per_family": 15,
+    "family_wins_worst_and_mean_never_worse_than_keep": true
+  },
+  "stop_rule": "Any mechanical, adequacy, or selector gate miss stops the exact V85 ridge branch with no posthoc tuning. A pass authorizes only one separately predeclared disjoint family-and-seed validation. V86-A itself cannot authorize checkpoint, sealed holdout, or upload.",
+  "promotion_grade_extra_gates": {
+    "wins": 128,
+    "positive_worst_margin_in_every_family": true
+  }
+}

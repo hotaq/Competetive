@@ -1,0 +1,83 @@
+{
+  "classes": [
+    0,
+    1
+  ],
+  "rows": 10000,
+  "features": 18,
+  "candidates": [
+    {
+      "file": "candidate_meta_logstack.csv",
+      "name": "meta_logstack",
+      "family": "meta",
+      "oof_auc": 0.81231752,
+      "fold_auc": [
+        0.80436836,
+        0.82206656,
+        0.81011666,
+        0.82609335,
+        0.79949547
+      ],
+      "fold_auc_std": 0.01017049,
+      "test_rank_correlation_to_best": 0.9861933
+    },
+    {
+      "file": "candidate_catboost_d8.csv",
+      "name": "catboost_d8",
+      "family": "catboost",
+      "oof_auc": 0.80699209,
+      "fold_auc": [
+        0.81957538,
+        0.78396362,
+        0.81269644,
+        0.82717098,
+        0.80417337
+      ],
+      "fold_auc_std": 0.01486252,
+      "test_rank_correlation_to_best": 1.0
+    },
+    {
+      "file": "candidate_logistic.csv",
+      "name": "logistic",
+      "family": "linear",
+      "oof_auc": 0.80273683,
+      "fold_auc": [
+        0.79698465,
+        0.77937527,
+        0.81586402,
+        0.82326048,
+        0.80021389
+      ],
+      "fold_auc_std": 0.01534893,
+      "test_rank_correlation_to_best": 0.92822052
+    }
+  ],
+  "diagnostics": {
+    "best_core": {
+      "name": "catboost_d8",
+      "family": "catboost",
+      "oof_auc": 0.80699209
+    },
+    "blend_gate": {
+      "accepted": true,
+      "name": "meta_logstack",
+      "oof_auc": 0.81231752,
+      "gain": 0.00532543,
+      "test_rank_correlation_to_best": 0.9861933
+    },
+    "interaction_gate": {
+      "accepted": false,
+      "name": "interaction_te",
+      "oof_auc": 0.78509115,
+      "standalone_gain": -0.02190094,
+      "blend_auc": 0.80667061,
+      "blend_gain": -0.00032148,
+      "fold_auc_std": 0.01950629,
+      "test_rank_correlation": 0.96820092,
+      "stable": true,
+      "diverse": true,
+      "improves": false
+    }
+  },
+  "failures": []
+}

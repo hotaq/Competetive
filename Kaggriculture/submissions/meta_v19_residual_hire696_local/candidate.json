@@ -1,0 +1,27 @@
+{
+  "agent_file": "submissions/meta_v19_residual_hire696_local/main.py",
+  "dependencies": {
+    "policy": {
+      "path": "src/kaggriculture_rl/policy/v19_residual.py",
+      "sha256": "e3aa4184f5cbec73dba238133d04786bdfce0482c4b8accba6873430821e68a6"
+    },
+    "seat1": {
+      "path": "submissions/top1_v12_ryo_b96_dual_b144_retriever_exact_safe_local/main.py",
+      "sha256": "6ac20f3e2736e4d94968401acb693656fb58e61a4174175c243db845adf6c7f4"
+    },
+    "v16": {
+      "path": "submissions/meta_v16_rc6_adaptive_market_standalone/main.py",
+      "sha256": "c8afcbb8f90861cd92131012146e573752820b80fbd939ace3c7503aea83cd5e"
+    }
+  },
+  "name": "meta_v19_residual_hire696_local",
+  "policy": {
+    "family": "contextual_portfolio_with_residual",
+    "late_hire_cutoff": 696,
+    "seat_0": "V16 plus no-late-hire residual",
+    "seat_1": "V12 dual retriever from step zero"
+  },
+  "schema_version": 1,
+  "sha256": "a8af9d705aa7a74668bc0b44210a464bdbf6ec961963ae5eb17e3b894f5fa922",
+  "status": "local_experiment"
+}

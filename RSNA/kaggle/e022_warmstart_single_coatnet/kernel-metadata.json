@@ -1,0 +1,25 @@
+{
+  "id": "chinnaphatkhun/rsna-knee-e022-warmstart-coatnet-smoke",
+  "title": "RSNA Knee E022 Warmstart CoAtNet Smoke",
+  "code_file": "e022-warmstart-single-coatnet.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "dataset_sources": [
+    "dreaddevelopment/knee-raptor-corpus",
+    "dreaddevelopment/knee-raptor-corpus-ext",
+    "dreaddevelopment/raptor-knee-widedense",
+    "pilkwang/rsna-knee-llm-labels",
+    "lixin73/rsna-knee-llm-report-labels-sol56",
+    "stevenleehans/rsna-knee-llm-report-labels"
+  ],
+  "competition_sources": [
+    "rsna-knee-abnormality-detection"
+  ],
+  "model_sources": [],
+  "kernel_sources": [],
+  "machine_shape": "NvidiaTeslaT4"
+}

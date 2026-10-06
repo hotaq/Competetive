@@ -1,0 +1,2368 @@
+{
+  "action_ids": [
+    93816256,
+    93518562
+  ],
+  "all_action_win_rates": {
+    "93518562": 0.3902439024390244,
+    "93816256": 0.2926829268292683
+  },
+  "branch_step": 192,
+  "checkpoint": "rl/checkpoints/temporal_gate2_v10_step192.npz",
+  "cross_validation": [
+    {
+      "actions": {
+        "93518562": 54,
+        "93816256": 28
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -18815.222222222223,
+      "draws": 0,
+      "games": 82,
+      "losses": 44,
+      "mean_margin": -2344.8414634146343,
+      "min_action_win_rate": 0.0,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 2,
+      "risk_coefficient": 2.0,
+      "win_rate": 0.4634146341463415,
+      "wins": 38,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 54,
+        "93816256": 28
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -18815.222222222223,
+      "draws": 0,
+      "games": 82,
+      "losses": 44,
+      "mean_margin": -2344.8414634146343,
+      "min_action_win_rate": 0.1,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 2,
+      "risk_coefficient": 2.0,
+      "win_rate": 0.4634146341463415,
+      "wins": 38,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 54,
+        "93816256": 28
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -18815.222222222223,
+      "draws": 0,
+      "games": 82,
+      "losses": 44,
+      "mean_margin": -2344.8414634146343,
+      "min_action_win_rate": 0.2,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 2,
+      "risk_coefficient": 2.0,
+      "win_rate": 0.4634146341463415,
+      "wins": 38,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 54,
+        "93816256": 28
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -18815.222222222223,
+      "draws": 0,
+      "games": 82,
+      "losses": 44,
+      "mean_margin": -2344.8414634146343,
+      "min_action_win_rate": 0.25,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 2,
+      "risk_coefficient": 2.0,
+      "win_rate": 0.4634146341463415,
+      "wins": 38,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 53,
+        "93816256": 29
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -17563.777777777777,
+      "draws": 0,
+      "games": 82,
+      "losses": 47,
+      "mean_margin": -2473.390243902439,
+      "min_action_win_rate": 0.0,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 7,
+      "risk_coefficient": 2.0,
+      "win_rate": 0.4268292682926829,
+      "wins": 35,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 53,
+        "93816256": 29
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -17563.777777777777,
+      "draws": 0,
+      "games": 82,
+      "losses": 47,
+      "mean_margin": -2473.390243902439,
+      "min_action_win_rate": 0.1,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 7,
+      "risk_coefficient": 2.0,
+      "win_rate": 0.4268292682926829,
+      "wins": 35,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 53,
+        "93816256": 29
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -17563.777777777777,
+      "draws": 0,
+      "games": 82,
+      "losses": 47,
+      "mean_margin": -2473.390243902439,
+      "min_action_win_rate": 0.2,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 7,
+      "risk_coefficient": 2.0,
+      "win_rate": 0.4268292682926829,
+      "wins": 35,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 53,
+        "93816256": 29
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -17563.777777777777,
+      "draws": 0,
+      "games": 82,
+      "losses": 47,
+      "mean_margin": -2473.390243902439,
+      "min_action_win_rate": 0.25,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 7,
+      "risk_coefficient": 2.0,
+      "win_rate": 0.4268292682926829,
+      "wins": 35,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 51,
+        "93816256": 31
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -18815.222222222223,
+      "draws": 0,
+      "games": 82,
+      "losses": 47,
+      "mean_margin": -2694.6341463414633,
+      "min_action_win_rate": 0.0,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 2,
+      "risk_coefficient": 1.0,
+      "win_rate": 0.4268292682926829,
+      "wins": 35,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 51,
+        "93816256": 31
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -18815.222222222223,
+      "draws": 0,
+      "games": 82,
+      "losses": 47,
+      "mean_margin": -2694.6341463414633,
+      "min_action_win_rate": 0.1,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 2,
+      "risk_coefficient": 1.0,
+      "win_rate": 0.4268292682926829,
+      "wins": 35,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 51,
+        "93816256": 31
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -18815.222222222223,
+      "draws": 0,
+      "games": 82,
+      "losses": 47,
+      "mean_margin": -2694.6341463414633,
+      "min_action_win_rate": 0.2,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 2,
+      "risk_coefficient": 1.0,
+      "win_rate": 0.4268292682926829,
+      "wins": 35,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 51,
+        "93816256": 31
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -18815.222222222223,
+      "draws": 0,
+      "games": 82,
+      "losses": 47,
+      "mean_margin": -2694.6341463414633,
+      "min_action_win_rate": 0.25,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 2,
+      "risk_coefficient": 1.0,
+      "win_rate": 0.4268292682926829,
+      "wins": 35,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 50,
+        "93816256": 32
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -19245.0,
+      "draws": 0,
+      "games": 82,
+      "losses": 47,
+      "mean_margin": -2967.9756097560976,
+      "min_action_win_rate": 0.0,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 3,
+      "risk_coefficient": 0.25,
+      "win_rate": 0.4268292682926829,
+      "wins": 35,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 50,
+        "93816256": 32
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -19245.0,
+      "draws": 0,
+      "games": 82,
+      "losses": 47,
+      "mean_margin": -2967.9756097560976,
+      "min_action_win_rate": 0.1,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 3,
+      "risk_coefficient": 0.25,
+      "win_rate": 0.4268292682926829,
+      "wins": 35,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 50,
+        "93816256": 32
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -19245.0,
+      "draws": 0,
+      "games": 82,
+      "losses": 47,
+      "mean_margin": -2967.9756097560976,
+      "min_action_win_rate": 0.2,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 3,
+      "risk_coefficient": 0.25,
+      "win_rate": 0.4268292682926829,
+      "wins": 35,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 50,
+        "93816256": 32
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -19245.0,
+      "draws": 0,
+      "games": 82,
+      "losses": 47,
+      "mean_margin": -2967.9756097560976,
+      "min_action_win_rate": 0.25,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 3,
+      "risk_coefficient": 0.25,
+      "win_rate": 0.4268292682926829,
+      "wins": 35,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 49,
+        "93816256": 33
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -19338.666666666668,
+      "draws": 0,
+      "games": 82,
+      "losses": 47,
+      "mean_margin": -2675.4024390243903,
+      "min_action_win_rate": 0.0,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 2,
+      "risk_coefficient": 0.5,
+      "win_rate": 0.4268292682926829,
+      "wins": 35,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 49,
+        "93816256": 33
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -19338.666666666668,
+      "draws": 0,
+      "games": 82,
+      "losses": 47,
+      "mean_margin": -2675.4024390243903,
+      "min_action_win_rate": 0.1,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 2,
+      "risk_coefficient": 0.5,
+      "win_rate": 0.4268292682926829,
+      "wins": 35,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 49,
+        "93816256": 33
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -19338.666666666668,
+      "draws": 0,
+      "games": 82,
+      "losses": 47,
+      "mean_margin": -2675.4024390243903,
+      "min_action_win_rate": 0.2,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 2,
+      "risk_coefficient": 0.5,
+      "win_rate": 0.4268292682926829,
+      "wins": 35,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 49,
+        "93816256": 33
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -19338.666666666668,
+      "draws": 0,
+      "games": 82,
+      "losses": 47,
+      "mean_margin": -2675.4024390243903,
+      "min_action_win_rate": 0.25,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 2,
+      "risk_coefficient": 0.5,
+      "win_rate": 0.4268292682926829,
+      "wins": 35,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 52,
+        "93816256": 30
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -19681.555555555555,
+      "draws": 0,
+      "games": 82,
+      "losses": 47,
+      "mean_margin": -3092.5731707317073,
+      "min_action_win_rate": 0.0,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 3,
+      "risk_coefficient": 0.5,
+      "win_rate": 0.4268292682926829,
+      "wins": 35,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 52,
+        "93816256": 30
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -19681.555555555555,
+      "draws": 0,
+      "games": 82,
+      "losses": 47,
+      "mean_margin": -3092.5731707317073,
+      "min_action_win_rate": 0.1,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 3,
+      "risk_coefficient": 0.5,
+      "win_rate": 0.4268292682926829,
+      "wins": 35,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 52,
+        "93816256": 30
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -19681.555555555555,
+      "draws": 0,
+      "games": 82,
+      "losses": 47,
+      "mean_margin": -3092.5731707317073,
+      "min_action_win_rate": 0.2,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 3,
+      "risk_coefficient": 0.5,
+      "win_rate": 0.4268292682926829,
+      "wins": 35,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 52,
+        "93816256": 30
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -19681.555555555555,
+      "draws": 0,
+      "games": 82,
+      "losses": 47,
+      "mean_margin": -3092.5731707317073,
+      "min_action_win_rate": 0.25,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 3,
+      "risk_coefficient": 0.5,
+      "win_rate": 0.4268292682926829,
+      "wins": 35,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 49,
+        "93816256": 33
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -21079.88888888889,
+      "draws": 0,
+      "games": 82,
+      "losses": 47,
+      "mean_margin": -2926.439024390244,
+      "min_action_win_rate": 0.0,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 2,
+      "risk_coefficient": 0.0,
+      "win_rate": 0.4268292682926829,
+      "wins": 35,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 49,
+        "93816256": 33
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -21079.88888888889,
+      "draws": 0,
+      "games": 82,
+      "losses": 47,
+      "mean_margin": -2926.439024390244,
+      "min_action_win_rate": 0.1,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 2,
+      "risk_coefficient": 0.0,
+      "win_rate": 0.4268292682926829,
+      "wins": 35,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 49,
+        "93816256": 33
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -21079.88888888889,
+      "draws": 0,
+      "games": 82,
+      "losses": 47,
+      "mean_margin": -2926.439024390244,
+      "min_action_win_rate": 0.2,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 2,
+      "risk_coefficient": 0.0,
+      "win_rate": 0.4268292682926829,
+      "wins": 35,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 49,
+        "93816256": 33
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -21079.88888888889,
+      "draws": 0,
+      "games": 82,
+      "losses": 47,
+      "mean_margin": -2926.439024390244,
+      "min_action_win_rate": 0.25,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 2,
+      "risk_coefficient": 0.0,
+      "win_rate": 0.4268292682926829,
+      "wins": 35,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 48,
+        "93816256": 34
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -21079.88888888889,
+      "draws": 0,
+      "games": 82,
+      "losses": 47,
+      "mean_margin": -3079.6341463414633,
+      "min_action_win_rate": 0.0,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 2,
+      "risk_coefficient": 0.25,
+      "win_rate": 0.4268292682926829,
+      "wins": 35,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 48,
+        "93816256": 34
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -21079.88888888889,
+      "draws": 0,
+      "games": 82,
+      "losses": 47,
+      "mean_margin": -3079.6341463414633,
+      "min_action_win_rate": 0.1,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 2,
+      "risk_coefficient": 0.25,
+      "win_rate": 0.4268292682926829,
+      "wins": 35,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 48,
+        "93816256": 34
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -21079.88888888889,
+      "draws": 0,
+      "games": 82,
+      "losses": 47,
+      "mean_margin": -3079.6341463414633,
+      "min_action_win_rate": 0.2,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 2,
+      "risk_coefficient": 0.25,
+      "win_rate": 0.4268292682926829,
+      "wins": 35,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 48,
+        "93816256": 34
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -21079.88888888889,
+      "draws": 0,
+      "games": 82,
+      "losses": 47,
+      "mean_margin": -3079.6341463414633,
+      "min_action_win_rate": 0.25,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 2,
+      "risk_coefficient": 0.25,
+      "win_rate": 0.4268292682926829,
+      "wins": 35,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 53,
+        "93816256": 29
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -17563.777777777777,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -2630.5,
+      "min_action_win_rate": 0.0,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 5,
+      "risk_coefficient": 2.0,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 53,
+        "93816256": 29
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -17563.777777777777,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -2630.5,
+      "min_action_win_rate": 0.1,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 5,
+      "risk_coefficient": 2.0,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 53,
+        "93816256": 29
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -17563.777777777777,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -2630.5,
+      "min_action_win_rate": 0.2,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 5,
+      "risk_coefficient": 2.0,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 53,
+        "93816256": 29
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -17563.777777777777,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -2630.5,
+      "min_action_win_rate": 0.25,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 5,
+      "risk_coefficient": 2.0,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 55,
+        "93816256": 27
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -17563.777777777777,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -2716.4634146341464,
+      "min_action_win_rate": 0.0,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 7,
+      "risk_coefficient": 1.0,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 55,
+        "93816256": 27
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -17563.777777777777,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -2716.4634146341464,
+      "min_action_win_rate": 0.1,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 7,
+      "risk_coefficient": 1.0,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 55,
+        "93816256": 27
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -17563.777777777777,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -2716.4634146341464,
+      "min_action_win_rate": 0.2,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 7,
+      "risk_coefficient": 1.0,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 55,
+        "93816256": 27
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -17563.777777777777,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -2716.4634146341464,
+      "min_action_win_rate": 0.25,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 7,
+      "risk_coefficient": 1.0,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 54,
+        "93816256": 28
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -18156.88888888889,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -2904.4268292682927,
+      "min_action_win_rate": 0.0,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 7,
+      "risk_coefficient": 0.5,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 54,
+        "93816256": 28
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -18156.88888888889,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -2904.4268292682927,
+      "min_action_win_rate": 0.1,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 7,
+      "risk_coefficient": 0.5,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 54,
+        "93816256": 28
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -18156.88888888889,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -2904.4268292682927,
+      "min_action_win_rate": 0.2,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 7,
+      "risk_coefficient": 0.5,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 54,
+        "93816256": 28
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -18156.88888888889,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -2904.4268292682927,
+      "min_action_win_rate": 0.25,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 7,
+      "risk_coefficient": 0.5,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 53,
+        "93816256": 29
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -18156.88888888889,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -2933.6341463414633,
+      "min_action_win_rate": 0.0,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 5,
+      "risk_coefficient": 0.5,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 53,
+        "93816256": 29
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -18156.88888888889,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -2933.6341463414633,
+      "min_action_win_rate": 0.1,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 5,
+      "risk_coefficient": 0.5,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 53,
+        "93816256": 29
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -18156.88888888889,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -2933.6341463414633,
+      "min_action_win_rate": 0.2,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 5,
+      "risk_coefficient": 0.5,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 53,
+        "93816256": 29
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -18156.88888888889,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -2933.6341463414633,
+      "min_action_win_rate": 0.25,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 5,
+      "risk_coefficient": 0.5,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 47,
+        "93816256": 35
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -18525.777777777777,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -2745.1341463414633,
+      "min_action_win_rate": 0.0,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 7,
+      "risk_coefficient": 0.0,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 47,
+        "93816256": 35
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -18525.777777777777,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -2745.1341463414633,
+      "min_action_win_rate": 0.1,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 7,
+      "risk_coefficient": 0.0,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 47,
+        "93816256": 35
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -18525.777777777777,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -2745.1341463414633,
+      "min_action_win_rate": 0.2,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 7,
+      "risk_coefficient": 0.0,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 47,
+        "93816256": 35
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -18525.777777777777,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -2745.1341463414633,
+      "min_action_win_rate": 0.25,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 7,
+      "risk_coefficient": 0.0,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 54,
+        "93816256": 28
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -18797.88888888889,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -2744.951219512195,
+      "min_action_win_rate": 0.0,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 3,
+      "risk_coefficient": 1.0,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 54,
+        "93816256": 28
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -18797.88888888889,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -2744.951219512195,
+      "min_action_win_rate": 0.1,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 3,
+      "risk_coefficient": 1.0,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 54,
+        "93816256": 28
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -18797.88888888889,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -2744.951219512195,
+      "min_action_win_rate": 0.2,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 3,
+      "risk_coefficient": 1.0,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 54,
+        "93816256": 28
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -18797.88888888889,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -2744.951219512195,
+      "min_action_win_rate": 0.25,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 3,
+      "risk_coefficient": 1.0,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 54,
+        "93816256": 28
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -18797.88888888889,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -2813.768292682927,
+      "min_action_win_rate": 0.0,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 3,
+      "risk_coefficient": 2.0,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 54,
+        "93816256": 28
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -18797.88888888889,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -2813.768292682927,
+      "min_action_win_rate": 0.1,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 3,
+      "risk_coefficient": 2.0,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 54,
+        "93816256": 28
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -18797.88888888889,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -2813.768292682927,
+      "min_action_win_rate": 0.2,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 3,
+      "risk_coefficient": 2.0,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 54,
+        "93816256": 28
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -18797.88888888889,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -2813.768292682927,
+      "min_action_win_rate": 0.25,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 3,
+      "risk_coefficient": 2.0,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 50,
+        "93816256": 32
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -20091.777777777777,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -3165.439024390244,
+      "min_action_win_rate": 0.0,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 5,
+      "risk_coefficient": 0.0,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 50,
+        "93816256": 32
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -20091.777777777777,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -3165.439024390244,
+      "min_action_win_rate": 0.1,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 5,
+      "risk_coefficient": 0.0,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 50,
+        "93816256": 32
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -20091.777777777777,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -3165.439024390244,
+      "min_action_win_rate": 0.2,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 5,
+      "risk_coefficient": 0.0,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 50,
+        "93816256": 32
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -20091.777777777777,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -3165.439024390244,
+      "min_action_win_rate": 0.25,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 5,
+      "risk_coefficient": 0.0,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 51,
+        "93816256": 31
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -21580.222222222223,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -3459.951219512195,
+      "min_action_win_rate": 0.0,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 3,
+      "risk_coefficient": 0.0,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28193.0
+    },
+    {
+      "actions": {
+        "93518562": 51,
+        "93816256": 31
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -21580.222222222223,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -3459.951219512195,
+      "min_action_win_rate": 0.1,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 3,
+      "risk_coefficient": 0.0,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28193.0
+    },
+    {
+      "actions": {
+        "93518562": 51,
+        "93816256": 31
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -21580.222222222223,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -3459.951219512195,
+      "min_action_win_rate": 0.2,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 3,
+      "risk_coefficient": 0.0,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28193.0
+    },
+    {
+      "actions": {
+        "93518562": 51,
+        "93816256": 31
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -21580.222222222223,
+      "draws": 0,
+      "games": 82,
+      "losses": 48,
+      "mean_margin": -3459.951219512195,
+      "min_action_win_rate": 0.25,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 3,
+      "risk_coefficient": 0.0,
+      "win_rate": 0.4146341463414634,
+      "wins": 34,
+      "worst_margin": -28193.0
+    },
+    {
+      "actions": {
+        "93518562": 54,
+        "93816256": 28
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -17563.777777777777,
+      "draws": 0,
+      "games": 82,
+      "losses": 49,
+      "mean_margin": -2937.829268292683,
+      "min_action_win_rate": 0.0,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 5,
+      "risk_coefficient": 1.0,
+      "win_rate": 0.4024390243902439,
+      "wins": 33,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 54,
+        "93816256": 28
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -17563.777777777777,
+      "draws": 0,
+      "games": 82,
+      "losses": 49,
+      "mean_margin": -2937.829268292683,
+      "min_action_win_rate": 0.1,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 5,
+      "risk_coefficient": 1.0,
+      "win_rate": 0.4024390243902439,
+      "wins": 33,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 54,
+        "93816256": 28
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -17563.777777777777,
+      "draws": 0,
+      "games": 82,
+      "losses": 49,
+      "mean_margin": -2937.829268292683,
+      "min_action_win_rate": 0.2,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 5,
+      "risk_coefficient": 1.0,
+      "win_rate": 0.4024390243902439,
+      "wins": 33,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 54,
+        "93816256": 28
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -17563.777777777777,
+      "draws": 0,
+      "games": 82,
+      "losses": 49,
+      "mean_margin": -2937.829268292683,
+      "min_action_win_rate": 0.25,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 5,
+      "risk_coefficient": 1.0,
+      "win_rate": 0.4024390243902439,
+      "wins": 33,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 51,
+        "93816256": 31
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -18517.11111111111,
+      "draws": 0,
+      "games": 82,
+      "losses": 49,
+      "mean_margin": -3035.231707317073,
+      "min_action_win_rate": 0.0,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 7,
+      "risk_coefficient": 0.25,
+      "win_rate": 0.4024390243902439,
+      "wins": 33,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 51,
+        "93816256": 31
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -18517.11111111111,
+      "draws": 0,
+      "games": 82,
+      "losses": 49,
+      "mean_margin": -3035.231707317073,
+      "min_action_win_rate": 0.1,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 7,
+      "risk_coefficient": 0.25,
+      "win_rate": 0.4024390243902439,
+      "wins": 33,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 51,
+        "93816256": 31
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -18517.11111111111,
+      "draws": 0,
+      "games": 82,
+      "losses": 49,
+      "mean_margin": -3035.231707317073,
+      "min_action_win_rate": 0.2,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 7,
+      "risk_coefficient": 0.25,
+      "win_rate": 0.4024390243902439,
+      "wins": 33,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 51,
+        "93816256": 31
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -18517.11111111111,
+      "draws": 0,
+      "games": 82,
+      "losses": 49,
+      "mean_margin": -3035.231707317073,
+      "min_action_win_rate": 0.25,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 7,
+      "risk_coefficient": 0.25,
+      "win_rate": 0.4024390243902439,
+      "wins": 33,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 52,
+        "93816256": 30
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -19509.555555555555,
+      "draws": 0,
+      "games": 82,
+      "losses": 49,
+      "mean_margin": -3300.609756097561,
+      "min_action_win_rate": 0.0,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 5,
+      "risk_coefficient": 0.25,
+      "win_rate": 0.4024390243902439,
+      "wins": 33,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 52,
+        "93816256": 30
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -19509.555555555555,
+      "draws": 0,
+      "games": 82,
+      "losses": 49,
+      "mean_margin": -3300.609756097561,
+      "min_action_win_rate": 0.1,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 5,
+      "risk_coefficient": 0.25,
+      "win_rate": 0.4024390243902439,
+      "wins": 33,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 52,
+        "93816256": 30
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -19509.555555555555,
+      "draws": 0,
+      "games": 82,
+      "losses": 49,
+      "mean_margin": -3300.609756097561,
+      "min_action_win_rate": 0.2,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 5,
+      "risk_coefficient": 0.25,
+      "win_rate": 0.4024390243902439,
+      "wins": 33,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 52,
+        "93816256": 30
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -19509.555555555555,
+      "draws": 0,
+      "games": 82,
+      "losses": 49,
+      "mean_margin": -3300.609756097561,
+      "min_action_win_rate": 0.25,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 5,
+      "risk_coefficient": 0.25,
+      "win_rate": 0.4024390243902439,
+      "wins": 33,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 46,
+        "93816256": 36
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -22013.444444444445,
+      "draws": 0,
+      "games": 82,
+      "losses": 51,
+      "mean_margin": -3257.890243902439,
+      "min_action_win_rate": 0.0,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 1,
+      "risk_coefficient": 0.0,
+      "win_rate": 0.3780487804878049,
+      "wins": 31,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 46,
+        "93816256": 36
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -22013.444444444445,
+      "draws": 0,
+      "games": 82,
+      "losses": 51,
+      "mean_margin": -3257.890243902439,
+      "min_action_win_rate": 0.0,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 1,
+      "risk_coefficient": 0.25,
+      "win_rate": 0.3780487804878049,
+      "wins": 31,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 46,
+        "93816256": 36
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -22013.444444444445,
+      "draws": 0,
+      "games": 82,
+      "losses": 51,
+      "mean_margin": -3257.890243902439,
+      "min_action_win_rate": 0.0,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 1,
+      "risk_coefficient": 0.5,
+      "win_rate": 0.3780487804878049,
+      "wins": 31,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 46,
+        "93816256": 36
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -22013.444444444445,
+      "draws": 0,
+      "games": 82,
+      "losses": 51,
+      "mean_margin": -3257.890243902439,
+      "min_action_win_rate": 0.0,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 1,
+      "risk_coefficient": 1.0,
+      "win_rate": 0.3780487804878049,
+      "wins": 31,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 46,
+        "93816256": 36
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -22013.444444444445,
+      "draws": 0,
+      "games": 82,
+      "losses": 51,
+      "mean_margin": -3257.890243902439,
+      "min_action_win_rate": 0.0,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 1,
+      "risk_coefficient": 2.0,
+      "win_rate": 0.3780487804878049,
+      "wins": 31,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 46,
+        "93816256": 36
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -22013.444444444445,
+      "draws": 0,
+      "games": 82,
+      "losses": 51,
+      "mean_margin": -3257.890243902439,
+      "min_action_win_rate": 0.1,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 1,
+      "risk_coefficient": 0.0,
+      "win_rate": 0.3780487804878049,
+      "wins": 31,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 46,
+        "93816256": 36
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -22013.444444444445,
+      "draws": 0,
+      "games": 82,
+      "losses": 51,
+      "mean_margin": -3257.890243902439,
+      "min_action_win_rate": 0.1,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 1,
+      "risk_coefficient": 0.25,
+      "win_rate": 0.3780487804878049,
+      "wins": 31,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 46,
+        "93816256": 36
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -22013.444444444445,
+      "draws": 0,
+      "games": 82,
+      "losses": 51,
+      "mean_margin": -3257.890243902439,
+      "min_action_win_rate": 0.1,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 1,
+      "risk_coefficient": 0.5,
+      "win_rate": 0.3780487804878049,
+      "wins": 31,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 46,
+        "93816256": 36
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -22013.444444444445,
+      "draws": 0,
+      "games": 82,
+      "losses": 51,
+      "mean_margin": -3257.890243902439,
+      "min_action_win_rate": 0.1,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 1,
+      "risk_coefficient": 1.0,
+      "win_rate": 0.3780487804878049,
+      "wins": 31,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 46,
+        "93816256": 36
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -22013.444444444445,
+      "draws": 0,
+      "games": 82,
+      "losses": 51,
+      "mean_margin": -3257.890243902439,
+      "min_action_win_rate": 0.1,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 1,
+      "risk_coefficient": 2.0,
+      "win_rate": 0.3780487804878049,
+      "wins": 31,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 46,
+        "93816256": 36
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -22013.444444444445,
+      "draws": 0,
+      "games": 82,
+      "losses": 51,
+      "mean_margin": -3257.890243902439,
+      "min_action_win_rate": 0.2,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 1,
+      "risk_coefficient": 0.0,
+      "win_rate": 0.3780487804878049,
+      "wins": 31,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 46,
+        "93816256": 36
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -22013.444444444445,
+      "draws": 0,
+      "games": 82,
+      "losses": 51,
+      "mean_margin": -3257.890243902439,
+      "min_action_win_rate": 0.2,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 1,
+      "risk_coefficient": 0.25,
+      "win_rate": 0.3780487804878049,
+      "wins": 31,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 46,
+        "93816256": 36
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -22013.444444444445,
+      "draws": 0,
+      "games": 82,
+      "losses": 51,
+      "mean_margin": -3257.890243902439,
+      "min_action_win_rate": 0.2,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 1,
+      "risk_coefficient": 0.5,
+      "win_rate": 0.3780487804878049,
+      "wins": 31,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 46,
+        "93816256": 36
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -22013.444444444445,
+      "draws": 0,
+      "games": 82,
+      "losses": 51,
+      "mean_margin": -3257.890243902439,
+      "min_action_win_rate": 0.2,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 1,
+      "risk_coefficient": 1.0,
+      "win_rate": 0.3780487804878049,
+      "wins": 31,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 46,
+        "93816256": 36
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -22013.444444444445,
+      "draws": 0,
+      "games": 82,
+      "losses": 51,
+      "mean_margin": -3257.890243902439,
+      "min_action_win_rate": 0.2,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 1,
+      "risk_coefficient": 2.0,
+      "win_rate": 0.3780487804878049,
+      "wins": 31,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 46,
+        "93816256": 36
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -22013.444444444445,
+      "draws": 0,
+      "games": 82,
+      "losses": 51,
+      "mean_margin": -3257.890243902439,
+      "min_action_win_rate": 0.25,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 1,
+      "risk_coefficient": 0.0,
+      "win_rate": 0.3780487804878049,
+      "wins": 31,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 46,
+        "93816256": 36
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -22013.444444444445,
+      "draws": 0,
+      "games": 82,
+      "losses": 51,
+      "mean_margin": -3257.890243902439,
+      "min_action_win_rate": 0.25,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 1,
+      "risk_coefficient": 0.25,
+      "win_rate": 0.3780487804878049,
+      "wins": 31,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 46,
+        "93816256": 36
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -22013.444444444445,
+      "draws": 0,
+      "games": 82,
+      "losses": 51,
+      "mean_margin": -3257.890243902439,
+      "min_action_win_rate": 0.25,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 1,
+      "risk_coefficient": 0.5,
+      "win_rate": 0.3780487804878049,
+      "wins": 31,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 46,
+        "93816256": 36
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -22013.444444444445,
+      "draws": 0,
+      "games": 82,
+      "losses": 51,
+      "mean_margin": -3257.890243902439,
+      "min_action_win_rate": 0.25,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 1,
+      "risk_coefficient": 1.0,
+      "win_rate": 0.3780487804878049,
+      "wins": 31,
+      "worst_margin": -28997.0
+    },
+    {
+      "actions": {
+        "93518562": 46,
+        "93816256": 36
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -22013.444444444445,
+      "draws": 0,
+      "games": 82,
+      "losses": 51,
+      "mean_margin": -3257.890243902439,
+      "min_action_win_rate": 0.25,
+      "nearest_distance_max": 32.083941909481396,
+      "nearest_distance_mean": 2.4143077873374326,
+      "neighbors": 1,
+      "risk_coefficient": 2.0,
+      "win_rate": 0.3780487804878049,
+      "wins": 31,
+      "worst_margin": -28997.0
+    }
+  ],
+  "feature_dim": 405,
+  "feature_rows": 82,
+  "global_summary": {
+    "actions": {
+      "93816256": 82
+    },
+    "cvar10_margin": -21818.88888888889,
+    "draws": 0,
+    "games": 82,
+    "losses": 58,
+    "mean_margin": -4652.585365853659,
+    "win_rate": 0.2926829268292683,
+    "wins": 24,
+    "worst_margin": -28997.0
+  },
+  "holdout_used": false,
+  "model": "contextual-q-tape-selector-v9",
+  "oracle_summary": {
+    "actions": {
+      "93518562": 47,
+      "93816256": 35
+    },
+    "cvar10_margin": -15213.444444444445,
+    "draws": 0,
+    "games": 82,
+    "losses": 39,
+    "mean_margin": -279.6707317073171,
+    "win_rate": 0.524390243902439,
+    "wins": 43,
+    "worst_margin": -28074.0
+  },
+  "selected_cross_validation": {
+    "actions": {
+      "93518562": 54,
+      "93816256": 28
+    },
+    "allowed_action_ids": [
+      93816256,
+      93518562
+    ],
+    "cvar10_margin": -18815.222222222223,
+    "draws": 0,
+    "games": 82,
+    "losses": 44,
+    "mean_margin": -2344.8414634146343,
+    "min_action_win_rate": 0.0,
+    "nearest_distance_max": 32.083941909481396,
+    "nearest_distance_mean": 2.4143077873374326,
+    "neighbors": 2,
+    "risk_coefficient": 2.0,
+    "win_rate": 0.4634146341463415,
+    "wins": 38,
+    "worst_margin": -28997.0
+  }
+}

@@ -1,0 +1,14 @@
+name: swe_coder
+model: gemma-4-31b-it-qat-w4a16-ct
+description: Autonomous software engineer that fixes repository issues with minimal, verified patches.
+instruction: !include prompts/system.md
+generate_content_config: !include configs/sampling.yaml
+skills:
+  - skills/code-tools
+  - skills/write-failing-test
+  - skills/exact-output
+  - skills/add-feature
+  - skills/errors-and-validation
+tools:
+  - get_status
+  - submit_patch

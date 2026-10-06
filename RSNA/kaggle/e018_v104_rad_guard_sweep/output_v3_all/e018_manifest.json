@@ -1,0 +1,33 @@
+{
+  "experiment": "E018 V104 Rad guard sweep",
+  "variants": {
+    "submission_all_rad.csv": {
+      "checks": {
+        "declared_exclusions": true,
+        "finite": true,
+        "range": true,
+        "receipt_hash": true,
+        "schema": true,
+        "uid_order": true,
+        "uid_unique": true
+      },
+      "e10_excluded_targets": [],
+      "sha256": "30537911dcc1654d1c0615330257a65e08eeeead71517784664cd7acfe134692"
+    },
+    "submission_fracture_rad.csv": {
+      "checks": {
+        "declared_exclusions": true,
+        "finite": true,
+        "range": true,
+        "receipt_hash": true,
+        "schema": true,
+        "uid_order": true,
+        "uid_unique": true
+      },
+      "e10_excluded_targets": [
+        "Baker's"
+      ],
+      "sha256": "30537911dcc1654d1c0615330257a65e08eeeead71517784664cd7acfe134692"
+    }
+  }
+}

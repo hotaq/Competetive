@@ -1,0 +1,519 @@
+{
+  "active": {
+    "active_games": 80,
+    "cvar10_margin": -17291.75,
+    "families_4of4": 2,
+    "games": 80,
+    "losses": 28,
+    "mean_margin": 5006.025,
+    "minimum_family_wins": 1,
+    "wins": 52,
+    "worst_margin": -38681.0
+  },
+  "base": {
+    "active_games": 0,
+    "cvar10_margin": -16497.375,
+    "families_4of4": 3,
+    "games": 80,
+    "losses": 29,
+    "mean_margin": 5588.9625,
+    "minimum_family_wins": 0,
+    "wins": 51,
+    "worst_margin": -38533.0
+  },
+  "checkpoint": 120,
+  "oracle": {
+    "active_games": 26,
+    "cvar10_margin": -16007.875,
+    "families_4of4": 5,
+    "games": 80,
+    "losses": 24,
+    "mean_margin": 7122.4,
+    "minimum_family_wins": 1,
+    "wins": 56,
+    "worst_margin": -38533.0
+  },
+  "rows": 80,
+  "top_gates": [
+    {
+      "feature": "opponent_money",
+      "metrics": {
+        "active_games": 45,
+        "cvar10_margin": -17351.625,
+        "families_4of4": 4,
+        "games": 80,
+        "losses": 26,
+        "mean_margin": 6008.7125,
+        "minimum_family_wins": 1,
+        "wins": 54,
+        "worst_margin": -38681.0
+      },
+      "operator": ">=",
+      "threshold": 9.5
+    },
+    {
+      "feature": "opponent_money",
+      "metrics": {
+        "active_games": 45,
+        "cvar10_margin": -17351.625,
+        "families_4of4": 4,
+        "games": 80,
+        "losses": 26,
+        "mean_margin": 6008.7125,
+        "minimum_family_wins": 1,
+        "wins": 54,
+        "worst_margin": -38681.0
+      },
+      "operator": ">=",
+      "threshold": 10.0
+    },
+    {
+      "feature": "own_money",
+      "metrics": {
+        "active_games": 61,
+        "cvar10_margin": -17399.125,
+        "families_4of4": 4,
+        "games": 80,
+        "losses": 27,
+        "mean_margin": 5381.125,
+        "minimum_family_wins": 1,
+        "wins": 53,
+        "worst_margin": -38533.0
+      },
+      "operator": ">=",
+      "threshold": 9.5
+    },
+    {
+      "feature": "own_money",
+      "metrics": {
+        "active_games": 61,
+        "cvar10_margin": -17399.125,
+        "families_4of4": 4,
+        "games": 80,
+        "losses": 27,
+        "mean_margin": 5381.125,
+        "minimum_family_wins": 1,
+        "wins": 53,
+        "worst_margin": -38533.0
+      },
+      "operator": ">=",
+      "threshold": 10.0
+    },
+    {
+      "feature": "money_margin",
+      "metrics": {
+        "active_games": 16,
+        "cvar10_margin": -16209.125,
+        "families_4of4": 3,
+        "games": 80,
+        "losses": 27,
+        "mean_margin": 6042.6125,
+        "minimum_family_wins": 1,
+        "wins": 53,
+        "worst_margin": -38681.0
+      },
+      "operator": "<=",
+      "threshold": -10.0
+    },
+    {
+      "feature": "money_margin",
+      "metrics": {
+        "active_games": 16,
+        "cvar10_margin": -16209.125,
+        "families_4of4": 3,
+        "games": 80,
+        "losses": 27,
+        "mean_margin": 6042.6125,
+        "minimum_family_wins": 1,
+        "wins": 53,
+        "worst_margin": -38681.0
+      },
+      "operator": "<=",
+      "threshold": -9.0
+    },
+    {
+      "feature": "money_margin",
+      "metrics": {
+        "active_games": 17,
+        "cvar10_margin": -16273.125,
+        "families_4of4": 3,
+        "games": 80,
+        "losses": 27,
+        "mean_margin": 6036.2125,
+        "minimum_family_wins": 1,
+        "wins": 53,
+        "worst_margin": -38681.0
+      },
+      "operator": "<=",
+      "threshold": -8.0
+    },
+    {
+      "feature": "money_margin",
+      "metrics": {
+        "active_games": 17,
+        "cvar10_margin": -16273.125,
+        "families_4of4": 3,
+        "games": 80,
+        "losses": 27,
+        "mean_margin": 6036.2125,
+        "minimum_family_wins": 1,
+        "wins": 53,
+        "worst_margin": -38681.0
+      },
+      "operator": "<=",
+      "threshold": -4.0
+    },
+    {
+      "feature": "delta_crop_strawberry",
+      "metrics": {
+        "active_games": 59,
+        "cvar10_margin": -16421.875,
+        "families_4of4": 2,
+        "games": 80,
+        "losses": 27,
+        "mean_margin": 5429.225,
+        "minimum_family_wins": 1,
+        "wins": 53,
+        "worst_margin": -38681.0
+      },
+      "operator": "<=",
+      "threshold": 1.0
+    },
+    {
+      "feature": "delta_crop_strawberry",
+      "metrics": {
+        "active_games": 59,
+        "cvar10_margin": -16421.875,
+        "families_4of4": 2,
+        "games": 80,
+        "losses": 27,
+        "mean_margin": 5429.225,
+        "minimum_family_wins": 1,
+        "wins": 53,
+        "worst_margin": -38681.0
+      },
+      "operator": "<=",
+      "threshold": 2.0
+    },
+    {
+      "feature": "delta_crop_melon",
+      "metrics": {
+        "active_games": 61,
+        "cvar10_margin": -16421.875,
+        "families_4of4": 2,
+        "games": 80,
+        "losses": 27,
+        "mean_margin": 5371.25,
+        "minimum_family_wins": 1,
+        "wins": 53,
+        "worst_margin": -38681.0
+      },
+      "operator": ">=",
+      "threshold": -3.5
+    },
+    {
+      "feature": "delta_crop_melon",
+      "metrics": {
+        "active_games": 61,
+        "cvar10_margin": -16421.875,
+        "families_4of4": 2,
+        "games": 80,
+        "losses": 27,
+        "mean_margin": 5371.25,
+        "minimum_family_wins": 1,
+        "wins": 53,
+        "worst_margin": -38681.0
+      },
+      "operator": ">=",
+      "threshold": -3.0
+    },
+    {
+      "feature": "own_crop_melon",
+      "metrics": {
+        "active_games": 61,
+        "cvar10_margin": -16421.875,
+        "families_4of4": 2,
+        "games": 80,
+        "losses": 27,
+        "mean_margin": 5371.25,
+        "minimum_family_wins": 1,
+        "wins": 53,
+        "worst_margin": -38681.0
+      },
+      "operator": "<=",
+      "threshold": 8.0
+    },
+    {
+      "feature": "own_crop_melon",
+      "metrics": {
+        "active_games": 61,
+        "cvar10_margin": -16421.875,
+        "families_4of4": 2,
+        "games": 80,
+        "losses": 27,
+        "mean_margin": 5371.25,
+        "minimum_family_wins": 1,
+        "wins": 53,
+        "worst_margin": -38681.0
+      },
+      "operator": "<=",
+      "threshold": 9.5
+    },
+    {
+      "feature": "own_crop_strawberry",
+      "metrics": {
+        "active_games": 60,
+        "cvar10_margin": -16421.875,
+        "families_4of4": 2,
+        "games": 80,
+        "losses": 27,
+        "mean_margin": 5367.2625,
+        "minimum_family_wins": 1,
+        "wins": 53,
+        "worst_margin": -38681.0
+      },
+      "operator": ">=",
+      "threshold": 2.5
+    },
+    {
+      "feature": "own_crop_strawberry",
+      "metrics": {
+        "active_games": 60,
+        "cvar10_margin": -16421.875,
+        "families_4of4": 2,
+        "games": 80,
+        "losses": 27,
+        "mean_margin": 5367.2625,
+        "minimum_family_wins": 1,
+        "wins": 53,
+        "worst_margin": -38681.0
+      },
+      "operator": ">=",
+      "threshold": 3.0
+    },
+    {
+      "feature": "own_crop_melon",
+      "metrics": {
+        "active_games": 59,
+        "cvar10_margin": -16421.875,
+        "families_4of4": 2,
+        "games": 80,
+        "losses": 27,
+        "mean_margin": 5361.5625,
+        "minimum_family_wins": 1,
+        "wins": 53,
+        "worst_margin": -38681.0
+      },
+      "operator": "<=",
+      "threshold": 7.0
+    },
+    {
+      "feature": "own_crop_melon",
+      "metrics": {
+        "active_games": 59,
+        "cvar10_margin": -16421.875,
+        "families_4of4": 2,
+        "games": 80,
+        "losses": 27,
+        "mean_margin": 5361.5625,
+        "minimum_family_wins": 1,
+        "wins": 53,
+        "worst_margin": -38681.0
+      },
+      "operator": "<=",
+      "threshold": 7.5
+    },
+    {
+      "feature": "delta_crop_melon",
+      "metrics": {
+        "active_games": 60,
+        "cvar10_margin": -16421.875,
+        "families_4of4": 2,
+        "games": 80,
+        "losses": 27,
+        "mean_margin": 5343.8,
+        "minimum_family_wins": 1,
+        "wins": 53,
+        "worst_margin": -38681.0
+      },
+      "operator": ">=",
+      "threshold": -2.0
+    },
+    {
+      "feature": "delta_crop_melon",
+      "metrics": {
+        "active_games": 60,
+        "cvar10_margin": -16421.875,
+        "families_4of4": 2,
+        "games": 80,
+        "losses": 27,
+        "mean_margin": 5343.8,
+        "minimum_family_wins": 1,
+        "wins": 53,
+        "worst_margin": -38681.0
+      },
+      "operator": ">=",
+      "threshold": -1.0
+    },
+    {
+      "feature": "delta_crop_melon",
+      "metrics": {
+        "active_games": 67,
+        "cvar10_margin": -16421.875,
+        "families_4of4": 2,
+        "games": 80,
+        "losses": 27,
+        "mean_margin": 5301.8125,
+        "minimum_family_wins": 1,
+        "wins": 53,
+        "worst_margin": -38681.0
+      },
+      "operator": ">=",
+      "threshold": -4.5
+    },
+    {
+      "feature": "delta_crop_melon",
+      "metrics": {
+        "active_games": 67,
+        "cvar10_margin": -16421.875,
+        "families_4of4": 2,
+        "games": 80,
+        "losses": 27,
+        "mean_margin": 5301.8125,
+        "minimum_family_wins": 1,
+        "wins": 53,
+        "worst_margin": -38681.0
+      },
+      "operator": ">=",
+      "threshold": -4.0
+    },
+    {
+      "feature": "delta_crop_melon",
+      "metrics": {
+        "active_games": 56,
+        "cvar10_margin": -16432.625,
+        "families_4of4": 2,
+        "games": 80,
+        "losses": 27,
+        "mean_margin": 5258.6625,
+        "minimum_family_wins": 1,
+        "wins": 53,
+        "worst_margin": -38533.0
+      },
+      "operator": ">=",
+      "threshold": -0.5
+    },
+    {
+      "feature": "delta_crop_melon",
+      "metrics": {
+        "active_games": 56,
+        "cvar10_margin": -16432.625,
+        "families_4of4": 2,
+        "games": 80,
+        "losses": 27,
+        "mean_margin": 5258.6625,
+        "minimum_family_wins": 1,
+        "wins": 53,
+        "worst_margin": -38533.0
+      },
+      "operator": ">=",
+      "threshold": 0.0
+    },
+    {
+      "feature": "delta_crop_strawberry",
+      "metrics": {
+        "active_games": 54,
+        "cvar10_margin": -16432.625,
+        "families_4of4": 2,
+        "games": 80,
+        "losses": 27,
+        "mean_margin": 5176.4625,
+        "minimum_family_wins": 1,
+        "wins": 53,
+        "worst_margin": -38533.0
+      },
+      "operator": "<=",
+      "threshold": 0.0
+    },
+    {
+      "feature": "delta_crop_strawberry",
+      "metrics": {
+        "active_games": 54,
+        "cvar10_margin": -16432.625,
+        "families_4of4": 2,
+        "games": 80,
+        "losses": 27,
+        "mean_margin": 5176.4625,
+        "minimum_family_wins": 1,
+        "wins": 53,
+        "worst_margin": -38533.0
+      },
+      "operator": "<=",
+      "threshold": 0.5
+    },
+    {
+      "feature": "own_animal_sheep",
+      "metrics": {
+        "active_games": 52,
+        "cvar10_margin": -16462.125,
+        "families_4of4": 2,
+        "games": 80,
+        "losses": 27,
+        "mean_margin": 4959.2375,
+        "minimum_family_wins": 1,
+        "wins": 53,
+        "worst_margin": -38681.0
+      },
+      "operator": ">=",
+      "threshold": 3.5
+    },
+    {
+      "feature": "own_animal_sheep",
+      "metrics": {
+        "active_games": 52,
+        "cvar10_margin": -16462.125,
+        "families_4of4": 2,
+        "games": 80,
+        "losses": 27,
+        "mean_margin": 4959.2375,
+        "minimum_family_wins": 1,
+        "wins": 53,
+        "worst_margin": -38681.0
+      },
+      "operator": ">=",
+      "threshold": 4.0
+    },
+    {
+      "feature": "own_animal_cow",
+      "metrics": {
+        "active_games": 56,
+        "cvar10_margin": -16462.125,
+        "families_4of4": 2,
+        "games": 80,
+        "losses": 27,
+        "mean_margin": 4926.825,
+        "minimum_family_wins": 1,
+        "wins": 53,
+        "worst_margin": -38681.0
+      },
+      "operator": "<=",
+      "threshold": 1.0
+    },
+    {
+      "feature": "own_animal_cow",
+      "metrics": {
+        "active_games": 56,
+        "cvar10_margin": -16462.125,
+        "families_4of4": 2,
+        "games": 80,
+        "losses": 27,
+        "mean_margin": 4926.825,
+        "minimum_family_wins": 1,
+        "wins": 53,
+        "worst_margin": -38681.0
+      },
+      "operator": "<=",
+      "threshold": 1.5
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "model": "robust-q-decision-tree",
+  "branch_step": 163,
+  "feature_steps": [
+    96,
+    163
+  ],
+  "feature_encoder": "retriever",
+  "action_ids": [
+    93816256,
+    93518562,
+    93520335,
+    93501610,
+    93724855,
+    93546314,
+    93734648
+  ],
+  "config": {
+    "max_depth": 4,
+    "min_leaf": 1,
+    "margin_weight": 0.05,
+    "risk_coefficient": 0.0
+  },
+  "tree": {
+    "feature_index": 280,
+    "threshold": 0.0079925,
+    "left": {
+      "feature_index": 281,
+      "threshold": 0.0079575,
+      "left": {
+        "feature_index": 4,
+        "threshold": 9.999999999999999e-05,
+        "left": {
+          "action_index": 6
+        },
+        "right": {
+          "feature_index": 276,
+          "threshold": 0.5,
+          "left": {
+            "action_index": 1
+          },
+          "right": {
+            "action_index": 5
+          }
+        }
+      },
+      "right": {
+        "feature_index": 281,
+        "threshold": 0.0079825,
+        "left": {
+          "action_index": 5
+        },
+        "right": {
+          "feature_index": 315,
+          "threshold": 0.005,
+          "left": {
+            "action_index": 6
+          },
+          "right": {
+            "action_index": 0
+          }
+        }
+      }
+    },
+    "right": {
+      "feature_index": 281,
+      "threshold": 0.00727,
+      "left": {
+        "feature_index": 4,
+        "threshold": 9.999999999999999e-05,
+        "left": {
+          "action_index": 2
+        },
+        "right": {
+          "feature_index": 11,
+          "threshold": 0.02525,
+          "left": {
+            "action_index": 4
+          },
+          "right": {
+            "action_index": 3
+          }
+        }
+      },
+      "right": {
+        "feature_index": 11,
+        "threshold": 0.02525,
+        "left": {
+          "action_index": 4
+        },
+        "right": {
+          "action_index": 5
+        }
+      }
+    }
+  },
+  "training_context_episode_ids": [
+    93480183,
+    93481053,
+    93481927,
+    93482814,
+    93483706,
+    93484593,
+    93485494,
+    93486381,
+    93487265,
+    93488158,
+    93488275,
+    93489034,
+    93489928,
+    93494430,
+    93495340,
+    93496227,
+    93497123,
+    93498033,
+    93498936,
+    93499826,
+    93500721
+  ],
+  "validation_context_episode_ids": [
+    93501610,
+    93502507,
+    93503406,
+    93504316,
+    93505205,
+    93506095,
+    93506163,
+    93506985
+  ],
+  "validation": {
+    "feature_steps": [
+      96,
+      163
+    ],
+    "config": {
+      "max_depth": 4,
+      "min_leaf": 1,
+      "margin_weight": 0.05,
+      "risk_coefficient": 0.0
+    },
+    "games": 8,
+    "wins": 8,
+    "draws": 0,
+    "losses": 0,
+    "win_rate": 1.0,
+    "mean_margin": 4067.0,
+    "worst_margin": 529.0,
+    "cvar10_margin": 529.0,
+    "actions": {
+      "93520335": 1,
+      "93724855": 2,
+      "93546314": 2,
+      "93734648": 3
+    }
+  }
+}

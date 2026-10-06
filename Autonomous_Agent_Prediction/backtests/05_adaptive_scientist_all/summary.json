@@ -1,0 +1,29 @@
+{
+  "selection": "best supplied Public split score, best OOF fallback",
+  "task_count": 16,
+  "mean_selected_scores": {
+    "04": {
+      "oof_auc": 0.80493027,
+      "test_private": 0.80506645,
+      "test_public": 0.80278814,
+      "test_overall": 0.8039206
+    },
+    "05": {
+      "oof_auc": 0.80418798,
+      "test_private": 0.8047613,
+      "test_public": 0.8028281,
+      "test_overall": 0.8037903
+    }
+  },
+  "mean_episode_scores": {
+    "04": {
+      "best_public_auc": 0.80278814,
+      "final_private_auc": 0.80506645
+    },
+    "05": {
+      "best_public_auc": 0.80282261,
+      "final_private_auc": 0.80527899
+    }
+  },
+  "episode_selection": "Public-only challenger/finalist selection; Private revealed after finalization"
+}

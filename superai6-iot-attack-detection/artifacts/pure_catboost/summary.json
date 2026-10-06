@@ -1,0 +1,17 @@
+{
+  "pipeline": "preprocessing -> CatBoostClassifier.predict",
+  "manual_threshold": false,
+  "postprocessing_rules": false,
+  "mean_normal_fpr": 0.0,
+  "mean_held_out_family_recall": 0.2,
+  "submission": {
+    "rows": 10000,
+    "normal_rows": 9398,
+    "attack_rows": 602,
+    "attack_pct": 6.02,
+    "sha256": "cab5da63b9ecc1cf48f98aac931d8dce0ef54c04c2a1ae9da851d30582c8dd17",
+    "submission": "/Users/chinnaphat/Desktop/cedt/Super AI/competetive/superai6-iot-attack-detection/submission.csv",
+    "artifact_submission": "/Users/chinnaphat/Desktop/cedt/Super AI/competetive/superai6-iot-attack-detection/artifacts/submissions/submission_catboost_native.csv",
+    "previous_submission_archive": "/Users/chinnaphat/Desktop/cedt/Super AI/competetive/superai6-iot-attack-detection/artifacts/submissions/submission_before_pure_catboost.csv"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "candidate": {
+    "agent_file": "submissions/meta_v19_fr648_s_local/main.py",
+    "fallback_agent_file": null,
+    "sha256": "40f5052e038e7c55a9b4b81597c9a47816fa31f7b1da416cbc18b5e0a7c5def4"
+  },
+  "created_at": "2026-08-25T15:09:53.860253+00:00",
+  "episodes": [
+    {
+      "candidate_margin": -4353.0,
+      "candidate_money": 111107.0,
+      "completed_transitions": 719,
+      "episode_id": 97245055,
+      "fallback_components": 0,
+      "farmer_sanitized_steps": 116,
+      "final_state_step": 719,
+      "hands_sanitized_steps": 245,
+      "market_sanitized_steps": 28,
+      "normalized_steps": 0,
+      "opening_normalized_steps": 0,
+      "opening_sanitized_steps": 43,
+      "original_opponent_money": 90805.0,
+      "original_top1_money": 105604.0,
+      "post_handoff_normalized_steps": 0,
+      "post_handoff_sanitized_steps": 251,
+      "replay_frames": 720,
+      "route_decisions": [],
+      "sanitized_steps": 294,
+      "seed": 1502054695,
+      "steps": 719,
+      "tape_top1_money": 115460.0,
+      "top1_seat": 1
+    }
+  ],
+  "limitation": "Recorded Top-1 actions are an action tape, not a live policy; changing the opponent can make later tape actions stale or illegal.",
+  "schema_version": 4,
+  "source": {
+    "competition": "kaggriculture",
+    "leader": {
+      "score": 3137.8,
+      "submission_date": "2026-08-19T04:08:02.206Z",
+      "team_id": 16644287,
+      "team_name": "Ryo Hasegawa"
+    },
+    "manifest_created_at": "2026-08-23T13:15:21.766948+00:00",
+    "manifest_file": "analysis/top1_ryo_20260823_current/manifest.json",
+    "manifest_sha256": "cd40fefb15516590ab90912aedb1590e69c7a75fc86acaa0048bc281ddbc688e",
+    "submission": {
+      "date": "2026-08-19T04:08:02.207Z",
+      "public_score": 3137.8,
+      "submission_id": 55614463
+    }
+  },
+  "summary": {
+    "cvar10_margin": -4353.0,
+    "draws": 0,
+    "fallback_components": 0,
+    "farmer_sanitized_steps": 116,
+    "games": 1,
+    "hands_sanitized_steps": 245,
+    "losses": 1,
+    "market_sanitized_steps": 28,
+    "mean_margin": -4353.0,
+    "mean_money": 111107.0,
+    "median_margin": -4353.0,
+    "normalized_steps": 0,
+    "opening_normalized_steps": 0,
+    "opening_sanitized_steps": 43,
+    "post_handoff_normalized_steps": 0,
+    "post_handoff_sanitized_steps": 251,
+    "route_counts_by_gate": {},
+    "sanitized_steps": 294,
+    "win_rate": 0.0,
+    "wins": 0,
+    "worst_margin": -4353.0,
+    "worst_money": 111107.0
+  },
+  "validation": {
+    "action_alignment": "steps[1:] actions produce observations in the same frame",
+    "all_original_replays_exact": true,
+    "candidate_actions_sanitized": true,
+    "phase_boundary": 120
+  }
+}

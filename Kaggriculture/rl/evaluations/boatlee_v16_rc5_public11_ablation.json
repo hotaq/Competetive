@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "evaluated_at": "2026-08-21",
+  "subject": "boatlee/v16-rc5-high-score-8c-4s-premium-market-lead",
+  "method": "counterfactual_fixed_opponent_replay",
+  "engine": "local_rust_engine",
+  "corpus_manifest": "replays/own_v12_55671647_remaining11_20260821/manifest.json",
+  "games": 11,
+  "caveat": "Opponent actions are held fixed from public episodes originally played against our v12 submission. This isolates our policy change but does not model an opponent that changes its actions in response.",
+  "variants": {
+    "core": {
+      "wins": 9,
+      "losses": 2,
+      "win_rate": 0.8181818182,
+      "mean_margin": 18636.0,
+      "median_margin": 18069.0,
+      "worst_margin": -2755.0,
+      "cvar10_margin": -2691.5
+    },
+    "weed_repair_only": {
+      "wins": 9,
+      "losses": 2,
+      "win_rate": 0.8181818182,
+      "mean_margin": 18887.0,
+      "median_margin": 18710.0,
+      "worst_margin": -2628.0,
+      "cvar10_margin": -2144.5
+    },
+    "premium_front_run_only": {
+      "wins": 10,
+      "losses": 1,
+      "win_rate": 0.9090909091,
+      "mean_margin": 19245.1818181818,
+      "median_margin": 18169.0,
+      "worst_margin": -776.0,
+      "cvar10_margin": -299.5
+    },
+    "full": {
+      "wins": 11,
+      "losses": 0,
+      "win_rate": 1.0,
+      "mean_margin": 19493.4545454545,
+      "median_margin": 18804.0,
+      "worst_margin": 177.0,
+      "cvar10_margin": 237.5,
+      "mean_final_money": 87974.6363636364,
+      "worst_final_money": 44766.0
+    }
+  },
+  "causal_flips": [
+    {
+      "opponent": "ringbearer",
+      "episode_id": 96090591,
+      "core_margin": -2628,
+      "premium_front_run_margin": 177,
+      "full_margin": 177,
+      "interpretation": "Premium market front-running alone changes this matchup from a loss to a win."
+    },
+    {
+      "opponent": "MeeMee",
+      "episode_id": 96092872,
+      "core_margin": -2755,
+      "weed_repair_margin": -1661,
+      "premium_front_run_margin": -776,
+      "full_margin": 298,
+      "interpretation": "Neither overlay is sufficient alone; their combination changes the loss to a win."
+    }
+  ],
+  "full_variant_games": [
+    {"episode_id": 96095163, "opponent": "Hozuma ITOBAYASHI", "our_v12_actual_margin": -3065, "v16_rc5_margin": 22963},
+    {"episode_id": 96092872, "opponent": "MeeMee", "our_v12_actual_margin": -17714, "v16_rc5_margin": 298},
+    {"episode_id": 96090591, "opponent": "ringbearer", "our_v12_actual_margin": -17310, "v16_rc5_margin": 177},
+    {"episode_id": 96088314, "opponent": "ZotAZaw3", "our_v12_actual_margin": 1087, "v16_rc5_margin": 13498},
+    {"episode_id": 96086030, "opponent": "Simon Rüba", "our_v12_actual_margin": 22205, "v16_rc5_margin": 25421},
+    {"episode_id": 96083747, "opponent": "Krasnov Daniil", "our_v12_actual_margin": 14826, "v16_rc5_margin": 14136},
+    {"episode_id": 96081467, "opponent": "XtraLearning", "our_v12_actual_margin": 19761, "v16_rc5_margin": 18804},
+    {"episode_id": 96079189, "opponent": "Kathi Munishwar", "our_v12_actual_margin": 12441, "v16_rc5_margin": 16382},
+    {"episode_id": 96077185, "opponent": "Vasilii Buzmakov", "our_v12_actual_margin": 35693, "v16_rc5_margin": 29596},
+    {"episode_id": 96076924, "opponent": "henri66", "our_v12_actual_margin": 11202, "v16_rc5_margin": 28103},
+    {"episode_id": 96074650, "opponent": "xiaocai liu", "our_v12_actual_margin": 67504, "v16_rc5_margin": 45050}
+  ]
+}

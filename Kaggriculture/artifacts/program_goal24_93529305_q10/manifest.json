@@ -1,0 +1,40 @@
+{
+  "agents": [
+    {
+      "episode_id": 393529305,
+      "agent_file": "artifacts/program_goal24_93529305_q10/program_393529305.py",
+      "agent_sha256": "754c40ec4683b65f00d5856affc08d90749e6e57e2ab57f19ca89872617066f8",
+      "program": {
+        "program_id": 393529305,
+        "name": "goal24-93529305-q10-prefix",
+        "segments": [
+          {
+            "start_step": 0,
+            "source_episode_id": 93816256
+          },
+          {
+            "start_step": 97,
+            "source_episode_id": 93501610
+          }
+        ],
+        "mutations": [
+          {
+            "kind": "replace_market_quantity",
+            "step": 0,
+            "order_index": 8,
+            "expected": [
+              "BUY_SEED",
+              "MELON",
+              12
+            ],
+            "quantity": 10
+          }
+        ]
+      }
+    }
+  ],
+  "holdout": false,
+  "source_population": "artifacts/replay_tape_population_v10_train95/manifest.json",
+  "program_config": "rl/program_goal24_93529305_q10.json",
+  "common_prefix_step": 97
+}

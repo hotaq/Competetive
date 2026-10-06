@@ -1,0 +1,58 @@
+{
+  "classes": [
+    0,
+    1
+  ],
+  "rows": 10000,
+  "features": 9,
+  "candidates": [
+    {
+      "file": "candidate_logistic.csv",
+      "name": "logistic",
+      "family": "linear",
+      "oof_auc": 0.662016,
+      "fold_auc": [
+        0.6476,
+        0.624,
+        0.6276,
+        0.7044,
+        0.7208
+      ],
+      "fold_auc_std": 0.04012094,
+      "test_rank_correlation_to_best": 1.0
+    },
+    {
+      "file": "candidate_extra_trees.csv",
+      "name": "extra_trees",
+      "family": "bagging",
+      "oof_auc": 0.59704,
+      "fold_auc": [
+        0.55,
+        0.5576,
+        0.661,
+        0.6588,
+        0.5682
+      ],
+      "fold_auc_std": 0.04996713,
+      "test_rank_correlation_to_best": 0.70531707
+    }
+  ],
+  "diagnostics": {
+    "best_core": {
+      "name": "logistic",
+      "family": "linear",
+      "oof_auc": 0.662016
+    },
+    "blend_gate": {
+      "accepted": false,
+      "name": "blend_logistic_extra_trees",
+      "oof_auc": 0.65836,
+      "gain": -0.003656,
+      "test_rank_correlation_to_best": 0.98906137
+    },
+    "interaction_gate": {
+      "accepted": false
+    }
+  },
+  "failures": []
+}

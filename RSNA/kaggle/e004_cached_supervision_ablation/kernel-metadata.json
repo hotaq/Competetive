@@ -1,0 +1,27 @@
+{
+  "id": "chinnaphatkhun/rsna-knee-e004-cached-supervision-ablation",
+  "title": "RSNA Knee E004 Cached Supervision Ablation",
+  "code_file": "e004-cached-supervision-ablation.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "gpu"
+  ],
+  "dataset_sources": [
+    "pilkwang/rsna-knee-llm-labels",
+    "pilkwang/rsna-knee-weights"
+  ],
+  "kernel_sources": [
+    "chinnaphatkhun/rsna-knee-e003-dinov2-diversity-lab"
+  ],
+  "competition_sources": [
+    "rsna-knee-abnormality-detection"
+  ],
+  "model_sources": [],
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+  "machine_shape": "NvidiaTeslaT4"
+}

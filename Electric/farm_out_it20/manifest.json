@@ -1,0 +1,161 @@
+{
+ "models": {
+  "lgb_win_s42_d5": {
+   "cfg": {
+    "id": "lgb_win_s42_d5",
+    "family": "lgb",
+    "features": "win",
+    "seed": 42,
+    "tag": "d5",
+    "params": {
+     "lr": 0.02,
+     "leaves": 32,
+     "depth": 5,
+     "min_child": 10,
+     "ff": 0.3,
+     "bag": 0.8,
+     "l2": 2.0,
+     "a": 0.071,
+     "rounds": 20000,
+     "es": 500
+    }
+   },
+   "oof_auc": 0.945933,
+   "fold_auc": [
+    0.94502,
+    0.945583,
+    0.946883,
+    0.946228,
+    0.945991
+   ],
+   "iters": [
+    2057,
+    1834,
+    2543,
+    2041,
+    2121
+   ]
+  },
+  "lgb_nokey_s42_d5": {
+   "cfg": {
+    "id": "lgb_nokey_s42_d5",
+    "family": "lgb",
+    "features": "nokey",
+    "seed": 42,
+    "tag": "d5",
+    "params": {
+     "lr": 0.02,
+     "leaves": 32,
+     "depth": 5,
+     "min_child": 10,
+     "ff": 0.3,
+     "bag": 0.8,
+     "l2": 2.0,
+     "a": 0.071,
+     "rounds": 20000,
+     "es": 500
+    }
+   },
+   "oof_auc": 0.945825,
+   "fold_auc": [
+    0.944833,
+    0.945573,
+    0.946725,
+    0.946077,
+    0.945946
+   ],
+   "iters": [
+    2101,
+    2581,
+    2114,
+    1813,
+    2147
+   ]
+  },
+  "lgb_init_s42_d5": {
+   "cfg": {
+    "id": "lgb_init_s42_d5",
+    "family": "lgb",
+    "features": "init",
+    "seed": 42,
+    "tag": "d5",
+    "params": {
+     "lr": 0.02,
+     "leaves": 32,
+     "depth": 5,
+     "min_child": 10,
+     "ff": 0.3,
+     "bag": 0.8,
+     "l2": 2.0,
+     "a": 0.071,
+     "rounds": 20000,
+     "es": 500,
+     "init_col": "Income_te_m10"
+    }
+   },
+   "oof_auc": 0.9452,
+   "fold_auc": [
+    0.944304,
+    0.944938,
+    0.946098,
+    0.945478,
+    0.945211
+   ],
+   "iters": [
+    1520,
+    1273,
+    1189,
+    1244,
+    1150
+   ]
+  },
+  "lgb_te2_s42_lin": {
+   "cfg": {
+    "id": "lgb_te2_s42_lin",
+    "family": "lgb",
+    "features": "te2",
+    "seed": 42,
+    "tag": "lin",
+    "params": {
+     "lr": 0.02,
+     "leaves": 32,
+     "depth": 5,
+     "min_child": 10,
+     "ff": 0.5,
+     "bag": 0.8,
+     "l2": 2.0,
+     "a": 0.071,
+     "rounds": 20000,
+     "es": 500,
+     "linear_tree": true
+    }
+   },
+   "oof_auc": 0.945426,
+   "fold_auc": [
+    0.944841,
+    0.945431,
+    0.946607,
+    0.94601,
+    0.944285
+   ],
+   "iters": [
+    1329,
+    1255,
+    1212,
+    1059,
+    1223
+   ]
+  }
+ },
+ "history": [
+  {
+   "n_models": 4,
+   "blend_oof": 0.946068,
+   "weights": {
+    "lgb_win_s42_d5": 0.5,
+    "lgb_nokey_s42_d5": 0.3333,
+    "lgb_te2_s42_lin": 0.1667
+   }
+  }
+ ]
+}

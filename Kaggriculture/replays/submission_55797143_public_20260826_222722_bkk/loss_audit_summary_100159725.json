@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "episode_id": 100159725,
+  "submission_id": 55797143,
+  "uploaded_v67": {
+    "seat": 0,
+    "candidate_money": 74625.0,
+    "opponent_money": 81484.0,
+    "margin": -6859.0,
+    "action_parity": {
+      "exact_steps": 719,
+      "total_steps": 719
+    }
+  },
+  "route_selector": {
+    "decision_step": 120,
+    "feature_steps": [24, 48, 72, 96, 120],
+    "policy_names": ["base", "a120", "b120", "c120"],
+    "decision_values": [
+      1902.7372103821958,
+      -7568.30872067123,
+      -7752.773310249426,
+      -12767.993966040076
+    ],
+    "selected": "base"
+  },
+  "v67_vs_v59_on_recorded_states": {
+    "mismatch_steps": 163,
+    "total_steps": 719,
+    "contiguous_mismatch_runs": 62,
+    "components": {
+      "farmer": 0,
+      "hands": 0,
+      "market": 163
+    },
+    "items_by_mismatch_step": {
+      "MILK": 51,
+      "STRAWBERRY": 86,
+      "WOOL": 50,
+      "MELON": 0
+    },
+    "first_divergence": {
+      "action_step": 157,
+      "v67_market": [["SELL", "WOOL", 4], ["BUY_ANIMAL", "COW", 4]],
+      "v59_market": [["SELL", "WOOL", 2], ["BUY_ANIMAL", "COW", 4]],
+      "post_step": 158,
+      "v67_minus_v59_cash": 389.0,
+      "v67_minus_v59_wool": -2,
+      "recoupled_step": 159
+    },
+    "first_non_recoupling_economic_gap": {
+      "v67_action_step": 360,
+      "v67_action": ["SELL", "MILK", 3],
+      "v67_price": 122,
+      "v59_sale_step": 361,
+      "v59_action": ["SELL", "MILK", 3],
+      "v59_price": 124,
+      "comparison_step": 362,
+      "both_milk_inventory": 0,
+      "v67_money": 14262.0,
+      "v59_money": 14268.0,
+      "v67_minus_v59_cash": -6.0,
+      "final_margin_delta_v67_minus_v59": -45.0
+    }
+  },
+  "live_match_turn": {
+    "maximum_cash_lead": {
+      "step": 432,
+      "margin": 6353.0
+    },
+    "last_nonnegative_cash_margin": {
+      "step": 486,
+      "margin": 270.0
+    },
+    "first_persistent_negative_cash_margin": {
+      "step": 487,
+      "margin": -1059.0,
+      "preceding_opponent_action_step": 486,
+      "preceding_opponent_market": [["SELL", "MELON", 6]],
+      "melon_price": 224
+    },
+    "minimum_cash_margin": {
+      "step": 682,
+      "margin": -12491.0
+    },
+    "opponent_melon_sale_sequence": [
+      {"step": 486, "quantity": 6, "price": 224},
+      {"step": 488, "quantity": 6, "price": 218},
+      {"step": 490, "quantity": 12, "price": 210},
+      {"step": 492, "quantity": 6, "price": 194}
+    ]
+  },
+  "fixed_route_frozen_tape_counterfactual": {
+    "uploaded_v67": {
+      "candidate_money": 74625.0,
+      "opponent_money": 81484.0,
+      "margin": -6859.0
+    },
+    "base": {
+      "candidate_money": 74657.0,
+      "opponent_money": 81471.0,
+      "margin": -6814.0,
+      "delta_vs_v67": 45.0
+    },
+    "a120": {
+      "candidate_money": 49996.0,
+      "opponent_money": 55238.0,
+      "margin": -5242.0,
+      "delta_vs_v67": 1617.0
+    },
+    "b120": {
+      "candidate_money": 72069.0,
+      "opponent_money": 81484.0,
+      "margin": -9415.0,
+      "delta_vs_v67": -2556.0
+    },
+    "c120": {
+      "candidate_money": 64878.0,
+      "opponent_money": 54563.0,
+      "margin": 10315.0,
+      "delta_vs_v67": 17174.0,
+      "opponent_money_delta_vs_live": -26921.0
+    },
+    "interpretation": "c120 is a frozen-opponent-tape rescue upper bound, not live-policy proof; its apparent win is dominated by the recorded opponent falling 26921 below live money."
+  },
+  "terminal_observable_state": {
+    "candidate_unharvested_wheat_plots": 12,
+    "candidate_unharvested_wheat_yield_units": 27,
+    "wheat_price": 42,
+    "gross_mark_to_market_upper_bound": 1134,
+    "candidate_shed_empty": true,
+    "candidate_seeds": {
+      "WHEAT": 6,
+      "MELON": 4
+    },
+    "opponent_crop_plots": 0,
+    "note": "The gross wheat mark is below the 6859 loss and no action remains at step 719."
+  },
+  "limitations": [
+    "Opponent private inventory is not observable in the candidate replay observation.",
+    "Fixed-route results replay recorded opponent actions after candidate divergence; altered market and legality can make those actions stale.",
+    "No identity, seed, or episode-id feature was used for route selection or analysis conclusions."
+  ]
+}

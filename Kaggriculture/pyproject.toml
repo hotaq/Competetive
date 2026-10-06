@@ -1,0 +1,44 @@
+[project]
+name = "kaggriculture-rl"
+version = "0.1.0"
+description = "Deterministic Rust-Python execution foundation for Kaggriculture RL"
+requires-python = ">=3.13"
+dependencies = [
+    "kaggriculture-rs==0.1.0",
+    "pydantic==2.13.4",
+]
+
+[project.optional-dependencies]
+train = [
+    "jax>=0.11,<0.12",
+    "numpy>=2.5,<3",
+    "optax>=0.2.8,<0.3",
+]
+
+[build-system]
+requires = ["uv_build==0.12.5"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "kaggle-environments==1.32.7",
+    "pytest==9.1.1",
+    "ruff==0.16.3",
+]
+
+[tool.uv.sources]
+kaggriculture-rs = { workspace = true }
+
+[tool.uv.workspace]
+members = ["bindings/python"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests", "bindings/python/tests"]
+
+[tool.ruff]
+target-version = "py313"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]

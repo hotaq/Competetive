@@ -1,0 +1,3110 @@
+{
+  "agent_file": "submissions/top1_v12_ryo_b96_dual_b144_retriever_exact_safe_local/main.py",
+  "candidate_seat": 0,
+  "replay_file": "analysis/top1_ryo_20260823_current/97352285.json",
+  "seed": 1033118282,
+  "snapshots": [
+    {
+      "candidate_farmer": [
+        4,
+        4
+      ],
+      "candidate_hands": 0,
+      "candidate_land": 1,
+      "candidate_money": 3000.0,
+      "day": 0,
+      "executed_action": {
+        "farmer": [
+          "BUILD_PASTURE"
+        ],
+        "hands": [],
+        "market": [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_ANIMAL",
+            "SHEEP",
+            2
+          ],
+          [
+            "BUY_ANIMAL",
+            "COW",
+            2
+          ],
+          [
+            "BUY_SEED",
+            "MELON",
+            11
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            6
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            4
+          ]
+        ]
+      },
+      "hour": 0,
+      "inventories": [
+        {}
+      ],
+      "margin": 0.0,
+      "market": {
+        "inventory": {
+          "CARROT": 10000,
+          "EGG": 10000,
+          "FERTILIZER": 10000,
+          "MELON": 10000,
+          "MILK": 10000,
+          "STRAWBERRY": 10000,
+          "TOMATO": 10000,
+          "WHEAT": 10000,
+          "WOOL": 10000
+        },
+        "prices": {
+          "CARROT": 35,
+          "EGG": 50,
+          "FERTILIZER": 100,
+          "MELON": 250,
+          "MILK": 160,
+          "STRAWBERRY": 120,
+          "TOMATO": 60,
+          "WHEAT": 25,
+          "WOOL": 200
+        }
+      },
+      "opponent_farmer": [
+        4,
+        4
+      ],
+      "opponent_hands": 0,
+      "opponent_land": 1,
+      "opponent_money": 3000.0,
+      "proposed_action": {
+        "farmer": [
+          "BUILD_PASTURE"
+        ],
+        "hands": [],
+        "market": [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_ANIMAL",
+            "SHEEP",
+            2
+          ],
+          [
+            "BUY_ANIMAL",
+            "COW",
+            2
+          ],
+          [
+            "BUY_SEED",
+            "MELON",
+            11
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            6
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            4
+          ]
+        ]
+      },
+      "seeds": {
+        "CARROT": 0,
+        "MELON": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "shed": {
+        "CARROT": 0,
+        "COW": 0,
+        "EGG": 0,
+        "FERTILIZER": 0,
+        "GOOSE": 0,
+        "MELON": 0,
+        "MILK": 0,
+        "SHEEP": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 0,
+        "WOOL": 0
+      },
+      "step": 0
+    },
+    {
+      "candidate_farmer": [
+        4,
+        4
+      ],
+      "candidate_hands": 0,
+      "candidate_land": 1,
+      "candidate_money": 360.0,
+      "day": 3,
+      "executed_action": {
+        "farmer": [
+          "WEST"
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            3
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      "hour": 0,
+      "inventories": [
+        {}
+      ],
+      "margin": 0.0,
+      "market": {
+        "inventory": {
+          "CARROT": 9997,
+          "EGG": 9997,
+          "FERTILIZER": 10010,
+          "MELON": 9997,
+          "MILK": 9997,
+          "STRAWBERRY": 9997,
+          "TOMATO": 9997,
+          "WHEAT": 9973,
+          "WOOL": 9997
+        },
+        "prices": {
+          "CARROT": 35,
+          "EGG": 50,
+          "FERTILIZER": 98,
+          "MELON": 262,
+          "MILK": 175,
+          "STRAWBERRY": 135,
+          "TOMATO": 60,
+          "WHEAT": 30,
+          "WOOL": 212
+        }
+      },
+      "opponent_farmer": [
+        4,
+        4
+      ],
+      "opponent_hands": 0,
+      "opponent_land": 1,
+      "opponent_money": 360.0,
+      "proposed_action": {
+        "farmer": [
+          "WEST"
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            3
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      "seeds": {
+        "CARROT": 0,
+        "MELON": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "shed": {
+        "CARROT": 0,
+        "COW": 0,
+        "EGG": 0,
+        "FERTILIZER": 3,
+        "GOOSE": 0,
+        "MELON": 0,
+        "MILK": 0,
+        "SHEEP": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 4,
+        "WOOL": 0
+      },
+      "step": 72
+    },
+    {
+      "candidate_farmer": [
+        4,
+        4
+      ],
+      "candidate_hands": 0,
+      "candidate_land": 1,
+      "candidate_money": 908.0,
+      "day": 4,
+      "executed_action": {
+        "farmer": [
+          "NORTH"
+        ],
+        "hands": [],
+        "market": [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      "hour": 0,
+      "inventories": [
+        {}
+      ],
+      "margin": 0.0,
+      "market": {
+        "inventory": {
+          "CARROT": 9990,
+          "EGG": 9996,
+          "FERTILIZER": 10024,
+          "MELON": 9996,
+          "MILK": 9996,
+          "STRAWBERRY": 9990,
+          "TOMATO": 9990,
+          "WHEAT": 9958,
+          "WOOL": 9996
+        },
+        "prices": {
+          "CARROT": 36,
+          "EGG": 50,
+          "FERTILIZER": 95,
+          "MELON": 264,
+          "MILK": 177,
+          "STRAWBERRY": 147,
+          "TOMATO": 61,
+          "WHEAT": 31,
+          "WOOL": 214
+        }
+      },
+      "opponent_farmer": [
+        4,
+        4
+      ],
+      "opponent_hands": 0,
+      "opponent_land": 1,
+      "opponent_money": 908.0,
+      "proposed_action": {
+        "farmer": [
+          "NORTH"
+        ],
+        "hands": [],
+        "market": [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      "seeds": {
+        "CARROT": 0,
+        "MELON": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "shed": {
+        "CARROT": 0,
+        "COW": 0,
+        "EGG": 0,
+        "FERTILIZER": 0,
+        "GOOSE": 0,
+        "MELON": 0,
+        "MILK": 0,
+        "SHEEP": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 4,
+        "WOOL": 0
+      },
+      "step": 96
+    },
+    {
+      "candidate_farmer": [
+        4,
+        4
+      ],
+      "candidate_hands": 0,
+      "candidate_land": 1,
+      "candidate_money": 573.0,
+      "day": 5,
+      "executed_action": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          1
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            4
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_LAND"
+          ]
+        ]
+      },
+      "hour": 0,
+      "inventories": [
+        {}
+      ],
+      "margin": 0.0,
+      "market": {
+        "inventory": {
+          "CARROT": 9983,
+          "EGG": 9995,
+          "FERTILIZER": 10024,
+          "MELON": 9995,
+          "MILK": 9995,
+          "STRAWBERRY": 9983,
+          "TOMATO": 9983,
+          "WHEAT": 9943,
+          "WOOL": 9995
+        },
+        "prices": {
+          "CARROT": 36,
+          "EGG": 50,
+          "FERTILIZER": 95,
+          "MELON": 266,
+          "MILK": 179,
+          "STRAWBERRY": 155,
+          "TOMATO": 62,
+          "WHEAT": 33,
+          "WOOL": 215
+        }
+      },
+      "opponent_farmer": [
+        4,
+        4
+      ],
+      "opponent_hands": 0,
+      "opponent_land": 1,
+      "opponent_money": 573.0,
+      "proposed_action": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          1
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            15
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            4
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_LAND"
+          ]
+        ]
+      },
+      "seeds": {
+        "CARROT": 0,
+        "MELON": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "shed": {
+        "CARROT": 0,
+        "COW": 0,
+        "EGG": 0,
+        "FERTILIZER": 4,
+        "GOOSE": 0,
+        "MELON": 0,
+        "MILK": 0,
+        "SHEEP": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 28,
+        "WOOL": 0
+      },
+      "step": 120
+    },
+    {
+      "candidate_farmer": [
+        4,
+        4
+      ],
+      "candidate_hands": 0,
+      "candidate_land": 2,
+      "candidate_money": 174.0,
+      "day": 6,
+      "executed_action": {
+        "farmer": [
+          "WEST"
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            3
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            1
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_SEED",
+            "STRAWBERRY",
+            1
+          ]
+        ]
+      },
+      "hour": 0,
+      "inventories": [
+        {}
+      ],
+      "margin": 0.0,
+      "market": {
+        "inventory": {
+          "CARROT": 9976,
+          "EGG": 9994,
+          "FERTILIZER": 10034,
+          "MELON": 9994,
+          "MILK": 9994,
+          "STRAWBERRY": 9976,
+          "TOMATO": 9976,
+          "WHEAT": 9966,
+          "WOOL": 9994
+        },
+        "prices": {
+          "CARROT": 37,
+          "EGG": 50,
+          "FERTILIZER": 93,
+          "MELON": 267,
+          "MILK": 181,
+          "STRAWBERRY": 161,
+          "TOMATO": 63,
+          "WHEAT": 31,
+          "WOOL": 217
+        }
+      },
+      "opponent_farmer": [
+        4,
+        4
+      ],
+      "opponent_hands": 0,
+      "opponent_land": 2,
+      "opponent_money": 174.0,
+      "proposed_action": {
+        "farmer": [
+          "WEST"
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            3
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            1
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_SEED",
+            "STRAWBERRY",
+            1
+          ]
+        ]
+      },
+      "seeds": {
+        "CARROT": 0,
+        "MELON": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 14
+      },
+      "shed": {
+        "CARROT": 0,
+        "COW": 0,
+        "EGG": 0,
+        "FERTILIZER": 3,
+        "GOOSE": 0,
+        "MELON": 0,
+        "MILK": 0,
+        "SHEEP": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 13,
+        "WOOL": 0
+      },
+      "step": 144
+    },
+    {
+      "candidate_farmer": [
+        4,
+        4
+      ],
+      "candidate_hands": 0,
+      "candidate_land": 2,
+      "candidate_money": 1277.0,
+      "day": 7,
+      "executed_action": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          1
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            7
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            2
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_ANIMAL",
+            "COW",
+            3
+          ]
+        ]
+      },
+      "hour": 0,
+      "inventories": [
+        {}
+      ],
+      "margin": -118.0,
+      "market": {
+        "inventory": {
+          "CARROT": 9969,
+          "EGG": 9993,
+          "FERTILIZER": 10045,
+          "MELON": 9993,
+          "MILK": 9987,
+          "STRAWBERRY": 9963,
+          "TOMATO": 9969,
+          "WHEAT": 9955,
+          "WOOL": 10013
+        },
+        "prices": {
+          "CARROT": 37,
+          "EGG": 50,
+          "FERTILIZER": 91,
+          "MELON": 268,
+          "MILK": 191,
+          "STRAWBERRY": 171,
+          "TOMATO": 64,
+          "WHEAT": 32,
+          "WOOL": 190
+        }
+      },
+      "opponent_farmer": [
+        4,
+        4
+      ],
+      "opponent_hands": 0,
+      "opponent_land": 2,
+      "opponent_money": 1395.0,
+      "proposed_action": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          1
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            7
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            2
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_ANIMAL",
+            "COW",
+            3
+          ]
+        ]
+      },
+      "seeds": {
+        "CARROT": 0,
+        "MELON": 0,
+        "STRAWBERRY": 7,
+        "TOMATO": 0,
+        "WHEAT": 11
+      },
+      "shed": {
+        "CARROT": 0,
+        "COW": 0,
+        "EGG": 0,
+        "FERTILIZER": 2,
+        "GOOSE": 0,
+        "MELON": 0,
+        "MILK": 0,
+        "SHEEP": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 20,
+        "WOOL": 0
+      },
+      "step": 168
+    },
+    {
+      "candidate_farmer": [
+        4,
+        4
+      ],
+      "candidate_hands": 0,
+      "candidate_land": 2,
+      "candidate_money": 413.0,
+      "day": 8,
+      "executed_action": {
+        "farmer": [
+          "WEST"
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            4
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      "hour": 0,
+      "inventories": [
+        {}
+      ],
+      "margin": -117.0,
+      "market": {
+        "inventory": {
+          "CARROT": 9962,
+          "EGG": 9992,
+          "FERTILIZER": 10049,
+          "MELON": 9992,
+          "MILK": 9980,
+          "STRAWBERRY": 9950,
+          "TOMATO": 9962,
+          "WHEAT": 9954,
+          "WOOL": 10012
+        },
+        "prices": {
+          "CARROT": 38,
+          "EGG": 50,
+          "FERTILIZER": 90,
+          "MELON": 269,
+          "MILK": 199,
+          "STRAWBERRY": 179,
+          "TOMATO": 65,
+          "WHEAT": 32,
+          "WOOL": 192
+        }
+      },
+      "opponent_farmer": [
+        4,
+        4
+      ],
+      "opponent_hands": 0,
+      "opponent_land": 2,
+      "opponent_money": 530.0,
+      "proposed_action": {
+        "farmer": [
+          "WEST"
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            4
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      "seeds": {
+        "CARROT": 0,
+        "MELON": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 11
+      },
+      "shed": {
+        "CARROT": 0,
+        "COW": 0,
+        "EGG": 0,
+        "FERTILIZER": 4,
+        "GOOSE": 0,
+        "MELON": 0,
+        "MILK": 0,
+        "SHEEP": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 7,
+        "WOOL": 0
+      },
+      "step": 192
+    },
+    {
+      "candidate_farmer": [
+        4,
+        4
+      ],
+      "candidate_hands": 0,
+      "candidate_land": 3,
+      "candidate_money": 193.0,
+      "day": 10,
+      "executed_action": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          1
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            16
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            6
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      "hour": 0,
+      "inventories": [
+        {}
+      ],
+      "margin": -3143.0,
+      "market": {
+        "inventory": {
+          "CARROT": 9948,
+          "EGG": 9990,
+          "FERTILIZER": 10077,
+          "MELON": 9990,
+          "MILK": 9984,
+          "STRAWBERRY": 9918,
+          "TOMATO": 9948,
+          "WHEAT": 9887,
+          "WOOL": 10026
+        },
+        "prices": {
+          "CARROT": 39,
+          "EGG": 51,
+          "FERTILIZER": 85,
+          "MELON": 271,
+          "MILK": 195,
+          "STRAWBERRY": 196,
+          "TOMATO": 66,
+          "WHEAT": 36,
+          "WOOL": 161
+        }
+      },
+      "opponent_farmer": [
+        4,
+        4
+      ],
+      "opponent_hands": 0,
+      "opponent_land": 2,
+      "opponent_money": 3336.0,
+      "proposed_action": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          1
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            16
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            6
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      "seeds": {
+        "CARROT": 0,
+        "MELON": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 15
+      },
+      "shed": {
+        "CARROT": 0,
+        "COW": 0,
+        "EGG": 0,
+        "FERTILIZER": 6,
+        "GOOSE": 0,
+        "MELON": 0,
+        "MILK": 0,
+        "SHEEP": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 47,
+        "WOOL": 0
+      },
+      "step": 240
+    },
+    {
+      "candidate_farmer": [
+        4,
+        4
+      ],
+      "candidate_hands": 0,
+      "candidate_land": 3,
+      "candidate_money": 12870.0,
+      "day": 12,
+      "executed_action": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          1
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            6
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      "hour": 0,
+      "inventories": [
+        {}
+      ],
+      "margin": -1470.0,
+      "market": {
+        "inventory": {
+          "CARROT": 9934,
+          "EGG": 9988,
+          "FERTILIZER": 10108,
+          "MELON": 10120,
+          "MILK": 9966,
+          "STRAWBERRY": 9880,
+          "TOMATO": 9934,
+          "WHEAT": 9884,
+          "WOOL": 10024
+        },
+        "prices": {
+          "CARROT": 40,
+          "EGG": 51,
+          "FERTILIZER": 78,
+          "MELON": 106,
+          "MILK": 211,
+          "STRAWBERRY": 212,
+          "TOMATO": 68,
+          "WHEAT": 36,
+          "WOOL": 167
+        }
+      },
+      "opponent_farmer": [
+        4,
+        4
+      ],
+      "opponent_hands": 0,
+      "opponent_land": 3,
+      "opponent_money": 14340.0,
+      "proposed_action": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          1
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            6
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      "seeds": {
+        "CARROT": 0,
+        "MELON": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 6
+      },
+      "shed": {
+        "CARROT": 0,
+        "COW": 0,
+        "EGG": 0,
+        "FERTILIZER": 8,
+        "GOOSE": 0,
+        "MELON": 0,
+        "MILK": 0,
+        "SHEEP": 1,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 14,
+        "WOOL": 0
+      },
+      "step": 288
+    },
+    {
+      "candidate_farmer": [
+        4,
+        4
+      ],
+      "candidate_hands": 0,
+      "candidate_land": 3,
+      "candidate_money": 14216.0,
+      "day": 14,
+      "executed_action": {
+        "farmer": [
+          "SOUTH"
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            6
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      "hour": 0,
+      "inventories": [
+        {}
+      ],
+      "margin": -2509.0,
+      "market": {
+        "inventory": {
+          "CARROT": 9920,
+          "EGG": 9974,
+          "FERTILIZER": 10152,
+          "MELON": 10118,
+          "MILK": 9952,
+          "STRAWBERRY": 9842,
+          "TOMATO": 9920,
+          "WHEAT": 9781,
+          "WOOL": 10036
+        },
+        "prices": {
+          "CARROT": 41,
+          "EGG": 52,
+          "FERTILIZER": 70,
+          "MELON": 111,
+          "MILK": 220,
+          "STRAWBERRY": 226,
+          "TOMATO": 70,
+          "WHEAT": 40,
+          "WOOL": 125
+        }
+      },
+      "opponent_farmer": [
+        4,
+        4
+      ],
+      "opponent_hands": 0,
+      "opponent_land": 3,
+      "opponent_money": 16725.0,
+      "proposed_action": {
+        "farmer": [
+          "SOUTH"
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            6
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      "seeds": {
+        "CARROT": 0,
+        "MELON": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "shed": {
+        "CARROT": 0,
+        "COW": 0,
+        "EGG": 0,
+        "FERTILIZER": 14,
+        "GOOSE": 0,
+        "MELON": 0,
+        "MILK": 0,
+        "SHEEP": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 41,
+        "WOOL": 0
+      },
+      "step": 336
+    },
+    {
+      "candidate_farmer": [
+        4,
+        4
+      ],
+      "candidate_hands": 0,
+      "candidate_land": 3,
+      "candidate_money": 23584.0,
+      "day": 16,
+      "executed_action": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          1
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            30
+          ],
+          [
+            "SELL",
+            "STRAWBERRY",
+            2
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            2
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      "hour": 0,
+      "inventories": [
+        {}
+      ],
+      "margin": 1106.0,
+      "market": {
+        "inventory": {
+          "CARROT": 9900,
+          "EGG": 9960,
+          "FERTILIZER": 10191,
+          "MELON": 10116,
+          "MILK": 9974,
+          "STRAWBERRY": 9806,
+          "TOMATO": 9901,
+          "WHEAT": 9738,
+          "WOOL": 10058
+        },
+        "prices": {
+          "CARROT": 43,
+          "EGG": 52,
+          "FERTILIZER": 62,
+          "MELON": 115,
+          "MILK": 204,
+          "STRAWBERRY": 237,
+          "TOMATO": 72,
+          "WHEAT": 41,
+          "WOOL": 5
+        }
+      },
+      "opponent_farmer": [
+        4,
+        4
+      ],
+      "opponent_hands": 0,
+      "opponent_land": 3,
+      "opponent_money": 22478.0,
+      "proposed_action": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          1
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            30
+          ],
+          [
+            "SELL",
+            "STRAWBERRY",
+            2
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            2
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      "seeds": {
+        "CARROT": 2,
+        "MELON": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 8
+      },
+      "shed": {
+        "CARROT": 0,
+        "COW": 0,
+        "EGG": 0,
+        "FERTILIZER": 10,
+        "GOOSE": 0,
+        "MELON": 0,
+        "MILK": 0,
+        "SHEEP": 0,
+        "STRAWBERRY": 2,
+        "TOMATO": 0,
+        "WHEAT": 76,
+        "WOOL": 0
+      },
+      "step": 384
+    },
+    {
+      "candidate_farmer": [
+        4,
+        4
+      ],
+      "candidate_hands": 0,
+      "candidate_land": 3,
+      "candidate_money": 32709.0,
+      "day": 18,
+      "executed_action": {
+        "farmer": [
+          "PICKUP",
+          "FERTILIZER",
+          2
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            14
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      "hour": 0,
+      "inventories": [
+        {}
+      ],
+      "margin": -1367.0,
+      "market": {
+        "inventory": {
+          "CARROT": 9874,
+          "EGG": 9946,
+          "FERTILIZER": 10227,
+          "MELON": 10114,
+          "MILK": 9988,
+          "STRAWBERRY": 9799,
+          "TOMATO": 9881,
+          "WHEAT": 9719,
+          "WOOL": 10059
+        },
+        "prices": {
+          "CARROT": 45,
+          "EGG": 53,
+          "FERTILIZER": 55,
+          "MELON": 120,
+          "MILK": 190,
+          "STRAWBERRY": 239,
+          "TOMATO": 74,
+          "WHEAT": 42,
+          "WOOL": 1
+        }
+      },
+      "opponent_farmer": [
+        4,
+        4
+      ],
+      "opponent_hands": 0,
+      "opponent_land": 3,
+      "opponent_money": 34076.0,
+      "proposed_action": {
+        "farmer": [
+          "PICKUP",
+          "FERTILIZER",
+          2
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            14
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      "seeds": {
+        "CARROT": 0,
+        "MELON": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 2
+      },
+      "shed": {
+        "CARROT": 0,
+        "COW": 0,
+        "EGG": 0,
+        "FERTILIZER": 15,
+        "GOOSE": 0,
+        "MELON": 0,
+        "MILK": 0,
+        "SHEEP": 0,
+        "STRAWBERRY": 14,
+        "TOMATO": 0,
+        "WHEAT": 43,
+        "WOOL": 0
+      },
+      "step": 432
+    },
+    {
+      "candidate_farmer": [
+        4,
+        4
+      ],
+      "candidate_hands": 0,
+      "candidate_land": 3,
+      "candidate_money": 43805.0,
+      "day": 20,
+      "executed_action": {
+        "farmer": [
+          "PICKUP",
+          "FERTILIZER",
+          1
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            24
+          ],
+          [
+            "SELL",
+            "CARROT",
+            21
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            20
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      "hour": 0,
+      "inventories": [
+        {}
+      ],
+      "margin": -176.0,
+      "market": {
+        "inventory": {
+          "CARROT": 9836,
+          "EGG": 9932,
+          "FERTILIZER": 10245,
+          "MELON": 10112,
+          "MILK": 10000,
+          "STRAWBERRY": 9801,
+          "TOMATO": 9846,
+          "WHEAT": 9657,
+          "WOOL": 10058
+        },
+        "prices": {
+          "CARROT": 48,
+          "EGG": 54,
+          "FERTILIZER": 51,
+          "MELON": 125,
+          "MILK": 160,
+          "STRAWBERRY": 238,
+          "TOMATO": 78,
+          "WHEAT": 44,
+          "WOOL": 5
+        }
+      },
+      "opponent_farmer": [
+        4,
+        4
+      ],
+      "opponent_hands": 0,
+      "opponent_land": 3,
+      "opponent_money": 43981.0,
+      "proposed_action": {
+        "farmer": [
+          "PICKUP",
+          "FERTILIZER",
+          1
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            24
+          ],
+          [
+            "SELL",
+            "CARROT",
+            21
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            20
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      "seeds": {
+        "CARROT": 1,
+        "MELON": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 7
+      },
+      "shed": {
+        "CARROT": 21,
+        "COW": 0,
+        "EGG": 0,
+        "FERTILIZER": 12,
+        "GOOSE": 0,
+        "MELON": 0,
+        "MILK": 0,
+        "SHEEP": 0,
+        "STRAWBERRY": 24,
+        "TOMATO": 0,
+        "WHEAT": 43,
+        "WOOL": 0
+      },
+      "step": 480
+    },
+    {
+      "candidate_farmer": [
+        4,
+        4
+      ],
+      "candidate_hands": 0,
+      "candidate_land": 3,
+      "candidate_money": 57897.0,
+      "day": 22,
+      "executed_action": {
+        "farmer": [
+          "PICKUP",
+          "FERTILIZER",
+          2
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            26
+          ],
+          [
+            "SELL",
+            "MILK",
+            5
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            8
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      "hour": 0,
+      "inventories": [
+        {}
+      ],
+      "margin": -2205.0,
+      "market": {
+        "inventory": {
+          "CARROT": 9822,
+          "EGG": 9918,
+          "FERTILIZER": 10259,
+          "MELON": 10110,
+          "MILK": 10020,
+          "STRAWBERRY": 9810,
+          "TOMATO": 9866,
+          "WHEAT": 9605,
+          "WOOL": 10059
+        },
+        "prices": {
+          "CARROT": 49,
+          "EGG": 55,
+          "FERTILIZER": 48,
+          "MELON": 129,
+          "MILK": 118,
+          "STRAWBERRY": 236,
+          "TOMATO": 76,
+          "WHEAT": 45,
+          "WOOL": 1
+        }
+      },
+      "opponent_farmer": [
+        4,
+        4
+      ],
+      "opponent_hands": 0,
+      "opponent_land": 3,
+      "opponent_money": 60102.0,
+      "proposed_action": {
+        "farmer": [
+          "PICKUP",
+          "FERTILIZER",
+          2
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            26
+          ],
+          [
+            "SELL",
+            "MILK",
+            5
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            8
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      "seeds": {
+        "CARROT": 3,
+        "MELON": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 1
+      },
+      "shed": {
+        "CARROT": 0,
+        "COW": 0,
+        "EGG": 0,
+        "FERTILIZER": 17,
+        "GOOSE": 0,
+        "MELON": 0,
+        "MILK": 5,
+        "SHEEP": 0,
+        "STRAWBERRY": 26,
+        "TOMATO": 0,
+        "WHEAT": 26,
+        "WOOL": 14
+      },
+      "step": 528
+    },
+    {
+      "candidate_farmer": [
+        4,
+        4
+      ],
+      "candidate_hands": 0,
+      "candidate_land": 3,
+      "candidate_money": 73781.0,
+      "day": 24,
+      "executed_action": {
+        "farmer": [
+          "PICKUP",
+          "FERTILIZER",
+          1
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            22
+          ],
+          [
+            "SELL",
+            "MILK",
+            6
+          ],
+          [
+            "SELL",
+            "CARROT",
+            9
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            9
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            7
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      "hour": 0,
+      "inventories": [
+        {}
+      ],
+      "margin": -2376.0,
+      "market": {
+        "inventory": {
+          "CARROT": 9796,
+          "EGG": 9904,
+          "FERTILIZER": 10295,
+          "MELON": 10108,
+          "MILK": 10015,
+          "STRAWBERRY": 9839,
+          "TOMATO": 9903,
+          "WHEAT": 9518,
+          "WOOL": 10059
+        },
+        "prices": {
+          "CARROT": 51,
+          "EGG": 56,
+          "FERTILIZER": 41,
+          "MELON": 133,
+          "MILK": 129,
+          "STRAWBERRY": 227,
+          "TOMATO": 72,
+          "WHEAT": 47,
+          "WOOL": 1
+        }
+      },
+      "opponent_farmer": [
+        4,
+        4
+      ],
+      "opponent_hands": 0,
+      "opponent_land": 3,
+      "opponent_money": 76157.0,
+      "proposed_action": {
+        "farmer": [
+          "PICKUP",
+          "FERTILIZER",
+          1
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            22
+          ],
+          [
+            "SELL",
+            "MILK",
+            6
+          ],
+          [
+            "SELL",
+            "CARROT",
+            9
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            9
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            7
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      "seeds": {
+        "CARROT": 1,
+        "MELON": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 6
+      },
+      "shed": {
+        "CARROT": 9,
+        "COW": 0,
+        "EGG": 0,
+        "FERTILIZER": 15,
+        "GOOSE": 0,
+        "MELON": 0,
+        "MILK": 6,
+        "SHEEP": 0,
+        "STRAWBERRY": 22,
+        "TOMATO": 0,
+        "WHEAT": 24,
+        "WOOL": 20
+      },
+      "step": 576
+    },
+    {
+      "candidate_farmer": [
+        4,
+        4
+      ],
+      "candidate_hands": 0,
+      "candidate_land": 3,
+      "candidate_money": 85536.0,
+      "day": 26,
+      "executed_action": {
+        "farmer": [
+          "SOUTH"
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            6
+          ],
+          [
+            "SELL",
+            "STRAWBERRY",
+            10
+          ],
+          [
+            "SELL",
+            "CARROT",
+            15
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            13
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      "hour": 0,
+      "inventories": [
+        {}
+      ],
+      "margin": -480.0,
+      "market": {
+        "inventory": {
+          "CARROT": 9782,
+          "EGG": 9890,
+          "FERTILIZER": 10343,
+          "MELON": 10106,
+          "MILK": 10016,
+          "STRAWBERRY": 9829,
+          "TOMATO": 9868,
+          "WHEAT": 9425,
+          "WOOL": 10059
+        },
+        "prices": {
+          "CARROT": 52,
+          "EGG": 57,
+          "FERTILIZER": 31,
+          "MELON": 138,
+          "MILK": 126,
+          "STRAWBERRY": 230,
+          "TOMATO": 76,
+          "WHEAT": 49,
+          "WOOL": 1
+        }
+      },
+      "opponent_farmer": [
+        4,
+        4
+      ],
+      "opponent_hands": 0,
+      "opponent_land": 3,
+      "opponent_money": 86016.0,
+      "proposed_action": {
+        "farmer": [
+          "SOUTH"
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            6
+          ],
+          [
+            "SELL",
+            "STRAWBERRY",
+            10
+          ],
+          [
+            "SELL",
+            "CARROT",
+            15
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            13
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      "seeds": {
+        "CARROT": 1,
+        "MELON": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 3
+      },
+      "shed": {
+        "CARROT": 15,
+        "COW": 0,
+        "EGG": 0,
+        "FERTILIZER": 13,
+        "GOOSE": 0,
+        "MELON": 0,
+        "MILK": 6,
+        "SHEEP": 0,
+        "STRAWBERRY": 10,
+        "TOMATO": 0,
+        "WHEAT": 33,
+        "WOOL": 4
+      },
+      "step": 624
+    },
+    {
+      "candidate_farmer": [
+        4,
+        4
+      ],
+      "candidate_hands": 0,
+      "candidate_land": 3,
+      "candidate_money": 95731.0,
+      "day": 28,
+      "executed_action": {
+        "farmer": [
+          "SOUTH"
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            33
+          ],
+          [
+            "SELL",
+            "MILK",
+            3
+          ],
+          [
+            "SELL",
+            "CARROT",
+            6
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            11
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      "hour": 0,
+      "inventories": [
+        {}
+      ],
+      "margin": -1498.0,
+      "market": {
+        "inventory": {
+          "CARROT": 9792,
+          "EGG": 9876,
+          "FERTILIZER": 10400,
+          "MELON": 10104,
+          "MILK": 10023,
+          "STRAWBERRY": 9797,
+          "TOMATO": 9838,
+          "WHEAT": 9377,
+          "WOOL": 10059
+        },
+        "prices": {
+          "CARROT": 51,
+          "EGG": 57,
+          "FERTILIZER": 20,
+          "MELON": 142,
+          "MILK": 112,
+          "STRAWBERRY": 240,
+          "TOMATO": 79,
+          "WHEAT": 50,
+          "WOOL": 1
+        }
+      },
+      "opponent_farmer": [
+        4,
+        4
+      ],
+      "opponent_hands": 0,
+      "opponent_land": 3,
+      "opponent_money": 97229.0,
+      "proposed_action": {
+        "farmer": [
+          "SOUTH"
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            33
+          ],
+          [
+            "SELL",
+            "MILK",
+            3
+          ],
+          [
+            "SELL",
+            "CARROT",
+            6
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            11
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      "seeds": {
+        "CARROT": 1,
+        "MELON": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 4
+      },
+      "shed": {
+        "CARROT": 6,
+        "COW": 0,
+        "EGG": 0,
+        "FERTILIZER": 11,
+        "GOOSE": 0,
+        "MELON": 0,
+        "MILK": 3,
+        "SHEEP": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 48,
+        "WOOL": 18
+      },
+      "step": 672
+    },
+    {
+      "candidate_farmer": [
+        4,
+        4
+      ],
+      "candidate_hands": 0,
+      "candidate_land": 3,
+      "candidate_money": 103178.0,
+      "day": 29,
+      "executed_action": {
+        "farmer": [
+          "EAST"
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            31
+          ],
+          [
+            "SELL",
+            "CARROT",
+            6
+          ],
+          [
+            "SELL",
+            "WOOL",
+            11
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            3
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      "hour": 0,
+      "inventories": [
+        {}
+      ],
+      "margin": -4140.0,
+      "market": {
+        "inventory": {
+          "CARROT": 9791,
+          "EGG": 9869,
+          "FERTILIZER": 10446,
+          "MELON": 10103,
+          "MILK": 10039,
+          "STRAWBERRY": 9778,
+          "TOMATO": 9824,
+          "WHEAT": 9481,
+          "WOOL": 10059
+        },
+        "prices": {
+          "CARROT": 51,
+          "EGG": 58,
+          "FERTILIZER": 11,
+          "MELON": 144,
+          "MILK": 78,
+          "STRAWBERRY": 245,
+          "TOMATO": 81,
+          "WHEAT": 48,
+          "WOOL": 1
+        }
+      },
+      "opponent_farmer": [
+        4,
+        4
+      ],
+      "opponent_hands": 0,
+      "opponent_land": 3,
+      "opponent_money": 107318.0,
+      "proposed_action": {
+        "farmer": [
+          "EAST"
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            31
+          ],
+          [
+            "SELL",
+            "CARROT",
+            6
+          ],
+          [
+            "SELL",
+            "WOOL",
+            11
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            3
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      "seeds": {
+        "CARROT": 1,
+        "MELON": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 4
+      },
+      "shed": {
+        "CARROT": 6,
+        "COW": 0,
+        "EGG": 0,
+        "FERTILIZER": 3,
+        "GOOSE": 0,
+        "MELON": 0,
+        "MILK": 0,
+        "SHEEP": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 31,
+        "WOOL": 11
+      },
+      "step": 696
+    },
+    {
+      "candidate_farmer": [
+        6,
+        2
+      ],
+      "candidate_hands": 8,
+      "candidate_land": 3,
+      "candidate_money": 105683.0,
+      "day": 29,
+      "executed_action": {
+        "farmer": [
+          "NORTH"
+        ],
+        "hands": [
+          [
+            "SOUTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "HARVEST"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "HARVEST"
+          ]
+        ],
+        "market": []
+      },
+      "hour": 12,
+      "inventories": [
+        {
+          "WHEAT": 7
+        },
+        {},
+        {
+          "WHEAT": 11,
+          "WOOL": 4
+        },
+        {
+          "WHEAT": 6,
+          "WOOL": 4
+        },
+        {
+          "WHEAT": 7,
+          "WOOL": 4
+        },
+        {
+          "WHEAT": 4
+        },
+        {
+          "WHEAT": 8,
+          "WOOL": 4
+        },
+        {
+          "WHEAT": 4,
+          "WOOL": 4
+        },
+        {
+          "WHEAT": 8
+        }
+      ],
+      "margin": -2199.0,
+      "market": {
+        "inventory": {
+          "CARROT": 9787,
+          "EGG": 9865,
+          "FERTILIZER": 10449,
+          "MELON": 10102,
+          "MILK": 10035,
+          "STRAWBERRY": 9759,
+          "TOMATO": 9811,
+          "WHEAT": 9503,
+          "WOOL": 10058
+        },
+        "prices": {
+          "CARROT": 52,
+          "EGG": 58,
+          "FERTILIZER": 10,
+          "MELON": 146,
+          "MILK": 87,
+          "STRAWBERRY": 250,
+          "TOMATO": 83,
+          "WHEAT": 47,
+          "WOOL": 5
+        }
+      },
+      "opponent_farmer": [
+        4,
+        4
+      ],
+      "opponent_hands": 8,
+      "opponent_land": 3,
+      "opponent_money": 107882.0,
+      "proposed_action": {
+        "farmer": [
+          "NORTH"
+        ],
+        "hands": [
+          [
+            "SOUTH"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "WEST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "EAST"
+          ],
+          [
+            "HARVEST"
+          ],
+          [
+            "SOUTH"
+          ],
+          [
+            "HARVEST"
+          ]
+        ],
+        "market": []
+      },
+      "seeds": {
+        "CARROT": 1,
+        "MELON": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 4
+      },
+      "shed": {
+        "CARROT": 0,
+        "COW": 0,
+        "EGG": 0,
+        "FERTILIZER": 0,
+        "GOOSE": 0,
+        "MELON": 0,
+        "MILK": 0,
+        "SHEEP": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 0,
+        "WOOL": 0
+      },
+      "step": 708
+    },
+    {
+      "candidate_farmer": [
+        5,
+        4
+      ],
+      "candidate_hands": 8,
+      "candidate_land": 3,
+      "candidate_money": 108982.0,
+      "day": 29,
+      "executed_action": {
+        "farmer": [
+          "PASS"
+        ],
+        "hands": [
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ]
+        ],
+        "market": []
+      },
+      "hour": 22,
+      "inventories": [
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {}
+      ],
+      "margin": -2301.0,
+      "market": {
+        "inventory": {
+          "CARROT": 9778,
+          "EGG": 9862,
+          "FERTILIZER": 10449,
+          "MELON": 10102,
+          "MILK": 10035,
+          "STRAWBERRY": 9741,
+          "TOMATO": 9805,
+          "WHEAT": 9594,
+          "WOOL": 10059
+        },
+        "prices": {
+          "CARROT": 52,
+          "EGG": 58,
+          "FERTILIZER": 10,
+          "MELON": 146,
+          "MILK": 87,
+          "STRAWBERRY": 255,
+          "TOMATO": 83,
+          "WHEAT": 45,
+          "WOOL": 1
+        }
+      },
+      "opponent_farmer": [
+        4,
+        4
+      ],
+      "opponent_hands": 8,
+      "opponent_land": 3,
+      "opponent_money": 111283.0,
+      "proposed_action": {
+        "farmer": [
+          "PASS"
+        ],
+        "hands": [
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ],
+          [
+            "PASS"
+          ]
+        ],
+        "market": []
+      },
+      "seeds": {
+        "CARROT": 1,
+        "MELON": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 4
+      },
+      "shed": {
+        "CARROT": 0,
+        "COW": 0,
+        "EGG": 0,
+        "FERTILIZER": 0,
+        "GOOSE": 0,
+        "MELON": 0,
+        "MILK": 0,
+        "SHEEP": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 0,
+        "WOOL": 0
+      },
+      "step": 718
+    },
+    {
+      "candidate_farmer": [
+        5,
+        4
+      ],
+      "candidate_hands": 8,
+      "candidate_land": 3,
+      "candidate_money": 108982.0,
+      "day": 29,
+      "executed_action": null,
+      "hour": 23,
+      "inventories": [
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {}
+      ],
+      "margin": -2301.0,
+      "market": {
+        "inventory": {
+          "CARROT": 9778,
+          "EGG": 9862,
+          "FERTILIZER": 10449,
+          "MELON": 10102,
+          "MILK": 10035,
+          "STRAWBERRY": 9741,
+          "TOMATO": 9805,
+          "WHEAT": 9594,
+          "WOOL": 10059
+        },
+        "prices": {
+          "CARROT": 52,
+          "EGG": 58,
+          "FERTILIZER": 10,
+          "MELON": 146,
+          "MILK": 87,
+          "STRAWBERRY": 255,
+          "TOMATO": 83,
+          "WHEAT": 45,
+          "WOOL": 1
+        }
+      },
+      "opponent_farmer": [
+        4,
+        4
+      ],
+      "opponent_hands": 8,
+      "opponent_land": 3,
+      "opponent_money": 111283.0,
+      "proposed_action": null,
+      "seeds": {
+        "CARROT": 1,
+        "MELON": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 4
+      },
+      "shed": {
+        "CARROT": 0,
+        "COW": 0,
+        "EGG": 0,
+        "FERTILIZER": 0,
+        "GOOSE": 0,
+        "MELON": 0,
+        "MILK": 0,
+        "SHEEP": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 0,
+        "WOOL": 0
+      },
+      "step": 719
+    }
+  ],
+  "top1_seat": 1
+}

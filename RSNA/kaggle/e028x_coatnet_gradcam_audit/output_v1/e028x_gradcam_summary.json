@@ -1,0 +1,58 @@
+{
+  "anchor_uid": "1.2.826.0.1.3680043.8.498.13335129881737731410081002627729200903",
+  "checkpoint": "raptor_ft_coatnet_v4_full.pt",
+  "checkpoint_res": 384,
+  "decision": "STOP_REPAIR_XAI",
+  "experiment": "E028x baseline CoAtNet attention and Grad-CAM audit",
+  "gates": {
+    "all_cam_maps_non_degenerate": true,
+    "all_cam_values_finite": true,
+    "attention_sums_to_one": true,
+    "attention_values_finite": true,
+    "cross_series_window_count_zero": true,
+    "deletion_bootstrap_win_rate_ge_075": false,
+    "deletion_rows_exact": true,
+    "deletion_values_finite": false,
+    "determinism_max_abs_le_1e_5": true,
+    "forward_features_is_4d": true,
+    "positive_deletion_targets_ge_9": true,
+    "randomization_median_correlation_le_070": true,
+    "randomization_rows_exact": true,
+    "target_specificity_correlations_finite": true,
+    "target_specificity_median_correlation_lt_080": true,
+    "zero_slice_window_count_zero": true
+  },
+  "metrics": {
+    "attention_nonfinite_count": 0,
+    "attention_sum_max_abs_error": 3.5762786865234375e-07,
+    "cam_degenerate_count": 0,
+    "cam_map_count": 97,
+    "cam_nonfinite_count": 0,
+    "checked_windows": 462,
+    "cross_series_window_count": 0,
+    "deletion_bootstrap_win_rate": 0.291,
+    "deletion_rows": 48,
+    "deletion_values_finite": false,
+    "determinism_max_abs": 0.0,
+    "median_randomized_map_correlation": 0.5233703159808031,
+    "median_target_specificity_correlation": 0.0928404975497399,
+    "positive_deletion_targets": 10,
+    "randomization_rows": 12,
+    "zero_slice_window_count": 0
+  },
+  "optimizer_created": false,
+  "panel_pairs": 24,
+  "submission_created": false,
+  "target_layouts": [
+    "NCHW"
+  ],
+  "target_shapes": [
+    [
+      1,
+      1024,
+      12,
+      12
+    ]
+  ],
+  "unique_panel_studies": 10
+}

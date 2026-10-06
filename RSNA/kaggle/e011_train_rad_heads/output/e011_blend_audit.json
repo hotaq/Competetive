@@ -1,0 +1,204 @@
+{
+  "alpha_grid": [
+    {
+      "alpha": 0.0,
+      "canonical_fold_macro": 0.8526296111250014,
+      "canonical_macro": 0.8525244622946246,
+      "gold58_macro": 0.8436761604700802
+    },
+    {
+      "alpha": 0.025,
+      "canonical_fold_macro": 0.8535142103580718,
+      "canonical_macro": 0.8534272923794086,
+      "gold58_macro": 0.8451973812459275
+    },
+    {
+      "alpha": 0.05,
+      "canonical_fold_macro": 0.8543323054125833,
+      "canonical_macro": 0.8542743676649157,
+      "gold58_macro": 0.847093548434756
+    },
+    {
+      "alpha": 0.075,
+      "canonical_fold_macro": 0.8550878412821171,
+      "canonical_macro": 0.8550352561126444,
+      "gold58_macro": 0.8484268076134255
+    },
+    {
+      "alpha": 0.1,
+      "canonical_fold_macro": 0.8557523388702712,
+      "canonical_macro": 0.8557161627591925,
+      "gold58_macro": 0.8498856020740725
+    },
+    {
+      "alpha": 0.125,
+      "canonical_fold_macro": 0.856353003516664,
+      "canonical_macro": 0.8563135109824515,
+      "gold58_macro": 0.8515165875233236
+    },
+    {
+      "alpha": 0.15,
+      "canonical_fold_macro": 0.8568229711053401,
+      "canonical_macro": 0.8568056310580664,
+      "gold58_macro": 0.8536577837327196
+    },
+    {
+      "alpha": 0.175,
+      "canonical_fold_macro": 0.8572964105351996,
+      "canonical_macro": 0.8572345879513726,
+      "gold58_macro": 0.854059048770099
+    },
+    {
+      "alpha": 0.2,
+      "canonical_fold_macro": 0.8576640366632956,
+      "canonical_macro": 0.8575775981050553,
+      "gold58_macro": 0.8553897851928906
+    },
+    {
+      "alpha": 0.225,
+      "canonical_fold_macro": 0.8579883961477798,
+      "canonical_macro": 0.8578466389365129,
+      "gold58_macro": 0.8557060290097471
+    },
+    {
+      "alpha": 0.25,
+      "canonical_fold_macro": 0.8581938249252566,
+      "canonical_macro": 0.8580182500460869,
+      "gold58_macro": 0.8582642732152276
+    },
+    {
+      "alpha": 0.275,
+      "canonical_fold_macro": 0.8583336994646993,
+      "canonical_macro": 0.8581265371827321,
+      "gold58_macro": 0.859345629270289
+    },
+    {
+      "alpha": 0.3,
+      "canonical_fold_macro": 0.8583602045448289,
+      "canonical_macro": 0.8581418022541948,
+      "gold58_macro": 0.85930266979582
+    },
+    {
+      "alpha": 0.325,
+      "canonical_fold_macro": 0.858354819519661,
+      "canonical_macro": 0.858073880206113,
+      "gold58_macro": 0.8591468618586032
+    },
+    {
+      "alpha": 0.35,
+      "canonical_fold_macro": 0.8582530856653956,
+      "canonical_macro": 0.8579178696151152,
+      "gold58_macro": 0.860631904834637
+    },
+    {
+      "alpha": 0.375,
+      "canonical_fold_macro": 0.8580536538008655,
+      "canonical_macro": 0.8576480143170832,
+      "gold58_macro": 0.8612877036555545
+    },
+    {
+      "alpha": 0.4,
+      "canonical_fold_macro": 0.8577755812537482,
+      "canonical_macro": 0.8572956803084897,
+      "gold58_macro": 0.8599937144407755
+    }
+  ],
+  "base_canonical_fold_macro": 0.8526296111250014,
+  "base_canonical_macro": 0.8525244622946246,
+  "base_gold58_macro": 0.8436761604700802,
+  "best_canonical_fold_alpha": 0.3,
+  "best_gold58_alpha": 0.375,
+  "crossfit_canonical_fold_macro": 0.8583076850376842,
+  "crossfit_canonical_macro": 0.858090103496095,
+  "crossfit_gold58_macro": 0.8590711803815476,
+  "crossfit_mean_alpha": 0.29000000000000004,
+  "crossfit_selected_alpha": [
+    0.3,
+    0.3,
+    0.275,
+    0.3,
+    0.275
+  ],
+  "crossfit_target_delta": {
+    "ACL": 0.006407590336792612,
+    "Baker's": -0.015796932833424315,
+    "Contusion": 0.006637999638046677,
+    "Effusion": 0.0014306778877373194,
+    "Fracture": 0.004181054806948747,
+    "Lateral Meniscus": 0.01649823569621711,
+    "Lateral OA": 0.009042240720009698,
+    "MCL": 0.002327643021906356,
+    "Medial Meniscus": 0.013718918181028439,
+    "Medial OA": 0.003991894140864871,
+    "PF OA": 0.012602447769931469,
+    "Synovitis": 0.005745925051584666
+  },
+  "guarded_candidates": {
+    "alpha030_except_baker": {
+      "alpha": {
+        "ACL": 0.3,
+        "Baker's": 0.0,
+        "Contusion": 0.3,
+        "Effusion": 0.3,
+        "Fracture": 0.3,
+        "Lateral Meniscus": 0.3,
+        "Lateral OA": 0.3,
+        "MCL": 0.3,
+        "Medial Meniscus": 0.3,
+        "Medial OA": 0.3,
+        "PF OA": 0.3,
+        "Synovitis": 0.3
+      },
+      "canonical_fold_macro": 0.8597478532060856,
+      "canonical_macro": 0.8595252838537214,
+      "canonical_target_delta": {
+        "ACL": 0.006406051838172333,
+        "Baker's": 0.0,
+        "Contusion": 0.006823066834917069,
+        "Effusion": 0.0014200132457008463,
+        "Fracture": 0.004110637860818889,
+        "Lateral Meniscus": 0.01687734790311446,
+        "Lateral OA": 0.009266828122055815,
+        "MCL": 0.0022662148802957693,
+        "Medial Meniscus": 0.01410900509222679,
+        "Medial OA": 0.004023574961252052,
+        "PF OA": 0.0128879835085699,
+        "Synovitis": 0.005819134462034747
+      },
+      "gold58_macro": 0.8588497712450954
+    },
+    "alpha030_except_baker_fracture": {
+      "alpha": {
+        "ACL": 0.3,
+        "Baker's": 0.0,
+        "Contusion": 0.3,
+        "Effusion": 0.3,
+        "Fracture": 0.0,
+        "Lateral Meniscus": 0.3,
+        "Lateral OA": 0.3,
+        "MCL": 0.3,
+        "Medial Meniscus": 0.3,
+        "Medial OA": 0.3,
+        "PF OA": 0.3,
+        "Synovitis": 0.3
+      },
+      "canonical_fold_macro": 0.8594580137547715,
+      "canonical_macro": 0.8591827306986531,
+      "canonical_target_delta": {
+        "ACL": 0.006406051838172333,
+        "Baker's": 0.0,
+        "Contusion": 0.006823066834917069,
+        "Effusion": 0.0014200132457008463,
+        "Fracture": 0.0,
+        "Lateral Meniscus": 0.01687734790311446,
+        "Lateral OA": 0.009266828122055815,
+        "MCL": 0.0022662148802957693,
+        "Medial Meniscus": 0.01410900509222679,
+        "Medial OA": 0.004023574961252052,
+        "PF OA": 0.0128879835085699,
+        "Synovitis": 0.005819134462034747
+      },
+      "gold58_macro": 0.8601229193932435
+    }
+  }
+}

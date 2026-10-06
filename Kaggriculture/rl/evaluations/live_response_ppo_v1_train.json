@@ -1,0 +1,149 @@
+{
+  "base_seed": 300000,
+  "bc": {
+    "accuracy": 1.0,
+    "cross_entropy": 0.2973752429901306
+  },
+  "episodes": 216,
+  "history": [
+    {
+      "actions": {
+        "melon10_cow8_w8_b16_l2": 5,
+        "melon6": 1,
+        "melon6_cow5_w7_b10": 11,
+        "melon6_cow6_w6_b18": 18,
+        "melon8_cow8_w8_b16_l1": 1
+      },
+      "episodes": 36,
+      "iteration": 0,
+      "mean_margin": 22833.055555555555,
+      "mean_money": 50167.694444444445,
+      "mean_reward": 3.0659372222222223,
+      "update": {
+        "entropy": 0.7837964826728303,
+        "mean_probability_of_sampled_action": 0.5983501103262648,
+        "teacher_accuracy": 1.0,
+        "value_mse": 16.048023034024993
+      },
+      "wins": 34,
+      "worst_margin": -32933.0,
+      "worst_money": 14604.0
+    },
+    {
+      "actions": {
+        "melon10_cow8_w8_b16_l2": 3,
+        "melon6": 1,
+        "melon6_cow5_w7_b10": 13,
+        "melon6_cow6_w6_b18": 19
+      },
+      "episodes": 36,
+      "iteration": 1,
+      "mean_margin": 21410.75,
+      "mean_money": 46832.88888888889,
+      "mean_reward": 2.8728105555555556,
+      "update": {
+        "entropy": 0.7725031656035646,
+        "mean_probability_of_sampled_action": 0.6789302897596875,
+        "teacher_accuracy": 1.0,
+        "value_mse": 12.997819361819676
+      },
+      "wins": 33,
+      "worst_margin": -28791.0,
+      "worst_money": 14366.0
+    },
+    {
+      "actions": {
+        "melon10_cow8_w8_b16_l2": 3,
+        "melon6": 3,
+        "melon6_cow5_w7_b10": 10,
+        "melon6_cow6_w6_b18": 20
+      },
+      "episodes": 36,
+      "iteration": 2,
+      "mean_margin": 17583.88888888889,
+      "mean_money": 44942.22222222222,
+      "mean_reward": 2.5767722222222225,
+      "update": {
+        "entropy": 0.7671467973625686,
+        "mean_probability_of_sampled_action": 0.6715671061129628,
+        "teacher_accuracy": 1.0,
+        "value_mse": 7.241492259008611
+      },
+      "wins": 31,
+      "worst_margin": -2151.0,
+      "worst_money": 15010.0
+    },
+    {
+      "actions": {
+        "melon10_cow8_w8_b16_l2": 7,
+        "melon6": 1,
+        "melon6_cow5_w7_b10": 8,
+        "melon6_cow6_w6_b18": 18,
+        "melon8_cow8_w8_b16_l1": 2
+      },
+      "episodes": 36,
+      "iteration": 3,
+      "mean_margin": 24393.88888888889,
+      "mean_money": 52764.11111111111,
+      "mean_reward": 3.255326666666667,
+      "update": {
+        "entropy": 0.7602517640470448,
+        "mean_probability_of_sampled_action": 0.5899225000126341,
+        "teacher_accuracy": 1.0,
+        "value_mse": 14.304293195489338
+      },
+      "wins": 35,
+      "worst_margin": -39309.0,
+      "worst_money": 14454.0
+    },
+    {
+      "actions": {
+        "melon10_cow8_w8_b16_l2": 8,
+        "melon6_cow5_w7_b10": 10,
+        "melon6_cow6_w6_b18": 16,
+        "melon8_cow8_w8_b16_l1": 2
+      },
+      "episodes": 36,
+      "iteration": 4,
+      "mean_margin": 26438.222222222223,
+      "mean_money": 53391.86111111111,
+      "mean_reward": 3.711659444444445,
+      "update": {
+        "entropy": 0.751699790265431,
+        "mean_probability_of_sampled_action": 0.5656160753334157,
+        "teacher_accuracy": 1.0,
+        "value_mse": 8.50001641738803
+      },
+      "wins": 36,
+      "worst_margin": 1358.0,
+      "worst_money": 26389.0
+    },
+    {
+      "actions": {
+        "melon10_cow8_w8_b16_l2": 7,
+        "melon6": 1,
+        "melon6_cow5_w7_b10": 9,
+        "melon6_cow6_w6_b18": 18,
+        "melon8_cow8_w8_b16_l1": 1
+      },
+      "episodes": 36,
+      "iteration": 5,
+      "mean_margin": 22922.13888888889,
+      "mean_money": 47331.13888888889,
+      "mean_reward": 3.0891894444444445,
+      "update": {
+        "entropy": 0.7449893273476391,
+        "mean_probability_of_sampled_action": 0.5901148850636125,
+        "teacher_accuracy": 1.0,
+        "value_mse": 9.501531391706692
+      },
+      "wins": 32,
+      "worst_margin": -13025.0,
+      "worst_money": 14454.0
+    }
+  ],
+  "iterations": 6,
+  "model": "live-response-contextual-ppo-v1",
+  "seed": 31,
+  "seeds_per_opponent": 3
+}

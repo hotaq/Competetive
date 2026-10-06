@@ -1,0 +1,67 @@
+{
+  "artifacts": {
+    "anchor_sha256": "f9fb57b7bac8489a5d5285b3984b06df57f142572be6417eac6341c43e96707a",
+    "foldrank_sha256": "56123233443d3c47e97b2970510d959e93dbcab9c02adf7ec18febc817449b5e",
+    "probmean_sha256": "a402f7170a7f442efe6066fd7dfe189261813a625eb2a681ea8b3f90cb77b37e",
+    "submission_sha256": "56123233443d3c47e97b2970510d959e93dbcab9c02adf7ec18febc817449b5e"
+  },
+  "blend": {
+    "adaptive_hidden_test_weights": false,
+    "dino2_anchor_weight": 0.65,
+    "dino3_aggregation": "rank each fold, then arithmetic mean",
+    "dino3_folds": 5,
+    "dino3_weight": 0.35,
+    "radimagenet_used": false
+  },
+  "candidate": "submission_e010_d3_foldrank.csv",
+  "checks": {
+    "finite": true,
+    "fold_tensor_shape": [
+      5,
+      3,
+      12
+    ],
+    "rows": 3,
+    "targets": [
+      "ACL",
+      "MCL",
+      "Medial Meniscus",
+      "Lateral Meniscus",
+      "Medial OA",
+      "Lateral OA",
+      "PF OA",
+      "Effusion",
+      "Synovitis",
+      "Baker's",
+      "Contusion",
+      "Fracture"
+    ],
+    "uid_parity": true,
+    "uid_unique": true
+  },
+  "diagnostics": {
+    "mean_absolute_candidate_delta": 0.028518518518518523,
+    "mean_probmean_vs_foldrank_corr": 0.9960725114985346,
+    "probmean_vs_foldrank_target_corr": {
+      "ACL": 0.9996290412608102,
+      "Baker's": 0.9916087222878416,
+      "Contusion": 0.9999999999999999,
+      "Effusion": 0.9885272061958089,
+      "Fracture": 0.9933122366242917,
+      "Lateral Meniscus": 1.0,
+      "Lateral OA": 0.9933122366242917,
+      "MCL": 0.9979342127681639,
+      "Medial Meniscus": 0.9996290412608102,
+      "Medial OA": 0.9908848271148978,
+      "PF OA": 1.0,
+      "Synovitis": 0.9980326138455009
+    }
+  },
+  "experiment": "E010 DINOv3 fold-rank blend",
+  "source": {
+    "notebook": "romantamrazov/rsna-knee-dinosaur-v2",
+    "sha256": "89c1b825f629a765f8521dacb85d78b8997aa9f65f946416162cb358ffdefe8e",
+    "url": "https://www.kaggle.com/code/romantamrazov/rsna-knee-dinosaur-v2"
+  },
+  "submission_csv_is_candidate": true
+}

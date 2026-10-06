@@ -1,0 +1,83 @@
+{
+  "base": "exact Mattia Angeli V104 public 0.922 reproduction",
+  "base_before_fusion_sha256": "60d612928b1cc9bd78b80bed54e0f1d3a4f9de499325b892daa6e5ddf39f460f",
+  "changed_targets": [
+    "Medial Meniscus",
+    "Lateral Meniscus",
+    "Medial OA",
+    "Effusion",
+    "Synovitis",
+    "Baker's",
+    "Contusion",
+    "Fracture"
+  ],
+  "checkpoint_sha256": "c35a13b00ea073b04818780c354b97e5b9f13580a01bcada5e6f2c371f963b33",
+  "diagnostics": {
+    "Baker's": {
+      "spearman_vs_v104": null,
+      "unique_arm_scores": 3,
+      "weight": 0.25
+    },
+    "Contusion": {
+      "spearman_vs_v104": null,
+      "unique_arm_scores": 3,
+      "weight": 0.25
+    },
+    "Effusion": {
+      "spearman_vs_v104": null,
+      "unique_arm_scores": 3,
+      "weight": 0.25
+    },
+    "Fracture": {
+      "spearman_vs_v104": null,
+      "unique_arm_scores": 3,
+      "weight": 0.25
+    },
+    "Lateral Meniscus": {
+      "spearman_vs_v104": null,
+      "unique_arm_scores": 3,
+      "weight": 0.25
+    },
+    "Medial Meniscus": {
+      "spearman_vs_v104": null,
+      "unique_arm_scores": 3,
+      "weight": 0.25
+    },
+    "Medial OA": {
+      "spearman_vs_v104": null,
+      "unique_arm_scores": 3,
+      "weight": 0.25
+    },
+    "Synovitis": {
+      "spearman_vs_v104": null,
+      "unique_arm_scores": 3,
+      "weight": 0.25
+    }
+  },
+  "fixed_gate_study_bootstrap_ci95": [
+    0.003491,
+    0.017058
+  ],
+  "fixed_gate_study_bootstrap_probability_positive": 0.998,
+  "fixed_gate_target_bootstrap_probability_positive": 0.993,
+  "gold58_reference_base_macro": 0.8419934594478793,
+  "gold58_reference_delta": 0.009885874818444607,
+  "gold58_reference_fused_macro": 0.8518793342663239,
+  "note": "End-to-end validation only; no competition submission from this version.",
+  "status": "HS_V19_V104_PLUS_V15_COMPLETE_VALIDATION_ONLY",
+  "studies": 3,
+  "submission_sha256": "60d612928b1cc9bd78b80bed54e0f1d3a4f9de499325b892daa6e5ddf39f460f",
+  "weights": {
+    "Baker's": 0.25,
+    "Contusion": 0.25,
+    "Effusion": 0.25,
+    "Fracture": 0.25,
+    "Lateral Meniscus": 0.25,
+    "Medial Meniscus": 0.25,
+    "Medial OA": 0.25,
+    "Synovitis": 0.25
+  },
+  "worker_elapsed_seconds": 4844.3355457782745,
+  "worker_output_sha256": "55ba32369a6900e5f7662c14eedaa521f41ce7a3e551eed44392dac82e117125",
+  "worker_source_sha256": "d268d3783a538137575772e9469f419ee185023f761b828ab9a64fe8a18bac8e"
+}

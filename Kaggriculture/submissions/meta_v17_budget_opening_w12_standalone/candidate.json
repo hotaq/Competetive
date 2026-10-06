@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "name": "meta_v17_budget_opening_w12_standalone",
+  "agent_file": "submissions/meta_v17_budget_opening_w12_standalone/main.py",
+  "sha256": "547680f5b3e9eb996e150d30ac7ae12d204d45c88fce421a1f848b3ff6a03738",
+  "base": {
+    "agent_file": "submissions/meta_v16_rc6_adaptive_market_standalone/main.py",
+    "sha256": "c8afcbb8f90861cd92131012146e573752820b80fbd939ace3c7503aea83cd5e"
+  },
+  "opening": {
+    "layout_preserved": true,
+    "five_hires_ordered_before_animals_and_seeds": true,
+    "wheat_bought_step0": 12,
+    "wheat_sold_step1": 7,
+    "retained_wheat": 5
+  }
+}

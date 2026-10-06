@@ -1,0 +1,118 @@
+{
+  "checkpoint_fold_metadata_count": 0,
+  "coverage": {
+    "fold_counts": [
+      881,
+      834,
+      937,
+      885,
+      870
+    ],
+    "gold_studies": 58,
+    "members": 20,
+    "members_per_fold": 4,
+    "studies": 4407,
+    "windows_per_member": 10
+  },
+  "decision": "NO_GO",
+  "elapsed_seconds": 6736.87702870369,
+  "experiment": "E009 exact 0.899 pooling OOF",
+  "hardware": {
+    "capability": [
+      7,
+      5
+    ],
+    "gpu": "Tesla T4"
+  },
+  "metrics": {
+    "anchor_reconstruction_auc_delta": -0.00036053131253299675,
+    "anchor_reconstruction_mae": 0.0020408870388210812,
+    "anchor_reconstruction_median_corr": 0.9985965385952457,
+    "closest_anchor_reconstruction": "baseline_raw",
+    "fold_mean_macro_auc": {
+      "anchor": 0.848747988865242,
+      "baseline_rank": 0.8480405399972302,
+      "baseline_raw": 0.8483874575527091,
+      "exact_rank": 0.8526296111250014,
+      "exact_raw": 0.8526378157806671
+    },
+    "global_macro_auc": {
+      "anchor": 0.8486296936378753,
+      "baseline_rank": 0.8478562893086394,
+      "baseline_raw": 0.8482948260748695,
+      "exact_rank": 0.8525244622946246,
+      "exact_raw": 0.8524559502177825
+    },
+    "gold_macro_auc": {
+      "anchor": 0.8400089312435326,
+      "baseline_rank": 0.837160236142251,
+      "baseline_raw": 0.838608199861476,
+      "exact_rank": 0.8436761604700802,
+      "exact_raw": 0.8456858133233062
+    },
+    "max_manifest_annot_abs_diff": 0.04745370370370372,
+    "max_manifest_holdout_abs_diff": 0.0019953894398336836,
+    "mounted_label_fold_mean_macro_auc": {
+      "anchor": 0.8478401456855887,
+      "baseline_rank": 0.847130194292823,
+      "baseline_raw": 0.8474833292201375,
+      "exact_rank": 0.8518697609740548,
+      "exact_raw": 0.8518807724993279
+    },
+    "mounted_label_mismatch_cells": 145,
+    "nonworse_targets": 12,
+    "primary_fold_gain": 0.004589071127771183,
+    "primary_gold_gain": 0.0065159243278292145,
+    "worst_target_delta": -0.0014422142482406475
+  },
+  "next_gate": "Do not use this reconstruction to select E010 until failed provenance/score checks are repaired.",
+  "pooling": {
+    "ACL": "top2",
+    "Baker's": "max",
+    "Contusion": "max",
+    "Fracture": "max",
+    "Lateral Meniscus": "max",
+    "MCL": "top2",
+    "Medial Meniscus": "max"
+  },
+  "provenance_checks": {
+    "all_fingerprints": true,
+    "anchor_auc_parity": true,
+    "anchor_correlation": true,
+    "canonical_labels_from_pinned_oof": true,
+    "complete_4407": true,
+    "exact_ten_windows": true,
+    "external_label_drift_bounded": true,
+    "fold_counts": true,
+    "fold_map_sha": true,
+    "manifest_annot_parity": false,
+    "manifest_holdout_parity": false,
+    "manifest_sha": true,
+    "member_identity": true,
+    "no_submission": true,
+    "oof_sha": true,
+    "train_sha": true
+  },
+  "score_checks": {
+    "gold_direction": true,
+    "pool_gain": true,
+    "target_breadth": true,
+    "target_veto": true
+  },
+  "source": {
+    "base_ast_sha256": "b569cdeb683a335b34c81b2c29047f4679cd0b243b68b9ffd62e5571c375d52c",
+    "base_executable_sha256": "b58e750495d1518201c116635ff35705453595ea6377c64c068c33c19421dc04",
+    "base_main_sha256": "7bebd9807599aaaee0861a32fe6387d845da360c63f09f0346c96d5b4c27a799",
+    "base_notebook_sha256": "5a549cf216f1323440254e41ecd3917664c8bb29e7cb2b72bc15692bee4ada6c",
+    "fold_map_sha256": "2c805d89ba5ad1f713d322daedad8c0768c8dc78c0a9938dc3a00daa8e02b8ab",
+    "manifest_sha256": "496949a3a3e789bc1f4ccff595205c911e471c5b5ef669366a2dd0a58e125844",
+    "mounted_label_path": "/kaggle/input/datasets/pilkwang/rsna-knee-llm-labels/report_labels_v2.csv",
+    "mounted_label_sha256": "6f704a7bdb2f894cc49445b19ba7c4378c3f548d3449e00361e10044bee40920",
+    "oof_sha256": "62d47ba4c0c8347b5b24e7fd2aa517aae0fd6d4656fd5d829fd3a50f0159909c",
+    "public_score": 0.899,
+    "scored_script_version": 341177035,
+    "scored_submission_id": 55378950,
+    "train_sha256": "8ca2203c0e9d61c080c7a314c7cdb51c1b03a1d9eb4770819f7f34af53ef4e33"
+  },
+  "submission_created": false
+}

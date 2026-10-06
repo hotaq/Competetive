@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "name": "meta_v17_ryo_opening_land120_standalone",
+  "agent_file": "submissions/meta_v17_ryo_opening_land120_standalone/main.py",
+  "sha256": "b5892b82d190334572fdf4c7d5f831fb2e9a902004122293de7cca84791ee4de",
+  "base": {
+    "agent_file": "submissions/meta_v16_rc6_adaptive_market_standalone/main.py",
+    "sha256": "c8afcbb8f90861cd92131012146e573752820b80fbd939ace3c7503aea83cd5e"
+  },
+  "opening": {
+    "reference_replay": "analysis/top1_ryo_20260823_current/97619249.json",
+    "reference_replay_sha256": "d5cfd1ba294a9833c4ac0ae2a160edcc3982dfdbca7179a097db3db26ad83ab9",
+    "reference_seat": 0,
+    "decision_steps": [
+      0,
+      72
+    ],
+    "action_count": 73,
+    "actions_sha256": "be8481a1bab3a8529f36e50daeec165bd10358e13343b9ee002aebe98e04a088",
+    "verified_episode_ids": [
+      97619249,
+      97569024,
+      97518737,
+      97518736,
+      97468615,
+      97468613,
+      97422923,
+      97386449,
+      97386448,
+      97352285,
+      97352280,
+      97317972,
+      97317971,
+      97281485,
+      97245055,
+      97213079,
+      97213078,
+      97181129,
+      97151460,
+      97151458
+    ]
+  },
+  "land": {
+    "decision_step": 120,
+    "replay_frame": 121,
+    "replaces_base_first_land": true,
+    "funding_wheat_sale": 0
+  }
+}

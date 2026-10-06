@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "name": "meta_v52_route99612231_projected_wool_sale_standalone",
+  "agent_file": "submissions/meta_v52_route99612231_projected_wool_sale_standalone/main.py",
+  "archive_file": "submissions/meta_v52_route99612231_projected_wool_sale_standalone/submission.tar.gz",
+  "sha256": "e4d60d4da3d0b5f6a4ad9c33b3078bef3041d120354ced01aae668e13e94683a",
+  "archive_sha256": "4c3fec9f949d06f4d09813f08916bf4822d6c2ad4514bcddf3e3f7eb8345a4fb",
+  "base": {
+    "agent_file": "submissions/meta_v44_route99612231_orphan_standalone/main.py",
+    "sha256": "cd2eda3600b4d4849f40a74d25f350239528541e52be0aecf85215fe7aa9afb2"
+  },
+  "policy": {
+    "family": "observable_state_overlay",
+    "minimum_inventory_value": 2500.0,
+    "maximum_interventions_per_game": 1,
+    "liquidation_items": [
+      "WOOL"
+    ],
+    "transaction": "enter shed, drop, and sell projected wool in the same turn"
+  },
+  "status": "user_requested_live_probe"
+}

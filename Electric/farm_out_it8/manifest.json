@@ -1,0 +1,227 @@
+{
+ "models": {
+  "lgb_naji_s42_n5": {
+   "cfg": {
+    "id": "lgb_naji_s42_n5",
+    "family": "lgb",
+    "features": "naji",
+    "seed": 42,
+    "tag": "n5",
+    "params": {
+     "lr": 0.02,
+     "leaves": 32,
+     "depth": 5,
+     "min_child": 10,
+     "ff": 0.3,
+     "bag": 0.8,
+     "l2": 2.0,
+     "a": 0.071,
+     "rounds": 20000,
+     "es": 500,
+     "max_bin": 1024
+    }
+   },
+   "oof_auc": 0.945752,
+   "fold_auc": [
+    0.944777,
+    0.94548,
+    0.946729,
+    0.945982,
+    0.945833
+   ],
+   "iters": [
+    1333,
+    1455,
+    1466,
+    1224,
+    1337
+   ]
+  },
+  "lgb_naji_s7_n5": {
+   "cfg": {
+    "id": "lgb_naji_s7_n5",
+    "family": "lgb",
+    "features": "naji",
+    "seed": 7,
+    "tag": "n5",
+    "params": {
+     "lr": 0.02,
+     "leaves": 32,
+     "depth": 5,
+     "min_child": 10,
+     "ff": 0.3,
+     "bag": 0.8,
+     "l2": 2.0,
+     "a": 0.071,
+     "rounds": 20000,
+     "es": 500,
+     "max_bin": 1024
+    }
+   },
+   "oof_auc": 0.945774,
+   "fold_auc": [
+    0.944849,
+    0.94554,
+    0.946729,
+    0.945976,
+    0.945821
+   ],
+   "iters": [
+    1300,
+    1305,
+    1447,
+    1067,
+    1465
+   ]
+  },
+  "lgb_naji_s42_n4": {
+   "cfg": {
+    "id": "lgb_naji_s42_n4",
+    "family": "lgb",
+    "features": "naji",
+    "seed": 42,
+    "tag": "n4",
+    "params": {
+     "lr": 0.02,
+     "leaves": 32,
+     "depth": 4,
+     "min_child": 10,
+     "ff": 0.3,
+     "bag": 0.8,
+     "l2": 2.0,
+     "a": 0.071,
+     "rounds": 20000,
+     "es": 500,
+     "max_bin": 1024
+    }
+   },
+   "oof_auc": 0.945771,
+   "fold_auc": [
+    0.944847,
+    0.945483,
+    0.946761,
+    0.94594,
+    0.945862
+   ],
+   "iters": [
+    1833,
+    2245,
+    2426,
+    1850,
+    2058
+   ]
+  },
+  "lgb_naji_s11_n6": {
+   "cfg": {
+    "id": "lgb_naji_s11_n6",
+    "family": "lgb",
+    "features": "naji",
+    "seed": 11,
+    "tag": "n6",
+    "params": {
+     "lr": 0.02,
+     "leaves": 32,
+     "depth": 6,
+     "min_child": 10,
+     "ff": 0.3,
+     "bag": 0.8,
+     "l2": 2.0,
+     "a": 0.071,
+     "rounds": 20000,
+     "es": 500,
+     "max_bin": 1024
+    }
+   },
+   "oof_auc": 0.945739,
+   "fold_auc": [
+    0.944795,
+    0.945465,
+    0.946717,
+    0.945945,
+    0.945817
+   ],
+   "iters": [
+    1275,
+    1253,
+    1564,
+    959,
+    1249
+   ]
+  },
+  "cat_naji_s42_d4": {
+   "cfg": {
+    "id": "cat_naji_s42_d4",
+    "family": "cat",
+    "features": "naji",
+    "seed": 42,
+    "tag": "d4",
+    "params": {
+     "depth": 4,
+     "lr": 0.06,
+     "l2": 5.0,
+     "rounds": 4000
+    }
+   },
+   "oof_auc": 0.945749,
+   "fold_auc": [
+    0.944883,
+    0.94541,
+    0.946714,
+    0.945992,
+    0.945787
+   ],
+   "iters": [
+    665,
+    1279,
+    1351,
+    667,
+    930
+   ]
+  },
+  "xgb_naji_s42_d3": {
+   "cfg": {
+    "id": "xgb_naji_s42_d3",
+    "family": "xgb",
+    "features": "naji",
+    "seed": 42,
+    "tag": "d3",
+    "params": {
+     "max_depth": 3,
+     "lr": 0.05,
+     "mcw": 100,
+     "sub": 0.8,
+     "col": 0.9,
+     "l2": 3.0,
+     "a": 0.0,
+     "rounds": 8000
+    }
+   },
+   "oof_auc": 0.945261,
+   "fold_auc": [
+    0.944665,
+    0.945311,
+    0.946341,
+    0.94574,
+    0.945697
+   ],
+   "iters": [
+    873,
+    1214,
+    861,
+    666,
+    1114
+   ]
+  }
+ },
+ "history": [
+  {
+   "n_models": 6,
+   "blend_oof": 0.945837,
+   "weights": {
+    "lgb_naji_s7_n5": 0.3333,
+    "cat_naji_s42_d4": 0.3333,
+    "lgb_naji_s42_n4": 0.3333
+   }
+  }
+ ]
+}

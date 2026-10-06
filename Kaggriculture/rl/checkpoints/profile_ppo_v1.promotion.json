@@ -1,0 +1,60 @@
+{
+  "candidate": {
+    "action_counts": [
+      0,
+      0,
+      0,
+      270,
+      0,
+      0
+    ],
+    "draws": 0,
+    "games": 30,
+    "ineffective_actions": 0,
+    "losses": 0,
+    "mean_blocked_rate": 0.0035903679202394503,
+    "mean_margin": 44065.5,
+    "mean_money": 50130.23333333333,
+    "wins": 30,
+    "worst_margin": 28882.0,
+    "worst_money": 32435.0
+  },
+  "checkpoint": "rl/checkpoints/profile_ppo_v1.npz",
+  "incumbent": {
+    "action_counts": [
+      270,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "draws": 2,
+    "games": 30,
+    "ineffective_actions": 0,
+    "losses": 0,
+    "mean_blocked_rate": 0.0,
+    "mean_margin": 10085.033333333333,
+    "mean_money": 16217.066666666668,
+    "wins": 28,
+    "worst_margin": 0.0,
+    "worst_money": 15010.0
+  },
+  "model": "executor-sticky-profile-ppo-v1",
+  "paired_delta": {
+    "better": 30,
+    "equal": 0,
+    "mean_margin": 33980.46666666667,
+    "worse": 0,
+    "worst_margin": 15812.0
+  },
+  "profiles": [
+    "melon6",
+    "melon6_goose2_w2",
+    "melon6_cow2_w2",
+    "melon6_cow4_w4",
+    "melon6_sheep2_w3",
+    "melon6_cow2_sheep2_w4"
+  ],
+  "promotion": true
+}

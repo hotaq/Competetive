@@ -1,0 +1,87 @@
+{
+  "format": 1,
+  "entries": {
+    "topology/peer-seq": {
+      "key": "topology/peer-seq",
+      "value": {
+        "format": 1,
+        "next": 1
+      },
+      "version": 1,
+      "updatedAt": 1788865397962,
+      "updatedBy": {
+        "id": "session:01a080af-9857-77ed-b4bf-8d56d120904f",
+        "name": "main",
+        "kind": "main",
+        "sessionId": "01a080af-9857-77ed-b4bf-8d56d120904f"
+      }
+    },
+    "topology/hosts/8d799025b07640f84e9a5fcc0d2506f19de6374ab2ef5ca3210dd1824648783f": {
+      "key": "topology/hosts/8d799025b07640f84e9a5fcc0d2506f19de6374ab2ef5ca3210dd1824648783f",
+      "value": {
+        "format": 1,
+        "id": "session:01a080af-9857-77ed-b4bf-8d56d120904f",
+        "rootId": "session:01a080af-9857-77ed-b4bf-8d56d120904f",
+        "identity": {
+          "id": "session:01a080af-9857-77ed-b4bf-8d56d120904f",
+          "name": "main",
+          "kind": "main",
+          "sessionId": "01a080af-9857-77ed-b4bf-8d56d120904f"
+        },
+        "startedAt": 1788865397956,
+        "updatedAt": 1788865414090,
+        "expiresAt": 1788865429090
+      },
+      "version": 13,
+      "updatedAt": 1788865414091,
+      "updatedBy": {
+        "id": "session:01a080af-9857-77ed-b4bf-8d56d120904f",
+        "name": "main",
+        "kind": "main",
+        "sessionId": "01a080af-9857-77ed-b4bf-8d56d120904f"
+      }
+    },
+    "topology/participants/8d799025b07640f84e9a5fcc0d2506f19de6374ab2ef5ca3210dd1824648783f": {
+      "key": "topology/participants/8d799025b07640f84e9a5fcc0d2506f19de6374ab2ef5ca3210dd1824648783f",
+      "value": {
+        "format": 1,
+        "id": "session:01a080af-9857-77ed-b4bf-8d56d120904f",
+        "kind": "root",
+        "rootId": "session:01a080af-9857-77ed-b4bf-8d56d120904f",
+        "ownerHostId": "session:01a080af-9857-77ed-b4bf-8d56d120904f",
+        "ownerIdentityId": "session:01a080af-9857-77ed-b4bf-8d56d120904f",
+        "name": "main",
+        "status": "idle",
+        "runner": "pi",
+        "transport": "host",
+        "capabilities": [],
+        "cwd": "/Users/chinnaphat/Desktop/cedt/Super AI/competetive/RSNA",
+        "sessionId": "01a080af-9857-77ed-b4bf-8d56d120904f",
+        "model": "opencode-go/glm-5.2",
+        "thinking": "high",
+        "startedAt": 1788865397956,
+        "updatedAt": 1788865414090,
+        "pendingMessages": false,
+        "controlProtocol": "v1",
+        "label": "RSN-1"
+      },
+      "version": 13,
+      "updatedAt": 1788865414092,
+      "updatedBy": {
+        "id": "session:01a080af-9857-77ed-b4bf-8d56d120904f",
+        "name": "main",
+        "kind": "main",
+        "sessionId": "01a080af-9857-77ed-b4bf-8d56d120904f"
+      }
+    }
+  },
+  "versions": {
+    "topology/peer-seq": 1,
+    "topology/hosts/8d799025b07640f84e9a5fcc0d2506f19de6374ab2ef5ca3210dd1824648783f": 13,
+    "sessions/01a080af-9857-77ed-b4bf-8d56d120904f": 12,
+    "topology/participants/8d799025b07640f84e9a5fcc0d2506f19de6374ab2ef5ca3210dd1824648783f": 13
+  },
+  "tombstoneOrder": [
+    "sessions/01a080af-9857-77ed-b4bf-8d56d120904f"
+  ]
+}

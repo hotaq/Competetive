@@ -1,0 +1,37 @@
+{
+  "views": {
+    "A_lgbm_triple_te_digits_3seed": {
+      "tag": "hyb3",
+      "weight": 0.2
+    },
+    "B_xgb_on_A_features": {
+      "tag": "hyb_s42_xgb",
+      "weight": 0.2
+    },
+    "C_no_digits_windows_lift_sm2_30_300": {
+      "tag": "hyb_s42_nodigit_lift_win_sm2-30-300",
+      "weight": 0.1
+    },
+    "D_no_exact_key_ladder_windows": {
+      "tag": "hyb_s42_win_keysalt_smauto-20-200",
+      "weight": 0.2
+    },
+    "E_ladder25_250_2500_lift_sm5_50_500": {
+      "tag": "hyb_s42_lift_sm5-50-500_lad25-250-2500",
+      "weight": 0.1
+    },
+    "F_exact_rate_as_init_score": {
+      "tag": "hyb_s42_win_init",
+      "weight": 0.2
+    }
+  },
+  "oof_auc": {
+    "A_lgbm_triple_te_digits_3seed": 0.9462812713263075,
+    "B_xgb_on_A_features": 0.9462580073487283,
+    "C_no_digits_windows_lift_sm2_30_300": 0.9462227175962648,
+    "D_no_exact_key_ladder_windows": 0.9460771857127754,
+    "E_ladder25_250_2500_lift_sm5_50_500": 0.9462300657667524,
+    "F_exact_rate_as_init_score": 0.9461335524086265,
+    "ensemble": 0.9463453732214283
+  }
+}

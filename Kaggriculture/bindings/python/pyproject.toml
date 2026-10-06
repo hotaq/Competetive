@@ -1,0 +1,14 @@
+[build-system]
+requires = ["maturin==1.14.1"]
+build-backend = "maturin"
+
+[project]
+name = "kaggriculture-rs"
+version = "0.1.0"
+requires-python = ">=3.11"
+description = "Python adapter for the Kaggriculture Rust engine"
+
+[tool.maturin]
+manifest-path = "../../rust/kaggriculture-python/Cargo.toml"
+python-source = "."
+module-name = "kaggriculture_rs._native"

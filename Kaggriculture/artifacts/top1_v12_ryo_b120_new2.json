@@ -1,0 +1,51 @@
+{
+  "agents": [
+    {
+      "agent_file": "artifacts/top1_v12_ryo_tape_population96/tape_95029942.py",
+      "agent_sha256": "682a379db07a200e4fab104005b4c2800c164242d6ca992f2050952562320a21",
+      "competition": "kaggriculture",
+      "episode_id": 95029942,
+      "seed": 746105689,
+      "source_sha256": "eaa9fa0c6a869152be16fa2dcdfe5b2bbd8ae1558e12482b1b88f06cae6b4580",
+      "submission_id": 55614463,
+      "top1_seat": 0
+    },
+    {
+      "agent_file": "artifacts/top1_v12_ryo_tape_population96/tape_94463541.py",
+      "agent_sha256": "9215f6b9b9d90421167f2a06816ad75eeb8b38ae64a28c37a259d9a646b719cc",
+      "competition": "kaggriculture",
+      "episode_id": 94463541,
+      "seed": 1933110826,
+      "source_sha256": "6131b8713913079c047030945b0dba11b508d2404c60163d7fb78d86743810bb",
+      "submission_id": 55614463,
+      "top1_seat": 0
+    }
+  ],
+  "exact_validated": true,
+  "holdout": false,
+  "schema_version": 2,
+  "source_manifests": [
+    "replays/top1_v12_ryo_development_20260821/manifest.json"
+  ],
+  "source_submissions": [
+    {
+      "date": "2026-08-19T04:08:02.207Z",
+      "public_score": 3168.3,
+      "submission_id": 55614463
+    }
+  ],
+  "compatibility_filter": {
+    "source_population": "artifacts/top1_v12_ryo_tape_population96/manifest.json",
+    "base_episode_id": 95703024,
+    "branch_step": 120,
+    "source_agents": 96,
+    "compatible_agents": 63
+  },
+  "selection": {
+    "source_population": "artifacts/top1_v12_compatible95703024_b120.json",
+    "episode_ids": [
+      95029942,
+      94463541
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "model": "catboost_pairwise_te_cpu",
+  "train_rows": 630000,
+  "test_rows": 270000,
+  "original_rows": 10000,
+  "features": 51,
+  "base_features_after_pair_drop": 41,
+  "pair_columns": 10,
+  "target_encoder_output_columns": 30,
+  "params": {
+    "folds": 2,
+    "iterations": 10,
+    "learning_rate": 0.04,
+    "depth": 8,
+    "l2_leaf_reg": 4.0,
+    "early_stopping_rounds": 120,
+    "orig_row_weight": 0.35,
+    "max_pairs": 10,
+    "seed": 43,
+    "thread_count": -1,
+    "output_dir": "/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Irrigation/artifacts/catboost_pairwise_te_cpu_smoke",
+    "copy_submission": false
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "raw_balanced_accuracy": 0.960678726766934,
+      "tree_count": 10,
+      "seconds": 3.7271981239318848
+    },
+    {
+      "fold": 2,
+      "raw_balanced_accuracy": 0.9636904282045892,
+      "tree_count": 7,
+      "seconds": 3.691102981567383
+    }
+  ],
+  "raw_oof_balanced_accuracy": 0.9621846362729717,
+  "raw_oof_accuracy": 0.9800666666666666,
+  "bias": [
+    -0.065,
+    -0.045000000000000005,
+    0.008
+  ],
+  "tuned_oof_balanced_accuracy": 0.9624356760452365,
+  "tuned_oof_accuracy": 0.9798063492063492,
+  "submission": "artifacts/catboost_pairwise_te_cpu_smoke/submission_catboost_pairwise_te_cpu.csv",
+  "elapsed_seconds": 16.46631121635437,
+  "test_label_counts": {
+    "Low": 159560,
+    "Medium": 100653,
+    "High": 9787
+  }
+}

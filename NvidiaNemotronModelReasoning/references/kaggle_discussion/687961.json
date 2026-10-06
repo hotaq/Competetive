@@ -1,0 +1,436 @@
+{
+  "forumTopic": {
+    "authorId": 1680925,
+    "authorThumbnailName": "1680925-kg.jpg",
+    "authorUserDisplayName": "Tong Hui Kang",
+    "authorUserName": "huikang",
+    "comments": [
+      {
+        "id": 3435598,
+        "postDate": "2026-04-04T13:00:04.610Z",
+        "rawMarkdown": "I can only train with a `μ=1` and a length of 16384 in 1XH200, each step taking ~22s with a gradient cumulative with `B=16`. Are you using packing?\n\ncc: @huikang ",
+        "content": "<p>I can only train with a <code>μ=1</code> and a length of 16384 in 1XH200, each step taking ~22s with a gradient cumulative with <code>B=16</code>. Are you using packing?</p>\n<p>cc: <a href=\"https://www.kaggle.com/huikang\" target=\"_blank\">@huikang</a> </p>",
+        "replies": [
+          {
+            "id": 3435611,
+            "postDate": "2026-04-04T13:17:52.897Z",
+            "rawMarkdown": "There is no point training with a length of 16384 since the limit is 8192.\n\nIf you limit to 8192, you should be able to train with `μ=2` I guess?",
+            "content": "<p>There is no point training with a length of 16384 since the limit is 8192.</p>\n<p>If you limit to 8192, you should be able to train with <code>μ=2</code> I guess?</p>",
+            "replies": [
+              {
+                "id": 3435641,
+                "postDate": "2026-04-04T13:54:14.503Z",
+                "rawMarkdown": "Ah, I mean is  packing with a length of 16k, it equivalent to a mini-batch of 2 x 8192 if your data only contains data with a max length of 8192. What I want to mention is that the mini batch size you mentioned in **Training throughput**, for example 4x or 16x8192, seems to result in OOM (no offload weight or activation), as far as I understand.",
+                "content": "<p>Ah, I mean is  packing with a length of 16k, it equivalent to a mini-batch of 2 x 8192 if your data only contains data with a max length of 8192. What I want to mention is that the mini batch size you mentioned in <strong>Training throughput</strong>, for example 4x or 16x8192, seems to result in OOM (no offload weight or activation), as far as I understand.</p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Nguyen",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/23660183-kg.png?t=2026-02-05-19-17-04",
+                  "url": "/nguyennguyen599",
+                  "tier": "EXPERT",
+                  "id": 23660183,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "canUpvote": true
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 1124,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Nguyen",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/23660183-kg.png?t=2026-02-05-19-17-04",
+                    "url": "/nguyennguyen599",
+                    "userName": "nguyennguyen599",
+                    "tier": "EXPERT",
+                    "id": 23660183,
+                    "profileUrl": "/nguyennguyen599",
+                    "performanceTier": "EXPERT",
+                    "userId": 23660183,
+                    "progressionOptOut": false
+                  },
+                  "intro": "I can provide ~ $1.5k-2k to burn on training. If you already have a good workflow or model checkpoint, feel free to reach out to me."
+                }
+              },
+              {
+                "id": 3435649,
+                "postDate": "2026-04-04T14:08:32.840Z",
+                "rawMarkdown": "Thanks for sharing your experience. I have not proven that any of the configuration works, if it OOMs I think it is good to understand whether is it an implementation issue or is there a theoretical limitation. If there is a theoretical limitation I want to write it down.",
+                "content": "<p>Thanks for sharing your experience. I have not proven that any of the configuration works, if it OOMs I think it is good to understand whether is it an implementation issue or is there a theoretical limitation. If there is a theoretical limitation I want to write it down.</p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Tong Hui Kang",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1680925-kg.jpg",
+                  "url": "/huikang",
+                  "tier": "MASTER",
+                  "id": 1680925,
+                  "progressionOptOut": false
+                },
+                "authorType": "TOPIC",
+                "votes": {
+                  "totalVotes": 1,
+                  "canUpvote": true,
+                  "totalUpvotes": 1
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 423,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "isCollapsed": true,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Tong Hui Kang",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1680925-kg.jpg",
+                    "url": "/huikang",
+                    "userName": "huikang",
+                    "tier": "MASTER",
+                    "id": 1680925,
+                    "profileUrl": "/huikang",
+                    "performanceTier": "MASTER",
+                    "userId": 1680925,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              },
+              {
+                "id": 3435672,
+                "postDate": "2026-04-04T14:37:45.673Z",
+                "rawMarkdown": "| GPU | Max length | peak vram(GB) |\n| --- | --- | --- |\n| H100 | 1x3000 | 78 |\n| H200 | 1x8192 | 104 |\n| H200 | 1x16384 | 138 |\n\nAbove is my exp when train nemotron use megatron, maybe it can help.",
+                "content": "<table>\n<thead>\n<tr>\n<th>GPU</th>\n<th>Max length</th>\n<th>peak vram(GB)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>H100</td>\n<td>1x3000</td>\n<td>78</td>\n</tr>\n<tr>\n<td>H200</td>\n<td>1x8192</td>\n<td>104</td>\n</tr>\n<tr>\n<td>H200</td>\n<td>1x16384</td>\n<td>138</td>\n</tr>\n</tbody>\n</table>\n<p>Above is my exp when train nemotron use megatron, maybe it can help.</p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Nguyen",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/23660183-kg.png?t=2026-02-05-19-17-04",
+                  "url": "/nguyennguyen599",
+                  "tier": "EXPERT",
+                  "id": 23660183,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "totalVotes": 2,
+                  "canUpvote": true,
+                  "totalUpvotes": 2
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 1124,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "isCollapsed": true,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Nguyen",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/23660183-kg.png?t=2026-02-05-19-17-04",
+                    "url": "/nguyennguyen599",
+                    "userName": "nguyennguyen599",
+                    "tier": "EXPERT",
+                    "id": 23660183,
+                    "profileUrl": "/nguyennguyen599",
+                    "performanceTier": "EXPERT",
+                    "userId": 23660183,
+                    "progressionOptOut": false
+                  },
+                  "intro": "I can provide ~ $1.5k-2k to burn on training. If you already have a good workflow or model checkpoint, feel free to reach out to me."
+                }
+              },
+              {
+                "id": 3435676,
+                "postDate": "2026-04-04T14:39:46.293Z",
+                "rawMarkdown": "Probably you can ask Claude Code to break down what is making up the 104GB, and which components is an implementation inefficiency, or is there a theoretical limitation.",
+                "content": "<p>Probably you can ask Claude Code to break down what is making up the 104GB, and which components is an implementation inefficiency, or is there a theoretical limitation.</p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Tong Hui Kang",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1680925-kg.jpg",
+                  "url": "/huikang",
+                  "tier": "MASTER",
+                  "id": 1680925,
+                  "progressionOptOut": false
+                },
+                "authorType": "TOPIC",
+                "votes": {
+                  "canUpvote": true
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 423,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "isCollapsed": true,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Tong Hui Kang",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1680925-kg.jpg",
+                    "url": "/huikang",
+                    "userName": "huikang",
+                    "tier": "MASTER",
+                    "id": 1680925,
+                    "profileUrl": "/huikang",
+                    "performanceTier": "MASTER",
+                    "userId": 1680925,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              }
+            ],
+            "parent": {},
+            "author": {
+              "displayName": "Tong Hui Kang",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1680925-kg.jpg",
+              "url": "/huikang",
+              "tier": "MASTER",
+              "id": 1680925,
+              "progressionOptOut": false
+            },
+            "authorType": "TOPIC",
+            "votes": {
+              "canUpvote": true
+            },
+            "kernelVersion": 0,
+            "competitionRanking": 423,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "teamUpInfo": {
+              "teamLeader": {
+                "displayName": "Tong Hui Kang",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1680925-kg.jpg",
+                "url": "/huikang",
+                "userName": "huikang",
+                "tier": "MASTER",
+                "id": 1680925,
+                "profileUrl": "/huikang",
+                "performanceTier": "MASTER",
+                "userId": 1680925,
+                "progressionOptOut": false
+              },
+              "intro": ""
+            }
+          }
+        ],
+        "parent": {},
+        "author": {
+          "displayName": "Nguyen",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/23660183-kg.png?t=2026-02-05-19-17-04",
+          "url": "/nguyennguyen599",
+          "tier": "EXPERT",
+          "id": 23660183,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "totalVotes": 1,
+          "canUpvote": true,
+          "totalUpvotes": 1
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 1124,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Nguyen",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/23660183-kg.png?t=2026-02-05-19-17-04",
+            "url": "/nguyennguyen599",
+            "userName": "nguyennguyen599",
+            "tier": "EXPERT",
+            "id": 23660183,
+            "profileUrl": "/nguyennguyen599",
+            "performanceTier": "EXPERT",
+            "userId": 23660183,
+            "progressionOptOut": false
+          },
+          "intro": "I can provide ~ $1.5k-2k to burn on training. If you already have a good workflow or model checkpoint, feel free to reach out to me."
+        }
+      },
+      {
+        "id": 3446728,
+        "postDate": "2026-04-22T02:38:41.920Z",
+        "rawMarkdown": "Does the Nemotron model support  flash attention 2? I'm using unsloth/trl for training, but I'm get an unsupported error",
+        "content": "<p>Does the Nemotron model support  flash attention 2? I'm using unsloth/trl for training, but I'm get an unsupported error</p>",
+        "replies": [
+          {
+            "id": 3446735,
+            "postDate": "2026-04-22T02:57:36.123Z",
+            "rawMarkdown": "Good question. The Github PR I cited has strings like `_supports_flash_attn_2 = True`.\n\nWhen I run the training script on Kaggle, it has logs with `FA2 = False`\n\n```\n==((====))==  Unsloth 2026.3.17: Fast Nemotron_H patching. Transformers: 4.57.6.\n   \\\\   /|    NVIDIA RTX PRO 6000 Blackwell Server Edition. Num GPUs = 1. Max memory: 94.971 GB. Platform: Linux.\nO^O/ \\_/ \\    Torch: 2.10.0+cu128. CUDA: 12.0. CUDA Toolkit: 12.8. Triton: 3.6.0\n\\        /    Bfloat16 = TRUE. FA [Xformers = 0.0.35. FA2 = False]\n \"-____-\"     Free license: http://github.com/unslothai/unsloth\n```\n\nIn summary, I am not sure.",
+            "content": "<p>Good question. The Github PR I cited has strings like <code>_supports_flash_attn_2 = True</code>.</p>\n<p>When I run the training script on Kaggle, it has logs with <code>FA2 = False</code></p>\n<pre><code>==((====))==  Unsloth 2026.3.17: Fast Nemotron_H patching. Transformers: 4.57.6.\n   \\\\   /|    NVIDIA RTX PRO 6000 Blackwell Server Edition. Num GPUs = 1. Max memory: 94.971 GB. Platform: Linux.\nO^O/ \\_/ \\    Torch: 2.10.0+cu128. CUDA: 12.0. CUDA Toolkit: 12.8. Triton: 3.6.0\n\\        /    Bfloat16 = TRUE. FA [Xformers = 0.0.35. FA2 = False]\n \"-____-\"     Free license: http://github.com/unslothai/unsloth\n</code></pre>\n<p>In summary, I am not sure.</p>",
+            "replies": [
+              {
+                "id": 3446835,
+                "postDate": "2026-04-22T07:36:31.260Z",
+                "rawMarkdown": "It actually does support flash attention 2.\nFor some reason the native modeling_nemotron_h.py (used when setting `trust_remote_code=True`) in the model directory does not set that flag as opposed to the transformers implementation (used when setting `trust_remote_code=False`).\n\nSince the native implementation has cache issues with transformersv5 anyways and does not use the performance optimizations from the new packed experts implementation (which greatly speeds up training & inference) it makes no sense to use transformersv4 or the implementation that does not have fa2 support enabled anyways.\n\n",
+                "content": "<p>It actually does support flash attention 2.\nFor some reason the native modeling_nemotron_h.py (used when setting <code>trust_remote_code=True</code>) in the model directory does not set that flag as opposed to the transformers implementation (used when setting <code>trust_remote_code=False</code>).</p>\n<p>Since the native implementation has cache issues with transformersv5 anyways and does not use the performance optimizations from the new packed experts implementation (which greatly speeds up training &amp; inference) it makes no sense to use transformersv4 or the implementation that does not have fa2 support enabled anyways.</p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Benni",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/10621062-kg.jpeg?t=2025-07-26-10-43-40",
+                  "url": "/benjaminbrnau",
+                  "tier": "CONTRIBUTOR",
+                  "id": 10621062,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "totalVotes": 2,
+                  "canUpvote": true,
+                  "totalUpvotes": 2
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 890,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Benni",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/10621062-kg.jpeg?t=2025-07-26-10-43-40",
+                    "url": "/benjaminbrnau",
+                    "userName": "benjaminbrnau",
+                    "tier": "CONTRIBUTOR",
+                    "id": 10621062,
+                    "profileUrl": "/benjaminbrnau",
+                    "performanceTier": "CONTRIBUTOR",
+                    "userId": 10621062,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              }
+            ],
+            "parent": {},
+            "author": {
+              "displayName": "Tong Hui Kang",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1680925-kg.jpg",
+              "url": "/huikang",
+              "tier": "MASTER",
+              "id": 1680925,
+              "progressionOptOut": false
+            },
+            "authorType": "TOPIC",
+            "votes": {
+              "canUpvote": true
+            },
+            "kernelVersion": 0,
+            "competitionRanking": 423,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "teamUpInfo": {
+              "teamLeader": {
+                "displayName": "Tong Hui Kang",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1680925-kg.jpg",
+                "url": "/huikang",
+                "userName": "huikang",
+                "tier": "MASTER",
+                "id": 1680925,
+                "profileUrl": "/huikang",
+                "performanceTier": "MASTER",
+                "userId": 1680925,
+                "progressionOptOut": false
+              },
+              "intro": ""
+            }
+          }
+        ],
+        "parent": {},
+        "author": {
+          "displayName": "rin2401",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1283271-kg.jpg",
+          "url": "/rin2401",
+          "tier": "EXPERT",
+          "id": 1283271,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "canUpvote": true
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 231,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "rin2401",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1283271-kg.jpg",
+            "url": "/rin2401",
+            "userName": "rin2401",
+            "tier": "EXPERT",
+            "id": 1283271,
+            "profileUrl": "/rin2401",
+            "performanceTier": "EXPERT",
+            "userId": 1283271,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      }
+    ],
+    "commentSort": "COMMENT_LIST_SORT_BY_HOT",
+    "firstMessage": {
+      "id": 3435428,
+      "postDate": "2026-04-04T06:52:51.353Z",
+      "rawMarkdown": "I want to understand the theoretical limitations when training Nemotron-3-Nano-30B-A3B-BF16 with rank 32 LoRA on length 8192 sequences.\n\nI have not proven that any of the configurations listed here works in practice. I am making my own training implementation, and I want to understand whether my inefficiencies are avoidable with better implementation. Please help me check if I have missed any theoretical limits, thanks!\n\nThis table calculates how much memory is needed to train Nemotron-3-Nano-30B-A3B-BF16 with different microbatch sizes (μ). Larger microbatch sizes can improve hardware utilization and speed up training, but only if they fit in memory [1].\n\n| Component | Formula | μ=1 | μ=4 | μ=16 | μ=64 |\n|---|---|---|---|---|---|\n| Base model weights (BF16) | W × 2 | 63.6 GB | 63.6 GB | 63.6 GB | 63.6 GB |\n| LoRA adapter weights (FP32) | P × 4 | 3.5 GB | 3.5 GB | 3.5 GB | 3.5 GB |\n| LoRA gradients (FP32) | P × 4 | 3.5 GB | 3.5 GB | 3.5 GB | 3.5 GB |\n| Optimizer m + v (FP32) | P × 8 | 7.1 GB | 7.1 GB | 7.1 GB | 7.1 GB |\n| | | | | | |\n| CUDA context & buffers | ~3 GB | 3.0 GB | 3.0 GB | 3.0 GB | 3.0 GB |\n| | | | | | |\n| Checkpointed layer inputs | L × μ × S × H × 2 | 2.3 GB | 9.2 GB | 36.6 GB | 146.6 GB |\n| Peak intra-layer intermediates | μ × S × D × 2 | 331 MB | 1.3 GB | 5.3 GB | 21.2 GB |\n| Backward intra-layer gradient | μ × S × H × 2 | 44 MB | 176 MB | 704 MB | 2.8 GB |\n| | | | | | |\n| Logits — unchunked | μ × S × V × 2 | 2.1 GB | 8.6 GB | 34.4 GB | 137.4 GB |\n| **TOTAL (unchunked logits)** | | **85.6 GB** | **100.1 GB** | **157.8 GB** | **388.8 GB** |\n| | | | | | |\n| Logits — fused CE | μ × S × 4 | 32 KB | 128 KB | 512 KB | 2 MB |\n| **TOTAL (fused CE)** | | **83.5 GB** | **91.5 GB** | **123.5 GB** | **251.4 GB** |\n\n## LoRA parameters\n\n| Layer type | Weight name | Shape | per adapter | × count | typical | possible |\n|---|---|---|---|---|---|---|\n| Attention | q_proj | [2688, 4096] | 217,088 | × 6 | 1.30M | 1.30M |\n| | k_proj | [2688, 256] | 94,208 | × 6 | 565,248 | 565,248 |\n| | v_proj | [2688, 256] | 94,208 | × 6 | 565,248 | 565,248 |\n| | o_proj | [4096, 2688] | 217,088 | × 6 | 1.30M | 1.30M |\n| | SUBTOTAL | | | | **3.74M** | **3.74M** |\n| Mamba-2 | in_proj | [2688, 12864] | 497,664 | × 23 | 11.45M | 11.45M |\n| | out_proj | [5376, 2688] | 258,048 | × 23 | 5.94M | 5.94M |\n| | conv1d | [5376, 1, 4] | — | × 23 | — | — |\n| | dt_bias | [64] | — | × 23 | — | — |\n| | A_log | [64] | — | × 23 | — | — |\n| | D | [64] | — | × 23 | — | — |\n| | SUBTOTAL | | | | **17.38M** | **17.38M** |\n| MoE routed | experts.{j}.fc1 | [2688, 1856] | 145,408 | × 2944 | 428.08M | 428.08M |\n| | experts.{j}.fc2 | [1856, 2688] | 145,408 | × 2944 | 428.08M | 428.08M |\n| | SUBTOTAL | | | | **856.16M** | **856.16M** |\n| MoE shared | shared_experts.fc1 * | [2688, 3712] | 204,800 | × 23 | — | 4.71M |\n| | shared_experts.fc2 * | [3712, 2688] | 204,800 | × 23 | — | 4.71M |\n| | SUBTOTAL | | | | **—** | **9.42M** |\n| MoE router | gate | [2688, 128] | 90,112 | × 23 | — | 2.07M |\n| Output | lm_head | [2688, 131072] | 4,280,320 | × 1 | — | 4.28M |\n| Embedding | embed_tokens | [131072, 2688] | 4,280,320 | × 1 | — | 4.28M |\n| All layers | norm (RMSNorm) | [2688] | — | × 104 | — | — |\n| **TOTAL** | | | | | **877.28M** | **897.33M** |\n| **FP32 size** | | | | | **3.51 GB** | **3.59 GB** |\n\n## Training throughput\n\nThe forward pass is 3.5B active parameters × 8192 sequence length × 2 = 57 TFLOP. With gradient checkpointing, the backward pass is 3× the forward (recompute forward, compute activation gradients, compute weight gradients) = 171 TFLOP [5]. Each forward-backward pass requires 228 TFLOP per sample.\n\n| GPU | BF16 TFLOPS | HBM bandwidth | Critical arithmetic intensity (FLOPs/byte) |\n|---|---|---|---|\n| **H200** | 990 | 4.8 TB/s | 206 |\n| **RTX Pro 6000** | 252 | 1.15 TB/s | 219 |\n\nIf training achieves 100% compute efficiency, it will be able to process one sequence in 228 / 990 = 0.23 seconds on a H200 or 228 / 252 0.90 seconds on a RTX Pro 6000.\n\nHowever, you do not get 100% compute efficiency. I am still understanding why. Papers usually report a MFU of 30% - 40%.\n\n## Glossary\n\n| Symbol | Meaning | Value |\n|---|---|---|\n| μ | microbatch size | samples per forward/backward; B = μ × grad accumulation steps |\n| S | sequence length | 8,192 tokens per sample |\n| V | vocabulary size | 131,072 possible output tokens |\n| H | hidden dimension | 2,688 |\n| L | number of layers | 52 (23 Mamba-2 + 23 MoE + 6 GQA attention) |\n| R | LoRA rank | 32 |\n| B | global batch size | 64 |\n| W | base model params | 31.8B |\n| P | LoRA trainable params | 886.7M |\n| D | MoE intra-layer width | 20,224 = 6 (active experts per token) × 1856 (expert FFN intermediate) + 3712 (shared expert intermediate) + 2×2688 |\n\n## Observations\n\n- Notebooks on Kaggle has access to GPU RTX Pro 6000, which has 96GB VRAM. Apparently it can barely fit a microbatch size of 1 or 4 [2].\n- unsloth uses fused cross entropy to avoid the memory requirement for storing the logits for the microbatch [3].\n- Adapter weights are FP32 (3GB), even as the model is in BF16\n- Nemotron supports Flash Attention, which means it does not require quadratic memory for the attention mechanism [4].\n\n## References\n\n- [1] https://unsloth.ai/docs/get-started/fine-tuning-llms-guide/lora-hyperparameters-guide#effective-batch-size\n- [2] https://unsloth.ai/docs/models/nemotron-3#fine-tuning-nemotron-3-and-rl\n- [3] https://unsloth.ai/docs/blog/500k-context-length-fine-tuning#unsloth-loss-refactoring-chunk-and-fuse\n- [4] https://github.com/huggingface/transformers/pull/44390/changes\n- [5] https://jax-ml.github.io/scaling-book/transformers/ — training FLOPs: 6N without checkpointing, 8N with; arithmetic intensity and roofline model\n- [6] Gu & Dao, \"Mamba: Linear-Time Sequence Modeling with Selective State Spaces\" (2023), https://arxiv.org/abs/2312.00752 — \"most operations (except matrix multiplication) are bounded by memory bandwidth\"; hardware-aware scan fuses in SRAM\n- [7] Gale et al., \"MegaBlocks: Efficient Sparse Training with Mixture-of-Experts\" (2022), https://arxiv.org/abs/2211.15841 — Megatron-LM sustains 21–48% of peak; MoE padding overhead forces 2×–8× smaller microbatches\n- [8] https://github.com/stas00/ml-engineering/blob/master/training/performance/README.md — individual matmul kernels achieve 72–77% of peak; end-to-end single-GPU training achieves 8–20% MFU due to non-matmul overhead between kernels\n",
+      "content": "<p>I want to understand the theoretical limitations when training Nemotron-3-Nano-30B-A3B-BF16 with rank 32 LoRA on length 8192 sequences.</p>\n<p>I have not proven that any of the configurations listed here works in practice. I am making my own training implementation, and I want to understand whether my inefficiencies are avoidable with better implementation. Please help me check if I have missed any theoretical limits, thanks!</p>\n<p>This table calculates how much memory is needed to train Nemotron-3-Nano-30B-A3B-BF16 with different microbatch sizes (μ). Larger microbatch sizes can improve hardware utilization and speed up training, but only if they fit in memory [1].</p>\n<table>\n<thead>\n<tr>\n<th>Component</th>\n<th>Formula</th>\n<th>μ=1</th>\n<th>μ=4</th>\n<th>μ=16</th>\n<th>μ=64</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Base model weights (BF16)</td>\n<td>W × 2</td>\n<td>63.6 GB</td>\n<td>63.6 GB</td>\n<td>63.6 GB</td>\n<td>63.6 GB</td>\n</tr>\n<tr>\n<td>LoRA adapter weights (FP32)</td>\n<td>P × 4</td>\n<td>3.5 GB</td>\n<td>3.5 GB</td>\n<td>3.5 GB</td>\n<td>3.5 GB</td>\n</tr>\n<tr>\n<td>LoRA gradients (FP32)</td>\n<td>P × 4</td>\n<td>3.5 GB</td>\n<td>3.5 GB</td>\n<td>3.5 GB</td>\n<td>3.5 GB</td>\n</tr>\n<tr>\n<td>Optimizer m + v (FP32)</td>\n<td>P × 8</td>\n<td>7.1 GB</td>\n<td>7.1 GB</td>\n<td>7.1 GB</td>\n<td>7.1 GB</td>\n</tr>\n<tr>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>CUDA context &amp; buffers</td>\n<td>~3 GB</td>\n<td>3.0 GB</td>\n<td>3.0 GB</td>\n<td>3.0 GB</td>\n<td>3.0 GB</td>\n</tr>\n<tr>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>Checkpointed layer inputs</td>\n<td>L × μ × S × H × 2</td>\n<td>2.3 GB</td>\n<td>9.2 GB</td>\n<td>36.6 GB</td>\n<td>146.6 GB</td>\n</tr>\n<tr>\n<td>Peak intra-layer intermediates</td>\n<td>μ × S × D × 2</td>\n<td>331 MB</td>\n<td>1.3 GB</td>\n<td>5.3 GB</td>\n<td>21.2 GB</td>\n</tr>\n<tr>\n<td>Backward intra-layer gradient</td>\n<td>μ × S × H × 2</td>\n<td>44 MB</td>\n<td>176 MB</td>\n<td>704 MB</td>\n<td>2.8 GB</td>\n</tr>\n<tr>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>Logits — unchunked</td>\n<td>μ × S × V × 2</td>\n<td>2.1 GB</td>\n<td>8.6 GB</td>\n<td>34.4 GB</td>\n<td>137.4 GB</td>\n</tr>\n<tr>\n<td><strong>TOTAL (unchunked logits)</strong></td>\n<td></td>\n<td><strong>85.6 GB</strong></td>\n<td><strong>100.1 GB</strong></td>\n<td><strong>157.8 GB</strong></td>\n<td><strong>388.8 GB</strong></td>\n</tr>\n<tr>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>Logits — fused CE</td>\n<td>μ × S × 4</td>\n<td>32 KB</td>\n<td>128 KB</td>\n<td>512 KB</td>\n<td>2 MB</td>\n</tr>\n<tr>\n<td><strong>TOTAL (fused CE)</strong></td>\n<td></td>\n<td><strong>83.5 GB</strong></td>\n<td><strong>91.5 GB</strong></td>\n<td><strong>123.5 GB</strong></td>\n<td><strong>251.4 GB</strong></td>\n</tr>\n</tbody>\n</table>\n<h2>LoRA parameters</h2>\n<table>\n<thead>\n<tr>\n<th>Layer type</th>\n<th>Weight name</th>\n<th>Shape</th>\n<th>per adapter</th>\n<th>× count</th>\n<th>typical</th>\n<th>possible</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Attention</td>\n<td>q_proj</td>\n<td>[2688, 4096]</td>\n<td>217,088</td>\n<td>× 6</td>\n<td>1.30M</td>\n<td>1.30M</td>\n</tr>\n<tr>\n<td></td>\n<td>k_proj</td>\n<td>[2688, 256]</td>\n<td>94,208</td>\n<td>× 6</td>\n<td>565,248</td>\n<td>565,248</td>\n</tr>\n<tr>\n<td></td>\n<td>v_proj</td>\n<td>[2688, 256]</td>\n<td>94,208</td>\n<td>× 6</td>\n<td>565,248</td>\n<td>565,248</td>\n</tr>\n<tr>\n<td></td>\n<td>o_proj</td>\n<td>[4096, 2688]</td>\n<td>217,088</td>\n<td>× 6</td>\n<td>1.30M</td>\n<td>1.30M</td>\n</tr>\n<tr>\n<td></td>\n<td>SUBTOTAL</td>\n<td></td>\n<td></td>\n<td></td>\n<td><strong>3.74M</strong></td>\n<td><strong>3.74M</strong></td>\n</tr>\n<tr>\n<td>Mamba-2</td>\n<td>in_proj</td>\n<td>[2688, 12864]</td>\n<td>497,664</td>\n<td>× 23</td>\n<td>11.45M</td>\n<td>11.45M</td>\n</tr>\n<tr>\n<td></td>\n<td>out_proj</td>\n<td>[5376, 2688]</td>\n<td>258,048</td>\n<td>× 23</td>\n<td>5.94M</td>\n<td>5.94M</td>\n</tr>\n<tr>\n<td></td>\n<td>conv1d</td>\n<td>[5376, 1, 4]</td>\n<td>—</td>\n<td>× 23</td>\n<td>—</td>\n<td>—</td>\n</tr>\n<tr>\n<td></td>\n<td>dt_bias</td>\n<td>[64]</td>\n<td>—</td>\n<td>× 23</td>\n<td>—</td>\n<td>—</td>\n</tr>\n<tr>\n<td></td>\n<td>A_log</td>\n<td>[64]</td>\n<td>—</td>\n<td>× 23</td>\n<td>—</td>\n<td>—</td>\n</tr>\n<tr>\n<td></td>\n<td>D</td>\n<td>[64]</td>\n<td>—</td>\n<td>× 23</td>\n<td>—</td>\n<td>—</td>\n</tr>\n<tr>\n<td></td>\n<td>SUBTOTAL</td>\n<td></td>\n<td></td>\n<td></td>\n<td><strong>17.38M</strong></td>\n<td><strong>17.38M</strong></td>\n</tr>\n<tr>\n<td>MoE routed</td>\n<td>experts.{j}.fc1</td>\n<td>[2688, 1856]</td>\n<td>145,408</td>\n<td>× 2944</td>\n<td>428.08M</td>\n<td>428.08M</td>\n</tr>\n<tr>\n<td></td>\n<td>experts.{j}.fc2</td>\n<td>[1856, 2688]</td>\n<td>145,408</td>\n<td>× 2944</td>\n<td>428.08M</td>\n<td>428.08M</td>\n</tr>\n<tr>\n<td></td>\n<td>SUBTOTAL</td>\n<td></td>\n<td></td>\n<td></td>\n<td><strong>856.16M</strong></td>\n<td><strong>856.16M</strong></td>\n</tr>\n<tr>\n<td>MoE shared</td>\n<td>shared_experts.fc1 *</td>\n<td>[2688, 3712]</td>\n<td>204,800</td>\n<td>× 23</td>\n<td>—</td>\n<td>4.71M</td>\n</tr>\n<tr>\n<td></td>\n<td>shared_experts.fc2 *</td>\n<td>[3712, 2688]</td>\n<td>204,800</td>\n<td>× 23</td>\n<td>—</td>\n<td>4.71M</td>\n</tr>\n<tr>\n<td></td>\n<td>SUBTOTAL</td>\n<td></td>\n<td></td>\n<td></td>\n<td><strong>—</strong></td>\n<td><strong>9.42M</strong></td>\n</tr>\n<tr>\n<td>MoE router</td>\n<td>gate</td>\n<td>[2688, 128]</td>\n<td>90,112</td>\n<td>× 23</td>\n<td>—</td>\n<td>2.07M</td>\n</tr>\n<tr>\n<td>Output</td>\n<td>lm_head</td>\n<td>[2688, 131072]</td>\n<td>4,280,320</td>\n<td>× 1</td>\n<td>—</td>\n<td>4.28M</td>\n</tr>\n<tr>\n<td>Embedding</td>\n<td>embed_tokens</td>\n<td>[131072, 2688]</td>\n<td>4,280,320</td>\n<td>× 1</td>\n<td>—</td>\n<td>4.28M</td>\n</tr>\n<tr>\n<td>All layers</td>\n<td>norm (RMSNorm)</td>\n<td>[2688]</td>\n<td>—</td>\n<td>× 104</td>\n<td>—</td>\n<td>—</td>\n</tr>\n<tr>\n<td><strong>TOTAL</strong></td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td><strong>877.28M</strong></td>\n<td><strong>897.33M</strong></td>\n</tr>\n<tr>\n<td><strong>FP32 size</strong></td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td><strong>3.51 GB</strong></td>\n<td><strong>3.59 GB</strong></td>\n</tr>\n</tbody>\n</table>\n<h2>Training throughput</h2>\n<p>The forward pass is 3.5B active parameters × 8192 sequence length × 2 = 57 TFLOP. With gradient checkpointing, the backward pass is 3× the forward (recompute forward, compute activation gradients, compute weight gradients) = 171 TFLOP [5]. Each forward-backward pass requires 228 TFLOP per sample.</p>\n<table>\n<thead>\n<tr>\n<th>GPU</th>\n<th>BF16 TFLOPS</th>\n<th>HBM bandwidth</th>\n<th>Critical arithmetic intensity (FLOPs/byte)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>H200</strong></td>\n<td>990</td>\n<td>4.8 TB/s</td>\n<td>206</td>\n</tr>\n<tr>\n<td><strong>RTX Pro 6000</strong></td>\n<td>252</td>\n<td>1.15 TB/s</td>\n<td>219</td>\n</tr>\n</tbody>\n</table>\n<p>If training achieves 100% compute efficiency, it will be able to process one sequence in 228 / 990 = 0.23 seconds on a H200 or 228 / 252 0.90 seconds on a RTX Pro 6000.</p>\n<p>However, you do not get 100% compute efficiency. I am still understanding why. Papers usually report a MFU of 30% - 40%.</p>\n<h2>Glossary</h2>\n<table>\n<thead>\n<tr>\n<th>Symbol</th>\n<th>Meaning</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>μ</td>\n<td>microbatch size</td>\n<td>samples per forward/backward; B = μ × grad accumulation steps</td>\n</tr>\n<tr>\n<td>S</td>\n<td>sequence length</td>\n<td>8,192 tokens per sample</td>\n</tr>\n<tr>\n<td>V</td>\n<td>vocabulary size</td>\n<td>131,072 possible output tokens</td>\n</tr>\n<tr>\n<td>H</td>\n<td>hidden dimension</td>\n<td>2,688</td>\n</tr>\n<tr>\n<td>L</td>\n<td>number of layers</td>\n<td>52 (23 Mamba-2 + 23 MoE + 6 GQA attention)</td>\n</tr>\n<tr>\n<td>R</td>\n<td>LoRA rank</td>\n<td>32</td>\n</tr>\n<tr>\n<td>B</td>\n<td>global batch size</td>\n<td>64</td>\n</tr>\n<tr>\n<td>W</td>\n<td>base model params</td>\n<td>31.8B</td>\n</tr>\n<tr>\n<td>P</td>\n<td>LoRA trainable params</td>\n<td>886.7M</td>\n</tr>\n<tr>\n<td>D</td>\n<td>MoE intra-layer width</td>\n<td>20,224 = 6 (active experts per token) × 1856 (expert FFN intermediate) + 3712 (shared expert intermediate) + 2×2688</td>\n</tr>\n</tbody>\n</table>\n<h2>Observations</h2>\n<ul>\n<li>Notebooks on Kaggle has access to GPU RTX Pro 6000, which has 96GB VRAM. Apparently it can barely fit a microbatch size of 1 or 4 [2].</li>\n<li>unsloth uses fused cross entropy to avoid the memory requirement for storing the logits for the microbatch [3].</li>\n<li>Adapter weights are FP32 (3GB), even as the model is in BF16</li>\n<li>Nemotron supports Flash Attention, which means it does not require quadratic memory for the attention mechanism [4].</li>\n</ul>\n<h2>References</h2>\n<ul>\n<li>[1] <a href=\"https://unsloth.ai/docs/get-started/fine-tuning-llms-guide/lora-hyperparameters-guide#effective-batch-size\" target=\"_blank\">https://unsloth.ai/docs/get-started/fine-tuning-llms-guide/lora-hyperparameters-guide#effective-batch-size</a></li>\n<li>[2] <a href=\"https://unsloth.ai/docs/models/nemotron-3#fine-tuning-nemotron-3-and-rl\" target=\"_blank\">https://unsloth.ai/docs/models/nemotron-3#fine-tuning-nemotron-3-and-rl</a></li>\n<li>[3] <a href=\"https://unsloth.ai/docs/blog/500k-context-length-fine-tuning#unsloth-loss-refactoring-chunk-and-fuse\" target=\"_blank\">https://unsloth.ai/docs/blog/500k-context-length-fine-tuning#unsloth-loss-refactoring-chunk-and-fuse</a></li>\n<li>[4] <a href=\"https://github.com/huggingface/transformers/pull/44390/changes\" target=\"_blank\">https://github.com/huggingface/transformers/pull/44390/changes</a></li>\n<li>[5] <a href=\"https://jax-ml.github.io/scaling-book/transformers/\" target=\"_blank\">https://jax-ml.github.io/scaling-book/transformers/</a> — training FLOPs: 6N without checkpointing, 8N with; arithmetic intensity and roofline model</li>\n<li>[6] Gu &amp; Dao, \"Mamba: Linear-Time Sequence Modeling with Selective State Spaces\" (2023), <a href=\"https://arxiv.org/abs/2312.00752\" target=\"_blank\">https://arxiv.org/abs/2312.00752</a> — \"most operations (except matrix multiplication) are bounded by memory bandwidth\"; hardware-aware scan fuses in SRAM</li>\n<li>[7] Gale et al., \"MegaBlocks: Efficient Sparse Training with Mixture-of-Experts\" (2022), <a href=\"https://arxiv.org/abs/2211.15841\" target=\"_blank\">https://arxiv.org/abs/2211.15841</a> — Megatron-LM sustains 21–48% of peak; MoE padding overhead forces 2×–8× smaller microbatches</li>\n<li>[8] <a href=\"https://github.com/stas00/ml-engineering/blob/master/training/performance/README.md\" target=\"_blank\">https://github.com/stas00/ml-engineering/blob/master/training/performance/README.md</a> — individual matmul kernels achieve 72–77% of peak; end-to-end single-GPU training achieves 8–20% MFU due to non-matmul overhead between kernels</li>\n</ul>",
+      "parent": {},
+      "author": {
+        "displayName": "Tong Hui Kang",
+        "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1680925-kg.jpg",
+        "url": "/huikang",
+        "tier": "MASTER",
+        "id": 1680925,
+        "progressionOptOut": false
+      },
+      "authorType": "TOPIC",
+      "votes": {
+        "totalVotes": 26,
+        "canUpvote": true,
+        "totalUpvotes": 28
+      },
+      "kernelVersion": 0,
+      "competitionRanking": 423,
+      "feedbackTrackingData": {},
+      "isThankYou": false,
+      "reactions": [
+        {
+          "emoji": "YAY",
+          "featuredUserNames": [
+            "rin2401",
+            "adaluvu",
+            "russcore"
+          ],
+          "userCount": 3
+        }
+      ],
+      "teamUpInfo": {
+        "teamLeader": {
+          "displayName": "Tong Hui Kang",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1680925-kg.jpg",
+          "url": "/huikang",
+          "userName": "huikang",
+          "tier": "MASTER",
+          "id": 1680925,
+          "profileUrl": "/huikang",
+          "performanceTier": "MASTER",
+          "userId": 1680925,
+          "progressionOptOut": false
+        },
+        "intro": ""
+      }
+    },
+    "firstMessageId": 3435428,
+    "forumId": 10085877,
+    "forumName": "NVIDIA Nemotron Model Reasoning Challenge",
+    "id": 687961,
+    "name": "Training Nemotron-3-Nano-30B-A3B-BF16 with rank 32 LoRA on length 8192 sequences",
+    "parentName": "nvidia-nemotron-model-reasoning-challenge",
+    "parentUrl": "/competitions/nvidia-nemotron-model-reasoning-challenge",
+    "postDate": "2026-04-04T06:52:51.352691800Z",
+    "totalVotes": 26,
+    "url": "/competitions/nvidia-nemotron-model-reasoning-challenge/discussion/687961",
+    "totalMessages": 9,
+    "authorPerformanceTier": "MASTER",
+    "authorProgressionOptOut": false
+  }
+}

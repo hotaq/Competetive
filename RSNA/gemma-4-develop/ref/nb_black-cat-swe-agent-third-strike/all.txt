@@ -1,0 +1,311 @@
+# Hello Kaggle Community! 👋
+# 🐈‍⬛ Black Cat SWE Agent | Analyzer Challenger
+
+**Objective.** Beat our **0.08 public resolution-rate anchor** (the Compact Challenger) by combining it with what the three highest-scoring public notebooks have in common. Every change below is tied to a published observation. None of them has been measured in isolation, so the score will show the effect of the whole package.
+
+| Public notebook | Score | What we adopt |
+|---|---|---|
+| [GEMMA: EDA, Baseline for a start](https://www.kaggle.com/code/romanrozen/gemma-eda-baseline-for-a-start-lb-top-1) by romanrozen | **0.12** | Coder + read-only `code_analyzer` sub-agent; fixed LOCATION / ROOT CAUSE / FIX PLAN answer format; sampling 0.2 / 0.95 / top-k 40 |
+| [Gemma 4 Walkthrough & First Submission](https://www.kaggle.com/code/zhukovoleksiy/gemma-4-walkthrough-first-submission) by zhukovoleksiy | 0.10 | Sandbox facts read from the released harness: no `rg`, output keeps only its *first* 5,000 characters, file tools cannot write to /tmp, `search_similar_code` returns uncapped class bodies, `{problem_description}` state injection, thinking off |
+| [Gemma 4 Developer Agent Submission](https://www.kaggle.com/code/nihilisticneuralnet/0-10-gemma-4-developer-agent-submission) by nihilisticneuralnet | 0.10 | A bounded per-task budget (the notebook ships 4.5 min / 40 calls); one combined compile → targeted-test command with the harness's own pytest flags |
+| 🐈‍⬛ Black Cat Compact Challenger (ours) | 0.08 | Kept as `anchor_submission.zip`; its bounded-budget discipline stays |
+
+**Challenger design:** `code_analyzer` localizes inside its own context → the coder confirms, reproduces in /tmp, edits, and runs one compile-and-test command → `git diff` review → explicit `submit_patch()`.
+
+Thank you to romanrozen, zhukovoleksiy and nihilisticneuralnet for publishing their work. If this notebook helps you, please upvote theirs too.
+
+=====MD=====
+## 🧪 What changes against the 0.08 anchor
+
+| Area | 0.08 anchor | Challenger | Why |
+|---|---|---|---|
+| Architecture | One agent does everything | Coder + read-only `code_analyzer` (`agent_tool`, `skip_summarization: true`) | Both 0.12 and 0.10 (zhukovoleksiy v2) use it. The analyzer's reads stay in its own session, so the coder's 32k context only receives a ≤200-word report |
+| Issue hand-off | n/a | Analyzer instruction ends with `{problem_description?}`; the coder sends a one-sentence request | ADK copies session state into `AgentTool` sessions (checked in the current adk-python source). The optional `?` form can never raise `KeyError` |
+| Search command | `rg -n` first, `grep -Rn` fallback | `git grep -n` | `rg` is not installed in the sandbox, so the first search call was wasted |
+| Scratch files | "under /tmp" (tool not specified) | Heredoc through `run_command` | File tools only reach /workspace |
+| Long outputs | Read directly | `> /tmp/t1.log 2>&1; tail -n 25` | `run_command` keeps the first 5,000 characters, while pytest prints its verdict last |
+| `search_similar_code` | Allowed with a symbol name | Registered, but forbidden by the prompt; not given to the analyzer | Results include full class bodies (100k+ characters): one call can overflow the context and lose the task |
+| Output ceiling | 8,192 tokens | 4,096 tokens, thinking explicitly off | vLLM rejects prompts longer than 32,768 − `max_output_tokens`, so this adds about 4k tokens of trajectory room |
+| Sampling | T 0.15, top-p 0.90 | T 0.2, top-p 0.95, top-k 40 (analyzer T 0.1) | The 0.12 configuration |
+| Budget | 4 min · 24 calls · 40 turns · 60 s/command | **5 min · 40 calls · 100 turns · 120 s/command** | The analyzer shares the budget; the 0.10 notebook by nihilisticneuralnet ships 4.5 min / 40 calls. The 120 s cap leaves time for slow targeted tests while bounding runaway commands |
+| Verification | Separate compile, repro and test calls | One `py_compile && pytest -q -x -p no:anyio -o timeout=0` call | Same flags as the harness's hidden-test run; saves tool calls |
+
+**Compute note.** Tasks run one after another under a 12-hour limit that includes sandbox setup. If every one of about 120 hidden tasks hit the 5-minute cap, total agent time alone would be about 10 hours. The 0.12 notebook ran with the default 60-minute cap and finished, so most tasks end well before any cap.
+
+=====MD=====
+## 🛡️ Validator and packaging
+
+The validator checks each archive against the rules we can verify offline: safe relative paths and allowed file types; YAML that parses; every `!include` and `config_path` resolving inside the bundle; one model alias; registered tools only; `submit_patch` on the root agent; read-only sub-agents; and budget ceilings. It also checks two failure modes that only surface at run time:
+
+* **Template placeholders.** ADK replaces `{identifier}` in instructions from session state and raises `KeyError` for unknown names. The only placeholder allowed here is `problem_description`.
+* **Commands that do not exist.** No prompt may tell the agent to run `rg`.
+
+Archives are deterministic, so identical content gives an identical SHA-256. The anchor is checked against the hash of the archive that scored 0.08.
+
+=====MD=====
+## 🔬 Optional official harness check
+
+When the competition's harness wheels are attached (the competition data's `wheels/` folder, or the public [wheelhouse dataset](https://www.kaggle.com/datasets/metric/gemma-4-developer-agent-wheelhouse)), this cell installs them offline and runs the organizers' `validate_directory` and `compile_submission` on the challenger and the anchor. It uses the same stand-in tool signatures as zhukovoleksiy's notebook. Compiling only checks names and schemas; no model is called.
+
+**Safety switch:** if the official compiler rejects the challenger but accepts the anchor, `submission.zip` is replaced by the anchor, so a packaging mistake cannot waste the day's submission. If the harness cannot be installed, the offline validator above stands and the challenger stays selected.
+
+=====MD=====
+## 🐈‍⬛ Handoff
+
+| File | Role |
+|---|---|
+| `submission.zip` | **The Analyzer Challenger.** It is replaced by the anchor only if the official compiler rejects it |
+| `anchor_submission.zip` | The scored 0.08 Compact Challenger, verified byte for byte |
+| `fallback_submission.zip` | Minimal single-agent bundle for emergencies |
+| `experiment_card.json` | Hashes, budget, sampling and the official-check verdicts for this run |
+
+**Version log**
+
+| Version | Design | Public score |
+|---|---|---|
+| First Strike | Single agent, default 60-minute budget | 0.06 |
+| Second Strike v3 | Single agent, 16k output, thinking HIGH | Exceeded allowed compute |
+| Compact Challenger | Single agent, 4 min / 24 calls | 0.08 |
+| **Analyzer Challenger** | Coder + analyzer, 5 min / 40 calls, harness-fact prompts | *pending* |
+
+**Promotion rule:** keep the challenger only if its completed score beats 0.08; otherwise resubmit `anchor_submission.zip`. The public split is small (about 60 tasks, each worth roughly 0.02), so a one-task difference is within noise.
+
+#####CODE#####
+from pathlib import Path
+from collections import Counter
+import hashlib, json, platform, re, zipfile
+import yaml
+
+WORKING = Path('/kaggle/working') if platform.system() == 'Linux' and Path('/kaggle/working').exists() else Path.cwd()
+WORKING.mkdir(parents=True, exist_ok=True)
+print(r"""
+ /\_/\\
+( o.o )  BLACK CAT // ANALYZER CHALLENGER
+ > ^ <   analyze -> confirm -> reproduce -> patch -> test -> submit
+         Chief Whisker Officer: "One cat sniffs, the other one pounces."
+""")
+print(f'Python {platform.python_version()} | output: {WORKING}')
+
+candidates = [Path.cwd() / 'tasks.jsonl', Path('/kaggle/input/competitions/gemma-4-developer-agent/tasks.jsonl'),
+              Path('/kaggle/input/gemma-4-developer-agent/tasks.jsonl')]
+input_root = Path('/kaggle/input')
+if input_root.exists():
+    candidates.extend(input_root.glob('**/tasks.jsonl'))
+task_path = next((p for p in candidates if p.is_file()), None)
+if task_path:
+    with task_path.open(encoding='utf-8') as handle:
+        tasks = [json.loads(line) for line in handle if line.strip()]
+    counts = Counter(row['repo'] for row in tasks)
+    one_file = sum(len(set(re.findall(r'^\+\+\+ b/(.+)$', row.get('patch', ''), re.M))) == 1 for row in tasks)
+    pr_style = sum(bool(re.search(r'## (Type of changes|Checklist|Description)', row['problem_statement'])) for row in tasks)
+    chars = sorted(len(row['problem_statement']) for row in tasks)
+    p50, p90 = chars[len(chars) // 2], chars[int(len(chars) * 0.9)]
+    print(f'Public issues: {len(tasks)} | repositories: {len(counts)} | one-file fixes: {one_file}/{len(tasks)}')
+    print(f'Pull-request-template statements: {pr_style}/{len(tasks)} -> both prompts say to skip template text')
+    print(f'Issue length p50/p90/max: {p50:,}/{p90:,}/{chars[-1]:,} chars '
+          f'(~{p50 // 4:,}/{p90 // 4:,}/{chars[-1] // 4:,} tokens injected into the analyzer instruction)')
+    try:
+        import matplotlib.pyplot as plt
+        fig, ax = plt.subplots(figsize=(7, 2.5), facecolor='#0b1220')
+        ax.set_facecolor('#111c2e')
+        names, values = zip(*sorted(counts.items(), key=lambda item: item[1]))
+        ax.barh(names, values, color='#39bdf8')
+        ax.set_title('Public development issues by repository', color='white')
+        ax.tick_params(colors='white')
+        for spine in ax.spines.values(): spine.set_visible(False)
+        fig.tight_layout()
+        plt.show()
+    except ImportError:
+        print('Matplotlib unavailable; continuing without the optional chart.')
+else:
+    print('No public task index attached; archive generation remains available.')
+
+# ----- cell -----
+CHALLENGER = {'agent.yaml': 'name: black_cat_coder\nmodel: gemma-4-31b-it-qat-w4a16-ct\ndescription: Fixes one repository issue with a small, verified source patch.\ninstruction: !include prompts/system.md\ntools:\n  - run_command\n  - read_file\n  - edit_file\n  - write_file\n  - get_status\n  - submit_patch\n  - get_code_neighbors\n  - search_similar_code\n  - get_code_subgraph\n  - agent_tool:\n      config_path: sub_agents/code_analyzer.yaml\n      skip_summarization: true\ngenerate_content_config: !include configs/sampling.yaml\n', 'sub_agents/code_analyzer.yaml': 'name: code_analyzer\nmodel: gemma-4-31b-it-qat-w4a16-ct\ndescription: Read-only code navigator. It already knows the issue; returns the exact fix location, root cause, fix plan and closest tests.\ninstruction: !include ../prompts/analyzer.md\ntools:\n  - run_command\n  - read_file\n  - get_code_neighbors\n  - get_code_subgraph\ngenerate_content_config:\n  temperature: 0.1\n  top_p: 0.95\n  top_k: 40\n  max_output_tokens: 2048\n  thinking_config:\n    include_thoughts: false\n', 'configs/sampling.yaml': 'temperature: 0.2\ntop_p: 0.95\ntop_k: 40\nmax_output_tokens: 4096\nthinking_config:\n  include_thoughts: false\n', 'prompts/system.md': 'You are Black Cat, an autonomous software engineer fixing one issue in the Python repository at /workspace. Nobody will answer questions. Work with your tools until a fix is in place, then call `submit_patch()`.\n\n## How you are graded\n- Hidden tests run against your source changes in a fresh checkout; the task passes only if pytest exits 0. A careful best-effort fix beats an empty patch.\n- If time or tool calls run out, the working tree is graded as it is. Never revert a plausible fix.\n- Test files, `pytest.ini`, `conftest.py`, `pyproject.toml`, `setup.cfg` and `tox.ini` are reset before grading, so editing them never helps. Fix the source code.\n\n## Sandbox facts\n- Offline, dependencies already installed. Never install packages.\n- Available: git, grep, find, sed, awk, python3. NOT available: `rg` (ripgrep) and `tree`. Search with `git grep -n`.\n- `run_command` output is cut to its FIRST 5,000 characters. `read_file` returns at most 150 lines or 10,000 characters, so request narrow line ranges.\n- `read_file`, `write_file` and `edit_file` only work inside /workspace. Create scratch files in /tmp with `run_command`, never inside /workspace.\n- The context window is small (32k tokens). Every long output brings you closer to a crash that discards your work, so keep outputs short.\n- `get_status()` and `submit_patch()` are free.\n\n## Workflow\n1. Understand. State the expected and the actual behaviour in one or two sentences. Some issues are pull-request descriptions: skip checklists and template text, keep the substance. Note exact names, messages and values.\n2. Localize. Call `code_analyzer` once. Its request should be one short sentence with the key identifiers from the issue; it already has the full issue text and answers with LOCATION, ROOT CAUSE, FIX PLAN and TESTS. Skip it only when the issue names the exact file and function to change. Confirm its answer by reading those lines (at most about 60 lines per `read_file`). If it is unsure or wrong, search yourself: `git grep -n "identifier" -- \'*.py\' | head -20`.\n3. Reproduce when it is cheap. Write the script with a heredoc and run it in the same command:\n   `cat > /tmp/repro.py << \'EOF\'` ... `EOF` then `python3 /tmp/repro.py 2>&1 | tail -n 20`.\n4. Fix. Before each edit, state in one or two sentences what you will change and why. Use `edit_file` with an `old_string` copied exactly from the file, including indentation and without line-number prefixes; keep it short but unique. Fix the root cause, handle every edge case the issue names, and keep public signatures backward compatible. Several small coordinated edits are fine; one huge edit can be cut off. Code under `docs_src/` counts as source when the issue is about it. Create a new file only when the requested feature needs one.\n5. Verify in one command, saving long output to /tmp and reading its end, because test verdicts are printed last:\n   `python3 -m py_compile path/to/changed.py && python3 -m pytest tests/test_x.py -q -x -p no:anyio -o timeout=0 > /tmp/t1.log 2>&1; tail -n 25 /tmp/t1.log`\n   Find the closest tests with `git grep -l "name" -- \'tests/*.py\' | head`. Never run bare `pytest` or a whole test suite. Existing failures unrelated to your change (missing fixtures, network, imports) are not your problem; do not touch test code. If your reproduction still fails, revise the same source change once.\n6. Submit. Run `git status --short` and `git diff | head -150`. Remove anything unintended from /workspace. Call `submit_patch()` as your last tool call, then reply with one line on what changed and what you verified.\n\n## Tool rules\n- Never call `search_similar_code`: each result carries the full source of whole classes (often over 100,000 characters), which overflows your context and loses the task.\n- `get_code_neighbors` and `get_code_subgraph` only know synchronous "calls" edges and no async functions. Never pass `edge_type`. If a graph tool errors, stop using it and use `git grep`.\n- If the same call fails twice, change method; for example read lines with `sed -n \'START,ENDp\' FILE` instead of `read_file`.\n- Keep every output short: `head`, `tail`, `grep -n`, `pytest -q`. Never print whole large files.\n\n## Pace\n- The budget is shared with `code_analyzer`. Call `get_status()` after about 8 tool calls and again before verifying.\n- Aim to have your first edit in place by the halfway point. When about a quarter of the time or tool calls remains, stop exploring: finish the edit, compile, check the diff and submit.\n', 'prompts/analyzer.md': 'You are `code_analyzer`, a read-only code navigator for the Python repository at /workspace. You never modify files. The coder sends you a short request; the full issue is at the end of these instructions. Find exactly where the issue must be fixed, then answer.\n\n## Tools\n- `run_command` for read-only commands only: `git grep -n "text" -- \'*.py\' | head -20`, `grep -rn`, `sed -n \'START,ENDp\' FILE`, `ls`, `git log --oneline -5 -- FILE`. `rg` and `tree` are not installed. Output is cut to its first 5,000 characters, so always pipe searches through `head`.\n- `read_file` with tight line ranges (at most about 80 lines). It only accepts paths inside /workspace.\n- `get_code_neighbors` and `get_code_subgraph` only know synchronous "calls" edges and no async functions. Never pass `edge_type`. If a graph tool errors, stop using it.\n\n## Method (at most 6 tool calls)\n1. Extract identifiers from the issue: function and class names, error messages, option and parameter names, file paths. Ignore pull-request template text such as checklists.\n2. Search for the most specific identifier first. Follow the code to the line where the behaviour diverges from what the issue expects. For a feature request, find where the closest existing feature is implemented and where the new behaviour must plug in.\n3. Find the existing test file that covers that code.\n4. Confirm by reading the code. Never guess line numbers.\n\n## Answer (at most 200 words, nothing else)\nLOCATION: path:start-end (function or class)\nROOT CAUSE: one or two sentences\nFIX PLAN: the concrete change, including edge cases named in the issue\nRELATED: other places needing the same change, or none\nTESTS: existing test file(s) for this code\nCONFIDENCE: high | medium | low\n\n## The issue\n{problem_description?}\n', 'eval_config.yaml': 'evaluation:\n  timeout_seconds: 120\n  max_tool_calls: 40\n  max_time_minutes: 5\n  max_turns: 100\n'}
+ANCHOR = {'agent.yaml': 'name: black_cat_compact\nmodel: gemma-4-31b-it-qat-w4a16-ct\ndescription: Budget-aware software engineer for focused repository fixes.\ninstruction: !include prompts/system.md\ntools:\n  - run_command\n  - read_file\n  - edit_file\n  - write_file\n  - get_status\n  - submit_patch\n  - get_code_neighbors\n  - search_similar_code\n  - get_code_subgraph\ngenerate_content_config: !include configs/sampling.yaml\n', 'configs/sampling.yaml': 'temperature: 0.15\ntop_p: 0.90\nmax_output_tokens: 8192\nseed: 42\nthinking_config:\n  thinking_level: MEDIUM\n  thinking_budget: 2048\n  include_thoughts: false\n', 'prompts/system.md': 'You are Black Cat, an autonomous Python engineer in /workspace. Solve the issue with a real, minimal patch. A fresh checkout will run hidden tests. Finish by calling submit_patch(). Work within the stated task budget; make tool calls promptly and keep outputs short.\n\n1. Decode the issue: ignore PR-template boilerplate, keep the substantive request, exact identifiers, expected behavior, and edge cases. A short title still requires a best-effort implementation.\n2. Locate: use the initial file listing, then one bounded `rg -n` search for exact identifiers or error text (`grep -Rn` if rg is missing). Read only relevant ranges and nearby tests/examples. If the first route misses, search a second related symbol. Use graph tools only for known symbol names; if unavailable, return to source search. Do not treat natural-language text as a symbol query.\n3. Reproduce: when feasible, run a tiny behavior check with `python3 -c` or put a scratch script under /tmp. Confirm the failure before editing. Never leave scratch files in /workspace.\n4. Fix: change the earliest incorrect source layer with focused `edit_file` calls. Copy old text exactly and ensure it matches uniquely. Multiple coordinated edits are fine when behavior requires them. Preserve unrelated behavior and public APIs. Do not modify tests, hidden data, harness files, or broad formatting. Python example source may be changed when it is the implementation target.\n5. Verify: compile changed Python with `python3 -m py_compile`, rerun the reproduction, and run the closest targeted test if time allows. Inspect failures; do not claim a pass without tool output. Avoid full test suites, package installs, and network access.\n6. Review: check `git status --short`, `git diff --check`, and the relevant diff. Remove accidental files. Call get_status() around the middle of the budget. When little time remains, stop exploring and submit the best defensible patch.\n7. Call submit_patch() as the final tool action. It is free, captures intended new files, and ends the agent session. Then summarize only verified changes and checks.\n\nCommands have a 60-second cap in this submission and truncated output. If a tool fails twice, take a simpler route. Never fabricate source content, edits, or test results.\n', 'eval_config.yaml': 'evaluation:\n  timeout_seconds: 60\n  max_tool_calls: 24\n  max_time_minutes: 4\n  max_turns: 40\n'}
+FALLBACK = {'agent.yaml': 'name: black_cat_fallback\nmodel: gemma-4-31b-it-qat-w4a16-ct\ninstruction: !include prompts/system.md\ntools: [run_command, read_file, edit_file, get_status, submit_patch]\ngenerate_content_config:\n  temperature: 0.1\n  max_output_tokens: 4096\n', 'prompts/system.md': 'Solve the issue in /workspace. Inspect the relevant source, make a focused change, run a small check, inspect git diff, and call submit_patch(). Do not edit tests or harness files.\n', 'eval_config.yaml': 'evaluation:\n  timeout_seconds: 60\n  max_tool_calls: 24\n  max_time_minutes: 4\n  max_turns: 40\n'}
+ANCHOR_SHA256 = 'c34a0f863ee45bfd923974d514e294fb69e85838c46a759d273217084b77cedb'
+
+
+# ----- cell -----
+import posixpath
+
+class IncludeLoader(yaml.SafeLoader):
+    pass
+
+IncludeLoader.add_constructor('!include', lambda loader, node: loader.construct_scalar(node))
+MODEL = 'gemma-4-31b-it-qat-w4a16-ct'
+ALLOWED = {'.yaml', '.yml', '.md', '.txt', '.py', '.json', '.safetensors'}
+REGISTERED_TOOLS = {'run_command', 'read_file', 'edit_file', 'write_file', 'get_status',
+                    'submit_patch', 'get_code_neighbors', 'search_similar_code', 'get_code_subgraph'}
+WRITE_TOOLS = {'edit_file', 'write_file', 'submit_patch'}
+ADK_PLACEHOLDER = re.compile(r'(?<![\$\{\\]){+[^{}]*}+')    # same pattern ADK uses for state injection
+ALLOWED_STATE = {'problem_description'}
+
+def resolve(name, ref):
+    """`!include` paths are relative to the including file."""
+    return posixpath.normpath(posixpath.join(posixpath.dirname(name), ref))
+
+def check_instruction(owner, text, strict=True):
+    for match in ADK_PLACEHOLDER.finditer(text):
+        var = match.group().strip('{}').strip().removesuffix('?')
+        assert not var.isidentifier() or var in ALLOWED_STATE, f'{owner}: unknown state placeholder {match.group()}'
+    if strict:
+        assert not re.search(r'(^|[`\s(])rg\s+-', text), f'{owner}: tells the agent to run rg, which is not installed'
+
+def check_agent(files, name, root, strict=True):
+    agent = yaml.load(files[name], Loader=IncludeLoader)
+    assert agent['model'] == MODEL, (name, agent['model'])
+    instruction = agent['instruction']
+    instruction = files[resolve(name, instruction)] if resolve(name, instruction) in files else instruction
+    check_instruction(name, instruction, strict)
+    names = [t for t in agent['tools'] if isinstance(t, str)]
+    assert set(names) <= REGISTERED_TOOLS, (name, set(names) - REGISTERED_TOOLS)
+    if root:
+        assert 'submit_patch' in names, 'root agent must be able to submit'
+    else:
+        assert not set(names) & WRITE_TOOLS, f'{name}: sub-agent must stay read-only'
+    config = agent.get('generate_content_config')
+    if isinstance(config, str):
+        config = yaml.safe_load(files[resolve(name, config)])
+    assert 0 < config['max_output_tokens'] <= 8192, (name, config['max_output_tokens'])
+    subs = [t['agent_tool']['config_path'] for t in agent['tools'] if isinstance(t, dict)]
+    for sub in subs:
+        assert sub in files, (name, sub)       # config_path is relative to the bundle root
+        check_agent(files, sub, root=False, strict=strict)
+    return 1 + len(subs)
+
+def package(files, output, max_minutes=5, max_calls=40, strict=True):
+    assert 'agent.yaml' in files and len(files) <= 10000
+    for name, content in files.items():
+        path = Path(name)
+        assert not path.is_absolute() and '..' not in path.parts and path.suffix in ALLOWED
+        assert isinstance(content, str) and content.strip()
+    for name, content in files.items():
+        if name.endswith(('.yaml', '.yml')):
+            yaml.load(content, Loader=IncludeLoader)
+        for include in re.findall(r'!include\s+([^\s]+)', content):
+            assert resolve(name, include) in files, (name, include)
+    agents = check_agent(files, 'agent.yaml', root=True, strict=strict)
+    if 'eval_config.yaml' in files:
+        budget = yaml.safe_load(files['eval_config.yaml'])['evaluation']
+        assert 0 < budget['max_time_minutes'] <= max_minutes
+        assert 0 < budget['max_tool_calls'] <= max_calls
+        assert 0 < budget['max_turns'] <= 100
+        assert 0 < budget['timeout_seconds'] <= 300
+    with zipfile.ZipFile(output, 'w') as archive:
+        for name, content in sorted(files.items()):
+            info = zipfile.ZipInfo(name, date_time=(1980, 1, 1, 0, 0, 0))
+            info.compress_type = zipfile.ZIP_DEFLATED
+            info.create_system = 3
+            info.external_attr = 0o644 << 16
+            archive.writestr(info, content.encode('utf-8'))
+    with zipfile.ZipFile(output) as archive:
+        assert archive.testzip() is None
+        assert sorted(archive.namelist()) == sorted(files)
+        assert all(archive.read(name) == files[name].encode('utf-8') for name in files)
+    return output, agents
+
+# Negative self-tests: the validator must reject the two run-time failure modes it claims to catch.
+for bad, reason in [('Use {hints} here.', 'placeholder'), ('Run `rg -n foo`.', 'rg')]:
+    try:
+        check_instruction('self-test', bad)
+    except AssertionError:
+        pass
+    else:
+        raise AssertionError(f'validator missed the {reason} case')
+
+primary_path, n_agents = package(CHALLENGER, WORKING / 'submission.zip')
+# The scored anchor is frozen byte for byte, so its older `rg` wording is exempt from the strict prompt check.
+anchor_path, _ = package(ANCHOR, WORKING / 'anchor_submission.zip', max_minutes=4, max_calls=24, strict=False)
+fallback_path, _ = package(FALLBACK, WORKING / 'fallback_submission.zip', max_minutes=4, max_calls=24)
+sha = lambda path: hashlib.sha256(path.read_bytes()).hexdigest()
+assert sha(anchor_path) == ANCHOR_SHA256, 'anchor archive differs from the one that scored 0.08'
+
+budget = yaml.safe_load(CHALLENGER['eval_config.yaml'])['evaluation']
+sampling = yaml.safe_load(CHALLENGER['configs/sampling.yaml'])
+prompt_tokens = sum(len(CHALLENGER[p]) for p in ('prompts/system.md', 'prompts/analyzer.md')) // 4
+manifest = {
+    'selected': primary_path.name,
+    'sha256': sha(primary_path),
+    'design': 'coder + read-only code_analyzer (agent_tool)',
+    'agents': n_agents,
+    'budget': budget,
+    'coder_sampling': sampling,
+    'prompt_tokens_estimate': prompt_tokens,
+    'anchor': {'archive': anchor_path.name, 'sha256': ANCHOR_SHA256, 'public_score': 0.08},
+    'challenger_score': None,
+    'official_harness_check': 'not run',
+}
+(WORKING / 'experiment_card.json').write_text(json.dumps(manifest, indent=2), encoding='utf-8')
+print('✅ FINAL PACKAGE CHECK PASSED')
+for path in (primary_path, anchor_path, fallback_path):
+    print(f'📦 {path.name}: {path.stat().st_size:,} bytes | sha256 {sha(path)[:16]}…')
+print(f'Agents in challenger: {n_agents} | budget: {budget}')
+print(f'Prompt size ≈ {prompt_tokens:,} tokens | vLLM prompt ceiling: {32768 - sampling["max_output_tokens"]:,} tokens')
+
+# ----- cell -----
+import shutil, subprocess, sys, tempfile
+
+HARNESS_WHEELS = ('google_adk-', 'google_genai-', 'adk_submission-', 'adk_eval_core-', 'swegemma-')
+
+def install_harness():
+    found = sorted(Path('/kaggle/input').glob('**/adk_submission-*.whl')) if Path('/kaggle/input').exists() else []
+    if not found:
+        raise FileNotFoundError('harness wheels are not attached')
+    wheels = [str(w) for w in sorted(found[0].parent.glob('*.whl')) if w.name.startswith(HARNESS_WHEELS)]
+    subprocess.run([sys.executable, '-m', 'pip', 'install', '-q', '--no-deps', *wheels], check=True, timeout=600)
+
+# Stand-ins with the real tool signatures: compiling checks names and schemas, nothing is called.
+def run_command(command: str) -> str: ...
+def read_file(filepath: str, start_line: int | None = None, end_line: int | None = None) -> str: ...
+def write_file(filepath: str, content: str) -> str: ...
+def edit_file(filepath: str, old_string: str, new_string: str, allow_multiple: bool = False) -> str: ...
+def submit_patch() -> str: ...
+def get_status() -> str: ...
+def get_code_neighbors(node: str, edge_type: str | None = None, max_neighbors: int = 50) -> str: ...
+def search_similar_code(query: str, k: int = 10) -> str: ...
+def get_code_subgraph(nodes: list[str]) -> str: ...
+
+def official_check(files):
+    with tempfile.TemporaryDirectory() as folder:
+        bundle = Path(folder)
+        for name, content in files.items():
+            (bundle / name).parent.mkdir(parents=True, exist_ok=True)
+            (bundle / name).write_text(content, encoding='utf-8')
+        limits, constraints = build_submission_limits()
+        registry = ModelRegistry()
+        registry.register(MODEL, LiteLlm(model=f'openai/{MODEL}', api_base='http://127.0.0.1:9/v1', api_key='EMPTY'))
+        tools = {f.__name__: f for f in [run_command, read_file, write_file, edit_file, submit_patch, get_status,
+                                         get_code_neighbors, search_similar_code, get_code_subgraph]}
+        validate_directory(bundle, limits)
+        assert validate_single_declared_model(bundle) == MODEL
+        return compile_submission(bundle, tools, registry, limits=limits, generation_constraints=constraints).name
+
+try:
+    try:
+        import adk_submission  # noqa: F401
+    except ImportError:
+        install_harness()
+    from adk_submission import ModelRegistry, compile_submission, validate_directory
+    from google.adk.models.lite_llm import LiteLlm
+    from swegemma.config import build_submission_limits
+    from swegemma.models.discovery import validate_single_declared_model
+except Exception as error:
+    manifest['official_harness_check'] = f'unavailable: {type(error).__name__}'
+    print(f'Official harness unavailable here ({type(error).__name__}: {error}); the offline validator result stands.')
+else:
+    verdicts = {}
+    for label, files in (('challenger', CHALLENGER), ('anchor', ANCHOR)):
+        try:
+            verdicts[label] = f'ok (root agent {official_check(files)!r})'
+        except Exception as error:
+            verdicts[label] = f'FAILED: {type(error).__name__}: {str(error)[:300]}'
+        print(f'{label:>10}: {verdicts[label]}')
+    manifest['official_harness_check'] = verdicts
+    if verdicts['challenger'].startswith('FAILED') and verdicts['anchor'].startswith('ok'):
+        shutil.copyfile(anchor_path, primary_path)
+        manifest.update(selected='anchor (challenger failed the official compiler)', sha256=ANCHOR_SHA256)
+        print('⚠️ submission.zip now holds the 0.08 anchor.')
+(WORKING / 'experiment_card.json').write_text(json.dumps(manifest, indent=2), encoding='utf-8')
+print('Selected:', manifest['selected'], '| sha256', manifest['sha256'][:16] + '…')

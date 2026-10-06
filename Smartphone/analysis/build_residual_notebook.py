@@ -1,0 +1,84 @@
+"""Build the reproducible notebook companion for the 0.97074 experiments."""
+
+from pathlib import Path
+
+import nbformat as nbf
+
+
+root = Path(__file__).resolve().parents[1]
+notebook = nbf.v4.new_notebook()
+notebook["metadata"]["kernelspec"] = {
+    "display_name": "Python 3",
+    "language": "python",
+    "name": "python3",
+}
+notebook["cells"] = [
+    nbf.v4.new_markdown_cell(
+        "# Residual experiments toward Public AUC 0.97074\n\n"
+        "## tl;dr\n\n"
+        "The reproducible public score improved from **0.97061 to 0.97063** by adding "
+        "TabNet and a second RealMLP as low-weight rank signals. Tree residual correction "
+        "and additional weak MLP/GBM members did not add meaningful OOF value."
+    ),
+    nbf.v4.new_markdown_cell(
+        "## Context & Methods\n\n"
+        "The anchor is the 54-model honest OOF stack. Every incremental candidate was "
+        "evaluated with 5-fold StratifiedKFold, shuffle enabled, seed 42. Blend weights "
+        "were selected on the other four folds and applied to the held-out fold.\n\n"
+        "### Key Assumptions\n\n"
+        "Public OOF files preserve original train row order or expose IDs that can be "
+        "aligned exactly. Public leaderboard scores are rounded to five decimals."
+    ),
+    nbf.v4.new_code_cell(
+        "from pathlib import Path\n"
+        "import json\n"
+        "import pandas as pd\n\n"
+        "ROOT = Path.cwd().parent if Path.cwd().name == 'analysis' else Path.cwd()\n"
+        "def load_json(path):\n"
+        "    return json.loads((ROOT / path).read_text())"
+    ),
+    nbf.v4.new_markdown_cell("## Data\n\nLoad the saved metrics produced by local diagnostics and Kaggle GPU notebooks."),
+    nbf.v4.new_code_cell(
+        "metrics = {\n"
+        "    'stack54': load_json('kaggle/oof_stack_v4_output_retry/metrics.json'),\n"
+        "    'xgb_residual': load_json('kaggle/xgb_residual_v8_output/metrics.json'),\n"
+        "    'tabnet': load_json('kaggle/tabnet_blend_v9_output/metrics.json'),\n"
+        "    'realmlp': load_json('kaggle/realmlp_blend_v10_output/metrics.json'),\n"
+        "    'extra_mlp_gbm': load_json('kaggle/danush_blend_v11_output/metrics.json'),\n"
+        "}\n"
+        "sorted(metrics)"
+    ),
+    nbf.v4.new_markdown_cell("## Results\n\nThe progression table separates honest OOF evidence from rounded Public LB results."),
+    nbf.v4.new_code_cell(
+        "progression = pd.DataFrame([\n"
+        "    {'experiment': 'HistGB baseline', 'oof_auc': 0.9590605, 'public_auc': 0.96018},\n"
+        "    {'experiment': 'LGBM + HistGB', 'oof_auc': 0.9643539, 'public_auc': 0.96588},\n"
+        "    {'experiment': '54-model stack', 'oof_auc': metrics['stack54']['blend_oof_auc'], 'public_auc': 0.97061},\n"
+        "    {'experiment': '+ 9.5% TabNet rank', 'oof_auc': metrics['tabnet']['chosen_oof_auc'], 'public_auc': 0.97063},\n"
+        "    {'experiment': '+ 12% RealMLP rank', 'oof_auc': metrics['realmlp']['chosen_oof_auc'], 'public_auc': 0.97063},\n"
+        "])\n"
+        "progression"
+    ),
+    nbf.v4.new_code_cell(
+        "diagnostics = pd.DataFrame([\n"
+        "    {'candidate': 'GPU XGB base-margin correction', 'delta_oof': metrics['xgb_residual']['blend_delta'], 'decision': 'reject'},\n"
+        "    {'candidate': 'TabNet rank signal', 'delta_oof': metrics['tabnet']['chosen_delta'], 'decision': 'keep'},\n"
+        "    {'candidate': 'Second RealMLP rank signal', 'delta_oof': metrics['realmlp']['chosen_delta'], 'decision': 'keep'},\n"
+        "    {'candidate': 'Extra MLP rank signal', 'delta_oof': metrics['extra_mlp_gbm']['rank_results']['mlp']['delta'], 'decision': 'reject'},\n"
+        "    {'candidate': 'Extra GBM rank signal', 'delta_oof': metrics['extra_mlp_gbm']['rank_results']['gbm']['delta'], 'decision': 'reject'},\n"
+        "]).sort_values('delta_oof', ascending=False)\n"
+        "diagnostics"
+    ),
+    nbf.v4.new_markdown_cell(
+        "## Takeaways\n\n"
+        "- TabNet and the second RealMLP contributed because their rank correlations with "
+        "the anchor were below the saturated tree correction signals.\n"
+        "- The current verified score is **0.97063**; the requested 0.97074 remains "
+        "**0.00011** away.\n"
+        "- Further progress needs a new neural representation with aligned OOF, not more "
+        "tree tuning or leaderboard-only blending."
+    ),
+]
+output = root / "analysis" / "residual_experiments_097074.ipynb"
+nbf.write(notebook, output)
+print(output)

@@ -1,0 +1,330 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-08-26",
+  "scope": {
+    "corpus": "old80_only",
+    "action_steps": "120..718 plus final state at 719",
+    "fresh_or_future_holdout_read": false,
+    "controller_modified": false,
+    "uploaded": false
+  },
+  "frozen_inputs": {
+    "controller_sha256": "c880c57e697e39d62cd78eff524cd364d759afeeb025e80fd7951a768d158e14",
+    "wrapper_sha256": "e0aa42b797d38dd8f2a0cdd0eb4e6a741958c730e2904ba7003d9d03e3aa7811",
+    "v72_old80_report_sha256": "079af9ad20be907ab326012e31cccdb4b1aa22231e4e2fa8d072f68a8d93e31a",
+    "v59_old80_report_sha256": "42c5a7430aa17d2918f9c3d2581edbb7c12249fd05e4ae423b60ad24227ef518",
+    "v18_gate_report_sha256": "04a42f0e7d809aaa8adc1f5c6990442e359677575c79a76cab891a0b8bc7ab01",
+    "trace_script_sha256": "87db33c3768c571d4ee14b5ff869b2fe1cacf597ca43e429408884d595588cac"
+  },
+  "case_selection": {
+    "overall_v72_old80_median_margin": -133878.0,
+    "median_representative_distance_from_median": 29.0,
+    "cases": [
+      {
+        "label": "median",
+        "team": "Kenjo1209",
+        "episode_id": 99614514,
+        "seed": 1146132647,
+        "top1_seat": 0
+      },
+      {
+        "label": "worst",
+        "team": "taiseiu",
+        "episode_id": 99589578,
+        "seed": 1652896423,
+        "top1_seat": 0
+      }
+    ]
+  },
+  "traces": {
+    "median": {
+      "reproduced": {
+        "candidate_money": 1682.0,
+        "tape_top1_money": 135589.0,
+        "margin": -133907.0,
+        "final_state_step": 719
+      },
+      "earliest_events": {
+        "money_below_1000": 120,
+        "money_below_500": 121,
+        "farmer_holds_wheat": 120,
+        "land_expansion_blocked": 124,
+        "land_expansion_succeeds": 173,
+        "all_live_animals_zero": 575
+      },
+      "market_quantity": {
+        "hire": 130,
+        "buy_cow": 19,
+        "buy_sheep": 1,
+        "buy_land": 1,
+        "buy_product_wheat": 83,
+        "buy_seed_melon": 13,
+        "buy_seed_wheat": 9,
+        "sell_fertilizer": 36,
+        "sell_melon": 21,
+        "sell_milk": 23,
+        "sell_wheat": 45,
+        "sell_wool": 16
+      },
+      "cash_flow": {
+        "sum_negative_step_deltas": -14652.0,
+        "sum_positive_step_deltas": 15975.0,
+        "listed_fixed_purchase_cost_upper_bound": 11804.0,
+        "terminal_step_696_gain": 1679.0
+      },
+      "target_selection": {
+        "animal_cow": 199,
+        "animal_sheep": 45,
+        "crop_melon": 271,
+        "crop_strawberry": 4,
+        "crop_wheat": 57,
+        "target_runs": 181,
+        "one_step_target_runs": 109
+      },
+      "planner_report": {
+        "production_planned": 550,
+        "planned_without_same_step_composition_progress": 294,
+        "land_inventory_blocked": 97,
+        "workforce_inventory_blocked": 56
+      },
+      "physical_starvation": {
+        "cow": {
+          "deficit_steps": 599,
+          "selected_while_deficit": 199,
+          "longest_unselected_run": 80
+        },
+        "sheep": {
+          "deficit_steps": 503,
+          "selected_while_deficit": 34,
+          "longest_unselected_run": 246
+        },
+        "melon": {
+          "deficit_steps": 190,
+          "selected_while_deficit": 100,
+          "longest_unselected_run": 10
+        },
+        "strawberry": {
+          "deficit_steps": 575,
+          "selected_while_deficit": 0,
+          "longest_unselected_run": 575
+        },
+        "wheat": {
+          "deficit_steps": 575,
+          "selected_while_deficit": 52,
+          "longest_unselected_run": 497
+        }
+      },
+      "max_physical_state": {
+        "live_cow": 7,
+        "live_sheep": 4,
+        "live_melon": 8,
+        "live_strawberry": 3,
+        "live_wheat": 9,
+        "shed_cow": 3,
+        "shed_sheep": 1
+      },
+      "final_state": {
+        "land": 2,
+        "live_animals": {},
+        "live_crops": {
+          "WHEAT": 8
+        },
+        "shed": {}
+      }
+    },
+    "worst": {
+      "reproduced": {
+        "candidate_money": 1258.0,
+        "tape_top1_money": 198124.0,
+        "margin": -196866.0,
+        "final_state_step": 719
+      },
+      "earliest_events": {
+        "money_below_1000": 120,
+        "money_below_500": 121,
+        "farmer_holds_wheat": 120,
+        "land_expansion_blocked": 123,
+        "all_live_animals_zero": 167,
+        "land_expansion_succeeds": null
+      },
+      "market_quantity": {
+        "hire": 213,
+        "buy_cow": 2,
+        "buy_sheep": 1,
+        "buy_product_wheat": 4,
+        "buy_seed_strawberry": 30,
+        "buy_seed_wheat": 69,
+        "sell_fertilizer": 5,
+        "sell_strawberry": 26,
+        "sell_wheat": 72
+      },
+      "cash_flow": {
+        "step_120_money_before": 359.0,
+        "step_120_money_after_sales_and_hires": 826.0,
+        "step_121_money_after_hire_and_two_cows": 24.0,
+        "step_123_money_after_wheat_seed": 4.0,
+        "sum_negative_step_deltas": -8342.0,
+        "sum_positive_step_deltas": 9241.0,
+        "listed_fixed_purchase_cost_upper_bound": 8424.0,
+        "terminal_step_696_gain": 1118.0
+      },
+      "target_selection": {
+        "animal_cow": 5,
+        "animal_sheep": 4,
+        "crop_melon": 3,
+        "crop_strawberry": 285,
+        "crop_wheat": 279,
+        "target_runs": 113,
+        "one_step_target_runs": 54
+      },
+      "planner_report": {
+        "production_planned": 560,
+        "planned_without_same_step_composition_progress": 246,
+        "land_inventory_blocked": 98,
+        "workforce_inventory_blocked": 36
+      },
+      "physical_starvation": {
+        "cow": {
+          "deficit_steps": 599,
+          "selected_while_deficit": 5,
+          "longest_unselected_run": 255
+        },
+        "sheep": {
+          "deficit_steps": 551,
+          "selected_while_deficit": 3,
+          "longest_unselected_run": 241
+        },
+        "melon": {
+          "deficit_steps": 288,
+          "selected_while_deficit": 2,
+          "longest_unselected_run": 163
+        },
+        "strawberry": {
+          "deficit_steps": 503,
+          "selected_while_deficit": 228,
+          "longest_unselected_run": 72
+        },
+        "wheat": {
+          "deficit_steps": 599,
+          "selected_while_deficit": 279,
+          "longest_unselected_run": 71
+        }
+      },
+      "max_physical_state": {
+        "live_cow": 1,
+        "live_sheep": 4,
+        "live_melon": 5,
+        "live_strawberry": 20,
+        "live_wheat": 12,
+        "shed_cow": 2,
+        "shed_sheep": 1
+      },
+      "final_state": {
+        "land": 1,
+        "live_animals": {},
+        "live_crops": {
+          "WHEAT": 10
+        },
+        "shed": {
+          "COW": 2,
+          "SHEEP": 1
+        }
+      }
+    }
+  },
+  "comparators": {
+    "v18_gate0": {
+      "corpus_warning": "different 8-game corpus; descriptive only",
+      "games": 8,
+      "wins": 0,
+      "mean_money": 17107.875,
+      "mean_margin": -119663.25,
+      "worst_margin": -133583.0
+    },
+    "v59_old80": {
+      "games": 80,
+      "wins": 66,
+      "mean_money": 90301.55,
+      "mean_margin": 9657.8875,
+      "worst_money": 44099.0,
+      "worst_margin": -21138.0,
+      "same_case_candidate_money": {
+        "median_episode_99614514_seat0": 106073.0,
+        "worst_episode_99589578_seat0": 107066.0
+      }
+    },
+    "v72_old80": {
+      "games": 80,
+      "wins": 0,
+      "mean_money": 1578.875,
+      "mean_margin": -133964.3875,
+      "worst_money": 297.0,
+      "worst_margin": -196866.0
+    }
+  },
+  "ranked_root_causes": [
+    {
+      "rank": 1,
+      "cause": "animal completion conflates owned with physically live",
+      "confidence": "high_direct",
+      "evidence": "shed and unit-inventory animals are added to live animals before target scoring; buying cows therefore closes the controller deficit before placement"
+    },
+    {
+      "rank": 2,
+      "cause": "PLANNED is treated as reselectable progress and urgency can starve other physical deficits",
+      "confidence": "high_direct",
+      "evidence": "no active production target exists; urgency contributes 4 while bounded deficit plus age contributes at most 3"
+    },
+    {
+      "rank": 3,
+      "cause": "no reserve-aware admission across workforce and production purchases",
+      "confidence": "high_direct",
+      "evidence": "worst spends from 826 to 24 at step 121 and to 4 at step 123; median and worst list fixed-price purchases up to 11804 and 8424 respectively"
+    },
+    {
+      "rank": 4,
+      "cause": "inventory blockage only delays the target and does not invoke available inventory recovery",
+      "confidence": "high_direct",
+      "evidence": "land is inventory-blocked 97 and 98 times; worst never expands beyond one quadrant"
+    },
+    {
+      "rank": 5,
+      "cause": "late liquidation exposes stranded capital rather than repairing it",
+      "confidence": "high_symptom",
+      "evidence": "worst terminal sale liquidates wheat but leaves two cows and one sheep in shed"
+    }
+  ],
+  "minimal_fix": {
+    "rust_schema_change_required": false,
+    "controller_changes": [
+      "separate live animal counts from total owned counts; preserve irreversible quota floors on total owned but score execution completion on live counts",
+      "use lexicographic scheduling: inventory recovery and urgent maintenance, then completion of stranded unit work, then capital expansion, then new growth",
+      "retain one active production key for a bounded dwell until physical progress or explicit block; PLANNED alone must not release it, then round-robin among physically deficient targets",
+      "add a hard oldest-deficit fairness override so urgency cannot starve a physical deficit beyond 24 turns",
+      "admit fixed-price buys and workforce only while preserving a 400-money reserve; cap animal target growth by affordable quantity",
+      "forbid land expansion while any urgent or stranded unit state exists or cash is below the reserve plus land cost",
+      "after KG-EXEC-INVENTORY, prepend existing RECOVERY:INVENTORY and suppress competing unit-heavy work until inventories clear"
+    ]
+  },
+  "oracle_screen_stop_gate": {
+    "replays": [99614514, 99589578],
+    "must_pass_before_full_old80": [
+      "719 completed transitions and final state step 719 in both cases",
+      "zero post-handoff normalization, sanitization, and fallback",
+      "after any fixed-price purchase from step 120 onward, money remains at least 400",
+      "an animal bought into shed is either live or under RECOVERY within 24 turns",
+      "urgent maintenance and stranded unit inventory preempt land expansion",
+      "no physical quota deficit remains unselected for more than 48 turns",
+      "worst representative reaches at least two land quadrants by step 192",
+      "terminal shed has no COW or SHEEP",
+      "candidate money is at least half of paired V59: 53036.5 on episode 99614514 and 53533.0 on episode 99589578"
+    ],
+    "stop_condition": "If either case fails any hard condition, do not run full old80, fresh, third, future, or upload. Diagnose the failed condition first."
+  },
+  "limitations": [
+    "Recorded opponent action tapes become strategically stale after candidate-state divergence; same-case money is an oracle screen, not live-policy proof.",
+    "Listed fixed purchase cost is an upper bound because the legalizer may retain a partially fillable listed quantity.",
+    "PLANNED without same-step composition progress can include useful movement; it is supporting churn evidence, not a standalone failure label.",
+    "No fresh, third, future, or hidden holdout was inspected."
+  ]
+}

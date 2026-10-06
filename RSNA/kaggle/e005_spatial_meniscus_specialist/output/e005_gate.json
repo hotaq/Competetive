@@ -1,0 +1,51 @@
+{
+  "cache_version": "meniscus_sagcor_fluid_g8_r192_v1",
+  "checks": {
+    "cache_coverage": true,
+    "diversity": true,
+    "gold_direction": true,
+    "lateral_gain": false,
+    "mean_gain": false,
+    "medial_floor": false
+  },
+  "decision": "stop_specialist",
+  "mean_anchor_auc": 0.8299143094282699,
+  "mean_anchor_gold_auc": 0.745997820114668,
+  "mean_arm_auc": 0.7445522690129557,
+  "mean_arm_gold_auc": 0.7369707059245103,
+  "mean_candidate_auc": 0.8272658720634358,
+  "mean_candidate_gold_auc": 0.7639497730530339,
+  "mean_gain": -0.002648437364834,
+  "mean_gold_gain": 0.017951952938365934,
+  "median_spearman": 0.725107305485631,
+  "n_gold": 58,
+  "n_studies": 4407,
+  "pass": false,
+  "per_target": [
+    {
+      "anchor_auc": 0.8602243723654656,
+      "anchor_gold_auc": 0.8497596153846154,
+      "arm_auc": 0.7628200222552236,
+      "arm_gold_auc": 0.7584134615384616,
+      "candidate_auc": 0.8556262694371248,
+      "candidate_delta": -0.00459810292834073,
+      "candidate_gold_auc": 0.8533653846153846,
+      "spearman": 0.7482018809546338,
+      "target": "Medial Meniscus"
+    },
+    {
+      "anchor_auc": 0.7996042464910742,
+      "anchor_gold_auc": 0.6422360248447205,
+      "arm_auc": 0.7262845157706878,
+      "arm_gold_auc": 0.715527950310559,
+      "candidate_auc": 0.7989054746897469,
+      "candidate_delta": -0.0006987718013272692,
+      "candidate_gold_auc": 0.6745341614906832,
+      "spearman": 0.7020127300166282,
+      "target": "Lateral Meniscus"
+    }
+  ],
+  "specialist_weight": 0.2,
+  "test_coverage": 1.0,
+  "train_coverage": 1.0
+}

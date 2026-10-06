@@ -1,0 +1,40 @@
+{
+  "model": "semantic-intent-repair-ablation-v1",
+  "agents": [
+    {
+      "episode_id": 0,
+      "name": "champion",
+      "agent_file": "submissions/top1_v12_ryo_selector_b120_repaired_standalone/main.py"
+    },
+    {
+      "episode_id": 1,
+      "name": "harvest",
+      "agent_file": "submissions/top1_v12_ryo_semantic_ablation_harvest_standalone/main.py"
+    },
+    {
+      "episode_id": 2,
+      "name": "water",
+      "agent_file": "submissions/top1_v12_ryo_semantic_ablation_water_standalone/main.py"
+    },
+    {
+      "episode_id": 3,
+      "name": "dig",
+      "agent_file": "submissions/top1_v12_ryo_semantic_ablation_dig_standalone/main.py"
+    },
+    {
+      "episode_id": 4,
+      "name": "fertilize",
+      "agent_file": "submissions/top1_v12_ryo_semantic_ablation_fertilize_standalone/main.py"
+    },
+    {
+      "episode_id": 5,
+      "name": "animal",
+      "agent_file": "submissions/top1_v12_ryo_semantic_ablation_animal_standalone/main.py"
+    },
+    {
+      "episode_id": 6,
+      "name": "logistics",
+      "agent_file": "submissions/top1_v12_ryo_semantic_ablation_logistics_standalone/main.py"
+    }
+  ]
+}

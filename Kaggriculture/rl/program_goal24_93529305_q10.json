@@ -1,0 +1,22 @@
+{
+  "common_prefix_step": 97,
+  "programs": [
+    {
+      "program_id": 393529305,
+      "name": "goal24-93529305-q10-prefix",
+      "segments": [
+        {"start_step": 0, "source_episode_id": 93816256},
+        {"start_step": 97, "source_episode_id": 93501610}
+      ],
+      "mutations": [
+        {
+          "kind": "replace_market_quantity",
+          "step": 0,
+          "order_index": 8,
+          "expected": ["BUY_SEED", "MELON", 12],
+          "quantity": 10
+        }
+      ]
+    }
+  ]
+}

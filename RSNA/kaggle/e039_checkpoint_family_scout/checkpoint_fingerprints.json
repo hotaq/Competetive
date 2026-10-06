@@ -1,0 +1,241 @@
+{
+  "note": "Structural fingerprints of the checkpoints E039 loads. v5 and v9 were read from the real files downloaded from Kaggle; v4_swa is what E038 recorded when it loaded that file on the T4. v4_base is not fingerprinted here - E028, E036 and E038 all loaded it through load_model unchanged.",
+  "checkpoints": {
+    "v5_maxspan": {
+      "file": "raptor_ft_coatnet_v5_full_swa.pt",
+      "source": "read from the downloaded file",
+      "sha256": "20d45e0732a0e9120025d0172a4d2dd0170900bc250b06742dfb7ae08a63786a",
+      "top_level_keys": [
+        "arch",
+        "aucs",
+        "epoch",
+        "gold_auc",
+        "lab",
+        "model",
+        "res",
+        "src",
+        "swa_over"
+      ],
+      "arch": "coatnet_rmlp_2_rw_384.sw_in12k_ft_in1k",
+      "res": 384,
+      "lab": [
+        "ACL",
+        "MCL",
+        "Medial Meniscus",
+        "Lateral Meniscus",
+        "Medial OA",
+        "Lateral OA",
+        "PF OA",
+        "Effusion",
+        "Synovitis",
+        "Baker's",
+        "Contusion",
+        "Fracture"
+      ],
+      "gold_auc": 0.9214481792385256,
+      "state_entries": 486,
+      "state_key_sha256": "ed690a581bd7442cb83049d5fd7270f684c36e0c7ea206ad9a9d46bbce999003",
+      "module_prefixed_keys": 0,
+      "has_n_averaged": false,
+      "non_backbone_keys": [
+        "clsW",
+        "clsb",
+        "norm.weight",
+        "norm.bias",
+        "att.0.weight",
+        "att.0.bias",
+        "att.3.weight",
+        "att.3.bias"
+      ],
+      "head_shapes": {
+        "clsW": [
+          12,
+          1024
+        ],
+        "clsb": [
+          12
+        ],
+        "norm.weight": [
+          1024
+        ],
+        "norm.bias": [
+          1024
+        ],
+        "att.0.weight": [
+          256,
+          1024
+        ],
+        "att.0.bias": [
+          256
+        ],
+        "att.3.weight": [
+          12,
+          256
+        ],
+        "att.3.bias": [
+          12
+        ]
+      },
+      "dtypes": [
+        "torch.float32",
+        "torch.int64"
+      ],
+      "float_tensors": 461,
+      "non_float_keys": [
+        "backbone.stem.norm1.num_batches_tracked",
+        "backbone.stages.0.blocks.0.pre_norm.num_batches_tracked",
+        "backbone.stages.0.blocks.0.norm1.num_batches_tracked",
+        "backbone.stages.0.blocks.0.norm2.num_batches_tracked",
+        "backbone.stages.0.blocks.1.pre_norm.num_batches_tracked",
+        "backbone.stages.0.blocks.1.norm1.num_batches_tracked",
+        "backbone.stages.0.blocks.1.norm2.num_batches_tracked",
+        "backbone.stages.1.blocks.0.pre_norm.num_batches_tracked",
+        "backbone.stages.1.blocks.0.norm1.num_batches_tracked",
+        "backbone.stages.1.blocks.0.norm2.num_batches_tracked",
+        "backbone.stages.1.blocks.1.pre_norm.num_batches_tracked",
+        "backbone.stages.1.blocks.1.norm1.num_batches_tracked",
+        "backbone.stages.1.blocks.1.norm2.num_batches_tracked",
+        "backbone.stages.1.blocks.2.pre_norm.num_batches_tracked",
+        "backbone.stages.1.blocks.2.norm1.num_batches_tracked",
+        "backbone.stages.1.blocks.2.norm2.num_batches_tracked",
+        "backbone.stages.1.blocks.3.pre_norm.num_batches_tracked",
+        "backbone.stages.1.blocks.3.norm1.num_batches_tracked",
+        "backbone.stages.1.blocks.3.norm2.num_batches_tracked",
+        "backbone.stages.1.blocks.4.pre_norm.num_batches_tracked",
+        "backbone.stages.1.blocks.4.norm1.num_batches_tracked",
+        "backbone.stages.1.blocks.4.norm2.num_batches_tracked",
+        "backbone.stages.1.blocks.5.pre_norm.num_batches_tracked",
+        "backbone.stages.1.blocks.5.norm1.num_batches_tracked",
+        "backbone.stages.1.blocks.5.norm2.num_batches_tracked"
+      ]
+    },
+    "v9_finespacing": {
+      "file": "raptor_ft_coatnet_v9_full.pt",
+      "source": "read from the downloaded file",
+      "sha256": "0850149a98cf04c7bacc1ea99b3af048102a256de14766b129b1d7255c02de7b",
+      "top_level_keys": [
+        "arch",
+        "aucs",
+        "epoch",
+        "gold_auc",
+        "lab",
+        "model",
+        "res",
+        "src"
+      ],
+      "arch": "coatnet_rmlp_2_rw_384.sw_in12k_ft_in1k",
+      "res": 384,
+      "lab": [
+        "ACL",
+        "MCL",
+        "Medial Meniscus",
+        "Lateral Meniscus",
+        "Medial OA",
+        "Lateral OA",
+        "PF OA",
+        "Effusion",
+        "Synovitis",
+        "Baker's",
+        "Contusion",
+        "Fracture"
+      ],
+      "gold_auc": 0.903112520734444,
+      "state_entries": 486,
+      "state_key_sha256": "ed690a581bd7442cb83049d5fd7270f684c36e0c7ea206ad9a9d46bbce999003",
+      "module_prefixed_keys": 0,
+      "has_n_averaged": false,
+      "non_backbone_keys": [
+        "clsW",
+        "clsb",
+        "norm.weight",
+        "norm.bias",
+        "att.0.weight",
+        "att.0.bias",
+        "att.3.weight",
+        "att.3.bias"
+      ],
+      "head_shapes": {
+        "clsW": [
+          12,
+          1024
+        ],
+        "clsb": [
+          12
+        ],
+        "norm.weight": [
+          1024
+        ],
+        "norm.bias": [
+          1024
+        ],
+        "att.0.weight": [
+          256,
+          1024
+        ],
+        "att.0.bias": [
+          256
+        ],
+        "att.3.weight": [
+          12,
+          256
+        ],
+        "att.3.bias": [
+          12
+        ]
+      },
+      "dtypes": [
+        "torch.float32",
+        "torch.int64"
+      ],
+      "float_tensors": 461,
+      "non_float_keys": [
+        "backbone.stem.norm1.num_batches_tracked",
+        "backbone.stages.0.blocks.0.pre_norm.num_batches_tracked",
+        "backbone.stages.0.blocks.0.norm1.num_batches_tracked",
+        "backbone.stages.0.blocks.0.norm2.num_batches_tracked",
+        "backbone.stages.0.blocks.1.pre_norm.num_batches_tracked",
+        "backbone.stages.0.blocks.1.norm1.num_batches_tracked",
+        "backbone.stages.0.blocks.1.norm2.num_batches_tracked",
+        "backbone.stages.1.blocks.0.pre_norm.num_batches_tracked",
+        "backbone.stages.1.blocks.0.norm1.num_batches_tracked",
+        "backbone.stages.1.blocks.0.norm2.num_batches_tracked",
+        "backbone.stages.1.blocks.1.pre_norm.num_batches_tracked",
+        "backbone.stages.1.blocks.1.norm1.num_batches_tracked",
+        "backbone.stages.1.blocks.1.norm2.num_batches_tracked",
+        "backbone.stages.1.blocks.2.pre_norm.num_batches_tracked",
+        "backbone.stages.1.blocks.2.norm1.num_batches_tracked",
+        "backbone.stages.1.blocks.2.norm2.num_batches_tracked",
+        "backbone.stages.1.blocks.3.pre_norm.num_batches_tracked",
+        "backbone.stages.1.blocks.3.norm1.num_batches_tracked",
+        "backbone.stages.1.blocks.3.norm2.num_batches_tracked",
+        "backbone.stages.1.blocks.4.pre_norm.num_batches_tracked",
+        "backbone.stages.1.blocks.4.norm1.num_batches_tracked",
+        "backbone.stages.1.blocks.4.norm2.num_batches_tracked",
+        "backbone.stages.1.blocks.5.pre_norm.num_batches_tracked",
+        "backbone.stages.1.blocks.5.norm1.num_batches_tracked",
+        "backbone.stages.1.blocks.5.norm2.num_batches_tracked"
+      ]
+    },
+    "v4_swa": {
+      "file": "raptor_ft_coatnet_v4_full_swa.pt",
+      "source": "recorded by E038 when it loaded this file on the T4",
+      "sha256": "d8bb0f8751b4bb65750257869ddc4c7a3c0cdfc6e62596fc68193919406c53eb",
+      "top_level_keys": [
+        "arch",
+        "aucs",
+        "epoch",
+        "gold_auc",
+        "lab",
+        "model",
+        "res",
+        "src",
+        "swa_over"
+      ],
+      "arch": "coatnet_rmlp_2_rw_384.sw_in12k_ft_in1k",
+      "res": 384,
+      "state_entries": 486,
+      "normalisations": [],
+      "float_tensors": 461
+    }
+  }
+}

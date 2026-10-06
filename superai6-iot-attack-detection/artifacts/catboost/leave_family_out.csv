@@ -1,0 +1,11 @@
+model,held_out_family,evaluation_fold,fit_normal_rows,fit_synthetic_rows,included_attack_families,calibration_normal_rows,evaluation_normal_rows,threshold,normal_fpr,held_out_family_recall,proxy_f1_at_10pct,proxy_f1_at_20pct
+catboost,syn_flood_row,0,19210,3000,"mqtt_invalid_control,mqtt_credential,mqtt_will_payload,mqtt_publish",15868,36529,0.014308818473072627,0.0003011306085575844,0.0,0.0,0.0
+extra_trees,syn_flood_row,0,19210,3000,"mqtt_invalid_control,mqtt_credential,mqtt_will_payload,mqtt_publish",15868,36529,0.28717417682782104,0.000355881628295327,0.0,0.0,0.0
+catboost,mqtt_invalid_control,1,12956,3000,"syn_flood_row,mqtt_credential,mqtt_will_payload,mqtt_publish",15868,15868,0.0063646315464225035,0.009389967229644568,0.2786666666666667,0.40884902708855403,0.4234326829503718
+extra_trees,mqtt_invalid_control,1,12956,3000,"syn_flood_row,mqtt_credential,mqtt_will_payload,mqtt_publish",15868,15868,0.02691584251947748,0.02508192588858079,0.20266666666666666,0.28376659084454336,0.31107834584472394
+catboost,mqtt_credential,2,12917,3000,"syn_flood_row,mqtt_invalid_control,mqtt_will_payload,mqtt_publish",15868,15868,0.027973391214873373,0.0,1.0,1.0,1.0
+extra_trees,mqtt_credential,2,12917,3000,"syn_flood_row,mqtt_invalid_control,mqtt_will_payload,mqtt_publish",15868,15868,0.18423909850045875,0.0001890597428787497,1.0,0.9991499543494003,0.9996220234345471
+catboost,mqtt_will_payload,3,12737,3000,"syn_flood_row,mqtt_invalid_control,mqtt_credential,mqtt_publish",15867,15868,0.5905546190810979,0.05570960423493824,1.0,0.7995565857099668,0.8997505103198005
+extra_trees,mqtt_will_payload,3,12737,3000,"syn_flood_row,mqtt_invalid_control,mqtt_credential,mqtt_publish",15867,15868,0.27702463661601634,0.05570960423493824,1.0,0.7995565857099668,0.8997505103198005
+catboost,mqtt_publish,4,19079,3000,"syn_flood_row,mqtt_invalid_control,mqtt_credential,mqtt_will_payload",36529,15867,0.005795793583537018,0.019978571878742045,1.0,0.9175123601353109,0.9615780861765953
+extra_trees,mqtt_publish,4,19079,3000,"syn_flood_row,mqtt_invalid_control,mqtt_credential,mqtt_will_payload",36529,15867,0.16301805615949988,0.019285309132161088,1.0,0.9201461377870563,0.9628618241398142

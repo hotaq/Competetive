@@ -1,0 +1,18 @@
+เริ่มต้น
+    รับค่าจำนวนนักเรียน n
+    สร้าง Array ชื่อ weights ขนาด n
+    i = 0
+    ลูปขณะที่ i < n ทำซ้ำ
+        รับค่าน้ำหนักเก็บลงใน weights[i]
+        i = i + 1
+    จบการทำซ้ำ
+
+    กำหนดให้ min_weight = 0
+    i = 0
+    ลูปขณะที่ i < n ทำซ้ำ
+        ถ้า weights[i] < min_weight แล้ว
+            min_weight = weights[i]
+        i = i + 1
+    จบการทำซ้ำ
+    แสดงผล min_weight
+สิ้นสุด

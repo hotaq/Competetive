@@ -1,0 +1,68 @@
+{
+  "classes": [
+    0,
+    1
+  ],
+  "rows": 10000,
+  "features": 9,
+  "candidates": [
+    {
+      "file": "candidate_catboost_d6.csv",
+      "name": "catboost_d6",
+      "family": "catboost",
+      "oof_auc": 0.81177039,
+      "fold_auc": [
+        0.81035679,
+        0.81778864,
+        0.81528134,
+        0.8146529,
+        0.8066925
+      ],
+      "fold_auc_std": 0.00394026,
+      "test_rank_correlation_to_best": 1.0
+    },
+    {
+      "file": "candidate_hist_gradient.csv",
+      "name": "hist_gradient",
+      "family": "histogram",
+      "oof_auc": 0.80879,
+      "fold_auc": [
+        0.80902649,
+        0.81204729,
+        0.81040136,
+        0.81280909,
+        0.8031665
+      ],
+      "fold_auc_std": 0.0034231,
+      "test_rank_correlation_to_best": 0.98645277
+    }
+  ],
+  "diagnostics": {
+    "best_core": {
+      "name": "catboost_d6",
+      "family": "catboost",
+      "oof_auc": 0.81177039
+    },
+    "blend_gate": {
+      "accepted": false,
+      "name": "blend_top4",
+      "oof_auc": 0.81199212,
+      "gain": 0.00022173,
+      "test_rank_correlation_to_best": 0.99921463
+    },
+    "interaction_gate": {
+      "accepted": false,
+      "name": "interaction_te",
+      "oof_auc": 0.80423305,
+      "standalone_gain": -0.00753734,
+      "blend_auc": 0.81180456,
+      "blend_gain": 3.417e-05,
+      "fold_auc_std": 0.00462448,
+      "test_rank_correlation": 0.98962907,
+      "stable": true,
+      "diverse": false,
+      "improves": false
+    }
+  },
+  "failures": []
+}

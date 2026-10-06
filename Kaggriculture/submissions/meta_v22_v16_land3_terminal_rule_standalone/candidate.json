@@ -1,0 +1,51 @@
+{
+  "agent_file": "submissions/meta_v22_v16_land3_terminal_rule_standalone/main.py",
+  "archive": "submissions/meta_v22_v16_land3_terminal_rule_standalone/submission.tar.gz",
+  "archive_sha256": "c9d7b08034bb89fd8451dd7d0f6f3a1e5ffcdd8b3711aa77ff60cecedbefd228",
+  "base": {
+    "agent_file": "submissions/meta_v16_rc6_adaptive_market_standalone/main.py",
+    "sha256": "c8afcbb8f90861cd92131012146e573752820b80fbd939ace3c7503aea83cd5e"
+  },
+  "evaluation_reports": [
+    "rl/evaluations/v22_land3_terminal_dev_top20_league4_20260826.json",
+    "rl/evaluations/v22_land3_terminal_holdout_top20_offset4_20260826.json",
+    "rl/evaluations/v22_fresh_test_top20_offset8_20260826.json",
+    "rl/evaluations/v22_standalone_fresh_test_top20_offset8_20260826.json",
+    "rl/evaluations/v22_local_vs_standalone_fresh_parity_20260826.json",
+    "rl/evaluations/v22_standalone_vs_v16_official_smoke4_20260826.json",
+    "rl/evaluations/v22_fixed_archive_raw_smoke_seat0_20260826.json",
+    "rl/evaluations/v22_fixed_archive_raw_smoke_seat1_20260826.json",
+    "rl/evaluations/v22_entrypoint_fixed_standalone_fresh_top20_offset8_20260826.json",
+    "rl/evaluations/v22_local_vs_entrypoint_fixed_standalone_parity_20260826.json"
+  ],
+  "live_submission_history": [
+    {
+      "cause": "raw loader selected terminal helper instead of agent",
+      "public_score": 600.0,
+      "status": "rejected_entrypoint_failure",
+      "submission_id": 55775814
+    }
+  ],
+  "name": "meta_v22_v16_land3_terminal_rule_standalone",
+  "policy": {
+    "family": "v16_with_observable_state_rules",
+    "is_rl": false,
+    "rules": [
+      {
+        "cash_reserve": 800,
+        "current_land": 2,
+        "end_day": 14,
+        "estimated_land_cost": 1000,
+        "name": "third_land_expansion",
+        "start_day": 10
+      },
+      {
+        "name": "terminal_shed_liquidation",
+        "terminal_step": 718
+      }
+    ]
+  },
+  "schema_version": 1,
+  "sha256": "5d5c615a296d984402f886b5f998a54e211dd6138e7818793733069d0d1476ba",
+  "status": "standalone_validated_pending_live_resubmission"
+}

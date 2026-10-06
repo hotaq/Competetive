@@ -1,0 +1,174 @@
+{
+  "action_ids": [
+    93527510,
+    93526612,
+    93525727,
+    93524843,
+    93523943,
+    93523040,
+    93522142,
+    93521238
+  ],
+  "branch_step": 145,
+  "checkpoint": "rl/checkpoints/tape_selector_v9.npz",
+  "cross_validation": [
+    {
+      "actions": {
+        "93521238": 6,
+        "93523040": 1,
+        "93524843": 3,
+        "93525727": 2,
+        "93527510": 4
+      },
+      "cvar10_margin": -28318.0,
+      "draws": 0,
+      "games": 16,
+      "losses": 7,
+      "mean_margin": -2616.9375,
+      "nearest_distance_max": 2.813976679197553,
+      "nearest_distance_mean": 0.3816562277031037,
+      "neighbors": 5,
+      "win_rate": 0.5625,
+      "wins": 9,
+      "worst_margin": -31843.0
+    },
+    {
+      "actions": {
+        "93521238": 5,
+        "93523040": 1,
+        "93524843": 3,
+        "93525727": 2,
+        "93527510": 5
+      },
+      "cvar10_margin": -28318.0,
+      "draws": 0,
+      "games": 16,
+      "losses": 7,
+      "mean_margin": -3909.75,
+      "nearest_distance_max": 2.813976679197553,
+      "nearest_distance_mean": 0.3816562277031037,
+      "neighbors": 7,
+      "win_rate": 0.5625,
+      "wins": 9,
+      "worst_margin": -31843.0
+    },
+    {
+      "actions": {
+        "93521238": 6,
+        "93523040": 1,
+        "93523943": 1,
+        "93524843": 3,
+        "93525727": 2,
+        "93527510": 3
+      },
+      "cvar10_margin": -27558.5,
+      "draws": 0,
+      "games": 16,
+      "losses": 8,
+      "mean_margin": -2672.0,
+      "nearest_distance_max": 2.813976679197553,
+      "nearest_distance_mean": 0.3816562277031037,
+      "neighbors": 1,
+      "win_rate": 0.5,
+      "wins": 8,
+      "worst_margin": -31843.0
+    },
+    {
+      "actions": {
+        "93521238": 5,
+        "93523040": 1,
+        "93523943": 1,
+        "93524843": 3,
+        "93525727": 2,
+        "93527510": 4
+      },
+      "cvar10_margin": -28318.0,
+      "draws": 0,
+      "games": 16,
+      "losses": 8,
+      "mean_margin": -4044.125,
+      "nearest_distance_max": 2.813976679197553,
+      "nearest_distance_mean": 0.3816562277031037,
+      "neighbors": 2,
+      "win_rate": 0.5,
+      "wins": 8,
+      "worst_margin": -31843.0
+    },
+    {
+      "actions": {
+        "93521238": 5,
+        "93523040": 1,
+        "93523943": 1,
+        "93524843": 3,
+        "93525727": 2,
+        "93527510": 4
+      },
+      "cvar10_margin": -28318.0,
+      "draws": 0,
+      "games": 16,
+      "losses": 8,
+      "mean_margin": -4044.125,
+      "nearest_distance_max": 2.813976679197553,
+      "nearest_distance_mean": 0.3816562277031037,
+      "neighbors": 3,
+      "win_rate": 0.5,
+      "wins": 8,
+      "worst_margin": -31843.0
+    }
+  ],
+  "feature_dim": 81,
+  "feature_rows": 16,
+  "global_summary": {
+    "actions": {
+      "93521238": 16
+    },
+    "cvar10_margin": -29251.5,
+    "draws": 0,
+    "games": 16,
+    "losses": 10,
+    "mean_margin": -3282.625,
+    "win_rate": 0.375,
+    "wins": 6,
+    "worst_margin": -31843.0
+  },
+  "holdout_used": false,
+  "model": "contextual-q-tape-selector-v9",
+  "oracle_summary": {
+    "actions": {
+      "93521238": 6,
+      "93523040": 1,
+      "93523943": 2,
+      "93524843": 4,
+      "93525727": 1,
+      "93527510": 2
+    },
+    "cvar10_margin": -291.0,
+    "draws": 0,
+    "games": 16,
+    "losses": 1,
+    "mean_margin": 4800.0,
+    "win_rate": 0.9375,
+    "wins": 15,
+    "worst_margin": -808.0
+  },
+  "selected_cross_validation": {
+    "actions": {
+      "93521238": 6,
+      "93523040": 1,
+      "93524843": 3,
+      "93525727": 2,
+      "93527510": 4
+    },
+    "cvar10_margin": -28318.0,
+    "draws": 0,
+    "games": 16,
+    "losses": 7,
+    "mean_margin": -2616.9375,
+    "nearest_distance_max": 2.813976679197553,
+    "nearest_distance_mean": 0.3816562277031037,
+    "neighbors": 5,
+    "win_rate": 0.5625,
+    "wins": 9,
+    "worst_margin": -31843.0
+  }
+}

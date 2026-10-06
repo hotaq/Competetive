@@ -1,0 +1,28 @@
+{
+  "agents": [
+    {
+      "episode_id": 293538238,
+      "agent_file": "artifacts/program_goal24_93538238_stage1/program_293538238.py",
+      "agent_sha256": "246dd42f8df62ece65546798fbe3016c87b879051b388266380f86e83e64497f",
+      "program": {
+        "program_id": 293538238,
+        "name": "goal24-93538238-stage1",
+        "segments": [
+          {
+            "start_step": 0,
+            "source_episode_id": 93816256
+          },
+          {
+            "start_step": 97,
+            "source_episode_id": 93513211
+          }
+        ],
+        "mutations": []
+      }
+    }
+  ],
+  "holdout": false,
+  "source_population": "artifacts/replay_tape_population_v10_train95/manifest.json",
+  "program_config": "rl/program_goal24_93538238_stage1.json",
+  "common_prefix_step": 97
+}

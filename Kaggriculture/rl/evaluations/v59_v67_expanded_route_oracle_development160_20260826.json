@@ -1,0 +1,2827 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-08-26T15:58:41.464366+00:00",
+  "protocol": {
+    "status": "post-unblind targeted development screen",
+    "base_routes": [
+      "base",
+      "a120",
+      "b120",
+      "c120"
+    ],
+    "additional_experts_screened": 30,
+    "targeting": "only prior oracle-loss rows at each stage",
+    "stop_condition": "targeted_sibling8 added zero wins",
+    "no_new_holdout_opened": true,
+    "policy_files_modified": false,
+    "uploaded": false
+  },
+  "sources": {
+    "core_report": "rl/evaluations/v59_v67_route_oracle_development160_20260826.json",
+    "league_manifest": "replays/top20_live_refresh_after_v67_20260826/manifest.json",
+    "portfolio_manifest": "artifacts/top20_route_portfolio7_20260826/manifest.json",
+    "population_manifest": "artifacts/top20_live_tapes80_20260826/manifest.json",
+    "stage2_selection": "8-medoid time-aware post-step120 behavior signatures",
+    "stage3_selection": "neighbors of rescue route 99598660 with submission diversity",
+    "stage4_selection": "siblings and neighbors of rescue routes 99564516 and 99594060"
+  },
+  "base_4route_oracle": {
+    "games": 160,
+    "wins": 134,
+    "draws": 0,
+    "losses": 26,
+    "win_rate": 0.8375,
+    "mean_margin": 11519.3875,
+    "median_margin": 5560.5,
+    "worst_margin": -15748.0,
+    "cvar10_margin": -4596.0,
+    "choice_counts": {
+      "base": 76,
+      "a120": 4,
+      "b120": 29,
+      "c120": 51
+    }
+  },
+  "expanded_targeted_oracle": {
+    "games": 160,
+    "wins": 148,
+    "losses": 12,
+    "draws": 0,
+    "win_rate": 0.925,
+    "mean_margin": 12149.2625,
+    "median_margin": 5979.5,
+    "worst_margin": -7816.0,
+    "cvar10_margin": -2132.3125,
+    "metric_note": "win count is exact over all screened schedules because only prior-loss rows can add wins; margin statistics are conservative because added routes were not run on prior-win rows"
+  },
+  "stage_progression": [
+    {
+      "stage": "portfolio6",
+      "entry_oracle_wins": 134,
+      "exit_oracle_wins": 144,
+      "added_wins": 10,
+      "routes": [
+        {
+          "route_id": "99578041",
+          "agent_file": "artifacts/top20_live_tapes80_20260826/tape_99578041_s1.py",
+          "agent_sha256": "a491f0cf8e18a5dd7f0d483fa162e9ff5e01b94ab2d65599989d85d053ab536c",
+          "evaluated_rows": 26,
+          "wins_on_evaluated_rows": 0,
+          "rescues_vs_stage_entry": 0,
+          "sanitized_steps": 0,
+          "all_719_transitions": true,
+          "runtime_seconds": 35.169864892959595
+        },
+        {
+          "route_id": "99582725",
+          "agent_file": "artifacts/top20_live_tapes80_20260826/tape_99582725_s0.py",
+          "agent_sha256": "8e2801c8c1c4292dc5679207e722a548d84933d9caac128c2bdbedb848583915",
+          "evaluated_rows": 26,
+          "wins_on_evaluated_rows": 6,
+          "rescues_vs_stage_entry": 6,
+          "sanitized_steps": 0,
+          "all_719_transitions": true,
+          "runtime_seconds": 35.129392862319946
+        },
+        {
+          "route_id": "99587277",
+          "agent_file": "artifacts/top20_live_tapes80_20260826/tape_99587277_s0.py",
+          "agent_sha256": "275cca8b0b478ad6fced37e1532d9088eb536e03683a1f4d9e2f8d3361c19a9b",
+          "evaluated_rows": 26,
+          "wins_on_evaluated_rows": 7,
+          "rescues_vs_stage_entry": 7,
+          "sanitized_steps": 0,
+          "all_719_transitions": true,
+          "runtime_seconds": 35.1484808921814
+        },
+        {
+          "route_id": "99589578",
+          "agent_file": "artifacts/top20_live_tapes80_20260826/tape_99589578_s0.py",
+          "agent_sha256": "4a961390cf3c824c09c481e43c66144f8e9d80b02c877cdba6ff03af4e73bf49",
+          "evaluated_rows": 26,
+          "wins_on_evaluated_rows": 2,
+          "rescues_vs_stage_entry": 2,
+          "sanitized_steps": 0,
+          "all_719_transitions": true,
+          "runtime_seconds": 35.164642095565796
+        },
+        {
+          "route_id": "99612231",
+          "agent_file": "artifacts/top20_live_tapes80_20260826/tape_99612231_s0.py",
+          "agent_sha256": "b2c77ad8f7c7031857b99e76cdc6f58d2e39ca4d96d36cc1b51a647ad31788dc",
+          "evaluated_rows": 26,
+          "wins_on_evaluated_rows": 2,
+          "rescues_vs_stage_entry": 2,
+          "sanitized_steps": 0,
+          "all_719_transitions": true,
+          "runtime_seconds": 35.13606119155884
+        },
+        {
+          "route_id": "99605418",
+          "agent_file": "artifacts/top20_live_tapes80_20260826/tape_99605418_s1.py",
+          "agent_sha256": "cce285c7900b60af5bf291be2f628b1ce3b5fcd41b51437f94ec7eb8a7961baf",
+          "evaluated_rows": 26,
+          "wins_on_evaluated_rows": 2,
+          "rescues_vs_stage_entry": 2,
+          "sanitized_steps": 0,
+          "all_719_transitions": true,
+          "runtime_seconds": 32.718114137649536
+        }
+      ]
+    },
+    {
+      "stage": "behavior_medoid8",
+      "entry_oracle_wins": 144,
+      "exit_oracle_wins": 146,
+      "added_wins": 2,
+      "routes": [
+        {
+          "route_id": "99443787",
+          "agent_file": "artifacts/top20_live_tapes80_20260826/tape_99443787_s1.py",
+          "agent_sha256": "ec0936732da3a01ed3505c5085a5cea25b91e809f9b5b1c0587adf6894e837f2",
+          "evaluated_rows": 16,
+          "wins_on_evaluated_rows": 0,
+          "rescues_vs_stage_entry": 0,
+          "sanitized_steps": 0,
+          "all_719_transitions": true,
+          "runtime_seconds": 20.857990980148315
+        },
+        {
+          "route_id": "99598660",
+          "agent_file": "artifacts/top20_live_tapes80_20260826/tape_99598660_s0.py",
+          "agent_sha256": "be62b4a296bd4fc4f418b5f09c482fc1c0122326882d5fcc74fbc928be2bdf88",
+          "evaluated_rows": 16,
+          "wins_on_evaluated_rows": 2,
+          "rescues_vs_stage_entry": 2,
+          "sanitized_steps": 0,
+          "all_719_transitions": true,
+          "runtime_seconds": 24.41838502883911
+        },
+        {
+          "route_id": "99566769",
+          "agent_file": "artifacts/top20_live_tapes80_20260826/tape_99566769_s1.py",
+          "agent_sha256": "caf952fb35080020a52e839950a4913d30557b248d2b153afbc46ef7282d9c3b",
+          "evaluated_rows": 16,
+          "wins_on_evaluated_rows": 0,
+          "rescues_vs_stage_entry": 0,
+          "sanitized_steps": 0,
+          "all_719_transitions": true,
+          "runtime_seconds": 21.298969984054565
+        },
+        {
+          "route_id": "99607808",
+          "agent_file": "artifacts/top20_live_tapes80_20260826/tape_99607808_s0.py",
+          "agent_sha256": "f9926ca8e1a69562a7d54740e7fbe76c6ec791630d765f3f06268150a412a80a",
+          "evaluated_rows": 16,
+          "wins_on_evaluated_rows": 0,
+          "rescues_vs_stage_entry": 0,
+          "sanitized_steps": 0,
+          "all_719_transitions": true,
+          "runtime_seconds": 22.10343289375305
+        },
+        {
+          "route_id": "99555424",
+          "agent_file": "artifacts/top20_live_tapes80_20260826/tape_99555424_s1.py",
+          "agent_sha256": "7e85406c76124ed3efb5c5f41afac9b894a4e8174b5531c8675305a1b04b212b",
+          "evaluated_rows": 16,
+          "wins_on_evaluated_rows": 0,
+          "rescues_vs_stage_entry": 0,
+          "sanitized_steps": 0,
+          "all_719_transitions": true,
+          "runtime_seconds": 20.478258848190308
+        },
+        {
+          "route_id": "99548632",
+          "agent_file": "artifacts/top20_live_tapes80_20260826/tape_99548632_s0.py",
+          "agent_sha256": "34488117286449f4be8ac5387bb181c42426bee4ad5848777af865457e03f7df",
+          "evaluated_rows": 16,
+          "wins_on_evaluated_rows": 0,
+          "rescues_vs_stage_entry": 0,
+          "sanitized_steps": 0,
+          "all_719_transitions": true,
+          "runtime_seconds": 25.16389799118042
+        },
+        {
+          "route_id": "99571388",
+          "agent_file": "artifacts/top20_live_tapes80_20260826/tape_99571388_s1.py",
+          "agent_sha256": "36993ad405c6f66a54bf44e3161661e659b94145671551c9aabb357104249ce7",
+          "evaluated_rows": 16,
+          "wins_on_evaluated_rows": 0,
+          "rescues_vs_stage_entry": 0,
+          "sanitized_steps": 0,
+          "all_719_transitions": true,
+          "runtime_seconds": 21.829051971435547
+        },
+        {
+          "route_id": "99594187",
+          "agent_file": "artifacts/top20_live_tapes80_20260826/tape_99594187_s1.py",
+          "agent_sha256": "5caefeb46cec9f03f5ca80c1ba32bc57e294370685ae06d12ab7be202590a75a",
+          "evaluated_rows": 16,
+          "wins_on_evaluated_rows": 0,
+          "rescues_vs_stage_entry": 0,
+          "sanitized_steps": 0,
+          "all_719_transitions": true,
+          "runtime_seconds": 20.522508144378662
+        }
+      ]
+    },
+    {
+      "stage": "rescue_neighbor8",
+      "entry_oracle_wins": 146,
+      "exit_oracle_wins": 148,
+      "added_wins": 2,
+      "routes": [
+        {
+          "route_id": "99559935",
+          "agent_file": "artifacts/top20_live_tapes80_20260826/tape_99559935_s1.py",
+          "agent_sha256": "e90872fd358c96fc00a8618675721561567fca4994fb754973cd56a26c03a1ec",
+          "evaluated_rows": 14,
+          "wins_on_evaluated_rows": 0,
+          "rescues_vs_stage_entry": 0,
+          "sanitized_steps": 0,
+          "all_719_transitions": true,
+          "runtime_seconds": 26.511653900146484
+        },
+        {
+          "route_id": "99603120",
+          "agent_file": "artifacts/top20_live_tapes80_20260826/tape_99603120_s0.py",
+          "agent_sha256": "e29a4c5c54672f6f06b37fc3cc424b0fd9fe437e29f89d339883a00a06ba1a8f",
+          "evaluated_rows": 14,
+          "wins_on_evaluated_rows": 0,
+          "rescues_vs_stage_entry": 0,
+          "sanitized_steps": 0,
+          "all_719_transitions": true,
+          "runtime_seconds": 27.718959093093872
+        },
+        {
+          "route_id": "99564516",
+          "agent_file": "artifacts/top20_live_tapes80_20260826/tape_99564516_s0.py",
+          "agent_sha256": "3fc4ef2773dee4c3faf7cf4612d52f0b763e8a4de14b7d10b20dec42861fb5d5",
+          "evaluated_rows": 14,
+          "wins_on_evaluated_rows": 1,
+          "rescues_vs_stage_entry": 1,
+          "sanitized_steps": 0,
+          "all_719_transitions": true,
+          "runtime_seconds": 26.14875316619873
+        },
+        {
+          "route_id": "99616872",
+          "agent_file": "artifacts/top20_live_tapes80_20260826/tape_99616872_s0.py",
+          "agent_sha256": "43853d50568196cc2db710a586eb104c2b1cc95e2d1d8259a6199da463b31fd4",
+          "evaluated_rows": 14,
+          "wins_on_evaluated_rows": 0,
+          "rescues_vs_stage_entry": 0,
+          "sanitized_steps": 0,
+          "all_719_transitions": true,
+          "runtime_seconds": 26.16773009300232
+        },
+        {
+          "route_id": "99594060",
+          "agent_file": "artifacts/top20_live_tapes80_20260826/tape_99594060_s1.py",
+          "agent_sha256": "d255511a5c8477ef7094828999142cff6f32b7c7c022f257f3be8e613f971e9f",
+          "evaluated_rows": 14,
+          "wins_on_evaluated_rows": 1,
+          "rescues_vs_stage_entry": 1,
+          "sanitized_steps": 0,
+          "all_719_transitions": true,
+          "runtime_seconds": 25.849278926849365
+        },
+        {
+          "route_id": "99573625",
+          "agent_file": "artifacts/top20_live_tapes80_20260826/tape_99573625_s1.py",
+          "agent_sha256": "4ee4a07e4070f931ad63c0c70ea36144f971baf2af7c4f7b2d50eff6e7219c2c",
+          "evaluated_rows": 14,
+          "wins_on_evaluated_rows": 0,
+          "rescues_vs_stage_entry": 0,
+          "sanitized_steps": 0,
+          "all_719_transitions": true,
+          "runtime_seconds": 27.258630990982056
+        },
+        {
+          "route_id": "99628242",
+          "agent_file": "artifacts/top20_live_tapes80_20260826/tape_99628242_s0.py",
+          "agent_sha256": "3da70ca75229fbb293e371234523852525fa527c4189a055d9afa0d1c6909b54",
+          "evaluated_rows": 14,
+          "wins_on_evaluated_rows": 0,
+          "rescues_vs_stage_entry": 0,
+          "sanitized_steps": 0,
+          "all_719_transitions": true,
+          "runtime_seconds": 27.490391969680786
+        },
+        {
+          "route_id": "99507504",
+          "agent_file": "artifacts/top20_live_tapes80_20260826/tape_99507504_s1.py",
+          "agent_sha256": "79871a03fac5611bdd0e0498a5cb0d96ab63c0d04b07261e9d108afde29ce805",
+          "evaluated_rows": 14,
+          "wins_on_evaluated_rows": 0,
+          "rescues_vs_stage_entry": 0,
+          "sanitized_steps": 0,
+          "all_719_transitions": true,
+          "runtime_seconds": 27.58877420425415
+        }
+      ]
+    },
+    {
+      "stage": "targeted_sibling8",
+      "entry_oracle_wins": 148,
+      "exit_oracle_wins": 148,
+      "added_wins": 0,
+      "routes": [
+        {
+          "route_id": "99610159",
+          "agent_file": "artifacts/top20_live_tapes80_20260826/tape_99610159_s0.py",
+          "agent_sha256": "b1a607e6fbe2db15c60311af650f094d59a972ba6c610bae77e907123689283d",
+          "evaluated_rows": 12,
+          "wins_on_evaluated_rows": 0,
+          "rescues_vs_stage_entry": 0,
+          "sanitized_steps": 0,
+          "all_719_transitions": true,
+          "runtime_seconds": 18.000656127929688
+        },
+        {
+          "route_id": "99582814",
+          "agent_file": "artifacts/top20_live_tapes80_20260826/tape_99582814_s1.py",
+          "agent_sha256": "176ada372c224749971600b99ffbd461451db819cf869d9b35ca0ee33b7d9762",
+          "evaluated_rows": 12,
+          "wins_on_evaluated_rows": 0,
+          "rescues_vs_stage_entry": 0,
+          "sanitized_steps": 0,
+          "all_719_transitions": true,
+          "runtime_seconds": 17.842002868652344
+        },
+        {
+          "route_id": "99541821",
+          "agent_file": "artifacts/top20_live_tapes80_20260826/tape_99541821_s0.py",
+          "agent_sha256": "062093615a3e997a5e31093830f035a5a305d48004816bada99c692aea9d922e",
+          "evaluated_rows": 12,
+          "wins_on_evaluated_rows": 0,
+          "rescues_vs_stage_entry": 0,
+          "sanitized_steps": 0,
+          "all_719_transitions": true,
+          "runtime_seconds": 17.312232971191406
+        },
+        {
+          "route_id": "99621522",
+          "agent_file": "artifacts/top20_live_tapes80_20260826/tape_99621522_s0.py",
+          "agent_sha256": "f1e16eb2599279dfcde0ffd3a91f9747efa5b65cb6172948594323eed71c6138",
+          "evaluated_rows": 12,
+          "wins_on_evaluated_rows": 0,
+          "rescues_vs_stage_entry": 0,
+          "sanitized_steps": 0,
+          "all_719_transitions": true,
+          "runtime_seconds": 17.566166877746582
+        },
+        {
+          "route_id": "99616872s1",
+          "agent_file": "artifacts/top20_live_tapes80_20260826/tape_99616872_s1.py",
+          "agent_sha256": "252c3e0fce27524374737ded37f8ffa141672dc2e77fc94682e5281cc4f4996e",
+          "evaluated_rows": 12,
+          "wins_on_evaluated_rows": 0,
+          "rescues_vs_stage_entry": 0,
+          "sanitized_steps": 0,
+          "all_719_transitions": true,
+          "runtime_seconds": 15.727370023727417
+        },
+        {
+          "route_id": "99598515",
+          "agent_file": "artifacts/top20_live_tapes80_20260826/tape_99598515_s0.py",
+          "agent_sha256": "43789fd1792074950eec0f85001e917a8670b1fc5de302c0aed673b0b3586a86",
+          "evaluated_rows": 12,
+          "wins_on_evaluated_rows": 0,
+          "rescues_vs_stage_entry": 0,
+          "sanitized_steps": 0,
+          "all_719_transitions": true,
+          "runtime_seconds": 17.468060970306396
+        },
+        {
+          "route_id": "99589439",
+          "agent_file": "artifacts/top20_live_tapes80_20260826/tape_99589439_s0.py",
+          "agent_sha256": "f89dd639235833f61f528de3d9cde1ec884d3621f628d3da6df002f43e4472a2",
+          "evaluated_rows": 12,
+          "wins_on_evaluated_rows": 0,
+          "rescues_vs_stage_entry": 0,
+          "sanitized_steps": 0,
+          "all_719_transitions": true,
+          "runtime_seconds": 17.740324020385742
+        },
+        {
+          "route_id": "99587164",
+          "agent_file": "artifacts/top20_live_tapes80_20260826/tape_99587164_s1.py",
+          "agent_sha256": "fbec06b903bb67faf38dd0a8d9f1bd8c281ce5b3fd033a6246f7eb7befa10d4f",
+          "evaluated_rows": 12,
+          "wins_on_evaluated_rows": 0,
+          "rescues_vs_stage_entry": 0,
+          "sanitized_steps": 0,
+          "all_719_transitions": true,
+          "runtime_seconds": 17.71074366569519
+        }
+      ]
+    }
+  ],
+  "minimal_greedy_rescue_portfolio": [
+    {
+      "route_id": "99587277",
+      "new_rescues": 7,
+      "episode_keys": [
+        {
+          "episode_id": 99974958,
+          "top1_seat": 0
+        },
+        {
+          "episode_id": 99997839,
+          "top1_seat": 1
+        },
+        {
+          "episode_id": 100004715,
+          "top1_seat": 1
+        },
+        {
+          "episode_id": 100032174,
+          "top1_seat": 1
+        },
+        {
+          "episode_id": 100050323,
+          "top1_seat": 1
+        },
+        {
+          "episode_id": 100075623,
+          "top1_seat": 1
+        },
+        {
+          "episode_id": 100093845,
+          "top1_seat": 0
+        }
+      ]
+    },
+    {
+      "route_id": "99605418",
+      "new_rescues": 2,
+      "episode_keys": [
+        {
+          "episode_id": 100018528,
+          "top1_seat": 0
+        },
+        {
+          "episode_id": 100029868,
+          "top1_seat": 1
+        }
+      ]
+    },
+    {
+      "route_id": "99598660",
+      "new_rescues": 2,
+      "episode_keys": [
+        {
+          "episode_id": 99808519,
+          "top1_seat": 0
+        },
+        {
+          "episode_id": 100013965,
+          "top1_seat": 0
+        }
+      ]
+    },
+    {
+      "route_id": "99612231",
+      "new_rescues": 1,
+      "episode_keys": [
+        {
+          "episode_id": 100075627,
+          "top1_seat": 0
+        }
+      ]
+    },
+    {
+      "route_id": "99564516",
+      "new_rescues": 1,
+      "episode_keys": [
+        {
+          "episode_id": 100066330,
+          "top1_seat": 0
+        }
+      ]
+    },
+    {
+      "route_id": "99594060",
+      "new_rescues": 1,
+      "episode_keys": [
+        {
+          "episode_id": 100064207,
+          "top1_seat": 0
+        }
+      ]
+    }
+  ],
+  "greedy_rescue_route_composition": {
+    "99587277": {
+      "market_top": [
+        [
+          "SELL:STRAWBERRY",
+          493.0
+        ],
+        [
+          "SELL:MILK",
+          409.0
+        ],
+        [
+          "SELL:FERTILIZER",
+          389.0
+        ],
+        [
+          "SELL:WHEAT",
+          326.0
+        ],
+        [
+          "SELL:WOOL",
+          215.0
+        ],
+        [
+          "BUY_SEED:WHEAT",
+          125.0
+        ],
+        [
+          "BUY_PRODUCT:WHEAT",
+          80.0
+        ],
+        [
+          "SELL:MELON",
+          72.0
+        ],
+        [
+          "SELL:CARROT",
+          71.0
+        ],
+        [
+          "BUY_SEED:STRAWBERRY",
+          38.0
+        ],
+        [
+          "BUY_SEED:CARROT",
+          20.0
+        ],
+        [
+          "BUY_ANIMAL:COW",
+          10.0
+        ]
+      ],
+      "units_top": [
+        [
+          "NORTH:",
+          942
+        ],
+        [
+          "WATER:",
+          923
+        ],
+        [
+          "WEST:",
+          883
+        ],
+        [
+          "EAST:",
+          758
+        ],
+        [
+          "SOUTH:",
+          729
+        ],
+        [
+          "HARVEST:",
+          415
+        ],
+        [
+          "FEED:",
+          326
+        ],
+        [
+          "CARE:",
+          321
+        ],
+        [
+          "COLLECT_FERTILIZER:",
+          320
+        ],
+        [
+          "PASS:",
+          307
+        ],
+        [
+          "PICKUP:WHEAT",
+          220
+        ],
+        [
+          "DROP:",
+          130
+        ]
+      ]
+    },
+    "99605418": {
+      "market_top": [
+        [
+          "SELL:FERTILIZER",
+          289.0
+        ],
+        [
+          "SELL:WOOL",
+          277.0
+        ],
+        [
+          "SELL:STRAWBERRY",
+          247.0
+        ],
+        [
+          "SELL:WHEAT",
+          208.0
+        ],
+        [
+          "SELL:MILK",
+          164.0
+        ],
+        [
+          "BUY_SEED:WHEAT",
+          117.0
+        ],
+        [
+          "BUY_PRODUCT:WHEAT",
+          94.0
+        ],
+        [
+          "SELL:MELON",
+          66.0
+        ],
+        [
+          "BUY_SEED:STRAWBERRY",
+          29.0
+        ],
+        [
+          "SELL:CARROT",
+          27.0
+        ],
+        [
+          "BUY_SEED:CARROT",
+          12.0
+        ],
+        [
+          "BUY_ANIMAL:SHEEP",
+          6.0
+        ]
+      ],
+      "units_top": [
+        [
+          "WEST:",
+          851
+        ],
+        [
+          "WATER:",
+          831
+        ],
+        [
+          "NORTH:",
+          824
+        ],
+        [
+          "EAST:",
+          667
+        ],
+        [
+          "SOUTH:",
+          630
+        ],
+        [
+          "HARVEST:",
+          373
+        ],
+        [
+          "CARE:",
+          347
+        ],
+        [
+          "FEED:",
+          344
+        ],
+        [
+          "COLLECT_FERTILIZER:",
+          343
+        ],
+        [
+          "PASS:",
+          224
+        ],
+        [
+          "PICKUP:WHEAT",
+          192
+        ],
+        [
+          "PLANT:WHEAT",
+          117
+        ]
+      ]
+    },
+    "99598660": {
+      "market_top": [
+        [
+          "SELL:STRAWBERRY",
+          307.0
+        ],
+        [
+          "SELL:FERTILIZER",
+          279.0
+        ],
+        [
+          "SELL:WOOL",
+          266.0
+        ],
+        [
+          "SELL:WHEAT",
+          185.0
+        ],
+        [
+          "SELL:MILK",
+          154.0
+        ],
+        [
+          "BUY_SEED:WHEAT",
+          114.0
+        ],
+        [
+          "BUY_PRODUCT:WHEAT",
+          101.0
+        ],
+        [
+          "SELL:MELON",
+          66.0
+        ],
+        [
+          "BUY_SEED:STRAWBERRY",
+          33.0
+        ],
+        [
+          "SELL:CARROT",
+          24.0
+        ],
+        [
+          "BUY_SEED:CARROT",
+          12.0
+        ],
+        [
+          "BUY_ANIMAL:SHEEP",
+          6.0
+        ]
+      ],
+      "units_top": [
+        [
+          "NORTH:",
+          882
+        ],
+        [
+          "WEST:",
+          877
+        ],
+        [
+          "WATER:",
+          867
+        ],
+        [
+          "EAST:",
+          750
+        ],
+        [
+          "SOUTH:",
+          673
+        ],
+        [
+          "HARVEST:",
+          393
+        ],
+        [
+          "COLLECT_FERTILIZER:",
+          344
+        ],
+        [
+          "CARE:",
+          343
+        ],
+        [
+          "FEED:",
+          338
+        ],
+        [
+          "PASS:",
+          277
+        ],
+        [
+          "PICKUP:WHEAT",
+          210
+        ],
+        [
+          "PLANT:WHEAT",
+          113
+        ]
+      ]
+    },
+    "99612231": {
+      "market_top": [
+        [
+          "SELL:FERTILIZER",
+          388.0
+        ],
+        [
+          "SELL:MILK",
+          338.0
+        ],
+        [
+          "SELL:STRAWBERRY",
+          327.0
+        ],
+        [
+          "SELL:WHEAT",
+          326.0
+        ],
+        [
+          "SELL:WOOL",
+          186.0
+        ],
+        [
+          "BUY_SEED:WHEAT",
+          119.0
+        ],
+        [
+          "SELL:MELON",
+          82.0
+        ],
+        [
+          "BUY_PRODUCT:WHEAT",
+          80.0
+        ],
+        [
+          "SELL:CARROT",
+          57.0
+        ],
+        [
+          "BUY_SEED:STRAWBERRY",
+          41.0
+        ],
+        [
+          "BUY_SEED:CARROT",
+          20.0
+        ],
+        [
+          "BUY_ANIMAL:COW",
+          10.0
+        ]
+      ],
+      "units_top": [
+        [
+          "NORTH:",
+          946
+        ],
+        [
+          "WATER:",
+          925
+        ],
+        [
+          "WEST:",
+          884
+        ],
+        [
+          "EAST:",
+          758
+        ],
+        [
+          "SOUTH:",
+          736
+        ],
+        [
+          "HARVEST:",
+          415
+        ],
+        [
+          "FEED:",
+          322
+        ],
+        [
+          "CARE:",
+          322
+        ],
+        [
+          "COLLECT_FERTILIZER:",
+          321
+        ],
+        [
+          "PASS:",
+          311
+        ],
+        [
+          "PICKUP:WHEAT",
+          220
+        ],
+        [
+          "DROP:",
+          135
+        ]
+      ]
+    },
+    "99564516": {
+      "market_top": [
+        [
+          "SELL:WHEAT",
+          1584.0
+        ],
+        [
+          "BUY_PRODUCT:WHEAT",
+          1515.0
+        ],
+        [
+          "SELL:FERTILIZER",
+          292.0
+        ],
+        [
+          "SELL:STRAWBERRY",
+          282.0
+        ],
+        [
+          "SELL:WOOL",
+          266.0
+        ],
+        [
+          "SELL:MILK",
+          154.0
+        ],
+        [
+          "BUY_SEED:WHEAT",
+          114.0
+        ],
+        [
+          "SELL:MELON",
+          65.0
+        ],
+        [
+          "BUY_SEED:STRAWBERRY",
+          33.0
+        ],
+        [
+          "SELL:CARROT",
+          20.0
+        ],
+        [
+          "BUY_SEED:CARROT",
+          12.0
+        ],
+        [
+          "BUY_ANIMAL:SHEEP",
+          6.0
+        ]
+      ],
+      "units_top": [
+        [
+          "WEST:",
+          874
+        ],
+        [
+          "NORTH:",
+          872
+        ],
+        [
+          "WATER:",
+          853
+        ],
+        [
+          "EAST:",
+          739
+        ],
+        [
+          "SOUTH:",
+          671
+        ],
+        [
+          "HARVEST:",
+          391
+        ],
+        [
+          "COLLECT_FERTILIZER:",
+          344
+        ],
+        [
+          "CARE:",
+          343
+        ],
+        [
+          "FEED:",
+          338
+        ],
+        [
+          "PASS:",
+          277
+        ],
+        [
+          "PICKUP:WHEAT",
+          210
+        ],
+        [
+          "PLANT:WHEAT",
+          113
+        ]
+      ]
+    },
+    "99594060": {
+      "market_top": [
+        [
+          "SELL:WOOL",
+          294.0
+        ],
+        [
+          "SELL:FERTILIZER",
+          287.0
+        ],
+        [
+          "SELL:STRAWBERRY",
+          276.0
+        ],
+        [
+          "SELL:WHEAT",
+          215.0
+        ],
+        [
+          "SELL:MILK",
+          167.0
+        ],
+        [
+          "BUY_SEED:WHEAT",
+          117.0
+        ],
+        [
+          "BUY_PRODUCT:WHEAT",
+          94.0
+        ],
+        [
+          "SELL:MELON",
+          72.0
+        ],
+        [
+          "BUY_SEED:STRAWBERRY",
+          29.0
+        ],
+        [
+          "SELL:CARROT",
+          27.0
+        ],
+        [
+          "BUY_SEED:CARROT",
+          12.0
+        ],
+        [
+          "BUY_ANIMAL:SHEEP",
+          6.0
+        ]
+      ],
+      "units_top": [
+        [
+          "WEST:",
+          851
+        ],
+        [
+          "WATER:",
+          831
+        ],
+        [
+          "NORTH:",
+          824
+        ],
+        [
+          "EAST:",
+          667
+        ],
+        [
+          "SOUTH:",
+          630
+        ],
+        [
+          "HARVEST:",
+          373
+        ],
+        [
+          "CARE:",
+          347
+        ],
+        [
+          "FEED:",
+          344
+        ],
+        [
+          "COLLECT_FERTILIZER:",
+          343
+        ],
+        [
+          "PASS:",
+          224
+        ],
+        [
+          "PICKUP:WHEAT",
+          192
+        ],
+        [
+          "PLANT:WHEAT",
+          117
+        ]
+      ]
+    }
+  },
+  "rescued_original_oracle_losses": [
+    {
+      "episode_id": 100075623,
+      "top1_seat": 1,
+      "team_id": 16705390,
+      "team_name": "Subramanya N",
+      "original4_best_margin": -1546.0,
+      "expanded_best_margin": 18429.0,
+      "expanded_best_source": "99612231"
+    },
+    {
+      "episode_id": 99808519,
+      "top1_seat": 0,
+      "team_id": 16727266,
+      "team_name": "ebisu_ya",
+      "original4_best_margin": -4057.0,
+      "expanded_best_margin": 11442.0,
+      "expanded_best_source": "99598660"
+    },
+    {
+      "episode_id": 100013965,
+      "top1_seat": 0,
+      "team_id": 16714457,
+      "team_name": "Crop Dusta",
+      "original4_best_margin": -6649.0,
+      "expanded_best_margin": 6145.0,
+      "expanded_best_source": "99598660"
+    },
+    {
+      "episode_id": 100032174,
+      "top1_seat": 1,
+      "team_id": 16715733,
+      "team_name": "peikopon",
+      "original4_best_margin": -1134.0,
+      "expanded_best_margin": 4898.0,
+      "expanded_best_source": "99582725"
+    },
+    {
+      "episode_id": 100029868,
+      "top1_seat": 1,
+      "team_id": 16623716,
+      "team_name": "tetsuya",
+      "original4_best_margin": -4384.0,
+      "expanded_best_margin": 1308.0,
+      "expanded_best_source": "99605418"
+    },
+    {
+      "episode_id": 100004715,
+      "top1_seat": 1,
+      "team_id": 16665224,
+      "team_name": "tyz123456",
+      "original4_best_margin": -556.0,
+      "expanded_best_margin": 4747.0,
+      "expanded_best_source": "99587277"
+    },
+    {
+      "episode_id": 100066330,
+      "top1_seat": 0,
+      "team_id": 16685548,
+      "team_name": "Erfan Eshratifar",
+      "original4_best_margin": -3793.0,
+      "expanded_best_margin": 199.0,
+      "expanded_best_source": "99564516"
+    },
+    {
+      "episode_id": 100064207,
+      "top1_seat": 0,
+      "team_id": 16671476,
+      "team_name": "Mingkang YAN",
+      "original4_best_margin": -2248.0,
+      "expanded_best_margin": 1720.0,
+      "expanded_best_source": "99594060"
+    },
+    {
+      "episode_id": 99997839,
+      "top1_seat": 1,
+      "team_id": 16673205,
+      "team_name": "Arda Ceylan",
+      "original4_best_margin": -819.0,
+      "expanded_best_margin": 1559.0,
+      "expanded_best_source": "99587277"
+    },
+    {
+      "episode_id": 100093845,
+      "top1_seat": 0,
+      "team_id": 16623716,
+      "team_name": "tetsuya",
+      "original4_best_margin": -456.0,
+      "expanded_best_margin": 1905.0,
+      "expanded_best_source": "99582725"
+    },
+    {
+      "episode_id": 100050323,
+      "top1_seat": 1,
+      "team_id": 16685548,
+      "team_name": "Erfan Eshratifar",
+      "original4_best_margin": -1115.0,
+      "expanded_best_margin": 1030.0,
+      "expanded_best_source": "99582725"
+    },
+    {
+      "episode_id": 100018528,
+      "top1_seat": 0,
+      "team_id": 16623608,
+      "team_name": "Dmitry Larko",
+      "original4_best_margin": -599.0,
+      "expanded_best_margin": 1486.0,
+      "expanded_best_source": "99605418"
+    },
+    {
+      "episode_id": 100075627,
+      "top1_seat": 0,
+      "team_id": 16644287,
+      "team_name": "Ryo Hasegawa",
+      "original4_best_margin": -416.0,
+      "expanded_best_margin": 440.0,
+      "expanded_best_source": "99612231"
+    },
+    {
+      "episode_id": 99974958,
+      "top1_seat": 0,
+      "team_id": 16670032,
+      "team_name": "Kenjo1209",
+      "original4_best_margin": -74.0,
+      "expanded_best_margin": 487.0,
+      "expanded_best_source": "99587277"
+    }
+  ],
+  "remaining_losses": [
+    {
+      "episode_id": 100007008,
+      "top1_seat": 1,
+      "team_id": 16704466,
+      "team_name": "QQ Farming",
+      "original4_best_margin": -7816.0,
+      "expanded_best_margin": -7816.0,
+      "expanded_best_source": "original4"
+    },
+    {
+      "episode_id": 99986573,
+      "top1_seat": 1,
+      "team_id": 16730065,
+      "team_name": "Blu3s",
+      "original4_best_margin": -6591.0,
+      "expanded_best_margin": -4927.0,
+      "expanded_best_source": "99582814"
+    },
+    {
+      "episode_id": 100054967,
+      "top1_seat": 1,
+      "team_id": 16671476,
+      "team_name": "Mingkang YAN",
+      "original4_best_margin": -4119.0,
+      "expanded_best_margin": -4119.0,
+      "expanded_best_source": "original4"
+    },
+    {
+      "episode_id": 99879123,
+      "top1_seat": 1,
+      "team_id": 16730065,
+      "team_name": "Blu3s",
+      "original4_best_margin": -3544.0,
+      "expanded_best_margin": -3544.0,
+      "expanded_best_source": "original4"
+    },
+    {
+      "episode_id": 100075620,
+      "top1_seat": 1,
+      "team_id": 16730065,
+      "team_name": "Blu3s",
+      "original4_best_margin": -3440.0,
+      "expanded_best_margin": -3440.0,
+      "expanded_best_source": "original4"
+    },
+    {
+      "episode_id": 100013966,
+      "top1_seat": 0,
+      "team_id": 16730065,
+      "team_name": "Blu3s",
+      "original4_best_margin": -2763.0,
+      "expanded_best_margin": -2763.0,
+      "expanded_best_source": "original4"
+    },
+    {
+      "episode_id": 100061842,
+      "top1_seat": 1,
+      "team_id": 16671476,
+      "team_name": "Mingkang YAN",
+      "original4_best_margin": -2686.0,
+      "expanded_best_margin": -2686.0,
+      "expanded_best_source": "original4"
+    },
+    {
+      "episode_id": 99986486,
+      "top1_seat": 1,
+      "team_id": 16732578,
+      "team_name": "nao.kwmr",
+      "original4_best_margin": -15748.0,
+      "expanded_best_margin": -1693.0,
+      "expanded_best_source": "99559935"
+    },
+    {
+      "episode_id": 100006958,
+      "top1_seat": 0,
+      "team_id": 16673205,
+      "team_name": "Arda Ceylan",
+      "original4_best_margin": -3018.0,
+      "expanded_best_margin": -1598.0,
+      "expanded_best_source": "99605418"
+    },
+    {
+      "episode_id": 99979758,
+      "top1_seat": 1,
+      "team_id": 16730065,
+      "team_name": "Blu3s",
+      "original4_best_margin": -939.0,
+      "expanded_best_margin": -939.0,
+      "expanded_best_source": "original4"
+    },
+    {
+      "episode_id": 99856427,
+      "top1_seat": 0,
+      "team_id": 16730065,
+      "team_name": "Blu3s",
+      "original4_best_margin": -555.0,
+      "expanded_best_margin": -555.0,
+      "expanded_best_source": "original4"
+    },
+    {
+      "episode_id": 100045947,
+      "top1_seat": 1,
+      "team_id": 16715733,
+      "team_name": "peikopon",
+      "original4_best_margin": -386.0,
+      "expanded_best_margin": -386.0,
+      "expanded_best_source": "original4"
+    }
+  ],
+  "observable_feature_analysis": {
+    "feature_histories": {
+      "pre120": [
+        24,
+        48,
+        72,
+        96
+      ],
+      "at120": [
+        120
+      ],
+      "pre_and_at": [
+        24,
+        48,
+        72,
+        96,
+        120
+      ]
+    },
+    "mode": "economy: player/clock/money/shared prices/private shed/seeds/unit inventory",
+    "best_lofo_by_family_and_history": {
+      "v59": {
+        "pre120": {
+          "family": "v59",
+          "history": "pre120",
+          "mode": "economy",
+          "alpha": 100.0,
+          "switch_penalty": 10000.0,
+          "score": {
+            "games": 160,
+            "wins": 106,
+            "draws": 0,
+            "losses": 54,
+            "win_rate": 0.6625,
+            "mean_margin": 6004.21875,
+            "median_margin": 1950.5,
+            "worst_margin": -52353.0,
+            "cvar10_margin": -20429.625,
+            "choice_counts": {
+              "base": 139,
+              "a120": 0,
+              "b120": 1,
+              "c120": 20
+            }
+          }
+        },
+        "at120": {
+          "family": "v59",
+          "history": "at120",
+          "mode": "economy",
+          "alpha": 0.1,
+          "switch_penalty": 10000.0,
+          "score": {
+            "games": 160,
+            "wins": 106,
+            "draws": 0,
+            "losses": 54,
+            "win_rate": 0.6625,
+            "mean_margin": 6048.4625,
+            "median_margin": 1950.5,
+            "worst_margin": -31739.0,
+            "cvar10_margin": -17389.75,
+            "choice_counts": {
+              "base": 134,
+              "a120": 0,
+              "b120": 1,
+              "c120": 25
+            }
+          }
+        },
+        "pre_and_at": {
+          "family": "v59",
+          "history": "pre_and_at",
+          "mode": "economy",
+          "alpha": 100.0,
+          "switch_penalty": 0.0,
+          "score": {
+            "games": 160,
+            "wins": 108,
+            "draws": 0,
+            "losses": 52,
+            "win_rate": 0.675,
+            "mean_margin": 5928.75,
+            "median_margin": 2133.0,
+            "worst_margin": -31739.0,
+            "cvar10_margin": -18731.3125,
+            "choice_counts": {
+              "base": 113,
+              "a120": 0,
+              "b120": 18,
+              "c120": 29
+            }
+          }
+        }
+      },
+      "v67": {
+        "pre120": {
+          "family": "v67",
+          "history": "pre120",
+          "mode": "economy",
+          "alpha": 100.0,
+          "switch_penalty": 5000.0,
+          "score": {
+            "games": 160,
+            "wins": 106,
+            "draws": 0,
+            "losses": 54,
+            "win_rate": 0.6625,
+            "mean_margin": 5467.30625,
+            "median_margin": 2609.5,
+            "worst_margin": -52486.0,
+            "cvar10_margin": -21605.9375,
+            "choice_counts": {
+              "base": 134,
+              "a120": 0,
+              "b120": 4,
+              "c120": 22
+            }
+          }
+        },
+        "at120": {
+          "family": "v67",
+          "history": "at120",
+          "mode": "economy",
+          "alpha": 1.0,
+          "switch_penalty": 10000.0,
+          "score": {
+            "games": 160,
+            "wins": 107,
+            "draws": 0,
+            "losses": 53,
+            "win_rate": 0.66875,
+            "mean_margin": 5656.86875,
+            "median_margin": 2609.5,
+            "worst_margin": -31605.0,
+            "cvar10_margin": -18399.125,
+            "choice_counts": {
+              "base": 134,
+              "a120": 0,
+              "b120": 2,
+              "c120": 24
+            }
+          }
+        },
+        "pre_and_at": {
+          "family": "v67",
+          "history": "pre_and_at",
+          "mode": "economy",
+          "alpha": 100.0,
+          "switch_penalty": 2500.0,
+          "score": {
+            "games": 160,
+            "wins": 107,
+            "draws": 0,
+            "losses": 53,
+            "win_rate": 0.66875,
+            "mean_margin": 5278.89375,
+            "median_margin": 2358.0,
+            "worst_margin": -31605.0,
+            "cvar10_margin": -19107.25,
+            "choice_counts": {
+              "base": 122,
+              "a120": 0,
+              "b120": 12,
+              "c120": 26
+            }
+          }
+        }
+      }
+    },
+    "top_lofo_searches": [
+      {
+        "family": "v59",
+        "history": "pre_and_at",
+        "mode": "economy",
+        "alpha": 100.0,
+        "switch_penalty": 0.0,
+        "score": {
+          "games": 160,
+          "wins": 108,
+          "draws": 0,
+          "losses": 52,
+          "win_rate": 0.675,
+          "mean_margin": 5928.75,
+          "median_margin": 2133.0,
+          "worst_margin": -31739.0,
+          "cvar10_margin": -18731.3125,
+          "choice_counts": {
+            "base": 113,
+            "a120": 0,
+            "b120": 18,
+            "c120": 29
+          }
+        }
+      },
+      {
+        "family": "v67",
+        "history": "at120",
+        "mode": "economy",
+        "alpha": 1.0,
+        "switch_penalty": 10000.0,
+        "score": {
+          "games": 160,
+          "wins": 107,
+          "draws": 0,
+          "losses": 53,
+          "win_rate": 0.66875,
+          "mean_margin": 5656.86875,
+          "median_margin": 2609.5,
+          "worst_margin": -31605.0,
+          "cvar10_margin": -18399.125,
+          "choice_counts": {
+            "base": 134,
+            "a120": 0,
+            "b120": 2,
+            "c120": 24
+          }
+        }
+      },
+      {
+        "family": "v67",
+        "history": "at120",
+        "mode": "economy",
+        "alpha": 10.0,
+        "switch_penalty": 10000.0,
+        "score": {
+          "games": 160,
+          "wins": 107,
+          "draws": 0,
+          "losses": 53,
+          "win_rate": 0.66875,
+          "mean_margin": 5591.50625,
+          "median_margin": 2609.5,
+          "worst_margin": -31605.0,
+          "cvar10_margin": -18491.75,
+          "choice_counts": {
+            "base": 137,
+            "a120": 0,
+            "b120": 0,
+            "c120": 23
+          }
+        }
+      },
+      {
+        "family": "v67",
+        "history": "pre_and_at",
+        "mode": "economy",
+        "alpha": 100.0,
+        "switch_penalty": 2500.0,
+        "score": {
+          "games": 160,
+          "wins": 107,
+          "draws": 0,
+          "losses": 53,
+          "win_rate": 0.66875,
+          "mean_margin": 5278.89375,
+          "median_margin": 2358.0,
+          "worst_margin": -31605.0,
+          "cvar10_margin": -19107.25,
+          "choice_counts": {
+            "base": 122,
+            "a120": 0,
+            "b120": 12,
+            "c120": 26
+          }
+        }
+      },
+      {
+        "family": "v59",
+        "history": "pre_and_at",
+        "mode": "economy",
+        "alpha": 100.0,
+        "switch_penalty": 5000.0,
+        "score": {
+          "games": 160,
+          "wins": 107,
+          "draws": 0,
+          "losses": 53,
+          "win_rate": 0.66875,
+          "mean_margin": 6216.8625,
+          "median_margin": 2009.0,
+          "worst_margin": -31739.0,
+          "cvar10_margin": -17846.625,
+          "choice_counts": {
+            "base": 133,
+            "a120": 0,
+            "b120": 2,
+            "c120": 25
+          }
+        }
+      },
+      {
+        "family": "v59",
+        "history": "pre_and_at",
+        "mode": "economy",
+        "alpha": 100.0,
+        "switch_penalty": 2500.0,
+        "score": {
+          "games": 160,
+          "wins": 107,
+          "draws": 0,
+          "losses": 53,
+          "win_rate": 0.66875,
+          "mean_margin": 6101.8375,
+          "median_margin": 2009.0,
+          "worst_margin": -31739.0,
+          "cvar10_margin": -18225.75,
+          "choice_counts": {
+            "base": 131,
+            "a120": 0,
+            "b120": 3,
+            "c120": 26
+          }
+        }
+      },
+      {
+        "family": "v67",
+        "history": "pre_and_at",
+        "mode": "economy",
+        "alpha": 10.0,
+        "switch_penalty": 0.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 5085.11875,
+          "median_margin": 2609.5,
+          "worst_margin": -30337.0,
+          "cvar10_margin": -18541.0,
+          "choice_counts": {
+            "base": 95,
+            "a120": 6,
+            "b120": 32,
+            "c120": 27
+          }
+        }
+      },
+      {
+        "family": "v67",
+        "history": "pre_and_at",
+        "mode": "economy",
+        "alpha": 100.0,
+        "switch_penalty": 5000.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 5429.79375,
+          "median_margin": 2358.0,
+          "worst_margin": -31605.0,
+          "cvar10_margin": -19042.8125,
+          "choice_counts": {
+            "base": 128,
+            "a120": 0,
+            "b120": 7,
+            "c120": 25
+          }
+        }
+      },
+      {
+        "family": "v67",
+        "history": "pre_and_at",
+        "mode": "economy",
+        "alpha": 10.0,
+        "switch_penalty": 5000.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 5274.28125,
+          "median_margin": 2358.0,
+          "worst_margin": -31605.0,
+          "cvar10_margin": -19241.375,
+          "choice_counts": {
+            "base": 123,
+            "a120": 1,
+            "b120": 11,
+            "c120": 25
+          }
+        }
+      },
+      {
+        "family": "v59",
+        "history": "at120",
+        "mode": "economy",
+        "alpha": 0.1,
+        "switch_penalty": 10000.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 6048.4625,
+          "median_margin": 1950.5,
+          "worst_margin": -31739.0,
+          "cvar10_margin": -17389.75,
+          "choice_counts": {
+            "base": 134,
+            "a120": 0,
+            "b120": 1,
+            "c120": 25
+          }
+        }
+      },
+      {
+        "family": "v59",
+        "history": "at120",
+        "mode": "economy",
+        "alpha": 1.0,
+        "switch_penalty": 10000.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 6048.4625,
+          "median_margin": 1950.5,
+          "worst_margin": -31739.0,
+          "cvar10_margin": -17389.75,
+          "choice_counts": {
+            "base": 134,
+            "a120": 0,
+            "b120": 1,
+            "c120": 25
+          }
+        }
+      },
+      {
+        "family": "v59",
+        "history": "at120",
+        "mode": "economy",
+        "alpha": 10.0,
+        "switch_penalty": 10000.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 5962.5,
+          "median_margin": 1950.5,
+          "worst_margin": -31739.0,
+          "cvar10_margin": -17846.625,
+          "choice_counts": {
+            "base": 135,
+            "a120": 0,
+            "b120": 0,
+            "c120": 25
+          }
+        }
+      },
+      {
+        "family": "v59",
+        "history": "at120",
+        "mode": "economy",
+        "alpha": 100.0,
+        "switch_penalty": 5000.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 6260.78125,
+          "median_margin": 2009.0,
+          "worst_margin": -52353.0,
+          "cvar10_margin": -20170.5625,
+          "choice_counts": {
+            "base": 137,
+            "a120": 0,
+            "b120": 1,
+            "c120": 22
+          }
+        }
+      },
+      {
+        "family": "v59",
+        "history": "pre_and_at",
+        "mode": "economy",
+        "alpha": 100.0,
+        "switch_penalty": 10000.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 6194.3125,
+          "median_margin": 2009.0,
+          "worst_margin": -52353.0,
+          "cvar10_margin": -20429.625,
+          "choice_counts": {
+            "base": 138,
+            "a120": 0,
+            "b120": 0,
+            "c120": 22
+          }
+        }
+      },
+      {
+        "family": "v59",
+        "history": "pre120",
+        "mode": "economy",
+        "alpha": 100.0,
+        "switch_penalty": 10000.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 6004.21875,
+          "median_margin": 1950.5,
+          "worst_margin": -52353.0,
+          "cvar10_margin": -20429.625,
+          "choice_counts": {
+            "base": 139,
+            "a120": 0,
+            "b120": 1,
+            "c120": 20
+          }
+        }
+      },
+      {
+        "family": "v67",
+        "history": "pre_and_at",
+        "mode": "economy",
+        "alpha": 100.0,
+        "switch_penalty": 10000.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 5653.73125,
+          "median_margin": 2609.5,
+          "worst_margin": -52486.0,
+          "cvar10_margin": -21095.1875,
+          "choice_counts": {
+            "base": 138,
+            "a120": 0,
+            "b120": 0,
+            "c120": 22
+          }
+        }
+      },
+      {
+        "family": "v67",
+        "history": "pre120",
+        "mode": "economy",
+        "alpha": 100.0,
+        "switch_penalty": 5000.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 5467.30625,
+          "median_margin": 2609.5,
+          "worst_margin": -52486.0,
+          "cvar10_margin": -21605.9375,
+          "choice_counts": {
+            "base": 134,
+            "a120": 0,
+            "b120": 4,
+            "c120": 22
+          }
+        }
+      },
+      {
+        "family": "v67",
+        "history": "pre120",
+        "mode": "economy",
+        "alpha": 10.0,
+        "switch_penalty": 10000.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 5381.34375,
+          "median_margin": 2609.5,
+          "worst_margin": -52486.0,
+          "cvar10_margin": -21334.75,
+          "choice_counts": {
+            "base": 134,
+            "a120": 0,
+            "b120": 2,
+            "c120": 24
+          }
+        }
+      },
+      {
+        "family": "v67",
+        "history": "at120",
+        "mode": "economy",
+        "alpha": 0.1,
+        "switch_penalty": 10000.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 5355.075,
+          "median_margin": 2609.5,
+          "worst_margin": -53926.0,
+          "cvar10_margin": -21102.875,
+          "choice_counts": {
+            "base": 134,
+            "a120": 0,
+            "b120": 4,
+            "c120": 22
+          }
+        }
+      },
+      {
+        "family": "v59",
+        "history": "pre120",
+        "mode": "economy",
+        "alpha": 100.0,
+        "switch_penalty": 5000.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 6066.4875,
+          "median_margin": 2009.0,
+          "worst_margin": -53950.0,
+          "cvar10_margin": -20649.5,
+          "choice_counts": {
+            "base": 132,
+            "a120": 0,
+            "b120": 7,
+            "c120": 21
+          }
+        }
+      },
+      {
+        "family": "v59",
+        "history": "pre_and_at",
+        "mode": "economy",
+        "alpha": 1000.0,
+        "switch_penalty": 0.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 5995.0125,
+          "median_margin": 2009.0,
+          "worst_margin": -53950.0,
+          "cvar10_margin": -20472.5,
+          "choice_counts": {
+            "base": 131,
+            "a120": 0,
+            "b120": 8,
+            "c120": 21
+          }
+        }
+      },
+      {
+        "family": "v59",
+        "history": "pre120",
+        "mode": "economy",
+        "alpha": 100.0,
+        "switch_penalty": 2500.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 5989.375,
+          "median_margin": 2009.0,
+          "worst_margin": -53950.0,
+          "cvar10_margin": -20649.5,
+          "choice_counts": {
+            "base": 131,
+            "a120": 0,
+            "b120": 7,
+            "c120": 22
+          }
+        }
+      },
+      {
+        "family": "v59",
+        "history": "pre120",
+        "mode": "economy",
+        "alpha": 0.1,
+        "switch_penalty": 2500.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 5424.25,
+          "median_margin": 2009.0,
+          "worst_margin": -53950.0,
+          "cvar10_margin": -23844.75,
+          "choice_counts": {
+            "base": 109,
+            "a120": 2,
+            "b120": 23,
+            "c120": 26
+          }
+        }
+      },
+      {
+        "family": "v59",
+        "history": "pre_and_at",
+        "mode": "economy",
+        "alpha": 1.0,
+        "switch_penalty": 2500.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 5162.625,
+          "median_margin": 1909.0,
+          "worst_margin": -53950.0,
+          "cvar10_margin": -23725.0625,
+          "choice_counts": {
+            "base": 103,
+            "a120": 3,
+            "b120": 29,
+            "c120": 25
+          }
+        }
+      },
+      {
+        "family": "v59",
+        "history": "pre120",
+        "mode": "economy",
+        "alpha": 10.0,
+        "switch_penalty": 0.0,
+        "score": {
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "win_rate": 0.6625,
+          "mean_margin": 5117.7125,
+          "median_margin": 2079.5,
+          "worst_margin": -53950.0,
+          "cvar10_margin": -23402.4375,
+          "choice_counts": {
+            "base": 101,
+            "a120": 3,
+            "b120": 29,
+            "c120": 27
+          }
+        }
+      },
+      {
+        "family": "v67",
+        "history": "at120",
+        "mode": "economy",
+        "alpha": 1.0,
+        "switch_penalty": 0.0,
+        "score": {
+          "games": 160,
+          "wins": 105,
+          "draws": 0,
+          "losses": 55,
+          "win_rate": 0.65625,
+          "mean_margin": 5346.74375,
+          "median_margin": 2515.0,
+          "worst_margin": -30337.0,
+          "cvar10_margin": -16714.5625,
+          "choice_counts": {
+            "base": 77,
+            "a120": 4,
+            "b120": 48,
+            "c120": 31
+          }
+        }
+      },
+      {
+        "family": "v67",
+        "history": "at120",
+        "mode": "economy",
+        "alpha": 100.0,
+        "switch_penalty": 2500.0,
+        "score": {
+          "games": 160,
+          "wins": 105,
+          "draws": 0,
+          "losses": 55,
+          "win_rate": 0.65625,
+          "mean_margin": 5537.875,
+          "median_margin": 2251.0,
+          "worst_margin": -31605.0,
+          "cvar10_margin": -18785.375,
+          "choice_counts": {
+            "base": 126,
+            "a120": 0,
+            "b120": 9,
+            "c120": 25
+          }
+        }
+      },
+      {
+        "family": "v67",
+        "history": "at120",
+        "mode": "economy",
+        "alpha": 10.0,
+        "switch_penalty": 0.0,
+        "score": {
+          "games": 160,
+          "wins": 105,
+          "draws": 0,
+          "losses": 55,
+          "win_rate": 0.65625,
+          "mean_margin": 5181.4875,
+          "median_margin": 2515.0,
+          "worst_margin": -31605.0,
+          "cvar10_margin": -17368.375,
+          "choice_counts": {
+            "base": 84,
+            "a120": 2,
+            "b120": 41,
+            "c120": 33
+          }
+        }
+      },
+      {
+        "family": "v67",
+        "history": "pre_and_at",
+        "mode": "economy",
+        "alpha": 10.0,
+        "switch_penalty": 10000.0,
+        "score": {
+          "games": 160,
+          "wins": 105,
+          "draws": 0,
+          "losses": 55,
+          "win_rate": 0.65625,
+          "mean_margin": 5173.13125,
+          "median_margin": 2260.0,
+          "worst_margin": -31605.0,
+          "cvar10_margin": -19619.5625,
+          "choice_counts": {
+            "base": 126,
+            "a120": 0,
+            "b120": 9,
+            "c120": 25
+          }
+        }
+      },
+      {
+        "family": "v59",
+        "history": "at120",
+        "mode": "economy",
+        "alpha": 0.1,
+        "switch_penalty": 0.0,
+        "score": {
+          "games": 160,
+          "wins": 105,
+          "draws": 0,
+          "losses": 55,
+          "win_rate": 0.65625,
+          "mean_margin": 5915.375,
+          "median_margin": 1909.0,
+          "worst_margin": -31739.0,
+          "cvar10_margin": -17703.5625,
+          "choice_counts": {
+            "base": 100,
+            "a120": 0,
+            "b120": 28,
+            "c120": 32
+          }
+        }
+      }
+    ],
+    "diagnostics": {
+      "v59": {
+        "selected_lofo_configuration": {
+          "family": "v59",
+          "history": "pre_and_at",
+          "mode": "economy",
+          "alpha": 100.0,
+          "switch_penalty": 0.0,
+          "score": {
+            "games": 160,
+            "wins": 108,
+            "draws": 0,
+            "losses": 52,
+            "win_rate": 0.675,
+            "mean_margin": 5928.75,
+            "median_margin": 2133.0,
+            "worst_margin": -31739.0,
+            "cvar10_margin": -18731.3125,
+            "choice_counts": {
+              "base": 113,
+              "a120": 0,
+              "b120": 18,
+              "c120": 29
+            }
+          }
+        },
+        "top_ridge_route_discriminators": [
+          {
+            "feature": "s96_market_price_WOOL_norm",
+            "route_discrimination": 2646.8573379048353
+          },
+          {
+            "feature": "s120_market_price_WOOL_norm",
+            "route_discrimination": 2646.8573379048335
+          },
+          {
+            "feature": "s120_market_price_MILK_norm",
+            "route_discrimination": 2250.8527530932283
+          },
+          {
+            "feature": "s96_market_price_MILK_norm",
+            "route_discrimination": 2250.8527530932283
+          },
+          {
+            "feature": "s96_market_price_STRAWBERRY_norm",
+            "route_discrimination": 1707.8198930459007
+          },
+          {
+            "feature": "s120_market_price_STRAWBERRY_norm",
+            "route_discrimination": 1707.8198930459
+          },
+          {
+            "feature": "s96_market_price_FERTILIZER_norm",
+            "route_discrimination": 1616.8994041977592
+          },
+          {
+            "feature": "s120_money_diff_norm",
+            "route_discrimination": 1472.0620977340382
+          },
+          {
+            "feature": "s120_opponent_money_norm",
+            "route_discrimination": 1462.7768557130398
+          },
+          {
+            "feature": "s24_money_diff_norm",
+            "route_discrimination": 1345.741516342323
+          },
+          {
+            "feature": "s24_opponent_money_norm",
+            "route_discrimination": 1307.2549150416687
+          },
+          {
+            "feature": "s24_candidate_money_norm",
+            "route_discrimination": 1200.4520700806454
+          },
+          {
+            "feature": "s72_market_price_WHEAT_norm",
+            "route_discrimination": 1005.3781983533122
+          },
+          {
+            "feature": "s72_market_price_FERTILIZER_norm",
+            "route_discrimination": 968.7467042726935
+          },
+          {
+            "feature": "s96_market_price_WHEAT_norm",
+            "route_discrimination": 962.3841583813916
+          },
+          {
+            "feature": "s120_market_price_WHEAT_norm",
+            "route_discrimination": 932.2736737043506
+          },
+          {
+            "feature": "s96_market_price_TOMATO_norm",
+            "route_discrimination": 873.775011752809
+          },
+          {
+            "feature": "s120_market_price_TOMATO_norm",
+            "route_discrimination": 873.7750117528078
+          },
+          {
+            "feature": "s120_market_price_EGG_norm",
+            "route_discrimination": 858.3489539465018
+          },
+          {
+            "feature": "s96_market_price_EGG_norm",
+            "route_discrimination": 858.3489539465018
+          }
+        ],
+        "top_univariate_route_advantage_correlations": {
+          "a120": [
+            {
+              "feature": "s96_market_price_STRAWBERRY_norm",
+              "correlation": -0.31619579985148494
+            },
+            {
+              "feature": "s120_market_price_STRAWBERRY_norm",
+              "correlation": -0.3161957998514849
+            },
+            {
+              "feature": "s96_market_price_MILK_norm",
+              "correlation": -0.28207155968294806
+            },
+            {
+              "feature": "s120_market_price_MILK_norm",
+              "correlation": -0.28207155968294806
+            },
+            {
+              "feature": "s96_market_price_FERTILIZER_norm",
+              "correlation": 0.19853032922188568
+            },
+            {
+              "feature": "s48_market_price_WHEAT_norm",
+              "correlation": -0.16866868677482014
+            },
+            {
+              "feature": "s120_market_price_WOOL_norm",
+              "correlation": 0.15944303979665403
+            },
+            {
+              "feature": "s96_market_price_WOOL_norm",
+              "correlation": 0.15944303979665397
+            },
+            {
+              "feature": "s24_money_diff_norm",
+              "correlation": 0.15724892344716546
+            },
+            {
+              "feature": "s24_opponent_money_norm",
+              "correlation": -0.15291739648682143
+            },
+            {
+              "feature": "s72_market_price_WHEAT_norm",
+              "correlation": -0.1336257967953325
+            },
+            {
+              "feature": "s96_market_price_TOMATO_norm",
+              "correlation": -0.1320141339727413
+            }
+          ],
+          "b120": [
+            {
+              "feature": "s24_candidate_money_norm",
+              "correlation": 0.20919384767088967
+            },
+            {
+              "feature": "s72_shed_WHEAT_norm",
+              "correlation": 0.19424068780664727
+            },
+            {
+              "feature": "s96_shed_WHEAT_norm",
+              "correlation": 0.19424068780664727
+            },
+            {
+              "feature": "s48_shed_WHEAT_norm",
+              "correlation": 0.19424068780664722
+            },
+            {
+              "feature": "s120_shed_WHEAT_norm",
+              "correlation": 0.19424068780664722
+            },
+            {
+              "feature": "s48_seeds_WHEAT_norm",
+              "correlation": 0.19424068780664716
+            },
+            {
+              "feature": "s72_candidate_money_norm",
+              "correlation": 0.18397630961724182
+            },
+            {
+              "feature": "s48_candidate_money_norm",
+              "correlation": 0.16976225079694193
+            },
+            {
+              "feature": "s120_candidate_money_norm",
+              "correlation": 0.1600918983830395
+            },
+            {
+              "feature": "s96_candidate_money_norm",
+              "correlation": 0.1600918983830393
+            },
+            {
+              "feature": "s96_market_price_TOMATO_norm",
+              "correlation": -0.1470275591584491
+            },
+            {
+              "feature": "s120_market_price_TOMATO_norm",
+              "correlation": -0.1470275591584491
+            }
+          ],
+          "c120": [
+            {
+              "feature": "s120_market_price_WOOL_norm",
+              "correlation": 0.4468702805083991
+            },
+            {
+              "feature": "s96_market_price_WOOL_norm",
+              "correlation": 0.44687028050839894
+            },
+            {
+              "feature": "s96_market_price_MILK_norm",
+              "correlation": -0.37690708663241645
+            },
+            {
+              "feature": "s120_market_price_MILK_norm",
+              "correlation": -0.3769070866324163
+            },
+            {
+              "feature": "s96_market_price_STRAWBERRY_norm",
+              "correlation": -0.34127549963906206
+            },
+            {
+              "feature": "s120_market_price_STRAWBERRY_norm",
+              "correlation": -0.34127549963906206
+            },
+            {
+              "feature": "s48_shed_WHEAT_norm",
+              "correlation": 0.20345268808574835
+            },
+            {
+              "feature": "s48_seeds_WHEAT_norm",
+              "correlation": 0.20345268808574835
+            },
+            {
+              "feature": "s72_shed_WHEAT_norm",
+              "correlation": 0.20345268808574835
+            },
+            {
+              "feature": "s96_shed_WHEAT_norm",
+              "correlation": 0.20345268808574835
+            },
+            {
+              "feature": "s120_shed_WHEAT_norm",
+              "correlation": 0.20345268808574835
+            },
+            {
+              "feature": "s24_market_price_WHEAT_norm",
+              "correlation": -0.18673834976993633
+            }
+          ]
+        }
+      },
+      "v67": {
+        "selected_lofo_configuration": {
+          "family": "v67",
+          "history": "at120",
+          "mode": "economy",
+          "alpha": 1.0,
+          "switch_penalty": 10000.0,
+          "score": {
+            "games": 160,
+            "wins": 107,
+            "draws": 0,
+            "losses": 53,
+            "win_rate": 0.66875,
+            "mean_margin": 5656.86875,
+            "median_margin": 2609.5,
+            "worst_margin": -31605.0,
+            "cvar10_margin": -18399.125,
+            "choice_counts": {
+              "base": 134,
+              "a120": 0,
+              "b120": 2,
+              "c120": 24
+            }
+          }
+        },
+        "top_ridge_route_discriminators": [
+          {
+            "feature": "s120_market_price_WOOL_norm",
+            "route_discrimination": 7912.09023942905
+          },
+          {
+            "feature": "s120_shed_WHEAT_norm",
+            "route_discrimination": 7249.21452574161
+          },
+          {
+            "feature": "s120_market_price_MILK_norm",
+            "route_discrimination": 6983.7062768653905
+          },
+          {
+            "feature": "s120_market_price_EGG_norm",
+            "route_discrimination": 5460.336556631356
+          },
+          {
+            "feature": "s120_market_price_TOMATO_norm",
+            "route_discrimination": 4574.726075714765
+          },
+          {
+            "feature": "s120_market_price_STRAWBERRY_norm",
+            "route_discrimination": 4458.915109836414
+          },
+          {
+            "feature": "s120_market_price_FERTILIZER_norm",
+            "route_discrimination": 4161.234504339619
+          },
+          {
+            "feature": "s120_candidate_money_norm",
+            "route_discrimination": 3109.4952267611934
+          },
+          {
+            "feature": "s120_money_diff_norm",
+            "route_discrimination": 2792.6093528551746
+          },
+          {
+            "feature": "s120_opponent_money_norm",
+            "route_discrimination": 2760.7748972290633
+          },
+          {
+            "feature": "s120_market_price_WHEAT_norm",
+            "route_discrimination": 2291.919100648824
+          },
+          {
+            "feature": "s120_market_price_CARROT_norm",
+            "route_discrimination": 2244.9308282266434
+          },
+          {
+            "feature": "s120_player",
+            "route_discrimination": 1254.0194620788716
+          },
+          {
+            "feature": "s120_market_price_MELON_norm",
+            "route_discrimination": 3.4586431938686004e-22
+          },
+          {
+            "feature": "s120_step_norm",
+            "route_discrimination": 2.767524458222511e-22
+          },
+          {
+            "feature": "s120_day_norm",
+            "route_discrimination": 2.0750577541523089e-22
+          },
+          {
+            "feature": "s120_shed_FERTILIZER_norm",
+            "route_discrimination": 8.648513931945346e-24
+          },
+          {
+            "feature": "s120_inventory_GOOSE_norm",
+            "route_discrimination": 0.0
+          },
+          {
+            "feature": "s120_seeds_STRAWBERRY_norm",
+            "route_discrimination": 0.0
+          },
+          {
+            "feature": "s120_seeds_MELON_norm",
+            "route_discrimination": 0.0
+          }
+        ],
+        "top_univariate_route_advantage_correlations": {
+          "a120": [
+            {
+              "feature": "s120_market_price_STRAWBERRY_norm",
+              "correlation": -0.2897574214936416
+            },
+            {
+              "feature": "s120_market_price_MILK_norm",
+              "correlation": -0.25194955276811526
+            },
+            {
+              "feature": "s120_shed_WHEAT_norm",
+              "correlation": -0.1497512492034773
+            },
+            {
+              "feature": "s120_market_price_WOOL_norm",
+              "correlation": 0.146380795676346
+            },
+            {
+              "feature": "s120_market_price_TOMATO_norm",
+              "correlation": -0.14235402174921713
+            },
+            {
+              "feature": "s120_market_price_WHEAT_norm",
+              "correlation": -0.10828475574303503
+            },
+            {
+              "feature": "s120_market_price_EGG_norm",
+              "correlation": 0.0948589030609477
+            },
+            {
+              "feature": "s120_candidate_money_norm",
+              "correlation": -0.08456993242933741
+            },
+            {
+              "feature": "s120_money_diff_norm",
+              "correlation": -0.08437035977257742
+            },
+            {
+              "feature": "s120_opponent_money_norm",
+              "correlation": 0.08222495997863159
+            },
+            {
+              "feature": "s120_market_price_FERTILIZER_norm",
+              "correlation": -0.05330618204179554
+            },
+            {
+              "feature": "s120_player",
+              "correlation": 0.04153970096460828
+            }
+          ],
+          "b120": [
+            {
+              "feature": "s120_market_price_TOMATO_norm",
+              "correlation": -0.22883471035819603
+            },
+            {
+              "feature": "s120_market_price_STRAWBERRY_norm",
+              "correlation": -0.12674310269188138
+            },
+            {
+              "feature": "s120_shed_WHEAT_norm",
+              "correlation": 0.1251032326475185
+            },
+            {
+              "feature": "s120_candidate_money_norm",
+              "correlation": 0.11969175750271875
+            },
+            {
+              "feature": "s120_market_price_MILK_norm",
+              "correlation": 0.10009044208611954
+            },
+            {
+              "feature": "s120_market_price_EGG_norm",
+              "correlation": 0.08398145953180458
+            },
+            {
+              "feature": "s120_player",
+              "correlation": 0.06371062484960471
+            },
+            {
+              "feature": "s120_market_price_WHEAT_norm",
+              "correlation": -0.04040376366678164
+            },
+            {
+              "feature": "s120_market_price_CARROT_norm",
+              "correlation": -0.0402597705993384
+            },
+            {
+              "feature": "s120_opponent_money_norm",
+              "correlation": 0.031844408909054794
+            },
+            {
+              "feature": "s120_money_diff_norm",
+              "correlation": -0.029408891715225566
+            },
+            {
+              "feature": "s120_market_price_WOOL_norm",
+              "correlation": -0.021838845952649077
+            }
+          ],
+          "c120": [
+            {
+              "feature": "s120_market_price_WOOL_norm",
+              "correlation": 0.4591603642473405
+            },
+            {
+              "feature": "s120_market_price_MILK_norm",
+              "correlation": -0.372074892333251
+            },
+            {
+              "feature": "s120_market_price_STRAWBERRY_norm",
+              "correlation": -0.3397306154802109
+            },
+            {
+              "feature": "s120_market_price_WHEAT_norm",
+              "correlation": -0.16408894006300165
+            },
+            {
+              "feature": "s120_money_diff_norm",
+              "correlation": 0.16281377958758056
+            },
+            {
+              "feature": "s120_market_price_TOMATO_norm",
+              "correlation": -0.16196218958377803
+            },
+            {
+              "feature": "s120_opponent_money_norm",
+              "correlation": -0.16058142120690444
+            },
+            {
+              "feature": "s120_market_price_EGG_norm",
+              "correlation": 0.14074571341753747
+            },
+            {
+              "feature": "s120_shed_WHEAT_norm",
+              "correlation": 0.12430077881752483
+            },
+            {
+              "feature": "s120_candidate_money_norm",
+              "correlation": 0.0738033065234572
+            },
+            {
+              "feature": "s120_market_price_FERTILIZER_norm",
+              "correlation": -0.05783091153187118
+            },
+            {
+              "feature": "s120_market_price_CARROT_norm",
+              "correlation": -0.055938980759323506
+            }
+          ]
+        }
+      }
+    }
+  },
+  "validation": {
+    "counterfactual_games": 1772,
+    "screened_agent_files": 30,
+    "all_screened_sanitized_steps_zero": true,
+    "all_screened_rows_719_transitions": true,
+    "base_fixed_route_validation": {
+      "key_count": 160,
+      "all_sources_cover_exact_same_keys": true,
+      "actual_matches_selected_fixed_route": {
+        "v59": {
+          "matched_rows": 160,
+          "nonzero_differences": 0,
+          "max_abs_margin_difference": 0.0,
+          "selected_route_counts": {
+            "base": 139,
+            "a120": 0,
+            "b120": 0,
+            "c120": 21
+          }
+        },
+        "v67": {
+          "matched_rows": 160,
+          "nonzero_differences": 0,
+          "max_abs_margin_difference": 0.0,
+          "selected_route_counts": {
+            "base": 139,
+            "a120": 0,
+            "b120": 0,
+            "c120": 21
+          }
+        }
+      },
+      "all_fixed_rows_zero_sanitized_steps": true,
+      "all_fixed_rows_719_transitions": true
+    }
+  },
+  "limitations": [
+    "The 160 rows were already unblinded and are development data, so all oracle and LOFO numbers are diagnostic rather than untouched-holdout evidence.",
+    "The route oracle chooses after seeing each route final margin and is an unattainable upper bound, not a deployable policy.",
+    "Frozen replay continuation evaluates response to recorded opponent actions; it is not live Kaggle proof against adaptive counterplay.",
+    "Feature correlations and ridge importance are associations in this development set, not causal guarantees.",
+    "Additional experts were evaluated only on the residual loss rows from the preceding stage, so this is a targeted win-ceiling screen rather than a full margin-ranking matrix.",
+    "Expert choice remains hindsight oracle information; the observable LOFO selector evidence does not demonstrate that these routes can be selected reliably live.",
+    "The zero-gain fourth stage is the bounded stop condition; the unscreened population was not exhaustively brute-forced."
+  ]
+}

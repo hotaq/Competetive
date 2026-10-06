@@ -1,0 +1,44 @@
+{
+  "agent_file": "submissions/meta_v19_v12_fr672_r1_local/main.py",
+  "dependencies": {
+    "policy": {
+      "path": "src/kaggriculture_rl/policy/v19_residual.py",
+      "sha256": "3fbe45316f5494a5735b619d3ae1f3121b6008ac91a9f2f4dfd91badd226a29f"
+    },
+    "seat1": {
+      "path": "submissions/top1_v12_ryo_b96_dual_b144_retriever_exact_safe_local/main.py",
+      "sha256": "6ac20f3e2736e4d94968401acb693656fb58e61a4174175c243db845adf6c7f4"
+    },
+    "v16": {
+      "path": "submissions/meta_v16_rc6_adaptive_market_standalone/main.py",
+      "sha256": "c8afcbb8f90861cd92131012146e573752820b80fbd939ace3c7503aea83cd5e"
+    }
+  },
+  "name": "meta_v19_v12_fr672_r1_local",
+  "policy": {
+    "family": "contextual_portfolio_with_residual",
+    "front_run_items": [
+      "STRAWBERRY",
+      "MILK",
+      "WOOL",
+      "CARROT",
+      "TOMATO",
+      "FERTILIZER",
+      "WHEAT"
+    ],
+    "front_run_reclaim_hires": 1,
+    "front_run_when_trailing": true,
+    "hire_boost_end": 719,
+    "hire_boost_start": 720,
+    "late_hire_cutoff": 720,
+    "market_front_run_steps": [
+      672
+    ],
+    "minimum_hires": 0,
+    "seat_0": "v12",
+    "seat_1": "V12 dual retriever from step zero"
+  },
+  "schema_version": 1,
+  "sha256": "2facd759da746904a4e2818e61580f22ec7da260607fb80315866eb9911b1e31",
+  "status": "local_experiment"
+}

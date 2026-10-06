@@ -1,0 +1,2240 @@
+{
+  "forumTopic": {
+    "authorId": 1680925,
+    "authorThumbnailName": "1680925-kg.jpg",
+    "authorUserDisplayName": "Tong Hui Kang",
+    "authorUserName": "huikang",
+    "comments": [
+      {
+        "id": 3447754,
+        "postDate": "2026-04-23T20:47:18.063Z",
+        "rawMarkdown": "I have [received](https://i.imgur.com/7zMSQDy.png) the [DGX Spark](https://i.imgur.com/6nBjcTy.jpeg)!",
+        "content": "<p>I have <a href=\"https://i.imgur.com/7zMSQDy.png\" target=\"_blank\">received</a> the <a href=\"https://i.imgur.com/6nBjcTy.jpeg\" target=\"_blank\">DGX Spark</a>!</p>",
+        "replies": [
+          {
+            "id": 3447796,
+            "postDate": "2026-04-24T00:34:42.750Z",
+            "rawMarkdown": "Well done, well deserved, really awesome work.",
+            "content": "<p>Well done, well deserved, really awesome work.</p>",
+            "parent": {},
+            "author": {
+              "displayName": "Brandonioti",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+              "url": "/brandonioti",
+              "tier": "CONTRIBUTOR",
+              "id": 30063404,
+              "progressionOptOut": false
+            },
+            "authorType": "COMMENT",
+            "votes": {
+              "canUpvote": true
+            },
+            "kernelVersion": 0,
+            "competitionRanking": 46,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "teamUpInfo": {
+              "teamLeader": {
+                "displayName": "Brandonioti",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+                "url": "/brandonioti",
+                "userName": "brandonioti",
+                "tier": "CONTRIBUTOR",
+                "id": 30063404,
+                "profileUrl": "/brandonioti",
+                "performanceTier": "CONTRIBUTOR",
+                "userId": 30063404,
+                "progressionOptOut": false
+              },
+              "intro": ""
+            }
+          }
+        ],
+        "parent": {},
+        "author": {
+          "displayName": "Tong Hui Kang",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1680925-kg.jpg",
+          "url": "/huikang",
+          "tier": "MASTER",
+          "id": 1680925,
+          "progressionOptOut": false
+        },
+        "authorType": "TOPIC",
+        "votes": {
+          "totalVotes": 5,
+          "canUpvote": true,
+          "totalUpvotes": 5
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 423,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "reactions": [
+          {
+            "emoji": "YAY",
+            "featuredUserNames": [
+              "rin2401",
+              "kpriyanshu256",
+              "chankhavu",
+              "konitac",
+              "mayyank98",
+              "copasta",
+              "tanmaymane18",
+              "honganzhu",
+              "alehandreus",
+              "wuzhiqiang01",
+              "dusjav",
+              "ranjithhhhhh7777777",
+              "varshneytejas",
+              "heissanjay",
+              "dgxchen",
+              "ashutoshagarwal088",
+              "jctesting"
+            ],
+            "userCount": 17
+          },
+          {
+            "emoji": "LOVE",
+            "featuredUserNames": [
+              "akbroe",
+              "tanmaymane18",
+              "vvithurshan"
+            ],
+            "userCount": 3
+          }
+        ],
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Tong Hui Kang",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1680925-kg.jpg",
+            "url": "/huikang",
+            "userName": "huikang",
+            "tier": "MASTER",
+            "id": 1680925,
+            "profileUrl": "/huikang",
+            "performanceTier": "MASTER",
+            "userId": 1680925,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3440666,
+        "postDate": "2026-04-12T20:01:17.150Z",
+        "rawMarkdown": "I have published my work, all the best for the remainder of the competition!\n\nPlease reach out here if I am missing anything!",
+        "content": "<p>I have published my work, all the best for the remainder of the competition!</p>\n<p>Please reach out here if I am missing anything!</p>",
+        "replies": [
+          {
+            "id": 3440805,
+            "postDate": "2026-04-13T04:00:39.767Z",
+            "rawMarkdown": "Hey! - not sure if this is intentional - but the repo seems to be missing at least the following modules/files: `trainer,loss_config,lr_schedule,train_common`\n\nFrom `train_sft`:\n```\nfrom trainer.client import ServiceClient\n\nfrom loss_config import (\n    CrossEntropyLossConfig,\n    CrossEntropyWithWeightingLossConfig,\n    LossConfig,\n)\nfrom lr_schedule import LRSchedule, StepLinearDecayLRSchedule\nfrom train_common import TrainingExample, load_corpus_entries\n```",
+            "content": "<p>Hey! - not sure if this is intentional - but the repo seems to be missing at least the following modules/files: <code>trainer,loss_config,lr_schedule,train_common</code></p>\n<p>From <code>train_sft</code>:</p>\n<pre><code>from trainer.client import ServiceClient\n\nfrom loss_config import (\n    CrossEntropyLossConfig,\n    CrossEntropyWithWeightingLossConfig,\n    LossConfig,\n)\nfrom lr_schedule import LRSchedule, StepLinearDecayLRSchedule\nfrom train_common import TrainingExample, load_corpus_entries\n</code></pre>",
+            "replies": [
+              {
+                "id": 3440847,
+                "postDate": "2026-04-13T05:48:54.590Z",
+                "rawMarkdown": "Thanks for pointing out!\n\nThese commands should work now\n\n```\nuv run python3 reasoning.py\nuv run python3 augmentation.py\nuv run python3 corpus.py\n```\n\nThese commands should work when you have your environment and API keys set up\n\n```\nuv run python3 train_sft.py\nuv run modal run upload_adapter.py\n```",
+                "content": "<p>Thanks for pointing out!</p>\n<p>These commands should work now</p>\n<pre><code>uv run python3 reasoning.py\nuv run python3 augmentation.py\nuv run python3 corpus.py\n</code></pre>\n<p>These commands should work when you have your environment and API keys set up</p>\n<pre><code>uv run python3 train_sft.py\nuv run modal run upload_adapter.py\n</code></pre>",
+                "parent": {},
+                "author": {
+                  "displayName": "Tong Hui Kang",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1680925-kg.jpg",
+                  "url": "/huikang",
+                  "tier": "MASTER",
+                  "id": 1680925,
+                  "progressionOptOut": false
+                },
+                "authorType": "TOPIC",
+                "votes": {
+                  "canUpvote": true
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 423,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Tong Hui Kang",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1680925-kg.jpg",
+                    "url": "/huikang",
+                    "userName": "huikang",
+                    "tier": "MASTER",
+                    "id": 1680925,
+                    "profileUrl": "/huikang",
+                    "performanceTier": "MASTER",
+                    "userId": 1680925,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              },
+              {
+                "id": 3441252,
+                "postDate": "2026-04-13T17:51:47.180Z",
+                "rawMarkdown": "Thanks for updating! But - just a heads up - I think you may have included some additional work unintentionally \n\nThere looks to be some additional utils used to create synthetic data/rebalance the train set/and augment some data rows",
+                "content": "<p>Thanks for updating! But - just a heads up - I think you may have included some additional work unintentionally </p>\n<p>There looks to be some additional utils used to create synthetic data/rebalance the train set/and augment some data rows</p>",
+                "parent": {},
+                "author": {
+                  "displayName": "MAJ0RT0M",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+                  "url": "/maj0rt0m",
+                  "tier": "CONTRIBUTOR",
+                  "id": 2071133,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "totalVotes": 1,
+                  "canUpvote": true,
+                  "totalUpvotes": 1
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 829,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "MAJ0RT0M",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+                    "url": "/maj0rt0m",
+                    "userName": "maj0rt0m",
+                    "tier": "CONTRIBUTOR",
+                    "id": 2071133,
+                    "profileUrl": "/maj0rt0m",
+                    "performanceTier": "CONTRIBUTOR",
+                    "userId": 2071133,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              },
+              {
+                "id": 3441473,
+                "postDate": "2026-04-14T04:13:17.513Z",
+                "rawMarkdown": "Great observations!\n\nThe winning submission included some rebalancing data so that traces with persistently low minlogprob will get another pass at training.\n\nThe winning submission did not include synthetic problems. I left the synthetic problems in the release to show that Nemotron is bad at [spelling](https://nemotron.huikang.dev/training.html?logpath=04-10-04-33&category=spelling&problem=f4fa8999), [concatenation](https://nemotron.huikang.dev/training.html?logpath=04-10-04-33&category=concatenation&problem=9db9f3f5) and [splitting](https://nemotron.huikang.dev/training.html?logpath=04-10-04-33&category=splitting&problem=629c360b).",
+                "content": "<p>Great observations!</p>\n<p>The winning submission included some rebalancing data so that traces with persistently low minlogprob will get another pass at training.</p>\n<p>The winning submission did not include synthetic problems. I left the synthetic problems in the release to show that Nemotron is bad at <a href=\"https://nemotron.huikang.dev/training.html?logpath=04-10-04-33&amp;category=spelling&amp;problem=f4fa8999\" target=\"_blank\">spelling</a>, <a href=\"https://nemotron.huikang.dev/training.html?logpath=04-10-04-33&amp;category=concatenation&amp;problem=9db9f3f5\" target=\"_blank\">concatenation</a> and <a href=\"https://nemotron.huikang.dev/training.html?logpath=04-10-04-33&amp;category=splitting&amp;problem=629c360b\" target=\"_blank\">splitting</a>.</p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Tong Hui Kang",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1680925-kg.jpg",
+                  "url": "/huikang",
+                  "tier": "MASTER",
+                  "id": 1680925,
+                  "progressionOptOut": false
+                },
+                "authorType": "TOPIC",
+                "votes": {
+                  "canUpvote": true
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 423,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Tong Hui Kang",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1680925-kg.jpg",
+                    "url": "/huikang",
+                    "userName": "huikang",
+                    "tier": "MASTER",
+                    "id": 1680925,
+                    "profileUrl": "/huikang",
+                    "performanceTier": "MASTER",
+                    "userId": 1680925,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              }
+            ],
+            "parent": {},
+            "author": {
+              "displayName": "MAJ0RT0M",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+              "url": "/maj0rt0m",
+              "tier": "CONTRIBUTOR",
+              "id": 2071133,
+              "progressionOptOut": false
+            },
+            "authorType": "COMMENT",
+            "votes": {
+              "totalVotes": 2,
+              "canUpvote": true,
+              "totalUpvotes": 2
+            },
+            "kernelVersion": 0,
+            "competitionRanking": 829,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "teamUpInfo": {
+              "teamLeader": {
+                "displayName": "MAJ0RT0M",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+                "url": "/maj0rt0m",
+                "userName": "maj0rt0m",
+                "tier": "CONTRIBUTOR",
+                "id": 2071133,
+                "profileUrl": "/maj0rt0m",
+                "performanceTier": "CONTRIBUTOR",
+                "userId": 2071133,
+                "progressionOptOut": false
+              },
+              "intro": ""
+            }
+          }
+        ],
+        "parent": {},
+        "author": {
+          "displayName": "Tong Hui Kang",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1680925-kg.jpg",
+          "url": "/huikang",
+          "tier": "MASTER",
+          "id": 1680925,
+          "progressionOptOut": false
+        },
+        "authorType": "TOPIC",
+        "votes": {
+          "totalVotes": 13,
+          "canUpvote": true,
+          "totalUpvotes": 13
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 423,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "reactions": [
+          {
+            "emoji": "THANK_YOU",
+            "featuredUserNames": [
+              "maj0rt0m",
+              "vu9480",
+              "honganzhu",
+              "komilparmar",
+              "barnobarno",
+              "ravi123a321at"
+            ],
+            "userCount": 6
+          }
+        ],
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Tong Hui Kang",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1680925-kg.jpg",
+            "url": "/huikang",
+            "userName": "huikang",
+            "tier": "MASTER",
+            "id": 1680925,
+            "profileUrl": "/huikang",
+            "performanceTier": "MASTER",
+            "userId": 1680925,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3442204,
+        "postDate": "2026-04-15T05:28:05.607Z",
+        "rawMarkdown": "Hi,\nGreat write-up 🙂\n\nI started to train on Tinker from the beginning. My best was 0.74 with no CoT traces at all (it scores in like 35 to 40 mins on LB)\nI trained with around 64K of training data (the original data and auto-generated data based on a solver I wrote, with 82% pass rate on the training data). \n\nSo it was easy to hook your work in, I was able to score 0.86 twice and many 0.85 using your nicely fitting data and approach. \nIt seems the 0.86 will be a bottleneck and hard to break without a breakthrough in cryptarithm.\n\nI tried different ways to convert training-serving misalignment. Two approaches work slightly better than your current (my best 0.86 is a direct reason for that).\n\nThanks for your great contributions.",
+        "content": "<p>Hi,\nGreat write-up 🙂</p>\n<p>I started to train on Tinker from the beginning. My best was 0.74 with no CoT traces at all (it scores in like 35 to 40 mins on LB)\nI trained with around 64K of training data (the original data and auto-generated data based on a solver I wrote, with 82% pass rate on the training data). </p>\n<p>So it was easy to hook your work in, I was able to score 0.86 twice and many 0.85 using your nicely fitting data and approach. \nIt seems the 0.86 will be a bottleneck and hard to break without a breakthrough in cryptarithm.</p>\n<p>I tried different ways to convert training-serving misalignment. Two approaches work slightly better than your current (my best 0.86 is a direct reason for that).</p>\n<p>Thanks for your great contributions.</p>",
+        "replies": [
+          {
+            "id": 3442215,
+            "postDate": "2026-04-15T05:40:37.580Z",
+            "rawMarkdown": "Thanks for trying out my code and data!\n\nI am curious how did you even get to submit the Tinker adapter even for the 0.74 submission. It was really not easy for me to figure out.\n\nThe idea of doing SVD was from Claude Code, I wonder if you did something similar.\n\nMy view is that 0.87 is achievable without the breakthrough in cryptarithm.\n\nMy bit manipulation chain of thought design is actually not that easy for LLMs to figure out the pattern. It seems that it is still [quite hard](https://nemotron.huikang.dev/training.html?logpath=04-10-04-33&problem=76ab0575) to get the LLM to decide whether to produce a whitespace (it means there is a match in the correct position) or produce a `y` (there is a match, but at the wrong position).",
+            "content": "<p>Thanks for trying out my code and data!</p>\n<p>I am curious how did you even get to submit the Tinker adapter even for the 0.74 submission. It was really not easy for me to figure out.</p>\n<p>The idea of doing SVD was from Claude Code, I wonder if you did something similar.</p>\n<p>My view is that 0.87 is achievable without the breakthrough in cryptarithm.</p>\n<p>My bit manipulation chain of thought design is actually not that easy for LLMs to figure out the pattern. It seems that it is still <a href=\"https://nemotron.huikang.dev/training.html?logpath=04-10-04-33&amp;problem=76ab0575\" target=\"_blank\">quite hard</a> to get the LLM to decide whether to produce a whitespace (it means there is a match in the correct position) or produce a <code>y</code> (there is a match, but at the wrong position).</p>",
+            "replies": [
+              {
+                "id": 3442236,
+                "postDate": "2026-04-15T06:26:30.810Z",
+                "rawMarkdown": "I will publish a notebook that uses one successful approach to convert a tinker adapter to a \"ready to submit\" adapter. \n~~I am not sure if I can score it (since it uses internet - CPU), but I think in the end we are submitting a file, not a notebook.\nIf it didn't submit, I will share it directly; if it did, ~~I will wait for the score. \nSo within an hour :-) ",
+                "content": "<p>I will publish a notebook that uses one successful approach to convert a tinker adapter to a \"ready to submit\" adapter. \nI will wait for the score. \nSo within an hour :-) </p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Ali",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/6915758-kg.png",
+                  "url": "/asalhi",
+                  "tier": "MASTER",
+                  "id": 6915758,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "totalVotes": 4,
+                  "canUpvote": true,
+                  "totalUpvotes": 4
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 12,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Ali",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/6915758-kg.png",
+                    "url": "/asalhi",
+                    "userName": "asalhi",
+                    "tier": "MASTER",
+                    "id": 6915758,
+                    "profileUrl": "/asalhi",
+                    "performanceTier": "MASTER",
+                    "userId": 6915758,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              },
+              {
+                "id": 3442268,
+                "postDate": "2026-04-15T07:43:35.537Z",
+                "rawMarkdown": "It's public on the code tab; you can check it out. ",
+                "content": "<p>It's public on the code tab; you can check it out. </p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Ali",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/6915758-kg.png",
+                  "url": "/asalhi",
+                  "tier": "MASTER",
+                  "id": 6915758,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "totalVotes": 1,
+                  "canUpvote": true,
+                  "totalUpvotes": 1
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 12,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "isCollapsed": true,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Ali",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/6915758-kg.png",
+                    "url": "/asalhi",
+                    "userName": "asalhi",
+                    "tier": "MASTER",
+                    "id": 6915758,
+                    "profileUrl": "/asalhi",
+                    "performanceTier": "MASTER",
+                    "userId": 6915758,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              },
+              {
+                "id": 3442274,
+                "postDate": "2026-04-15T07:48:00.923Z",
+                "rawMarkdown": "Seems like you also did SVD in `_compress_lora_pair_to_rank` and that step is lossy as well.\n\nI am surprised that you do not need to do the `w1` and `w2` mapping though.\nI needed to compare side-by-side they keys of the sample submission and the keys provided by Tinker.",
+                "content": "<p>Seems like you also did SVD in <code>_compress_lora_pair_to_rank</code> and that step is lossy as well.</p>\n<p>I am surprised that you do not need to do the <code>w1</code> and <code>w2</code> mapping though.\nI needed to compare side-by-side they keys of the sample submission and the keys provided by Tinker.</p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Tong Hui Kang",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1680925-kg.jpg",
+                  "url": "/huikang",
+                  "tier": "MASTER",
+                  "id": 1680925,
+                  "progressionOptOut": false
+                },
+                "authorType": "TOPIC",
+                "votes": {
+                  "canUpvote": true
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 423,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "isCollapsed": true,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Tong Hui Kang",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1680925-kg.jpg",
+                    "url": "/huikang",
+                    "userName": "huikang",
+                    "tier": "MASTER",
+                    "id": 1680925,
+                    "profileUrl": "/huikang",
+                    "performanceTier": "MASTER",
+                    "userId": 1680925,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              },
+              {
+                "id": 3442276,
+                "postDate": "2026-04-15T07:54:38.820Z",
+                "rawMarkdown": "It is slightly better, on my validation dataset, it scores 85%, and yours score 83% \n\nThere is another approach that scores 86% on my validation data and scored 86% on LB also, it's more complicated.\nI can give some keyword hints about it: **activation, training data, and SVD as a fallback.**",
+                "content": "<p>It is slightly better, on my validation dataset, it scores 85%, and yours score 83% </p>\n<p>There is another approach that scores 86% on my validation data and scored 86% on LB also, it's more complicated.\nI can give some keyword hints about it: <strong>activation, training data, and SVD as a fallback.</strong></p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Ali",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/6915758-kg.png",
+                  "url": "/asalhi",
+                  "tier": "MASTER",
+                  "id": 6915758,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "canUpvote": true
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 12,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "isCollapsed": true,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Ali",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/6915758-kg.png",
+                    "url": "/asalhi",
+                    "userName": "asalhi",
+                    "tier": "MASTER",
+                    "id": 6915758,
+                    "profileUrl": "/asalhi",
+                    "performanceTier": "MASTER",
+                    "userId": 6915758,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              }
+            ],
+            "parent": {},
+            "author": {
+              "displayName": "Tong Hui Kang",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1680925-kg.jpg",
+              "url": "/huikang",
+              "tier": "MASTER",
+              "id": 1680925,
+              "progressionOptOut": false
+            },
+            "authorType": "TOPIC",
+            "votes": {
+              "canUpvote": true
+            },
+            "kernelVersion": 0,
+            "competitionRanking": 423,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "teamUpInfo": {
+              "teamLeader": {
+                "displayName": "Tong Hui Kang",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1680925-kg.jpg",
+                "url": "/huikang",
+                "userName": "huikang",
+                "tier": "MASTER",
+                "id": 1680925,
+                "profileUrl": "/huikang",
+                "performanceTier": "MASTER",
+                "userId": 1680925,
+                "progressionOptOut": false
+              },
+              "intro": ""
+            }
+          }
+        ],
+        "parent": {},
+        "author": {
+          "displayName": "Ali",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/6915758-kg.png",
+          "url": "/asalhi",
+          "tier": "MASTER",
+          "id": 6915758,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "totalVotes": 5,
+          "canUpvote": true,
+          "totalUpvotes": 5
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 12,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Ali",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/6915758-kg.png",
+            "url": "/asalhi",
+            "userName": "asalhi",
+            "tier": "MASTER",
+            "id": 6915758,
+            "profileUrl": "/asalhi",
+            "performanceTier": "MASTER",
+            "userId": 6915758,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3440180,
+        "postDate": "2026-04-12T05:02:31.690Z",
+        "rawMarkdown": "Congrats! You've been one of the most helpful contributor in most of the competitions I've seen you participating (AIMO 1 and 2, this one as well). You completely deserve a DGX station to yourself, even without the progress prize in this competition :)",
+        "content": "<p>Congrats! You've been one of the most helpful contributor in most of the competitions I've seen you participating (AIMO 1 and 2, this one as well). You completely deserve a DGX station to yourself, even without the progress prize in this competition :)</p>",
+        "replies": [
+          {
+            "id": 3440665,
+            "postDate": "2026-04-12T20:00:04.270Z",
+            "rawMarkdown": "Thanks for the kind words!",
+            "content": "<p>Thanks for the kind words!</p>",
+            "parent": {},
+            "author": {
+              "displayName": "Tong Hui Kang",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1680925-kg.jpg",
+              "url": "/huikang",
+              "tier": "MASTER",
+              "id": 1680925,
+              "progressionOptOut": false
+            },
+            "authorType": "TOPIC",
+            "votes": {
+              "totalVotes": 1,
+              "canUpvote": true,
+              "totalUpvotes": 1
+            },
+            "kernelVersion": 0,
+            "competitionRanking": 423,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "teamUpInfo": {
+              "teamLeader": {
+                "displayName": "Tong Hui Kang",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1680925-kg.jpg",
+                "url": "/huikang",
+                "userName": "huikang",
+                "tier": "MASTER",
+                "id": 1680925,
+                "profileUrl": "/huikang",
+                "performanceTier": "MASTER",
+                "userId": 1680925,
+                "progressionOptOut": false
+              },
+              "intro": ""
+            }
+          }
+        ],
+        "parent": {},
+        "author": {
+          "displayName": "Chan Kha Vu",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/2270821-kg.jpg",
+          "url": "/chankhavu",
+          "tier": "MASTER",
+          "id": 2270821,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "totalVotes": 6,
+          "canUpvote": true,
+          "totalUpvotes": 6
+        },
+        "kernelVersion": 0,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Chan Kha Vu",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/2270821-kg.jpg",
+            "url": "/chankhavu",
+            "userName": "chankhavu",
+            "tier": "MASTER",
+            "id": 2270821,
+            "profileUrl": "/chankhavu",
+            "performanceTier": "MASTER",
+            "userId": 2270821,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3438999,
+        "postDate": "2026-04-10T04:57:08.260Z",
+        "rawMarkdown": "Congrats!\n\nI feel like I'll probably be wrong if I try to speculate, but to take a crack at your questions:\n* *\"The score I was aiming for\"* - I'd guess ~90%. That's the best I've gotten an ensemble to score locally, so I suspect it is ~the ceiling of what can realistically be achieved.\n* *\"How many tokens are used to train (for the winning submission, and in total)\"* - More than the top public notebooks 😂. I'd guess you either found a way to get brute-force SFT scaling to work or had a small high-quality SFT dataset followed by RL. You'd be using more tokens than the public notebooks in either case. I'd be a bit surprised if you got 0.85 simply by training on a small super-duper-high-quality dataset (because I've been trying to do that without much success).\n* *\"How much money I have spent\"* - Maybe ~1k? I recall seeing in your post history that you were renting a Pro 6000 for $3/hr. 50% uptime for 24 days would cost a little under $1k. I'd be a bit surprised if you used less than that, but not surprised if you used more.\n* *\"What do you think is the secret\"* - Oh man. You're miles ahead of me and I'm relatively new to LLM finetuning, so your post will likely be a goldmine of multiple secrets I'm eager to read. IDK what you view as the secret sauce, but I'm most curious to read about your data generation strategy and the degree to which you relied on SFT vs RL.",
+        "content": "<p>Congrats!</p>\n<p>I feel like I'll probably be wrong if I try to speculate, but to take a crack at your questions:</p>\n<ul>\n<li><em>\"The score I was aiming for\"</em> - I'd guess ~90%. That's the best I've gotten an ensemble to score locally, so I suspect it is ~the ceiling of what can realistically be achieved.</li>\n<li><em>\"How many tokens are used to train (for the winning submission, and in total)\"</em> - More than the top public notebooks 😂. I'd guess you either found a way to get brute-force SFT scaling to work or had a small high-quality SFT dataset followed by RL. You'd be using more tokens than the public notebooks in either case. I'd be a bit surprised if you got 0.85 simply by training on a small super-duper-high-quality dataset (because I've been trying to do that without much success).</li>\n<li><em>\"How much money I have spent\"</em> - Maybe ~1k? I recall seeing in your post history that you were renting a Pro 6000 for $3/hr. 50% uptime for 24 days would cost a little under $1k. I'd be a bit surprised if you used less than that, but not surprised if you used more.</li>\n<li><em>\"What do you think is the secret\"</em> - Oh man. You're miles ahead of me and I'm relatively new to LLM finetuning, so your post will likely be a goldmine of multiple secrets I'm eager to read. IDK what you view as the secret sauce, but I'm most curious to read about your data generation strategy and the degree to which you relied on SFT vs RL.</li>\n</ul>",
+        "replies": [
+          {
+            "id": 3439536,
+            "postDate": "2026-04-10T20:58:39.177Z",
+            "rawMarkdown": "90% makes sens, since about 10% samples will likely be faulty.",
+            "content": "<p>90% makes sens, since about 10% samples will likely be faulty.</p>",
+            "parent": {},
+            "author": {
+              "displayName": "lucian kucera",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+              "url": "/luciankucera",
+              "tier": "CONTRIBUTOR",
+              "id": 17819385,
+              "progressionOptOut": false
+            },
+            "authorType": "COMMENT",
+            "votes": {
+              "totalVotes": 1,
+              "canUpvote": true,
+              "totalUpvotes": 1
+            },
+            "kernelVersion": 0,
+            "competitionRanking": 1182,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "teamUpInfo": {
+              "teamLeader": {
+                "displayName": "lucian kucera",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+                "url": "/luciankucera",
+                "userName": "luciankucera",
+                "tier": "CONTRIBUTOR",
+                "id": 17819385,
+                "profileUrl": "/luciankucera",
+                "performanceTier": "CONTRIBUTOR",
+                "userId": 17819385,
+                "progressionOptOut": false
+              },
+              "intro": ""
+            }
+          }
+        ],
+        "parent": {},
+        "author": {
+          "displayName": "James Day",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+          "url": "/jsday96",
+          "tier": "GRANDMASTER",
+          "id": 3512350,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "totalVotes": 6,
+          "canUpvote": true,
+          "totalUpvotes": 7
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 425,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "James Day",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+            "url": "/jsday96",
+            "userName": "jsday96",
+            "tier": "GRANDMASTER",
+            "id": 3512350,
+            "profileUrl": "/jsday96",
+            "performanceTier": "GRANDMASTER",
+            "userId": 3512350,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3439122,
+        "postDate": "2026-04-10T08:49:46.283Z",
+        "rawMarkdown": "Congrats!\n\nLooking for your current solution.\n\nI hope the rest of the competition won't just be knob tuning on your code. We'll see.",
+        "content": "<p>Congrats!</p>\n<p>Looking for your current solution.</p>\n<p>I hope the rest of the competition won't just be knob tuning on your code. We'll see.</p>",
+        "replies": [
+          {
+            "id": 3439357,
+            "postDate": "2026-04-10T15:26:27.773Z",
+            "rawMarkdown": "it will be ofcourse 🙃",
+            "content": "<p>it will be ofcourse 🙃</p>",
+            "parent": {},
+            "author": {
+              "displayName": "Adarsh Kumar",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/25818777-kg.png?t=2026-04-20-16-49-43",
+              "url": "/adarsh2626",
+              "tier": "MASTER",
+              "id": 25818777,
+              "progressionOptOut": false
+            },
+            "authorType": "COMMENT",
+            "votes": {
+              "canUpvote": true,
+              "totalUpvotes": 1
+            },
+            "kernelVersion": 0,
+            "competitionRanking": 557,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "reactions": [
+              {
+                "emoji": "FUNNY",
+                "featuredUserNames": [
+                  "javihm77",
+                  "anubisyy",
+                  "kienngx",
+                  "svanikkolli",
+                  "mekory"
+                ],
+                "userCount": 5
+              }
+            ],
+            "teamUpInfo": {
+              "teamLeader": {
+                "displayName": "Muhammad Ibrahim Qasmi",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/24946333-kg.jpeg?t=2025-12-22-22-44-57",
+                "url": "/ibrahimqasimi",
+                "userName": "ibrahimqasimi",
+                "tier": "GRANDMASTER",
+                "id": 24946333,
+                "profileUrl": "/ibrahimqasimi",
+                "performanceTier": "GRANDMASTER",
+                "userId": 24946333,
+                "progressionOptOut": false
+              },
+              "intro": ""
+            }
+          }
+        ],
+        "parent": {},
+        "author": {
+          "displayName": "CPMP",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/75976-gr.jpg",
+          "url": "/cpmpml",
+          "tier": "GRANDMASTER",
+          "id": 75976,
+          "progressionOptOut": false
+        },
+        "authorType": "HOST",
+        "votes": {
+          "totalVotes": 5,
+          "canUpvote": true,
+          "totalUpvotes": 6
+        },
+        "kernelVersion": 0,
+        "feedbackTrackingData": {},
+        "isThankYou": false
+      },
+      {
+        "id": 3440912,
+        "postDate": "2026-04-13T08:49:16.787Z",
+        "rawMarkdown": "People have started forking and submitted your model as you haven't published base work most will stay on focked score as getting over need more computation then rtx 6000 pro and a pro plan as of my experience 0.79 score on rtx 6000 pro is achievable but above it without any more computation is mostly impossible I can be wrong also but I think releasing model invited people with no work and no brain tosted to get good score and people could only improve from this score by a highly efficient plan with a large computation that is not possible on rtx 6000 Pro\nI may be wrong but as of my experience till now competition is increased in unfair way \n\nI will get down vote from all of them😉",
+        "content": "<p>People have started forking and submitted your model as you haven't published base work most will stay on focked score as getting over need more computation then rtx 6000 pro and a pro plan as of my experience 0.79 score on rtx 6000 pro is achievable but above it without any more computation is mostly impossible I can be wrong also but I think releasing model invited people with no work and no brain tosted to get good score and people could only improve from this score by a highly efficient plan with a large computation that is not possible on rtx 6000 Pro\nI may be wrong but as of my experience till now competition is increased in unfair way </p>\n<p>I will get down vote from all of them😉</p>",
+        "replies": [
+          {
+            "id": 3441020,
+            "postDate": "2026-04-13T11:47:36.407Z",
+            "rawMarkdown": "Have you tried retraining his adapter further ?  (also pls use some punctuation  ) ",
+            "content": "<p>Have you tried retraining his adapter further ?  (also pls use some punctuation  ) </p>",
+            "replies": [
+              {
+                "id": 3441026,
+                "postDate": "2026-04-13T11:55:52.473Z",
+                "rawMarkdown": "I used to bunk grammar classes and ultimately failed 😁😁 and I have tried everything and will try till end",
+                "content": "<p>I used to bunk grammar classes and ultimately failed 😁😁 and I have tried everything and will try till end</p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Adarsh Kumar",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/25818777-kg.png?t=2026-04-20-16-49-43",
+                  "url": "/adarsh2626",
+                  "tier": "MASTER",
+                  "id": 25818777,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "canUpvote": true
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 557,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Muhammad Ibrahim Qasmi",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/24946333-kg.jpeg?t=2025-12-22-22-44-57",
+                    "url": "/ibrahimqasimi",
+                    "userName": "ibrahimqasimi",
+                    "tier": "GRANDMASTER",
+                    "id": 24946333,
+                    "profileUrl": "/ibrahimqasimi",
+                    "performanceTier": "GRANDMASTER",
+                    "userId": 24946333,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              }
+            ],
+            "parent": {},
+            "author": {
+              "displayName": "Barno Barno",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/12214118-kg.jpg?t=2026-04-18-07-29-33",
+              "url": "/barnobarno",
+              "tier": "CONTRIBUTOR",
+              "id": 12214118,
+              "progressionOptOut": false
+            },
+            "authorType": "COMMENT",
+            "votes": {
+              "canUpvote": true
+            },
+            "kernelVersion": 0,
+            "competitionRanking": 2461,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "teamUpInfo": {
+              "teamLeader": {
+                "displayName": "Barno Barno",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/12214118-kg.jpg?t=2026-04-18-07-29-33",
+                "url": "/barnobarno",
+                "userName": "barnobarno",
+                "tier": "CONTRIBUTOR",
+                "id": 12214118,
+                "profileUrl": "/barnobarno",
+                "performanceTier": "CONTRIBUTOR",
+                "userId": 12214118,
+                "progressionOptOut": false
+              },
+              "intro": ""
+            }
+          },
+          {
+            "id": 3441029,
+            "postDate": "2026-04-13T12:04:07.047Z",
+            "rawMarkdown": "This is another plus point of Open Progress Prize. You can use the rank 1 adapters, most of the compute-heavy pretraining is already done and only some relatively cheaper refinement is needed to improve it. ",
+            "content": "<p>This is another plus point of Open Progress Prize. You can use the rank 1 adapters, most of the compute-heavy pretraining is already done and only some relatively cheaper refinement is needed to improve it. </p>",
+            "replies": [
+              {
+                "id": 3441034,
+                "postDate": "2026-04-13T12:09:50.637Z",
+                "rawMarkdown": "Yes in frustration I forgot that 🙃 thanks for the idea ",
+                "content": "<p>Yes in frustration I forgot that 🙃 thanks for the idea </p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Adarsh Kumar",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/25818777-kg.png?t=2026-04-20-16-49-43",
+                  "url": "/adarsh2626",
+                  "tier": "MASTER",
+                  "id": 25818777,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "canUpvote": true
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 557,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Muhammad Ibrahim Qasmi",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/24946333-kg.jpeg?t=2025-12-22-22-44-57",
+                    "url": "/ibrahimqasimi",
+                    "userName": "ibrahimqasimi",
+                    "tier": "GRANDMASTER",
+                    "id": 24946333,
+                    "profileUrl": "/ibrahimqasimi",
+                    "performanceTier": "GRANDMASTER",
+                    "userId": 24946333,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              },
+              {
+                "id": 3441045,
+                "postDate": "2026-04-13T12:34:21.393Z",
+                "rawMarkdown": "The guidelines mention that the external data we use (assuming this already trained lora adapters falls in it) shall be publicly available to everyone equally and be of 'minimal cost'. Since he has made the solution public, I think we can use it, don't know about the latter condition though. lol",
+                "content": "<p>The guidelines mention that the external data we use (assuming this already trained lora adapters falls in it) shall be publicly available to everyone equally and be of 'minimal cost'. Since he has made the solution public, I think we can use it, don't know about the latter condition though. lol</p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Komil Parmar",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/11351811-kg.jpg?t=2025-07-02-06-16-19",
+                  "url": "/komilparmar",
+                  "tier": "EXPERT",
+                  "id": 11351811,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "totalVotes": 1,
+                  "canUpvote": true,
+                  "totalUpvotes": 1
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 578,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "reactions": [
+                  {
+                    "emoji": "LOVE",
+                    "featuredUserNames": [
+                      "adarsh2626"
+                    ],
+                    "userCount": 1
+                  }
+                ],
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Komil Parmar",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/11351811-kg.jpg?t=2025-07-02-06-16-19",
+                    "url": "/komilparmar",
+                    "userName": "komilparmar",
+                    "tier": "EXPERT",
+                    "id": 11351811,
+                    "profileUrl": "/komilparmar",
+                    "performanceTier": "EXPERT",
+                    "userId": 11351811,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              }
+            ],
+            "parent": {},
+            "author": {
+              "displayName": "Komil Parmar",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/11351811-kg.jpg?t=2025-07-02-06-16-19",
+              "url": "/komilparmar",
+              "tier": "EXPERT",
+              "id": 11351811,
+              "progressionOptOut": false
+            },
+            "authorType": "COMMENT",
+            "votes": {
+              "totalVotes": 1,
+              "canUpvote": true,
+              "totalUpvotes": 1
+            },
+            "kernelVersion": 0,
+            "competitionRanking": 578,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "teamUpInfo": {
+              "teamLeader": {
+                "displayName": "Komil Parmar",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/11351811-kg.jpg?t=2025-07-02-06-16-19",
+                "url": "/komilparmar",
+                "userName": "komilparmar",
+                "tier": "EXPERT",
+                "id": 11351811,
+                "profileUrl": "/komilparmar",
+                "performanceTier": "EXPERT",
+                "userId": 11351811,
+                "progressionOptOut": false
+              },
+              "intro": ""
+            }
+          }
+        ],
+        "parent": {},
+        "author": {
+          "displayName": "Adarsh Kumar",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/25818777-kg.png?t=2026-04-20-16-49-43",
+          "url": "/adarsh2626",
+          "tier": "MASTER",
+          "id": 25818777,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "canUpvote": true,
+          "totalUpvotes": 1
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 557,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Muhammad Ibrahim Qasmi",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/24946333-kg.jpeg?t=2025-12-22-22-44-57",
+            "url": "/ibrahimqasimi",
+            "userName": "ibrahimqasimi",
+            "tier": "GRANDMASTER",
+            "id": 24946333,
+            "profileUrl": "/ibrahimqasimi",
+            "performanceTier": "GRANDMASTER",
+            "userId": 24946333,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3440973,
+        "postDate": "2026-04-13T10:21:13.323Z",
+        "rawMarkdown": ">The temperature in the leaderboard evaluation metric is 0.0.\n\n@huikang the [competition metric notebook](https://www.kaggle.com/code/metric/nvidia-nemotron-metric) shows temperature as 1.0. Not 0.0. Is that just a typo? \n\n```\ndef score(\n    ...\n    temperature: float = 1.0,\n    ...\n) -> float:\n```",
+        "content": "<blockquote>\n  <p>The temperature in the leaderboard evaluation metric is 0.0.</p>\n</blockquote>\n<p><a href=\"https://www.kaggle.com/huikang\" target=\"_blank\">@huikang</a> the <a href=\"https://www.kaggle.com/code/metric/nvidia-nemotron-metric\" target=\"_blank\">competition metric notebook</a> shows temperature as 1.0. Not 0.0. Is that just a typo? </p>\n<pre><code>def score(\n    ...\n    temperature: float = 1.0,\n    ...\n) -&gt; float:\n</code></pre>",
+        "replies": [
+          {
+            "id": 3441211,
+            "postDate": "2026-04-13T17:04:37.017Z",
+            "rawMarkdown": "The defaults are defaults and were being [overridden](https://www.kaggle.com/competitions/nvidia-nemotron-model-reasoning-challenge/discussion/687798#3436298)",
+            "content": "<p>The defaults are defaults and were being <a href=\"https://www.kaggle.com/competitions/nvidia-nemotron-model-reasoning-challenge/discussion/687798#3436298\" target=\"_blank\">overridden</a></p>",
+            "parent": {},
+            "author": {
+              "displayName": "Tong Hui Kang",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1680925-kg.jpg",
+              "url": "/huikang",
+              "tier": "MASTER",
+              "id": 1680925,
+              "progressionOptOut": false
+            },
+            "authorType": "TOPIC",
+            "votes": {
+              "canUpvote": true
+            },
+            "kernelVersion": 0,
+            "competitionRanking": 423,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "teamUpInfo": {
+              "teamLeader": {
+                "displayName": "Tong Hui Kang",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1680925-kg.jpg",
+                "url": "/huikang",
+                "userName": "huikang",
+                "tier": "MASTER",
+                "id": 1680925,
+                "profileUrl": "/huikang",
+                "performanceTier": "MASTER",
+                "userId": 1680925,
+                "progressionOptOut": false
+              },
+              "intro": ""
+            }
+          }
+        ],
+        "parent": {},
+        "author": {
+          "displayName": "einherjer",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1521642-kg.jpg?t=2025-02-28-08-49-36",
+          "url": "/einherjer",
+          "tier": "CONTRIBUTOR",
+          "id": 1521642,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "canUpvote": true,
+          "totalUpvotes": 2
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 1635,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "einherjer",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1521642-kg.jpg?t=2025-02-28-08-49-36",
+            "url": "/einherjer",
+            "userName": "einherjer",
+            "tier": "CONTRIBUTOR",
+            "id": 1521642,
+            "profileUrl": "/einherjer",
+            "performanceTier": "CONTRIBUTOR",
+            "userId": 1521642,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3439249,
+        "postDate": "2026-04-10T11:27:48.237Z",
+        "rawMarkdown": "94%, 5k, $100, I don't understand \"secret\" here.\n\n",
+        "content": "<p>94%, 5k, $100, I don't understand \"secret\" here.</p>",
+        "replies": [
+          {
+            "id": 3439251,
+            "postDate": "2026-04-10T11:30:38.093Z",
+            "rawMarkdown": "But I think the \"secret\" should be how to make steps tractable and in the correct order if you're doing SFT.  RLHF lets the model figure that out. ",
+            "content": "<p>But I think the \"secret\" should be how to make steps tractable and in the correct order if you're doing SFT.  RLHF lets the model figure that out. </p>",
+            "parent": {},
+            "author": {
+              "displayName": "Russell Kirk",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/27681700-kg.jpg?t=2026-03-31-11-28-38",
+              "url": "/russcore",
+              "tier": "CONTRIBUTOR",
+              "id": 27681700,
+              "progressionOptOut": false
+            },
+            "authorType": "COMMENT",
+            "votes": {
+              "totalVotes": 1,
+              "canUpvote": true,
+              "totalUpvotes": 1
+            },
+            "kernelVersion": 0,
+            "competitionRanking": 914,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "teamUpInfo": {
+              "enabled": true,
+              "teamLeader": {
+                "displayName": "Russell Kirk",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/27681700-kg.jpg?t=2026-03-31-11-28-38",
+                "url": "/russcore",
+                "userName": "russcore",
+                "tier": "CONTRIBUTOR",
+                "id": 27681700,
+                "profileUrl": "/russcore",
+                "performanceTier": "CONTRIBUTOR",
+                "userId": 27681700,
+                "progressionOptOut": false
+              },
+              "intro": "If you got the time, I got the data .. I hope :D"
+            }
+          }
+        ],
+        "parent": {},
+        "author": {
+          "displayName": "Russell Kirk",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/27681700-kg.jpg?t=2026-03-31-11-28-38",
+          "url": "/russcore",
+          "tier": "CONTRIBUTOR",
+          "id": 27681700,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "totalVotes": 1,
+          "canUpvote": true,
+          "totalUpvotes": 1
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 914,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "enabled": true,
+          "teamLeader": {
+            "displayName": "Russell Kirk",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/27681700-kg.jpg?t=2026-03-31-11-28-38",
+            "url": "/russcore",
+            "userName": "russcore",
+            "tier": "CONTRIBUTOR",
+            "id": 27681700,
+            "profileUrl": "/russcore",
+            "performanceTier": "CONTRIBUTOR",
+            "userId": 27681700,
+            "progressionOptOut": false
+          },
+          "intro": "If you got the time, I got the data .. I hope :D"
+        }
+      },
+      {
+        "id": 3438995,
+        "postDate": "2026-04-10T04:38:52.613Z",
+        "rawMarkdown": "Congratulations! Base on your submit freq, I guess 5h h200 is enough.",
+        "content": "<p>Congratulations! Base on your submit freq, I guess 5h h200 is enough.</p>",
+        "parent": {},
+        "author": {
+          "displayName": "Nguyen",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/23660183-kg.png?t=2026-02-05-19-17-04",
+          "url": "/nguyennguyen599",
+          "tier": "EXPERT",
+          "id": 23660183,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "totalVotes": 1,
+          "canUpvote": true,
+          "totalUpvotes": 1
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 1124,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Nguyen",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/23660183-kg.png?t=2026-02-05-19-17-04",
+            "url": "/nguyennguyen599",
+            "userName": "nguyennguyen599",
+            "tier": "EXPERT",
+            "id": 23660183,
+            "profileUrl": "/nguyennguyen599",
+            "performanceTier": "EXPERT",
+            "userId": 23660183,
+            "progressionOptOut": false
+          },
+          "intro": "I can provide ~ $1.5k-2k to burn on training. If you already have a good workflow or model checkpoint, feel free to reach out to me."
+        }
+      },
+      {
+        "id": 3439280,
+        "postDate": "2026-04-10T12:42:52.963Z",
+        "rawMarkdown": "Congrats on the incredible performance, Tong! \n\nCracking 0.85 when the field was clustering at 0.84 is a massive achievement. Here are my specs on your questions: \n\nTarget Score: You were definitely hunting for that 0.85+. It’s the safety zone that separates a lucky run from a dominant model, and hitting it right at the deadline shows how much you pushed the 30B architecture.\n\nTokens: I’m guessing the winning run was surprisingly efficient maybe 200M to 500M high-quality tokens. Given your focus on visualizing the problems, it feels like you prioritized high-signal reasoning traces over raw volume.\n\nSpend: Since you’re a master of optimization (using Unsloth and 96GB VRAM setups), I’d bet you kept it lean somewhere between $300 and $500 USD by leveraging spot instances and Kaggle’s internal resources.\n\nSecret: I suspect the secret is Rejection Sampling with a Verifiable Reward (RLVR). Since you mentioned your AIMO work, you likely built a pipeline that forces the model to generate specific reasoning thought blocks that must lead to a correct symbolic answer before they are added to the training set.\n\nCan’t wait to see the interface and notebooks on Sunday!\n\nBest,\nSvanik Kolli",
+        "content": "<p>Congrats on the incredible performance, Tong! </p>\n<p>Cracking 0.85 when the field was clustering at 0.84 is a massive achievement. Here are my specs on your questions: </p>\n<p>Target Score: You were definitely hunting for that 0.85+. It’s the safety zone that separates a lucky run from a dominant model, and hitting it right at the deadline shows how much you pushed the 30B architecture.</p>\n<p>Tokens: I’m guessing the winning run was surprisingly efficient maybe 200M to 500M high-quality tokens. Given your focus on visualizing the problems, it feels like you prioritized high-signal reasoning traces over raw volume.</p>\n<p>Spend: Since you’re a master of optimization (using Unsloth and 96GB VRAM setups), I’d bet you kept it lean somewhere between $300 and $500 USD by leveraging spot instances and Kaggle’s internal resources.</p>\n<p>Secret: I suspect the secret is Rejection Sampling with a Verifiable Reward (RLVR). Since you mentioned your AIMO work, you likely built a pipeline that forces the model to generate specific reasoning thought blocks that must lead to a correct symbolic answer before they are added to the training set.</p>\n<p>Can’t wait to see the interface and notebooks on Sunday!</p>\n<p>Best,\nSvanik Kolli</p>",
+        "parent": {},
+        "author": {
+          "displayName": "Svanik Kolli",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/25849260-kg.png?t=2026-04-21-18-23-19",
+          "url": "/svanikkolli",
+          "tier": "CONTRIBUTOR",
+          "id": 25849260,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "totalVotes": 2,
+          "canUpvote": true,
+          "totalUpvotes": 2
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 138,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Svanik Kolli",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/25849260-kg.png?t=2026-04-21-18-23-19",
+            "url": "/svanikkolli",
+            "userName": "svanikkolli",
+            "tier": "CONTRIBUTOR",
+            "id": 25849260,
+            "profileUrl": "/svanikkolli",
+            "performanceTier": "CONTRIBUTOR",
+            "userId": 25849260,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3438974,
+        "postDate": "2026-04-10T03:44:17.067Z",
+        "rawMarkdown": "congratulations! Really looking forward to reading your write-up and learning from your methods.",
+        "content": "<p>congratulations! Really looking forward to reading your write-up and learning from your methods.</p>",
+        "replies": [
+          {
+            "id": 3438988,
+            "postDate": "2026-04-10T04:15:48.293Z",
+            "rawMarkdown": "Thanks!\n\nIt seems that you only made 4 submissions on April 9 the final day. I was waiting for your 43rd submission before I submit mine, but I was too tired and gave up at 6:30am, made my final submissions, and went to sleep.",
+            "content": "<p>Thanks!</p>\n<p>It seems that you only made 4 submissions on April 9 the final day. I was waiting for your 43rd submission before I submit mine, but I was too tired and gave up at 6:30am, made my final submissions, and went to sleep.</p>",
+            "parent": {},
+            "author": {
+              "displayName": "Tong Hui Kang",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1680925-kg.jpg",
+              "url": "/huikang",
+              "tier": "MASTER",
+              "id": 1680925,
+              "progressionOptOut": false
+            },
+            "authorType": "TOPIC",
+            "votes": {
+              "canUpvote": true
+            },
+            "kernelVersion": 0,
+            "competitionRanking": 423,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "reactions": [
+              {
+                "emoji": "LOVE",
+                "featuredUserNames": [
+                  "komilparmar"
+                ],
+                "userCount": 1
+              }
+            ],
+            "teamUpInfo": {
+              "teamLeader": {
+                "displayName": "Tong Hui Kang",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1680925-kg.jpg",
+                "url": "/huikang",
+                "userName": "huikang",
+                "tier": "MASTER",
+                "id": 1680925,
+                "profileUrl": "/huikang",
+                "performanceTier": "MASTER",
+                "userId": 1680925,
+                "progressionOptOut": false
+              },
+              "intro": ""
+            }
+          }
+        ],
+        "parent": {},
+        "author": {
+          "displayName": "toxu",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/696031-kg.jpg",
+          "url": "/tonyxu",
+          "tier": "GRANDMASTER",
+          "id": 696031,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "totalVotes": 2,
+          "canUpvote": true,
+          "totalUpvotes": 2
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 13,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "toxu",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/696031-kg.jpg",
+            "url": "/tonyxu",
+            "userName": "tonyxu",
+            "tier": "GRANDMASTER",
+            "id": 696031,
+            "profileUrl": "/tonyxu",
+            "performanceTier": "GRANDMASTER",
+            "userId": 696031,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3439000,
+        "postDate": "2026-04-10T04:59:01.833Z",
+        "rawMarkdown": "Many congratulations @huikang!\nI think now you can use the DGX Spark immediately for the rest of the experiments in this competition 😅. \nAbout the guesses, I think you would have spent <$50 on data. Because I think the secret ingredient (if any) would be the data, or the teacher model. I estimated the cost of using a big deepseek model (haven't spent yet worrying about the what cost is considered 'minimal' as per the rules) and it was coming out to be $25 in api. However, from some of your discussions I realize you have also experimented a lot. So in compute I highly believe it would be something close to $100. ",
+        "content": "<p>Many congratulations <a href=\"https://www.kaggle.com/huikang\" target=\"_blank\">@huikang</a>!\nI think now you can use the DGX Spark immediately for the rest of the experiments in this competition 😅. \nAbout the guesses, I think you would have spent &lt;$50 on data. Because I think the secret ingredient (if any) would be the data, or the teacher model. I estimated the cost of using a big deepseek model (haven't spent yet worrying about the what cost is considered 'minimal' as per the rules) and it was coming out to be $25 in api. However, from some of your discussions I realize you have also experimented a lot. So in compute I highly believe it would be something close to $100. </p>",
+        "replies": [
+          {
+            "id": 3440650,
+            "postDate": "2026-04-12T19:05:22.047Z",
+            "rawMarkdown": "Hi @huikang, just wanted an update. Is the solution delayed or uploaded somewhere else maybe? I was checking since morning as you mentioned 12th April but didn't get yet. Please update the estimated date for everyone to refer easily. Thankyou  ",
+            "content": "<p>Hi <a href=\"https://www.kaggle.com/huikang\" target=\"_blank\">@huikang</a>, just wanted an update. Is the solution delayed or uploaded somewhere else maybe? I was checking since morning as you mentioned 12th April but didn't get yet. Please update the estimated date for everyone to refer easily. Thankyou  </p>",
+            "parent": {},
+            "author": {
+              "displayName": "Komil Parmar",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/11351811-kg.jpg?t=2025-07-02-06-16-19",
+              "url": "/komilparmar",
+              "tier": "EXPERT",
+              "id": 11351811,
+              "progressionOptOut": false
+            },
+            "authorType": "COMMENT",
+            "votes": {
+              "canUpvote": true,
+              "totalUpvotes": 1
+            },
+            "kernelVersion": 0,
+            "competitionRanking": 578,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "teamUpInfo": {
+              "teamLeader": {
+                "displayName": "Komil Parmar",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/11351811-kg.jpg?t=2025-07-02-06-16-19",
+                "url": "/komilparmar",
+                "userName": "komilparmar",
+                "tier": "EXPERT",
+                "id": 11351811,
+                "profileUrl": "/komilparmar",
+                "performanceTier": "EXPERT",
+                "userId": 11351811,
+                "progressionOptOut": false
+              },
+              "intro": ""
+            }
+          }
+        ],
+        "parent": {},
+        "author": {
+          "displayName": "Komil Parmar",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/11351811-kg.jpg?t=2025-07-02-06-16-19",
+          "url": "/komilparmar",
+          "tier": "EXPERT",
+          "id": 11351811,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "canUpvote": true,
+          "totalUpvotes": 1
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 578,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Komil Parmar",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/11351811-kg.jpg?t=2025-07-02-06-16-19",
+            "url": "/komilparmar",
+            "userName": "komilparmar",
+            "tier": "EXPERT",
+            "id": 11351811,
+            "profileUrl": "/komilparmar",
+            "performanceTier": "EXPERT",
+            "userId": 11351811,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3441912,
+        "postDate": "2026-04-14T18:45:08.893Z",
+        "rawMarkdown": "Really impressive breakdown\nEspecially the focus on deterministic chain-of-thought and min logprob optimization",
+        "content": "<p>Really impressive breakdown\nEspecially the focus on deterministic chain-of-thought and min logprob optimization</p>",
+        "parent": {},
+        "author": {
+          "displayName": "Durga Kumari",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/30256119-kg.jpg?t=2026-04-09-17-12-41",
+          "url": "/durgakumari12",
+          "tier": "CONTRIBUTOR",
+          "id": 30256119,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "totalVotes": -1,
+          "canUpvote": true
+        },
+        "kernelVersion": 0,
+        "feedbackTrackingData": {},
+        "isThankYou": false
+      },
+      {
+        "id": 3441680,
+        "postDate": "2026-04-14T12:05:27.003Z",
+        "rawMarkdown": "firstly orz @huikang , great work we'll meet on leaderboard hopefully!",
+        "content": "<p>firstly orz <a href=\"https://www.kaggle.com/huikang\" target=\"_blank\">@huikang</a> , great work we'll meet on leaderboard hopefully!</p>",
+        "parent": {},
+        "author": {
+          "displayName": "Adithya Hegde Kota",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+          "url": "/adithyahegdekota",
+          "tier": "CONTRIBUTOR",
+          "id": 12043548,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "totalVotes": -1,
+          "canUpvote": true
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 1098,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "enabled": true,
+          "teamLeader": {
+            "displayName": "Adithya Hegde Kota",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+            "url": "/adithyahegdekota",
+            "userName": "adithyahegdekota",
+            "tier": "CONTRIBUTOR",
+            "id": 12043548,
+            "profileUrl": "/adithyahegdekota",
+            "performanceTier": "CONTRIBUTOR",
+            "userId": 12043548,
+            "progressionOptOut": false
+          },
+          "intro": "I want to work with people who work to win(only)."
+        }
+      },
+      {
+        "id": 3441263,
+        "postDate": "2026-04-13T18:11:21.630Z",
+        "rawMarkdown": "Wow! First thanks for sharing this information. It is really impressive and detailed and informative informative and thanks for sharing this impressive information with us ",
+        "content": "<p>Wow! First thanks for sharing this information. It is really impressive and detailed and informative informative and thanks for sharing this impressive information with us </p>",
+        "parent": {},
+        "author": {
+          "displayName": "Wasiq Ali",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/27928595-kg.jpg?t=2025-07-19-08-54-29",
+          "url": "/wasiqaliyasir",
+          "tier": "EXPERT",
+          "id": 27928595,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "totalVotes": -1,
+          "canUpvote": true
+        },
+        "kernelVersion": 0,
+        "feedbackTrackingData": {},
+        "isThankYou": false
+      },
+      {
+        "id": 3440206,
+        "postDate": "2026-04-12T06:05:21.620Z",
+        "rawMarkdown": "Congratulations on this! Keep it up",
+        "content": "<p>Congratulations on this! Keep it up</p>",
+        "parent": {},
+        "author": {
+          "displayName": "Bhawesh Sinha 07",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/13316592-kg.jpg?t=2026-01-19-04-50-34",
+          "url": "/bhaweshsinha07",
+          "tier": "EXPERT",
+          "id": 13316592,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "totalVotes": -1,
+          "canUpvote": true
+        },
+        "kernelVersion": 0,
+        "feedbackTrackingData": {},
+        "isThankYou": false
+      },
+      {
+        "id": 3439157,
+        "postDate": "2026-04-10T09:42:13.923Z",
+        "rawMarkdown": "The prize for best intermediate solution is good, but publishing it now is worst innovation ever.",
+        "content": "<p>The prize for best intermediate solution is good, but publishing it now is worst innovation ever.</p>",
+        "replies": [
+          {
+            "id": 3439162,
+            "postDate": "2026-04-10T09:51:20.560Z",
+            "rawMarkdown": "> worst innovation ever\n\nreason?",
+            "content": "<blockquote>\n  <p>worst innovation ever</p>\n</blockquote>\n<p>reason?</p>",
+            "replies": [
+              {
+                "id": 3439166,
+                "postDate": "2026-04-10T09:55:04.283Z",
+                "rawMarkdown": "Because it's like publishing top score notebook near the competition end. Yes, we are just on 1/3 of timeline, but best public solution is much stronger than ordinary top score notebook.",
+                "content": "<p>Because it's like publishing top score notebook near the competition end. Yes, we are just on 1/3 of timeline, but best public solution is much stronger than ordinary top score notebook.</p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Ogurtsov",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/682731-kg.jpg?t=2024-04-01-08-44-00",
+                  "url": "/ogurtsov",
+                  "tier": "MASTER",
+                  "id": 682731,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "totalVotes": -5,
+                  "canUpvote": true
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 752,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Ogurtsov",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/682731-kg.jpg?t=2024-04-01-08-44-00",
+                    "url": "/ogurtsov",
+                    "userName": "ogurtsov",
+                    "tier": "MASTER",
+                    "id": 682731,
+                    "profileUrl": "/ogurtsov",
+                    "performanceTier": "MASTER",
+                    "userId": 682731,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              },
+              {
+                "id": 3439182,
+                "postDate": "2026-04-10T10:10:41.893Z",
+                "rawMarkdown": "No. It's not like that. It was stated in the overview from the day 1. So it was expected that a top-3 solution will be shared in 3 weeks",
+                "content": "<p>No. It's not like that. It was stated in the overview from the day 1. So it was expected that a top-3 solution will be shared in 3 weeks</p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Yurnero",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/13977249-kg.jpg?t=2025-06-08-06-49-23",
+                  "url": "/samson8",
+                  "tier": "GRANDMASTER",
+                  "id": 13977249,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "canUpvote": true
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 924,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "isCollapsed": true,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Yurnero",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/13977249-kg.jpg?t=2025-06-08-06-49-23",
+                    "url": "/samson8",
+                    "userName": "samson8",
+                    "tier": "GRANDMASTER",
+                    "id": 13977249,
+                    "profileUrl": "/samson8",
+                    "performanceTier": "GRANDMASTER",
+                    "userId": 13977249,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              },
+              {
+                "id": 3439191,
+                "postDate": "2026-04-10T10:18:40.727Z",
+                "rawMarkdown": "~~Rules told us about some \"Methodology submission\" which is clearly not the full reproducible solution required for regular prize contenders. I have no objections to brief methodology writeup if it will not devalue other's work and also will not decrease chances to win the main prize for current LB leader.~~\nOk, I got it\n\n>To be eligible for any prize, teams must publish a public Kaggle notebook and solution write-up documenting the methods, datasets, and techniques used to produce the submission.\n\nFurther `knob tuning` is still almost unavoidable in such situation...",
+                "content": "<p>\nOk, I got it</p>\n<blockquote>\n  <p>To be eligible for any prize, teams must publish a public Kaggle notebook and solution write-up documenting the methods, datasets, and techniques used to produce the submission.</p>\n</blockquote>\n<p>Further <code>knob tuning</code> is still almost unavoidable in such situation…</p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Ogurtsov",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/682731-kg.jpg?t=2024-04-01-08-44-00",
+                  "url": "/ogurtsov",
+                  "tier": "MASTER",
+                  "id": 682731,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "canUpvote": true
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 752,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "isCollapsed": true,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Ogurtsov",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/682731-kg.jpg?t=2024-04-01-08-44-00",
+                    "url": "/ogurtsov",
+                    "userName": "ogurtsov",
+                    "tier": "MASTER",
+                    "id": 682731,
+                    "profileUrl": "/ogurtsov",
+                    "performanceTier": "MASTER",
+                    "userId": 682731,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              },
+              {
+                "id": 3439204,
+                "postDate": "2026-04-10T10:27:33.567Z",
+                "rawMarkdown": "Yes, exactly. So I thought you labeled it as 'worst innovation ever' just because you misinterpreted/didn't read the rules.\n\n> Further knob tuning is still almost unavoidable in such situation…\n\nanother strong claim. I'm 100% sure the top-3 will use unique strategies. Kagglers are smart cmon",
+                "content": "<p>Yes, exactly. So I thought you labeled it as 'worst innovation ever' just because you misinterpreted/didn't read the rules.</p>\n<blockquote>\n  <p>Further knob tuning is still almost unavoidable in such situation…</p>\n</blockquote>\n<p>another strong claim. I'm 100% sure the top-3 will use unique strategies. Kagglers are smart cmon</p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Yurnero",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/13977249-kg.jpg?t=2025-06-08-06-49-23",
+                  "url": "/samson8",
+                  "tier": "GRANDMASTER",
+                  "id": 13977249,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "totalVotes": 5,
+                  "canUpvote": true,
+                  "totalUpvotes": 5
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 924,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "isCollapsed": true,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Yurnero",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/13977249-kg.jpg?t=2025-06-08-06-49-23",
+                    "url": "/samson8",
+                    "userName": "samson8",
+                    "tier": "GRANDMASTER",
+                    "id": 13977249,
+                    "profileUrl": "/samson8",
+                    "performanceTier": "GRANDMASTER",
+                    "userId": 13977249,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              }
+            ],
+            "parent": {},
+            "author": {
+              "displayName": "Yurnero",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/13977249-kg.jpg?t=2025-06-08-06-49-23",
+              "url": "/samson8",
+              "tier": "GRANDMASTER",
+              "id": 13977249,
+              "progressionOptOut": false
+            },
+            "authorType": "COMMENT",
+            "votes": {
+              "canUpvote": true,
+              "totalUpvotes": 1
+            },
+            "kernelVersion": 0,
+            "competitionRanking": 924,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "teamUpInfo": {
+              "teamLeader": {
+                "displayName": "Yurnero",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/13977249-kg.jpg?t=2025-06-08-06-49-23",
+                "url": "/samson8",
+                "userName": "samson8",
+                "tier": "GRANDMASTER",
+                "id": 13977249,
+                "profileUrl": "/samson8",
+                "performanceTier": "GRANDMASTER",
+                "userId": 13977249,
+                "progressionOptOut": false
+              },
+              "intro": ""
+            }
+          }
+        ],
+        "parent": {},
+        "author": {
+          "displayName": "Ogurtsov",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/682731-kg.jpg?t=2024-04-01-08-44-00",
+          "url": "/ogurtsov",
+          "tier": "MASTER",
+          "id": 682731,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "totalVotes": -11,
+          "canUpvote": true
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 752,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Ogurtsov",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/682731-kg.jpg?t=2024-04-01-08-44-00",
+            "url": "/ogurtsov",
+            "userName": "ogurtsov",
+            "tier": "MASTER",
+            "id": 682731,
+            "profileUrl": "/ogurtsov",
+            "performanceTier": "MASTER",
+            "userId": 682731,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3447016,
+        "postDate": "2026-04-22T15:37:00.110Z",
+        "rawMarkdown": "I am new to this competition - I am wondering without using GRPO and solving the challenge that are mostly programmatically solvable using SFT based on CoT traces (an AI agent would do it with the same python scripts), are you not simply overfitting the adapter for the training dataset? Especially since you are getting same score with the test dataset (which seems to have exact same distribution of problems), are you not overfitting a model for a problem that can be much more efficiently solved through simple python program? Why you need a costly Nemotron inference for a problem that can be solved by a simple python script?\n\nOn the other hand, if the trained adapter could solve any such problem, then it is worth the training as it would mean that it has learnt some reasoning circuits which cannot be programmatically implemented and the problems cannot be solved by other means. \n\nIf the above 0.85 score is achieved through pure GRPO training (which I think not feasible without a prior cold start SFT with CoT traces), then we can say Nemotron has acquired reasoning capability to solve these kind of problems like bit manipulation, cypher problems etc.",
+        "content": "<p>I am new to this competition - I am wondering without using GRPO and solving the challenge that are mostly programmatically solvable using SFT based on CoT traces (an AI agent would do it with the same python scripts), are you not simply overfitting the adapter for the training dataset? Especially since you are getting same score with the test dataset (which seems to have exact same distribution of problems), are you not overfitting a model for a problem that can be much more efficiently solved through simple python program? Why you need a costly Nemotron inference for a problem that can be solved by a simple python script?</p>\n<p>On the other hand, if the trained adapter could solve any such problem, then it is worth the training as it would mean that it has learnt some reasoning circuits which cannot be programmatically implemented and the problems cannot be solved by other means. </p>\n<p>If the above 0.85 score is achieved through pure GRPO training (which I think not feasible without a prior cold start SFT with CoT traces), then we can say Nemotron has acquired reasoning capability to solve these kind of problems like bit manipulation, cypher problems etc.</p>",
+        "parent": {},
+        "author": {
+          "displayName": "Murugesan Narayanaswamy",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+          "url": "/murugesann",
+          "tier": "EXPERT",
+          "id": 10218904,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "canUpvote": true
+        },
+        "kernelVersion": 0,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Murugesan Narayanaswamy",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+            "url": "/murugesann",
+            "userName": "murugesann",
+            "tier": "EXPERT",
+            "id": 10218904,
+            "profileUrl": "/murugesann",
+            "performanceTier": "EXPERT",
+            "userId": 10218904,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3446373,
+        "postDate": "2026-04-21T13:54:10.377Z",
+        "rawMarkdown": "Huge congrats on the win! Your approach to maximizing minimum logprob and the deterministic CoT design is brilliant. Truly well deserved!",
+        "content": "<p>Huge congrats on the win! Your approach to maximizing minimum logprob and the deterministic CoT design is brilliant. Truly well deserved!</p>",
+        "parent": {},
+        "author": {
+          "displayName": "Ra'uf Fauzan Rambe",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/31589109-kg.png?t=2026-01-18-04-00-38",
+          "url": "/rauffauzanrambe",
+          "tier": "EXPERT",
+          "id": 31589109,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "canUpvote": true
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 80,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Ra'uf Fauzan Rambe",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/31589109-kg.png?t=2026-01-18-04-00-38",
+            "url": "/rauffauzanrambe",
+            "userName": "rauffauzanrambe",
+            "tier": "EXPERT",
+            "id": 31589109,
+            "profileUrl": "/rauffauzanrambe",
+            "performanceTier": "EXPERT",
+            "userId": 31589109,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3442108,
+        "postDate": "2026-04-15T00:56:57.953Z",
+        "rawMarkdown": "Great write-up. Congratulations!",
+        "content": "<p>Great write-up. Congratulations!</p>",
+        "parent": {},
+        "author": {
+          "displayName": "Roadie",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/2614763-kg.jpg?t=2025-10-17-20-57-51",
+          "url": "/akbroe",
+          "tier": "CONTRIBUTOR",
+          "id": 2614763,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "canUpvote": true
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 100,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Roadie",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/2614763-kg.jpg?t=2025-10-17-20-57-51",
+            "url": "/akbroe",
+            "userName": "akbroe",
+            "tier": "CONTRIBUTOR",
+            "id": 2614763,
+            "profileUrl": "/akbroe",
+            "performanceTier": "CONTRIBUTOR",
+            "userId": 2614763,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3442096,
+        "postDate": "2026-04-15T00:20:16.373Z",
+        "rawMarkdown": "How much did a complete training run cost you on Tinker?",
+        "content": "<p>How much did a complete training run cost you on Tinker?</p>",
+        "replies": [
+          {
+            "id": 3442135,
+            "postDate": "2026-04-15T02:28:34.563Z",
+            "rawMarkdown": "Just for the winning submission - 27,850,703 x $0.40 = $11.14",
+            "content": "<p>Just for the winning submission - 27,850,703 x $0.40 = $11.14</p>",
+            "parent": {},
+            "author": {
+              "displayName": "Tong Hui Kang",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1680925-kg.jpg",
+              "url": "/huikang",
+              "tier": "MASTER",
+              "id": 1680925,
+              "progressionOptOut": false
+            },
+            "authorType": "TOPIC",
+            "votes": {
+              "totalVotes": 1,
+              "canUpvote": true,
+              "totalUpvotes": 1
+            },
+            "kernelVersion": 0,
+            "competitionRanking": 423,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "reactions": [
+              {
+                "emoji": "THANK_YOU",
+                "featuredUserNames": [
+                  "giovannyrodrguez"
+                ],
+                "userCount": 1
+              }
+            ],
+            "teamUpInfo": {
+              "teamLeader": {
+                "displayName": "Tong Hui Kang",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1680925-kg.jpg",
+                "url": "/huikang",
+                "userName": "huikang",
+                "tier": "MASTER",
+                "id": 1680925,
+                "profileUrl": "/huikang",
+                "performanceTier": "MASTER",
+                "userId": 1680925,
+                "progressionOptOut": false
+              },
+              "intro": ""
+            }
+          }
+        ],
+        "parent": {},
+        "author": {
+          "displayName": "Giovanny Rodríguez",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+          "url": "/giovannyrodrguez",
+          "tier": "EXPERT",
+          "id": 23653385,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "canUpvote": true
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 497,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Giovanny Rodríguez",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+            "url": "/giovannyrodrguez",
+            "userName": "giovannyrodrguez",
+            "tier": "EXPERT",
+            "id": 23653385,
+            "profileUrl": "/giovannyrodrguez",
+            "performanceTier": "EXPERT",
+            "userId": 23653385,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3440894,
+        "postDate": "2026-04-13T08:09:55.437Z",
+        "rawMarkdown": "Thanks for sharing, the cryptarithm is the hardest I feel.",
+        "content": "<p>Thanks for sharing, the cryptarithm is the hardest I feel.</p>",
+        "parent": {},
+        "author": {
+          "displayName": "Nguyen Nam",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+          "url": "/nguyennam2001",
+          "tier": "CONTRIBUTOR",
+          "id": 33097046,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "canUpvote": true
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 42,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Nguyen Nam",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+            "url": "/nguyennam2001",
+            "userName": "nguyennam2001",
+            "tier": "CONTRIBUTOR",
+            "id": 33097046,
+            "profileUrl": "/nguyennam2001",
+            "performanceTier": "CONTRIBUTOR",
+            "userId": 33097046,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3440044,
+        "postDate": "2026-04-11T20:14:27.990Z",
+        "rawMarkdown": "",
+        "parent": {},
+        "author": {
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+          "url": "/"
+        },
+        "authorType": "COMMENT",
+        "votes": {},
+        "canDelete": true,
+        "isUserAuthor": true,
+        "isDeleted": true,
+        "kernelVersion": 0,
+        "feedbackTrackingData": {},
+        "isThankYou": false
+      }
+    ],
+    "commentSort": "COMMENT_LIST_SORT_BY_HOT",
+    "firstMessage": {
+      "id": 3438961,
+      "postDate": "2026-04-10T03:02:11.813Z",
+      "rawMarkdown": "I would like to thank the competition hosts and Kaggle for organizing this competition.\nI did manage to find something interesting to bet on, and I am happy to see my gamble paying off.\n\nYou might have made some predictions that I have asked for. These are the answers.\n- The score I was aiming for - 0.877\n- How many tokens are used to train - [27,850,703](https://nemotron.huikang.dev/metrics.html?logpath=04-08-16-14) tokens for the winning solution, 598,958,637 in total\n- How much money I have spent - $212.48 in Tinker credits, approximately $60 in Modal credits, $10 for Kaggle / Colab subscription.\n- What do you think is the secret - bit manipulation, you only need SFT, deterministic chain-of-thought design, use of min logprob as objective, use of Tinker for training\n\n\n# Quick links\n\n- Original [notebook](https://www.kaggle.com/code/huikang/tinker-submission-notebook)\n- Validation [notebook](https://www.kaggle.com/code/huikang/adapter-validation-notebook)\n- Training [metrics](https://nemotron.huikang.dev/metrics?logpath=04-08-16-14) and [logs](https://nemotron.huikang.dev/training.html?logpath=04-08-16-14) for winning submission\n- Github containing the [relevant code](https://github.com/tonghuikang/nemotron)\n\n# What was I betting on\n\nThis is what I am betting on\n- Nemotron can act as a simple computer after LoRA training.\n\nThese are the assumptions in my bet\n- I can craft the chain-of-thought better than my competitors. I think this turned out to be true. The main differentiator was the bit manipulation problem where I managed to figure out a chain of thought that has solved many more problems.\n- I can finetune LoRA correctly and efficiently. I think I got this almost correct. KhoA managed to get [perfect scores](https://www.kaggle.com/code/llkh0a/nemotron-unsloth-sft-training-3-30-2) on `numeral`, `gravity` and `unit_conversion` whereas my winning model still sometimes fails in these categories.\n\nWhat am I betting against\n- Reinforcement learning. I already have the optimal policy for solvable problems. I already know the best next token for the LLM to make (assuming they have been making all the correct moves). The only job of the LLM is to follow the policy.\n- Distilling larger models. The optimal policy should be directly generated with code.\n\n\n# Chain-of-thought design principles\n\nAs mentioned, I believe I can craft the chain-of-thought better than the other competitors.\n\nThis is how I designed my chain-of-thought\n\nDesign objectives\n- Deterministic.\n    The temperature in the leaderboard evaluation metric is 0.0.\n    This means I just need to get the most likely token correct.\n    My training objective is to maximize the minimum logprob for the traces I am training on.\n- Simple.\n    Each token should be derived from as few sources as possible, and as easy to compute as possible.\n    For example, division should be broken down into subtraction and addition.\n    Instead of choosing from 77 wonderland words to match, I should iterate through 77 wonderland words and classify whether the words match.\n- Coverage.\n    I want rare operations to be well-trained.\n    For example, when I am matching the wonderland words, I do not stop on the first word, I continue on with the rest of the Wonderland words so that I get the model to all the words it needs to match.\n- Within length limit.\n    The full chain-of-thought has to be under 7680 tokens, as required by the competition.\n- Tokenization awareness.\n    Letters and symbols can be tokenized with other tokens.\n    I should write chain-of-thought that avoids dealing with the model weaknesses in handling tokenization.\n- Generalizable.\n    Apart from certain information (Wonderland words for Cipher), I should not be training the model to memorize answers.\n    I should be aware of signs where the model is merely memorizing answers in the training set.\n\nNon-goals\n- Diversity.\n    Frontier models are supposed to be able to generate a diverse set of completions with the best rewards.\n    I do not need diversity here, as long as the answer is correct, it does not matter if all the solutions look the same.\n    This is also possible because the leaderboard scores submissions with temperature zero.\n- Conciseness.\n    I do not need the chain-of-thought to be concise.\n    However, the longer the chain-of-thought, the more it costs to train the model.\n- Verification.\n    For now, I assume the model generates every token correctly.\n    With this assumption, I do not need to run verification or recovery from errors.\n\nThe chain of thought should also be very easy to iterate on.\nIt should be easy to track, modify, train, and debug the chain of thought.\n\n\n# Solution approach\n\nThere are seven categories of problems. I describe my approach to solving these problems, in increasing order of difficulty.\n\n\n### Numeral\n\nThis task asks to convert a Roman numeral into an integer.\n\nI am aiming for a 100% (1576/1576) solve rate.\n\nAll Roman numerals in the training set are between 1 and 100.\n\nI enumerated all the numerals. I also have a step-by-step process of solving the numeral.\n\nThe code to generate the chain of thought is available [here](https://github.com/tonghuikang/nemotron/blob/master/reasoners/numeral.py) and an example output is available [here](https://nemotron.huikang.dev/synthetic.html?problem=1deaf759).\n\n\n### Unit conversion / Gravity\n\nThis task asks to figure out a scalar value, and multiplication to apply the scalar value on the question input.\nI am aiming for a 100% (1594/1594) solve rate on unit conversion and a 100% (1597/1597) solve rate on gravity.\n\nThe multiplication and division are split into multiple steps, so that it is easier to train the model to not make mistakes.\n\nThe code to generate the chain of thought is available [here](https://github.com/tonghuikang/nemotron/blob/master/reasoners/unit_conversion.py) for unit conversion and [here](https://github.com/tonghuikang/nemotron/blob/master/reasoners/gravity.py) for gravity. An example output is available [here](https://nemotron.huikang.dev/synthetic.html?problem=0047365c) for unit conversion and [here](https://nemotron.huikang.dev/synthetic.html?problem=0040ff76) for gravity.\n\n\n### Cipher\n\nThis task asks to decrypt a substitution cipher. Given several example encryptions of Wonderland-themed sentences, the model must deduce the character-level mapping and apply it to decrypt a new sentence.\n\nI am aiming for a 100% (1576/1576) solve rate.\n\nThe solution is straightforward\n- Compute the current character mapping\n- Collate the unmapped characters\n- Assign the unmapped characters\n\nThe code to generate the chain of thought is available [here](https://github.com/tonghuikang/nemotron/blob/master/reasoners/cipher.py) and an example output is available [here](https://nemotron.huikang.dev/synthetic.html?problem=017a161b).\n\nApparently, Nemotron is quite bad at [spelling](https://nemotron.huikang.dev/training.html?logpath=04-10-04-33&category=spelling).\nI think perfect performance at this subtask is a baseline expectation to medal in the final leaderboard.\n\n\n### Bit manipulation\n\nThis task asks to discover a per-bit transformation rule from input-output examples of 8-bit binary numbers.\n\nI am aiming for an 85.1% (1364/1602) solve rate.\n\nPlease refer to the [full-length post](https://www.kaggle.com/competitions/nvidia-nemotron-model-reasoning-challenge/discussion/690307) on how I approach the bit manipulation problem.\n\n\n### Equation\n\nThis task asks to discover the arithmetic rule applied to two-number equations. Given examples like `64-65 = 201`, the model must figure out what operator maps the two operands to the result.\n\nI am aiming for a 76.6% (561/732) solve rate.\n\nThere are four transformations for `(AB, CD) -> XY`\n- Reversed operands, reversed result `(BA, DC) -> YX`\n- Reversed operands only `(BA, DC) -> XY`\n- Reversed result only `(AB, CD) -> YX`\n- No transformation `(AB, CD) -> XY`\n\nThere are 32 operators. I have separated them into two groups of operators, so that I match the more popular set of 8 operators first before matching the rarer set of 24 operators.\n\nThe code to generate the chain of thought is available [here](https://github.com/tonghuikang/nemotron/blob/master/reasoners/equation_numeric.py) and an example output is available [here](https://nemotron.huikang.dev/synthetic.html?problem=04322d27).\n\nThere are operators that are [not found](https://nemotron.huikang.dev/synthetic.html?logpath=04-10-04-33&category=equation_numeric_guess) in the examples.\nI assume that they are absolute difference. This increases my target solve rate by 21 / 9500 = 0.2%.\n\n\n### Cryptarithm\n\nThere are some discussions on how this is a [verbal arithmetic](https://en.wikipedia.org/wiki/Verbal_arithmetic) problem.\n\nI did manage to decode some operations if I assume that the operators involve multiplication, division and absolute difference.\nHowever, I was not able to craft the chain-of-thought that guides the model to produce the answer.\n\nI reduced the problems to identifying whether the question operator is concatenation or reverse concatenation. If the question operator is [not found](https://nemotron.huikang.dev/synthetic.html?logpath=04-10-04-33&category=cryptarithm_guess) in the examples, I assume the question operator is concatenation. This helped me to increase my target solve rate by (54 + 11) / 9500 = 0.6%.\n\nThe code to generate the chain of thought is available [here](https://github.com/tonghuikang/nemotron/blob/master/reasoners/cryptarithm.py) and an example output is available [here](https://nemotron.huikang.dev/synthetic.html?problem=2c017f70).\n\nI am aiming for a 7.9% (65/823) solve rate overall — 8.2% (54/659) on `cryptarithm_deduce` and 6.7% (11/164) on `cryptarithm_guess`.\n\nApparently, Nemotron is also quite bad at [splitting](https://nemotron.huikang.dev/training.html?logpath=04-10-04-33&category=splitting) and [concatenating](https://nemotron.huikang.dev/training.html?logpath=04-10-04-33&category=concatenation) symbols. I also think perfect performance at this subtask is a baseline expectation to medal in the final leaderboard.\n\n\n### Target solve rate\nOverall, I am aiming for an 87.7% (8333/9500) solve rate.\n\n```\n================================================================\nCategory                      Found  Total   Accuracy     Avg ms\n----------------------------------------------------------------\nbit_manipulation               1364   1602      85.1%        0.8\ncipher                         1576   1576     100.0%        0.1\ncryptarithm_deduce               54    659       8.2%        0.0\ncryptarithm_guess                11    164       6.7%        0.0\nequation_numeric_deduce         540    596      90.6%        0.6\nequation_numeric_guess           21    136      15.4%        0.6\ngravity                        1597   1597     100.0%        0.1\nnumeral                        1576   1576     100.0%        0.0\nunit_conversion                1594   1594     100.0%        0.1\n----------------------------------------------------------------\nTOTAL                          8333   9500      87.7%        0.2\n================================================================\n```\n\nIf the chain-of-thought is achievable and I train the model correctly, I should be able to achieve an 87% or 88% solve rate on the leaderboard. I achieved an 85% solve rate.\n\nI think that any higher solve rate will require new insights on how to even solve the problems programmatically.\n\n\n# Training\n\nThe training runs for the winning submission were done on [Tinker](https://tinker-docs.thinkingmachines.ai/tinker/models/).\n\nHowever, the adapter Tinker produces cannot be immediately submitted to the competition.\n\nThere are these differences\n- The key prefix uses `model` instead of `backbone`.\n- Tinker trains with fused expert weights (`experts.w1`, `experts.w2`) while the submission format needs per-expert weights (`experts.{i}.up_proj`, `experts.{i}.down_proj`).\n- Tinker trains separate `gate_proj` and `x_proj` for Mamba layers, while the submission format needs a single `in_proj`.\n- Tinker trains LoRA for `lm_head`, which is not present in the reference adapter.\n\nI need to implement these changes\n- Unfuse `experts.w1` into per-expert `up_proj` and `experts.w2` into per-expert `down_proj`, by broadcasting the shared LoRA dimension across 128 experts.\n- Singular Value Decomposition (SVD) to merge `gate_proj` + `x_proj` into `in_proj` (rank 64 to rank 32).\n- Rename key prefix from `base_model.model.model` to `base_model.model.backbone`.\n- Keep the LoRA for the `lm_head` weights.\n\nHowever, the SVD transformation is lossy, only 75% of singular mass values are captured. There is this training-serving misalignment. These are some behaviors I observed\n- Not being able to write `\\boxed`\n- Generating degenerate responses by repeating previous tokens\n- Not following the template exactly and missing out words\n\nThere are multiple remedies for this, which I have yet to apply on my winning submission\n- Tune on Tinker with rank 16, and losslessly upscale the LoRA to rank 32. However this means that I am not fully using all the ranks. I did manage to score [0.82](https://www.kaggle.com/code/huikang/tinker-submission-notebook/output?scriptVersionId=310271979) with the approach, but apparently it is still making low-level mistakes that are not present in training.\n- Implementing the finetuning script end-to-end. I needed to research the compute and memory [requirements](https://www.kaggle.com/competitions/nvidia-nemotron-model-reasoning-challenge/discussion/687961). I did manage to [implement](https://nemotron.huikang.dev/metrics.html?logpath=04-06-00-22) something that scores 0.81. However, instead of 8 seconds per step, training is now 50 seconds per step. The cost is around the same anyway, so I continue finetuning on Tinker instead which allows me to iterate much faster.\n- Post-finetune to align the weights. I have not tried this. The idea is to recapture the loss introduced by SVD on tokens that have their loss increased due to SVD.\n\n\n# End-to-end processes\n\nThis is how I iterate on my training\n\n1) I write or update the code that generates the completion traces. This involves the use of AI coding tools.\n    I usually point out the chain-of-thought that I dislike, and what I prefer instead, and I get Claude Code to fix the code.\n    I do not read all the code Claude Code is writing, but if I find Claude Code writing code in a hacky way I will ask it to fix.\n    I inspect the result to check that Claude Code is actually doing what I want.\n\n2) I run the script ([reasoning.py](https://github.com/tonghuikang/nemotron/blob/master/reasoning.py)) that generates the completion traces.\n    I compare the difference in the output before the edit and after the edit.\n\n3) I send the completion traces ([train_sft.py](https://github.com/tonghuikang/nemotron/blob/master/train_sft.py)) for finetuning on Tinker.\n    This is the step that is costing money.\n\n4) I inspect the [minimum logprob](https://nemotron.huikang.dev/metrics.html?logpath=04-08-16-14) of individual traces.\n    As mentioned, my objective is to maximize the minimum logprob.\n    I find out which traces have a minimum logprob of less than 0.69, which means it is possible that the similar tokens will not be generated in submission.\n\n5) I inspect the tokens with a [huge loss](https://nemotron.huikang.dev/training.html?logpath=04-08-16-14&problem=eda9e743).\n    If I see tokens with a logprob more than 0.69, it is likely that similar tokens will not be generated in similar context.\n    I will need to think of how to modify the chain of thought to address the issue.\n\n6) I upload the adapter to Kaggle [upload_adapter.py](https://github.com/tonghuikang/nemotron/blob/master/upload_adapter.py).\n\n7) I run the [notebook](https://www.kaggle.com/code/huikang/tinker-submission-notebook) on Kaggle to convert the Tinker adapter to a submission-compatible adapter and the evaluation.\n    From this I discover that there is some training-serving misalignment.\n    There are easy problems that the model is doing well in training but failed to be correct at validation.\n\n8) Submit the notebook for the public leaderboard score.\n\nThese are the training [metrics](https://nemotron.huikang.dev/metrics?logpath=04-08-16-14) for the winning submission.\n\n![metrics](https://i.imgur.com/Pr4ZKly.png)\n\n\n# Performance\n\nThis was computed in a manner similar to the [validation notebook](https://www.kaggle.com/code/huikang/adapter-validation-notebook).\n\n| Version                     |   v20      | Target |\n| --- | --- | --- |\n| Training tokens             | 27,850,703 | - |\n| Link to training metrics    | [04-08-16-14](https://nemotron.huikang.dev/metrics.html?logpath=04-08-16-14) | - |\n| Total solve rate on training set   | 87.8% (8340) | 87.7% (8333/9500) |\n| Leaderboard performance     | 0.85 three times, 0.84 five times | - |\n| numeral                     | 100.0% (1576) | 100.0% (1576/1576) |\n| unit_conversion             | 99.7% (1590) | 100.0% (1594/1594) |\n| gravity                     | 99.6% (1591) | 100.0% (1597/1597) |\n| cipher                      | 99.3% (1565) | 100.0% (1576/1576) |\n| bit_manipulation            | 87.2% (1397) | 85.1% (1364/1602) |\n| equation_numeric_deduce     | 90.8% (541) | 90.6% (540/596) |\n| equation_numeric_guess      | 16.2% (22) | 15.4% (21/136) |\n| cryptarithm_deduce          | 7.1% (47) | 8.2% (54/659) |\n| cryptarithm_guess           | 6.7% (11) | 6.7% (11/164) |\n\nNote that\n\n- I am testing on what the model has trained on.\n    This explains why the training set solve rate is higher than my leaderboard submission.\n- `cryptarithm_deduce` / `cryptarithm_guess` metrics are misleading.\n    This is because `cryptarithm_deduce` and `cryptarithm_guess` are trained on multiple epochs. Their minlogprob approached zero, but it was misleading because they have memorized the training set.\n\n\n# Reflections\n\nThis is my analysis of why I think I won.\n\nI actually spent quite a lot of time on this.\nI was on leave since March 31 in Singapore.\nI initially intended to spend my time on AIMO 3. However, I could not prove that my approach to AIMO 3 works in a small scale, so I invested my time in this Nemotron competition instead.\n\nThings I think I did well\n\n- LeetCode.\n    I still do [LeetCode](https://leetcode.cn/u/tonghuikang/) for fun.\n    This gave me an advantage in solving bit manipulation better than the competitors.\n    Even though AI can greatly outperform me at LeetCode (which I now feel quite sad about), my competitive programming background gave me the insight on how to reduce the \"time and space complexity\" of the problem.\n    In hindsight, this contributed more than half the difference between my notebook and Kh0A's [notebook](https://www.kaggle.com/code/llkh0a/nemotron-unsloth-sft-training-3-30-2).\n- I looked at the data.\n    I did not merely look at the loss curve - even as the loss curve goes to zero, the loss curve for each category can be very different.\n    I did not merely look at the loss curve per category - even as the loss curve for the category goes to zero, there are still tokens with a huge loss.\n    I looked at the minlogprob.\n    I looked at which tokens the logprob is the lowest.\n    If you only look at the number, you only get a scalar reward.\n    If you look at the data, you get a richer reward signal that informs where you should make your changes.\n- I know what I do not need to try.\n    There was a discussion on model distillation, but I do not need to do that.\n    I know reinforcement learning approaches are not necessary when you know what the optimal policy should be.\n- Building a product for myself.\n    The finetuning dashboard was made for myself.\n    It is worth it to just make a finetuning interface just for me to use.\n    I hope this interface can serve as inspiration for building your own tooling.\n- Using Tinker.\n    Tinker allowed me to iterate much faster.\n    Instead of waiting 4 hours to train on the data, it took me 20 minutes instead.\n    I do not regret spending time to set up training as I learnt about memory and compute requirements.\n    Setting up the training pipeline gave me more respect for the Tinker product.\n- Writing code locally.\n    This allows me to use Claude Code to write and test procedures.\n    My notebooks are written locally, linted and typechecked before uploading to Kaggle.\n\n\nThings that could be done better\n\n- Writing the validation notebook.\n    As you see, my winning submission failed at some simple tasks like `numeral`.\n    I am aware of this, but I do not know the scale of how often this is happening.\n- Investing in a held out validation set.\n    This allows me to predict the public leaderboard score before submitting it.\n    I think it would have been worth it to craft a function that generates valid problems, and train on those problems instead so that the training set can be used for validation, uncontaminated.\n- Using AI coding tools more effectively.\n    I think I used an appropriate amount of AI in my development.\n    I cannot really use AI fully autonomously because the step involving training with Tinker costs $10 to $20 per iteration.\n    I think it still needs good human judgment to ensure that each Tinker finetuning run is worth it.\n    However, there are some processes where I should have used more AI.\n    One place is the investigation of the tokens with highly negative logprobs.\n    I needed to search for these highly negative logprobs manually.\n    There should be a script that AI can use to write and document these so that we can work on the chain of thought.\n\n\n# Improvements that you can make to score 0.877\n\nFixing the training-serving misalignment.\nCurrently the SVD decomposition is lossy.\nI have observed that the model fails at inference at places it did not fail in training.\nMaybe you could try post-finetuning my model to make sure it scores 100% on the easy tasks.\n\nWork with tokens instead of text.\nCurrently I am working with text.\nMy code produces text, and the text gets tokenized for training.\nI propose that my code should produce the tokens directly, instead.\nThe true training data should be stored in tokens, not text.\nI will still render the tokens with text to sanity check the completion traces.\nThis should make half of the token-related task unnecessary (concatenation for example).\n\nFix Nemotron's ability to convert text to characters.\nEven as I work with tokens, I do not control the tokenizer in submissions.\nThe base Nemotron is quite bad at converting text to characters, and converting symbol groups to individual characters.\n\nScaling training.\nCurrently I do not create synthetic problems to train the model.\nThis would require a function that produces problem statements on demand.\nWith this, we can use a part of the training set as validation set.\n\n\n# Predictions\n\nThese are my predictions for the final state of the competition\n- Guaranteeing a score of 0.877 is the baseline to even medal.\n    I think it is possible to train such a model end-to-end in the 30 hour weekly allowance of Kaggle notebooks.\n    There will be people sharing this notebook.\n- Top solutions will need to maximize their score on bit manipulation.\n    Currently my solution does not solve operations like `(ROT(2) XOR NOT SHL(3)) OR SHR(1)` because I will run out of tokens.\n    This may involve representing bits with fewer tokens (in base 64 for example).\n- Top solutions will need to make significant progress on cryptarithm.\n    I think this requires training the model to make guesses.\n    This may mean that I cannot merely continue with my approach of crafting the deterministic chain-of-thought and apply my logprob-zero objective at the sections where guessing needs to happen.\n- We will be clearer on which problems are actually not possible to solve.\n    For example, for equation and cryptarithm, there are problems where the question operator does not even appear in the problem text.\n    There might be other problems that are indeed proven unsolvable without hurting performance in other problems.\n    This allows us to focus on the problems that we actually can solve.\n\nI hope the competition gets more interesting from now. There is plenty of work to do!\n",
+      "content": "<p>I would like to thank the competition hosts and Kaggle for organizing this competition.\nI did manage to find something interesting to bet on, and I am happy to see my gamble paying off.</p>\n<p>You might have made some predictions that I have asked for. These are the answers.</p>\n<ul>\n<li>The score I was aiming for - 0.877</li>\n<li>How many tokens are used to train - <a href=\"https://nemotron.huikang.dev/metrics.html?logpath=04-08-16-14\" target=\"_blank\">27,850,703</a> tokens for the winning solution, 598,958,637 in total</li>\n<li>How much money I have spent - $212.48 in Tinker credits, approximately $60 in Modal credits, $10 for Kaggle / Colab subscription.</li>\n<li>What do you think is the secret - bit manipulation, you only need SFT, deterministic chain-of-thought design, use of min logprob as objective, use of Tinker for training</li>\n</ul>\n<h1>Quick links</h1>\n<ul>\n<li>Original <a href=\"https://www.kaggle.com/code/huikang/tinker-submission-notebook\" target=\"_blank\">notebook</a></li>\n<li>Validation <a href=\"https://www.kaggle.com/code/huikang/adapter-validation-notebook\" target=\"_blank\">notebook</a></li>\n<li>Training <a href=\"https://nemotron.huikang.dev/metrics?logpath=04-08-16-14\" target=\"_blank\">metrics</a> and <a href=\"https://nemotron.huikang.dev/training.html?logpath=04-08-16-14\" target=\"_blank\">logs</a> for winning submission</li>\n<li>Github containing the <a href=\"https://github.com/tonghuikang/nemotron\" target=\"_blank\">relevant code</a></li>\n</ul>\n<h1>What was I betting on</h1>\n<p>This is what I am betting on</p>\n<ul>\n<li>Nemotron can act as a simple computer after LoRA training.</li>\n</ul>\n<p>These are the assumptions in my bet</p>\n<ul>\n<li>I can craft the chain-of-thought better than my competitors. I think this turned out to be true. The main differentiator was the bit manipulation problem where I managed to figure out a chain of thought that has solved many more problems.</li>\n<li>I can finetune LoRA correctly and efficiently. I think I got this almost correct. KhoA managed to get <a href=\"https://www.kaggle.com/code/llkh0a/nemotron-unsloth-sft-training-3-30-2\" target=\"_blank\">perfect scores</a> on <code>numeral</code>, <code>gravity</code> and <code>unit_conversion</code> whereas my winning model still sometimes fails in these categories.</li>\n</ul>\n<p>What am I betting against</p>\n<ul>\n<li>Reinforcement learning. I already have the optimal policy for solvable problems. I already know the best next token for the LLM to make (assuming they have been making all the correct moves). The only job of the LLM is to follow the policy.</li>\n<li>Distilling larger models. The optimal policy should be directly generated with code.</li>\n</ul>\n<h1>Chain-of-thought design principles</h1>\n<p>As mentioned, I believe I can craft the chain-of-thought better than the other competitors.</p>\n<p>This is how I designed my chain-of-thought</p>\n<p>Design objectives</p>\n<ul>\n<li>Deterministic.\nThe temperature in the leaderboard evaluation metric is 0.0.\nThis means I just need to get the most likely token correct.\nMy training objective is to maximize the minimum logprob for the traces I am training on.</li>\n<li>Simple.\nEach token should be derived from as few sources as possible, and as easy to compute as possible.\nFor example, division should be broken down into subtraction and addition.\nInstead of choosing from 77 wonderland words to match, I should iterate through 77 wonderland words and classify whether the words match.</li>\n<li>Coverage.\nI want rare operations to be well-trained.\nFor example, when I am matching the wonderland words, I do not stop on the first word, I continue on with the rest of the Wonderland words so that I get the model to all the words it needs to match.</li>\n<li>Within length limit.\nThe full chain-of-thought has to be under 7680 tokens, as required by the competition.</li>\n<li>Tokenization awareness.\nLetters and symbols can be tokenized with other tokens.\nI should write chain-of-thought that avoids dealing with the model weaknesses in handling tokenization.</li>\n<li>Generalizable.\nApart from certain information (Wonderland words for Cipher), I should not be training the model to memorize answers.\nI should be aware of signs where the model is merely memorizing answers in the training set.</li>\n</ul>\n<p>Non-goals</p>\n<ul>\n<li>Diversity.\nFrontier models are supposed to be able to generate a diverse set of completions with the best rewards.\nI do not need diversity here, as long as the answer is correct, it does not matter if all the solutions look the same.\nThis is also possible because the leaderboard scores submissions with temperature zero.</li>\n<li>Conciseness.\nI do not need the chain-of-thought to be concise.\nHowever, the longer the chain-of-thought, the more it costs to train the model.</li>\n<li>Verification.\nFor now, I assume the model generates every token correctly.\nWith this assumption, I do not need to run verification or recovery from errors.</li>\n</ul>\n<p>The chain of thought should also be very easy to iterate on.\nIt should be easy to track, modify, train, and debug the chain of thought.</p>\n<h1>Solution approach</h1>\n<p>There are seven categories of problems. I describe my approach to solving these problems, in increasing order of difficulty.</p>\n<h3>Numeral</h3>\n<p>This task asks to convert a Roman numeral into an integer.</p>\n<p>I am aiming for a 100% (1576/1576) solve rate.</p>\n<p>All Roman numerals in the training set are between 1 and 100.</p>\n<p>I enumerated all the numerals. I also have a step-by-step process of solving the numeral.</p>\n<p>The code to generate the chain of thought is available <a href=\"https://github.com/tonghuikang/nemotron/blob/master/reasoners/numeral.py\" target=\"_blank\">here</a> and an example output is available <a href=\"https://nemotron.huikang.dev/synthetic.html?problem=1deaf759\" target=\"_blank\">here</a>.</p>\n<h3>Unit conversion / Gravity</h3>\n<p>This task asks to figure out a scalar value, and multiplication to apply the scalar value on the question input.\nI am aiming for a 100% (1594/1594) solve rate on unit conversion and a 100% (1597/1597) solve rate on gravity.</p>\n<p>The multiplication and division are split into multiple steps, so that it is easier to train the model to not make mistakes.</p>\n<p>The code to generate the chain of thought is available <a href=\"https://github.com/tonghuikang/nemotron/blob/master/reasoners/unit_conversion.py\" target=\"_blank\">here</a> for unit conversion and <a href=\"https://github.com/tonghuikang/nemotron/blob/master/reasoners/gravity.py\" target=\"_blank\">here</a> for gravity. An example output is available <a href=\"https://nemotron.huikang.dev/synthetic.html?problem=0047365c\" target=\"_blank\">here</a> for unit conversion and <a href=\"https://nemotron.huikang.dev/synthetic.html?problem=0040ff76\" target=\"_blank\">here</a> for gravity.</p>\n<h3>Cipher</h3>\n<p>This task asks to decrypt a substitution cipher. Given several example encryptions of Wonderland-themed sentences, the model must deduce the character-level mapping and apply it to decrypt a new sentence.</p>\n<p>I am aiming for a 100% (1576/1576) solve rate.</p>\n<p>The solution is straightforward</p>\n<ul>\n<li>Compute the current character mapping</li>\n<li>Collate the unmapped characters</li>\n<li>Assign the unmapped characters</li>\n</ul>\n<p>The code to generate the chain of thought is available <a href=\"https://github.com/tonghuikang/nemotron/blob/master/reasoners/cipher.py\" target=\"_blank\">here</a> and an example output is available <a href=\"https://nemotron.huikang.dev/synthetic.html?problem=017a161b\" target=\"_blank\">here</a>.</p>\n<p>Apparently, Nemotron is quite bad at <a href=\"https://nemotron.huikang.dev/training.html?logpath=04-10-04-33&amp;category=spelling\" target=\"_blank\">spelling</a>.\nI think perfect performance at this subtask is a baseline expectation to medal in the final leaderboard.</p>\n<h3>Bit manipulation</h3>\n<p>This task asks to discover a per-bit transformation rule from input-output examples of 8-bit binary numbers.</p>\n<p>I am aiming for an 85.1% (1364/1602) solve rate.</p>\n<p>Please refer to the <a href=\"https://www.kaggle.com/competitions/nvidia-nemotron-model-reasoning-challenge/discussion/690307\" target=\"_blank\">full-length post</a> on how I approach the bit manipulation problem.</p>\n<h3>Equation</h3>\n<p>This task asks to discover the arithmetic rule applied to two-number equations. Given examples like <code>64-65 = 201</code>, the model must figure out what operator maps the two operands to the result.</p>\n<p>I am aiming for a 76.6% (561/732) solve rate.</p>\n<p>There are four transformations for <code>(AB, CD) -&gt; XY</code></p>\n<ul>\n<li>Reversed operands, reversed result <code>(BA, DC) -&gt; YX</code></li>\n<li>Reversed operands only <code>(BA, DC) -&gt; XY</code></li>\n<li>Reversed result only <code>(AB, CD) -&gt; YX</code></li>\n<li>No transformation <code>(AB, CD) -&gt; XY</code></li>\n</ul>\n<p>There are 32 operators. I have separated them into two groups of operators, so that I match the more popular set of 8 operators first before matching the rarer set of 24 operators.</p>\n<p>The code to generate the chain of thought is available <a href=\"https://github.com/tonghuikang/nemotron/blob/master/reasoners/equation_numeric.py\" target=\"_blank\">here</a> and an example output is available <a href=\"https://nemotron.huikang.dev/synthetic.html?problem=04322d27\" target=\"_blank\">here</a>.</p>\n<p>There are operators that are <a href=\"https://nemotron.huikang.dev/synthetic.html?logpath=04-10-04-33&amp;category=equation_numeric_guess\" target=\"_blank\">not found</a> in the examples.\nI assume that they are absolute difference. This increases my target solve rate by 21 / 9500 = 0.2%.</p>\n<h3>Cryptarithm</h3>\n<p>There are some discussions on how this is a <a href=\"https://en.wikipedia.org/wiki/Verbal_arithmetic\" target=\"_blank\">verbal arithmetic</a> problem.</p>\n<p>I did manage to decode some operations if I assume that the operators involve multiplication, division and absolute difference.\nHowever, I was not able to craft the chain-of-thought that guides the model to produce the answer.</p>\n<p>I reduced the problems to identifying whether the question operator is concatenation or reverse concatenation. If the question operator is <a href=\"https://nemotron.huikang.dev/synthetic.html?logpath=04-10-04-33&amp;category=cryptarithm_guess\" target=\"_blank\">not found</a> in the examples, I assume the question operator is concatenation. This helped me to increase my target solve rate by (54 + 11) / 9500 = 0.6%.</p>\n<p>The code to generate the chain of thought is available <a href=\"https://github.com/tonghuikang/nemotron/blob/master/reasoners/cryptarithm.py\" target=\"_blank\">here</a> and an example output is available <a href=\"https://nemotron.huikang.dev/synthetic.html?problem=2c017f70\" target=\"_blank\">here</a>.</p>\n<p>I am aiming for a 7.9% (65/823) solve rate overall — 8.2% (54/659) on <code>cryptarithm_deduce</code> and 6.7% (11/164) on <code>cryptarithm_guess</code>.</p>\n<p>Apparently, Nemotron is also quite bad at <a href=\"https://nemotron.huikang.dev/training.html?logpath=04-10-04-33&amp;category=splitting\" target=\"_blank\">splitting</a> and <a href=\"https://nemotron.huikang.dev/training.html?logpath=04-10-04-33&amp;category=concatenation\" target=\"_blank\">concatenating</a> symbols. I also think perfect performance at this subtask is a baseline expectation to medal in the final leaderboard.</p>\n<h3>Target solve rate</h3>\n<p>Overall, I am aiming for an 87.7% (8333/9500) solve rate.</p>\n<pre><code>================================================================\nCategory                      Found  Total   Accuracy     Avg ms\n----------------------------------------------------------------\nbit_manipulation               1364   1602      85.1%        0.8\ncipher                         1576   1576     100.0%        0.1\ncryptarithm_deduce               54    659       8.2%        0.0\ncryptarithm_guess                11    164       6.7%        0.0\nequation_numeric_deduce         540    596      90.6%        0.6\nequation_numeric_guess           21    136      15.4%        0.6\ngravity                        1597   1597     100.0%        0.1\nnumeral                        1576   1576     100.0%        0.0\nunit_conversion                1594   1594     100.0%        0.1\n----------------------------------------------------------------\nTOTAL                          8333   9500      87.7%        0.2\n================================================================\n</code></pre>\n<p>If the chain-of-thought is achievable and I train the model correctly, I should be able to achieve an 87% or 88% solve rate on the leaderboard. I achieved an 85% solve rate.</p>\n<p>I think that any higher solve rate will require new insights on how to even solve the problems programmatically.</p>\n<h1>Training</h1>\n<p>The training runs for the winning submission were done on <a href=\"https://tinker-docs.thinkingmachines.ai/tinker/models/\" target=\"_blank\">Tinker</a>.</p>\n<p>However, the adapter Tinker produces cannot be immediately submitted to the competition.</p>\n<p>There are these differences</p>\n<ul>\n<li>The key prefix uses <code>model</code> instead of <code>backbone</code>.</li>\n<li>Tinker trains with fused expert weights (<code>experts.w1</code>, <code>experts.w2</code>) while the submission format needs per-expert weights (<code>experts.{i}.up_proj</code>, <code>experts.{i}.down_proj</code>).</li>\n<li>Tinker trains separate <code>gate_proj</code> and <code>x_proj</code> for Mamba layers, while the submission format needs a single <code>in_proj</code>.</li>\n<li>Tinker trains LoRA for <code>lm_head</code>, which is not present in the reference adapter.</li>\n</ul>\n<p>I need to implement these changes</p>\n<ul>\n<li>Unfuse <code>experts.w1</code> into per-expert <code>up_proj</code> and <code>experts.w2</code> into per-expert <code>down_proj</code>, by broadcasting the shared LoRA dimension across 128 experts.</li>\n<li>Singular Value Decomposition (SVD) to merge <code>gate_proj</code> + <code>x_proj</code> into <code>in_proj</code> (rank 64 to rank 32).</li>\n<li>Rename key prefix from <code>base_model.model.model</code> to <code>base_model.model.backbone</code>.</li>\n<li>Keep the LoRA for the <code>lm_head</code> weights.</li>\n</ul>\n<p>However, the SVD transformation is lossy, only 75% of singular mass values are captured. There is this training-serving misalignment. These are some behaviors I observed</p>\n<ul>\n<li>Not being able to write <code>\\boxed</code></li>\n<li>Generating degenerate responses by repeating previous tokens</li>\n<li>Not following the template exactly and missing out words</li>\n</ul>\n<p>There are multiple remedies for this, which I have yet to apply on my winning submission</p>\n<ul>\n<li>Tune on Tinker with rank 16, and losslessly upscale the LoRA to rank 32. However this means that I am not fully using all the ranks. I did manage to score <a href=\"https://www.kaggle.com/code/huikang/tinker-submission-notebook/output?scriptVersionId=310271979\" target=\"_blank\">0.82</a> with the approach, but apparently it is still making low-level mistakes that are not present in training.</li>\n<li>Implementing the finetuning script end-to-end. I needed to research the compute and memory <a href=\"https://www.kaggle.com/competitions/nvidia-nemotron-model-reasoning-challenge/discussion/687961\" target=\"_blank\">requirements</a>. I did manage to <a href=\"https://nemotron.huikang.dev/metrics.html?logpath=04-06-00-22\" target=\"_blank\">implement</a> something that scores 0.81. However, instead of 8 seconds per step, training is now 50 seconds per step. The cost is around the same anyway, so I continue finetuning on Tinker instead which allows me to iterate much faster.</li>\n<li>Post-finetune to align the weights. I have not tried this. The idea is to recapture the loss introduced by SVD on tokens that have their loss increased due to SVD.</li>\n</ul>\n<h1>End-to-end processes</h1>\n<p>This is how I iterate on my training</p>\n<p>1) I write or update the code that generates the completion traces. This involves the use of AI coding tools.\n    I usually point out the chain-of-thought that I dislike, and what I prefer instead, and I get Claude Code to fix the code.\n    I do not read all the code Claude Code is writing, but if I find Claude Code writing code in a hacky way I will ask it to fix.\n    I inspect the result to check that Claude Code is actually doing what I want.</p>\n<p>2) I run the script (<a href=\"https://github.com/tonghuikang/nemotron/blob/master/reasoning.py\" target=\"_blank\">reasoning.py</a>) that generates the completion traces.\n    I compare the difference in the output before the edit and after the edit.</p>\n<p>3) I send the completion traces (<a href=\"https://github.com/tonghuikang/nemotron/blob/master/train_sft.py\" target=\"_blank\">train_sft.py</a>) for finetuning on Tinker.\n    This is the step that is costing money.</p>\n<p>4) I inspect the <a href=\"https://nemotron.huikang.dev/metrics.html?logpath=04-08-16-14\" target=\"_blank\">minimum logprob</a> of individual traces.\n    As mentioned, my objective is to maximize the minimum logprob.\n    I find out which traces have a minimum logprob of less than 0.69, which means it is possible that the similar tokens will not be generated in submission.</p>\n<p>5) I inspect the tokens with a <a href=\"https://nemotron.huikang.dev/training.html?logpath=04-08-16-14&amp;problem=eda9e743\" target=\"_blank\">huge loss</a>.\n    If I see tokens with a logprob more than 0.69, it is likely that similar tokens will not be generated in similar context.\n    I will need to think of how to modify the chain of thought to address the issue.</p>\n<p>6) I upload the adapter to Kaggle <a href=\"https://github.com/tonghuikang/nemotron/blob/master/upload_adapter.py\" target=\"_blank\">upload_adapter.py</a>.</p>\n<p>7) I run the <a href=\"https://www.kaggle.com/code/huikang/tinker-submission-notebook\" target=\"_blank\">notebook</a> on Kaggle to convert the Tinker adapter to a submission-compatible adapter and the evaluation.\n    From this I discover that there is some training-serving misalignment.\n    There are easy problems that the model is doing well in training but failed to be correct at validation.</p>\n<p>8) Submit the notebook for the public leaderboard score.</p>\n<p>These are the training <a href=\"https://nemotron.huikang.dev/metrics?logpath=04-08-16-14\" target=\"_blank\">metrics</a> for the winning submission.</p>\n<p><img src=\"https://i.imgur.com/Pr4ZKly.png\" alt=\"metrics\"></p>\n<h1>Performance</h1>\n<p>This was computed in a manner similar to the <a href=\"https://www.kaggle.com/code/huikang/adapter-validation-notebook\" target=\"_blank\">validation notebook</a>.</p>\n<table>\n<thead>\n<tr>\n<th>Version</th>\n<th>v20</th>\n<th>Target</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Training tokens</td>\n<td>27,850,703</td>\n<td>-</td>\n</tr>\n<tr>\n<td>Link to training metrics</td>\n<td><a href=\"https://nemotron.huikang.dev/metrics.html?logpath=04-08-16-14\" target=\"_blank\">04-08-16-14</a></td>\n<td>-</td>\n</tr>\n<tr>\n<td>Total solve rate on training set</td>\n<td>87.8% (8340)</td>\n<td>87.7% (8333/9500)</td>\n</tr>\n<tr>\n<td>Leaderboard performance</td>\n<td>0.85 three times, 0.84 five times</td>\n<td>-</td>\n</tr>\n<tr>\n<td>numeral</td>\n<td>100.0% (1576)</td>\n<td>100.0% (1576/1576)</td>\n</tr>\n<tr>\n<td>unit_conversion</td>\n<td>99.7% (1590)</td>\n<td>100.0% (1594/1594)</td>\n</tr>\n<tr>\n<td>gravity</td>\n<td>99.6% (1591)</td>\n<td>100.0% (1597/1597)</td>\n</tr>\n<tr>\n<td>cipher</td>\n<td>99.3% (1565)</td>\n<td>100.0% (1576/1576)</td>\n</tr>\n<tr>\n<td>bit_manipulation</td>\n<td>87.2% (1397)</td>\n<td>85.1% (1364/1602)</td>\n</tr>\n<tr>\n<td>equation_numeric_deduce</td>\n<td>90.8% (541)</td>\n<td>90.6% (540/596)</td>\n</tr>\n<tr>\n<td>equation_numeric_guess</td>\n<td>16.2% (22)</td>\n<td>15.4% (21/136)</td>\n</tr>\n<tr>\n<td>cryptarithm_deduce</td>\n<td>7.1% (47)</td>\n<td>8.2% (54/659)</td>\n</tr>\n<tr>\n<td>cryptarithm_guess</td>\n<td>6.7% (11)</td>\n<td>6.7% (11/164)</td>\n</tr>\n</tbody>\n</table>\n<p>Note that</p>\n<ul>\n<li>I am testing on what the model has trained on.\nThis explains why the training set solve rate is higher than my leaderboard submission.</li>\n<li><code>cryptarithm_deduce</code> / <code>cryptarithm_guess</code> metrics are misleading.\nThis is because <code>cryptarithm_deduce</code> and <code>cryptarithm_guess</code> are trained on multiple epochs. Their minlogprob approached zero, but it was misleading because they have memorized the training set.</li>\n</ul>\n<h1>Reflections</h1>\n<p>This is my analysis of why I think I won.</p>\n<p>I actually spent quite a lot of time on this.\nI was on leave since March 31 in Singapore.\nI initially intended to spend my time on AIMO 3. However, I could not prove that my approach to AIMO 3 works in a small scale, so I invested my time in this Nemotron competition instead.</p>\n<p>Things I think I did well</p>\n<ul>\n<li>LeetCode.\nI still do <a href=\"https://leetcode.cn/u/tonghuikang/\" target=\"_blank\">LeetCode</a> for fun.\nThis gave me an advantage in solving bit manipulation better than the competitors.\nEven though AI can greatly outperform me at LeetCode (which I now feel quite sad about), my competitive programming background gave me the insight on how to reduce the \"time and space complexity\" of the problem.\nIn hindsight, this contributed more than half the difference between my notebook and Kh0A's <a href=\"https://www.kaggle.com/code/llkh0a/nemotron-unsloth-sft-training-3-30-2\" target=\"_blank\">notebook</a>.</li>\n<li>I looked at the data.\nI did not merely look at the loss curve - even as the loss curve goes to zero, the loss curve for each category can be very different.\nI did not merely look at the loss curve per category - even as the loss curve for the category goes to zero, there are still tokens with a huge loss.\nI looked at the minlogprob.\nI looked at which tokens the logprob is the lowest.\nIf you only look at the number, you only get a scalar reward.\nIf you look at the data, you get a richer reward signal that informs where you should make your changes.</li>\n<li>I know what I do not need to try.\nThere was a discussion on model distillation, but I do not need to do that.\nI know reinforcement learning approaches are not necessary when you know what the optimal policy should be.</li>\n<li>Building a product for myself.\nThe finetuning dashboard was made for myself.\nIt is worth it to just make a finetuning interface just for me to use.\nI hope this interface can serve as inspiration for building your own tooling.</li>\n<li>Using Tinker.\nTinker allowed me to iterate much faster.\nInstead of waiting 4 hours to train on the data, it took me 20 minutes instead.\nI do not regret spending time to set up training as I learnt about memory and compute requirements.\nSetting up the training pipeline gave me more respect for the Tinker product.</li>\n<li>Writing code locally.\nThis allows me to use Claude Code to write and test procedures.\nMy notebooks are written locally, linted and typechecked before uploading to Kaggle.</li>\n</ul>\n<p>Things that could be done better</p>\n<ul>\n<li>Writing the validation notebook.\nAs you see, my winning submission failed at some simple tasks like <code>numeral</code>.\nI am aware of this, but I do not know the scale of how often this is happening.</li>\n<li>Investing in a held out validation set.\nThis allows me to predict the public leaderboard score before submitting it.\nI think it would have been worth it to craft a function that generates valid problems, and train on those problems instead so that the training set can be used for validation, uncontaminated.</li>\n<li>Using AI coding tools more effectively.\nI think I used an appropriate amount of AI in my development.\nI cannot really use AI fully autonomously because the step involving training with Tinker costs $10 to $20 per iteration.\nI think it still needs good human judgment to ensure that each Tinker finetuning run is worth it.\nHowever, there are some processes where I should have used more AI.\nOne place is the investigation of the tokens with highly negative logprobs.\nI needed to search for these highly negative logprobs manually.\nThere should be a script that AI can use to write and document these so that we can work on the chain of thought.</li>\n</ul>\n<h1>Improvements that you can make to score 0.877</h1>\n<p>Fixing the training-serving misalignment.\nCurrently the SVD decomposition is lossy.\nI have observed that the model fails at inference at places it did not fail in training.\nMaybe you could try post-finetuning my model to make sure it scores 100% on the easy tasks.</p>\n<p>Work with tokens instead of text.\nCurrently I am working with text.\nMy code produces text, and the text gets tokenized for training.\nI propose that my code should produce the tokens directly, instead.\nThe true training data should be stored in tokens, not text.\nI will still render the tokens with text to sanity check the completion traces.\nThis should make half of the token-related task unnecessary (concatenation for example).</p>\n<p>Fix Nemotron's ability to convert text to characters.\nEven as I work with tokens, I do not control the tokenizer in submissions.\nThe base Nemotron is quite bad at converting text to characters, and converting symbol groups to individual characters.</p>\n<p>Scaling training.\nCurrently I do not create synthetic problems to train the model.\nThis would require a function that produces problem statements on demand.\nWith this, we can use a part of the training set as validation set.</p>\n<h1>Predictions</h1>\n<p>These are my predictions for the final state of the competition</p>\n<ul>\n<li>Guaranteeing a score of 0.877 is the baseline to even medal.\nI think it is possible to train such a model end-to-end in the 30 hour weekly allowance of Kaggle notebooks.\nThere will be people sharing this notebook.</li>\n<li>Top solutions will need to maximize their score on bit manipulation.\nCurrently my solution does not solve operations like <code>(ROT(2) XOR NOT SHL(3)) OR SHR(1)</code> because I will run out of tokens.\nThis may involve representing bits with fewer tokens (in base 64 for example).</li>\n<li>Top solutions will need to make significant progress on cryptarithm.\nI think this requires training the model to make guesses.\nThis may mean that I cannot merely continue with my approach of crafting the deterministic chain-of-thought and apply my logprob-zero objective at the sections where guessing needs to happen.</li>\n<li>We will be clearer on which problems are actually not possible to solve.\nFor example, for equation and cryptarithm, there are problems where the question operator does not even appear in the problem text.\nThere might be other problems that are indeed proven unsolvable without hurting performance in other problems.\nThis allows us to focus on the problems that we actually can solve.</li>\n</ul>\n<p>I hope the competition gets more interesting from now. There is plenty of work to do!</p>",
+      "parent": {},
+      "author": {
+        "displayName": "Tong Hui Kang",
+        "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1680925-kg.jpg",
+        "url": "/huikang",
+        "tier": "MASTER",
+        "id": 1680925,
+        "progressionOptOut": false
+      },
+      "authorType": "TOPIC",
+      "votes": {
+        "totalVotes": 184,
+        "canUpvote": true,
+        "totalUpvotes": 186
+      },
+      "kernelVersion": 0,
+      "competitionRanking": 423,
+      "feedbackTrackingData": {},
+      "isThankYou": false,
+      "reactions": [
+        {
+          "emoji": "YAY",
+          "featuredUserNames": [
+            "crustacean",
+            "aemado",
+            "jaggmm",
+            "enaimaan",
+            "n10705013",
+            "kingkong153",
+            "ylamidon",
+            "zacchaeus",
+            "honganzhu",
+            "mohamedzayedahmed",
+            "kclamm",
+            "barnobarno",
+            "askdkjanfkqf",
+            "kienngx",
+            "lewbei",
+            "hinemusk",
+            "sunaindhingra",
+            "adaluvu",
+            "dvanguyen",
+            "tranban",
+            "ravi123a321at",
+            "umcolin",
+            "ldthanh",
+            "bastienramseyer",
+            "farshadkofi"
+          ],
+          "userCount": 25
+        },
+        {
+          "emoji": "LOVE",
+          "featuredUserNames": [
+            "crustacean",
+            "pranavpoduval",
+            "rin2401",
+            "maj0rt0m",
+            "vu9480",
+            "jsday96",
+            "honganzhu",
+            "xinzhang1994",
+            "mohamedzayedahmed",
+            "hechtjp",
+            "gendaijin",
+            "wangapa106g",
+            "bailh1",
+            "hinemusk",
+            "sunaindhingra",
+            "davisdenner",
+            "svanikkolli",
+            "chaofan0514",
+            "thefoo1",
+            "jctesting",
+            "umcolin",
+            "ldthanh",
+            "oleksiinahirnyi",
+            "testloc"
+          ],
+          "userCount": 24
+        },
+        {
+          "emoji": "KAGGLE",
+          "featuredUserNames": [
+            "crustacean",
+            "javihm77",
+            "honganzhu",
+            "mohamedzayedahmed",
+            "pearpn25",
+            "hinemusk",
+            "sunaindhingra",
+            "testloc"
+          ],
+          "userCount": 8
+        },
+        {
+          "emoji": "THANK_YOU",
+          "featuredUserNames": [
+            "kingkong153",
+            "honganzhu",
+            "beckpro",
+            "mohamedzayedahmed",
+            "kclamm",
+            "sunnyhong0326",
+            "duresh08",
+            "pearpn25",
+            "brishian",
+            "sunaindhingra",
+            "adaluvu",
+            "ravi123a321at",
+            "umcolin",
+            "sharonmitch",
+            "farshadkofi",
+            "timrainbig"
+          ],
+          "userCount": 16
+        }
+      ],
+      "teamUpInfo": {
+        "teamLeader": {
+          "displayName": "Tong Hui Kang",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1680925-kg.jpg",
+          "url": "/huikang",
+          "userName": "huikang",
+          "tier": "MASTER",
+          "id": 1680925,
+          "profileUrl": "/huikang",
+          "performanceTier": "MASTER",
+          "userId": 1680925,
+          "progressionOptOut": false
+        },
+        "intro": ""
+      }
+    },
+    "firstMessageId": 3438961,
+    "forumId": 10085877,
+    "forumName": "NVIDIA Nemotron Model Reasoning Challenge",
+    "id": 689915,
+    "name": "[Open Progress Prize Publication] SFT to maximize minimum logprob",
+    "parentName": "nvidia-nemotron-model-reasoning-challenge",
+    "parentUrl": "/competitions/nvidia-nemotron-model-reasoning-challenge",
+    "postDate": "2026-04-10T03:02:11.814737500Z",
+    "totalVotes": 184,
+    "url": "/competitions/nvidia-nemotron-model-reasoning-challenge/discussion/689915",
+    "totalMessages": 52,
+    "authorPerformanceTier": "MASTER",
+    "authorProgressionOptOut": false
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "chinnaphatkhun/rsna-knee-e024-what-models-see",
+  "title": "RSNA Knee E024 What Models See",
+  "code_file": "e024-rsna-knee-what-models-see.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "dataset_sources": [
+    "dreaddevelopment/raptor-knee-widedense",
+    "pilkwang/rsna-knee-weights"
+  ],
+  "competition_sources": [
+    "rsna-knee-abnormality-detection"
+  ],
+  "model_sources": [
+    "metaresearch/dinov2/PyTorch/small/1"
+  ],
+  "kernel_sources": [],
+  "machine_shape": "NvidiaTeslaT4"
+}

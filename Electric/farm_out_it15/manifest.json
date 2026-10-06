@@ -1,0 +1,135 @@
+{
+ "models": {
+  "lgb_naji_s42_focal": {
+   "cfg": {
+    "id": "lgb_naji_s42_focal",
+    "family": "lgb",
+    "features": "naji",
+    "seed": 42,
+    "tag": "focal",
+    "params": {
+     "lr": 0.02,
+     "leaves": 32,
+     "depth": 5,
+     "min_child": 10,
+     "ff": 0.3,
+     "bag": 0.8,
+     "l2": 2.0,
+     "a": 0.071,
+     "rounds": 20000,
+     "es": 500,
+     "max_bin": 1024,
+     "obj": "focal",
+     "falpha": 0.25,
+     "fgamma": 2.0
+    }
+   },
+   "oof_auc": 0.945734,
+   "fold_auc": [
+    0.944831,
+    0.945425,
+    0.946709,
+    0.945935,
+    0.945825
+   ],
+   "iters": [
+    1121,
+    1225,
+    958,
+    742,
+    903
+   ]
+  },
+  "lgb_naji_s7_focal": {
+   "cfg": {
+    "id": "lgb_naji_s7_focal",
+    "family": "lgb",
+    "features": "naji",
+    "seed": 7,
+    "tag": "focal",
+    "params": {
+     "lr": 0.02,
+     "leaves": 32,
+     "depth": 5,
+     "min_child": 10,
+     "ff": 0.3,
+     "bag": 0.8,
+     "l2": 2.0,
+     "a": 0.071,
+     "rounds": 20000,
+     "es": 500,
+     "max_bin": 1024,
+     "obj": "focal",
+     "falpha": 0.25,
+     "fgamma": 2.0
+    }
+   },
+   "oof_auc": 0.945747,
+   "fold_auc": [
+    0.944822,
+    0.945473,
+    0.946733,
+    0.945955,
+    0.945793
+   ],
+   "iters": [
+    795,
+    1020,
+    1073,
+    822,
+    882
+   ]
+  },
+  "lgb_te2_s42_focal": {
+   "cfg": {
+    "id": "lgb_te2_s42_focal",
+    "family": "lgb",
+    "features": "te2",
+    "seed": 42,
+    "tag": "focal",
+    "params": {
+     "lr": 0.02,
+     "leaves": 32,
+     "depth": 5,
+     "min_child": 10,
+     "ff": 0.3,
+     "bag": 0.8,
+     "l2": 2.0,
+     "a": 0.071,
+     "rounds": 20000,
+     "es": 500,
+     "max_bin": 1024,
+     "obj": "focal",
+     "falpha": 0.25,
+     "fgamma": 1.0
+    }
+   },
+   "oof_auc": 0.945685,
+   "fold_auc": [
+    0.944758,
+    0.945433,
+    0.946644,
+    0.945926,
+    0.945693
+   ],
+   "iters": [
+    1136,
+    1164,
+    1254,
+    1205,
+    1145
+   ]
+  }
+ },
+ "history": [
+  {
+   "n_models": 3,
+   "blend_oof": 0.945862,
+   "weights": {
+    "lgb_naji_s7_focal": 0.3333,
+    "lgb_te2_s42_focal": 0.3333,
+    "lgb_naji_s42_focal": 0.3333
+   }
+  }
+ ]
+}

@@ -1,0 +1,65 @@
+{
+  "ledger_version": 1,
+  "submissions": [
+    {
+      "candidate": "fallback",
+      "file": "fallback_submission.csv",
+      "family": "fallback",
+      "oof_auc": 0.5,
+      "fold_auc_std": null,
+      "prediction_correlation": null,
+      "submission_id": "sub_0",
+      "public_score": 0.5,
+      "feedback_valid": true,
+      "submission_order": 0
+    },
+    {
+      "candidate": "logistic",
+      "file": "candidate_logistic.csv",
+      "family": "linear",
+      "oof_auc": 0.841696,
+      "fold_auc_std": 0.03293591,
+      "prediction_correlation": null,
+      "submission_id": "sub_1",
+      "public_score": 0.8537759865830057,
+      "feedback_valid": true,
+      "submission_order": 1
+    },
+    {
+      "candidate": "small_rbf_svm",
+      "file": "candidate_small_rbf_svm.csv",
+      "family": "kernel",
+      "oof_auc": 0.84016,
+      "fold_auc_std": 0.02655542,
+      "prediction_correlation": null,
+      "submission_id": "sub_2",
+      "public_score": 0.8379827194415007,
+      "feedback_valid": true,
+      "submission_order": 2
+    },
+    {
+      "candidate": "extra_trees",
+      "file": "candidate_extra_trees.csv",
+      "family": "bagging",
+      "oof_auc": 0.78572,
+      "fold_auc_std": 0.043074,
+      "prediction_correlation": null,
+      "submission_id": "sub_3",
+      "public_score": 0.792401448940625,
+      "feedback_valid": true,
+      "submission_order": 3
+    },
+    {
+      "candidate": "blend_top3",
+      "file": "candidate_blend_top3.csv",
+      "family": "blend",
+      "oof_auc": 0.845688,
+      "fold_auc_std": null,
+      "prediction_correlation": null,
+      "submission_id": "sub_4",
+      "public_score": 0.8527906480553569,
+      "feedback_valid": true,
+      "submission_order": 4
+    }
+  ]
+}

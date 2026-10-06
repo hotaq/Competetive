@@ -1,0 +1,66 @@
+{
+  "cache": {
+    "max_cache_pixel_diff": 0,
+    "max_repeat_pixel_diff": 0,
+    "projected_build_minutes": 166.43916506397576,
+    "projected_gib": 21.555092990274623,
+    "sample_bytes": 829781613
+  },
+  "checkpoint": {
+    "checkpoint_res": 384,
+    "name": "raptor_ft_coatnet_v4_full.pt",
+    "sha256": "89606f05849838529e1b4658d28fb049623205d9853371548403bca460361ded"
+  },
+  "counts": {
+    "corpus": 4407,
+    "gold": 58,
+    "sample": 158,
+    "train_non_gold": 4349
+  },
+  "decision": "STOP_P0_P1_FAILED",
+  "experiment": "E028 P0/P1 exact64 corpus proof",
+  "gates": {
+    "all_gold_have_42_windows": true,
+    "all_shapes_exact64": true,
+    "cache_pixel_max_abs_zero": true,
+    "checkpoint_name_exact": true,
+    "checkpoint_sha256_recorded": true,
+    "corpus_count_exact": true,
+    "fixed_smoke40_recorded": true,
+    "gold_train_overlap_zero": true,
+    "label_hashes_recorded": true,
+    "non_gold_train_count_exact": true,
+    "projected_build_le_90_min": false,
+    "projected_cache_le_18_gib": false,
+    "repeat_raw_pixel_max_abs_zero": true,
+    "safe_baseline_reproduced": true,
+    "selected_cross_series_zero": true,
+    "selected_zero_slice_zero": true
+  },
+  "gold58": {
+    "expected": 0.9174298724699895,
+    "gap": 0.0,
+    "macro_auc": 0.9174298724699895,
+    "per_target": {
+      "ACL": 0.9803921568627451,
+      "Baker's": 0.9710144927536233,
+      "Contusion": 0.9298245614035088,
+      "Effusion": 0.9788819875776398,
+      "Fracture": 0.9069444444444443,
+      "Lateral Meniscus": 0.8633540372670807,
+      "Lateral OA": 0.8471953578336557,
+      "MCL": 0.9795918367346939,
+      "Medial Meniscus": 0.96875,
+      "Medial OA": 0.9829457364341085,
+      "PF OA": 0.8236808236808236,
+      "Synovitis": 0.7765830346475507
+    }
+  },
+  "optimizer_created": false,
+  "submission_created": false,
+  "windows": {
+    "cross_series": 0,
+    "selected": 6636,
+    "zero_slice": 0
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "best": {
+    "delta_vs_zero": -0.0009134969843000995,
+    "epoch": 0,
+    "macro_auc": 0.9165163754856894,
+    "min_target_delta": -0.007453416149068359,
+    "per_target_delta": {
+      "ACL": -0.001225490196078427,
+      "Baker's": 0.0036231884057971175,
+      "Contusion": -0.004048582995951455,
+      "Effusion": -0.001242236024844745,
+      "Fracture": 0.002777777777777879,
+      "Lateral Meniscus": -0.007453416149068359,
+      "Lateral OA": -0.003868471953578423,
+      "MCL": 0.0045351473922903285,
+      "Medial Meniscus": -0.0024038461538461453,
+      "Medial OA": 0.0,
+      "PF OA": -0.006435006435006274,
+      "Synovitis": 0.004778972520908087
+    }
+  },
+  "checkpoint": {
+    "checkpoint_res": 384,
+    "name": "raptor_ft_coatnet_v4_full.pt",
+    "sha256": "89606f05849838529e1b4658d28fb049623205d9853371548403bca460361ded"
+  },
+  "checkpoint_exported": false,
+  "counts": {
+    "gold": 58,
+    "optimizer_steps": 40,
+    "train": 40
+  },
+  "decision": "STOP_P2_FAILED",
+  "epochs": [
+    {
+      "delta_vs_zero": -0.0009134969843000995,
+      "epoch": 0,
+      "gold58_macro_auc": 0.9165163754856894,
+      "loss": 0.832322484254837,
+      "seconds": 107.73934674263
+    },
+    {
+      "delta_vs_zero": -0.0017104324225166723,
+      "epoch": 1,
+      "gold58_macro_auc": 0.9157194400474729,
+      "loss": 0.7939100295305253,
+      "seconds": 108.82874536514282
+    }
+  ],
+  "experiment": "E029 paired 40-study exact64 warm-start smoke",
+  "gates": {
+    "backbone_updated": true,
+    "best_gain_ge_001": false,
+    "cache_pixel_max_abs_zero": true,
+    "checkpoint_name_exact": true,
+    "checkpoint_sha256_recorded": true,
+    "cross_series_window_count_zero": true,
+    "fixed_train_count_40": true,
+    "fixed_train_ids_exact": true,
+    "gold_ids_exact": true,
+    "gold_train_overlap_zero": true,
+    "gradient_norms_finite": true,
+    "head_updated": true,
+    "loss_decreased": true,
+    "losses_finite": true,
+    "max_target_drop_le_003": true,
+    "optimizer_parameter_match": true,
+    "optimizer_steps_exact": true,
+    "paired_bootstrap_win_ge_065": false,
+    "peak_gpu_le_15_gib": true,
+    "throughput_positive": true,
+    "zero_slice_window_count_zero": true,
+    "zero_step_reproduced": true
+  },
+  "identity": {
+    "fixed_smoke40_sha256": "8c3d0049e0a196a78ce36789b08f58d349d35bd34886c7120aa1b9c5cbccb21c",
+    "gold_ids_sha256": "3918e0c230d6c8d16e073b3c2537d173011b705c71b494493591e6afa5f510ea"
+  },
+  "optimizer_created": true,
+  "paired_bootstrap": {
+    "ci95": [
+      -0.006162988330385377,
+      0.003969924074311557
+    ],
+    "mean_delta": -0.0010234213703726315,
+    "valid_repeats": 2000,
+    "win_rate": 0.3435
+  },
+  "resources": {
+    "build_workers": 4,
+    "cache_build_minutes": 1.1007853190104167,
+    "peak_gpu_gib": 2.7839341163635254,
+    "throughput_studies_per_second": 0.3693868498435488,
+    "train_minutes": 3.6095852732658384
+  },
+  "submission_created": false,
+  "updates": {
+    "backbone_changed_tensors": 403,
+    "gradient_checkpointing": true,
+    "head_changed_tensors": 8,
+    "optimizer_parameter_match": true
+  },
+  "window_policy": {
+    "cross_series": 0,
+    "eval_windows": 42,
+    "stored_slices": 64,
+    "train_windows": 4,
+    "zero_slice": 0
+  },
+  "zero_step": {
+    "expected": 0.9174298724699895,
+    "gap": 0.0,
+    "macro_auc": 0.9174298724699895
+  }
+}

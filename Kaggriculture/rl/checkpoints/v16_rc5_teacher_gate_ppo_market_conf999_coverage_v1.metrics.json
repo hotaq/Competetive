@@ -1,0 +1,629 @@
+{
+  "config": {
+    "base_seed": 706000,
+    "crop_opponents": [
+      [
+        "WHEAT",
+        6
+      ],
+      [
+        "CARROT",
+        6
+      ],
+      [
+        "TOMATO",
+        6
+      ],
+      [
+        "STRAWBERRY",
+        6
+      ],
+      [
+        "MELON",
+        6
+      ]
+    ],
+    "enabled_components": [
+      "market"
+    ],
+    "evaluation_episodes": 12,
+    "file_opponents": [
+      "/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/submissions/top1_v12_ryo_selector_b120_repaired_standalone/main.py"
+    ],
+    "gate": {
+      "action_dim": 16,
+      "hidden_dim": 64,
+      "observation_dim": 2048
+    },
+    "initial_acceptance": 0.5,
+    "iterations": 1,
+    "learning_rate": 0.0003,
+    "max_hands": 14,
+    "minimum_confidence": 0.999,
+    "reward_scale": 10000.0,
+    "rollout_episodes": 12,
+    "seed": 2026,
+    "total_iterations": 1
+  },
+  "history": [
+    {
+      "evaluation": {
+        "by_opponent": {
+          "crop:CARROT:6": {
+            "draws": 0,
+            "games": 2,
+            "losses": 0,
+            "mean_margin": 132873.5,
+            "wins": 2,
+            "worst_margin": 132827.0
+          },
+          "crop:MELON:6": {
+            "draws": 0,
+            "games": 2,
+            "losses": 0,
+            "mean_margin": 113745.5,
+            "wins": 2,
+            "worst_margin": 113731.0
+          },
+          "crop:STRAWBERRY:6": {
+            "draws": 0,
+            "games": 2,
+            "losses": 0,
+            "mean_margin": 176260.0,
+            "wins": 2,
+            "worst_margin": 176260.0
+          },
+          "crop:TOMATO:6": {
+            "draws": 0,
+            "games": 2,
+            "losses": 0,
+            "mean_margin": 147358.0,
+            "wins": 2,
+            "worst_margin": 147358.0
+          },
+          "crop:WHEAT:6": {
+            "draws": 0,
+            "games": 2,
+            "losses": 0,
+            "mean_margin": 142230.0,
+            "wins": 2,
+            "worst_margin": 142230.0
+          },
+          "file:/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/submissions/top1_v12_ryo_selector_b120_repaired_standalone/main.py": {
+            "draws": 0,
+            "games": 2,
+            "losses": 2,
+            "mean_margin": -9171.0,
+            "wins": 0,
+            "worst_margin": -9171.0
+          }
+        },
+        "draws": 0,
+        "games": 12,
+        "losses": 2,
+        "mean_accepted_component_rate": 0.0630584760269639,
+        "mean_action_difference_rate": 0.0,
+        "mean_margin": 117216.0,
+        "mean_money": 141652.58333333334,
+        "wins": 10,
+        "worst_margin": -9171.0,
+        "worst_money": 107125.0
+      },
+      "evaluation_games": [
+        {
+          "accepted_component_rate": 0.0875,
+          "action_difference_rate": 0.0,
+          "candidate_money": 146461.0,
+          "candidate_seat": 0,
+          "margin": 142230.0,
+          "opponent": "crop:WHEAT:6",
+          "opponent_money": 4231.0,
+          "seed": 756000
+        },
+        {
+          "accepted_component_rate": 0.0,
+          "action_difference_rate": 0.0,
+          "candidate_money": 146461.0,
+          "candidate_seat": 1,
+          "margin": 142230.0,
+          "opponent": "crop:WHEAT:6",
+          "opponent_money": 4231.0,
+          "seed": 756000
+        },
+        {
+          "accepted_component_rate": 0.1518987341772152,
+          "action_difference_rate": 0.0,
+          "candidate_money": 137029.0,
+          "candidate_seat": 0,
+          "margin": 132827.0,
+          "opponent": "crop:CARROT:6",
+          "opponent_money": 4202.0,
+          "seed": 756001
+        },
+        {
+          "accepted_component_rate": 0.0,
+          "action_difference_rate": 0.0,
+          "candidate_money": 137029.0,
+          "candidate_seat": 1,
+          "margin": 132920.0,
+          "opponent": "crop:CARROT:6",
+          "opponent_money": 4109.0,
+          "seed": 756001
+        },
+        {
+          "accepted_component_rate": 0.15476190476190477,
+          "action_difference_rate": 0.0,
+          "candidate_money": 150993.0,
+          "candidate_seat": 0,
+          "margin": 147358.0,
+          "opponent": "crop:TOMATO:6",
+          "opponent_money": 3635.0,
+          "seed": 756002
+        },
+        {
+          "accepted_component_rate": 0.0,
+          "action_difference_rate": 0.0,
+          "candidate_money": 150993.0,
+          "candidate_seat": 1,
+          "margin": 147358.0,
+          "opponent": "crop:TOMATO:6",
+          "opponent_money": 3635.0,
+          "seed": 756002
+        },
+        {
+          "accepted_component_rate": 0.18072289156626506,
+          "action_difference_rate": 0.0,
+          "candidate_money": 182718.0,
+          "candidate_seat": 0,
+          "margin": 176260.0,
+          "opponent": "crop:STRAWBERRY:6",
+          "opponent_money": 6458.0,
+          "seed": 756003
+        },
+        {
+          "accepted_component_rate": 0.0,
+          "action_difference_rate": 0.0,
+          "candidate_money": 182718.0,
+          "candidate_seat": 1,
+          "margin": 176260.0,
+          "opponent": "crop:STRAWBERRY:6",
+          "opponent_money": 6458.0,
+          "seed": 756003
+        },
+        {
+          "accepted_component_rate": 0.18181818181818182,
+          "action_difference_rate": 0.0,
+          "candidate_money": 125575.0,
+          "candidate_seat": 0,
+          "margin": 113731.0,
+          "opponent": "crop:MELON:6",
+          "opponent_money": 11844.0,
+          "seed": 756004
+        },
+        {
+          "accepted_component_rate": 0.0,
+          "action_difference_rate": 0.0,
+          "candidate_money": 125604.0,
+          "candidate_seat": 1,
+          "margin": 113760.0,
+          "opponent": "crop:MELON:6",
+          "opponent_money": 11844.0,
+          "seed": 756004
+        },
+        {
+          "accepted_component_rate": 0.0,
+          "action_difference_rate": 0.0,
+          "candidate_money": 107125.0,
+          "candidate_seat": 0,
+          "margin": -9171.0,
+          "opponent": "file:/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/submissions/top1_v12_ryo_selector_b120_repaired_standalone/main.py",
+          "opponent_money": 116296.0,
+          "seed": 756005
+        },
+        {
+          "accepted_component_rate": 0.0,
+          "action_difference_rate": 0.0,
+          "candidate_money": 107125.0,
+          "candidate_seat": 1,
+          "margin": -9171.0,
+          "opponent": "file:/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/submissions/top1_v12_ryo_selector_b120_repaired_standalone/main.py",
+          "opponent_money": 116296.0,
+          "seed": 756005
+        }
+      ],
+      "improvement": {
+        "equal_games": 12,
+        "improved_games": 0,
+        "mean_margin_delta": 0.0,
+        "regressed_games": 0,
+        "worst_margin_delta": 0.0
+      },
+      "iteration": 1,
+      "rollout": {
+        "by_opponent": {
+          "crop:CARROT:6": {
+            "draws": 0,
+            "games": 2,
+            "losses": 0,
+            "mean_margin": 166700.0,
+            "wins": 2,
+            "worst_margin": 158086.0
+          },
+          "crop:MELON:6": {
+            "draws": 0,
+            "games": 2,
+            "losses": 0,
+            "mean_margin": 176403.0,
+            "wins": 2,
+            "worst_margin": 176403.0
+          },
+          "crop:STRAWBERRY:6": {
+            "draws": 0,
+            "games": 2,
+            "losses": 0,
+            "mean_margin": 127920.5,
+            "wins": 2,
+            "worst_margin": 125871.0
+          },
+          "crop:TOMATO:6": {
+            "draws": 0,
+            "games": 2,
+            "losses": 0,
+            "mean_margin": 169235.5,
+            "wins": 2,
+            "worst_margin": 168644.0
+          },
+          "crop:WHEAT:6": {
+            "draws": 0,
+            "games": 2,
+            "losses": 0,
+            "mean_margin": 158396.5,
+            "wins": 2,
+            "worst_margin": 157653.0
+          },
+          "file:/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/submissions/top1_v12_ryo_selector_b120_repaired_standalone/main.py": {
+            "draws": 0,
+            "games": 2,
+            "losses": 0,
+            "mean_margin": 13220.0,
+            "wins": 2,
+            "worst_margin": 13220.0
+          }
+        },
+        "draws": 0,
+        "games": 12,
+        "losses": 0,
+        "mean_accepted_component_rate": 0.5429432001712516,
+        "mean_action_difference_rate": 0.0009272137227630969,
+        "mean_margin": 135312.58333333334,
+        "mean_money": 153824.33333333334,
+        "wins": 12,
+        "worst_margin": 13220.0,
+        "worst_money": 95280.0
+      },
+      "rollout_games": [
+        {
+          "accepted_component_rate": 0.5875,
+          "action_difference_rate": 0.0013908205841446453,
+          "candidate_money": 163436.0,
+          "candidate_seat": 0,
+          "margin": 159140.0,
+          "opponent": "crop:WHEAT:6",
+          "opponent_money": 4296.0,
+          "seed": 706000
+        },
+        {
+          "accepted_component_rate": 0.5625,
+          "action_difference_rate": 0.0013908205841446453,
+          "candidate_money": 161949.0,
+          "candidate_seat": 1,
+          "margin": 157653.0,
+          "opponent": "crop:WHEAT:6",
+          "opponent_money": 4296.0,
+          "seed": 706000
+        },
+        {
+          "accepted_component_rate": 0.4523809523809524,
+          "action_difference_rate": 0.0,
+          "candidate_money": 161834.0,
+          "candidate_seat": 0,
+          "margin": 158086.0,
+          "opponent": "crop:CARROT:6",
+          "opponent_money": 3748.0,
+          "seed": 706001
+        },
+        {
+          "accepted_component_rate": 0.5057471264367817,
+          "action_difference_rate": 0.0013908205841446453,
+          "candidate_money": 179088.0,
+          "candidate_seat": 1,
+          "margin": 175314.0,
+          "opponent": "crop:CARROT:6",
+          "opponent_money": 3774.0,
+          "seed": 706001
+        },
+        {
+          "accepted_component_rate": 0.5697674418604651,
+          "action_difference_rate": 0.0,
+          "candidate_money": 172279.0,
+          "candidate_seat": 0,
+          "margin": 168644.0,
+          "opponent": "crop:TOMATO:6",
+          "opponent_money": 3635.0,
+          "seed": 706002
+        },
+        {
+          "accepted_component_rate": 0.5697674418604651,
+          "action_difference_rate": 0.0013908205841446453,
+          "candidate_money": 173462.0,
+          "candidate_seat": 1,
+          "margin": 169827.0,
+          "opponent": "crop:TOMATO:6",
+          "opponent_money": 3635.0,
+          "seed": 706002
+        },
+        {
+          "accepted_component_rate": 0.5301204819277109,
+          "action_difference_rate": 0.0013908205841446453,
+          "candidate_money": 131305.0,
+          "candidate_seat": 0,
+          "margin": 125871.0,
+          "opponent": "crop:STRAWBERRY:6",
+          "opponent_money": 5434.0,
+          "seed": 706003
+        },
+        {
+          "accepted_component_rate": 0.5783132530120482,
+          "action_difference_rate": 0.0013908205841446453,
+          "candidate_money": 135485.0,
+          "candidate_seat": 1,
+          "margin": 129970.0,
+          "opponent": "crop:STRAWBERRY:6",
+          "opponent_money": 5515.0,
+          "seed": 706003
+        },
+        {
+          "accepted_component_rate": 0.45121951219512196,
+          "action_difference_rate": 0.0013908205841446453,
+          "candidate_money": 188247.0,
+          "candidate_seat": 0,
+          "margin": 176403.0,
+          "opponent": "crop:MELON:6",
+          "opponent_money": 11844.0,
+          "seed": 706004
+        },
+        {
+          "accepted_component_rate": 0.573170731707317,
+          "action_difference_rate": 0.0013908205841446453,
+          "candidate_money": 188247.0,
+          "candidate_seat": 1,
+          "margin": 176403.0,
+          "opponent": "crop:MELON:6",
+          "opponent_money": 11844.0,
+          "seed": 706004
+        },
+        {
+          "accepted_component_rate": 0.6067415730337079,
+          "action_difference_rate": 0.0,
+          "candidate_money": 95280.0,
+          "candidate_seat": 0,
+          "margin": 13220.0,
+          "opponent": "file:/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/submissions/top1_v12_ryo_selector_b120_repaired_standalone/main.py",
+          "opponent_money": 82060.0,
+          "seed": 706005
+        },
+        {
+          "accepted_component_rate": 0.5280898876404494,
+          "action_difference_rate": 0.0,
+          "candidate_money": 95280.0,
+          "candidate_seat": 1,
+          "margin": 13220.0,
+          "opponent": "file:/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/submissions/top1_v12_ryo_selector_b120_repaired_standalone/main.py",
+          "opponent_money": 82060.0,
+          "seed": 706005
+        }
+      ],
+      "update": {
+        "advantage_mean": 6.366671101432075e-08,
+        "advantage_std": 1.0,
+        "approximate_kl": 0.000883052727979649,
+        "entropy": 0.6915655613822096,
+        "loss": 0.042785218572295405,
+        "policy_loss": -0.0002644469084985116,
+        "value_loss": 0.08886559376054827
+      }
+    }
+  ],
+  "incumbent": {
+    "by_opponent": {
+      "crop:CARROT:6": {
+        "draws": 0,
+        "games": 2,
+        "losses": 0,
+        "mean_margin": 132873.5,
+        "wins": 2,
+        "worst_margin": 132827.0
+      },
+      "crop:MELON:6": {
+        "draws": 0,
+        "games": 2,
+        "losses": 0,
+        "mean_margin": 113745.5,
+        "wins": 2,
+        "worst_margin": 113731.0
+      },
+      "crop:STRAWBERRY:6": {
+        "draws": 0,
+        "games": 2,
+        "losses": 0,
+        "mean_margin": 176260.0,
+        "wins": 2,
+        "worst_margin": 176260.0
+      },
+      "crop:TOMATO:6": {
+        "draws": 0,
+        "games": 2,
+        "losses": 0,
+        "mean_margin": 147358.0,
+        "wins": 2,
+        "worst_margin": 147358.0
+      },
+      "crop:WHEAT:6": {
+        "draws": 0,
+        "games": 2,
+        "losses": 0,
+        "mean_margin": 142230.0,
+        "wins": 2,
+        "worst_margin": 142230.0
+      },
+      "file:/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/submissions/top1_v12_ryo_selector_b120_repaired_standalone/main.py": {
+        "draws": 0,
+        "games": 2,
+        "losses": 2,
+        "mean_margin": -9171.0,
+        "wins": 0,
+        "worst_margin": -9171.0
+      }
+    },
+    "draws": 0,
+    "games": 12,
+    "losses": 2,
+    "mean_accepted_component_rate": 0.0,
+    "mean_action_difference_rate": 0.0,
+    "mean_margin": 117216.0,
+    "mean_money": 141652.58333333334,
+    "wins": 10,
+    "worst_margin": -9171.0,
+    "worst_money": 107125.0
+  },
+  "incumbent_games": [
+    {
+      "accepted_component_rate": 0.0,
+      "action_difference_rate": 0.0,
+      "candidate_money": 146461.0,
+      "candidate_seat": 0,
+      "margin": 142230.0,
+      "opponent": "crop:WHEAT:6",
+      "opponent_money": 4231.0,
+      "seed": 756000
+    },
+    {
+      "accepted_component_rate": 0.0,
+      "action_difference_rate": 0.0,
+      "candidate_money": 146461.0,
+      "candidate_seat": 1,
+      "margin": 142230.0,
+      "opponent": "crop:WHEAT:6",
+      "opponent_money": 4231.0,
+      "seed": 756000
+    },
+    {
+      "accepted_component_rate": 0.0,
+      "action_difference_rate": 0.0,
+      "candidate_money": 137029.0,
+      "candidate_seat": 0,
+      "margin": 132827.0,
+      "opponent": "crop:CARROT:6",
+      "opponent_money": 4202.0,
+      "seed": 756001
+    },
+    {
+      "accepted_component_rate": 0.0,
+      "action_difference_rate": 0.0,
+      "candidate_money": 137029.0,
+      "candidate_seat": 1,
+      "margin": 132920.0,
+      "opponent": "crop:CARROT:6",
+      "opponent_money": 4109.0,
+      "seed": 756001
+    },
+    {
+      "accepted_component_rate": 0.0,
+      "action_difference_rate": 0.0,
+      "candidate_money": 150993.0,
+      "candidate_seat": 0,
+      "margin": 147358.0,
+      "opponent": "crop:TOMATO:6",
+      "opponent_money": 3635.0,
+      "seed": 756002
+    },
+    {
+      "accepted_component_rate": 0.0,
+      "action_difference_rate": 0.0,
+      "candidate_money": 150993.0,
+      "candidate_seat": 1,
+      "margin": 147358.0,
+      "opponent": "crop:TOMATO:6",
+      "opponent_money": 3635.0,
+      "seed": 756002
+    },
+    {
+      "accepted_component_rate": 0.0,
+      "action_difference_rate": 0.0,
+      "candidate_money": 182718.0,
+      "candidate_seat": 0,
+      "margin": 176260.0,
+      "opponent": "crop:STRAWBERRY:6",
+      "opponent_money": 6458.0,
+      "seed": 756003
+    },
+    {
+      "accepted_component_rate": 0.0,
+      "action_difference_rate": 0.0,
+      "candidate_money": 182718.0,
+      "candidate_seat": 1,
+      "margin": 176260.0,
+      "opponent": "crop:STRAWBERRY:6",
+      "opponent_money": 6458.0,
+      "seed": 756003
+    },
+    {
+      "accepted_component_rate": 0.0,
+      "action_difference_rate": 0.0,
+      "candidate_money": 125575.0,
+      "candidate_seat": 0,
+      "margin": 113731.0,
+      "opponent": "crop:MELON:6",
+      "opponent_money": 11844.0,
+      "seed": 756004
+    },
+    {
+      "accepted_component_rate": 0.0,
+      "action_difference_rate": 0.0,
+      "candidate_money": 125604.0,
+      "candidate_seat": 1,
+      "margin": 113760.0,
+      "opponent": "crop:MELON:6",
+      "opponent_money": 11844.0,
+      "seed": 756004
+    },
+    {
+      "accepted_component_rate": 0.0,
+      "action_difference_rate": 0.0,
+      "candidate_money": 107125.0,
+      "candidate_seat": 0,
+      "margin": -9171.0,
+      "opponent": "file:/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/submissions/top1_v12_ryo_selector_b120_repaired_standalone/main.py",
+      "opponent_money": 116296.0,
+      "seed": 756005
+    },
+    {
+      "accepted_component_rate": 0.0,
+      "action_difference_rate": 0.0,
+      "candidate_money": 107125.0,
+      "candidate_seat": 1,
+      "margin": -9171.0,
+      "opponent": "file:/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/submissions/top1_v12_ryo_selector_b120_repaired_standalone/main.py",
+      "opponent_money": 116296.0,
+      "seed": 756005
+    }
+  ],
+  "model": "spatial-teacher-component-gate-ppo-v1",
+  "promotion": {
+    "passed": false,
+    "rule": "positive paired mean, non-negative worst delta, and non-zero behavior"
+  },
+  "resume": null,
+  "spatial_checkpoint": "/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/rl/checkpoints/v16_rc5_spatial_gru_bc_v1_e100.npz",
+  "teacher_path": "/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/submissions/meta_v16_rc5_robust_base_standalone/main.py"
+}

@@ -1,0 +1,65 @@
+{
+  "candidate": {
+    "agent_file": "submissions/meta_v18_state_macro_local/main.py",
+    "fallback_agent_file": null,
+    "sha256": "f5c28be9f83e533500c18476f50bc7bdf9b6da21e477a4f8a0c0d660747e7f4b"
+  },
+  "created_at": "2026-08-24T15:39:35.394093+00:00",
+  "episodes": [
+    {
+      "candidate_margin": -135800.0,
+      "candidate_money": 2539.0,
+      "episode_id": 97642053,
+      "fallback_components": 0,
+      "farmer_sanitized_steps": 25,
+      "hands_sanitized_steps": 25,
+      "market_sanitized_steps": 211,
+      "normalized_steps": 0,
+      "original_opponent_money": 91447.0,
+      "original_top1_money": 91193.0,
+      "sanitized_steps": 253,
+      "seed": 1279029599,
+      "steps": 719,
+      "tape_top1_money": 138339.0,
+      "top1_seat": 0
+    }
+  ],
+  "limitation": "Recorded Top-1 actions are an action tape, not a live policy; changing the opponent can make later tape actions stale or illegal.",
+  "schema_version": 2,
+  "source": {
+    "competition": "kaggriculture",
+    "leader": {
+      "team_name": "zero waste"
+    },
+    "manifest_created_at": "2026-08-23T13:25:05.441955+00:00",
+    "manifest_file": "analysis/v16_rc6_2_public_latest24_20260823/manifest.json",
+    "manifest_sha256": "f577c170da9068ccef6be10c8668addd18d7123ca84c1816190fbe12bc8776d5",
+    "submission": {
+      "submission_id": 55710081
+    }
+  },
+  "summary": {
+    "cvar10_margin": -135800.0,
+    "draws": 0,
+    "fallback_components": 0,
+    "farmer_sanitized_steps": 25,
+    "games": 1,
+    "hands_sanitized_steps": 25,
+    "losses": 1,
+    "market_sanitized_steps": 211,
+    "mean_margin": -135800.0,
+    "mean_money": 2539.0,
+    "median_margin": -135800.0,
+    "normalized_steps": 0,
+    "sanitized_steps": 253,
+    "win_rate": 0.0,
+    "wins": 0,
+    "worst_margin": -135800.0,
+    "worst_money": 2539.0
+  },
+  "validation": {
+    "action_alignment": "steps[1:] actions produce observations in the same frame",
+    "all_original_replays_exact": true,
+    "candidate_actions_sanitized": true
+  }
+}

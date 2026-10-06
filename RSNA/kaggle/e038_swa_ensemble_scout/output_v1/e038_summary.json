@@ -1,0 +1,511 @@
+{
+  "arm_construction": {
+    "arm_notes": {
+      "B0_base": "base checkpoint, the 42 baseline windows - the proven path",
+      "B1_swa": "SWA checkpoint, the same 42 windows",
+      "B2_ens_prob": "mean of base and SWA in probability space",
+      "B3_ens_logit": "mean of base and SWA in logit space",
+      "B4_base_all": "base checkpoint pooling every safe window - E037 arm A1",
+      "B5_ens_prob_all": "mean of both checkpoints, each pooling every safe window"
+    },
+    "complement": {
+      "seconds": 5739.830225229263,
+      "short_pool_studies": 1,
+      "studies": 2301,
+      "windows": 240108,
+      "windows_per_study": 104.34941329856584
+    },
+    "gold58": {
+      "seconds": 140.96950888633728,
+      "short_pool_studies": 0,
+      "studies": 58,
+      "windows": 6048,
+      "windows_per_study": 104.27586206896552
+    },
+    "raw_logit_sets": [
+      "base/42",
+      "base/all",
+      "swa/42",
+      "swa/all"
+    ]
+  },
+  "arm_names": [
+    "B0_base",
+    "B1_swa",
+    "B2_ens_prob",
+    "B3_ens_logit",
+    "B4_base_all",
+    "B5_ens_prob_all"
+  ],
+  "arms": [
+    {
+      "arm": "B0_base",
+      "bootstrap": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "ci95_halfwidth": 0.0,
+        "mean_delta": 0.0,
+        "valid_repeats": 200,
+        "win_rate": 0.0
+      },
+      "estimator_resolves_threshold": true,
+      "eval_macro_auc": 0.9079593249126852,
+      "eval_macro_delta": 0.0,
+      "eval_min_target_delta": 0.0,
+      "eval_per_target_delta": {
+        "ACL": 0.0,
+        "Baker's": 0.0,
+        "Contusion": 0.0,
+        "Effusion": 0.0,
+        "Fracture": 0.0,
+        "Lateral Meniscus": 0.0,
+        "Lateral OA": 0.0,
+        "MCL": 0.0,
+        "Medial Meniscus": 0.0,
+        "Medial OA": 0.0,
+        "PF OA": 0.0,
+        "Synovitis": 0.0
+      },
+      "gates": {
+        "bootstrap_win": false,
+        "ci_low_positive": false,
+        "gain": false,
+        "gold58_no_target_collapse": true,
+        "gold58_sign_agrees": false,
+        "no_target_collapse": true
+      },
+      "gold58_macro_auc": 0.9174298724699895,
+      "gold58_macro_delta": 0.0,
+      "gold58_min_target_delta": 0.0,
+      "note": "base checkpoint, the 42 baseline windows - the proven path",
+      "passed": false
+    },
+    {
+      "arm": "B1_swa",
+      "bootstrap": {
+        "ci95": [
+          0.0015086956755679215,
+          0.002664703503028079
+        ],
+        "ci95_halfwidth": 0.0005780039137300787,
+        "mean_delta": 0.0020830331400936448,
+        "valid_repeats": 2000,
+        "win_rate": 1.0
+      },
+      "estimator_resolves_threshold": true,
+      "eval_macro_auc": 0.910042253807429,
+      "eval_macro_delta": 0.0020829288947438185,
+      "eval_min_target_delta": -0.0008003360276087612,
+      "eval_per_target_delta": {
+        "ACL": 0.0005276376843090791,
+        "Baker's": 0.0031709852268666516,
+        "Contusion": 8.254790913464483e-05,
+        "Effusion": -0.0004013879449559221,
+        "Fracture": 0.0027450327977946998,
+        "Lateral Meniscus": 0.0025859392326457176,
+        "Lateral OA": 0.004010873331023901,
+        "MCL": 0.0060724614021177015,
+        "Medial Meniscus": 0.002377156306914152,
+        "Medial OA": 0.001065043619920103,
+        "PF OA": 0.003559193198764965,
+        "Synovitis": -0.0008003360276087612
+      },
+      "gates": {
+        "bootstrap_win": true,
+        "ci_low_positive": true,
+        "gain": true,
+        "gold58_no_target_collapse": false,
+        "gold58_sign_agrees": true,
+        "no_target_collapse": true
+      },
+      "gold58_macro_auc": 0.917983133195948,
+      "gold58_macro_delta": 0.0005532607259585154,
+      "gold58_min_target_delta": -0.013495276653171406,
+      "note": "SWA checkpoint, the same 42 windows",
+      "passed": false
+    },
+    {
+      "arm": "B2_ens_prob",
+      "bootstrap": {
+        "ci95": [
+          0.0009843796751965626,
+          0.0015652089456837288
+        ],
+        "ci95_halfwidth": 0.0002904146352435831,
+        "mean_delta": 0.001273111731531212,
+        "valid_repeats": 2000,
+        "win_rate": 1.0
+      },
+      "estimator_resolves_threshold": true,
+      "eval_macro_auc": 0.9092327405102835,
+      "eval_macro_delta": 0.0012734155975983041,
+      "eval_min_target_delta": -0.0001104664566203839,
+      "eval_per_target_delta": {
+        "ACL": 0.00052315668486691,
+        "Baker's": 0.0019021778438126358,
+        "Contusion": 0.000304068880483066,
+        "Effusion": -7.092486017656885e-05,
+        "Fracture": 0.001553736096587266,
+        "Lateral Meniscus": 0.0015646484808161665,
+        "Lateral OA": 0.002330951302249029,
+        "MCL": 0.003308806380894591,
+        "Medial Meniscus": 0.0013296343581149506,
+        "Medial OA": 0.00066262197900957,
+        "PF OA": 0.0019825764811439717,
+        "Synovitis": -0.0001104664566203839
+      },
+      "gates": {
+        "bootstrap_win": true,
+        "ci_low_positive": true,
+        "gain": false,
+        "gold58_no_target_collapse": true,
+        "gold58_sign_agrees": true,
+        "no_target_collapse": true
+      },
+      "gold58_macro_auc": 0.9177961090897063,
+      "gold58_macro_delta": 0.00036623661971679766,
+      "gold58_min_target_delta": -0.009671179883945946,
+      "note": "mean of base and SWA in probability space",
+      "passed": false
+    },
+    {
+      "arm": "B3_ens_logit",
+      "bootstrap": {
+        "ci95": [
+          0.000981114000064055,
+          0.0015675625771025153
+        ],
+        "ci95_halfwidth": 0.0002932242885192301,
+        "mean_delta": 0.0012728167106315356,
+        "valid_repeats": 2000,
+        "win_rate": 1.0
+      },
+      "estimator_resolves_threshold": true,
+      "eval_macro_auc": 0.9092323584011867,
+      "eval_macro_delta": 0.001273033488501496,
+      "eval_min_target_delta": -0.00011395946710635041,
+      "eval_per_target_delta": {
+        "ACL": 0.0005181155604945253,
+        "Baker's": 0.0018928787669010294,
+        "Contusion": 0.0003166078033897124,
+        "Effusion": -6.702788983725672e-05,
+        "Fracture": 0.0015596777260197259,
+        "Lateral Meniscus": 0.0015546684408958011,
+        "Lateral OA": 0.002337613882533063,
+        "MCL": 0.0032942301413312336,
+        "Medial Meniscus": 0.0013341723593371935,
+        "Medial OA": 0.0006698946592671451,
+        "PF OA": 0.00197952987879102,
+        "Synovitis": -0.00011395946710635041
+      },
+      "gates": {
+        "bootstrap_win": true,
+        "ci_low_positive": true,
+        "gain": false,
+        "gold58_no_target_collapse": true,
+        "gold58_sign_agrees": true,
+        "no_target_collapse": true
+      },
+      "gold58_macro_auc": 0.9177961090897063,
+      "gold58_macro_delta": 0.00036623661971679766,
+      "gold58_min_target_delta": -0.009671179883945946,
+      "note": "mean of base and SWA in logit space",
+      "passed": false
+    },
+    {
+      "arm": "B4_base_all",
+      "bootstrap": {
+        "ci95": [
+          0.0005345839341309213,
+          0.0016253806448139464
+        ],
+        "ci95_halfwidth": 0.0005453983553415126,
+        "mean_delta": 0.0010711690008287137,
+        "valid_repeats": 2000,
+        "win_rate": 1.0
+      },
+      "estimator_resolves_threshold": true,
+      "eval_macro_auc": 0.9090255237476609,
+      "eval_macro_delta": 0.0010661988349757179,
+      "eval_min_target_delta": -0.0007091181617148168,
+      "eval_per_target_delta": {
+        "ACL": -0.0007091181617148168,
+        "Baker's": 0.001972437536033822,
+        "Contusion": 0.002204760611063561,
+        "Effusion": 0.0008191431653375991,
+        "Fracture": 0.0008347989352602836,
+        "Lateral Meniscus": 0.0022466178753602906,
+        "Lateral OA": 0.0016837292175087004,
+        "MCL": 0.0015392508978961938,
+        "Medial Meniscus": 0.0008539005633173558,
+        "Medial OA": 0.00025050343108901085,
+        "PF OA": 0.0007730753470461815,
+        "Synovitis": 0.00032528660151032174
+      },
+      "gates": {
+        "bootstrap_win": true,
+        "ci_low_positive": true,
+        "gain": false,
+        "gold58_no_target_collapse": true,
+        "gold58_sign_agrees": true,
+        "no_target_collapse": true
+      },
+      "gold58_macro_auc": 0.9187126862543421,
+      "gold58_macro_delta": 0.0012828137843525766,
+      "gold58_min_target_delta": -0.006211180124223503,
+      "note": "base checkpoint pooling every safe window - E037 arm A1",
+      "passed": false
+    },
+    {
+      "arm": "B5_ens_prob_all",
+      "bootstrap": {
+        "ci95": [
+          0.0016755608563904319,
+          0.002948301613616954
+        ],
+        "ci95_halfwidth": 0.0006363703786132611,
+        "mean_delta": 0.0023027172079100092,
+        "valid_repeats": 2000,
+        "win_rate": 1.0
+      },
+      "estimator_resolves_threshold": true,
+      "eval_macro_auc": 0.9102563310549362,
+      "eval_macro_delta": 0.0022970061422510346,
+      "eval_min_target_delta": -0.000187081726708338,
+      "eval_per_target_delta": {
+        "ACL": -0.000187081726708338,
+        "Baker's": 0.0036597033801111234,
+        "Contusion": 0.002542266619297462,
+        "Effusion": 0.0007731589153329166,
+        "Fracture": 0.0020290664511837253,
+        "Lateral Meniscus": 0.0037225548902195538,
+        "Lateral OA": 0.0039832712127039205,
+        "MCL": 0.0051235482065393745,
+        "Medial Meniscus": 0.0021162212366356847,
+        "Medial OA": 0.0009721149277418517,
+        "PF OA": 0.0026794867693676894,
+        "Synovitis": 0.00014976282458800672
+      },
+      "gates": {
+        "bootstrap_win": true,
+        "ci_low_positive": true,
+        "gain": true,
+        "gold58_no_target_collapse": true,
+        "gold58_sign_agrees": true,
+        "no_target_collapse": true
+      },
+      "gold58_macro_auc": 0.9189697556260977,
+      "gold58_macro_delta": 0.0015398831561082016,
+      "gold58_min_target_delta": -0.009937888198757738,
+      "note": "mean of both checkpoints, each pooling every safe window",
+      "passed": true
+    }
+  ],
+  "best_arm": "B5_ens_prob_all",
+  "best_measured_arm": "B5_ens_prob_all",
+  "best_measured_delta": 0.0022970061422510346,
+  "checkpoint_exported": false,
+  "configuration": {
+    "bootstrap_repeats": 2000,
+    "chunk": 6,
+    "crop_mm": 140.0,
+    "k_eval": 42,
+    "model_labels": [
+      "base",
+      "swa"
+    ],
+    "n_eval": 2301,
+    "resolution": 384,
+    "trained": false,
+    "window_sets": [
+      "42",
+      "all"
+    ]
+  },
+  "counts": {
+    "cache": 2359,
+    "e037_eval": 2048,
+    "eval": 2301,
+    "gold": 58,
+    "labelled_non_gold_pool": 4349,
+    "unlabelled_dropped": 0
+  },
+  "decision": "PASS_ENSEMBLE_PROMOTE",
+  "e037_a1_replication": {
+    "e037_ci95": [
+      0.0006198022190293764,
+      0.0015000035609342985
+    ],
+    "e037_delta": 0.0010437443710005212,
+    "e038_ci95": [
+      0.0005345839341309213,
+      0.0016253806448139464
+    ],
+    "e038_delta": 0.0010661988349757179,
+    "e038_delta_inside_e037_ci": true,
+    "intervals_overlap": true,
+    "sign_agrees": true,
+    "splits_disjoint": true
+  },
+  "ensemble_divergence": {
+    "max_abs_prob_diff": 0.17597064979788796,
+    "mean_abs_prob_diff": 0.013161353443182507,
+    "mean_pearson": 0.9976013921579897,
+    "mean_spearman": 0.9959431831051767,
+    "min_spearman": 0.9910138062960151,
+    "per_target_pearson": {
+      "ACL": 0.9978140665057815,
+      "Baker's": 0.9984966366931919,
+      "Contusion": 0.9965188242886542,
+      "Effusion": 0.9988340142729992,
+      "Fracture": 0.9977485476007706,
+      "Lateral Meniscus": 0.9967480725424578,
+      "Lateral OA": 0.9975634277921743,
+      "MCL": 0.9943951048480206,
+      "Medial Meniscus": 0.9987511359605332,
+      "Medial OA": 0.9986505957855906,
+      "PF OA": 0.9968488605475324,
+      "Synovitis": 0.9988474190581688
+    },
+    "per_target_spearman": {
+      "ACL": 0.9951402077950816,
+      "Baker's": 0.9910138062960151,
+      "Contusion": 0.9958310765178524,
+      "Effusion": 0.9982824309789744,
+      "Fracture": 0.9950530887020704,
+      "Lateral Meniscus": 0.9959782910348598,
+      "Lateral OA": 0.9966732413054635,
+      "MCL": 0.9925598298450845,
+      "Medial Meniscus": 0.9981322437645384,
+      "Medial OA": 0.9979879901250894,
+      "PF OA": 0.998079045728193,
+      "Synovitis": 0.9965869451688981
+    },
+    "swa_arms_differ_from_baseline": true
+  },
+  "estimator": {
+    "any_arm_resolves_threshold": true,
+    "e037_reference_halfwidth_n2048": 0.000849,
+    "eval_positives_per_target": {
+      "ACL": 494,
+      "Baker's": 554,
+      "Contusion": 545,
+      "Effusion": 1352,
+      "Fracture": 157,
+      "Lateral Meniscus": 501,
+      "Lateral OA": 628,
+      "MCL": 352,
+      "Medial Meniscus": 1112,
+      "Medial OA": 857,
+      "PF OA": 1047,
+      "Synovitis": 1573
+    },
+    "max_ci95_halfwidth": 0.0006363703786132611,
+    "median_ci95_halfwidth": 0.0005453983553415126,
+    "min_ci95_halfwidth": 0.0002904146352435831
+  },
+  "experiment": "E038 inference-only base+SWA ensemble scout on E037's 2301-study complement plus Gold58",
+  "family_size": 5,
+  "feature_cache_exported": false,
+  "identity": {
+    "base_checkpoint_sha256": "89606f05849838529e1b4658d28fb049623205d9853371548403bca460361ded",
+    "bootstrap_seed": 3802,
+    "e037_split_sha256": "97de5347aa7ee01e88283b3430ab2aaacc3283b9aceab47e02a14945b62c8c93",
+    "eval_ids_sha256": "70b80686cecebf82817cc2dea96ba06f67bb9f93924b543315efd116a6f3f225",
+    "eval_seed": 3701,
+    "gold_ids_sha256": "3918e0c230d6c8d16e073b3c2537d173011b705c71b494493591e6afa5f510ea",
+    "swa_checkpoint_sha256": "d8bb0f8751b4bb65750257869ddc4c7a3c0cdfc6e62596fc68193919406c53eb"
+  },
+  "mechanical_gates": {
+    "all_arms_finite": true,
+    "base_all_arm_distinct": true,
+    "base_checkpoint_name_exact": true,
+    "base_checkpoint_sha256_exact": true,
+    "baseline_reproduced": true,
+    "cache_pixel_max_abs_zero": true,
+    "cross_series_window_count_zero": true,
+    "e037_split_reconstructed": true,
+    "eval_all_targets_two_class": true,
+    "eval_count_exact": true,
+    "eval_disjoint_from_e037": true,
+    "gold_ids_exact": true,
+    "gold_overlap_zero": true,
+    "null_arm_delta_zero": true,
+    "null_arm_never_wins": true,
+    "pool_size_exact": true,
+    "runtime_projection_fits": true,
+    "scratch_disk_fits": true,
+    "short_pool_studies_accounted": true,
+    "swa_arch_matches_base": true,
+    "swa_checkpoint_name_exact": true,
+    "swa_checkpoint_sha256_recorded": true,
+    "swa_res_matches_base": true,
+    "swa_sha256_differs_from_base": true,
+    "swa_weights_differ_from_base": true,
+    "zero_slice_window_count_zero": true
+  },
+  "mechanical_passed": true,
+  "parameter_divergence": {
+    "float_tensors": 461,
+    "identical_tensors": 0,
+    "max_abs_param_diff": 0.10777652263641357,
+    "mean_abs_param_diff": 3.1431927051991675e-05,
+    "parameters_compared": 73166176
+  },
+  "reproduction": {
+    "bit_exact": true,
+    "gold58_b0_gap": 0.0,
+    "gold58_b0_macro_auc": 0.9174298724699895,
+    "gold58_expected": 0.9174298724699895
+  },
+  "resources": {
+    "build_workers": 4,
+    "cache_gib": 9.751093538478017,
+    "eval_arm_minutes": 95.66383708715439,
+    "eval_cache_minutes": 24.439637351036072,
+    "gold_arm_minutes": 2.349491814772288,
+    "gold_cache_minutes": 0.6322678804397583,
+    "peak_gpu_gib": 2.0211706161499023,
+    "projected_total_minutes": 121.27536415526238,
+    "runtime_budget_minutes": 420.0,
+    "scratch_free_gib": 1026.5327453613281,
+    "windows_per_second": 42.90289473077799,
+    "windows_per_study": 104.27586206896552
+  },
+  "submission_created": false,
+  "swa_load": {
+    "arch": "coatnet_rmlp_2_rw_384.sw_in12k_ft_in1k",
+    "normalisations": [],
+    "res": 384,
+    "state_entries": 486,
+    "top_level_keys": [
+      "arch",
+      "aucs",
+      "epoch",
+      "gold_auc",
+      "lab",
+      "model",
+      "res",
+      "src",
+      "swa_over"
+    ]
+  },
+  "thresholds": {
+    "gold58_min_target_delta": -0.01,
+    "max_target_drop": 0.01,
+    "min_bootstrap_win": 0.98,
+    "min_valid_gain": 0.002,
+    "reproduction_tolerance": 0.0005
+  },
+  "window_policy": {
+    "cross_series": 0,
+    "mean_safe_candidates": 52.17125900805426,
+    "min_safe_candidates": 36,
+    "short_pool_share": 0.000423908435777872,
+    "short_pool_studies": 1,
+    "stored_slices": 64,
+    "zero_slice": 0
+  }
+}

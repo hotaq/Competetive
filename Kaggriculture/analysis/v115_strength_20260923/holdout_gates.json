@@ -1,0 +1,50 @@
+{
+  "arms": {
+    "OMAR": {
+      "point": 0.8983333333333333,
+      "games": 6000,
+      "mean_margin": 51083.03866666667,
+      "mean_money": 116320.78266666667
+    },
+    "YANNIK": {
+      "point": 0.8536666666666667,
+      "games": 6000,
+      "mean_margin": 35225.9705,
+      "mean_money": 109420.77766666666
+    },
+    "mtmr_s1__ep111947463__seat0": {
+      "point": 0.9401851851851852,
+      "games": 5400,
+      "mean_margin": 54643.27611111111,
+      "mean_money": 113676.03759259259
+    },
+    "thunder_thunder__ep111943074__seat1": {
+      "point": 0.6598333333333334,
+      "games": 6000,
+      "mean_margin": 17455.3355,
+      "mean_money": 89290.80283333334
+    }
+  },
+  "ranked_candidates": [
+    "mtmr_s1__ep111947463__seat0",
+    "thunder_thunder__ep111943074__seat1"
+  ],
+  "vs_ref": {
+    "mtmr_s1__ep111947463__seat0": {
+      "pairs": 5400,
+      "mean": 3317.0042592592595,
+      "ci_lo": 1667.1442037037036,
+      "ci_hi": 4985.806564814814,
+      "excludes_zero": true,
+      "beats_ref": true
+    },
+    "thunder_thunder__ep111943074__seat1": {
+      "pairs": 6000,
+      "mean": -20129.974833333334,
+      "ci_lo": -21796.18830833333,
+      "ci_hi": -18513.107545833336,
+      "excludes_zero": true,
+      "beats_ref": false
+    }
+  }
+}

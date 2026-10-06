@@ -1,0 +1,20 @@
+{
+  "id": "chinnaphatkhun/rsna-knee-e041-refined-label-student",
+  "title": "RSNA Knee E041 Refined Label Student",
+  "code_file": "e041-launcher.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "machine_shape": "NvidiaTeslaT4",
+  "competition_sources": ["rsna-knee-abnormality-detection"],
+  "dataset_sources": [
+    "dreaddevelopment/knee-raptor-corpus",
+    "dreaddevelopment/knee-raptor-corpus-ext",
+    "chinnaphatkhun/rsna-knee-e041-assets"
+  ],
+  "kernel_sources": [],
+  "model_sources": []
+}

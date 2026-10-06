@@ -1,0 +1,35 @@
+{
+  "id": "chinnaphatkhun/rsna-knee-e012-sweep-guarded025",
+  "title": "RSNA Knee E012 Sweep GUARDED025",
+  "code_file": "e012-sweep-guarded025.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "gpu"
+  ],
+  "dataset_sources": [
+    "chinnaphatkhun/radimagenet-resnet50-official-mit",
+    "mattiaangeli/knee-mri-fold-weights",
+    "stevenleehans/rsna-knee-llm-report-labels",
+    "lixin73/rsna-knee-llm-report-labels-sol56",
+    "pilkwang/rsna-knee-llm-labels",
+    "pilkwang/rsna-knee-weights",
+    "tonylica/rsna2026-models"
+  ],
+  "kernel_sources": [
+    "chinnaphatkhun/rsna-knee-e011-train-rad-heads"
+  ],
+  "competition_sources": [
+    "rsna-knee-abnormality-detection"
+  ],
+  "model_sources": [
+    "metaresearch/dinov2/PyTorch/base/1",
+    "metaresearch/dinov2/PyTorch/small/1"
+  ],
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+  "machine_shape": "NvidiaTeslaT4"
+}

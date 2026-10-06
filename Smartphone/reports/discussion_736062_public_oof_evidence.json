@@ -1,0 +1,123 @@
+{
+  "protocol": {
+    "cv": "StratifiedKFold(5, shuffle=True, random_state=42)",
+    "comparison": "fixed label-independent blends over aligned level-1 OOF predictions",
+    "ridge_excluded": true,
+    "ridge_exclusion_reason": "Strict Ridge evidence requires nested base-model retraining inside each outer meta fold."
+  },
+  "rows": 691369,
+  "positive_rate": 0.7094243450313797,
+  "files": {
+    "train_keys": {
+      "path": "/tmp/s6e8-proof/ooflib/train_keys.parquet",
+      "sha256": "62929f70060eb5ef90294e664bdd4602b6c9e5ed6f0d7b02673f0f72864b1356"
+    },
+    "lgbm_oof": {
+      "path": "/tmp/s6e8-proof/ooflib/oof_lattri_lgbm.npy",
+      "sha256": "21897ae886a6d44ba954a15f0605088c4ec30cef078963bee7bab8c0e41854b2"
+    },
+    "resnet_oof": {
+      "path": "/tmp/s6e8-proof/ooflib/oof_pub_resnet.npy",
+      "sha256": "88d5158358546a7fdb69bd55044ae5cb78cb412a4de92346639270e85efa8450"
+    }
+  },
+  "correlation": {
+    "pearson": 0.9818663321559375,
+    "spearman": 0.9755849128837418
+  },
+  "candidates": {
+    "lgbm": {
+      "auc": 0.9676750622526115,
+      "delta_vs_lgbm": 0.0,
+      "fold_auc": [
+        0.9669500720856053,
+        0.9677315319820757,
+        0.9679128273167797,
+        0.9682882536603641,
+        0.9675062826292653
+      ],
+      "fold_delta_vs_lgbm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fold_wins": 0,
+      "mean_fold_delta": 0.0,
+      "diagnostic_fold_t": null,
+      "diagnostic_fold_p": null
+    },
+    "resnet": {
+      "auc": 0.9661023627979219,
+      "delta_vs_lgbm": -0.001572699454689519,
+      "fold_auc": [
+        0.9652869399041207,
+        0.9662068530598115,
+        0.9663958013385792,
+        0.966887618881092,
+        0.9659601677958748
+      ],
+      "fold_delta_vs_lgbm": [
+        -0.0016631321814846167,
+        -0.0015246789222642665,
+        -0.0015170259782005813,
+        -0.001400634779272103,
+        -0.0015461148333905106
+      ],
+      "fold_wins": 0,
+      "mean_fold_delta": -0.0015303173389224155,
+      "diagnostic_fold_t": -36.62589324103446,
+      "diagnostic_fold_p": 3.31774576666113e-06
+    },
+    "fixed_probability_50_50": {
+      "auc": 0.9680899160559844,
+      "delta_vs_lgbm": 0.00041485380337291655,
+      "fold_auc": [
+        0.9674346828499578,
+        0.9681922027805737,
+        0.968271297072569,
+        0.9687540528929819,
+        0.9678653370631934
+      ],
+      "fold_delta_vs_lgbm": [
+        0.00048461076435246664,
+        0.0004606707984979863,
+        0.0003584697557892369,
+        0.00046579923261780287,
+        0.00035905443392814096
+      ],
+      "fold_wins": 5,
+      "mean_fold_delta": 0.0004257209970371267,
+      "diagnostic_fold_t": 15.410661377184116,
+      "diagnostic_fold_p": 0.00010345992195357724
+    },
+    "fixed_rank_50_50": {
+      "auc": 0.9681291520137074,
+      "delta_vs_lgbm": 0.0004540897610959549,
+      "fold_auc": [
+        0.9674680302308569,
+        0.9682441512328056,
+        0.968312716161719,
+        0.96880518208465,
+        0.9678878280120138
+      ],
+      "fold_delta_vs_lgbm": [
+        0.0005179581452515736,
+        0.0005126192507298732,
+        0.0003998888449392446,
+        0.0005169284242859673,
+        0.0003815453827484827
+      ],
+      "fold_wins": 5,
+      "mean_fold_delta": 0.0004657880095910283,
+      "diagnostic_fold_t": 15.124202911950574,
+      "diagnostic_fold_p": 0.00011140601174626768
+    }
+  },
+  "verdict": {
+    "general_fixed_rank_blend_supported": true,
+    "author_specific_0_971_claim_proven": false,
+    "scope": "This supports the general diversity mechanism only; it does not reproduce the author's undocumented model or connect that model to a 0.971 leaderboard submission."
+  }
+}

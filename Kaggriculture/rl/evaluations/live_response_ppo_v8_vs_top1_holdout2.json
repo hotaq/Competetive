@@ -1,0 +1,129 @@
+{
+  "candidate": {
+    "live_response_checkpoint": "rl/checkpoints/live_response_ppo_v8.npz",
+    "model": "live-response-contextual-ppo-v2"
+  },
+  "episodes": [
+    {
+      "candidate_margin": -65637.0,
+      "candidate_money": 24249.0,
+      "episode_id": 93670246,
+      "original_opponent_money": 54353.0,
+      "original_top1_money": 52518.0,
+      "seed": 329452402,
+      "steps": 719,
+      "tape_top1_money": 89886.0,
+      "top1_seat": 0
+    },
+    {
+      "candidate_margin": -103264.0,
+      "candidate_money": 37185.0,
+      "episode_id": 93658436,
+      "original_opponent_money": 54048.0,
+      "original_top1_money": 60389.0,
+      "seed": 1315685625,
+      "steps": 719,
+      "tape_top1_money": 140449.0,
+      "top1_seat": 1
+    },
+    {
+      "candidate_margin": -99642.0,
+      "candidate_money": 30708.0,
+      "episode_id": 93646712,
+      "original_opponent_money": 86855.0,
+      "original_top1_money": 88255.0,
+      "seed": 279157485,
+      "steps": 719,
+      "tape_top1_money": 130350.0,
+      "top1_seat": 0
+    },
+    {
+      "candidate_margin": -82476.0,
+      "candidate_money": 46117.0,
+      "episode_id": 93634131,
+      "original_opponent_money": 124268.0,
+      "original_top1_money": 128094.0,
+      "seed": 1884061784,
+      "steps": 719,
+      "tape_top1_money": 128593.0,
+      "top1_seat": 1
+    },
+    {
+      "candidate_margin": -95105.0,
+      "candidate_money": 54349.0,
+      "episode_id": 93620762,
+      "original_opponent_money": 56689.0,
+      "original_top1_money": 66732.0,
+      "seed": 1183157443,
+      "steps": 719,
+      "tape_top1_money": 149454.0,
+      "top1_seat": 0
+    },
+    {
+      "candidate_margin": -112904.0,
+      "candidate_money": 50404.0,
+      "episode_id": 93606440,
+      "original_opponent_money": 74340.0,
+      "original_top1_money": 76533.0,
+      "seed": 960367470,
+      "steps": 719,
+      "tape_top1_money": 163308.0,
+      "top1_seat": 1
+    },
+    {
+      "candidate_margin": -117953.0,
+      "candidate_money": 27686.0,
+      "episode_id": 93591196,
+      "original_opponent_money": 117064.0,
+      "original_top1_money": 116659.0,
+      "seed": 932038100,
+      "steps": 719,
+      "tape_top1_money": 145639.0,
+      "top1_seat": 1
+    },
+    {
+      "candidate_margin": -98296.0,
+      "candidate_money": 53241.0,
+      "episode_id": 93579517,
+      "original_opponent_money": 44678.0,
+      "original_top1_money": 48978.0,
+      "seed": 973231677,
+      "steps": 719,
+      "tape_top1_money": 151537.0,
+      "top1_seat": 1
+    }
+  ],
+  "limitation": "Recorded Top-1 actions are an action tape, not a live policy; changing the opponent changes state and can make later tape actions stale or illegal.",
+  "source": {
+    "competition": "kaggriculture",
+    "leader": {
+      "score": 3218.3,
+      "submission_date": "2026-08-16T01:30:54.743Z",
+      "team_id": 16677252,
+      "team_name": "\u30ab\u30ef\u30b7\u30ae"
+    },
+    "manifest_created_at": "2026-08-17T03:44:39.388432+00:00",
+    "submission": {
+      "date": "2026-08-16T01:30:54.743Z",
+      "public_score": 3218.3,
+      "submission_id": 55540317
+    }
+  },
+  "summary": {
+    "draws": 0,
+    "episodes": 8,
+    "losses": 8,
+    "mean_candidate_money": 40492.375,
+    "mean_margin": -96909.625,
+    "mean_tape_top1_money": 137402.0,
+    "median_candidate_money": 41651.0,
+    "median_margin": -98969.0,
+    "wins": 0,
+    "worst_candidate_money": 24249.0,
+    "worst_margin": -117953.0
+  },
+  "validation": {
+    "action_alignment": "steps[1:] actions produce observations in the same frame",
+    "all_original_replays_exact": true
+  }
+}

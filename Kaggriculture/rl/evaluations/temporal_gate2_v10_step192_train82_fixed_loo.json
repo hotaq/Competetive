@@ -1,0 +1,91 @@
+{
+  "action_ids": [
+    93816256,
+    93518562
+  ],
+  "all_action_win_rates": {
+    "93518562": 0.3902439024390244,
+    "93816256": 0.2926829268292683
+  },
+  "branch_step": 192,
+  "checkpoint": "artifacts/temporal_gate2_v10_step192_train82_fixed.npz",
+  "cross_validation": [
+    {
+      "actions": {
+        "93518562": 58,
+        "93816256": 24
+      },
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "cvar10_margin": -17461.222222222223,
+      "draws": 0,
+      "games": 82,
+      "losses": 47,
+      "mean_margin": -2616.5243902439024,
+      "min_action_win_rate": 0.0,
+      "nearest_distance_max": 31.625198816420795,
+      "nearest_distance_mean": 2.026571391544112,
+      "neighbors": 7,
+      "risk_coefficient": 4.0,
+      "win_rate": 0.4268292682926829,
+      "wins": 35,
+      "worst_margin": -28074.0
+    }
+  ],
+  "feature_dim": 81,
+  "feature_rows": 82,
+  "global_summary": {
+    "actions": {
+      "93816256": 82
+    },
+    "cvar10_margin": -21818.88888888889,
+    "draws": 0,
+    "games": 82,
+    "losses": 58,
+    "mean_margin": -4652.585365853659,
+    "win_rate": 0.2926829268292683,
+    "wins": 24,
+    "worst_margin": -28997.0
+  },
+  "holdout_used": false,
+  "model": "contextual-q-tape-selector-v9",
+  "oracle_summary": {
+    "actions": {
+      "93518562": 47,
+      "93816256": 35
+    },
+    "cvar10_margin": -15213.444444444445,
+    "draws": 0,
+    "games": 82,
+    "losses": 39,
+    "mean_margin": -279.6707317073171,
+    "win_rate": 0.524390243902439,
+    "wins": 43,
+    "worst_margin": -28074.0
+  },
+  "selected_cross_validation": {
+    "actions": {
+      "93518562": 58,
+      "93816256": 24
+    },
+    "allowed_action_ids": [
+      93816256,
+      93518562
+    ],
+    "cvar10_margin": -17461.222222222223,
+    "draws": 0,
+    "games": 82,
+    "losses": 47,
+    "mean_margin": -2616.5243902439024,
+    "min_action_win_rate": 0.0,
+    "nearest_distance_max": 31.625198816420795,
+    "nearest_distance_mean": 2.026571391544112,
+    "neighbors": 7,
+    "risk_coefficient": 4.0,
+    "win_rate": 0.4268292682926829,
+    "wins": 35,
+    "worst_margin": -28074.0
+  }
+}

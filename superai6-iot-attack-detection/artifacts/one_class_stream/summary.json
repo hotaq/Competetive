@@ -1,0 +1,46 @@
+{
+  "pipeline": "normal-only IsolationForest + synthetic CatBoost + stream features",
+  "manual_probability_threshold": false,
+  "protocol_rule_postprocessing": false,
+  "validation": {
+    "catboost_stream_native": {
+      "mean_normal_fpr": 1.2604777210562803e-05,
+      "max_normal_fpr": 6.302388605281402e-05,
+      "mean_held_out_recall": 0.2,
+      "min_held_out_recall": 0.0,
+      "mean_proxy_f1_at_10pct": 0.2,
+      "mean_proxy_f1_at_20pct": 0.2
+    },
+    "iforest_stream_native": {
+      "mean_normal_fpr": 0.21498671629015256,
+      "max_normal_fpr": 1.0,
+      "mean_held_out_recall": 0.27813333333333334,
+      "min_held_out_recall": 0.017333333333333333,
+      "mean_proxy_f1_at_10pct": 0.13553828330896187,
+      "mean_proxy_f1_at_20pct": 0.1782937064098278
+    },
+    "model_consensus": {
+      "mean_normal_fpr": 1.2604777210562803e-05,
+      "max_normal_fpr": 6.302388605281402e-05,
+      "mean_held_out_recall": 0.0037333333333333337,
+      "min_held_out_recall": 0.0,
+      "mean_proxy_f1_at_10pct": 0.007329842931937174,
+      "mean_proxy_f1_at_20pct": 0.007329842931937174
+    },
+    "model_union": {
+      "mean_normal_fpr": 0.21498671629015256,
+      "max_normal_fpr": 1.0,
+      "mean_held_out_recall": 0.4744,
+      "min_held_out_recall": 0.017333333333333333,
+      "mean_proxy_f1_at_10pct": 0.3170283800425683,
+      "mean_proxy_f1_at_20pct": 0.3658350721907742
+    }
+  },
+  "candidate_variants": {
+    "candidate_catboost_stream_native": 2368,
+    "candidate_iforest_stream_native": 3612,
+    "candidate_model_consensus": 547,
+    "candidate_model_union": 5433
+  },
+  "submission_written": false
+}

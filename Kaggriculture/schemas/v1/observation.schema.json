@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kaggriculture.local/schemas/v1/observation.schema.json",
+  "title": "Kaggriculture executor observation v1",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": 1, "type": "integer" },
+    "player": { "maximum": 1, "minimum": 0, "type": "integer" },
+    "step": { "minimum": 0, "type": "integer" },
+    "day": { "minimum": 0, "type": "integer" },
+    "hour": { "minimum": 0, "type": "integer" },
+    "shed": {
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(WHEAT|CARROT|TOMATO|STRAWBERRY|MELON|EGG|MILK|WOOL|FERTILIZER)$": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "required": ["schema_version", "player", "step", "day", "hour", "shed"],
+  "type": "object"
+}

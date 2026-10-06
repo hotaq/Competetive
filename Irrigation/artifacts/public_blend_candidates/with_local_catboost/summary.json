@@ -1,0 +1,116 @@
+{
+  "base_top5_score": 0.9804805712197009,
+  "local_cat_score": 0.9776885764009772,
+  "candidates": [
+    {
+      "alpha_local": 0.0,
+      "oof_balanced_accuracy": 0.980483104073298,
+      "oof_accuracy": 0.9833904761904761,
+      "scales": [
+        1.0,
+        1.3747367858886719,
+        2.3399999141693115
+      ],
+      "counts": [
+        159378,
+        100161,
+        10461
+      ],
+      "rank": 1,
+      "submission": "artifacts/public_blend_candidates/with_local_catboost/submission_top5_plus_localcat_rank1.csv",
+      "label_counts": {
+        "Low": 159378,
+        "Medium": 100161,
+        "High": 10461
+      }
+    },
+    {
+      "alpha_local": 0.01,
+      "oof_balanced_accuracy": 0.9804795545691775,
+      "oof_accuracy": 0.983352380952381,
+      "scales": [
+        1.0,
+        1.4721052646636963,
+        2.5
+      ],
+      "counts": [
+        159330,
+        100211,
+        10459
+      ],
+      "rank": 2,
+      "submission": "artifacts/public_blend_candidates/with_local_catboost/submission_top5_plus_localcat_rank2.csv",
+      "label_counts": {
+        "Low": 159330,
+        "Medium": 100211,
+        "High": 10459
+      }
+    },
+    {
+      "alpha_local": 0.02,
+      "oof_balanced_accuracy": 0.9804542144770293,
+      "oof_accuracy": 0.9833650793650793,
+      "scales": [
+        1.0,
+        1.3855193853378296,
+        2.360520601272583
+      ],
+      "counts": [
+        159372,
+        100164,
+        10464
+      ],
+      "rank": 3,
+      "submission": "artifacts/public_blend_candidates/with_local_catboost/submission_top5_plus_localcat_rank3.csv",
+      "label_counts": {
+        "Low": 159372,
+        "Medium": 100164,
+        "High": 10464
+      }
+    },
+    {
+      "alpha_local": 0.03,
+      "oof_balanced_accuracy": 0.9804379903668642,
+      "oof_accuracy": 0.9833666666666666,
+      "scales": [
+        1.0,
+        1.5110526084899902,
+        2.5399999618530273
+      ],
+      "counts": [
+        159304,
+        100249,
+        10447
+      ],
+      "rank": 4,
+      "submission": "artifacts/public_blend_candidates/with_local_catboost/submission_top5_plus_localcat_rank4.csv",
+      "label_counts": {
+        "Low": 159304,
+        "Medium": 100249,
+        "High": 10447
+      }
+    },
+    {
+      "alpha_local": 0.05,
+      "oof_balanced_accuracy": 0.9804310089911271,
+      "oof_accuracy": 0.9834349206349207,
+      "scales": [
+        1.0,
+        1.5305262804031372,
+        2.5199999809265137
+      ],
+      "counts": [
+        159288,
+        100284,
+        10428
+      ],
+      "rank": 5,
+      "submission": "artifacts/public_blend_candidates/with_local_catboost/submission_top5_plus_localcat_rank5.csv",
+      "label_counts": {
+        "Low": 159288,
+        "Medium": 100284,
+        "High": 10428
+      }
+    }
+  ]
+}

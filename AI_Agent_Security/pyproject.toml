@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-agent-security-attack-search"
+version = "0.1.0"
+description = "Kaggle AI Agent Security competition workspace"
+requires-python = ">=3.11"
+dependencies = ["aicomp-sdk==3.1.2"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff>=0.5"]
+
+[tool.pytest.ini_options]
+pythonpath = [".", "data/raw/kaggle/sdk"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+exclude = [
+    "artifacts",
+    "data/raw",
+    "notebooks/aas-local-validation",
+    "notebooks/official-getting-started",
+    "notebooks/research-667-break60",
+    "notebooks/research-replay-safe-sizing",
+    "notebooks/research-relay-push100",
+    "notebooks/research-xander-eab",
+    "notebooks/research-pilkwang-single",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"notebooks/our-local-validation/*.ipynb" = ["E402"]
+
+[tool.setuptools.packages.find]
+include = ["src*"]

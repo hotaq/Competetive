@@ -1,0 +1,4 @@
+# Read by the scorer (only these keys). Tasks run one after another and 12 h over ~120 tasks is
+# ~6 min each; exceeding 12 h fails the whole submission. Local solves take 2-5 min.
+evaluation:
+  max_time_minutes: 8

@@ -1,0 +1,24 @@
+{
+  "mode": "final",
+  "submission_ids": [
+    "sub_1",
+    "sub_2"
+  ],
+  "selected": [
+    {
+      "submission_id": "sub_1",
+      "candidate": "logistic",
+      "family": "linear",
+      "public_score": 0.631126524506098,
+      "oof_auc": 0.662016
+    },
+    {
+      "submission_id": "sub_2",
+      "candidate": "small_rbf_svm",
+      "family": "kernel",
+      "public_score": 0.6186045544182176,
+      "oof_auc": 0.603616
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,407 @@
+{
+  "schema_version": "v86b-alias-family-scale-prereg-v4",
+  "status": "frozen_before_v86b_economic_outcomes",
+  "created_date": "2026-08-27",
+  "purpose": "Clean disjoint-seed alias-permissive rerun of the exact V86-A family-scale fixed V85 ridge route-bandit contract.",
+  "guardrails": {
+    "sealed_holdout_must_remain_unopened": true,
+    "checkpoint_forbidden": true,
+    "runtime_agent_forbidden": true,
+    "submission_forbidden": true,
+    "kaggle_upload_forbidden": true,
+    "posthoc_model_or_threshold_tuning_forbidden": true,
+    "v84_outcomes_excluded_from_fit": true,
+    "v86a_dataset_and_results_must_not_be_opened": true,
+    "v86a_dataset_and_results_must_not_be_parsed": true,
+    "v86a_margins_labels_and_economic_outcomes_must_not_be_read": true,
+    "v86a_margins_labels_and_economic_outcomes_must_not_be_used": true,
+    "family_action_model_cv_or_economic_gate_changes_forbidden_after_freeze": true
+  },
+  "v86a_exclusion_evidence": {
+    "only_permitted_v86a_outcome_artifact": "analysis/v86_route_bandit_family_scale_20260827/STOP_REPORT.md",
+    "allowed_mechanical_stop_report": {
+      "path": "analysis/v86_route_bandit_family_scale_20260827/STOP_REPORT.md",
+      "sha256": "6b01909a87d1b7dba13379a000a122f559848d52a14a419993ddfa3a7f30feb9",
+      "permitted_use": "Only as evidence that V86-A stopped on its pre-registered non-null-difference mechanical predicate before CV; it may not supply an economic label, margin, threshold, action choice, or model decision."
+    },
+    "forbidden_v86a_economic_inputs": [
+      "analysis/v86_route_bandit_family_scale_20260827/dataset.json",
+      "analysis/v86_route_bandit_family_scale_20260827/dataset_smoke.json",
+      "any V86-A result, label, margin, reward, score, oracle, rescue, selector, or CV artifact"
+    ],
+    "enforcement": "STOP_REPORT.md is the only V86-A outcome-related artifact that any V86-B process or reviewer may open or parse. V86-B collection, evaluation, review, and decision code must not open, read, hash, import, parse, copy, aggregate, inspect, or condition on dataset.json, dataset_smoke.json, or any other V86-A result/economic artifact. V86-B labels may be generated only from seeds 27100400..27100407 after this contract is frozen."
+  },
+  "pinned_reference_sources": {
+    "v86a_protocol": {
+      "path": "analysis/v86_route_bandit_family_scale_20260827/protocol.json",
+      "sha256": "007e36ed80bc2f08cb1cd2495db00ce4bd5132804f761550bae0b72326ef3b30"
+    },
+    "v86a_pre_registration": {
+      "path": "analysis/v86_route_bandit_family_scale_20260827/PRE_REGISTRATION.md",
+      "sha256": "875791c2811ffcb1f464b8daeb8959c0626d1341cbed5a8763ccd16cbe4aea6c"
+    },
+    "v86a_family_selection": {
+      "path": "analysis/v86_route_bandit_family_scale_20260827/family_selection.json",
+      "sha256": "9e6bd7adbcfcb92ec51e798646db4be746459ca0b006400ab7aafc848ed67b38"
+    },
+    "v86a_family_selector": {
+      "path": "analysis/v86_route_bandit_family_scale_20260827/select_families.py",
+      "sha256": "79cb474b7a266207d557c69dd2d30a74bf3ac9199fd248dc72d26acf7c0c226f"
+    },
+    "v86a_collection_reference": {
+      "path": "analysis/v86_route_bandit_family_scale_20260827/run_experiment.py",
+      "sha256": "30faa31202d938d781413843bf572fa77ade04e4bf45081bf0b884230ca09412"
+    },
+    "v86a_cv_reference": {
+      "path": "analysis/v86_route_bandit_family_scale_20260827/evaluate_cv.py",
+      "sha256": "4a99d63638e862572f4afb5ba1296ba5a218d4b09e85b663b2f7522ce6a5ccf4"
+    },
+    "v85_feature_encoder_reference": {
+      "path": "analysis/v85_route_bandit_cv_20260827/collect_features.py",
+      "sha256": "a5d69bd1c447f7b0f5a5eebf0020a71163778e66dc5bedd9b999771e3d1749ef"
+    },
+    "v84_route_executor_reference": {
+      "path": "analysis/v84_route_option_onpolicy_oracle_20260827/run_oracle.py",
+      "sha256": "9fc45c32923aeba7891a04a2d4e09e4f6b159266b1c7a81ecb42761deb5081a6"
+    },
+    "selector_encoder_source": {
+      "path": "src/kaggriculture_rl/learning/tape_selector.py",
+      "sha256": "71172b8a853d2e63798e20c6e2cd7b64763d79d4c11e9ba01822669a0382c31f"
+    },
+    "engine_helper_source": {
+      "path": "scripts/evaluate_file_agent_vs_replay.py",
+      "sha256": "03fcb73cd657e09b4c74498e71ad093813d16c8dad669aeb78f4013b2ed9966f"
+    },
+    "rust_python_package": {
+      "path": "bindings/python/kaggriculture_rs/__init__.py",
+      "sha256": "672f7aa733ccdf6146bb001b8f465ffbb9a94d5e1bfed3f4041ff0e8a5688adb"
+    },
+    "rust_python_extension": {
+      "path": "bindings/python/kaggriculture_rs/_native.abi3.so",
+      "sha256": "315f30f12797c64ed1038347af1496d0ba18f9dc5ce3adcd15977a741f84acdd"
+    }
+  },
+  "candidate": {
+    "name": "V67",
+    "path": "submissions/meta_v67_quantity_conserving_front_run_standalone/main.py",
+    "sha256": "300983ffa3da614ad5e7b9958c76104d9f613fcaf7169e69963ea634ee0a093b"
+  },
+  "actions": [
+    {
+      "id": "KEEP_V67"
+    },
+    {
+      "id": "FORCE_B120_SUFFIX",
+      "runtime_route_key": "b120",
+      "source_path": "artifacts/top20_live_tapes80_20260826/tape_99600846_s0.py",
+      "source_sha256": "3fdf8cc7634eb9f60fcdecaefdd62ac95d3f04509d0c2bb4f82bebb1c763b627"
+    },
+    {
+      "id": "FORCE_C120_SUFFIX",
+      "runtime_route_key": "c120",
+      "source_path": "artifacts/top20_live_tapes80_20260826/tape_99596430_s1.py",
+      "source_sha256": "6510a81b1114e4cbdf899afb194d3bd015abcf8cd010579a8de4a0fe93d9226f"
+    }
+  ],
+  "action_runtime_route_mapping": {
+    "FORCE_B120_SUFFIX": "b120",
+    "FORCE_C120_SUFFIX": "c120"
+  },
+  "families": [
+    {
+      "id": "v16_route_family",
+      "representative": "v22",
+      "path": "submissions/meta_v22_v16_land3_terminal_rule_standalone/main.py",
+      "sha256": "5d5c615a296d984402f886b5f998a54e211dd6138e7818793733069d0d1476ba",
+      "source_group": "legacy-distinct-family"
+    },
+    {
+      "id": "ryo_selector_family",
+      "representative": "v12_ryo",
+      "path": "submissions/top1_v12_ryo_selector_b120_repaired_standalone/main.py",
+      "sha256": "670c85ca7c81d150fbebb4083eaec37f667c3c7305dfdc55a41feed3919e4d02",
+      "source_group": "legacy-distinct-family"
+    },
+    {
+      "id": "route_99612231_family",
+      "representative": "v44_route",
+      "path": "submissions/meta_v44_route99612231_orphan_standalone/main.py",
+      "sha256": "cd2eda3600b4d4849f40a74d25f350239528541e52be0aecf85215fe7aa9afb2",
+      "source_group": "legacy-distinct-family"
+    },
+    {
+      "id": "robust_cluster_family",
+      "representative": "robust_cluster",
+      "path": "submissions/robust_cluster_tape_v10_standalone/main.py",
+      "sha256": "27cb59ba30d42464985db5fa58f858f79c6ddae95e1eeff2bd4b4275523805f6",
+      "source_group": "legacy-distinct-family"
+    },
+    {
+      "id": "top20_crop_dusta_55714246",
+      "representative": "tape_99594187_s1",
+      "path": "artifacts/top20_live_tapes80_20260826/tape_99594187_s1.py",
+      "sha256": "5caefeb46cec9f03f5ca80c1ba32bc57e294370685ae06d12ab7be202590a75a",
+      "source_group": "submission-55714246"
+    },
+    {
+      "id": "top20_tetsuya_55734995",
+      "representative": "tape_99591726_s0",
+      "path": "artifacts/top20_live_tapes80_20260826/tape_99591726_s0.py",
+      "sha256": "f5ac53cd9dc1b2ec9b43837b6d6d7c77431aaf873ba3c45dbe316fa55af87f0e",
+      "source_group": "submission-55734995"
+    },
+    {
+      "id": "top20_milan_leonard_55774239",
+      "representative": "tape_99566769_s1",
+      "path": "artifacts/top20_live_tapes80_20260826/tape_99566769_s1.py",
+      "sha256": "caf952fb35080020a52e839950a4913d30557b248d2b153afbc46ef7282d9c3b",
+      "source_group": "submission-55774239"
+    },
+    {
+      "id": "top20_arda_ceylan_55742738",
+      "representative": "tape_99582725_s0",
+      "path": "artifacts/top20_live_tapes80_20260826/tape_99582725_s0.py",
+      "sha256": "8e2801c8c1c4292dc5679207e722a548d84933d9caac128c2bdbedb848583915",
+      "source_group": "submission-55742738"
+    }
+  ],
+  "family_replacement_rule": "No replacement is permitted. Any import, callable, hash, or completion failure stops V86-B before economic evaluation because the exact eight V86-A families are frozen.",
+  "fresh_development_seeds": [
+    27100400,
+    27100401,
+    27100402,
+    27100403,
+    27100404,
+    27100405,
+    27100406,
+    27100407
+  ],
+  "seats": [
+    0,
+    1
+  ],
+  "expected_contexts": 128,
+  "expected_full_games": 384,
+  "observation_steps": [
+    24,
+    48,
+    72,
+    96,
+    120
+  ],
+  "feature_encoder": {
+    "name": "V85 encode_selector_features",
+    "features_per_observation": 81,
+    "total_features": 405,
+    "model_input_identifiers_forbidden": true
+  },
+  "model": {
+    "type": "dual_ridge_absolute_and_delta_heads",
+    "alpha": 1000.0,
+    "beta": 2.0,
+    "switch_threshold": 2500.0,
+    "actions": [
+      "KEEP_V67",
+      "FORCE_B120_SUFFIX",
+      "FORCE_C120_SUFFIX"
+    ],
+    "intervention_rule": "absolute_lcb > 0 and delta_lcb > 2500; equality abstains",
+    "tie_break": [
+      "higher_delta_lcb",
+      "higher_absolute_lcb",
+      "FORCE_B120_SUFFIX_before_FORCE_C120_SUFFIX"
+    ],
+    "hyperparameter_search": false
+  },
+  "cross_validation": {
+    "unit": "family_seed_cluster",
+    "folds": 64,
+    "held_rows_per_fold": 2,
+    "training_exclusion": "exclude every row in held family and every row with held seed",
+    "expected_training_rows": 98,
+    "uncertainty": "delete-one-training-family jackknife plus family-grouped OOF RMSE"
+  },
+  "mechanical_gates": {
+    "all_games_final_step": 719,
+    "candidate_prefix_parity_through_step": 119,
+    "candidate_prefix_parity_basis": "full_joint_prefix_gate_for_every_KEEP_B_C_arm",
+    "full_joint_prefix_gate": {
+      "arms": [
+        "KEEP_V67",
+        "FORCE_B120_SUFFIX",
+        "FORCE_C120_SUFFIX"
+      ],
+      "comparison": "all three arms must be pairwise identical; equality against KEEP_V67 alone is sufficient only when both forced arms independently equal KEEP_V67",
+      "candidate_and_opponent_action_steps_inclusive": [
+        0,
+        119
+      ],
+      "observation_and_state_boundary": "complete canonical trajectory from the initial state through the pre-action observation/state presented at step 120",
+      "feature_snapshot_steps": [
+        24,
+        48,
+        72,
+        96,
+        120
+      ],
+      "step_120_feature_snapshot_timing": "captured before applying the action at step 120",
+      "required_equal_components": [
+        "candidate raw action trace for steps 0..119",
+        "candidate proposed action trace for steps 0..119",
+        "candidate executed action trace for steps 0..119",
+        "opponent proposed action trace for steps 0..119",
+        "opponent executed action trace for steps 0..119",
+        "canonical observation trajectory for both seats through the pre-action step-120 observation",
+        "canonical engine state trajectory through the pre-action step-120 state",
+        "feature snapshots at steps 24, 48, 72, 96, and pre-action 120"
+      ],
+      "canonical_sha256_digest_and_length_per_component_required": true,
+      "any_component_value_length_or_digest_mismatch_verdict": "BLOCK"
+    },
+    "candidate_sanitizer_changes": 0,
+    "candidate_fallbacks": 0,
+    "candidate_exceptions": 0,
+    "candidate_partial_actions": 0,
+    "finite_feature_shape": [
+      128,
+      405
+    ],
+    "deterministic_core_hash_rerun": true,
+    "deterministic_core_required_components": [
+      "full-joint KEEP/B/C prefix payloads, component lengths and SHA-256 digests, and prefix verdict",
+      "route request, selected route, injection step, route state, start/completion counts, and no-drift evidence",
+      "complete candidate raw, proposed, and executed action traces",
+      "complete opponent proposed and executed action traces",
+      "canonical both-seat observation and state trajectories",
+      "canonical final state, both players' money, and signed candidate margin",
+      "five observation-step feature snapshots and the final 405-value feature vector",
+      "KEEP/B/C margins, labels, paired deltas, and selector accounting",
+      "mechanical, alias-truth-table, and nondegeneracy verdicts"
+    ],
+    "keep_route_gate": {
+      "route_choice_must_be_absent_through_step": 119,
+      "organic_route_selection_count": 1,
+      "organic_route_selection_step": 120,
+      "forced_injection_forbidden": true,
+      "selected_route_must_remain_stable_through_completion": true,
+      "route_choice_drift_count_per_context": 0
+    },
+    "forced_option_alias_rule": {
+      "applies_to": [
+        "FORCE_B120_SUFFIX",
+        "FORCE_C120_SUFFIX"
+      ],
+      "forced_injection_count_per_context": 1,
+      "forced_injection_step": 120,
+      "forced_option_start_count_per_context": 1,
+      "forced_option_completion_count_per_context": 1,
+      "requested_route_must_equal_selected_route": true,
+      "forced_route_choice_before_step_120_forbidden": true,
+      "route_choice_drift_count_per_context": 0,
+      "selected_route_must_remain_stable_through_completion": true,
+      "candidate_executed_first_difference_definition": "earliest step where the forced candidate executed action differs from the KEEP_V67 candidate executed action",
+      "candidate_executed_difference_required_for_valid_non_alias": true,
+      "candidate_executed_first_difference_minimum_step_for_valid_non_alias": 120,
+      "raw_proposed_opponent_state_observation_or_feature_only_difference_cannot_establish_non_alias_support": true,
+      "full_trajectory_equality": {
+        "canonical_serialization": "deterministic canonical JSON with stable key order, explicit nulls, exact integer/boolean/string values, and ordered step arrays",
+        "sha256_digest_per_component_required": true,
+        "equal_only_if_every_required_component_and_length_matches": true,
+        "required_components": [
+          "candidate raw action trace for every step",
+          "candidate proposed action trace for every step",
+          "candidate executed action trace for every step",
+          "opponent proposed action trace for every step",
+          "opponent executed action trace for every step",
+          "canonical observation trajectory for both seats",
+          "canonical state trajectory for both seats",
+          "canonical final state",
+          "both players' final money and signed candidate margin",
+          "feature snapshots at steps 24, 48, 72, 96, and 120"
+        ],
+        "scope": "required only to validate VALID_ALIAS when KEEP and the forced option selected the same runtime route",
+        "non_alias_support_excluded": true
+      },
+      "truth_table": [
+        {
+          "keep_route_relation": "same_as_forced_selected_route",
+          "full_trajectory_relation": "identical",
+          "candidate_executed_relation": "identical",
+          "verdict": "VALID_ALIAS"
+        },
+        {
+          "keep_route_relation": "same_as_forced_selected_route",
+          "full_trajectory_relation": "different",
+          "candidate_executed_relation": "any",
+          "verdict": "BLOCK"
+        },
+        {
+          "keep_route_relation": "different_from_forced_selected_route",
+          "full_trajectory_relation": "any",
+          "candidate_executed_relation": "identical",
+          "verdict": "BLOCK"
+        },
+        {
+          "keep_route_relation": "different_from_forced_selected_route",
+          "full_trajectory_relation": "not_used_for_support",
+          "candidate_executed_relation": "different",
+          "candidate_executed_first_difference_step": ">=120",
+          "verdict": "VALID_NON_ALIAS"
+        },
+        {
+          "keep_route_relation": "any",
+          "full_trajectory_relation": "any",
+          "candidate_executed_relation": "different",
+          "candidate_executed_first_difference_step": "<120",
+          "verdict": "BLOCK"
+        }
+      ],
+      "alias_rows_are_retained": true,
+      "alias_rows_receive_observed_zero_paired_delta": true,
+      "alias_rows_must_not_be_dropped_reweighted_or_relabelled": true
+    },
+    "global_route_nondegeneracy": {
+      "support_definition": "A context counts as different only when the forced candidate executed-action trace differs from KEEP_V67 at least once and its earliest executed-action difference is step 120 or later.",
+      "post_branch_support_basis": "From step 120 onward, only candidate executed-action differences establish VALID_NON_ALIAS support and contribute to global or per-family nondegeneracy counts.",
+      "raw_proposed_opponent_state_observation_feature_or_route_state_only_differences_do_not_count": true,
+      "different_route_with_identical_candidate_executed_trace_blocks_and_does_not_count": true,
+      "denominator_contexts_per_forced_action": 128,
+      "minimum_different_fraction_per_forced_action": 0.9,
+      "minimum_different_contexts_per_forced_action": 116,
+      "each_forced_action_must_differ_in_every_family": true,
+      "family_count": 8,
+      "contexts_per_family": 16,
+      "minimum_different_contexts_per_action_per_family": 12,
+      "minimum_different_fraction_per_action_per_family": 0.75
+    }
+  },
+  "adequacy_gates": {
+    "minimum_keep_loss_rows": 12,
+    "minimum_keep_loss_family_seed_clusters": 6,
+    "minimum_keep_loss_families": 3,
+    "minimum_oracle_rescue_fraction": 0.75,
+    "minimum_oracle_rescue_families": 3
+  },
+  "selector_go_gates": {
+    "minimum_interventions": 1,
+    "maximum_interventions": 32,
+    "every_intervention_actual_paired_delta_strictly_positive": true,
+    "every_intervention_selected_margin_strictly_positive": true,
+    "minimum_keep_loss_rescue_fraction": 0.75,
+    "minimum_rescued_family_seed_clusters": 6,
+    "minimum_selected_wins": 122,
+    "minimum_wins_per_family": 15,
+    "family_wins_worst_and_mean_never_worse_than_keep": true
+  },
+  "selector_accounting_semantics": {
+    "selected_forced_alias_counts_as_intervention": true,
+    "selected_forced_alias_observed_paired_delta": 0,
+    "selected_forced_alias_fails_every_intervention_actual_paired_delta_strictly_positive": true,
+    "alias_must_not_be_reclassified_as_keep_or_abstain": true
+  },
+  "stop_rule": "Any forbidden V86-A dataset/result open or parse, source-hash drift, full-joint KEEP/B/C prefix mismatch through the pre-action step-120 boundary, KEEP or forced injection/route drift, action-to-runtime-route mapping miss, alias-truth-table miss, alias full-trajectory equality omission, candidate executed difference before step 120, executed-trace nondegeneracy miss, adequacy miss, or selector gate miss stops the exact V85 ridge branch with no posthoc tuning. A pass authorizes only one separately predeclared disjoint family-and-seed validation. V86-B itself cannot authorize a checkpoint, sealed holdout, submission, or Kaggle upload.",
+  "promotion_grade_extra_gates": {
+    "wins": 128,
+    "positive_worst_margin_in_every_family": true
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "classes": [
+    0,
+    1
+  ],
+  "rows": 10000,
+  "features": 9,
+  "candidates": [
+    {
+      "file": "candidate_blend_catboost_d8_lightgbm_native.csv",
+      "name": "blend_catboost_d8_lightgbm_native",
+      "family": "blend",
+      "oof_auc": 0.70314814,
+      "fold_auc": [],
+      "fold_auc_std": null,
+      "test_rank_correlation_to_best": 0.96204064
+    },
+    {
+      "file": "candidate_blend_core_interaction.csv",
+      "name": "blend_core_interaction",
+      "family": "interaction_blend",
+      "oof_auc": 0.6954202,
+      "fold_auc": [],
+      "fold_auc_std": null,
+      "test_rank_correlation_to_best": 0.99519148
+    },
+    {
+      "file": "candidate_catboost_d8.csv",
+      "name": "catboost_d8",
+      "family": "catboost",
+      "oof_auc": 0.68934431,
+      "fold_auc": [
+        0.66194927,
+        0.73858478,
+        0.72541166,
+        0.64227859,
+        0.69684829
+      ],
+      "fold_auc_std": 0.03655162,
+      "test_rank_correlation_to_best": 1.0
+    },
+    {
+      "file": "candidate_logistic.csv",
+      "name": "logistic",
+      "family": "linear",
+      "oof_auc": 0.67439401,
+      "fold_auc": [
+        0.63435692,
+        0.72550067,
+        0.68900757,
+        0.65785492,
+        0.66702279
+      ],
+      "fold_auc_std": 0.03084044,
+      "test_rank_correlation_to_best": 0.82531743
+    }
+  ],
+  "diagnostics": {
+    "best_core": {
+      "name": "catboost_d8",
+      "family": "catboost",
+      "oof_auc": 0.68934431
+    },
+    "blend_gate": {
+      "accepted": true,
+      "name": "blend_catboost_d8_lightgbm_native",
+      "oof_auc": 0.70314814,
+      "gain": 0.01380383,
+      "test_rank_correlation_to_best": 0.96204064
+    },
+    "interaction_gate": {
+      "accepted": true,
+      "name": "interaction_te",
+      "oof_auc": 0.67366768,
+      "standalone_gain": -0.01567663,
+      "blend_auc": 0.6954202,
+      "blend_gain": 0.00607589,
+      "fold_auc_std": 0.02285934,
+      "test_rank_correlation": 0.87635269,
+      "stable": true,
+      "diverse": true,
+      "improves": true
+    }
+  },
+  "failures": []
+}

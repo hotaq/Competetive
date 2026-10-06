@@ -1,0 +1,433 @@
+{
+  "dataset": "/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/rl/datasets/v16_rc5_teacher_spatial_dagger_v4.npz",
+  "samples": 30198,
+  "train_samples": 20132,
+  "holdout_samples": 10066,
+  "unit_vocab_size": 33,
+  "market_vocab_size": 113,
+  "max_hands": 14,
+  "teacher_sanitation_changes": 12447,
+  "behavior_action_differences": 93,
+  "episodes": [
+    {
+      "episode_id": 62300000,
+      "seed": 623000,
+      "teacher_seat": 0,
+      "opponent": "self:main.py",
+      "teacher_money": 86873.0,
+      "rollout_candidate_money": 86873.0,
+      "opponent_money": 86873.0,
+      "margin": 0.0
+    },
+    {
+      "episode_id": 62300001,
+      "seed": 623000,
+      "teacher_seat": 1,
+      "opponent": "self:main.py",
+      "teacher_money": 86873.0,
+      "rollout_candidate_money": 86873.0,
+      "opponent_money": 86873.0,
+      "margin": 0.0
+    },
+    {
+      "episode_id": 62300002,
+      "seed": 623001,
+      "teacher_seat": 0,
+      "opponent": "file:main.py",
+      "teacher_money": 99185.0,
+      "rollout_candidate_money": 99185.0,
+      "opponent_money": 89202.0,
+      "margin": 9983.0
+    },
+    {
+      "episode_id": 62300003,
+      "seed": 623001,
+      "teacher_seat": 1,
+      "opponent": "file:main.py",
+      "teacher_money": 99185.0,
+      "rollout_candidate_money": 99185.0,
+      "opponent_money": 89202.0,
+      "margin": 9983.0
+    },
+    {
+      "episode_id": 62300004,
+      "seed": 623002,
+      "teacher_seat": 0,
+      "opponent": "crop:WHEAT:6",
+      "teacher_money": 163089.0,
+      "rollout_candidate_money": 163089.0,
+      "opponent_money": 4271.0,
+      "margin": 158818.0
+    },
+    {
+      "episode_id": 62300005,
+      "seed": 623002,
+      "teacher_seat": 1,
+      "opponent": "crop:WHEAT:6",
+      "teacher_money": 184928.0,
+      "rollout_candidate_money": 184928.0,
+      "opponent_money": 4257.0,
+      "margin": 180671.0
+    },
+    {
+      "episode_id": 62300006,
+      "seed": 623003,
+      "teacher_seat": 0,
+      "opponent": "crop:CARROT:6",
+      "teacher_money": 121908.0,
+      "rollout_candidate_money": 121908.0,
+      "opponent_money": 4426.0,
+      "margin": 117482.0
+    },
+    {
+      "episode_id": 62300007,
+      "seed": 623003,
+      "teacher_seat": 1,
+      "opponent": "crop:CARROT:6",
+      "teacher_money": 122061.0,
+      "rollout_candidate_money": 122061.0,
+      "opponent_money": 4636.0,
+      "margin": 117425.0
+    },
+    {
+      "episode_id": 62300008,
+      "seed": 623004,
+      "teacher_seat": 0,
+      "opponent": "crop:TOMATO:6",
+      "teacher_money": 158884.0,
+      "rollout_candidate_money": 158884.0,
+      "opponent_money": 3409.0,
+      "margin": 155475.0
+    },
+    {
+      "episode_id": 62300009,
+      "seed": 623004,
+      "teacher_seat": 1,
+      "opponent": "crop:TOMATO:6",
+      "teacher_money": 158884.0,
+      "rollout_candidate_money": 158884.0,
+      "opponent_money": 3409.0,
+      "margin": 155475.0
+    },
+    {
+      "episode_id": 62300010,
+      "seed": 623005,
+      "teacher_seat": 0,
+      "opponent": "crop:STRAWBERRY:6",
+      "teacher_money": 140925.0,
+      "rollout_candidate_money": 140925.0,
+      "opponent_money": 5809.0,
+      "margin": 135116.0
+    },
+    {
+      "episode_id": 62300011,
+      "seed": 623005,
+      "teacher_seat": 1,
+      "opponent": "crop:STRAWBERRY:6",
+      "teacher_money": 160997.0,
+      "rollout_candidate_money": 160997.0,
+      "opponent_money": 6986.0,
+      "margin": 154011.0
+    },
+    {
+      "episode_id": 62300012,
+      "seed": 623006,
+      "teacher_seat": 0,
+      "opponent": "crop:MELON:6",
+      "teacher_money": 137101.0,
+      "rollout_candidate_money": 137101.0,
+      "opponent_money": 11924.0,
+      "margin": 125177.0
+    },
+    {
+      "episode_id": 62300013,
+      "seed": 623006,
+      "teacher_seat": 1,
+      "opponent": "crop:MELON:6",
+      "teacher_money": 162585.0,
+      "rollout_candidate_money": 162585.0,
+      "opponent_money": 11844.0,
+      "margin": 150741.0
+    },
+    {
+      "episode_id": 62300014,
+      "seed": 623007,
+      "teacher_seat": 0,
+      "opponent": "self:main.py",
+      "teacher_money": 56493.0,
+      "rollout_candidate_money": 56493.0,
+      "opponent_money": 56585.0,
+      "margin": -92.0
+    },
+    {
+      "episode_id": 62300015,
+      "seed": 623007,
+      "teacher_seat": 1,
+      "opponent": "self:main.py",
+      "teacher_money": 56493.0,
+      "rollout_candidate_money": 56493.0,
+      "opponent_money": 56585.0,
+      "margin": -92.0
+    },
+    {
+      "episode_id": 62300016,
+      "seed": 623008,
+      "teacher_seat": 0,
+      "opponent": "file:main.py",
+      "teacher_money": 129808.0,
+      "rollout_candidate_money": 129808.0,
+      "opponent_money": 104468.0,
+      "margin": 25340.0
+    },
+    {
+      "episode_id": 62300017,
+      "seed": 623008,
+      "teacher_seat": 1,
+      "opponent": "file:main.py",
+      "teacher_money": 138336.0,
+      "rollout_candidate_money": 138336.0,
+      "opponent_money": 128080.0,
+      "margin": 10256.0
+    },
+    {
+      "episode_id": 62300018,
+      "seed": 623009,
+      "teacher_seat": 0,
+      "opponent": "crop:WHEAT:6",
+      "teacher_money": 133975.0,
+      "rollout_candidate_money": 133975.0,
+      "opponent_money": 4254.0,
+      "margin": 129721.0
+    },
+    {
+      "episode_id": 62300019,
+      "seed": 623009,
+      "teacher_seat": 1,
+      "opponent": "crop:WHEAT:6",
+      "teacher_money": 133975.0,
+      "rollout_candidate_money": 133975.0,
+      "opponent_money": 4254.0,
+      "margin": 129721.0
+    },
+    {
+      "episode_id": 62300020,
+      "seed": 623010,
+      "teacher_seat": 0,
+      "opponent": "crop:CARROT:6",
+      "teacher_money": 149651.0,
+      "rollout_candidate_money": 149651.0,
+      "opponent_money": 3538.0,
+      "margin": 146113.0
+    },
+    {
+      "episode_id": 62300021,
+      "seed": 623010,
+      "teacher_seat": 1,
+      "opponent": "crop:CARROT:6",
+      "teacher_money": 149651.0,
+      "rollout_candidate_money": 149651.0,
+      "opponent_money": 3538.0,
+      "margin": 146113.0
+    },
+    {
+      "episode_id": 62300022,
+      "seed": 623011,
+      "teacher_seat": 0,
+      "opponent": "crop:TOMATO:6",
+      "teacher_money": 148611.0,
+      "rollout_candidate_money": 148611.0,
+      "opponent_money": 3513.0,
+      "margin": 145098.0
+    },
+    {
+      "episode_id": 62300023,
+      "seed": 623011,
+      "teacher_seat": 1,
+      "opponent": "crop:TOMATO:6",
+      "teacher_money": 184080.0,
+      "rollout_candidate_money": 184080.0,
+      "opponent_money": 3410.0,
+      "margin": 180670.0
+    },
+    {
+      "episode_id": 62300024,
+      "seed": 623012,
+      "teacher_seat": 0,
+      "opponent": "crop:STRAWBERRY:6",
+      "teacher_money": 125915.0,
+      "rollout_candidate_money": 125915.0,
+      "opponent_money": 2854.0,
+      "margin": 123061.0
+    },
+    {
+      "episode_id": 62300025,
+      "seed": 623012,
+      "teacher_seat": 1,
+      "opponent": "crop:STRAWBERRY:6",
+      "teacher_money": 125915.0,
+      "rollout_candidate_money": 125915.0,
+      "opponent_money": 2854.0,
+      "margin": 123061.0
+    },
+    {
+      "episode_id": 62300026,
+      "seed": 623013,
+      "teacher_seat": 0,
+      "opponent": "crop:MELON:6",
+      "teacher_money": 169683.0,
+      "rollout_candidate_money": 169683.0,
+      "opponent_money": 11844.0,
+      "margin": 157839.0
+    },
+    {
+      "episode_id": 62300027,
+      "seed": 623013,
+      "teacher_seat": 1,
+      "opponent": "crop:MELON:6",
+      "teacher_money": 177555.0,
+      "rollout_candidate_money": 177555.0,
+      "opponent_money": 11844.0,
+      "margin": 165711.0
+    },
+    {
+      "episode_id": 62300028,
+      "seed": 623014,
+      "teacher_seat": 0,
+      "opponent": "self:main.py",
+      "teacher_money": 117180.0,
+      "rollout_candidate_money": 117180.0,
+      "opponent_money": 117881.0,
+      "margin": -701.0
+    },
+    {
+      "episode_id": 62300029,
+      "seed": 623014,
+      "teacher_seat": 1,
+      "opponent": "self:main.py",
+      "teacher_money": 117180.0,
+      "rollout_candidate_money": 117180.0,
+      "opponent_money": 117881.0,
+      "margin": -701.0
+    },
+    {
+      "episode_id": 62300030,
+      "seed": 623015,
+      "teacher_seat": 0,
+      "opponent": "file:main.py",
+      "teacher_money": 112937.0,
+      "rollout_candidate_money": 112937.0,
+      "opponent_money": 89609.0,
+      "margin": 23328.0
+    },
+    {
+      "episode_id": 62300031,
+      "seed": 623015,
+      "teacher_seat": 1,
+      "opponent": "file:main.py",
+      "teacher_money": 111114.0,
+      "rollout_candidate_money": 111114.0,
+      "opponent_money": 119064.0,
+      "margin": -7950.0
+    },
+    {
+      "episode_id": 62300032,
+      "seed": 623016,
+      "teacher_seat": 0,
+      "opponent": "crop:WHEAT:6",
+      "teacher_money": 155450.0,
+      "rollout_candidate_money": 155450.0,
+      "opponent_money": 4035.0,
+      "margin": 151415.0
+    },
+    {
+      "episode_id": 62300033,
+      "seed": 623016,
+      "teacher_seat": 1,
+      "opponent": "crop:WHEAT:6",
+      "teacher_money": 155434.0,
+      "rollout_candidate_money": 155434.0,
+      "opponent_money": 4091.0,
+      "margin": 151343.0
+    },
+    {
+      "episode_id": 62300034,
+      "seed": 623017,
+      "teacher_seat": 0,
+      "opponent": "crop:CARROT:6",
+      "teacher_money": 189343.0,
+      "rollout_candidate_money": 189343.0,
+      "opponent_money": 3701.0,
+      "margin": 185642.0
+    },
+    {
+      "episode_id": 62300035,
+      "seed": 623017,
+      "teacher_seat": 1,
+      "opponent": "crop:CARROT:6",
+      "teacher_money": 187518.0,
+      "rollout_candidate_money": 187518.0,
+      "opponent_money": 3764.0,
+      "margin": 183754.0
+    },
+    {
+      "episode_id": 62300036,
+      "seed": 623018,
+      "teacher_seat": 0,
+      "opponent": "crop:TOMATO:6",
+      "teacher_money": 175527.0,
+      "rollout_candidate_money": 175527.0,
+      "opponent_money": 3380.0,
+      "margin": 172147.0
+    },
+    {
+      "episode_id": 62300037,
+      "seed": 623018,
+      "teacher_seat": 1,
+      "opponent": "crop:TOMATO:6",
+      "teacher_money": 172908.0,
+      "rollout_candidate_money": 172908.0,
+      "opponent_money": 3399.0,
+      "margin": 169509.0
+    },
+    {
+      "episode_id": 62300038,
+      "seed": 623019,
+      "teacher_seat": 0,
+      "opponent": "crop:STRAWBERRY:6",
+      "teacher_money": 106078.0,
+      "rollout_candidate_money": 106078.0,
+      "opponent_money": 2746.0,
+      "margin": 103332.0
+    },
+    {
+      "episode_id": 62300039,
+      "seed": 623019,
+      "teacher_seat": 1,
+      "opponent": "crop:STRAWBERRY:6",
+      "teacher_money": 106078.0,
+      "rollout_candidate_money": 106078.0,
+      "opponent_money": 2746.0,
+      "margin": 103332.0
+    },
+    {
+      "episode_id": 62300040,
+      "seed": 623020,
+      "teacher_seat": 0,
+      "opponent": "crop:MELON:6",
+      "teacher_money": 135042.0,
+      "rollout_candidate_money": 135042.0,
+      "opponent_money": 11844.0,
+      "margin": 123198.0
+    },
+    {
+      "episode_id": 62300041,
+      "seed": 623020,
+      "teacher_seat": 1,
+      "opponent": "crop:MELON:6",
+      "teacher_money": 135042.0,
+      "rollout_candidate_money": 135042.0,
+      "opponent_money": 11844.0,
+      "margin": 123198.0
+    }
+  ]
+}

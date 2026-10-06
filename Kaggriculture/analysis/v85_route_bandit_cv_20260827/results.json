@@ -1,0 +1,5440 @@
+{
+  "cv": {
+    "aggregate": {
+      "contexts": 32,
+      "cvar10_margin": -12197.75,
+      "interventions": 0,
+      "keep_mean_margin": 6729.09375,
+      "keep_wins": 26,
+      "keep_worst_margin": -21048.0,
+      "losses": 6,
+      "mean_margin": 6729.09375,
+      "paired_mean_delta": 0.0,
+      "paired_worst_delta": 0.0,
+      "wins": 26,
+      "worst_margin": -21048.0
+    },
+    "families": {
+      "robust_cluster_family": {
+        "contexts": 8,
+        "interventions": 0,
+        "keep_wins": 8,
+        "mean_margin": 10938.0,
+        "paired_mean_delta": 0.0,
+        "paired_worst_delta": 0.0,
+        "wins": 8,
+        "worst_margin": 1237.0
+      },
+      "route_99612231_family": {
+        "contexts": 8,
+        "interventions": 0,
+        "keep_wins": 8,
+        "mean_margin": 9358.25,
+        "paired_mean_delta": 0.0,
+        "paired_worst_delta": 0.0,
+        "wins": 8,
+        "worst_margin": 3741.0
+      },
+      "ryo_selector_family": {
+        "contexts": 8,
+        "interventions": 0,
+        "keep_wins": 5,
+        "mean_margin": 5618.25,
+        "paired_mean_delta": 0.0,
+        "paired_worst_delta": 0.0,
+        "wins": 5,
+        "worst_margin": -21048.0
+      },
+      "v16_route_family": {
+        "contexts": 8,
+        "interventions": 0,
+        "keep_wins": 5,
+        "mean_margin": 1001.875,
+        "paired_mean_delta": 0.0,
+        "paired_worst_delta": 0.0,
+        "wins": 5,
+        "worst_margin": -3585.0
+      }
+    },
+    "outer_folds": [
+      {
+        "held_family": "v16_route_family",
+        "held_metrics": {
+          "contexts": 8,
+          "cvar10_margin": -3585.0,
+          "interventions": 0,
+          "keep_mean_margin": 1001.875,
+          "keep_wins": 5,
+          "keep_worst_margin": -3585.0,
+          "losses": 3,
+          "mean_margin": 1001.875,
+          "paired_mean_delta": 0.0,
+          "paired_worst_delta": 0.0,
+          "wins": 5,
+          "worst_margin": -3585.0
+        },
+        "inner_leaderboard": [
+          {
+            "config": {
+              "alpha": 1000.0,
+              "beta": 2.0,
+              "threshold": 2500.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "ryo_selector_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -14095.333333333334,
+              "interventions": 0,
+              "keep_mean_margin": 8638.166666666666,
+              "keep_wins": 21,
+              "keep_worst_margin": -21048.0,
+              "losses": 3,
+              "mean_margin": 8638.166666666666,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -21048.0
+            },
+            "rank": 1
+          },
+          {
+            "config": {
+              "alpha": 100.0,
+              "beta": 2.0,
+              "threshold": 2500.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "ryo_selector_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -14095.333333333334,
+              "interventions": 0,
+              "keep_mean_margin": 8638.166666666666,
+              "keep_wins": 21,
+              "keep_worst_margin": -21048.0,
+              "losses": 3,
+              "mean_margin": 8638.166666666666,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -21048.0
+            },
+            "rank": 2
+          },
+          {
+            "config": {
+              "alpha": 10.0,
+              "beta": 2.0,
+              "threshold": 2500.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "ryo_selector_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -14095.333333333334,
+              "interventions": 0,
+              "keep_mean_margin": 8638.166666666666,
+              "keep_wins": 21,
+              "keep_worst_margin": -21048.0,
+              "losses": 3,
+              "mean_margin": 8638.166666666666,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -21048.0
+            },
+            "rank": 3
+          },
+          {
+            "config": {
+              "alpha": 1000.0,
+              "beta": 1.0,
+              "threshold": 2500.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "ryo_selector_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -14095.333333333334,
+              "interventions": 0,
+              "keep_mean_margin": 8638.166666666666,
+              "keep_wins": 21,
+              "keep_worst_margin": -21048.0,
+              "losses": 3,
+              "mean_margin": 8638.166666666666,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -21048.0
+            },
+            "rank": 4
+          },
+          {
+            "config": {
+              "alpha": 100.0,
+              "beta": 1.0,
+              "threshold": 2500.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "ryo_selector_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -14095.333333333334,
+              "interventions": 0,
+              "keep_mean_margin": 8638.166666666666,
+              "keep_wins": 21,
+              "keep_worst_margin": -21048.0,
+              "losses": 3,
+              "mean_margin": 8638.166666666666,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -21048.0
+            },
+            "rank": 5
+          },
+          {
+            "config": {
+              "alpha": 10.0,
+              "beta": 1.0,
+              "threshold": 2500.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "ryo_selector_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -14095.333333333334,
+              "interventions": 0,
+              "keep_mean_margin": 8638.166666666666,
+              "keep_wins": 21,
+              "keep_worst_margin": -21048.0,
+              "losses": 3,
+              "mean_margin": 8638.166666666666,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -21048.0
+            },
+            "rank": 6
+          },
+          {
+            "config": {
+              "alpha": 1000.0,
+              "beta": 2.0,
+              "threshold": 1000.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "ryo_selector_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -14095.333333333334,
+              "interventions": 0,
+              "keep_mean_margin": 8638.166666666666,
+              "keep_wins": 21,
+              "keep_worst_margin": -21048.0,
+              "losses": 3,
+              "mean_margin": 8638.166666666666,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -21048.0
+            },
+            "rank": 7
+          },
+          {
+            "config": {
+              "alpha": 100.0,
+              "beta": 2.0,
+              "threshold": 1000.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "ryo_selector_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -14095.333333333334,
+              "interventions": 0,
+              "keep_mean_margin": 8638.166666666666,
+              "keep_wins": 21,
+              "keep_worst_margin": -21048.0,
+              "losses": 3,
+              "mean_margin": 8638.166666666666,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -21048.0
+            },
+            "rank": 8
+          },
+          {
+            "config": {
+              "alpha": 10.0,
+              "beta": 2.0,
+              "threshold": 1000.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "ryo_selector_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -14095.333333333334,
+              "interventions": 0,
+              "keep_mean_margin": 8638.166666666666,
+              "keep_wins": 21,
+              "keep_worst_margin": -21048.0,
+              "losses": 3,
+              "mean_margin": 8638.166666666666,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -21048.0
+            },
+            "rank": 9
+          },
+          {
+            "config": {
+              "alpha": 1000.0,
+              "beta": 1.0,
+              "threshold": 1000.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "ryo_selector_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -14095.333333333334,
+              "interventions": 0,
+              "keep_mean_margin": 8638.166666666666,
+              "keep_wins": 21,
+              "keep_worst_margin": -21048.0,
+              "losses": 3,
+              "mean_margin": 8638.166666666666,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -21048.0
+            },
+            "rank": 10
+          },
+          {
+            "config": {
+              "alpha": 100.0,
+              "beta": 1.0,
+              "threshold": 1000.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "ryo_selector_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -14095.333333333334,
+              "interventions": 0,
+              "keep_mean_margin": 8638.166666666666,
+              "keep_wins": 21,
+              "keep_worst_margin": -21048.0,
+              "losses": 3,
+              "mean_margin": 8638.166666666666,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -21048.0
+            },
+            "rank": 11
+          },
+          {
+            "config": {
+              "alpha": 10.0,
+              "beta": 1.0,
+              "threshold": 1000.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "ryo_selector_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -14095.333333333334,
+              "interventions": 0,
+              "keep_mean_margin": 8638.166666666666,
+              "keep_wins": 21,
+              "keep_worst_margin": -21048.0,
+              "losses": 3,
+              "mean_margin": 8638.166666666666,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -21048.0
+            },
+            "rank": 12
+          },
+          {
+            "config": {
+              "alpha": 1000.0,
+              "beta": 2.0,
+              "threshold": 0.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "ryo_selector_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -14095.333333333334,
+              "interventions": 0,
+              "keep_mean_margin": 8638.166666666666,
+              "keep_wins": 21,
+              "keep_worst_margin": -21048.0,
+              "losses": 3,
+              "mean_margin": 8638.166666666666,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -21048.0
+            },
+            "rank": 13
+          },
+          {
+            "config": {
+              "alpha": 100.0,
+              "beta": 2.0,
+              "threshold": 0.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "ryo_selector_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -14095.333333333334,
+              "interventions": 0,
+              "keep_mean_margin": 8638.166666666666,
+              "keep_wins": 21,
+              "keep_worst_margin": -21048.0,
+              "losses": 3,
+              "mean_margin": 8638.166666666666,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -21048.0
+            },
+            "rank": 14
+          },
+          {
+            "config": {
+              "alpha": 10.0,
+              "beta": 2.0,
+              "threshold": 0.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "ryo_selector_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -14095.333333333334,
+              "interventions": 0,
+              "keep_mean_margin": 8638.166666666666,
+              "keep_wins": 21,
+              "keep_worst_margin": -21048.0,
+              "losses": 3,
+              "mean_margin": 8638.166666666666,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -21048.0
+            },
+            "rank": 15
+          },
+          {
+            "config": {
+              "alpha": 1000.0,
+              "beta": 1.0,
+              "threshold": 0.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "ryo_selector_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -14095.333333333334,
+              "interventions": 0,
+              "keep_mean_margin": 8638.166666666666,
+              "keep_wins": 21,
+              "keep_worst_margin": -21048.0,
+              "losses": 3,
+              "mean_margin": 8638.166666666666,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -21048.0
+            },
+            "rank": 16
+          },
+          {
+            "config": {
+              "alpha": 100.0,
+              "beta": 1.0,
+              "threshold": 0.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "ryo_selector_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -14095.333333333334,
+              "interventions": 0,
+              "keep_mean_margin": 8638.166666666666,
+              "keep_wins": 21,
+              "keep_worst_margin": -21048.0,
+              "losses": 3,
+              "mean_margin": 8638.166666666666,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -21048.0
+            },
+            "rank": 17
+          },
+          {
+            "config": {
+              "alpha": 10.0,
+              "beta": 1.0,
+              "threshold": 0.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "ryo_selector_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -14095.333333333334,
+              "interventions": 0,
+              "keep_mean_margin": 8638.166666666666,
+              "keep_wins": 21,
+              "keep_worst_margin": -21048.0,
+              "losses": 3,
+              "mean_margin": 8638.166666666666,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -21048.0
+            },
+            "rank": 18
+          }
+        ],
+        "selected_config": {
+          "alpha": 1000.0,
+          "beta": 2.0,
+          "threshold": 2500.0
+        },
+        "train_families": [
+          "robust_cluster_family",
+          "route_99612231_family",
+          "ryo_selector_family"
+        ],
+        "uncertainty_audit": {
+          "absolute_oof_rmse": [
+            14229.962630500762,
+            15983.908801989477,
+            18999.052576883343
+          ],
+          "delta_oof_rmse": [
+            10934.608164202838,
+            26012.95877805411
+          ],
+          "family_jackknife_groups": 3
+        }
+      },
+      {
+        "held_family": "ryo_selector_family",
+        "held_metrics": {
+          "contexts": 8,
+          "cvar10_margin": -21048.0,
+          "interventions": 0,
+          "keep_mean_margin": 5618.25,
+          "keep_wins": 5,
+          "keep_worst_margin": -21048.0,
+          "losses": 3,
+          "mean_margin": 5618.25,
+          "paired_mean_delta": 0.0,
+          "paired_worst_delta": 0.0,
+          "wins": 5,
+          "worst_margin": -21048.0
+        },
+        "inner_leaderboard": [
+          {
+            "config": {
+              "alpha": 1000.0,
+              "beta": 2.0,
+              "threshold": 2500.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -3268.3333333333335,
+              "interventions": 0,
+              "keep_mean_margin": 7099.375,
+              "keep_wins": 21,
+              "keep_worst_margin": -3585.0,
+              "losses": 3,
+              "mean_margin": 7099.375,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -3585.0
+            },
+            "rank": 1
+          },
+          {
+            "config": {
+              "alpha": 100.0,
+              "beta": 2.0,
+              "threshold": 2500.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -3268.3333333333335,
+              "interventions": 0,
+              "keep_mean_margin": 7099.375,
+              "keep_wins": 21,
+              "keep_worst_margin": -3585.0,
+              "losses": 3,
+              "mean_margin": 7099.375,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -3585.0
+            },
+            "rank": 2
+          },
+          {
+            "config": {
+              "alpha": 10.0,
+              "beta": 2.0,
+              "threshold": 2500.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -3268.3333333333335,
+              "interventions": 0,
+              "keep_mean_margin": 7099.375,
+              "keep_wins": 21,
+              "keep_worst_margin": -3585.0,
+              "losses": 3,
+              "mean_margin": 7099.375,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -3585.0
+            },
+            "rank": 3
+          },
+          {
+            "config": {
+              "alpha": 1000.0,
+              "beta": 1.0,
+              "threshold": 2500.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -3268.3333333333335,
+              "interventions": 0,
+              "keep_mean_margin": 7099.375,
+              "keep_wins": 21,
+              "keep_worst_margin": -3585.0,
+              "losses": 3,
+              "mean_margin": 7099.375,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -3585.0
+            },
+            "rank": 4
+          },
+          {
+            "config": {
+              "alpha": 100.0,
+              "beta": 1.0,
+              "threshold": 2500.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -3268.3333333333335,
+              "interventions": 0,
+              "keep_mean_margin": 7099.375,
+              "keep_wins": 21,
+              "keep_worst_margin": -3585.0,
+              "losses": 3,
+              "mean_margin": 7099.375,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -3585.0
+            },
+            "rank": 5
+          },
+          {
+            "config": {
+              "alpha": 10.0,
+              "beta": 1.0,
+              "threshold": 2500.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -3268.3333333333335,
+              "interventions": 0,
+              "keep_mean_margin": 7099.375,
+              "keep_wins": 21,
+              "keep_worst_margin": -3585.0,
+              "losses": 3,
+              "mean_margin": 7099.375,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -3585.0
+            },
+            "rank": 6
+          },
+          {
+            "config": {
+              "alpha": 1000.0,
+              "beta": 2.0,
+              "threshold": 1000.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -3268.3333333333335,
+              "interventions": 0,
+              "keep_mean_margin": 7099.375,
+              "keep_wins": 21,
+              "keep_worst_margin": -3585.0,
+              "losses": 3,
+              "mean_margin": 7099.375,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -3585.0
+            },
+            "rank": 7
+          },
+          {
+            "config": {
+              "alpha": 100.0,
+              "beta": 2.0,
+              "threshold": 1000.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -3268.3333333333335,
+              "interventions": 0,
+              "keep_mean_margin": 7099.375,
+              "keep_wins": 21,
+              "keep_worst_margin": -3585.0,
+              "losses": 3,
+              "mean_margin": 7099.375,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -3585.0
+            },
+            "rank": 8
+          },
+          {
+            "config": {
+              "alpha": 10.0,
+              "beta": 2.0,
+              "threshold": 1000.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -3268.3333333333335,
+              "interventions": 0,
+              "keep_mean_margin": 7099.375,
+              "keep_wins": 21,
+              "keep_worst_margin": -3585.0,
+              "losses": 3,
+              "mean_margin": 7099.375,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -3585.0
+            },
+            "rank": 9
+          },
+          {
+            "config": {
+              "alpha": 1000.0,
+              "beta": 1.0,
+              "threshold": 1000.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -3268.3333333333335,
+              "interventions": 0,
+              "keep_mean_margin": 7099.375,
+              "keep_wins": 21,
+              "keep_worst_margin": -3585.0,
+              "losses": 3,
+              "mean_margin": 7099.375,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -3585.0
+            },
+            "rank": 10
+          },
+          {
+            "config": {
+              "alpha": 100.0,
+              "beta": 1.0,
+              "threshold": 1000.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -3268.3333333333335,
+              "interventions": 0,
+              "keep_mean_margin": 7099.375,
+              "keep_wins": 21,
+              "keep_worst_margin": -3585.0,
+              "losses": 3,
+              "mean_margin": 7099.375,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -3585.0
+            },
+            "rank": 11
+          },
+          {
+            "config": {
+              "alpha": 10.0,
+              "beta": 1.0,
+              "threshold": 1000.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -3268.3333333333335,
+              "interventions": 0,
+              "keep_mean_margin": 7099.375,
+              "keep_wins": 21,
+              "keep_worst_margin": -3585.0,
+              "losses": 3,
+              "mean_margin": 7099.375,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -3585.0
+            },
+            "rank": 12
+          },
+          {
+            "config": {
+              "alpha": 1000.0,
+              "beta": 2.0,
+              "threshold": 0.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -3268.3333333333335,
+              "interventions": 0,
+              "keep_mean_margin": 7099.375,
+              "keep_wins": 21,
+              "keep_worst_margin": -3585.0,
+              "losses": 3,
+              "mean_margin": 7099.375,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -3585.0
+            },
+            "rank": 13
+          },
+          {
+            "config": {
+              "alpha": 100.0,
+              "beta": 2.0,
+              "threshold": 0.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -3268.3333333333335,
+              "interventions": 0,
+              "keep_mean_margin": 7099.375,
+              "keep_wins": 21,
+              "keep_worst_margin": -3585.0,
+              "losses": 3,
+              "mean_margin": 7099.375,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -3585.0
+            },
+            "rank": 14
+          },
+          {
+            "config": {
+              "alpha": 10.0,
+              "beta": 2.0,
+              "threshold": 0.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -3268.3333333333335,
+              "interventions": 0,
+              "keep_mean_margin": 7099.375,
+              "keep_wins": 21,
+              "keep_worst_margin": -3585.0,
+              "losses": 3,
+              "mean_margin": 7099.375,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -3585.0
+            },
+            "rank": 15
+          },
+          {
+            "config": {
+              "alpha": 1000.0,
+              "beta": 1.0,
+              "threshold": 0.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -3268.3333333333335,
+              "interventions": 0,
+              "keep_mean_margin": 7099.375,
+              "keep_wins": 21,
+              "keep_worst_margin": -3585.0,
+              "losses": 3,
+              "mean_margin": 7099.375,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -3585.0
+            },
+            "rank": 16
+          },
+          {
+            "config": {
+              "alpha": 100.0,
+              "beta": 1.0,
+              "threshold": 0.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -3268.3333333333335,
+              "interventions": 0,
+              "keep_mean_margin": 7099.375,
+              "keep_wins": 21,
+              "keep_worst_margin": -3585.0,
+              "losses": 3,
+              "mean_margin": 7099.375,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -3585.0
+            },
+            "rank": 17
+          },
+          {
+            "config": {
+              "alpha": 10.0,
+              "beta": 1.0,
+              "threshold": 0.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "route_99612231_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -3268.3333333333335,
+              "interventions": 0,
+              "keep_mean_margin": 7099.375,
+              "keep_wins": 21,
+              "keep_worst_margin": -3585.0,
+              "losses": 3,
+              "mean_margin": 7099.375,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 21,
+              "worst_margin": -3585.0
+            },
+            "rank": 18
+          }
+        ],
+        "selected_config": {
+          "alpha": 1000.0,
+          "beta": 2.0,
+          "threshold": 2500.0
+        },
+        "train_families": [
+          "robust_cluster_family",
+          "route_99612231_family",
+          "v16_route_family"
+        ],
+        "uncertainty_audit": {
+          "absolute_oof_rmse": [
+            19939.302337113735,
+            16084.488380964298,
+            22985.00279706365
+          ],
+          "delta_oof_rmse": [
+            7919.08984854633,
+            36293.46218873893
+          ],
+          "family_jackknife_groups": 3
+        }
+      },
+      {
+        "held_family": "route_99612231_family",
+        "held_metrics": {
+          "contexts": 8,
+          "cvar10_margin": 3741.0,
+          "interventions": 0,
+          "keep_mean_margin": 9358.25,
+          "keep_wins": 8,
+          "keep_worst_margin": 3741.0,
+          "losses": 0,
+          "mean_margin": 9358.25,
+          "paired_mean_delta": 0.0,
+          "paired_worst_delta": 0.0,
+          "wins": 8,
+          "worst_margin": 3741.0
+        },
+        "inner_leaderboard": [
+          {
+            "config": {
+              "alpha": 1000.0,
+              "beta": 2.0,
+              "threshold": 2500.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5852.708333333333,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5852.708333333333,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 1
+          },
+          {
+            "config": {
+              "alpha": 100.0,
+              "beta": 2.0,
+              "threshold": 2500.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5852.708333333333,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5852.708333333333,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 2
+          },
+          {
+            "config": {
+              "alpha": 10.0,
+              "beta": 2.0,
+              "threshold": 2500.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5852.708333333333,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5852.708333333333,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 3
+          },
+          {
+            "config": {
+              "alpha": 1000.0,
+              "beta": 1.0,
+              "threshold": 2500.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5852.708333333333,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5852.708333333333,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 4
+          },
+          {
+            "config": {
+              "alpha": 100.0,
+              "beta": 1.0,
+              "threshold": 2500.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5852.708333333333,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5852.708333333333,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 5
+          },
+          {
+            "config": {
+              "alpha": 10.0,
+              "beta": 1.0,
+              "threshold": 2500.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5852.708333333333,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5852.708333333333,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 6
+          },
+          {
+            "config": {
+              "alpha": 1000.0,
+              "beta": 2.0,
+              "threshold": 1000.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5852.708333333333,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5852.708333333333,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 7
+          },
+          {
+            "config": {
+              "alpha": 100.0,
+              "beta": 2.0,
+              "threshold": 1000.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5852.708333333333,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5852.708333333333,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 8
+          },
+          {
+            "config": {
+              "alpha": 10.0,
+              "beta": 2.0,
+              "threshold": 1000.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5852.708333333333,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5852.708333333333,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 9
+          },
+          {
+            "config": {
+              "alpha": 1000.0,
+              "beta": 1.0,
+              "threshold": 1000.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5852.708333333333,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5852.708333333333,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 10
+          },
+          {
+            "config": {
+              "alpha": 100.0,
+              "beta": 1.0,
+              "threshold": 1000.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5852.708333333333,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5852.708333333333,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 11
+          },
+          {
+            "config": {
+              "alpha": 10.0,
+              "beta": 1.0,
+              "threshold": 1000.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5852.708333333333,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5852.708333333333,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 12
+          },
+          {
+            "config": {
+              "alpha": 1000.0,
+              "beta": 2.0,
+              "threshold": 0.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5852.708333333333,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5852.708333333333,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 13
+          },
+          {
+            "config": {
+              "alpha": 100.0,
+              "beta": 2.0,
+              "threshold": 0.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5852.708333333333,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5852.708333333333,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 14
+          },
+          {
+            "config": {
+              "alpha": 10.0,
+              "beta": 2.0,
+              "threshold": 0.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5852.708333333333,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5852.708333333333,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 15
+          },
+          {
+            "config": {
+              "alpha": 1000.0,
+              "beta": 1.0,
+              "threshold": 0.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5852.708333333333,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5852.708333333333,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 16
+          },
+          {
+            "config": {
+              "alpha": 100.0,
+              "beta": 1.0,
+              "threshold": 0.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5852.708333333333,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5852.708333333333,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 17
+          },
+          {
+            "config": {
+              "alpha": 10.0,
+              "beta": 1.0,
+              "threshold": 0.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "robust_cluster_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "robust_cluster_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5852.708333333333,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5852.708333333333,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 18
+          }
+        ],
+        "selected_config": {
+          "alpha": 1000.0,
+          "beta": 2.0,
+          "threshold": 2500.0
+        },
+        "train_families": [
+          "robust_cluster_family",
+          "ryo_selector_family",
+          "v16_route_family"
+        ],
+        "uncertainty_audit": {
+          "absolute_oof_rmse": [
+            31829.167951910436,
+            23555.669224653575,
+            23052.72707105052
+          ],
+          "delta_oof_rmse": [
+            14183.18149645161,
+            51880.040273229555
+          ],
+          "family_jackknife_groups": 3
+        }
+      },
+      {
+        "held_family": "robust_cluster_family",
+        "held_metrics": {
+          "contexts": 8,
+          "cvar10_margin": 1237.0,
+          "interventions": 0,
+          "keep_mean_margin": 10938.0,
+          "keep_wins": 8,
+          "keep_worst_margin": 1237.0,
+          "losses": 0,
+          "mean_margin": 10938.0,
+          "paired_mean_delta": 0.0,
+          "paired_worst_delta": 0.0,
+          "wins": 8,
+          "worst_margin": 1237.0
+        },
+        "inner_leaderboard": [
+          {
+            "config": {
+              "alpha": 1000.0,
+              "beta": 2.0,
+              "threshold": 2500.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5326.125,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5326.125,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 1
+          },
+          {
+            "config": {
+              "alpha": 100.0,
+              "beta": 2.0,
+              "threshold": 2500.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5326.125,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5326.125,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 2
+          },
+          {
+            "config": {
+              "alpha": 10.0,
+              "beta": 2.0,
+              "threshold": 2500.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5326.125,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5326.125,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 3
+          },
+          {
+            "config": {
+              "alpha": 1000.0,
+              "beta": 1.0,
+              "threshold": 2500.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5326.125,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5326.125,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 4
+          },
+          {
+            "config": {
+              "alpha": 100.0,
+              "beta": 1.0,
+              "threshold": 2500.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5326.125,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5326.125,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 5
+          },
+          {
+            "config": {
+              "alpha": 10.0,
+              "beta": 1.0,
+              "threshold": 2500.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5326.125,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5326.125,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 6
+          },
+          {
+            "config": {
+              "alpha": 1000.0,
+              "beta": 2.0,
+              "threshold": 1000.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5326.125,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5326.125,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 7
+          },
+          {
+            "config": {
+              "alpha": 100.0,
+              "beta": 2.0,
+              "threshold": 1000.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5326.125,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5326.125,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 8
+          },
+          {
+            "config": {
+              "alpha": 10.0,
+              "beta": 2.0,
+              "threshold": 1000.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5326.125,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5326.125,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 9
+          },
+          {
+            "config": {
+              "alpha": 1000.0,
+              "beta": 1.0,
+              "threshold": 1000.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5326.125,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5326.125,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 10
+          },
+          {
+            "config": {
+              "alpha": 100.0,
+              "beta": 1.0,
+              "threshold": 1000.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5326.125,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5326.125,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 11
+          },
+          {
+            "config": {
+              "alpha": 10.0,
+              "beta": 1.0,
+              "threshold": 1000.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5326.125,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5326.125,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 12
+          },
+          {
+            "config": {
+              "alpha": 1000.0,
+              "beta": 2.0,
+              "threshold": 0.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5326.125,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5326.125,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 13
+          },
+          {
+            "config": {
+              "alpha": 100.0,
+              "beta": 2.0,
+              "threshold": 0.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5326.125,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5326.125,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 14
+          },
+          {
+            "config": {
+              "alpha": 10.0,
+              "beta": 2.0,
+              "threshold": 0.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5326.125,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5326.125,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 15
+          },
+          {
+            "config": {
+              "alpha": 1000.0,
+              "beta": 1.0,
+              "threshold": 0.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5326.125,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5326.125,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 16
+          },
+          {
+            "config": {
+              "alpha": 100.0,
+              "beta": 1.0,
+              "threshold": 0.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5326.125,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5326.125,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 17
+          },
+          {
+            "config": {
+              "alpha": 10.0,
+              "beta": 1.0,
+              "threshold": 0.0
+            },
+            "folds": [
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "ryo_selector_family",
+                  "v16_route_family"
+                ],
+                "held_family": "route_99612231_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "v16_route_family"
+                ],
+                "held_family": "ryo_selector_family"
+              },
+              {
+                "contexts": 8,
+                "fit_families": [
+                  "route_99612231_family",
+                  "ryo_selector_family"
+                ],
+                "held_family": "v16_route_family"
+              }
+            ],
+            "metrics": {
+              "contexts": 24,
+              "cvar10_margin": -15227.0,
+              "interventions": 0,
+              "keep_mean_margin": 5326.125,
+              "keep_wins": 18,
+              "keep_worst_margin": -21048.0,
+              "losses": 6,
+              "mean_margin": 5326.125,
+              "paired_mean_delta": 0.0,
+              "paired_worst_delta": 0.0,
+              "wins": 18,
+              "worst_margin": -21048.0
+            },
+            "rank": 18
+          }
+        ],
+        "selected_config": {
+          "alpha": 1000.0,
+          "beta": 2.0,
+          "threshold": 2500.0
+        },
+        "train_families": [
+          "route_99612231_family",
+          "ryo_selector_family",
+          "v16_route_family"
+        ],
+        "uncertainty_audit": {
+          "absolute_oof_rmse": [
+            13105.084830157424,
+            12051.304125921884,
+            17026.01993770341
+          ],
+          "delta_oof_rmse": [
+            10509.561072608476,
+            23472.62347627992
+          ],
+          "family_jackknife_groups": 3
+        }
+      }
+    ],
+    "outer_predictions": [
+      {
+        "actual_margin": -3585.0,
+        "all_three_action_margins": [
+          -3585.0,
+          -4416.0,
+          25856.0
+        ],
+        "audit": {
+          "candidate_seat": 0,
+          "family": "v16_route_family",
+          "representative": "v22",
+          "seed": 27100100
+        },
+        "decision": {
+          "absolute_lcb": [
+            -19632.4451723112,
+            -33121.10785690642,
+            -55738.71452763924
+          ],
+          "absolute_mean": [
+            9101.142560900618,
+            510.69075196227027,
+            -17180.354120714816
+          ],
+          "absolute_sigma": [
+            14366.793866605909,
+            16815.899304434344,
+            19279.180203462212
+          ],
+          "delta_lcb": [
+            -31514.369523150395,
+            -79321.16894779475
+          ],
+          "delta_mean": [
+            -8590.451808938351,
+            -26281.496681615434
+          ],
+          "delta_sigma": [
+            11461.958857106021,
+            26519.83613308966
+          ],
+          "eligible_routes": []
+        },
+        "keep_margin": -3585.0,
+        "paired_delta": 0.0,
+        "selected_action": "ABSTAIN_KEEP_V67",
+        "selected_action_index": 0
+      },
+      {
+        "actual_margin": 396.0,
+        "all_three_action_margins": [
+          396.0,
+          -2976.0,
+          -12086.0
+        ],
+        "audit": {
+          "candidate_seat": 1,
+          "family": "v16_route_family",
+          "representative": "v22",
+          "seed": 27100100
+        },
+        "decision": {
+          "absolute_lcb": [
+            -19300.10844603642,
+            -31160.799736839617,
+            -57882.490619984084
+          ],
+          "absolute_mean": [
+            9349.472171819687,
+            2114.484085519668,
+            -19129.139280625495
+          ],
+          "absolute_sigma": [
+            14324.790308928053,
+            16637.641911179642,
+            19376.675669679295
+          ],
+          "delta_lcb": [
+            -30051.088906437653,
+            -81628.97051349553
+          ],
+          "delta_mean": [
+            -7234.988086300022,
+            -28478.611452445184
+          ],
+          "delta_sigma": [
+            11408.050410068816,
+            26575.17953052517
+          ],
+          "eligible_routes": []
+        },
+        "keep_margin": 396.0,
+        "paired_delta": 0.0,
+        "selected_action": "ABSTAIN_KEEP_V67",
+        "selected_action_index": 0
+      },
+      {
+        "actual_margin": -3110.0,
+        "all_three_action_margins": [
+          -3110.0,
+          -5070.0,
+          4826.0
+        ],
+        "audit": {
+          "candidate_seat": 0,
+          "family": "v16_route_family",
+          "representative": "v22",
+          "seed": 27100101
+        },
+        "decision": {
+          "absolute_lcb": [
+            -20058.8011951435,
+            -32953.45128303096,
+            -55693.06779197263
+          ],
+          "absolute_mean": [
+            8876.256530742121,
+            803.3484712463294,
+            -16911.351107027378
+          ],
+          "absolute_sigma": [
+            14467.52886294281,
+            16878.399877138647,
+            19390.858342472624
+          ],
+          "delta_lcb": [
+            -30783.671418741134,
+            -79358.38431400794
+          ],
+          "delta_mean": [
+            -8072.908059495794,
+            -25787.607637769503
+          ],
+          "delta_sigma": [
+            11355.38167962267,
+            26785.38833811922
+          ],
+          "eligible_routes": []
+        },
+        "keep_margin": -3110.0,
+        "paired_delta": 0.0,
+        "selected_action": "ABSTAIN_KEEP_V67",
+        "selected_action_index": 0
+      },
+      {
+        "actual_margin": -3110.0,
+        "all_three_action_margins": [
+          -3110.0,
+          -5070.0,
+          4826.0
+        ],
+        "audit": {
+          "candidate_seat": 1,
+          "family": "v16_route_family",
+          "representative": "v22",
+          "seed": 27100101
+        },
+        "decision": {
+          "absolute_lcb": [
+            -20058.8011951435,
+            -32953.45128303096,
+            -55693.06779197263
+          ],
+          "absolute_mean": [
+            8876.256530742121,
+            803.3484712463294,
+            -16911.351107027378
+          ],
+          "absolute_sigma": [
+            14467.52886294281,
+            16878.399877138647,
+            19390.858342472624
+          ],
+          "delta_lcb": [
+            -30783.671418741134,
+            -79358.38431400794
+          ],
+          "delta_mean": [
+            -8072.908059495794,
+            -25787.607637769503
+          ],
+          "delta_sigma": [
+            11355.38167962267,
+            26785.38833811922
+          ],
+          "eligible_routes": []
+        },
+        "keep_margin": -3110.0,
+        "paired_delta": 0.0,
+        "selected_action": "ABSTAIN_KEEP_V67",
+        "selected_action_index": 0
+      },
+      {
+        "actual_margin": 500.0,
+        "all_three_action_margins": [
+          500.0,
+          -3091.0,
+          -1819.0
+        ],
+        "audit": {
+          "candidate_seat": 0,
+          "family": "v16_route_family",
+          "representative": "v22",
+          "seed": 27100102
+        },
+        "decision": {
+          "absolute_lcb": [
+            -20034.306200397637,
+            -32727.274315572155,
+            -56849.431020359545
+          ],
+          "absolute_mean": [
+            8695.40665798714,
+            814.8765107994243,
+            -18152.727919030687
+          ],
+          "absolute_sigma": [
+            14364.856429192389,
+            16771.07541318579,
+            19348.35155066443
+          ],
+          "delta_lcb": [
+            -30713.28550129763,
+            -80035.10264280305
+          ],
+          "delta_mean": [
+            -7880.530147187717,
+            -26848.134577017827
+          ],
+          "delta_sigma": [
+            11416.377677054956,
+            26593.48403289261
+          ],
+          "eligible_routes": []
+        },
+        "keep_margin": 500.0,
+        "paired_delta": 0.0,
+        "selected_action": "ABSTAIN_KEEP_V67",
+        "selected_action_index": 0
+      },
+      {
+        "actual_margin": 5698.0,
+        "all_three_action_margins": [
+          5698.0,
+          -9821.0,
+          5698.0
+        ],
+        "audit": {
+          "candidate_seat": 1,
+          "family": "v16_route_family",
+          "representative": "v22",
+          "seed": 27100102
+        },
+        "decision": {
+          "absolute_lcb": [
+            -18297.73504926728,
+            -32884.63106520653,
+            -53046.30869003282
+          ],
+          "absolute_mean": [
+            10549.24479520334,
+            569.7509415811926,
+            -14588.903522308723
+          ],
+          "absolute_sigma": [
+            14423.48992223531,
+            16727.191003393862,
+            19228.70258386205
+          ],
+          "delta_lcb": [
+            -32507.31062014452,
+            -78045.97360607762
+          ],
+          "delta_mean": [
+            -9979.493853622149,
+            -25138.148317512063
+          ],
+          "delta_sigma": [
+            11263.908383261185,
+            26453.91264428278
+          ],
+          "eligible_routes": []
+        },
+        "keep_margin": 5698.0,
+        "paired_delta": 0.0,
+        "selected_action": "ABSTAIN_KEEP_V67",
+        "selected_action_index": 0
+      },
+      {
+        "actual_margin": 5613.0,
+        "all_three_action_margins": [
+          5613.0,
+          558.0,
+          -17233.0
+        ],
+        "audit": {
+          "candidate_seat": 0,
+          "family": "v16_route_family",
+          "representative": "v22",
+          "seed": 27100103
+        },
+        "decision": {
+          "absolute_lcb": [
+            -18533.932590625074,
+            -31679.92063388969,
+            -56332.85526994312
+          ],
+          "absolute_mean": [
+            10153.002308119701,
+            1734.9916036008801,
+            -17715.746416457972
+          ],
+          "absolute_sigma": [
+            14343.467449372389,
+            16707.456118745285,
+            19308.554426742572
+          ],
+          "delta_lcb": [
+            -31251.22420050976,
+            -80907.65104143904
+          ],
+          "delta_mean": [
+            -8418.010704518823,
+            -27868.748724577676
+          ],
+          "delta_sigma": [
+            11416.606747995469,
+            26519.451158430682
+          ],
+          "eligible_routes": []
+        },
+        "keep_margin": 5613.0,
+        "paired_delta": 0.0,
+        "selected_action": "ABSTAIN_KEEP_V67",
+        "selected_action_index": 0
+      },
+      {
+        "actual_margin": 5613.0,
+        "all_three_action_margins": [
+          5613.0,
+          558.0,
+          -17233.0
+        ],
+        "audit": {
+          "candidate_seat": 1,
+          "family": "v16_route_family",
+          "representative": "v22",
+          "seed": 27100103
+        },
+        "decision": {
+          "absolute_lcb": [
+            -18533.932590625074,
+            -31679.92063388969,
+            -56332.85526994312
+          ],
+          "absolute_mean": [
+            10153.002308119701,
+            1734.9916036008801,
+            -17715.746416457972
+          ],
+          "absolute_sigma": [
+            14343.467449372389,
+            16707.456118745285,
+            19308.554426742572
+          ],
+          "delta_lcb": [
+            -31251.22420050976,
+            -80907.65104143904
+          ],
+          "delta_mean": [
+            -8418.010704518823,
+            -27868.748724577676
+          ],
+          "delta_sigma": [
+            11416.606747995469,
+            26519.451158430682
+          ],
+          "eligible_routes": []
+        },
+        "keep_margin": 5613.0,
+        "paired_delta": 0.0,
+        "selected_action": "ABSTAIN_KEEP_V67",
+        "selected_action_index": 0
+      },
+      {
+        "actual_margin": 10258.0,
+        "all_three_action_margins": [
+          10258.0,
+          -17963.0,
+          -13114.0
+        ],
+        "audit": {
+          "candidate_seat": 0,
+          "family": "ryo_selector_family",
+          "representative": "v12_ryo",
+          "seed": 27100100
+        },
+        "decision": {
+          "absolute_lcb": [
+            -72882.3594352398,
+            -64594.45555990487,
+            -83293.55875395652
+          ],
+          "absolute_mean": [
+            9551.560523867745,
+            1281.8896766283635,
+            -18066.656394471192
+          ],
+          "absolute_sigma": [
+            41216.95997955378,
+            32938.17261826662,
+            32613.45117974266
+          ],
+          "delta_lcb": [
+            -29852.20130327127,
+            -165779.47836117682
+          ],
+          "delta_mean": [
+            -8269.670847239382,
+            -27618.21691833894
+          ],
+          "delta_sigma": [
+            10791.265228015944,
+            69080.63072141894
+          ],
+          "eligible_routes": []
+        },
+        "keep_margin": 10258.0,
+        "paired_delta": 0.0,
+        "selected_action": "ABSTAIN_KEEP_V67",
+        "selected_action_index": 0
+      },
+      {
+        "actual_margin": -190.0,
+        "all_three_action_margins": [
+          -190.0,
+          775.0,
+          -10907.0
+        ],
+        "audit": {
+          "candidate_seat": 1,
+          "family": "ryo_selector_family",
+          "representative": "v12_ryo",
+          "seed": 27100100
+        },
+        "decision": {
+          "absolute_lcb": [
+            -66344.32314609931,
+            -59228.624595079134,
+            -81157.02020781473
+          ],
+          "absolute_mean": [
+            9217.89557668287,
+            1252.523626808804,
+            -19278.47449175048
+          ],
+          "absolute_sigma": [
+            37781.10936139109,
+            30240.57411094397,
+            30939.27285803212
+          ],
+          "delta_lcb": [
+            -28434.35549380652,
+            -155728.0901163853
+          ],
+          "delta_mean": [
+            -7965.371949874067,
+            -28496.370068433353
+          ],
+          "delta_sigma": [
+            10234.491771966228,
+            63615.860023975976
+          ],
+          "eligible_routes": []
+        },
+        "keep_margin": -190.0,
+        "paired_delta": 0.0,
+        "selected_action": "ABSTAIN_KEEP_V67",
+        "selected_action_index": 0
+      },
+      {
+        "actual_margin": 7942.0,
+        "all_three_action_margins": [
+          7942.0,
+          -24119.0,
+          -12211.0
+        ],
+        "audit": {
+          "candidate_seat": 0,
+          "family": "ryo_selector_family",
+          "representative": "v12_ryo",
+          "seed": 27100101
+        },
+        "decision": {
+          "absolute_lcb": [
+            -72396.77597992172,
+            -64217.69168836566,
+            -82802.58240461003
+          ],
+          "absolute_mean": [
+            10070.596512050324,
+            1469.5780275370005,
+            -18304.02862088416
+          ],
+          "absolute_sigma": [
+            41233.68624598602,
+            32843.63485795133,
+            32249.276891862934
+          ],
+          "delta_lcb": [
+            -30358.388360288765,
+            -165637.86851270395
+          ],
+          "delta_mean": [
+            -8601.018484513324,
+            -28374.62513293449
+          ],
+          "delta_sigma": [
+            10878.684937887721,
+            68631.62168988473
+          ],
+          "eligible_routes": []
+        },
+        "keep_margin": 7942.0,
+        "paired_delta": 0.0,
+        "selected_action": "ABSTAIN_KEEP_V67",
+        "selected_action_index": 0
+      },
+      {
+        "actual_margin": 7942.0,
+        "all_three_action_margins": [
+          7942.0,
+          -24119.0,
+          -12211.0
+        ],
+        "audit": {
+          "candidate_seat": 1,
+          "family": "ryo_selector_family",
+          "representative": "v12_ryo",
+          "seed": 27100101
+        },
+        "decision": {
+          "absolute_lcb": [
+            -72396.77597992172,
+            -64217.69168836566,
+            -82802.58240461003
+          ],
+          "absolute_mean": [
+            10070.596512050324,
+            1469.5780275370005,
+            -18304.02862088416
+          ],
+          "absolute_sigma": [
+            41233.68624598602,
+            32843.63485795133,
+            32249.276891862934
+          ],
+          "delta_lcb": [
+            -30358.388360288765,
+            -165637.86851270395
+          ],
+          "delta_mean": [
+            -8601.018484513324,
+            -28374.62513293449
+          ],
+          "delta_sigma": [
+            10878.684937887721,
+            68631.62168988473
+          ],
+          "eligible_routes": []
+        },
+        "keep_margin": 7942.0,
+        "paired_delta": 0.0,
+        "selected_action": "ABSTAIN_KEEP_V67",
+        "selected_action_index": 0
+      },
+      {
+        "actual_margin": 30545.0,
+        "all_three_action_margins": [
+          30545.0,
+          18135.0,
+          -17502.0
+        ],
+        "audit": {
+          "candidate_seat": 0,
+          "family": "ryo_selector_family",
+          "representative": "v12_ryo",
+          "seed": 27100102
+        },
+        "decision": {
+          "absolute_lcb": [
+            -71499.57406978968,
+            -63301.50369391697,
+            -84298.19395586872
+          ],
+          "absolute_mean": [
+            10385.531115541811,
+            2068.2206323337646,
+            -19355.265172381907
+          ],
+          "absolute_sigma": [
+            40942.55259266575,
+            32684.86216312537,
+            32471.4643917434
+          ],
+          "delta_lcb": [
+            -29868.08445735173,
+            -167104.6822336677
+          ],
+          "delta_mean": [
+            -8317.310483208046,
+            -29740.79628792372
+          ],
+          "delta_sigma": [
+            10775.386987071843,
+            68681.94297287198
+          ],
+          "eligible_routes": []
+        },
+        "keep_margin": 30545.0,
+        "paired_delta": 0.0,
+        "selected_action": "ABSTAIN_KEEP_V67",
+        "selected_action_index": 0
+      },
+      {
+        "actual_margin": 30545.0,
+        "all_three_action_margins": [
+          30545.0,
+          18135.0,
+          -17502.0
+        ],
+        "audit": {
+          "candidate_seat": 1,
+          "family": "ryo_selector_family",
+          "representative": "v12_ryo",
+          "seed": 27100102
+        },
+        "decision": {
+          "absolute_lcb": [
+            -71499.57406978968,
+            -63301.50369391697,
+            -84298.19395586872
+          ],
+          "absolute_mean": [
+            10385.531115541811,
+            2068.2206323337646,
+            -19355.265172381907
+          ],
+          "absolute_sigma": [
+            40942.55259266575,
+            32684.86216312537,
+            32471.4643917434
+          ],
+          "delta_lcb": [
+            -29868.08445735173,
+            -167104.6822336677
+          ],
+          "delta_mean": [
+            -8317.310483208046,
+            -29740.79628792372
+          ],
+          "delta_sigma": [
+            10775.386987071843,
+            68681.94297287198
+          ],
+          "eligible_routes": []
+        },
+        "keep_margin": 30545.0,
+        "paired_delta": 0.0,
+        "selected_action": "ABSTAIN_KEEP_V67",
+        "selected_action_index": 0
+      },
+      {
+        "actual_margin": -21048.0,
+        "all_three_action_margins": [
+          -21048.0,
+          -21779.0,
+          4894.0
+        ],
+        "audit": {
+          "candidate_seat": 0,
+          "family": "ryo_selector_family",
+          "representative": "v12_ryo",
+          "seed": 27100103
+        },
+        "decision": {
+          "absolute_lcb": [
+            -73358.4787031789,
+            -65216.20187425432,
+            -83817.12704297711
+          ],
+          "absolute_mean": [
+            9626.987517230315,
+            1163.9153522672073,
+            -18093.568930109792
+          ],
+          "absolute_sigma": [
+            41492.73311020461,
+            33190.058613260764,
+            32861.77905643366
+          ],
+          "delta_lcb": [
+            -30079.50851797995,
+            -167056.56761614126
+          ],
+          "delta_mean": [
+            -8463.072164963109,
+            -27720.556447340106
+          ],
+          "delta_sigma": [
+            10808.21817650842,
+            69668.00558440057
+          ],
+          "eligible_routes": []
+        },
+        "keep_margin": -21048.0,
+        "paired_delta": 0.0,
+        "selected_action": "ABSTAIN_KEEP_V67",
+        "selected_action_index": 0
+      },
+      {
+        "actual_margin": -21048.0,
+        "all_three_action_margins": [
+          -21048.0,
+          -21779.0,
+          4894.0
+        ],
+        "audit": {
+          "candidate_seat": 1,
+          "family": "ryo_selector_family",
+          "representative": "v12_ryo",
+          "seed": 27100103
+        },
+        "decision": {
+          "absolute_lcb": [
+            -73358.4787031789,
+            -65216.20187425432,
+            -83817.12704297711
+          ],
+          "absolute_mean": [
+            9626.987517230315,
+            1163.9153522672073,
+            -18093.568930109792
+          ],
+          "absolute_sigma": [
+            41492.73311020461,
+            33190.058613260764,
+            32861.77905643366
+          ],
+          "delta_lcb": [
+            -30079.50851797995,
+            -167056.56761614126
+          ],
+          "delta_mean": [
+            -8463.072164963109,
+            -27720.556447340106
+          ],
+          "delta_sigma": [
+            10808.21817650842,
+            69668.00558440057
+          ],
+          "eligible_routes": []
+        },
+        "keep_margin": -21048.0,
+        "paired_delta": 0.0,
+        "selected_action": "ABSTAIN_KEEP_V67",
+        "selected_action_index": 0
+      },
+      {
+        "actual_margin": 4731.0,
+        "all_three_action_margins": [
+          4731.0,
+          -551.0,
+          -22054.0
+        ],
+        "audit": {
+          "candidate_seat": 0,
+          "family": "route_99612231_family",
+          "representative": "v44_route",
+          "seed": 27100100
+        },
+        "decision": {
+          "absolute_lcb": [
+            -67867.85248540256,
+            -55927.191538482104,
+            -55133.343817235094
+          ],
+          "absolute_mean": [
+            3989.0945686545665,
+            -4420.07333316821,
+            -6405.046129891865
+          ],
+          "absolute_sigma": [
+            35928.47352702856,
+            25753.559102656945,
+            24364.148843671614
+          ],
+          "delta_lcb": [
+            -40046.33185041864,
+            -124843.96188691113
+          ],
+          "delta_mean": [
+            -8409.167901822777,
+            -10394.140698546435
+          ],
+          "delta_sigma": [
+            15818.581974297931,
+            57224.91059418235
+          ],
+          "eligible_routes": []
+        },
+        "keep_margin": 4731.0,
+        "paired_delta": 0.0,
+        "selected_action": "ABSTAIN_KEEP_V67",
+        "selected_action_index": 0
+      },
+      {
+        "actual_margin": 3741.0,
+        "all_three_action_margins": [
+          3741.0,
+          -551.0,
+          -22048.0
+        ],
+        "audit": {
+          "candidate_seat": 1,
+          "family": "route_99612231_family",
+          "representative": "v44_route",
+          "seed": 27100100
+        },
+        "decision": {
+          "absolute_lcb": [
+            -67725.86663837853,
+            -55736.30717541427,
+            -55730.05109445702
+          ],
+          "absolute_mean": [
+            3994.38261969001,
+            -4120.808388655435,
+            -7220.5640198220735
+          ],
+          "absolute_sigma": [
+            35860.12462903427,
+            25807.749393379418,
+            24254.743537317474
+          ],
+          "delta_lcb": [
+            -39504.54628351445,
+            -125294.53853318455
+          ],
+          "delta_mean": [
+            -8115.191008345445,
+            -11214.946639512083
+          ],
+          "delta_sigma": [
+            15694.677637584502,
+            57039.79594683623
+          ],
+          "eligible_routes": []
+        },
+        "keep_margin": 3741.0,
+        "paired_delta": 0.0,
+        "selected_action": "ABSTAIN_KEEP_V67",
+        "selected_action_index": 0
+      },
+      {
+        "actual_margin": 23935.0,
+        "all_three_action_margins": [
+          23935.0,
+          -1297.0,
+          23935.0
+        ],
+        "audit": {
+          "candidate_seat": 0,
+          "family": "route_99612231_family",
+          "representative": "v44_route",
+          "seed": 27100101
+        },
+        "decision": {
+          "absolute_lcb": [
+            -67415.6272793412,
+            -56724.799904283136,
+            -54860.68377985704
+          ],
+          "absolute_mean": [
+            3981.2857121133165,
+            -5653.1634931182,
+            -6208.756225999076
+          ],
+          "absolute_sigma": [
+            35698.45649572726,
+            25535.81820558247,
+            24325.963776928984
+          ],
+          "delta_lcb": [
+            -41186.20542157146,
+            -124089.89190424098
+          ],
+          "delta_mean": [
+            -9634.449205231516,
+            -10190.041938112392
+          ],
+          "delta_sigma": [
+            15775.878108169973,
+            56949.924983064295
+          ],
+          "eligible_routes": []
+        },
+        "keep_margin": 23935.0,
+        "paired_delta": 0.0,
+        "selected_action": "ABSTAIN_KEEP_V67",
+        "selected_action_index": 0
+      },
+      {
+        "actual_margin": 23935.0,
+        "all_three_action_margins": [
+          23935.0,
+          -1297.0,
+          23935.0
+        ],
+        "audit": {
+          "candidate_seat": 1,
+          "family": "route_99612231_family",
+          "representative": "v44_route",
+          "seed": 27100101
+        },
+        "decision": {
+          "absolute_lcb": [
+            -67415.6272793412,
+            -56724.799904283136,
+            -54860.68377985704
+          ],
+          "absolute_mean": [
+            3981.2857121133165,
+            -5653.1634931182,
+            -6208.756225999076
+          ],
+          "absolute_sigma": [
+            35698.45649572726,
+            25535.81820558247,
+            24325.963776928984
+          ],
+          "delta_lcb": [
+            -41186.20542157146,
+            -124089.89190424098
+          ],
+          "delta_mean": [
+            -9634.449205231516,
+            -10190.041938112392
+          ],
+          "delta_sigma": [
+            15775.878108169973,
+            56949.924983064295
+          ],
+          "eligible_routes": []
+        },
+        "keep_margin": 23935.0,
+        "paired_delta": 0.0,
+        "selected_action": "ABSTAIN_KEEP_V67",
+        "selected_action_index": 0
+      },
+      {
+        "actual_margin": 4363.0,
+        "all_three_action_margins": [
+          4363.0,
+          2490.0,
+          -26925.0
+        ],
+        "audit": {
+          "candidate_seat": 0,
+          "family": "route_99612231_family",
+          "representative": "v44_route",
+          "seed": 27100102
+        },
+        "decision": {
+          "absolute_lcb": [
+            -67007.21531690996,
+            -55168.84346335548,
+            -56172.4633114507
+          ],
+          "absolute_mean": [
+            4720.355532113692,
+            -3730.1163213230298,
+            -7731.128882684662
+          ],
+          "absolute_sigma": [
+            35863.78542451183,
+            25719.363571016223,
+            24220.66721438302
+          ],
+          "delta_lcb": [
+            -39921.5111527019,
+            -126453.08083173462
+          ],
+          "delta_mean": [
+            -8450.47185343672,
+            -12451.48441479835
+          ],
+          "delta_sigma": [
+            15735.51964963259,
+            57000.798208468135
+          ],
+          "eligible_routes": []
+        },
+        "keep_margin": 4363.0,
+        "paired_delta": 0.0,
+        "selected_action": "ABSTAIN_KEEP_V67",
+        "selected_action_index": 0
+      },
+      {
+        "actual_margin": 3787.0,
+        "all_three_action_margins": [
+          3787.0,
+          2490.0,
+          -26901.0
+        ],
+        "audit": {
+          "candidate_seat": 1,
+          "family": "route_99612231_family",
+          "representative": "v44_route",
+          "seed": 27100102
+        },
+        "decision": {
+          "absolute_lcb": [
+            -67139.92951746589,
+            -55475.68850089233,
+            -55619.06053905322
+          ],
+          "absolute_mean": [
+            4769.692908635315,
+            -4199.382153637744,
+            -6976.778573517772
+          ],
+          "absolute_sigma": [
+            35954.811213050605,
+            25638.153173627292,
+            24321.140982767723
+          ],
+          "delta_lcb": [
+            -40750.21112245893,
+            -126131.91417769341
+          ],
+          "delta_mean": [
+            -8969.075062273057,
+            -11746.471482153089
+          ],
+          "delta_sigma": [
+            15890.568030092938,
+            57192.72134777016
+          ],
+          "eligible_routes": []
+        },
+        "keep_margin": 3787.0,
+        "paired_delta": 0.0,
+        "selected_action": "ABSTAIN_KEEP_V67",
+        "selected_action_index": 0
+      },
+      {
+        "actual_margin": 5187.0,
+        "all_three_action_margins": [
+          5187.0,
+          1518.0,
+          -23839.0
+        ],
+        "audit": {
+          "candidate_seat": 0,
+          "family": "route_99612231_family",
+          "representative": "v44_route",
+          "seed": 27100103
+        },
+        "decision": {
+          "absolute_lcb": [
+            -68893.66949586707,
+            -57280.42025927991,
+            -53988.36101767362
+          ],
+          "absolute_mean": [
+            2171.7069221638108,
+            -6242.44604267712,
+            -5499.076075817712
+          ],
+          "absolute_sigma": [
+            35532.68820901544,
+            25518.987108301397,
+            24244.642470927953
+          ],
+          "delta_lcb": [
+            -39894.91597286435,
+            -121095.80543237872
+          ],
+          "delta_mean": [
+            -8414.15296484093,
+            -7670.782997981523
+          ],
+          "delta_sigma": [
+            15740.38150401171,
+            56712.5112171986
+          ],
+          "eligible_routes": []
+        },
+        "keep_margin": 5187.0,
+        "paired_delta": 0.0,
+        "selected_action": "ABSTAIN_KEEP_V67",
+        "selected_action_index": 0
+      },
+      {
+        "actual_margin": 5187.0,
+        "all_three_action_margins": [
+          5187.0,
+          1518.0,
+          -23839.0
+        ],
+        "audit": {
+          "candidate_seat": 1,
+          "family": "route_99612231_family",
+          "representative": "v44_route",
+          "seed": 27100103
+        },
+        "decision": {
+          "absolute_lcb": [
+            -68893.66949586707,
+            -57280.42025927991,
+            -53988.36101767362
+          ],
+          "absolute_mean": [
+            2171.7069221638108,
+            -6242.44604267712,
+            -5499.076075817712
+          ],
+          "absolute_sigma": [
+            35532.68820901544,
+            25518.987108301397,
+            24244.642470927953
+          ],
+          "delta_lcb": [
+            -39894.91597286435,
+            -121095.80543237872
+          ],
+          "delta_mean": [
+            -8414.15296484093,
+            -7670.782997981523
+          ],
+          "delta_sigma": [
+            15740.38150401171,
+            56712.5112171986
+          ],
+          "eligible_routes": []
+        },
+        "keep_margin": 5187.0,
+        "paired_delta": 0.0,
+        "selected_action": "ABSTAIN_KEEP_V67",
+        "selected_action_index": 0
+      },
+      {
+        "actual_margin": 2731.0,
+        "all_three_action_margins": [
+          2731.0,
+          -3436.0,
+          -21120.0
+        ],
+        "audit": {
+          "candidate_seat": 0,
+          "family": "robust_cluster_family",
+          "representative": "robust_cluster",
+          "seed": 27100100
+        },
+        "decision": {
+          "absolute_lcb": [
+            -21811.014299467417,
+            -31715.64545364711,
+            -42033.00456105536
+          ],
+          "absolute_mean": [
+            4525.7248900371915,
+            -6518.323031475465,
+            -7549.816773386229
+          ],
+          "absolute_sigma": [
+            13168.369594752305,
+            12598.661211085822,
+            17241.593893834564
+          ],
+          "delta_lcb": [
+            -32767.205067871466,
+            -59650.0886066139
+          ],
+          "delta_mean": [
+            -11044.047921512656,
+            -12075.541663423423
+          ],
+          "delta_sigma": [
+            10861.578573179404,
+            23787.27347159524
+          ],
+          "eligible_routes": []
+        },
+        "keep_margin": 2731.0,
+        "paired_delta": 0.0,
+        "selected_action": "ABSTAIN_KEEP_V67",
+        "selected_action_index": 0
+      },
+      {
+        "actual_margin": 3108.0,
+        "all_three_action_margins": [
+          3108.0,
+          -1515.0,
+          -2656.0
+        ],
+        "audit": {
+          "candidate_seat": 1,
+          "family": "robust_cluster_family",
+          "representative": "robust_cluster",
+          "seed": 27100100
+        },
+        "decision": {
+          "absolute_lcb": [
+            -21915.136576926194,
+            -31565.23736561645,
+            -41827.92385598036
+          ],
+          "absolute_mean": [
+            4433.3704633881325,
+            -6433.367192499966,
+            -7304.207461025343
+          ],
+          "absolute_sigma": [
+            13174.253520157163,
+            12565.935086558242,
+            17261.85819747751
+          ],
+          "delta_lcb": [
+            -32516.227313766423,
+            -59362.05071620064
+          ],
+          "delta_mean": [
+            -10866.737655888099,
+            -11737.577924413477
+          ],
+          "delta_sigma": [
+            10824.744828939163,
+            23812.236395893582
+          ],
+          "eligible_routes": []
+        },
+        "keep_margin": 3108.0,
+        "paired_delta": 0.0,
+        "selected_action": "ABSTAIN_KEEP_V67",
+        "selected_action_index": 0
+      },
+      {
+        "actual_margin": 1237.0,
+        "all_three_action_margins": [
+          1237.0,
+          -15363.0,
+          -29414.0
+        ],
+        "audit": {
+          "candidate_seat": 0,
+          "family": "robust_cluster_family",
+          "representative": "robust_cluster",
+          "seed": 27100101
+        },
+        "decision": {
+          "absolute_lcb": [
+            -21602.305853183538,
+            -30990.522868478613,
+            -41394.48945828654
+          ],
+          "absolute_mean": [
+            4786.7858495318715,
+            -5967.387981791158,
+            -7054.294707271142
+          ],
+          "absolute_sigma": [
+            13194.545851357705,
+            12511.567443343727,
+            17170.0973755077
+          ],
+          "delta_lcb": [
+            -32224.85131718516,
+            -59318.934817307105
+          ],
+          "delta_mean": [
+            -10754.17383132303,
+            -11841.080556803015
+          ],
+          "delta_sigma": [
+            10735.338742931064,
+            23738.927130252046
+          ],
+          "eligible_routes": []
+        },
+        "keep_margin": 1237.0,
+        "paired_delta": 0.0,
+        "selected_action": "ABSTAIN_KEEP_V67",
+        "selected_action_index": 0
+      },
+      {
+        "actual_margin": 1237.0,
+        "all_three_action_margins": [
+          1237.0,
+          -15363.0,
+          -10664.0
+        ],
+        "audit": {
+          "candidate_seat": 1,
+          "family": "robust_cluster_family",
+          "representative": "robust_cluster",
+          "seed": 27100101
+        },
+        "decision": {
+          "absolute_lcb": [
+            -21602.305853183538,
+            -30990.522868478613,
+            -41394.48945828654
+          ],
+          "absolute_mean": [
+            4786.7858495318715,
+            -5967.387981791158,
+            -7054.294707271142
+          ],
+          "absolute_sigma": [
+            13194.545851357705,
+            12511.567443343727,
+            17170.0973755077
+          ],
+          "delta_lcb": [
+            -32224.85131718516,
+            -59318.934817307105
+          ],
+          "delta_mean": [
+            -10754.17383132303,
+            -11841.080556803015
+          ],
+          "delta_sigma": [
+            10735.338742931064,
+            23738.927130252046
+          ],
+          "eligible_routes": []
+        },
+        "keep_margin": 1237.0,
+        "paired_delta": 0.0,
+        "selected_action": "ABSTAIN_KEEP_V67",
+        "selected_action_index": 0
+      },
+      {
+        "actual_margin": 31505.0,
+        "all_three_action_margins": [
+          31505.0,
+          25190.0,
+          -48556.0
+        ],
+        "audit": {
+          "candidate_seat": 0,
+          "family": "robust_cluster_family",
+          "representative": "robust_cluster",
+          "seed": 27100102
+        },
+        "decision": {
+          "absolute_lcb": [
+            -20491.903441055754,
+            -30488.308778119517,
+            -42333.84108187464
+          ],
+          "absolute_mean": [
+            5813.969973049669,
+            -5625.580375921254,
+            -8085.637091949923
+          ],
+          "absolute_sigma": [
+            13152.936707052711,
+            12431.364201099132,
+            17124.10199496236
+          ],
+          "delta_lcb": [
+            -33027.57166678738,
+            -61197.13348065222
+          ],
+          "delta_mean": [
+            -11439.550348970923,
+            -13899.607064999593
+          ],
+          "delta_sigma": [
+            10794.01065890823,
+            23648.763207826312
+          ],
+          "eligible_routes": []
+        },
+        "keep_margin": 31505.0,
+        "paired_delta": 0.0,
+        "selected_action": "ABSTAIN_KEEP_V67",
+        "selected_action_index": 0
+      },
+      {
+        "actual_margin": 32378.0,
+        "all_three_action_margins": [
+          32378.0,
+          25970.0,
+          -17656.0
+        ],
+        "audit": {
+          "candidate_seat": 1,
+          "family": "robust_cluster_family",
+          "representative": "robust_cluster",
+          "seed": 27100102
+        },
+        "decision": {
+          "absolute_lcb": [
+            -20491.903441055754,
+            -30488.308778119517,
+            -42333.84108187464
+          ],
+          "absolute_mean": [
+            5813.969973049669,
+            -5625.580375921254,
+            -8085.637091949923
+          ],
+          "absolute_sigma": [
+            13152.936707052711,
+            12431.364201099132,
+            17124.10199496236
+          ],
+          "delta_lcb": [
+            -33027.57166678738,
+            -61197.13348065222
+          ],
+          "delta_mean": [
+            -11439.550348970923,
+            -13899.607064999593
+          ],
+          "delta_sigma": [
+            10794.01065890823,
+            23648.763207826312
+          ],
+          "eligible_routes": []
+        },
+        "keep_margin": 32378.0,
+        "paired_delta": 0.0,
+        "selected_action": "ABSTAIN_KEEP_V67",
+        "selected_action_index": 0
+      },
+      {
+        "actual_margin": 7654.0,
+        "all_three_action_margins": [
+          7654.0,
+          2591.0,
+          -41788.0
+        ],
+        "audit": {
+          "candidate_seat": 0,
+          "family": "robust_cluster_family",
+          "representative": "robust_cluster",
+          "seed": 27100103
+        },
+        "decision": {
+          "absolute_lcb": [
+            -21688.602758477984,
+            -31412.300572782566,
+            -41547.387264558645
+          ],
+          "absolute_mean": [
+            4688.294061925622,
+            -6330.875713092124,
+            -7235.0014855182
+          ],
+          "absolute_sigma": [
+            13188.448410201803,
+            12540.71242984522,
+            17156.19288952022
+          ],
+          "delta_lcb": [
+            -32580.90731791003,
+            -59355.168658588096
+          ],
+          "delta_mean": [
+            -11019.169775017746,
+            -11923.295547443824
+          ],
+          "delta_sigma": [
+            10780.868771446141,
+            23715.936555572134
+          ],
+          "eligible_routes": []
+        },
+        "keep_margin": 7654.0,
+        "paired_delta": 0.0,
+        "selected_action": "ABSTAIN_KEEP_V67",
+        "selected_action_index": 0
+      },
+      {
+        "actual_margin": 7654.0,
+        "all_three_action_margins": [
+          7654.0,
+          2591.0,
+          -29807.0
+        ],
+        "audit": {
+          "candidate_seat": 1,
+          "family": "robust_cluster_family",
+          "representative": "robust_cluster",
+          "seed": 27100103
+        },
+        "decision": {
+          "absolute_lcb": [
+            -21688.602758477984,
+            -31412.300572782566,
+            -41547.387264558645
+          ],
+          "absolute_mean": [
+            4688.294061925622,
+            -6330.875713092124,
+            -7235.0014855182
+          ],
+          "absolute_sigma": [
+            13188.448410201803,
+            12540.71242984522,
+            17156.19288952022
+          ],
+          "delta_lcb": [
+            -32580.90731791003,
+            -59355.168658588096
+          ],
+          "delta_mean": [
+            -11019.169775017746,
+            -11923.295547443824
+          ],
+          "delta_sigma": [
+            10780.868771446141,
+            23715.936555572134
+          ],
+          "eligible_routes": []
+        },
+        "keep_margin": 7654.0,
+        "paired_delta": 0.0,
+        "selected_action": "ABSTAIN_KEEP_V67",
+        "selected_action_index": 0
+      }
+    ]
+  },
+  "determinism": {
+    "cv_core_sha256": "34aeaf21cc932e726d635d87e8fccee7e563acf5ce682b129fcd6a43f7b0242d",
+    "dataset_core_sha256": "f44e78d8b8075d61404cf88aa8067e15df35b9f1723a82df5f926da1a92e3f47",
+    "reproduction": {
+      "checked": true,
+      "cv_core_match": true,
+      "dataset_core_match": true,
+      "method": "independent CLI render-existing deterministic core rerun",
+      "observed_cv_core_sha256": "34aeaf21cc932e726d635d87e8fccee7e563acf5ce682b129fcd6a43f7b0242d",
+      "observed_dataset_core_sha256": "f44e78d8b8075d61404cf88aa8067e15df35b9f1723a82df5f926da1a92e3f47",
+      "reference_cv_core_sha256": "34aeaf21cc932e726d635d87e8fccee7e563acf5ce682b129fcd6a43f7b0242d",
+      "reference_dataset_core_sha256": "f44e78d8b8075d61404cf88aa8067e15df35b9f1723a82df5f926da1a92e3f47",
+      "verified": true
+    }
+  },
+  "gates": {
+    "all_pass": false,
+    "base_gate_pass": false,
+    "economic": {
+      "aggregate_mean_delta_positive": false,
+      "all_family_gates_pass": false,
+      "at_least_one_intervention": false
+    },
+    "family": {
+      "robust_cluster_family": {
+        "eight_of_eight_positive": true,
+        "paired_mean_nonnegative": true,
+        "paired_worst_nonnegative": true,
+        "wins_not_below_v67": true,
+        "worst_margin_positive": true
+      },
+      "route_99612231_family": {
+        "eight_of_eight_positive": true,
+        "paired_mean_nonnegative": true,
+        "paired_worst_nonnegative": true,
+        "wins_not_below_v67": true,
+        "worst_margin_positive": true
+      },
+      "ryo_selector_family": {
+        "eight_of_eight_positive": false,
+        "paired_mean_nonnegative": true,
+        "paired_worst_nonnegative": true,
+        "wins_not_below_v67": true,
+        "worst_margin_positive": false
+      },
+      "v16_route_family": {
+        "eight_of_eight_positive": false,
+        "paired_mean_nonnegative": true,
+        "paired_worst_nonnegative": true,
+        "wins_not_below_v67": true,
+        "worst_margin_positive": false
+      }
+    },
+    "mechanical": {
+      "all_12960_feature_values_finite": true,
+      "all_five_v84_margins_retained": true,
+      "candidate_sanitizer_zero_32_of_32": true,
+      "contexts_32": true,
+      "exact_v84_prefix_parity_32_of_32": true,
+      "feature_shape_32x405": true,
+      "identifiers_separate_from_model_input": true,
+      "no_forbidden_model_input_fields": true
+    },
+    "reproduction_verified": true
+  },
+  "guardrails": {
+    "checkpoint_created": false,
+    "future_outcomes_used_as_features": false,
+    "identifier_features_used": false,
+    "old_fresh_novel_live_traces_opened": [],
+    "opponent_private_state_used_as_features": false,
+    "runtime_created": false,
+    "sealed_inputs_opened": [],
+    "submission_created": false,
+    "upload_performed": false
+  },
+  "protocol": {
+    "action_space": [
+      "ABSTAIN_KEEP_V67",
+      "FORCE_B120_SUFFIX",
+      "FORCE_C120_SUFFIX"
+    ],
+    "audit_only_options": [
+      "ABSTAIN_KEEP_V67",
+      "FORCE_BASE_SUFFIX",
+      "FORCE_A120_SUFFIX",
+      "FORCE_B120_SUFFIX",
+      "FORCE_C120_SUFFIX"
+    ],
+    "development_only": true,
+    "feature_dim": 405,
+    "feature_steps": [
+      24,
+      48,
+      72,
+      96,
+      120
+    ],
+    "inner_cv": "leave-one-proxy-family-out over three outer-train families",
+    "inner_rank_order": [
+      "fewest_losses",
+      "highest_worst_margin",
+      "highest_worst_paired_delta",
+      "highest_cvar10_margin",
+      "highest_mean_paired_delta",
+      "fewest_interventions",
+      "higher_threshold_tie",
+      "higher_beta_tie",
+      "higher_alpha_tie"
+    ],
+    "outer_cv": "leave-one-proxy-family-out",
+    "prelocked_configs": [
+      {
+        "alpha": 10.0,
+        "beta": 1.0,
+        "threshold": 0.0
+      },
+      {
+        "alpha": 10.0,
+        "beta": 1.0,
+        "threshold": 1000.0
+      },
+      {
+        "alpha": 10.0,
+        "beta": 1.0,
+        "threshold": 2500.0
+      },
+      {
+        "alpha": 10.0,
+        "beta": 2.0,
+        "threshold": 0.0
+      },
+      {
+        "alpha": 10.0,
+        "beta": 2.0,
+        "threshold": 1000.0
+      },
+      {
+        "alpha": 10.0,
+        "beta": 2.0,
+        "threshold": 2500.0
+      },
+      {
+        "alpha": 100.0,
+        "beta": 1.0,
+        "threshold": 0.0
+      },
+      {
+        "alpha": 100.0,
+        "beta": 1.0,
+        "threshold": 1000.0
+      },
+      {
+        "alpha": 100.0,
+        "beta": 1.0,
+        "threshold": 2500.0
+      },
+      {
+        "alpha": 100.0,
+        "beta": 2.0,
+        "threshold": 0.0
+      },
+      {
+        "alpha": 100.0,
+        "beta": 2.0,
+        "threshold": 1000.0
+      },
+      {
+        "alpha": 100.0,
+        "beta": 2.0,
+        "threshold": 2500.0
+      },
+      {
+        "alpha": 1000.0,
+        "beta": 1.0,
+        "threshold": 0.0
+      },
+      {
+        "alpha": 1000.0,
+        "beta": 1.0,
+        "threshold": 1000.0
+      },
+      {
+        "alpha": 1000.0,
+        "beta": 1.0,
+        "threshold": 2500.0
+      },
+      {
+        "alpha": 1000.0,
+        "beta": 2.0,
+        "threshold": 0.0
+      },
+      {
+        "alpha": 1000.0,
+        "beta": 2.0,
+        "threshold": 1000.0
+      },
+      {
+        "alpha": 1000.0,
+        "beta": 2.0,
+        "threshold": 2500.0
+      }
+    ],
+    "ridge": "train-fold normalized centered multioutput dual ridge",
+    "selection": "route only when absolute LCB > 0 and delta LCB > threshold; otherwise ABSTAIN_KEEP_V67",
+    "snapshot_dim": 81,
+    "uncertainty": "delete-one-family jackknife prediction variance plus grouped-OOF residual RMSE"
+  },
+  "schema_version": 1,
+  "sources": {
+    "collector": "a5d69bd1c447f7b0f5a5eebf0020a71163778e66dc5bedd9b999771e3d1749ef",
+    "dataset": "9524ddc12f2bf5f5b575a10e43511ea26b6c51ed6092c099936ac14f52af01b8",
+    "feature_encoder": "71172b8a853d2e63798e20c6e2cd7b64763d79d4c11e9ba01822669a0382c31f",
+    "frozen_v67": "300983ffa3da614ad5e7b9958c76104d9f613fcaf7169e69963ea634ee0a093b",
+    "runner": "1e3b69b4a92eb8e6760ba2726eee377592ecea722284e27ec8e64195aa902ae9",
+    "v84_results": "e7f1e1c701fce8951bb57b02ab8d408a49ef916170a3065dd782fa4c7286cd55",
+    "v84_runner": "9fc45c32923aeba7891a04a2d4e09e4f6b159266b1c7a81ecb42761deb5081a6"
+  },
+  "status": "fail_stop_no_checkpoint",
+  "stop_reason": "Nested held-family observable selection missed at least one locked mechanical/economic gate. Stop without checkpoint, runtime, or submission."
+}

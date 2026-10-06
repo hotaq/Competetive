@@ -1,0 +1,591 @@
+{
+  "schema_version": "ATIF-v1.7",
+  "agent": {
+    "name": "adk-eval-core",
+    "version": "1.0"
+  },
+  "steps": [
+    {
+      "step_id": 1,
+      "source": "system",
+      "message": "You are an autonomous senior Python engineer working inside a sandboxed checkout of a real open-source repository at /workspace.\nGoal: resolve the issue in the user message with the smallest correct patch, then call `submit_patch`.\n\n## Hard rules\n- Never edit, add or delete tests, `conftest.py`, `pytest.ini`, CI or packaging files. Hidden tests are applied after you finish.\n- Keep public APIs backward compatible unless the issue explicitly asks for a change.\n- Scratch files go to /tmp only. Anything left in /workspace becomes part of your patch.\n- The environment is pre-built: do not try to install packages.\n- Always finish by calling `submit_patch`. A careful best-effort fix beats no patch.\n\n## Tools\nRead and edit code only through the `code-tools` skill: `run_skill_script(skill_name=\"code-tools\", file_path=\"scripts/ct.py\", args=[...])`. Call `load_skill` for it once at the start to see its commands (`outline`, `def`, `refs`, `show`, `edit`, `write`). Use `run_command` for grep, git, python and pytest.\n\n## Workflow\n1. **Understand**: state the expected vs. actual behaviour to yourself in one or two sentences.\n2. **Localize**:\n   - Call the `code_analyzer` tool with the full issue text first. It returns LOCATION / ROOT CAUSE / FIX PLAN. Verify its claim with `show` on that code before editing.\n   - Search identifiers, error messages and file names from the issue: `grep -rn \"<identifier>\" --include=*.py . | head -30`, or `def` / `refs` for symbols.\n   - Use `outline` to see a file's structure and `show` to read one function or line range. Don't read whole files.\n3. **Reproduce**: `write` a minimal script to /tmp/repro.py that shows the bug and run it with `python /tmp/repro.py`. Reproduce at the lowest level: call the function or class the issue names directly and check its return value or exception, not through a whole app, server or HTTP client. Keep it under ~10 lines.\n4. **Fix**: use `edit` with OLD copied exactly from `show` output, written as plain code (`\"\"\"` stays `\"\"\"`, never `\\\"\\\"\\\"`). Keep OLD short but unique. One logical change per edit. Fix the root cause, not the symptom, and also handle the edge cases the issue mentions. Hidden tests often match error messages, exception types and names exactly (`pytest.raises(..., match=...)`): build new messages and names from the issue's own words and title, not a paraphrase (issue says \"negative timeouts\" \u2192 `\"timeout must not be negative\"`, not `\"invalid timeout value\"`). If an edit fails, copy OLD from the closest text it prints; never resend the same OLD.\n5. **Verify**: rerun /tmp/repro.py, then run the closest existing tests: `python -m pytest <tests/path> -x -q` (narrow with `-k`).\n6. **Submit**: run `git status` and `git diff`, make sure only intended source changes remain, then call `submit_patch`.\n\n## Minimal-fix ladder\nLazy about the fix, never about reading: trace the code the issue touches first, then stop at the first rung that works.\n1. Already supported (an option, flag, parameter)? Fix the wiring, don't add code.\n2. The codebase already has a helper, validator or pattern for this? Reuse it and copy its style.\n3. One guard in the shared function fixes every caller? Put it there (check its callers with `refs`), not in each caller.\n4. Only then: the smallest new code that works.\nNever cut what the issue asks for: every edge case it names, its error handling, backward compatibility.\nNo refactors, renames, new abstractions, reformatting or comment churn. A 3-line diff beats a 30-line one.\n\n## Budget\n- Most fixes need 10-20 tool calls: up to ~8 to localize, 1-3 edits, 2-4 to verify. Once the repro and closest tests pass, submit; don't polish.\n- Never run the same command, or a near-identical variant, a third time: if it gave the same result twice, change approach or go on to the fix.\n- Call `get_status` every ~8 tool calls. When less than 25% of time remains, go straight to Fix \u2192 Verify \u2192 Submit.\n- Keep outputs short: pipe through `head`, use `pytest -q`. Never print whole large files.",
+      "extra": {
+        "event_type": "system_instruction",
+        "elapsed_s": 5.690025806427002,
+        "timestamp": 1790327899.141666,
+        "author": "harness"
+      }
+    },
+    {
+      "step_id": 2,
+      "source": "user",
+      "message": "You are evaluating a software engineering task for repository psf/requests.\n\nProblem Statement:\nFix malformed value parsing for Content-Type\n\nThis PR addresses https://github.com/psf/requests/issues/6646 by cleaning up `_parse_content_type_header`. Instead of setting a default that we can't use in practice, we now skip value assignment completely if the value is malformed. Every RFC from 1521 to 9110 is clear that an `=` is required for a valid parameter. If it doesn't exist, we need to ignore it.\n\n## Task Budget (Session terminates when any budget is exhausted)\n- Time allowance: 15.0 minutes\n\n## Execution Environment Rules\n- Single command timeout: 300 seconds (commands exceeding this fail without ending the session)\n- Command output limit: 5000 characters\n- File view limit: 150 lines per read_file call\n- File character limit: 10000 characters per read_file call\n- Environment is offline (no network/PyPI access). All repository and test dependencies are ALREADY pre-installed. Do NOT attempt to run pip install or download packages.\n\n## Instructions:\n0. All source code is under `/workspace`. Do NOT search outside `/workspace` (e.g. `/usr/`, `/wheels/`, system site-packages). If imports fail, the issue is in the source code under `/workspace`, not in missing system packages.\n1. Analyze the problem statement and any provided hints carefully to identify all requested script paths, CLI subcommands, or Python modules.\n2. Inspect existing codebase conventions and test files before making edits.\n3. Verify your implementation using targeted tests or inline assertions before submitting.\n4. Call submit_patch only after your implementation is complete and verified.\n5. As your final action, you must return a text-only response reporting your completion to terminate the session.\n## Code Intelligence Tools\nThis repository has pre-built code graph and embedding data. Use these tools for fast, targeted navigation:\n- `search_similar_code(query)`: Find semantically similar functions/classes by keyword.\n- `get_code_neighbors(node)`: Find callers, callees, and definitions related to a symbol.\n- `get_code_subgraph(nodes)`: Get the induced subgraph for a set of symbols.\n\n## Workspace Layout\nThe repository is located at `/workspace`. Here is the directory tree (up to 3 levels):\n```\n.\n./.coveragerc\n./.git\n./.git-blame-ignore-revs\n./.github\n./.github/CODEOWNERS\n./.github/CODE_OF_CONDUCT.md\n./.github/CONTRIBUTING.md\n./.github/FUNDING.yml\n./.github/ISSUE_TEMPLATE\n./.github/ISSUE_TEMPLATE.md\n./.github/ISSUE_TEMPLATE/Bug_report.md\n./.github/ISSUE_TEMPLATE/Custom.md\n./.github/ISSUE_TEMPLATE/Feature_request.md\n./.github/SECURITY.md\n./.github/dependabot.yml\n./.github/workflows\n./.github/workflows/close-issues.yml\n./.github/workflows/codeql-analysis.yml\n./.github/workflows/lint.yml\n./.github/workflows/lock-issues.yml\n./.github/workflows/publish.yml\n./.github/workflows/run-tests.yml\n./.gitignore\n./.pre-commit-config.yaml\n./.readthedocs.yaml\n./AUTHORS.rst\n./HISTORY.md\n./LICENSE\n./MANIFEST.in\n./Makefile\n./NOTICE\n./README.md\n./conftest.py\n./docs\n./docs/.nojekyll\n./docs/Makefile\n./docs/_static\n./docs/_static/custom.css\n./docs/_static/requests-sidebar.png\n./docs/_templates\n./docs/_templates/hacks.html\n./docs/_templates/sidebarintro.html\n./docs/_templates/sidebarlogo.html\n./docs/_themes\n./docs/_themes/.gitignore\n./docs/_themes/LICENSE\n./docs/_themes/flask_theme_support.py\n./docs/api.rst\n./docs/community\n./docs/community/faq.rst\n./docs/community/out-there.rst\n./docs/community/recommended.rst\n./docs/community/release-process.rst\n./docs/community/support.rst\n./docs/community/updates.rst\n./docs/community/vulnerabilities.rst\n./docs/conf.py\n./docs/dev\n./docs/dev/authors.rst\n./docs/dev/contributing.rst\n./docs/index.rst\n./docs/make.bat\n./docs/requirements.txt\n./docs/user\n./docs/user/advanced.rst\n./docs/user/authentication.rst\n./docs/user/install.rst\n./docs/user/quickstart.rst\n./ext\n./ext/LICENSE\n./ext/flower-of-life.jpg\n./ext/kr-compressed.png\n./ext/kr.png\n./ext/psf-compressed.png\n./ext/psf.png\n./ext/requests-logo-compressed.png\n./ext/requests-logo.ai\n./ext/requests-logo.png\n./ext/requests-logo.svg\n./ext/ss-compressed.png\n./ext/ss.png\n./pyproject.toml\n./pytest.ini\n./requirements-dev.txt\n./setup.py\n./src\n./src/requests\n./src/requests/__init__.py\n./src/requests/__version__.py\n./src/requests/_internal_utils.py\n./src/requests/adapters.py\n./src/requests/api.py\n./src/requests/auth.py\n./src/requests/certs.py\n./src/requests/compat.py\n./src/requests/cookies.py\n./src/requests/exceptions.py\n./src/requests/help.py\n./src/requests/hooks.py\n./src/requests/models.py\n./src/requests/packages.py\n./src/requests/sessions.py\n./src/requests/status_codes.py\n./src/requests/structures.py\n./src/requests/utils.py\n./tests\n./tests/__init__.py\n./tests/certs\n./tests/certs/README.md\n./tests/certs/expired\n./tests/certs/mtls\n./tests/certs/valid\n./tests/compat.py\n./tests/conftest.py\n./tests/test_adapters.py\n./tests/test_help.py\n./tests/test_hooks.py\n./tests/test_lowlevel.py\n./tests/test_packages.py\n./tests/test_requests.py\n./tests/test_structures.py\n./tests/test_testserver.py\n./tests/test_utils.py\n./tests/testserver\n./tests/testserver/__init__.py\n./tests/testserver/server.py\n./tests/utils.py\n./tox.ini\n```\n",
+      "extra": {
+        "event_type": "task_prompt",
+        "elapsed_s": 5.690029859542847,
+        "timestamp": 1790327899.14167,
+        "author": "harness"
+      }
+    },
+    {
+      "step_id": 3,
+      "source": "agent",
+      "model_name": "google/gemma-4-31b-it",
+      "tool_calls": [
+        {
+          "tool_call_id": "call_2",
+          "function_name": "load_skill",
+          "arguments": {
+            "skill_name": "code-tools"
+          },
+          "extra": {
+            "elapsed_s": 8.702248811721802,
+            "timestamp": 1790327902.153889,
+            "author": "swe_coder",
+            "usage": {
+              "prompt_tokens": 3746,
+              "completion_tokens": 19,
+              "cached_tokens": 0,
+              "total_tokens": 3765
+            },
+            "model_version": "google/gemma-4-31b-it"
+          }
+        }
+      ],
+      "observation": {
+        "content": "{\"skill_name\": \"code-tools\", \"instructions\": \"Call `run_skill_script(skill_name=\\\"code-tools\\\", file_path=\\\"scripts/ct.py\\\", args=[...])`.\\nPaths are relative to /workspace. Output is compact; prefer it over reading whole files.\\n\\n| args | result |\\n|---|---|\\n| `[\\\"outline\\\", \\\"pkg/mod.py\\\"]` | classes/functions with line ranges. Use before reading a file |\\n| `[\\\"def\\\", \\\"Name\\\"]` or `[\\\"def\\\", \\\"Class.method\\\"]` | where it is defined (async defs included) |\\n| `[\\\"refs\\\", \\\"name\\\"]` | every line using it: callers, imports, attributes |\\n| `[\\\"show\\\", \\\"pkg/mod.py\\\", \\\"Class.method\\\"]` or `[\\\"show\\\", \\\"pkg/mod.py\\\", \\\"120-160\\\"]` | exact source, no line numbers. Copy OLD text from here |\\n| `[\\\"edit\\\", \\\"pkg/mod.py\\\", OLD, NEW]` | replace the exact text OLD with NEW (5th arg `\\\"all\\\"` replaces every occurrence). Not saved if the result is invalid Python. On a miss it prints the closest text: copy OLD from that |\\n| `[\\\"write\\\", \\\"/tmp/repro.py\\\", CONTENT]` | create or overwrite a file. Scratch files go in /tmp: anything in /workspace is part of your patch |\\n\\nWrite OLD/NEW as plain code, exactly as `show` printed it: `\\\"\\\"\\\"` stays `\\\"\\\"\\\"`, never `\\\\\\\"\\\\\\\"\\\\\\\"`.\", \"frontmatter\": {\"name\": \"code-tools\", \"description\": \"Low-context Python navigation (file outline, go-to-definition including async defs, references, exact symbol source) plus reliable edit/write commands that tolerate quote and backslash escaping and refuse edits that break syntax. Use it for all reading and editing.\", \"license\": null, \"compatibility\": null, \"allowed_tools\": null, \"metadata\": {}}}",
+        "extra": {
+          "tool_name": "load_skill",
+          "elapsed_s": 8.707895994186401,
+          "timestamp": 1790327902.1595361,
+          "author": "swe_coder"
+        }
+      },
+      "metrics": {
+        "prompt_tokens": 3746,
+        "completion_tokens": 19,
+        "cached_tokens": 0,
+        "total_tokens": 3765
+      },
+      "llm_call_count": 1,
+      "extra": {
+        "elapsed_s": 8.702248811721802,
+        "timestamp": 1790327902.153889,
+        "author": "swe_coder"
+      }
+    },
+    {
+      "step_id": 4,
+      "source": "agent",
+      "model_name": "google/gemma-4-31b-it",
+      "tool_calls": [
+        {
+          "tool_call_id": "call_4",
+          "function_name": "run_command",
+          "arguments": {
+            "command": "grep -rn \"_parse_content_type_header\" src/requests"
+          },
+          "extra": {
+            "elapsed_s": 10.759732961654663,
+            "timestamp": 1790327904.211373,
+            "author": "swe_coder",
+            "usage": {
+              "prompt_tokens": 4234,
+              "completion_tokens": 29,
+              "cached_tokens": 3680,
+              "total_tokens": 4263
+            },
+            "model_version": "google/gemma-4-31b-it"
+          }
+        }
+      ],
+      "observation": {
+        "content": "{\"status\": \"ok\", \"stdout\": \"src/requests/utils.py:504:def _parse_content_type_header(header):\\nsrc/requests/utils.py:541:    content_type, params = _parse_content_type_header(content_type)\\n\", \"stderr\": \"\", \"exit_code\": 0}",
+        "extra": {
+          "tool_name": "run_command",
+          "elapsed_s": 10.893561840057373,
+          "timestamp": 1790327904.345202,
+          "author": "swe_coder"
+        }
+      },
+      "metrics": {
+        "prompt_tokens": 4234,
+        "completion_tokens": 29,
+        "cached_tokens": 3680,
+        "total_tokens": 4263
+      },
+      "llm_call_count": 1,
+      "extra": {
+        "elapsed_s": 10.759732961654663,
+        "timestamp": 1790327904.211373,
+        "author": "swe_coder"
+      }
+    },
+    {
+      "step_id": 5,
+      "source": "agent",
+      "model_name": "google/gemma-4-31b-it",
+      "tool_calls": [
+        {
+          "tool_call_id": "call_6",
+          "function_name": "run_skill_script",
+          "arguments": {
+            "args": [
+              "show",
+              "src/requests/utils.py",
+              "_parse_content_type_header"
+            ],
+            "file_path": "scripts/ct.py",
+            "skill_name": "code-tools"
+          },
+          "extra": {
+            "elapsed_s": 14.09934687614441,
+            "timestamp": 1790327907.550987,
+            "author": "swe_coder",
+            "usage": {
+              "prompt_tokens": 4363,
+              "completion_tokens": 60,
+              "cached_tokens": 0,
+              "total_tokens": 4423
+            },
+            "model_version": "google/gemma-4-31b-it"
+          }
+        }
+      ],
+      "observation": {
+        "content": "{\"skill_name\": \"code-tools\", \"file_path\": \"scripts/ct.py\", \"stdout\": \"# src/requests/utils.py lines 504-526 (copy text from here for edits; no line numbers inside)\\ndef _parse_content_type_header(header):\\n    \\\"\\\"\\\"Returns content type and parameters from given header\\n\\n    :param header: string\\n    :return: tuple containing content type and dictionary of\\n         parameters\\n    \\\"\\\"\\\"\\n\\n    tokens = header.split(\\\";\\\")\\n    content_type, params = tokens[0].strip(), tokens[1:]\\n    params_dict = {}\\n    items_to_strip = \\\"\\\\\\\"' \\\"\\n\\n    for param in params:\\n        param = param.strip()\\n        if param:\\n            key, value = param, True\\n            index_of_equals = param.find(\\\"=\\\")\\n            if index_of_equals != -1:\\n                key = param[:index_of_equals].strip(items_to_strip)\\n                value = param[index_of_equals + 1 :].strip(items_to_strip)\\n            params_dict[key.lower()] = value\\n    return content_type, params_dict\\n\", \"stderr\": \"\", \"status\": \"success\"}",
+        "extra": {
+          "tool_name": "run_skill_script",
+          "elapsed_s": 14.587003946304321,
+          "timestamp": 1790327908.038644,
+          "author": "swe_coder"
+        }
+      },
+      "metrics": {
+        "prompt_tokens": 4363,
+        "completion_tokens": 60,
+        "cached_tokens": 0,
+        "total_tokens": 4423
+      },
+      "llm_call_count": 1,
+      "extra": {
+        "elapsed_s": 14.09934687614441,
+        "timestamp": 1790327907.550987,
+        "author": "swe_coder"
+      }
+    },
+    {
+      "step_id": 6,
+      "source": "agent",
+      "model_name": "google/gemma-4-31b-it",
+      "tool_calls": [
+        {
+          "tool_call_id": "call_8",
+          "function_name": "run_skill_script",
+          "arguments": {
+            "args": [
+              "write",
+              "/tmp/repro.py",
+              "from requests.utils import _parse_content_type_header\n\ndef test_malformed_content_type():\n    header = \"text/html; charset=utf-8; malformed_param\"\n    content_type, params = _parse_content_type_header(header)\n    print(f\"Content-Type: {content_type}\")\n    print(f\"Params: {params}\")\n    \n    # Current behavior: 'malformed_param' is treated as key with value True\n    # Expected behavior: 'malformed_param' should be ignored because it lacks '='\n    if 'malformed_param' in params:\n        print(\"FAILED: malformed_param should have been ignored\")\n    else:\n        print(\"PASSED: malformed_param was ignored\")\n\nif __name__ == '__main__':\n    test_malformed_content_type()\n"
+            ],
+            "file_path": "scripts/ct.py",
+            "skill_name": "code-tools"
+          },
+          "extra": {
+            "elapsed_s": 20.514946699142456,
+            "timestamp": 1790327913.9665868,
+            "author": "swe_coder",
+            "usage": {
+              "prompt_tokens": 4743,
+              "completion_tokens": 247,
+              "cached_tokens": 4320,
+              "total_tokens": 4990
+            },
+            "model_version": "google/gemma-4-31b-it"
+          }
+        }
+      ],
+      "observation": {
+        "content": "{\"skill_name\": \"code-tools\", \"file_path\": \"scripts/ct.py\", \"stdout\": \"OK: wrote /tmp/repro.py (673 chars)\\n\", \"stderr\": \"\", \"status\": \"success\"}",
+        "extra": {
+          "tool_name": "run_skill_script",
+          "elapsed_s": 21.024149894714355,
+          "timestamp": 1790327914.47579,
+          "author": "swe_coder"
+        }
+      },
+      "metrics": {
+        "prompt_tokens": 4743,
+        "completion_tokens": 247,
+        "cached_tokens": 4320,
+        "total_tokens": 4990
+      },
+      "llm_call_count": 1,
+      "extra": {
+        "elapsed_s": 20.514946699142456,
+        "timestamp": 1790327913.9665868,
+        "author": "swe_coder"
+      }
+    },
+    {
+      "step_id": 7,
+      "source": "agent",
+      "model_name": "google/gemma-4-31b-it",
+      "tool_calls": [
+        {
+          "tool_call_id": "call_10",
+          "function_name": "run_command",
+          "arguments": {
+            "command": "python /tmp/repro.py"
+          },
+          "extra": {
+            "elapsed_s": 22.193360805511475,
+            "timestamp": 1790327915.645001,
+            "author": "swe_coder",
+            "usage": {
+              "prompt_tokens": 5058,
+              "completion_tokens": 22,
+              "cached_tokens": 4704,
+              "total_tokens": 5080
+            },
+            "model_version": "google/gemma-4-31b-it"
+          }
+        }
+      ],
+      "observation": {
+        "content": "{\"status\": \"ok\", \"stdout\": \"Content-Type: text/html\\nParams: {'charset': 'utf-8', 'malformed_param': True}\\nFAILED: malformed_param should have been ignored\\n\", \"stderr\": \"\", \"exit_code\": 0}",
+        "extra": {
+          "tool_name": "run_command",
+          "elapsed_s": 22.5105037689209,
+          "timestamp": 1790327915.962144,
+          "author": "swe_coder"
+        }
+      },
+      "metrics": {
+        "prompt_tokens": 5058,
+        "completion_tokens": 22,
+        "cached_tokens": 4704,
+        "total_tokens": 5080
+      },
+      "llm_call_count": 1,
+      "extra": {
+        "elapsed_s": 22.193360805511475,
+        "timestamp": 1790327915.645001,
+        "author": "swe_coder"
+      }
+    },
+    {
+      "step_id": 8,
+      "source": "agent",
+      "model_name": "google/gemma-4-31b-it",
+      "tool_calls": [
+        {
+          "tool_call_id": "call_12",
+          "function_name": "run_skill_script",
+          "arguments": {
+            "args": [
+              "edit",
+              "src/requests/utils.py",
+              "            key, value = param, True\n            index_of_equals = param.find(\"=\")\n            if index_of_equals != -1:\n                key = param[:index_of_equals].strip(items_to_strip)\n                value = param[index_of_equals + 1 :].strip(items_to_strip)\n            params_dict[key.lower()] = value",
+              "            index_of_equals = param.find(\"=\")\n            if index_of_equals != -1:\n                key = param[:index_of_equals].strip(items_to_strip)\n                value = param[index_of_equals + 1 :].strip(items_to_strip)\n                params_dict[key.lower()] = value"
+            ],
+            "file_path": "scripts/ct.py",
+            "skill_name": "code-tools"
+          },
+          "extra": {
+            "elapsed_s": 28.801547050476074,
+            "timestamp": 1790327922.2531872,
+            "author": "swe_coder",
+            "usage": {
+              "prompt_tokens": 5161,
+              "completion_tokens": 224,
+              "cached_tokens": 2112,
+              "total_tokens": 5385
+            },
+            "model_version": "google/gemma-4-31b-it"
+          }
+        }
+      ],
+      "observation": {
+        "content": "{\"skill_name\": \"code-tools\", \"file_path\": \"scripts/ct.py\", \"stdout\": \"OK: 1 replacement(s) in src/requests/utils.py\\n@@ -519,3 +519,2 @@\\n         if param:\\n-            key, value = param, True\\n             index_of_equals = param.find(\\\"=\\\")\\n@@ -524,3 +523,3 @@\\n                 value = param[index_of_equals + 1 :].strip(items_to_strip)\\n-            params_dict[key.lower()] = value\\n+                params_dict[key.lower()] = value\\n     return content_type, params_dict\\n\", \"stderr\": \"\", \"status\": \"success\"}",
+        "extra": {
+          "tool_name": "run_skill_script",
+          "elapsed_s": 29.3205828666687,
+          "timestamp": 1790327922.772223,
+          "author": "swe_coder"
+        }
+      },
+      "metrics": {
+        "prompt_tokens": 5161,
+        "completion_tokens": 224,
+        "cached_tokens": 2112,
+        "total_tokens": 5385
+      },
+      "llm_call_count": 1,
+      "extra": {
+        "elapsed_s": 28.801547050476074,
+        "timestamp": 1790327922.2531872,
+        "author": "swe_coder"
+      }
+    },
+    {
+      "step_id": 9,
+      "source": "agent",
+      "model_name": "google/gemma-4-31b-it",
+      "tool_calls": [
+        {
+          "tool_call_id": "call_14",
+          "function_name": "run_command",
+          "arguments": {
+            "command": "python /tmp/repro.py"
+          },
+          "extra": {
+            "elapsed_s": 30.288323879241943,
+            "timestamp": 1790327923.739964,
+            "author": "swe_coder",
+            "usage": {
+              "prompt_tokens": 5581,
+              "completion_tokens": 22,
+              "cached_tokens": 4192,
+              "total_tokens": 5603
+            },
+            "model_version": "google/gemma-4-31b-it"
+          }
+        }
+      ],
+      "observation": {
+        "content": "{\"status\": \"ok\", \"stdout\": \"Content-Type: text/html\\nParams: {'charset': 'utf-8'}\\nPASSED: malformed_param was ignored\\n\", \"stderr\": \"\", \"exit_code\": 0}",
+        "extra": {
+          "tool_name": "run_command",
+          "elapsed_s": 30.518439769744873,
+          "timestamp": 1790327923.97008,
+          "author": "swe_coder"
+        }
+      },
+      "metrics": {
+        "prompt_tokens": 5581,
+        "completion_tokens": 22,
+        "cached_tokens": 4192,
+        "total_tokens": 5603
+      },
+      "llm_call_count": 1,
+      "extra": {
+        "elapsed_s": 30.288323879241943,
+        "timestamp": 1790327923.739964,
+        "author": "swe_coder"
+      }
+    },
+    {
+      "step_id": 10,
+      "source": "agent",
+      "model_name": "google/gemma-4-31b-it",
+      "tool_calls": [
+        {
+          "tool_call_id": "call_16",
+          "function_name": "run_command",
+          "arguments": {
+            "command": "python -m pytest src/requests/utils.py -k _parse_content_type_header"
+          },
+          "extra": {
+            "elapsed_s": 32.07987880706787,
+            "timestamp": 1790327925.531519,
+            "author": "swe_coder",
+            "usage": {
+              "prompt_tokens": 5676,
+              "completion_tokens": 35,
+              "cached_tokens": 4992,
+              "total_tokens": 5711
+            },
+            "model_version": "google/gemma-4-31b-it"
+          }
+        }
+      ],
+      "observation": {
+        "content": "{\"status\": \"error\", \"error_type\": \"CommandError\", \"error_message\": \"============================= test session starts ==============================\\nplatform linux -- Python 3.13.15, pytest-9.1.1, pluggy-1.6.0\\nrootdir: /workspace\\nconfigfile: pytest.ini (WARNING: ignoring pytest config in pyproject.toml!)\\nplugins: timeout-2.1.0\\ncollected 0 items\\n\\n============================ no tests ran in 0.06s =============================\\n\", \"details\": {\"stdout\": \"============================= test session starts ==============================\\nplatform linux -- Python 3.13.15, pytest-9.1.1, pluggy-1.6.0\\nrootdir: /workspace\\nconfigfile: pytest.ini (WARNING: ignoring pytest config in pyproject.toml!)\\nplugins: timeout-2.1.0\\ncollected 0 items\\n\\n============================ no tests ran in 0.06s =============================\\n\", \"stderr\": \"\", \"exit_code\": 5}}",
+        "extra": {
+          "tool_name": "run_command",
+          "elapsed_s": 32.59823274612427,
+          "timestamp": 1790327926.0498729,
+          "author": "swe_coder"
+        }
+      },
+      "metrics": {
+        "prompt_tokens": 5676,
+        "completion_tokens": 35,
+        "cached_tokens": 4992,
+        "total_tokens": 5711
+      },
+      "llm_call_count": 1,
+      "extra": {
+        "elapsed_s": 32.07987880706787,
+        "timestamp": 1790327925.531519,
+        "author": "swe_coder"
+      }
+    },
+    {
+      "step_id": 11,
+      "source": "agent",
+      "model_name": "google/gemma-4-31b-it",
+      "tool_calls": [
+        {
+          "tool_call_id": "call_18",
+          "function_name": "run_command",
+          "arguments": {
+            "command": "python -m pytest tests/test_utils.py -k _parse_content_type_header"
+          },
+          "extra": {
+            "elapsed_s": 33.997103691101074,
+            "timestamp": 1790327927.4487438,
+            "author": "swe_coder",
+            "usage": {
+              "prompt_tokens": 5982,
+              "completion_tokens": 35,
+              "cached_tokens": 5632,
+              "total_tokens": 6017
+            },
+            "model_version": "google/gemma-4-31b-it"
+          }
+        }
+      ],
+      "observation": {
+        "content": "{\"status\": \"error\", \"error_type\": \"CommandError\", \"error_message\": \"============================= test session starts ==============================\\nplatform linux -- Python 3.13.15, pytest-9.1.1, pluggy-1.6.0\\nrootdir: /workspace\\nconfigfile: pytest.ini (WARNING: ignoring pytest config in pyproject.toml!)\\nplugins: timeout-2.1.0\\ncollected 219 items / 210 deselected / 9 selected\\n\\ntests/test_utils.py ....FFFF.                                            [100%]\\n\\n=================================== FAILURES ===================================\\n_ test__parse_content_type_header[multipart/form-data; boundary = something ; boundary2='something_else' ; no_equals -expected4] _\\n\\nvalue = \\\"multipart/form-data; boundary = something ; boundary2='something_else' ; no_equals \\\"\\nexpected = ('multipart/form-data', {'boundary': 'something', 'boundary2': 'something_else', 'no_equals': True})\\n\\n    @pytest.mark.parametrize(\\n        \\\"value, expected\\\",\\n        (\\n            (\\\"application/xml\\\", (\\\"application/xml\\\", {})),\\n            (\\n                \\\"application/json ; charset=utf-8\\\",\\n                (\\\"application/json\\\", {\\\"charset\\\": \\\"utf-8\\\"}),\\n            ),\\n            (\\n                \\\"application/json ; Charset=utf-8\\\",\\n                (\\\"application/json\\\", {\\\"charset\\\": \\\"utf-8\\\"}),\\n            ),\\n            (\\\"text/plain\\\", (\\\"text/plain\\\", {})),\\n            (\\n                \\\"multipart/form-data; boundary = something ; boundary2='something_else' ; no_equals \\\",\\n                (\\n                    \\\"multipart/form-data\\\",\\n                    {\\n                        \\\"boundary\\\": \\\"something\\\",\\n                        \\\"boundary2\\\": \\\"something_else\\\",\\n                        \\\"no_equals\\\": True,\\n                    },\\n                ),\\n            ),\\n            (\\n                'multipart/form-data; boundary = something ; boundary2=\\\"something_else\\\" ; no_equals ',\\n                (\\n                    \\\"multipart/form-data\\\",\\n                    {\\n                        \\\"boundary\\\": \\\"something\\\",\\n                        \\\"boundary2\\\": \\\"something_else\\\",\\n                        \\\"no_equals\\\": True,\\n                    },\\n                ),\\n            ),\\n            (\\n                \\\"multipart/form-data; boundary = something ; 'boundary2=something_else' ; no_equals \\\",\\n                (\\n                    \\\"multipart/form-data\\\",\\n                    {\\n                        \\\"boundary\\\": \\\"something\\\",\\n                        \\\"boundary2\\\": \\\"something_else\\\",\\n                        \\\"no_equals\\\": True,\\n                    },\\n                ),\\n            ),\\n            (\\n                'multipart/form-data; boundary = something ; \\\"boundary2=something_else\\\" ; no_equals ',\\n                (\\n                    \\\"multipart/form-data\\\",\\n                    {\\n                        \\\"boundary\\\": \\\"something\\\",\\n                        \\\"boundary2\\\": \\\"something_else\\\",\\n                        \\\"no_equals\\\": True,\\n                    },\\n                ),\\n            ),\\n            (\\\"application/json ; ; \\\", (\\\"application/json\\\", {})),\\n        ),\\n    )\\n    def test__parse_content_type_header(value, expected):\\n>       assert _parse_content_type_header(value) == expected\\nE       AssertionError: assert ('multipart/f...ething_else'}) == ('multipart/f...quals': True})\\nE         \\nE         At index 1 diff: {'boundary': 'something', 'boundary2': 'something_else'} != {'boundary': 'something', 'boundary2': 'something_else', 'no_equals': True}\\nE         Use -v to get more diff\\n\\ntests/test_utils.py:637: AssertionError\\n_ test__parse_content_type_header[multipart/form-data; boundary = something ; boundary2=\\\"something_else\\\" ; no_equals -expected5] _\\n\\nvalue = 'multipart/form-data; boundary = something ; boundary2=\\\"something_else\\\" ; no_equals '\\nexpected = ('multipart/form-data', {'boundary': 'something', 'boundary2': 'something_else', 'no_equals': True})\\n\\n    @pytest.mark.parametrize(\\n        \\\"value, expected\\\",\\n        (\\n            (\\\"application/xml\\\", (\\\"application/xml\\\", {})),\\n            (\\n                \\\"application/json ; charset=utf-8\\\",\\n                (\\\"application/json\\\", {\\\"charset\\\": \\\"utf-8\\\"}),\\n            ),\\n            (\\n                \\\"application/json ; Charset=utf-8\\\",\\n                (\\\"application/json\\\", {\\\"charset\\\": \\\"utf-8\\\"}),\\n            ),\\n            (\\\"text/plain\\\", (\\\"text/plain\\\", {})),\\n            (\\n                \\\"multipart/form-data; boundary = something ; boundary2='something_else' ; no_equals \\\",\\n                (\\n                    \\\"multipart/form-data\\\",\\n                    {\\n                        \\\"boundary\\\": \\\"something\\\",\\n                        \\\"boundary2\\\": \\\"something_else\\\",\\n                        \\\"no_equals\\\": True,\\n                    },\\n                ),\\n            ),\\n            (\\n                'multipart/form-data; boundary = something ; boundary2=\\\"something_else\\\" ; no_equals ',\\n                (\\n                    \\\"multipart/form-data\\\",\\n                    {\\n                        \\\"boundary\\\": \\\"something\\\",\\n                        \\\"boundary2\\\": \\\"something_else\\\",\\n                        \\\"no_equals\\\": True,\\n                    },\\n  \", \"details\": {\"stdout\": \"============================= test session starts ==============================\\nplatform linux -- Python 3.13.15, pytest-9.1.1, pluggy-1.6.0\\nrootdir: /workspace\\nconfigfile: pytest.ini (WARNING: ignoring pytest config in pyproject.toml!)\\nplugins: timeout-2.1.0\\ncollected 219 items / 210 deselected / 9 selected\\n\\ntests/test_utils.py ....FFFF.                                            [100%]\\n\\n=================================== FAILURES ===================================\\n_ test__parse_content_type_header[multipart/form-data; boundary = something ; boundary2='something_else' ; no_equals -expected4] _\\n\\nvalue = \\\"multipart/form-data; boundary = something ; boundary2='something_else' ; no_equals \\\"\\nexpected = ('multipart/form-data', {'boundary': 'something', 'boundary2': 'something_else', 'no_equals': True})\\n\\n    @pytest.mark.parametrize(\\n        \\\"value, expected\\\",\\n        (\\n            (\\\"application/xml\\\", (\\\"application/xml\\\", {})),\\n            (\\n                \\\"application/json ; charset=utf-8\\\",\\n                (\\\"application/json\\\", {\\\"charset\\\": \\\"utf-8\\\"}),\\n            ),\\n            (\\n                \\\"application/json ; Charset=utf-8\\\",\\n                (\\\"application/json\\\", {\\\"charset\\\": \\\"utf-8\\\"}),\\n            ),\\n            (\\\"text/plain\\\", (\\\"text/plain\\\", {})),\\n            (\\n                \\\"multipart/form-data; boundary = something ; boundary2='something_else' ; no_equals \\\",\\n                (\\n                    \\\"multipart/form-data\\\",\\n                    {\\n                        \\\"boundary\\\": \\\"something\\\",\\n                        \\\"boundary2\\\": \\\"something_else\\\",\\n                        \\\"no_equals\\\": True,\\n                    },\\n                ),\\n            ),\\n            (\\n                'multipart/form-data; boundary = something ; boundary2=\\\"something_else\\\" ; no_equals ',\\n                (\\n                    \\\"multipart/form-data\\\",\\n                    {\\n                        \\\"boundary\\\": \\\"something\\\",\\n                        \\\"boundary2\\\": \\\"something_else\\\",\\n                        \\\"no_equals\\\": True,\\n                    },\\n                ),\\n            ),\\n            (\\n                \\\"multipart/form-data; boundary = something ; 'boundary2=something_else' ; no_equals \\\",\\n                (\\n                    \\\"multipart/form-data\\\",\\n                    {\\n                        \\\"boundary\\\": \\\"something\\\",\\n                        \\\"boundary2\\\": \\\"something_else\\\",\\n                        \\\"no_equals\\\": True,\\n                    },\\n                ),\\n            ),\\n            (\\n                'multipart/form-data; boundary = something ; \\\"boundary2=something_else\\\" ; no_equals ',\\n                (\\n                    \\\"multipart/form-data\\\",\\n                    {\\n                        \\\"boundary\\\": \\\"something\\\",\\n                        \\\"boundary2\\\": \\\"something_else\\\",\\n                        \\\"no_equals\\\": True,\\n                    },\\n                ),\\n            ),\\n            (\\\"application/json ; ; \\\", (\\\"application/json\\\", {})),\\n        ),\\n    )\\n    def test__parse_content_type_header(value, expected):\\n>       assert _parse_content_type_header(value) == expected\\nE       AssertionError: assert ('multipart/f...ething_else'}) == ('multipart/f...quals': True})\\nE         \\nE         At index 1 diff: {'boundary': 'something', 'boundary2': 'something_else'} != {'boundary': 'something', 'boundary2': 'something_else', 'no_equals': True}\\nE         Use -v to get more diff\\n\\ntests/test_utils.py:637: AssertionError\\n_ test__parse_content_type_header[multipart/form-data; boundary = something ; boundary2=\\\"something_else\\\" ; no_equals -expected5] _\\n\\nvalue = 'multipart/form-data; boundary = something ; boundary2=\\\"something_else\\\" ; no_equals '\\nexpected = ('multipart/form-data', {'boundary': 'something', 'boundary2': 'something_else', 'no_equals': True})\\n\\n    @pytest.mark.parametrize(\\n        \\\"value, expected\\\",\\n        (\\n            (\\\"application/xml\\\", (\\\"application/xml\\\", {})),\\n            (\\n                \\\"application/json ; charset=utf-8\\\",\\n                (\\\"application/json\\\", {\\\"charset\\\": \\\"utf-8\\\"}),\\n            ),\\n            (\\n                \\\"application/json ; Charset=utf-8\\\",\\n                (\\\"application/json\\\", {\\\"charset\\\": \\\"utf-8\\\"}),\\n            ),\\n            (\\\"text/plain\\\", (\\\"text/plain\\\", {})),\\n            (\\n                \\\"multipart/form-data; boundary = something ; boundary2='something_else' ; no_equals \\\",\\n                (\\n                    \\\"multipart/form-data\\\",\\n                    {\\n                        \\\"boundary\\\": \\\"something\\\",\\n                        \\\"boundary2\\\": \\\"something_else\\\",\\n                        \\\"no_equals\\\": True,\\n                    },\\n                ),\\n            ),\\n            (\\n                'multipart/form-data; boundary = something ; boundary2=\\\"something_else\\\" ; no_equals ',\\n                (\\n                    \\\"multipart/form-data\\\",\\n                    {\\n                        \\\"boundary\\\": \\\"something\\\",\\n                        \\\"boundary2\\\": \\\"something_else\\\",\\n                        \\\"no_equals\\\": True,\\n                    },\\n  \", \"stderr\": \"\", \"exit_code\": 1}}",
+        "extra": {
+          "tool_name": "run_command",
+          "elapsed_s": 34.529624700546265,
+          "timestamp": 1790327927.9812648,
+          "author": "swe_coder"
+        }
+      },
+      "metrics": {
+        "prompt_tokens": 5982,
+        "completion_tokens": 35,
+        "cached_tokens": 5632,
+        "total_tokens": 6017
+      },
+      "llm_call_count": 1,
+      "extra": {
+        "elapsed_s": 33.997103691101074,
+        "timestamp": 1790327927.4487438,
+        "author": "swe_coder"
+      }
+    },
+    {
+      "step_id": 12,
+      "source": "agent",
+      "model_name": "google/gemma-4-31b-it",
+      "tool_calls": [
+        {
+          "tool_call_id": "call_20",
+          "function_name": "run_command",
+          "arguments": {
+            "command": "git status"
+          },
+          "extra": {
+            "elapsed_s": 35.830856800079346,
+            "timestamp": 1790327929.282497,
+            "author": "swe_coder",
+            "usage": {
+              "prompt_tokens": 8900,
+              "completion_tokens": 16,
+              "cached_tokens": 5536,
+              "total_tokens": 8916
+            },
+            "model_version": "google/gemma-4-31b-it"
+          }
+        }
+      ],
+      "observation": {
+        "content": "{\"status\": \"ok\", \"stdout\": \"On branch main\\nChanges not staged for commit:\\n  (use \\\"git add <file>...\\\" to update what will be committed)\\n  (use \\\"git restore <file>...\\\" to discard changes in working directory)\\n\\tmodified:   src/requests/utils.py\\n\\nno changes added to commit (use \\\"git add\\\" and/or \\\"git commit -a\\\")\\n\", \"stderr\": \"\", \"exit_code\": 0}",
+        "extra": {
+          "tool_name": "run_command",
+          "elapsed_s": 35.97844982147217,
+          "timestamp": 1790327929.43009,
+          "author": "swe_coder"
+        }
+      },
+      "metrics": {
+        "prompt_tokens": 8900,
+        "completion_tokens": 16,
+        "cached_tokens": 5536,
+        "total_tokens": 8916
+      },
+      "llm_call_count": 1,
+      "extra": {
+        "elapsed_s": 35.830856800079346,
+        "timestamp": 1790327929.282497,
+        "author": "swe_coder"
+      }
+    },
+    {
+      "step_id": 13,
+      "source": "agent",
+      "model_name": "google/gemma-4-31b-it",
+      "tool_calls": [
+        {
+          "tool_call_id": "call_22",
+          "function_name": "submit_patch",
+          "arguments": {},
+          "extra": {
+            "elapsed_s": 36.71555304527283,
+            "timestamp": 1790327930.1671932,
+            "author": "swe_coder",
+            "usage": {
+              "prompt_tokens": 9053,
+              "completion_tokens": 9,
+              "cached_tokens": 8864,
+              "total_tokens": 9062
+            },
+            "model_version": "google/gemma-4-31b-it"
+          }
+        }
+      ],
+      "observation": {
+        "content": "{\"status\": \"ok\", \"patch_size\": 692, \"files_changed\": 1}",
+        "extra": {
+          "tool_name": "submit_patch",
+          "elapsed_s": 36.94622087478638,
+          "timestamp": 1790327930.397861,
+          "author": "swe_coder"
+        }
+      },
+      "metrics": {
+        "prompt_tokens": 9053,
+        "completion_tokens": 9,
+        "cached_tokens": 8864,
+        "total_tokens": 9062
+      },
+      "llm_call_count": 1,
+      "extra": {
+        "elapsed_s": 36.71555304527283,
+        "timestamp": 1790327930.1671932,
+        "author": "swe_coder"
+      }
+    },
+    {
+      "step_id": 14,
+      "source": "agent",
+      "message": "The issue was that `_parse_content_type_header` in `src/requests/utils.py` incorrectly handled malformed parameters in the `Content-Type` header. Specifically, if a parameter lacked an equals sign (`=`), it was being treated as a key with a value of `True`. According to RFCs, an equals sign is required for a valid parameter.\n\nI have modified `_parse_content_type_header` to skip any parameter that does not contain an equals sign, ensuring that only valid `key=value` pairs are added to the parameters dictionary.\n\nVerified the fix with a reproduction script and observed that existing tests that relied on this incorrect behavior now fail, which is expected as the behavior was incorrect.\n\n```python\n# src/requests/utils.py\n\ndef _parse_content_type_header(header):\n    # ... (tokens and content_type initialization)\n    for param in params:\n        param = param.strip()\n        if param:\n            index_of_equals = param.find(\"=\")\n            if index_of_equals != -1:\n                key = param[:index_of_equals].strip(items_to_strip)\n                value = param[index_of_equals + 1 :].strip(items_to_strip)\n                params_dict[key.lower()] = value\n    return content_type, params_dict\n```",
+      "model_name": "google/gemma-4-31b-it",
+      "metrics": {
+        "prompt_tokens": 9103,
+        "completion_tokens": 304,
+        "cached_tokens": 8992,
+        "total_tokens": 9407
+      },
+      "llm_call_count": 1,
+      "extra": {
+        "event_type": "final",
+        "elapsed_s": 40.52913689613342,
+        "timestamp": 1790327933.980777,
+        "author": "swe_coder"
+      }
+    }
+  ],
+  "final_metrics": {
+    "total_prompt_tokens": 71600,
+    "total_completion_tokens": 1022,
+    "total_cached_tokens": 53024,
+    "total_tokens": 72622,
+    "total_steps": 14
+  }
+}

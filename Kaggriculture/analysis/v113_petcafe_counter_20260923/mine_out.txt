@@ -1,0 +1,140 @@
+== town unlock timeline ==
+day 3: ['PET_CAFE']
+day 6: ['PET_CAFE', 'PET_CAFE']
+day 9: ['PET_CAFE', 'PET_CAFE', 'PET_CAFE']
+day 12: ['PET_CAFE', 'PET_CAFE', 'PET_CAFE', 'SMOOTHIE_SHOP']
+day 15: ['PET_CAFE', 'PET_CAFE', 'PET_CAFE', 'SMOOTHIE_SHOP', 'PIZZA_SHOP']
+day 18: ['PET_CAFE', 'PET_CAFE', 'PET_CAFE', 'SMOOTHIE_SHOP', 'PIZZA_SHOP', 'BAKERY']
+day 21: ['PET_CAFE', 'PET_CAFE', 'PET_CAFE', 'SMOOTHIE_SHOP', 'PIZZA_SHOP', 'BAKERY', 'ICE_CREAM_SHOP']
+day 24: ['PET_CAFE', 'PET_CAFE', 'PET_CAFE', 'SMOOTHIE_SHOP', 'PIZZA_SHOP', 'BAKERY', 'ICE_CREAM_SHOP', 'PET_CAFE']
+== day-28 prices == {"CARROT": 326, "EGG": 41, "FERTILIZER": 13, "MELON": 54, "MILK": 59, "STRAWBERRY": 1, "TOMATO": 73, "WHEAT": 21, "WOOL": 1}
+== money trajectory (day: P0, P1, margin P1-P0) ==
+day  0: P0=     3000 P1=     3000 diff=       +0
+day  1: P0=       22 P1=        7 diff=      -15
+day  2: P0=      104 P1=       12 diff=      -92
+day  3: P0=      213 P1=       10 diff=     -203
+day  4: P0=      256 P1=        4 diff=     -252
+day  5: P0=      657 P1=       14 diff=     -643
+day  6: P0=      757 P1=      432 diff=     -325
+day  7: P0=      814 P1=       58 diff=     -756
+day  8: P0=      593 P1=       43 diff=     -550
+day  9: P0=     1159 P1=      127 diff=    -1032
+day 10: P0=     1808 P1=      988 diff=     -820 <== KEY
+day 11: P0=    14985 P1=     9911 diff=    -5074
+day 12: P0=    13986 P1=    12734 diff=    -1252
+day 13: P0=    16535 P1=    16101 diff=     -434
+day 14: P0=    17946 P1=    15506 diff=    -2440
+day 15: P0=    19662 P1=    18566 diff=    -1096
+day 16: P0=    22557 P1=    20112 diff=    -2445
+day 17: P0=    26116 P1=    26622 diff=     +506 <== KEY
+day 18: P0=    27743 P1=    28280 diff=     +537
+day 19: P0=    29457 P1=    29089 diff=     -368
+day 20: P0=    30119 P1=    28660 diff=    -1459
+day 21: P0=    30630 P1=    30054 diff=     -576
+day 22: P0=    31776 P1=    30307 diff=    -1469
+day 23: P0=    32992 P1=    31018 diff=    -1974
+day 24: P0=    34221 P1=    32079 diff=    -2142
+day 25: P0=    35293 P1=    33007 diff=    -2286
+day 26: P0=    36420 P1=    37347 diff=     +927
+day 27: P0=    37133 P1=    38531 diff=    +1398
+day 28: P0=    38304 P1=    39714 diff=    +1410 <== KEY
+day 29: P0=    47465 P1=    43556 diff=    -3909 <== KEY
+== carrot timeline per day [P0 | P1]: BUY_SEED/PLANT/SELL ==
+day  0: P0 B0/P0/S0           P1 B0/P0/S0
+day  1: P0 B0/P0/S0           P1 B0/P0/S0
+day  2: P0 B0/P0/S0           P1 B0/P0/S0
+day  3: P0 B0/P0/S0           P1 B0/P0/S0
+day  4: P0 B0/P0/S0           P1 B0/P0/S0
+day  5: P0 B0/P0/S0           P1 B0/P0/S0
+day  6: P0 B0/P0/S0           P1 B0/P0/S0
+day  7: P0 B0/P0/S0           P1 B0/P0/S0
+day  8: P0 B0/P0/S0           P1 B0/P0/S0
+day  9: P0 B0/P0/S0           P1 B0/P0/S0
+day 10: P0 B0/P0/S0           P1 B0/P0/S0
+day 11: P0 B0/P0/S0           P1 B2/P2/S0
+day 12: P0 B0/P0/S0           P1 B3/P3/S0
+day 13: P0 B0/P0/S0           P1 B0/P0/S0
+day 14: P0 B0/P0/S0           P1 B0/P0/S0
+day 15: P0 B0/P0/S0           P1 B0/P0/S6
+day 16: P0 B0/P0/S0           P1 B0/P0/S9
+day 17: P0 B0/P0/S0           P1 B0/P0/S0
+day 18: P0 B0/P0/S0           P1 B0/P0/S0
+day 19: P0 B0/P0/S0           P1 B0/P0/S0
+day 20: P0 B0/P0/S0           P1 B0/P0/S0
+day 21: P0 B0/P0/S0           P1 B0/P0/S0
+day 22: P0 B0/P0/S0           P1 B0/P0/S0
+day 23: P0 B0/P0/S0           P1 B0/P0/S0
+day 24: P0 B4/P4/S0           P1 B0/P0/S0
+day 25: P0 B14/P14/S0         P1 B15/P13/S0
+day 26: P0 B11/P11/S0         P1 B2/P4/S0
+day 27: P0 B2/P2/S1000        P1 B10/P10/S0
+day 28: P0 B0/P0/S10005       P1 B0/P0/S3
+day 29: P0 B0/P0/S6044        P1 B0/P0/S68
+== setup days 0-10: BUY_LAND / HIRE / animals per day ==
+day  0: LAND P0=0 P1=0 | HIRE P0=5 P1=5 | SHEEP P0=2 P1=2 COW P0=2 P1=3 GOOSE P0=0 P1=0
+day  1: LAND P0=0 P1=0 | HIRE P0=3 P1=3 | SHEEP P0=0 P1=0 COW P0=0 P1=0 GOOSE P0=0 P1=0
+day  2: LAND P0=0 P1=0 | HIRE P0=4 P1=5 | SHEEP P0=0 P1=0 COW P0=1 P1=0 GOOSE P0=0 P1=4
+day  3: LAND P0=0 P1=0 | HIRE P0=5 P1=5 | SHEEP P0=0 P1=0 COW P0=1 P1=2 GOOSE P0=0 P1=0
+day  4: LAND P0=0 P1=0 | HIRE P0=4 P1=5 | SHEEP P0=0 P1=1 COW P0=0 P1=0 GOOSE P0=0 P1=0
+day  5: LAND P0=0 P1=0 | HIRE P0=4 P1=5 | SHEEP P0=0 P1=0 COW P0=0 P1=0 GOOSE P0=0 P1=0
+day  6: LAND P0=1 P1=1 | HIRE P0=7 P1=9 | SHEEP P0=0 P1=0 COW P0=0 P1=2 GOOSE P0=2 P1=1
+day  7: LAND P0=0 P1=0 | HIRE P0=7 P1=7 | SHEEP P0=0 P1=0 COW P0=2 P1=0 GOOSE P0=0 P1=1
+day  8: LAND P0=0 P1=3 | HIRE P0=8 P1=10 | SHEEP P0=2 P1=0 COW P0=0 P1=1 GOOSE P0=0 P1=0
+day  9: LAND P0=0 P1=0 | HIRE P0=8 P1=10 | SHEEP P0=2 P1=0 COW P0=0 P1=3 GOOSE P0=0 P1=0
+day 10: LAND P0=0 P1=0 | HIRE P0=11 P1=12 | SHEEP P0=0 P1=0 COW P0=0 P1=0 GOOSE P0=2 P1=0
+== BUY_LAND exact steps ==
+P0: [151, 266]
+P1: [146, 198, 199, 200]
+== endgame days 26-29 sells P0 vs P1 ==
+day 26 P0: {'CARROT': 0, 'EGG': 6, 'FERTILIZER': 14, 'MILK': 12, 'WHEAT': 28, 'WOOL': 7} HARVEST=20
+day 26 P1: {'CARROT': 0, 'EGG': 8, 'FERTILIZER': 8, 'MILK': 6, 'STRAWBERRY': 17, 'WHEAT': 51} HARVEST=19
+day 27 P0: {'CARROT': 1000, 'EGG': 6, 'FERTILIZER': 1022, 'MILK': 1014, 'STRAWBERRY': 36, 'WHEAT': 34, 'WOOL': 7} HARVEST=32
+day 27 P1: {'CARROT': 0, 'EGG': 8, 'FERTILIZER': 11, 'MILK': 4, 'STRAWBERRY': 14, 'WHEAT': 34, 'WOOL': 10} HARVEST=27
+day 28 P0: {'CARROT': 10005, 'EGG': 1002, 'FERTILIZER': 2012, 'MILK': 1011, 'STRAWBERRY': 3, 'WHEAT': 10004, 'WOOL': 22} HARVEST=28
+day 28 P1: {'CARROT': 3, 'EGG': 12, 'FERTILIZER': 16, 'MILK': 23, 'STRAWBERRY': 18, 'WHEAT': 56, 'WOOL': 18} HARVEST=38
+day 29 P0: {'CARROT': 6044, 'EGG': 7024, 'FERTILIZER': 7015, 'MELON': 6000, 'MILK': 6018, 'STRAWBERRY': 6016, 'TOMATO': 6000, 'WHEAT': 7044, 'WOOL': 6016} HARVEST=35
+day 29 P1: {'CARROT': 68, 'EGG': 12, 'FERTILIZER': 27, 'MILK': 12, 'STRAWBERRY': 22, 'WHEAT': 64, 'WOOL': 12} HARVEST=43
+== totals days 0-29 ==
+P0 PLANT={'CARROT': 31, 'MELON': 12, 'STRAWBERRY': 33, 'WHEAT': 162}
+P0 SELL ={'CARROT': 17049, 'EGG': 8178, 'FERTILIZER': 10362, 'MELON': 6072, 'MILK': 8265, 'STRAWBERRY': 6278, 'TOMATO': 6000, 'WHEAT': 17368, 'WOOL': 6188}
+P0 HIRE=267 LAND=2 BUY_SEED_CARROT=31 HARVEST=497
+P1 PLANT={'CARROT': 32, 'MELON': 17, 'STRAWBERRY': 40, 'WHEAT': 157}
+P1 SELL ={'CARROT': 86, 'EGG': 382, 'FERTILIZER': 1219, 'MELON': 277, 'MILK': 363, 'STRAWBERRY': 278, 'WHEAT': 3380, 'WOOL': 160}
+P1 HIRE=283 LAND=4 BUY_SEED_CARROT=32 HARVEST=504
+== yannik routes file == {'route_names': ['yannik_schiffner__ep111952809__seat0'], 'first_routes': {'BAKERY': 0, 'BRUNCH_SPOT': 0, 'FARMERS_MARKET': 0, 'ICE_CREAM_SHOP': 0, 'PET_CAFE': 0, 'PIZZA_SHOP': 0, 'SMOOTHIE_SHOP': 0, 'YARN_STORE': 0}, 'second_routes': {'BAKERY__BAKERY': 0, 'BAKERY__BRUNCH_SPOT': 0, 'BAKERY__FARMERS_MARKET': 0, 'BAKERY__ICE_CREAM_SHOP': 0, 'BAKERY__PET_CAFE': 0, 'BAKERY__PIZZA_SHOP': 0, 'BAKERY__SMOOTHIE_SHOP': 0, 'BAKERY__YARN_STORE': 0, 'BRUNCH_SPOT__BAKERY': 0, 'BRUNCH_SPOT__BRUNCH_SPOT': 0, 'BRUNCH_SPOT__FARMERS_MARKET': 0, 'BRUNCH_SPOT__ICE_CREAM_SHOP': 0, 'BRUNCH_SPOT__PET_CAFE': 0, 'BRUNCH_SPOT__PIZZA_SHOP': 0, 'BRUNCH_SPOT__SMOOTHIE_SHOP': 0, 'BRUNCH_SPOT__YARN_STORE': 0, 'FARMERS_MARKET__BAKERY': 0, 'FARMERS_MARKET__BRUNCH_SPOT': 0, 'FARMERS_MARKET__FARMERS_MARKET': 0, 'FARMERS_MARKET__ICE_CREAM_SHOP': 0, 'FARMERS_MARKET__PET_CAFE': 0, 'FARMERS_MARKET__PIZZA_SHOP': 0, 'FARMERS_MARKET__SMOOTHIE_SHOP': 0, 'FARMERS_MARKET__YARN_STORE': 0, 'ICE_CREAM_SHOP__BAKERY': 0, 'ICE_CREAM_SHOP__BRUNCH_SPOT': 0, 'ICE_CREAM_SHOP__FARMERS_MARKET': 0, 'ICE_CREAM_SHOP__ICE_CREAM_SHOP': 0, 'ICE_CREAM_SHOP__PET_CAFE': 0, 'ICE_CREAM_SHOP__PIZZA_SHOP': 0, 'ICE_CREAM_SHOP__SMOOTHIE_SHOP': 0, 'ICE_CREAM_SHOP__YARN_STORE': 0, 'PET_CAFE__BAKERY': 0, 'PET_CAFE__BRUNCH_SPOT': 0, 'PET_CAFE__FARMERS_MARKET': 0, 'PET_CAFE__ICE_CREAM_SHOP': 0, 'PET_CAFE__PET_CAFE': 0, 'PET_CAFE__PIZZA_SHOP': 0, 'PET_CAFE__SMOOTHIE_SHOP': 0, 'PET_CAFE__YARN_STORE': 0, 'PIZZA_SHOP__BAKERY': 0, 'PIZZA_SHOP__BRUNCH_SPOT': 0, 'PIZZA_SHOP__FARMERS_MARKET': 0, 'PIZZA_SHOP__ICE_CREAM_SHOP': 0, 'PIZZA_SHOP__PET_CAFE': 0, 'PIZZA_SHOP__PIZZA_SHOP': 0, 'PIZZA_SHOP__SMOOTHIE_SHOP': 0, 'PIZZA_SHOP__YARN_STORE': 0, 'SMOOTHIE_SHOP__BAKERY': 0, 'SMOOTHIE_SHOP__BRUNCH_SPOT': 0, 'SMOOTHIE_SHOP__FARMERS_MARKET': 0, 'SMOOTHIE_SHOP__ICE_CREAM_SHOP': 0, 'SMOOTHIE_SHOP__PET_CAFE': 0, 'SMOOTHIE_SHOP__PIZZA_SHOP': 0, 'SMOOTHIE_SHOP__SMOOTHIE_SHOP': 0, 'SMOOTHIE_SHOP__YARN_STORE': 0, 'YARN_STORE__BAKERY': 0, 'YARN_STORE__BRUNCH_SPOT': 0, 'YARN_STORE__FARMERS_MARKET': 0, 'YARN_STORE__ICE_CREAM_SHOP': 0, 'YARN_STORE__PET_CAFE': 0, 'YARN_STORE__PIZZA_SHOP': 0, 'YARN_STORE__SMOOTHIE_SHOP': 0, 'YARN_STORE__YARN_STORE': 0}, 'first_branch_step': 72, 'second_branch_step': 144}
+n_routes: 1 lens: [719]
+-- yannik-route vs P1(game) days0-10 turns 0..262 --
+  ('BUY_ANIMAL', 'COW'): yannik=11 P1game=11
+  ('BUY_ANIMAL', 'GOOSE'): yannik=6 P1game=6
+  ('BUY_ANIMAL', 'SHEEP'): yannik=3 P1game=3
+  ('BUY_LAND', ''): yannik=4 P1game=4
+  ('BUY_PRODUCT', 'FERTILIZER'): yannik=203 P1game=203
+  ('BUY_PRODUCT', 'WHEAT'): yannik=1839 P1game=1839
+  ('BUY_SEED', 'MELON'): yannik=16 P1game=16
+  ('BUY_SEED', 'STRAWBERRY'): yannik=42 P1game=42
+  ('BUY_SEED', 'WHEAT'): yannik=51 P1game=51
+  ('HIRE', ''): yannik=76 P1game=76
+  ('PLANT', 'MELON'): yannik=13 P1game=13
+  ('PLANT', 'STRAWBERRY'): yannik=29 P1game=29
+  ('PLANT', 'WHEAT'): yannik=44 P1game=44
+  ('SELL', 'EGG'): yannik=179 P1game=179
+  ('SELL', 'FERTILIZER'): yannik=594 P1game=594
+  ('SELL', 'MELON'): yannik=163 P1game=163
+  ('SELL', 'MILK'): yannik=102 P1game=102
+  ('SELL', 'WHEAT'): yannik=2164 P1game=2164
+  ('SELL', 'WOOL'): yannik=26 P1game=26
+-- yannik-route vs P1(game) days26-29 turns 624..718 --
+  ('BUY_PRODUCT', 'WHEAT'): yannik=2 P1game=2
+  ('BUY_SEED', 'CARROT'): yannik=12 P1game=12
+  ('BUY_SEED', 'WHEAT'): yannik=6 P1game=6
+  ('HIRE', ''): yannik=43 P1game=43
+  ('PLANT', 'CARROT'): yannik=14 P1game=14
+  ('PLANT', 'WHEAT'): yannik=7 P1game=7
+  ('SELL', 'CARROT'): yannik=71 P1game=71
+  ('SELL', 'EGG'): yannik=38 P1game=38
+  ('SELL', 'FERTILIZER'): yannik=56 P1game=56
+  ('SELL', 'MILK'): yannik=39 P1game=39
+  ('SELL', 'STRAWBERRY'): yannik=71 P1game=71
+  ('SELL', 'WHEAT'): yannik=200 P1game=200
+  ('SELL', 'WOOL'): yannik=40 P1game=40
+wrote /Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/analysis/v113_petcafe_counter_20260923/mining_tables.json

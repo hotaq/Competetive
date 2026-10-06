@@ -1,0 +1,520 @@
+<div style="background:linear-gradient(120deg,#0B1F3A 0%,#123A4C 55%,#00B4A6 140%);color:#F6F1E7;padding:28px 32px;border-radius:18px;">
+  <p style="letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:#F6F1E7;">GEMMA 4 DEVELOPER AGENT · TRAINING LAB</p>
+  <h1 style="font-size:30px;color:#F6F1E7;">Can a 31B LoRA learn a repair, not a repository?</h1>
+  <p style="font-size:16px;color:#F6F1E7;">Seven visual checks, one repository held out, one GPU experiment, and an exportable adapter.</p>
+  <p style="font-size:12px;color:#F6F1E7;">Den Pugovkin · 2026</p>
+</div>
+
+**TL;DR**
+
+- The competition scores the fraction of repository issues whose agent patch passes hidden tests. It accepts a ZIP of agent configuration and optional LoRA weights, not a CSV.
+- This notebook builds patch-generation examples from public development fixes. It withholds the **entire Rich repository** from training and masks loss on the issue/context prompt.
+- A fall in held-out loss is a training signal, **not** a solved-issue score. The final adapter must load under the official harness and beat a no-adapter agent on fixed issue IDs.
+- The notebook writes a PEFT adapter and a **candidate** `submission.zip`; the training checkpoint differs from the competition's QAT serving base, so adapter load and patch quality require an official harness check.
+- **This is one offline run:** the saved notebook version trains the adapter, renders seven static figures, and writes its own `submission.zip`. Submit that exact version through Kaggle's Notebook tab.
+
+**Contents:** 1. Data boundary · 2. Repair anatomy · 3. QLoRA on GPU · 4. Held-out evidence · 5. Agent bundle
+
+=====MD=====
+### Research claim, before seeing the result
+
+The visible development fixes are enough to study a **component** of a coding agent: writing a corrected source excerpt once the relevant location is known. They are not enough to infer that an agent can navigate a repository, recover from a failed edit, and pass tests. The experiment therefore keeps the training target narrow and makes the validation boundary unusually strict: every Rich issue stays out of training.
+
+The seven figures below form an audit trail. The first five explain *which examples are used and what they contain*; the last two show *what changed during GPU training*. Every number is computed by this notebook. The separate [research write-up](https://github.com/mart1ny/Kaggle_prof/blob/main/competitions/gemma-4-developer-agent/public/WRITEUP.md) expands the method and its limitations.
+
+=====MD=====
+<h2 style="color:#0B1F3A;border-bottom:3px solid #00B4A6;padding-bottom:6px;">1. Which examples are safe to learn from?</h2>
+
+Attach the competition data and a **local copy of the exact Unsloth 31B 4-bit checkpoint** under Add Input. In **Add-ons → Install Dependencies**, add `pip install unsloth==2026.9.11 trl transformers==5.5.0` and run the Dependency Manager once in the interactive editor. Kaggle saves its wheels as an attached dependency input for offline version execution. Set **Settings → Internet off** and **Accelerator → GPU T4 ×2** *before* Save Version. This saved version must train and create `submission.zip` itself. The published development fixes are labels only and are never supplied to the evaluated agent. The split below is deterministic by repository. No hidden test labels are used.
+
+| Kaggle setting | What to add |
+|---|---|
+| **Add Input → Competitions** | **Google – The Gemma 4 Developer Agent Competition**, containing `tasks.jsonl` (required) |
+| **Accelerator** | **GPU T4 ×2**; this notebook explicitly splits the 31B model across them |
+| **Add Input → Models or Datasets** | A local mirror of `unsloth/gemma-4-31B-it-unsloth-bnb-4bit`, including `config.json`, tokenizer files and all model shards |
+| **Add-ons → Install Dependencies** | `pip install unsloth==2026.9.11 trl transformers==5.5.0` |
+| **Settings → Internet** | **Off before Save Version** |
+| **Save Version** | **Save & Run All**; use its own `submission.zip` under Submit to Competition → Notebook |
+
+=====MD=====
+<h2 style="color:#0B1F3A;border-bottom:3px solid #00B4A6;padding-bottom:6px;">2. What do public repairs actually look like?</h2>
+
+For each reference diff we reconstruct the **before** and **after** side of source hunks. The model sees the issue and before-side context, then learns the after-side edit. The notebook excludes `test_patch` entirely. The visual audit shows repository balance, edit complexity, and what the context limit removes. This teaches patch drafting after localization; it does not train tool use or prove end-to-end repair ability.
+
+=====MD=====
+**What does this change?** Rich never contributes a training target. The other repositories are imbalanced, so a single aggregate loss would hide whether the model merely learned FastAPI-style edits. This split is a harder transfer check, though it still says nothing about unseen hidden-test issues.
+
+=====MD=====
+**Decision.** We bound both issue and edit length so an example fits on the GPU. The size of a reference patch is an analysis label only; it is never passed to the held-out agent. We next verify exact issue/context duplicates across the split, then check token lengths using the actual training tokenizer.
+
+=====MD=====
+**Split rule.** Reserve Rich for validation and freeze its first 12 usable issues by ID for a short loss check. All remaining repositories are training data. These displayed counts come from the attached data, not a claimed experiment score.
+
+=====MD=====
+<h2 style="color:#0B1F3A;border-bottom:3px solid #00B4A6;padding-bottom:6px;">3. Can two T4 GPUs train a 31B QLoRA adapter?</h2>
+
+The competition serves `gemma-4-31b-it-qat-w4a16-ct` for inference. The exact unquantized QAT training checkpoint occupies **62.6 GB on disk**; this Kaggle T4 ×2 recipe instead uses Unsloth's **19.1 GB prequantized 31B** training checkpoint. That is a different base, so an adapter learned here is only a transfer candidate. LoRA compatibility and issue-level improvement must be checked with the competition server. Unsloth documents model splitting with `device_map="balanced"`; this notebook uses both T4s, short sequences, rank 8, batch 1, and gradient checkpointing. DDP would replicate the 31B model on each 16 GB GPU, so we do not launch it here. An OOM or unsupported model load should fail visibly.
+
+Sources: [Unsloth 31B 4-bit files](https://huggingface.co/unsloth/gemma-4-31B-it-unsloth-bnb-4bit/tree/main) · [QAT checkpoint size](https://huggingface.co/unsloth/gemma-4-31B-it-qat-q4_0-unquantized/tree/main) · [Unsloth model splitting](https://unsloth.ai/docs/basics/multi-gpu-training-with-unsloth) · [competition model rule](https://www.kaggle.com/competitions/gemma-4-developer-agent/overview)
+
+=====MD=====
+**Training choice.** The token-length check keeps complete candidate examples. Unsloth may remove a candidate after response-only masking if it finds no supervised answer tokens; the notebook reports the effective counts. We train one epoch with rank-8 LoRA and compare the same held-out examples before and after. The public development set is small; stronger-looking training curves are not evidence of better issue resolution.
+
+=====MD=====
+<h2 style="color:#0B1F3A;border-bottom:3px solid #00B4A6;padding-bottom:6px;">4. Did held-out loss move?</h2>
+
+This measures only next-token loss on up to 12 Rich patch examples. It does not measure exact patch correctness, tool behavior, or hidden-test pass rate. The plots below come from the actual run; a smooth training curve alone cannot establish a competition gain.
+
+=====MD=====
+<h2 style="color:#0B1F3A;border-bottom:3px solid #00B4A6;padding-bottom:6px;">5. Export a competition-shaped bundle</h2>
+
+The archive contains the trained adapter and the exact baseline agent prompt, tool list, and sampling settings; only `adapter: main_lora` is added to the agent config. This makes a paired no-adapter comparison meaningful. The check below verifies archive structure. It cannot prove that vLLM loads the adapter or that patches improve, especially because the training and serving bases differ. Test both conditions with the organizer's `swegemma` evaluator on fixed issue IDs before submitting this ZIP.
+
+=====MD=====
+**What next?** Run the official harness twice on the same frozen development issues: this ZIP and the same agent with `adapter:` removed. Record pass/fail by issue, empty-patch rate, tool errors, runtime, and adapter-load success. Keep the adapter only if the end-to-end solved fraction improves without a serious runtime regression.
+
+**Reproduce:** Source notebook and experiment log are in [Kaggle_profi](https://github.com/mart1ny/Kaggle_prof). No leaderboard score is claimed here. Data: competition `tasks.jsonl`; training model: [prequantized 31B checkpoint](https://huggingface.co/unsloth/gemma-4-31B-it-unsloth-bnb-4bit); license: Apache 2.0 model, notebook code MIT-style reuse with attribution.
+
+#####CODE#####
+from pathlib import Path
+import hashlib, json, os, random, re, shutil, subprocess, sys, zipfile
+from collections import Counter
+
+SEED = 3407
+NOTEBOOK_REVISION = 'offline-train-and-submit-2026-09-26'
+random.seed(SEED)
+ROOTS = [Path('/kaggle/input/competitions/gemma-4-developer-agent'),
+         Path('/kaggle/input/gemma-4-developer-agent')]
+ROOTS += [root / 'published' for root in ROOTS]
+DATA = next((p for p in ROOTS if (p / 'tasks.jsonl').is_file()), None)
+if DATA is None:
+    raise FileNotFoundError('Attach the competition data; tasks.jsonl is required.')
+rows = [json.loads(line) for line in (DATA / 'tasks.jsonl').read_text().splitlines()
+        if line.strip()]
+ids = [row['instance_id'] for row in rows]
+assert len(ids) == len(set(ids)) and rows
+DATA_SHA256 = hashlib.sha256((DATA / 'tasks.jsonl').read_bytes()).hexdigest()
+print('Notebook revision:', NOTEBOOK_REVISION)
+print('Development issues:', len(rows), '| repositories:', dict(Counter(r['repo'] for r in rows)))
+
+# ----- cell -----
+def is_source_path(path):
+    return (path.endswith('.py') and '/test' not in path
+            and not path.startswith('test') and not path.endswith('_test.py'))
+
+def source_edit_pair(patch):
+    before, after, path = [], [], None
+    for line in patch.splitlines():
+        if line.startswith('diff --git '):
+            path = None
+        elif line.startswith('+++ b/'):
+            path = line[6:]
+            if is_source_path(path):
+                before.append(f'FILE {path}')
+                after.append(f'FILE {path}')
+            else:
+                path = None
+        elif path and line.startswith('@@'):
+            before.append('HUNK')
+            after.append('HUNK')
+        elif path and line.startswith(' '):
+            before.append(line[1:]); after.append(line[1:])
+        elif path and line.startswith('-') and not line.startswith('---'):
+            before.append(line[1:])
+        elif path and line.startswith('+') and not line.startswith('+++'):
+            after.append(line[1:])
+    return '\n'.join(before), '\n'.join(after)
+
+def source_stats(patch):
+    files, hunks, changed, active = 0, 0, 0, False
+    for line in patch.splitlines():
+        if line.startswith('diff --git '):
+            active = False
+        elif line.startswith('+++ b/'):
+            active = is_source_path(line[6:])
+            files += int(active)
+        elif active and line.startswith('@@'):
+            hunks += 1
+        elif active and line.startswith(('+', '-')) and not line.startswith(('+++', '---')):
+            changed += 1
+    return files, hunks, changed
+
+examples = []
+flow = Counter()
+for row in rows:
+    flow['all'] += 1
+    before, after = source_edit_pair(row.get('patch') or '')
+    issue = row.get('problem_statement') or ''
+    if not (before and after and before != after and issue):
+        continue
+    flow['source_edit'] += 1
+    if max(len(before), len(after)) > 2600 or len(issue) > 3500:
+        continue
+    flow['length_bound'] += 1
+    files, hunks, changed = source_stats(row.get('patch') or '')
+    examples.append(dict(id=row['instance_id'], repo=row['repo'], issue=issue,
+                         before=before, after=after,
+                         changed_lines=changed, source_files=files, hunks=hunks))
+assert len(examples) >= 20, 'Too few bounded source edits for this notebook'
+print('Usable examples:', len(examples))
+
+# ----- cell -----
+import pandas as pd
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+from IPython.display import Image, display
+
+COLORS = {'train':'#00B4A6', 'holdout':'#E85D4C'}
+NAVY, CREAM, GOLD = '#0B1F3A', '#F6F1E7', '#F4C95D'
+plt.rcParams.update({'font.family':'DejaVu Sans', 'font.size':11,
+                     'figure.facecolor':CREAM, 'axes.facecolor':CREAM,
+                     'axes.edgecolor':NAVY, 'text.color':NAVY,
+                     'axes.labelcolor':NAVY, 'xtick.color':NAVY,
+                     'ytick.color':NAVY, 'savefig.facecolor':CREAM})
+def emit_chart(fig, name):
+    chart_dir = Path('/kaggle/working/figures')
+    chart_dir.mkdir(parents=True, exist_ok=True)
+    path = chart_dir / f'{name}.png'
+    fig.savefig(path, dpi=150, bbox_inches='tight')
+    assert path.stat().st_size > 1000, f'Empty chart: {path}'
+    display(Image(filename=str(path)))
+    plt.close(fig)
+
+frame = pd.DataFrame(examples)
+frame['split'] = frame.repo.eq('Textualize/rich').map({True:'holdout', False:'train'})
+counts = frame.groupby(['repo','split'], as_index=False).size()
+counts = counts.sort_values('size')
+fig, ax = plt.subplots(figsize=(10, 3.8))
+bars = ax.barh(counts.repo, counts['size'], color=[COLORS[s] for s in counts.split])
+ax.bar_label(bars, padding=5)
+ax.set(xlabel='Usable source edits', title='A whole repository, not random issues, is held out')
+ax.spines[['top','right']].set_visible(False)
+emit_chart(fig, '01_repository_holdout')
+
+# ----- cell -----
+frame['issue_chars'] = frame.issue.str.len()
+frame['target_chars'] = frame.after.str.len()
+fig, ax = plt.subplots(figsize=(10, 4.4))
+for split, subset in frame.groupby('split'):
+    ax.scatter(subset.issue_chars, subset.target_chars,
+               s=24 + subset.changed_lines.clip(upper=100) * 3,
+               c=COLORS[split], label=split, alpha=.7, edgecolors=NAVY, linewidths=.3)
+ax.set(xlabel='Issue characters', ylabel='After-edit characters',
+       title='Does a longer issue require a longer source edit?')
+ax.legend(frameon=False)
+ax.spines[['top','right']].set_visible(False)
+emit_chart(fig, '02_issue_vs_edit')
+display(frame.groupby('split')[['changed_lines','source_files','hunks']].median().round(1))
+
+# ----- cell -----
+file_bucket = frame.source_files.ge(2).map({False:'one source file', True:'multiple source files'})
+hunk_bucket = frame.hunks.ge(2).map({False:'one hunk', True:'multiple hunks'})
+complexity = pd.crosstab(hunk_bucket, file_bucket).reindex(
+    index=['one hunk','multiple hunks'],
+    columns=['one source file','multiple source files'], fill_value=0)
+from matplotlib.colors import LinearSegmentedColormap
+fig, ax = plt.subplots(figsize=(8, 3.4))
+cmap = LinearSegmentedColormap.from_list('gemma_lab', [CREAM, COLORS['train'], NAVY])
+ax.imshow(complexity.to_numpy(), cmap=cmap, aspect='auto')
+ax.set_xticks(range(len(complexity.columns)), complexity.columns)
+ax.set_yticks(range(len(complexity.index)), complexity.index)
+for y in range(len(complexity.index)):
+    for x in range(len(complexity.columns)):
+        ax.text(x, y, str(complexity.iloc[y,x]), ha='center', va='center',
+                color='white' if complexity.iloc[y,x] > complexity.to_numpy().max()/2 else NAVY,
+                weight='bold')
+ax.set_title('How many repairs cross a hunk or source-file boundary?')
+emit_chart(fig, '03_edit_complexity')
+
+# ----- cell -----
+HOLDOUT_REPO = 'Textualize/rich'
+train_rows = sorted((x for x in examples if x['repo'] != HOLDOUT_REPO), key=lambda x:x['id'])
+eval_rows = sorted((x for x in examples if x['repo'] == HOLDOUT_REPO), key=lambda x:x['id'])
+assert train_rows and eval_rows
+assert not ({x['id'] for x in train_rows} & {x['id'] for x in eval_rows})
+assert {x['repo'] for x in train_rows}.isdisjoint({x['repo'] for x in eval_rows})
+fingerprint = lambda x: hashlib.sha256((x['issue']+'\n'+x['before']).encode()).hexdigest()
+eval_fingerprints = {fingerprint(x) for x in eval_rows}
+overlap = sum(fingerprint(x) in eval_fingerprints for x in train_rows)
+train_rows = [x for x in train_rows if fingerprint(x) not in eval_fingerprints]
+assert train_rows and not any(fingerprint(x) in eval_fingerprints for x in train_rows)
+print('Exact cross-split issue/context duplicates removed:', overlap)
+print(f'Train: {len(train_rows)} from {sorted({x["repo"] for x in train_rows})}')
+print(f'Validation: {len(eval_rows)} from {HOLDOUT_REPO}')
+
+# ----- cell -----
+# The checkpoint must be an attached input. Never contact Hugging Face
+# during a competition submission or silently fall back to a remote ID.
+import importlib.util
+input_root = Path('/kaggle/input')
+candidates = sorted(p.parent for p in input_root.rglob('config.json')
+                    if 'gemma-4-31' in str(p.parent).lower()
+                    and any(p.parent.glob('*.safetensors')))
+if len(candidates) != 1:
+    raise RuntimeError(
+        'Attach exactly one local unsloth/gemma-4-31B-it-unsloth-bnb-4bit '
+        f'model Input with config.json and safetensors shards; found {candidates}.')
+MODEL_SOURCE = candidates[0]
+model_config = json.loads((MODEL_SOURCE / 'config.json').read_text())
+quantization = model_config.get('quantization_config', {})
+if not (quantization.get('load_in_4bit') or quantization.get('quant_method') == 'bitsandbytes'):
+    raise RuntimeError(f'{MODEL_SOURCE} is not the expected 4-bit bitsandbytes checkpoint.')
+shard_names = {p.name for p in MODEL_SOURCE.glob('*.safetensors')}
+weight_index = MODEL_SOURCE / 'model.safetensors.index.json'
+if not weight_index.is_file():
+    raise RuntimeError(f'Missing model shard index: {weight_index}')
+indexed_shards = set(json.loads(weight_index.read_text())['weight_map'].values())
+if not indexed_shards.issubset(shard_names):
+    raise RuntimeError(f'Missing model shards: {sorted(indexed_shards - shard_names)}')
+if not (MODEL_SOURCE / 'tokenizer.json').is_file():
+    raise RuntimeError(f'Missing tokenizer.json in {MODEL_SOURCE}')
+for module in ('unsloth', 'trl', 'transformers'):
+    if importlib.util.find_spec(module) is None:
+        raise RuntimeError(
+            f'{module} is missing. Add-ons → Install Dependencies: '
+            'pip install unsloth==2026.9.11 trl transformers==5.5.0')
+os.environ['HF_HUB_OFFLINE'] = '1'
+os.environ['TRANSFORMERS_OFFLINE'] = '1'
+os.environ['HF_DATASETS_OFFLINE'] = '1'
+
+if shutil.which('nvidia-smi') is None:
+    raise RuntimeError('No Kaggle GPU is attached. In Settings → Accelerator choose GPU T4 x2, then save and run a new version.')
+gpu = subprocess.run(['nvidia-smi', '--query-gpu=memory.total', '--format=csv,noheader,nounits'],
+                     capture_output=True, text=True, check=True)
+memory_mb = [int(line.strip()) for line in gpu.stdout.splitlines() if line.strip()]
+if len(memory_mb) < 2 or min(memory_mb[:2]) < 14000:
+    raise RuntimeError('Select GPU T4 x2: two devices with at least 14,000 MiB each are required.')
+print('GPU memory, MiB:', memory_mb, '| model placement: balanced across GPUs')
+cache_root = Path('/kaggle/temp') if Path('/kaggle/temp').is_dir() else Path('/tmp')
+free_gib = shutil.disk_usage(cache_root).free / 1024**3
+os.environ['HF_HOME'] = str(cache_root / 'gemma4_hf_cache')
+print('Offline model:', MODEL_SOURCE, '| scratch free GiB:', round(free_gib,1))
+
+# ----- cell -----
+from unsloth import FastModel
+from unsloth.chat_templates import get_chat_template
+import torch
+
+MODEL_ID = str(MODEL_SOURCE)
+model, tokenizer = FastModel.from_pretrained(
+    model_name=MODEL_ID, max_seq_length=1024, load_in_4bit=True,
+    full_finetuning=False, device_map='balanced', use_exact_model_name=True,
+)
+print('Model device map:', getattr(model, 'hf_device_map', 'not exposed'))
+allocated_gib = [round(torch.cuda.memory_allocated(i)/1024**3,2)
+                 for i in range(torch.cuda.device_count())]
+print('Allocated GiB after load:', allocated_gib)
+if min(allocated_gib[:2]) < 0.5:
+    raise RuntimeError('The 31B model did not split across both T4 GPUs; stop before training.')
+tokenizer = get_chat_template(tokenizer, chat_template='gemma-4-thinking')
+model = FastModel.get_peft_model(
+    model, finetune_vision_layers=False, finetune_language_layers=True,
+    finetune_attention_modules=True, finetune_mlp_modules=True,
+    r=8, lora_alpha=8, lora_dropout=0, bias='none', random_state=SEED,
+    use_gradient_checkpointing='unsloth',
+)
+
+# ----- cell -----
+from datasets import Dataset
+
+SYSTEM = 'You fix a Python issue. Return only the corrected source excerpt with FILE and HUNK markers.'
+def as_text(row):
+    prompt = f'Issue:\n{row["issue"]}\n\nCurrent source excerpt:\n{row["before"]}'
+    messages = [{'role':'system','content':SYSTEM},
+                {'role':'user','content':prompt},
+                {'role':'assistant','content':row['after']}]
+    return tokenizer.apply_chat_template(messages, tokenize=False,
+                                         add_generation_prompt=False).removeprefix('<bos>')
+
+def fits(row):
+    return len(tokenizer(text=as_text(row), add_special_tokens=False)['input_ids']) <= 1024
+train_rows = [x for x in train_rows if fits(x)]
+eval_rows = [x for x in eval_rows if fits(x)][:12]
+flow['token_fit'] = len(train_rows) + len(eval_rows)
+assert len(train_rows) >= 20 and len(eval_rows) >= 4
+train_set = Dataset.from_list([{'text':as_text(x)} for x in train_rows])
+eval_set = Dataset.from_list([{'text':as_text(x)} for x in eval_rows])
+assert all('Current source excerpt:' in t for t in train_set['text'])
+assert all('Current source excerpt:' in t for t in eval_set['text'])
+print('Train / validation examples:', len(train_set), len(eval_set))
+
+# ----- cell -----
+stages = ['all public issues', 'source fix available', 'character bounds', 'token fit / selected']
+values = [flow['all'], flow['source_edit'], flow['length_bound'], flow['token_fit']]
+assert all(a >= b for a,b in zip(values, values[1:]))
+fig, ax = plt.subplots(figsize=(10, 3.8))
+bars = ax.barh(stages[::-1], values[::-1], color=[GOLD, COLORS['train'], '#2E6474', NAVY])
+ax.bar_label(bars, labels=[f'{v} ({v/values[0]:.0%})' for v in values[::-1]], padding=5)
+ax.set(xlabel='Public issues', title='Every training filter has a visible cost')
+ax.set_xlim(0, values[0] * 1.25)
+ax.spines[['top','right']].set_visible(False)
+emit_chart(fig, '04_filter_funnel')
+
+# ----- cell -----
+token_rows = []
+for split, subset in [('train',train_rows), ('holdout',eval_rows)]:
+    for row in subset:
+        full = tokenizer(text=as_text(row), add_special_tokens=False)['input_ids']
+        token_rows.append({'split':split, 'tokens':len(full), 'repo':row['repo']})
+token_frame = pd.DataFrame(token_rows)
+fig, ax = plt.subplots(figsize=(10, 3.8))
+for split in ('train','holdout'):
+    ax.hist(token_frame.loc[token_frame.split == split, 'tokens'], bins=20,
+            alpha=.7, color=COLORS[split], label=split)
+ax.axvline(1024, linestyle='--', color=COLORS['holdout'], linewidth=1.5)
+ax.set(xlabel='Tokens per complete example', ylabel='Examples',
+       title='Actual token lengths stay below the 1,024-token budget')
+ax.legend(frameon=False)
+ax.spines[['top','right']].set_visible(False)
+emit_chart(fig, '05_token_lengths')
+
+# ----- cell -----
+from trl import SFTConfig, SFTTrainer
+from unsloth.chat_templates import train_on_responses_only
+
+trainer = SFTTrainer(
+    model=model, tokenizer=tokenizer, train_dataset=train_set, eval_dataset=eval_set,
+    args=SFTConfig(
+        output_dir='/kaggle/working/qlora_checkpoints', dataset_text_field='text',
+        max_length=1024, per_device_train_batch_size=1,
+        per_device_eval_batch_size=1, gradient_accumulation_steps=4,
+        num_train_epochs=1, learning_rate=8e-5, optim='adamw_8bit',
+        logging_steps=1, eval_strategy='no', save_strategy='no',
+        disable_tqdm=True,
+        report_to='none', seed=SEED, bf16=torch.cuda.is_bf16_supported(),
+        fp16=not torch.cuda.is_bf16_supported(),
+    ),
+)
+trainer = train_on_responses_only(
+    trainer, instruction_part='<|turn>user\n', response_part='<|turn>model\n')
+# Transformers' notebook progress callback in the Kaggle image raises on
+# evaluate() before train(). It is display-only; loss logging remains on.
+for callback in tuple(trainer.callback_handler.callbacks):
+    if type(callback).__name__ == 'NotebookProgressCallback':
+        trainer.remove_callback(type(callback))
+assert not any(type(callback).__name__ == 'NotebookProgressCallback'
+               for callback in trainer.callback_handler.callbacks)
+effective_train_examples = len(trainer.train_dataset)
+effective_eval_examples = len(trainer.eval_dataset)
+assert effective_train_examples >= 20 and effective_eval_examples >= 4
+for dataset in (trainer.train_dataset, trainer.eval_dataset):
+    for row in dataset:
+        labels = row['labels']
+        assert any(x != -100 for x in labels) and any(x == -100 for x in labels)
+print('Prompt masking checked; effective train / validation examples:',
+      effective_train_examples, effective_eval_examples)
+
+# ----- cell -----
+import time
+for gpu_index in range(torch.cuda.device_count()):
+    torch.cuda.reset_peak_memory_stats(gpu_index)
+before_loss = trainer.evaluate()['eval_loss']
+started = time.perf_counter()
+train_stats = trainer.train()
+train_seconds = time.perf_counter() - started
+after_loss = trainer.evaluate()['eval_loss']
+peak_by_gpu = [round(torch.cuda.max_memory_allocated(i)/1024**3,2)
+               for i in range(torch.cuda.device_count())]
+peak_gib = max(peak_by_gpu)
+result = dict(before_eval_loss=float(before_loss), after_eval_loss=float(after_loss),
+              training_loss=float(train_stats.training_loss),
+              train_examples=effective_train_examples,
+              eval_examples=effective_eval_examples,
+              train_candidates=len(train_rows), eval_candidates=len(eval_rows),
+              notebook_revision=NOTEBOOK_REVISION,
+              train_candidate_ids=[x['id'] for x in train_rows],
+              eval_candidate_ids=[x['id'] for x in eval_rows], data_sha256=DATA_SHA256,
+              train_repos=sorted({x['repo'] for x in train_rows}),
+              eval_repo=HOLDOUT_REPO, seed=SEED, model=MODEL_ID,
+              train_seconds=round(train_seconds,1), peak_gpu_gib=peak_by_gpu)
+from importlib.metadata import version
+result['versions'] = {name:version(name) for name in ['torch','transformers','trl','unsloth']}
+print(pd.DataFrame([result])[['before_eval_loss','after_eval_loss','training_loss']])
+Path('/kaggle/working/qlora_result.json').write_text(json.dumps(result, indent=2))
+
+# ----- cell -----
+logs = pd.DataFrame([x for x in trainer.state.log_history if 'loss' in x and 'step' in x])
+assert not logs.empty
+fig, ax = plt.subplots(figsize=(10, 3.8))
+ax.plot(logs.step, logs.loss, marker='o', color=COLORS['train'],
+        markerfacecolor=NAVY, linewidth=2)
+ax.set(xlabel='Optimizer step', ylabel='Training loss',
+       title='Training loss: a diagnostic, not a competition score')
+ax.grid(axis='y', alpha=.2)
+ax.spines[['top','right']].set_visible(False)
+emit_chart(fig, '06_training_loss')
+
+# ----- cell -----
+loss_frame = pd.DataFrame({'checkpoint':['before LoRA update','after LoRA update'],
+                           'heldout_loss':[before_loss, after_loss]})
+fig, ax = plt.subplots(figsize=(9, 3.8))
+bars = ax.bar(loss_frame.checkpoint, loss_frame.heldout_loss,
+              color=[NAVY, COLORS['train']], width=.55)
+ax.bar_label(bars, fmt='%.3f', padding=5)
+ax.set(ylabel='Rich next-token loss',
+       title='Did the held-out repository training signal improve?')
+ax.set_ylim(0, max(loss_frame.heldout_loss) * 1.18)
+ax.spines[['top','right']].set_visible(False)
+emit_chart(fig, '07_heldout_loss')
+print(f'GPU peaks: {peak_by_gpu} GiB | training: {train_seconds/60:.1f} min | held-out delta: {after_loss-before_loss:+.3f}')
+
+# ----- cell -----
+from IPython.display import Markdown
+delta = after_loss - before_loss
+direction = 'fell' if delta < 0 else 'rose' if delta > 0 else 'did not change'
+display(Markdown(
+    f'### Finding from this run\n\n'
+    f'Rich next-token loss **{direction}** from **{before_loss:.3f}** to '
+    f'**{after_loss:.3f}** (delta **{delta:+.3f}**). Training took '
+    f'**{train_seconds/60:.1f} minutes**. Peak allocated memory by GPU was '
+    f'**{peak_by_gpu} GiB**. This result concerns patch drafting on {effective_eval_examples} held-out fixes. '
+    'It is not an issue-resolution or leaderboard score.'
+))
+
+# ----- cell -----
+OUT = Path('/kaggle/working/gemma4_qlora_agent')
+ADAPTER = OUT / 'adapters' / 'main_lora'
+ADAPTER.mkdir(parents=True, exist_ok=True)
+model.save_pretrained(ADAPTER, safe_serialization=True)
+assert (ADAPTER / 'adapter_config.json').is_file()
+assert (ADAPTER / 'adapter_model.safetensors').is_file(), 'PEFT adapter weights were not saved'
+BASELINE_FILES = {'agent.yaml': 'name: repository_fixer\nmodel: gemma-4-31b-it-qat-w4a16-ct\ninstruction: !include prompts/system.md\ntools:\n  - run_command\n  - read_file\n  - edit_file\n  - write_file\n  - get_status\n  - submit_patch\n  - get_code_neighbors\n  - search_similar_code\n  - get_code_subgraph\ngenerate_content_config: !include configs/sampling.yaml\n', 'prompts/system.md': "You are a software engineer fixing one Python repository issue in /workspace. The deliverable is the repository diff captured by submit_patch(). Work efficiently: the contest budget is shared across issues, and a correct edit that is never submitted earns nothing.\n\n1. LOCALIZE. Extract file paths, Python identifiers, quoted error text, API names, and behavior words from the issue. If it names a file, read it. Otherwise make one bounded exact search, such as `rg -n -F 'identifier' --glob '*.py' . | head -80`. Inspect matching implementation and nearby tests. If no exact term matches, search one or two alternate terms or list candidate files with `rg --files | head -80`. Never dump the full tree or run recursive grep through generated data. Use search_similar_code only for a real code symbol after ordinary search stalls; prose queries can retrieve irrelevant nodes. Use get_code_neighbors or get_code_subgraph only when caller relationships matter. Return to ordinary search if graph data is empty.\n\n2. DIAGNOSE. Read narrow source ranges and relevant tests. Identify the expected behavior, root cause, and edge cases before editing. When fast, run one existing targeted test or a tiny reproduction in /tmp to see the failure. A test that passes before the edit is a regression guard, not proof that the requested behavior works. Do not install dependencies or spend the entire issue budget exploring.\n\n3. REPAIR. Change the implementation with a small coherent edit. For edit_file, copy a short unique old_string directly from the current file and preserve indentation; after a failed replacement, reread the exact region before retrying. Multiple coordinated edits are fine when the issue requires them. Use write_file for a genuinely new source file. Preserve APIs and existing behavior unless the issue asks otherwise. Avoid modifying tests, test configuration, generated files, package metadata, or unrelated code to force a pass. Executable documentation examples can be part of the implementation when the issue concerns them. Keep scratch work in /tmp, outside the submitted diff.\n\n4. VERIFY. Run the narrowest available behavior check, then compile changed Python files and run `git diff --check`. Inspect `git status --short` and the relevant `git diff HEAD`. If the issue reproduction still fails, use that result to correct the edit. If a test fails because of an unrelated environment or baseline problem, record the uncertainty and continue. Never state that a test passed without seeing its successful output. Avoid full-suite runs unless they are clearly small and time remains.\n\n5. SUBMIT. Call get_status when time or call budget is uncertain. Reserve enough time to inspect and submit. When a useful source diff exists, call submit_patch() as the final tool action, even if tests could not run. If no correct fix is possible, submit only an honest partial improvement and do not fabricate a patch or a test result.\n", 'configs/sampling.yaml': 'temperature: 0.15\ntop_p: 0.95\nmax_output_tokens: 8192\nthinking_config:\n  thinking_budget: 3072\n  include_thoughts: false\n'}
+for relative, content in BASELINE_FILES.items():
+    target = OUT / relative
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_text(content, encoding='utf-8')
+agent_path = OUT / 'agent.yaml'
+baseline_agent = agent_path.read_text(encoding='utf-8')
+model_line = 'model: gemma-4-31b-it-qat-w4a16-ct'
+assert baseline_agent.count(model_line) == 1
+agent_path.write_text(baseline_agent.replace(
+    model_line, model_line + '\nadapter: main_lora', 1), encoding='utf-8')
+
+# ----- cell -----
+import yaml
+config = yaml.safe_load((OUT / 'agent.yaml').read_text()
+                        .replace('!include prompts/system.md', 'prompts/system.md')
+                        .replace('!include configs/sampling.yaml', 'configs/sampling.yaml'))
+assert config['model'] == 'gemma-4-31b-it-qat-w4a16-ct'
+assert config['adapter'] == 'main_lora'
+assert set(config['tools']) == {
+    'run_command', 'read_file', 'edit_file', 'write_file', 'get_status',
+    'submit_patch', 'get_code_neighbors', 'search_similar_code',
+    'get_code_subgraph',
+}
+assert config['generate_content_config'] == 'configs/sampling.yaml'
+assert (OUT / 'prompts' / 'system.md').read_text() == BASELINE_FILES['prompts/system.md']
+assert (OUT / 'configs' / 'sampling.yaml').read_text() == BASELINE_FILES['configs/sampling.yaml']
+archive = Path('/kaggle/working/submission.zip')
+with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED) as z:
+    for p in sorted(OUT.rglob('*')):
+        if p.is_file() and not p.is_symlink():
+            z.write(p, p.relative_to(OUT).as_posix())
+with zipfile.ZipFile(archive) as z:
+    assert z.testzip() is None and 'agent.yaml' in z.namelist()
+    assert 'prompts/system.md' in z.namelist()
+    assert 'configs/sampling.yaml' in z.namelist()
+    assert 'adapters/main_lora/adapter_model.safetensors' in z.namelist()
+    assert sum(x.file_size for x in z.infolist()) < 3 * 1024**3
+print('Archive:', archive, 'SHA-256:', hashlib.sha256(archive.read_bytes()).hexdigest())

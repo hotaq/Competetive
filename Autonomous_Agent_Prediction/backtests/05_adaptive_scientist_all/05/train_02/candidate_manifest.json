@@ -1,0 +1,167 @@
+{
+  "manifest_version": 1,
+  "classes": [
+    0,
+    1
+  ],
+  "rows": 10000,
+  "features": 28,
+  "recipe_id": "mixed-safe",
+  "planner": {
+    "source": "profile",
+    "valid": true,
+    "recipe_id": "mixed-safe"
+  },
+  "initial_candidates": [
+    "catboost_d6",
+    "lightgbm_native",
+    "logistic"
+  ],
+  "challenger_candidates": [
+    "interaction_te",
+    "meta_logstack",
+    "hist_gradient"
+  ],
+  "candidates": [
+    {
+      "file": "candidate_catboost_d6.csv",
+      "state_file": "candidate_catboost_d6.npz",
+      "name": "catboost_d6",
+      "family": "catboost",
+      "role": "anchor",
+      "oof_auc": 0.96571093,
+      "fold_auc": [
+        0.96578596,
+        0.96230273,
+        0.96145672,
+        0.9646035,
+        0.97413024
+      ],
+      "fold_auc_std": 0.00451256,
+      "test_rank_correlation_to_best": 0.9886516
+    },
+    {
+      "file": "candidate_lightgbm_native.csv",
+      "state_file": "candidate_lightgbm_native.npz",
+      "name": "lightgbm_native",
+      "family": "lightgbm",
+      "role": "anchor",
+      "oof_auc": 0.97033138,
+      "fold_auc": [
+        0.9688376,
+        0.96849394,
+        0.967246,
+        0.96937525,
+        0.97763782
+      ],
+      "fold_auc_std": 0.00372624,
+      "test_rank_correlation_to_best": 0.99685356
+    },
+    {
+      "file": "candidate_logistic.csv",
+      "state_file": "candidate_logistic.npz",
+      "name": "logistic",
+      "family": "linear",
+      "role": "anchor",
+      "oof_auc": 0.78273095,
+      "fold_auc": [
+        0.77667692,
+        0.7749528,
+        0.78447376,
+        0.79396523,
+        0.78384092
+      ],
+      "fold_auc_std": 0.00674709,
+      "test_rank_correlation_to_best": 0.54679152
+    },
+    {
+      "file": "candidate_interaction_te.csv",
+      "state_file": "candidate_interaction_te.npz",
+      "name": "interaction_te",
+      "family": "interaction",
+      "role": "challenger",
+      "oof_auc": 0.96304307,
+      "fold_auc": [
+        0.96251584,
+        0.96149429,
+        0.95635521,
+        0.96265011,
+        0.97242966
+      ],
+      "fold_auc_std": 0.00520876,
+      "test_rank_correlation_to_best": 0.98707007
+    },
+    {
+      "file": "candidate_meta_logstack.csv",
+      "state_file": "candidate_meta_logstack.npz",
+      "name": "meta_logstack",
+      "family": "meta",
+      "role": "challenger",
+      "oof_auc": 0.97131679,
+      "fold_auc": [
+        0.97159493,
+        0.96930597,
+        0.97372528,
+        0.96779558,
+        0.97434259
+      ],
+      "fold_auc_std": 0.00250876,
+      "test_rank_correlation_to_best": 1.0
+    },
+    {
+      "file": "candidate_hist_gradient.csv",
+      "state_file": "candidate_hist_gradient.npz",
+      "name": "hist_gradient",
+      "family": "histogram",
+      "role": "challenger",
+      "oof_auc": 0.96034807,
+      "fold_auc": [
+        0.95626137,
+        0.95937537,
+        0.95595727,
+        0.9596137,
+        0.97026936
+      ],
+      "fold_auc_std": 0.00521313,
+      "test_rank_correlation_to_best": 0.98327003
+    }
+  ],
+  "diagnostics": {
+    "anchors": [
+      "catboost_d6",
+      "lightgbm_native",
+      "logistic"
+    ],
+    "guarded_selection": {
+      "best_core": {
+        "name": "lightgbm_native",
+        "family": "lightgbm",
+        "oof_auc": 0.97033138
+      },
+      "blend_gate": {
+        "accepted": true,
+        "name": "meta_logstack",
+        "oof_auc": 0.97131679,
+        "gain": 0.00098542,
+        "test_rank_correlation_to_best": 0.99685356
+      },
+      "interaction_gate": {
+        "accepted": false,
+        "name": "interaction_te",
+        "oof_auc": 0.96304307,
+        "standalone_gain": -0.00728831,
+        "blend_auc": 0.97012532,
+        "blend_gain": -0.00020605,
+        "fold_auc_std": 0.00520876,
+        "test_rank_correlation": 0.98771955,
+        "stable": true,
+        "diverse": false,
+        "improves": false
+      }
+    },
+    "recipe_candidates": [
+      "interaction_te"
+    ]
+  },
+  "failures": []
+}

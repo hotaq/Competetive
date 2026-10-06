@@ -1,0 +1,53 @@
+{
+  "artifacts": {
+    "dino_sha256": "56123233443d3c47e97b2970510d959e93dbcab9c02adf7ec18febc817449b5e",
+    "global025_sha256": "c6fd36585ed3a7420b2c76416b246a210ce9140f3ca5ac0e500741056fdaac38",
+    "global030_sha256": "d2de13ea6ed484f00f2cd518336072d53c6cc40ed23efa481c67fa66d44e0f16",
+    "guarded_sha256": "7def21909320eec20e839a0b8659a04e48f496882cc4a3ebaa9412b1d86ae508",
+    "submission_sha256": "7def21909320eec20e839a0b8659a04e48f496882cc4a3ebaa9412b1d86ae508"
+  },
+  "candidate": "submission_e012_guarded030.csv",
+  "checks": {
+    "e011_decision": "GO_E012",
+    "finite": true,
+    "head_count": 10,
+    "rows": 3,
+    "uid_parity": true,
+    "uid_unique": true
+  },
+  "experiment": "E012 E010 DINO plus self-trained RadImageNet heads",
+  "formula": {
+    "alpha": {
+      "ACL": 0.3,
+      "Baker's": 0.0,
+      "Contusion": 0.3,
+      "Effusion": 0.3,
+      "Fracture": 0.0,
+      "Lateral Meniscus": 0.3,
+      "Lateral OA": 0.3,
+      "MCL": 0.3,
+      "Medial Meniscus": 0.3,
+      "Medial OA": 0.3,
+      "PF OA": 0.3,
+      "Synovitis": 0.3
+    },
+    "base": "rank(E010 scored DINOv2+DINOv3 fold-rank stack)",
+    "guard_targets": [
+      "Baker's",
+      "Fracture"
+    ],
+    "rad": "mean over five ranks; each fold probability-averages two seeds first"
+  },
+  "license": {
+    "encoder": "official BMEII-AI RadImageNet MIT checkpoint",
+    "heads": "self-trained E011 outputs; public CC-BY-NC-SA heads not attached"
+  },
+  "oof_evidence": {
+    "base_canonical_fold_macro": 0.8526296111250014,
+    "base_gold58_macro": 0.8436761604700802,
+    "candidate_canonical_fold_macro": 0.8594580137547715,
+    "candidate_gold58_macro": 0.8601229193932435,
+    "global_crossfit_mean_alpha": 0.29
+  },
+  "submission_csv_is_candidate": true
+}

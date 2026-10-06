@@ -1,0 +1,36 @@
+{
+  "artifacts": {
+    "oof_rows": 691369,
+    "test_rows": 296302,
+    "unique_ids": true,
+    "finite_and_bounded_predictions": true,
+    "train_ids_aligned": true,
+    "labels_aligned": true,
+    "test_ids_aligned": true,
+    "sha256_matches": {
+      "oof.csv": true,
+      "test_predictions.csv": true
+    }
+  },
+  "anchor_auc": 0.9704211377086109,
+  "promotion": {
+    "lgb_highbin_raw": {
+      "standalone_auc": 0.9664298146310843,
+      "spearman_vs_anchor": 0.9795636655308733,
+      "primary_weight": 0.025,
+      "primary_delta": -3.1301652902993027e-06,
+      "primary_fold_wins": 1,
+      "gate_pass": false
+    },
+    "lgb_highbin_freq3": {
+      "standalone_auc": 0.9666444506598497,
+      "spearman_vs_anchor": 0.9809987473578041,
+      "primary_weight": 0.025,
+      "primary_delta": -2.942163763286487e-06,
+      "primary_fold_wins": 1,
+      "gate_pass": false
+    }
+  },
+  "generated_submissions": [],
+  "competition_submission_made": false
+}

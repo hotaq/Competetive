@@ -1,0 +1,35 @@
+{
+  "artifacts": {
+    "candidate_sha256": "efef2c45199e2440c86f10235702606f6c0ba6bebf5a6cf2b08410d4b51b6751",
+    "probmean_base_sha256": "a402f7170a7f442efe6066fd7dfe189261813a625eb2a681ea8b3f90cb77b37e",
+    "submission_sha256": "efef2c45199e2440c86f10235702606f6c0ba6bebf5a6cf2b08410d4b51b6751"
+  },
+  "checks": {
+    "finite": true,
+    "submission_csv_is_candidate": true,
+    "uid_order_matches_e012": true,
+    "uid_unique": true
+  },
+  "experiment": "E013 probability-mean DINOv3 plus guarded Rad",
+  "formula": {
+    "base": "rank(0.65 DINOv2 + 0.35 rank(mean DINOv3 probabilities))",
+    "guard_targets": [
+      "Baker's",
+      "Fracture"
+    ],
+    "rad_alpha": {
+      "ACL": 0.3,
+      "Baker's": 0.0,
+      "Contusion": 0.3,
+      "Effusion": 0.3,
+      "Fracture": 0.0,
+      "Lateral Meniscus": 0.3,
+      "Lateral OA": 0.3,
+      "MCL": 0.3,
+      "Medial Meniscus": 0.3,
+      "Medial OA": 0.3,
+      "PF OA": 0.3,
+      "Synovitis": 0.3
+    }
+  }
+}

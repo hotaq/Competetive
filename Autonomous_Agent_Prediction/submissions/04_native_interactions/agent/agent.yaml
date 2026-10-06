@@ -1,0 +1,16 @@
+name: robust_portfolio_submission
+model: gemini-3.1-flash-lite
+instruction: !include prompts/system.md
+tools:
+  - run_command
+  - submit_predictions
+  - select_submission
+  - get_status
+skills:
+  - skills/robust-portfolio
+generate_content_config:
+  temperature: 0
+  max_output_tokens: 4096
+  thinking_config:
+    thinking_budget: 512
+    include_thoughts: true

@@ -1,0 +1,82 @@
+{
+  "topic": {
+    "authorUser": {
+      "displayName": "Caio Julio",
+      "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+      "url": "/caiojulio",
+      "tier": "CONTRIBUTOR",
+      "id": 24637603,
+      "progressionOptOut": false
+    },
+    "authorType": "TOPIC",
+    "firstForumMessageId": 3452654,
+    "id": 696769,
+    "lastCommenterType": "TOPIC",
+    "lastCommenterName": "Caio Julio",
+    "lastCommenterUrl": "/competitions/playground-series-s6e5/discussion/696769#3452654",
+    "lastCommentPostDate": "2026-05-04T03:43:03.376666700Z",
+    "parentName": "Predicting F1 Pit Stops",
+    "parentUrl": "/competitions/playground-series-s6e5/discussion",
+    "postDate": "2026-05-04T03:43:03.376197600Z",
+    "title": "Is this distribution correct, or am I missing something? (Yearly inconsistency in PitNextLap)",
+    "topicUrl": "/competitions/playground-series-s6e5/discussion/696769",
+    "votes": 1,
+    "teamUpInfo": {
+      "teamLeader": {
+        "displayName": "Caio Julio",
+        "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+        "url": "/caiojulio",
+        "userName": "caiojulio",
+        "tier": "CONTRIBUTOR",
+        "id": 24637603,
+        "profileUrl": "/caiojulio",
+        "performanceTier": "CONTRIBUTOR",
+        "userId": 24637603,
+        "progressionOptOut": false
+      },
+      "intro": ""
+    }
+  },
+  "firstMessage": {
+    "id": 3452654,
+    "postDate": "2026-05-04T03:43:03.377Z",
+    "rawMarkdown": "Hello everyone,\n\nEnglish is not my first language, so I appreciate your patience. I am new to this field, but while performing some EDA on the dataset, I noticed a possible inconsistency in the target variable 'PitNextLap' across different years.\n\nIt seems that the class distribution for 2023 is very different compared to the other years (2022, 2024, and 2025). In 2023, the proportion of pit stops is around 1%, while in other years it jumps to nearly 30%.\n\nI used the following code to check this:\n\n```\nproportion = pd.crosstab(data['Year'], data['PitNextLap'], normalize='index') * 100\n\nprint(\"Proportion of the Pit Stops per Year (%):\")\nprint(proportion)\n```\nThis code produces the following output:\n\n```\nProportion of the Pit Stops per Year (%):\nPitNextLap        0.0        1.0\nYear                            \n2022        73.349480  26.650520\n2023        99.039274   0.960726\n2024        70.468098  29.531902\n2025        71.561134  28.438866\n```\n\ni also wrote another complementary code to see if in the year of 2023 has fewer race, or laps\n\n```\n# Years\nyear_unique = np.sort(data['Year'].unique())\n\n# Rows with PitStop = 0\nPitNextLap_false_per_year = data[data['PitNextLap'] == 0].groupby('Year')['PitNextLap'].count()\n\n# Rows with PitStop = 1\nPitNextLap_true_per_year = data[data['PitNextLap'] == 1].groupby('Year')['PitNextLap'].count()\n\n# Race per Year\nRace_per_year = data.groupby('Year')['Race'].nunique()\n\n# Getting laps per race manually\nlaps_per_race22 = data[data['Year'] == 2022].groupby(['Year','Race'])['LapNumber'].nunique().sum()\nlaps_por_race23 = data[data['Year'] == 2023].groupby(['Year','Race'])['LapNumber'].nunique().sum()\nlaps_por_race24 = data[data['Year'] == 2024].groupby(['Year','Race'])['LapNumber'].nunique().sum()\nlaps_por_race25 = data[data['Year'] == 2025].groupby(['Year','Race'])['LapNumber'].nunique().sum()\n\nlaps_per_year = pd.Series(\n    [laps_per_race22, \n     laps_por_race23, \n     laps_por_race24, \n     laps_por_race25], \n    index = [2022, 2023, 2024, 2025])\n\n\ndf_exp = pd.DataFrame({\n    #'Year': year_unique,\n    'PitNextLap False': PitNextLap_false_per_year,\n    'PitNextLap True': PitNextLap_true_per_year,\n    'Race': Race_per_year,\n    'Total Laps': laps_per_year\n    \n    })\n\ndf_exp.head()\n```\n\nThe output shows that race and laps per year are relatively stable:\n\n| Year | PitNextLap False | PitNextLap True | Race | Total Laps |\n|------|------------------|-----------------|------|------------|\n| 2022 | 60872            | 22117           | 26   | 1454       |\n| 2023 | 134839           | 1308            | 26   | 1480       |\n| 2024 | 89572            | 37538           | 26   | 1647       |\n| 2025 | 66476            | 26418           | 26   | 1601       |\n\nSince a pit stop usually happens only a few times per race, the ~30% rate feels like an anomaly compared to the ~1% in 2023. Am i missing something or is there a specific reason for this gap?\n\nI would love to hear your thoughts!",
+    "content": "<p>Hello everyone,</p>\n<p>English is not my first language, so I appreciate your patience. I am new to this field, but while performing some EDA on the dataset, I noticed a possible inconsistency in the target variable 'PitNextLap' across different years.</p>\n<p>It seems that the class distribution for 2023 is very different compared to the other years (2022, 2024, and 2025). In 2023, the proportion of pit stops is around 1%, while in other years it jumps to nearly 30%.</p>\n<p>I used the following code to check this:</p>\n<pre><code>proportion = pd.crosstab(data['Year'], data['PitNextLap'], normalize='index') * 100\n\nprint(\"Proportion of the Pit Stops per Year (%):\")\nprint(proportion)\n</code></pre>\n<p>This code produces the following output:</p>\n<pre><code>Proportion of the Pit Stops per Year (%):\nPitNextLap        0.0        1.0\nYear                            \n2022        73.349480  26.650520\n2023        99.039274   0.960726\n2024        70.468098  29.531902\n2025        71.561134  28.438866\n</code></pre>\n<p>i also wrote another complementary code to see if in the year of 2023 has fewer race, or laps</p>\n<pre><code># Years\nyear_unique = np.sort(data['Year'].unique())\n\n# Rows with PitStop = 0\nPitNextLap_false_per_year = data[data['PitNextLap'] == 0].groupby('Year')['PitNextLap'].count()\n\n# Rows with PitStop = 1\nPitNextLap_true_per_year = data[data['PitNextLap'] == 1].groupby('Year')['PitNextLap'].count()\n\n# Race per Year\nRace_per_year = data.groupby('Year')['Race'].nunique()\n\n# Getting laps per race manually\nlaps_per_race22 = data[data['Year'] == 2022].groupby(['Year','Race'])['LapNumber'].nunique().sum()\nlaps_por_race23 = data[data['Year'] == 2023].groupby(['Year','Race'])['LapNumber'].nunique().sum()\nlaps_por_race24 = data[data['Year'] == 2024].groupby(['Year','Race'])['LapNumber'].nunique().sum()\nlaps_por_race25 = data[data['Year'] == 2025].groupby(['Year','Race'])['LapNumber'].nunique().sum()\n\nlaps_per_year = pd.Series(\n    [laps_per_race22, \n     laps_por_race23, \n     laps_por_race24, \n     laps_por_race25], \n    index = [2022, 2023, 2024, 2025])\n\n\ndf_exp = pd.DataFrame({\n    #'Year': year_unique,\n    'PitNextLap False': PitNextLap_false_per_year,\n    'PitNextLap True': PitNextLap_true_per_year,\n    'Race': Race_per_year,\n    'Total Laps': laps_per_year\n\n    })\n\ndf_exp.head()\n</code></pre>\n<p>The output shows that race and laps per year are relatively stable:</p>\n<table>\n<thead>\n<tr>\n<th>Year</th>\n<th>PitNextLap False</th>\n<th>PitNextLap True</th>\n<th>Race</th>\n<th>Total Laps</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>2022</td>\n<td>60872</td>\n<td>22117</td>\n<td>26</td>\n<td>1454</td>\n</tr>\n<tr>\n<td>2023</td>\n<td>134839</td>\n<td>1308</td>\n<td>26</td>\n<td>1480</td>\n</tr>\n<tr>\n<td>2024</td>\n<td>89572</td>\n<td>37538</td>\n<td>26</td>\n<td>1647</td>\n</tr>\n<tr>\n<td>2025</td>\n<td>66476</td>\n<td>26418</td>\n<td>26</td>\n<td>1601</td>\n</tr>\n</tbody>\n</table>\n<p>Since a pit stop usually happens only a few times per race, the ~30% rate feels like an anomaly compared to the ~1% in 2023. Am i missing something or is there a specific reason for this gap?</p>\n<p>I would love to hear your thoughts!</p>",
+    "parent": {
+      "url": "#"
+    },
+    "author": {
+      "displayName": "Caio Julio",
+      "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+      "url": "/caiojulio",
+      "tier": "CONTRIBUTOR",
+      "id": 24637603,
+      "progressionOptOut": false
+    },
+    "authorType": "TOPIC",
+    "votes": {
+      "totalVotes": 1,
+      "canUpvote": true,
+      "totalUpvotes": 1
+    },
+    "kernelVersion": 0,
+    "competitionRanking": 464,
+    "feedbackTrackingData": {},
+    "teamUpInfo": {
+      "teamLeader": {
+        "displayName": "Caio Julio",
+        "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+        "url": "/caiojulio",
+        "userName": "caiojulio",
+        "tier": "CONTRIBUTOR",
+        "id": 24637603,
+        "profileUrl": "/caiojulio",
+        "performanceTier": "CONTRIBUTOR",
+        "userId": 24637603,
+        "progressionOptOut": false
+      },
+      "intro": ""
+    }
+  },
+  "comments": []
+}

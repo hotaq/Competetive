@@ -1,0 +1,775 @@
+{
+  "forumTopic": {
+    "authorId": 11351811,
+    "authorThumbnailName": "11351811-kg.jpg?t=2025-07-02-06-16-19",
+    "authorUserDisplayName": "Komil Parmar",
+    "authorUserName": "komilparmar",
+    "comments": [
+      {
+        "id": 3446096,
+        "postDate": "2026-04-21T01:42:29.120Z",
+        "rawMarkdown": "No matter what gets used, thanks for your great work and sharing. ",
+        "content": "<p>No matter what gets used, thanks for your great work and sharing. </p>",
+        "parent": {},
+        "author": {
+          "displayName": "PatrickKarle",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1369061-gp.jpg",
+          "url": "/patrickkarle",
+          "tier": "CONTRIBUTOR",
+          "id": 1369061,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "canUpvote": true,
+          "totalUpvotes": 1
+        },
+        "kernelVersion": 0,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "reactions": [
+          {
+            "emoji": "KAGGLE",
+            "featuredUserNames": [
+              "komilparmar"
+            ],
+            "userCount": 1
+          }
+        ],
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "PatrickKarle",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1369061-gp.jpg",
+            "url": "/patrickkarle",
+            "userName": "patrickkarle",
+            "tier": "CONTRIBUTOR",
+            "id": 1369061,
+            "profileUrl": "/patrickkarle",
+            "performanceTier": "CONTRIBUTOR",
+            "userId": 1369061,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3445382,
+        "postDate": "2026-04-19T16:57:52.730Z",
+        "rawMarkdown": "Great catch that silent KV cache miss explains the huge slowdown. ",
+        "content": "<p>Great catch that silent KV cache miss explains the huge slowdown. </p>",
+        "parent": {},
+        "author": {
+          "displayName": "Durga Kumari",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/30256119-kg.jpg?t=2026-04-09-17-12-41",
+          "url": "/durgakumari12",
+          "tier": "CONTRIBUTOR",
+          "id": 30256119,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "totalVotes": -1,
+          "canUpvote": true,
+          "totalUpvotes": 1
+        },
+        "kernelVersion": 0,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "reactions": [
+          {
+            "emoji": "KAGGLE",
+            "featuredUserNames": [
+              "komilparmar"
+            ],
+            "userCount": 1
+          }
+        ]
+      },
+      {
+        "id": 3440121,
+        "postDate": "2026-04-12T00:56:21.510Z",
+        "rawMarkdown": "this is great work \n",
+        "content": "<p>this is great work </p>",
+        "parent": {},
+        "author": {
+          "displayName": "namnamna",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/6672069-kg.jpg",
+          "url": "/namnamna",
+          "tier": "CONTRIBUTOR",
+          "id": 6672069,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "totalVotes": -1,
+          "canUpvote": true
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 119,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "reactions": [
+          {
+            "emoji": "THANK_YOU",
+            "featuredUserNames": [
+              "komilparmar"
+            ],
+            "userCount": 1
+          }
+        ],
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "namnamna",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/6672069-kg.jpg",
+            "url": "/namnamna",
+            "userName": "namnamna",
+            "tier": "CONTRIBUTOR",
+            "id": 6672069,
+            "profileUrl": "/namnamna",
+            "performanceTier": "CONTRIBUTOR",
+            "userId": 6672069,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3447516,
+        "postDate": "2026-04-23T09:09:02.070Z",
+        "rawMarkdown": "Hi, I have a question regarding the proper way to handle multi-stage adapters for this challenge. My current pipeline involves an initial SFT phase, followed by GRPO to enhance reasoning.\nSince the evaluation script loads a single LoRA adapter against the original NVIDIA base model, I am concerned about maintaining the SFT formatting. If I train GRPO on top of a merged SFT checkpoint, should I submit the GRPO adapter directly, or should I re-calculate the total delta (Final Model - Original Base) to ensure the SFT knowledge isn't lost? Thanks!",
+        "content": "<p>Hi, I have a question regarding the proper way to handle multi-stage adapters for this challenge. My current pipeline involves an initial SFT phase, followed by GRPO to enhance reasoning.\nSince the evaluation script loads a single LoRA adapter against the original NVIDIA base model, I am concerned about maintaining the SFT formatting. If I train GRPO on top of a merged SFT checkpoint, should I submit the GRPO adapter directly, or should I re-calculate the total delta (Final Model - Original Base) to ensure the SFT knowledge isn't lost? Thanks!</p>",
+        "parent": {},
+        "author": {
+          "displayName": "Sypher_S",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+          "url": "/syphers",
+          "tier": "CONTRIBUTOR",
+          "id": 22415698,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "canUpvote": true
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 324,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Sypher_S",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+            "url": "/syphers",
+            "userName": "syphers",
+            "tier": "CONTRIBUTOR",
+            "id": 22415698,
+            "profileUrl": "/syphers",
+            "performanceTier": "CONTRIBUTOR",
+            "userId": 22415698,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3440131,
+        "postDate": "2026-04-12T01:43:29.427Z",
+        "rawMarkdown": "Did you also try doing it with vllm?",
+        "content": "<p>Did you also try doing it with vllm?</p>",
+        "replies": [
+          {
+            "id": 3440179,
+            "postDate": "2026-04-12T05:01:56.740Z",
+            "rawMarkdown": "No I haven't tried it with vllm yet. Will check out. \nHowever, I was earlier bounded by the input tokens/s speed rather than the output speed. For pure inference, didn't try for training. \nCheck this: 2752/38000 [45:39<7:09:15,  1.37it/s, est. speed input: 156.72 toks/s, output: 2074.51 toks/s]",
+            "content": "<p>No I haven't tried it with vllm yet. Will check out. \nHowever, I was earlier bounded by the input tokens/s speed rather than the output speed. For pure inference, didn't try for training. \nCheck this: 2752/38000 [45:39&lt;7:09:15,  1.37it/s, est. speed input: 156.72 toks/s, output: 2074.51 toks/s]</p>",
+            "replies": [
+              {
+                "id": 3440210,
+                "postDate": "2026-04-12T06:07:32.577Z",
+                "rawMarkdown": "An alternative solution would be to use ORPO.",
+                "content": "<p>An alternative solution would be to use ORPO.</p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Giovanny Rodríguez",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+                  "url": "/giovannyrodrguez",
+                  "tier": "EXPERT",
+                  "id": 23653385,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "totalVotes": 1,
+                  "canUpvote": true,
+                  "totalUpvotes": 1
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 493,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Giovanny Rodríguez",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+                    "url": "/giovannyrodrguez",
+                    "userName": "giovannyrodrguez",
+                    "tier": "EXPERT",
+                    "id": 23653385,
+                    "profileUrl": "/giovannyrodrguez",
+                    "performanceTier": "EXPERT",
+                    "userId": 23653385,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              },
+              {
+                "id": 3440253,
+                "postDate": "2026-04-12T06:49:21.523Z",
+                "rawMarkdown": "Yes, Theoratically its sound. But is that actually practical to use here? I am not sure if you have used it for your current rank. Do give a hint if you have.\n\nFor ORPO we would require a negative CoT (sort of). I am currently only using algorithmic solvers and generating CoT manually. So I am not sure what a negative (rejected) CoT would look like. \n\nIf I were using LLM generated CoT, I would have done something like using Opus's CoT as positive and Haiku's CoT as negative. But since I am doing it manually, I don't know how to frame a 'wrong CoT' generator. ",
+                "content": "<p>Yes, Theoratically its sound. But is that actually practical to use here? I am not sure if you have used it for your current rank. Do give a hint if you have.</p>\n<p>For ORPO we would require a negative CoT (sort of). I am currently only using algorithmic solvers and generating CoT manually. So I am not sure what a negative (rejected) CoT would look like. </p>\n<p>If I were using LLM generated CoT, I would have done something like using Opus's CoT as positive and Haiku's CoT as negative. But since I am doing it manually, I don't know how to frame a 'wrong CoT' generator. </p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Komil Parmar",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/11351811-kg.jpg?t=2025-07-02-06-16-19",
+                  "url": "/komilparmar",
+                  "tier": "EXPERT",
+                  "id": 11351811,
+                  "progressionOptOut": false
+                },
+                "authorType": "TOPIC",
+                "votes": {
+                  "canUpvote": true
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 574,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "isCollapsed": true,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Komil Parmar",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/11351811-kg.jpg?t=2025-07-02-06-16-19",
+                    "url": "/komilparmar",
+                    "userName": "komilparmar",
+                    "tier": "EXPERT",
+                    "id": 11351811,
+                    "profileUrl": "/komilparmar",
+                    "performanceTier": "EXPERT",
+                    "userId": 11351811,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              },
+              {
+                "id": 3440278,
+                "postDate": "2026-04-12T07:28:56.303Z",
+                "rawMarkdown": "First, you need to train the adapter using SFT, and then run inference using VLLM; that way, you can see exactly what went wrong and what didn't. You can find an example in the `validation_predictions.csv` file, available at https://www.kaggle.com/code/llkh0a/nemotron-unsloth-sft-training-3-30-2/notebook. I haven't tried this yet myself; I still need to improve my model's reasoning capabilities first.   ",
+                "content": "<p>First, you need to train the adapter using SFT, and then run inference using VLLM; that way, you can see exactly what went wrong and what didn't. You can find an example in the <code>validation_predictions.csv</code> file, available at <a href=\"https://www.kaggle.com/code/llkh0a/nemotron-unsloth-sft-training-3-30-2/notebook\" target=\"_blank\">https://www.kaggle.com/code/llkh0a/nemotron-unsloth-sft-training-3-30-2/notebook</a>. I haven't tried this yet myself; I still need to improve my model's reasoning capabilities first.   </p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Giovanny Rodríguez",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+                  "url": "/giovannyrodrguez",
+                  "tier": "EXPERT",
+                  "id": 23653385,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "totalVotes": 1,
+                  "canUpvote": true,
+                  "totalUpvotes": 1
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 493,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "isCollapsed": true,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Giovanny Rodríguez",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+                    "url": "/giovannyrodrguez",
+                    "userName": "giovannyrodrguez",
+                    "tier": "EXPERT",
+                    "id": 23653385,
+                    "profileUrl": "/giovannyrodrguez",
+                    "performanceTier": "EXPERT",
+                    "userId": 23653385,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              },
+              {
+                "id": 3440651,
+                "postDate": "2026-04-12T19:06:39.810Z",
+                "rawMarkdown": "I have a question for you: when transformers are upgraded from 5.00 to 5.5.3, why does the weight of the adapter increase from 3.5GB to 100mb with the same lora parameter?",
+                "content": "<p>I have a question for you: when transformers are upgraded from 5.00 to 5.5.3, why does the weight of the adapter increase from 3.5GB to 100mb with the same lora parameter?</p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Yang Wei Hao",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/19714814-kg.jpeg?t=2025-05-08-07-18-33",
+                  "url": "/aichangeworld",
+                  "tier": "EXPERT",
+                  "id": 19714814,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "canUpvote": true
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 2056,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "isCollapsed": true,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Yang Wei Hao",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/19714814-kg.jpeg?t=2025-05-08-07-18-33",
+                    "url": "/aichangeworld",
+                    "userName": "aichangeworld",
+                    "tier": "EXPERT",
+                    "id": 19714814,
+                    "profileUrl": "/aichangeworld",
+                    "performanceTier": "EXPERT",
+                    "userId": 19714814,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              },
+              {
+                "id": 3440662,
+                "postDate": "2026-04-12T19:49:55.310Z",
+                "rawMarkdown": "Google: The way it stores data could be—at the very least—noisy.",
+                "content": "<p>Google: The way it stores data could be—at the very least—noisy.</p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Giovanny Rodríguez",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+                  "url": "/giovannyrodrguez",
+                  "tier": "EXPERT",
+                  "id": 23653385,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "canUpvote": true
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 493,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "isCollapsed": true,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Giovanny Rodríguez",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+                    "url": "/giovannyrodrguez",
+                    "userName": "giovannyrodrguez",
+                    "tier": "EXPERT",
+                    "id": 23653385,
+                    "profileUrl": "/giovannyrodrguez",
+                    "performanceTier": "EXPERT",
+                    "userId": 23653385,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              }
+            ],
+            "parent": {},
+            "author": {
+              "displayName": "Komil Parmar",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/11351811-kg.jpg?t=2025-07-02-06-16-19",
+              "url": "/komilparmar",
+              "tier": "EXPERT",
+              "id": 11351811,
+              "progressionOptOut": false
+            },
+            "authorType": "TOPIC",
+            "votes": {
+              "totalVotes": 1,
+              "canUpvote": true,
+              "totalUpvotes": 1
+            },
+            "kernelVersion": 0,
+            "competitionRanking": 574,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "reactions": [
+              {
+                "emoji": "THANK_YOU",
+                "featuredUserNames": [
+                  "giovannyrodrguez"
+                ],
+                "userCount": 1
+              }
+            ],
+            "teamUpInfo": {
+              "teamLeader": {
+                "displayName": "Komil Parmar",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/11351811-kg.jpg?t=2025-07-02-06-16-19",
+                "url": "/komilparmar",
+                "userName": "komilparmar",
+                "tier": "EXPERT",
+                "id": 11351811,
+                "profileUrl": "/komilparmar",
+                "performanceTier": "EXPERT",
+                "userId": 11351811,
+                "progressionOptOut": false
+              },
+              "intro": ""
+            }
+          }
+        ],
+        "parent": {},
+        "author": {
+          "displayName": "Giovanny Rodríguez",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+          "url": "/giovannyrodrguez",
+          "tier": "EXPERT",
+          "id": 23653385,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "canUpvote": true
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 493,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Giovanny Rodríguez",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+            "url": "/giovannyrodrguez",
+            "userName": "giovannyrodrguez",
+            "tier": "EXPERT",
+            "id": 23653385,
+            "profileUrl": "/giovannyrodrguez",
+            "performanceTier": "EXPERT",
+            "userId": 23653385,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3439891,
+        "postDate": "2026-04-11T12:39:38.187Z",
+        "rawMarkdown": "good method, thats very useful.😀",
+        "content": "<p>good method, thats very useful.😀</p>",
+        "parent": {},
+        "author": {
+          "displayName": "Yang Wei Hao",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/19714814-kg.jpeg?t=2025-05-08-07-18-33",
+          "url": "/aichangeworld",
+          "tier": "EXPERT",
+          "id": 19714814,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "canUpvote": true
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 2056,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "reactions": [
+          {
+            "emoji": "THANK_YOU",
+            "featuredUserNames": [
+              "komilparmar"
+            ],
+            "userCount": 1
+          }
+        ],
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Yang Wei Hao",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/19714814-kg.jpeg?t=2025-05-08-07-18-33",
+            "url": "/aichangeworld",
+            "userName": "aichangeworld",
+            "tier": "EXPERT",
+            "id": 19714814,
+            "profileUrl": "/aichangeworld",
+            "performanceTier": "EXPERT",
+            "userId": 19714814,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3439724,
+        "postDate": "2026-04-11T06:48:38.083Z",
+        "rawMarkdown": "have this fixed your grpo slow generation?\n\n```\nNemotronH requires an initialized `NemotronHHybridDynamicCache` to return a cache. None was provided, so no cache will be returned.\n```\ni am getting this and taking for ever to generate token",
+        "content": "<p>have this fixed your grpo slow generation?</p>\n<pre><code>NemotronH requires an initialized `NemotronHHybridDynamicCache` to return a cache. None was provided, so no cache will be returned.\n</code></pre>\n<p>i am getting this and taking for ever to generate token</p>",
+        "replies": [
+          {
+            "id": 3439725,
+            "postDate": "2026-04-11T06:51:04.417Z",
+            "rawMarkdown": "Yes, follow this 3 steps and that warning will be gone.",
+            "content": "<p>Yes, follow this 3 steps and that warning will be gone.</p>",
+            "replies": [
+              {
+                "id": 3439734,
+                "postDate": "2026-04-11T07:06:38.883Z",
+                "rawMarkdown": "and speed is increased right?\nand can you please public transformers-5.5.3-py3-none-any.whl dataset",
+                "content": "<p>and speed is increased right?\nand can you please public transformers-5.5.3-py3-none-any.whl dataset</p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Adarsh Kumar",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/25818777-kg.png?t=2026-04-20-16-49-43",
+                  "url": "/adarsh2626",
+                  "tier": "MASTER",
+                  "id": 25818777,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "canUpvote": true
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 553,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Muhammad Ibrahim Qasmi",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/24946333-kg.jpeg?t=2025-12-22-22-44-57",
+                    "url": "/ibrahimqasimi",
+                    "userName": "ibrahimqasimi",
+                    "tier": "GRANDMASTER",
+                    "id": 24946333,
+                    "profileUrl": "/ibrahimqasimi",
+                    "performanceTier": "GRANDMASTER",
+                    "userId": 24946333,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              },
+              {
+                "id": 3439766,
+                "postDate": "2026-04-11T07:36:26.397Z",
+                "rawMarkdown": "In the 'The Numbers' section, I have mentioned the before and after speed. \n- Earlier it was ~1-2 tokens/s\n- Now its 38 tokens/s\n\nThis won't match the actual inference speed, because here (for GRPO and other training methods) you also have to keep a track of the gradients. It's in training mode, not inference. ",
+                "content": "<p>In the 'The Numbers' section, I have mentioned the before and after speed. </p>\n<ul>\n<li>Earlier it was ~1-2 tokens/s</li>\n<li>Now its 38 tokens/s</li>\n</ul>\n<p>This won't match the actual inference speed, because here (for GRPO and other training methods) you also have to keep a track of the gradients. It's in training mode, not inference. </p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Komil Parmar",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/11351811-kg.jpg?t=2025-07-02-06-16-19",
+                  "url": "/komilparmar",
+                  "tier": "EXPERT",
+                  "id": 11351811,
+                  "progressionOptOut": false
+                },
+                "authorType": "TOPIC",
+                "votes": {
+                  "totalVotes": 2,
+                  "canUpvote": true,
+                  "totalUpvotes": 2
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 574,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Komil Parmar",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/11351811-kg.jpg?t=2025-07-02-06-16-19",
+                    "url": "/komilparmar",
+                    "userName": "komilparmar",
+                    "tier": "EXPERT",
+                    "id": 11351811,
+                    "profileUrl": "/komilparmar",
+                    "performanceTier": "EXPERT",
+                    "userId": 11351811,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              },
+              {
+                "id": 3439771,
+                "postDate": "2026-04-11T07:44:38.960Z",
+                "rawMarkdown": "",
+                "parent": {},
+                "author": {
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+                  "url": "/"
+                },
+                "authorType": "COMMENT",
+                "votes": {},
+                "canDelete": true,
+                "isUserAuthor": true,
+                "isDeleted": true,
+                "kernelVersion": 0,
+                "feedbackTrackingData": {},
+                "isThankYou": false
+              }
+            ],
+            "parent": {},
+            "author": {
+              "displayName": "Komil Parmar",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/11351811-kg.jpg?t=2025-07-02-06-16-19",
+              "url": "/komilparmar",
+              "tier": "EXPERT",
+              "id": 11351811,
+              "progressionOptOut": false
+            },
+            "authorType": "TOPIC",
+            "votes": {
+              "canUpvote": true
+            },
+            "kernelVersion": 0,
+            "competitionRanking": 574,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "teamUpInfo": {
+              "teamLeader": {
+                "displayName": "Komil Parmar",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/11351811-kg.jpg?t=2025-07-02-06-16-19",
+                "url": "/komilparmar",
+                "userName": "komilparmar",
+                "tier": "EXPERT",
+                "id": 11351811,
+                "profileUrl": "/komilparmar",
+                "performanceTier": "EXPERT",
+                "userId": 11351811,
+                "progressionOptOut": false
+              },
+              "intro": ""
+            }
+          }
+        ],
+        "parent": {},
+        "author": {
+          "displayName": "Adarsh Kumar",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/25818777-kg.png?t=2026-04-20-16-49-43",
+          "url": "/adarsh2626",
+          "tier": "MASTER",
+          "id": 25818777,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "canUpvote": true
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 553,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Muhammad Ibrahim Qasmi",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/24946333-kg.jpeg?t=2025-12-22-22-44-57",
+            "url": "/ibrahimqasimi",
+            "userName": "ibrahimqasimi",
+            "tier": "GRANDMASTER",
+            "id": 24946333,
+            "profileUrl": "/ibrahimqasimi",
+            "performanceTier": "GRANDMASTER",
+            "userId": 24946333,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3445210,
+        "postDate": "2026-04-19T09:10:22.923Z",
+        "rawMarkdown": "",
+        "parent": {},
+        "author": {
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+          "url": "/"
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "totalVotes": 1,
+          "totalUpvotes": 1
+        },
+        "canDelete": true,
+        "isUserAuthor": true,
+        "isDeleted": true,
+        "kernelVersion": 0,
+        "feedbackTrackingData": {},
+        "isThankYou": false
+      }
+    ],
+    "commentSort": "COMMENT_LIST_SORT_BY_HOT",
+    "firstMessage": {
+      "id": 3439466,
+      "postDate": "2026-04-10T18:51:33.823Z",
+      "rawMarkdown": "If you've tried GRPO fine-tuning on Nemotron-3-Nano-30B and noticed generation crawling at ~2 tokens/sec, you're not alone. I spent a while debugging this, so here's a full breakdown of what's going on, why it happens, and how to fix it.\n\n## SFT vs GRPO: Why One Works Fine and the Other Doesn't\n\n### SFT is \"Open-Book\"\n\nThink of SFT (Supervised Fine-Tuning) like a student studying with the answer key right next to them. The model (student) sees the full conversation, i.e. both the question AND the correct answer, all at once. It just does one big forward pass across the entire sequence, compares its predictions to the right answer, and adjusts. Like if you are simply reading the question and the answer and say 'Ah! that's how to solve it. Okay, got it. Let's move on'.\n\nThe key thing: **SFT never actually generates text.** The student never try to answer the question on their own. It hence processes everything in parallel. The model never has to produce one token, then the next, then the next. It's like reading a book versus writing one, reading is fast because you see all the words at once.\n\n### GRPO is \"Closed-Book Exam\"\n\nGRPO (Group Relative Policy Optimization) works completely differently. It gives the model a question and says \"write your answer from scratch.\" The model has to generate a full response **one token at a time**, token 1, then token 2, then token 3, and so on. Then it does this multiple times (typically 4+ completions per prompt) to compare which attempts were better. So its like the student tried to answer the same question 4+ times, than the teacher reviewed the answer (only the answer, not the whole process or reasoning) and said, **whatever** you did on your first and forth trial (for example) was correct, **so do more like that**. \n\nThis token-by-token generation is where the speed problem hits.\n\n## The Speed Bug: A Simple Name Mismatch\n\n### How Autoregressive Generation Should Work\n\nWhen a model generates text token-by-token, it uses a **cache** to avoid redundant computation. Imagine you've already generated \"The answer is\": you don't want to reprocess those 3 tokens from scratch every time you generate the next word. The cache (KV) stores all the internal states so each new token only requires a tiny bit of new computation.\n\nWith caching: ~30-50 tokens/sec. Without caching: ~2 tokens/sec.\n\n### What Goes Wrong with Nemotron\n\nNVIDIA's `modeling_nemotron_h.py` has a parameter name mismatch between two functions that need to talk to each other:\n\n1. **`prepare_inputs_for_generation()`** — runs before each token, prepares the inputs. It creates the cache and passes it forward as `past_key_values`.\n2. **`forward()`** — the actual model computation. It expects to receive the cache as `cache_params`.\n\nSee the problem? Function A sends the cache labeled as `past_key_values`. Function B looks for a parameter called `cache_params`. Since the names don't match, the cache lands in `**kwargs` and gets **silently ignored**. No error, no warning, just the model quietly recomputing everything from scratch on every single token.\n\nThis is why SFT works perfectly (no generation, no cache needed) but GRPO grinds to a halt (generation on every step, cache broken).\n\n### The Numbers\n\n- **Without fix:** ~2 tokens/sec. A single GRPO step with 4 completions × 2048 max tokens could take minutes.\n- **With fix:** ~38 tokens/sec. Nearly 20× faster.\n\nAt 2 tok/sec, a 500-step GRPO run would take days. At 38 tok/sec, it fits within a Kaggle session.\n\n## The Fix\n\nThanks to **CPMP** for confirming this in this discussion [here](https://www.kaggle.com/competitions/nvidia-nemotron-model-reasoning-challenge/discussion/686615) — **transformers >= 5.3.0** fixes this bug natively. The library now has built-in NemotronH support with the correct parameter mapping.\n\n### What to do:\n\n**Step 1:** Install transformers >= 5.3.0. On Kaggle (no internet), upload the wheel as a dataset:\n\n```python\n!pip install -q --no-deps --force-reinstall \"/kaggle/input/your-dataset/transformers-5.5.3-py3-none-any.whl\"\n```\n\nThe `--no-deps` flag prevents pip from trying to download dependencies (no internet on Kaggle, if you don't do that, code will try to use internet). The `--force-reinstall` flag is needed because Kaggle comes with an older transformers pre-installed, and pip will skip the install thinking \"it's already satisfied\" without this flag.\n\n**Step 2:** Remove `trust_remote_code=True` from your model loading:\n\n```python\n# BEFORE (uses old buggy modeling_nemotron_h.py from model repo)\nmodel = AutoModelForCausalLM.from_pretrained(MODEL_PATH, trust_remote_code=True, ...)\n\n# AFTER (uses fixed built-in transformers implementation)\nmodel = AutoModelForCausalLM.from_pretrained(MODEL_PATH, ...)\n```\n\nThis is critical — even with transformers 5.5.3 installed, `trust_remote_code=True` pulls in the OLD `modeling_nemotron_h.py` from the HuggingFace model cache, which overrides the library's fix entirely. Drop the flag and let the library's native implementation handle it.\n\n**Step 3:** Also note that with the built-in implementation, `gradient_checkpointing=True` will throw a `ValueError` because `NemotronHForCausalLM` doesn't declare support for it. Set `gradient_checkpointing=False` in your training config.\n\n## TL;DR\n\n| | SFT | GRPO |\n|---|---|---|\n| Generation needed? | No (parallel forward pass) | Yes (token-by-token) |\n| Cache needed? | No | Yes |\n| Affected by bug? | No | Yes — 20× slowdown |\n\n**Fix:** `transformers >= 5.3.0` + remove `trust_remote_code=True`. That's it. Thanks CPMP!\n\nHope this saves someone a few hours of debugging (took days in mine 🥲)",
+      "content": "<p>If you've tried GRPO fine-tuning on Nemotron-3-Nano-30B and noticed generation crawling at ~2 tokens/sec, you're not alone. I spent a while debugging this, so here's a full breakdown of what's going on, why it happens, and how to fix it.</p>\n<h2>SFT vs GRPO: Why One Works Fine and the Other Doesn't</h2>\n<h3>SFT is \"Open-Book\"</h3>\n<p>Think of SFT (Supervised Fine-Tuning) like a student studying with the answer key right next to them. The model (student) sees the full conversation, i.e. both the question AND the correct answer, all at once. It just does one big forward pass across the entire sequence, compares its predictions to the right answer, and adjusts. Like if you are simply reading the question and the answer and say 'Ah! that's how to solve it. Okay, got it. Let's move on'.</p>\n<p>The key thing: <strong>SFT never actually generates text.</strong> The student never try to answer the question on their own. It hence processes everything in parallel. The model never has to produce one token, then the next, then the next. It's like reading a book versus writing one, reading is fast because you see all the words at once.</p>\n<h3>GRPO is \"Closed-Book Exam\"</h3>\n<p>GRPO (Group Relative Policy Optimization) works completely differently. It gives the model a question and says \"write your answer from scratch.\" The model has to generate a full response <strong>one token at a time</strong>, token 1, then token 2, then token 3, and so on. Then it does this multiple times (typically 4+ completions per prompt) to compare which attempts were better. So its like the student tried to answer the same question 4+ times, than the teacher reviewed the answer (only the answer, not the whole process or reasoning) and said, <strong>whatever</strong> you did on your first and forth trial (for example) was correct, <strong>so do more like that</strong>. </p>\n<p>This token-by-token generation is where the speed problem hits.</p>\n<h2>The Speed Bug: A Simple Name Mismatch</h2>\n<h3>How Autoregressive Generation Should Work</h3>\n<p>When a model generates text token-by-token, it uses a <strong>cache</strong> to avoid redundant computation. Imagine you've already generated \"The answer is\": you don't want to reprocess those 3 tokens from scratch every time you generate the next word. The cache (KV) stores all the internal states so each new token only requires a tiny bit of new computation.</p>\n<p>With caching: ~30-50 tokens/sec. Without caching: ~2 tokens/sec.</p>\n<h3>What Goes Wrong with Nemotron</h3>\n<p>NVIDIA's <code>modeling_nemotron_h.py</code> has a parameter name mismatch between two functions that need to talk to each other:</p>\n<ol>\n<li><strong><code>prepare_inputs_for_generation()</code></strong> — runs before each token, prepares the inputs. It creates the cache and passes it forward as <code>past_key_values</code>.</li>\n<li><strong><code>forward()</code></strong> — the actual model computation. It expects to receive the cache as <code>cache_params</code>.</li>\n</ol>\n<p>See the problem? Function A sends the cache labeled as <code>past_key_values</code>. Function B looks for a parameter called <code>cache_params</code>. Since the names don't match, the cache lands in <code>**kwargs</code> and gets <strong>silently ignored</strong>. No error, no warning, just the model quietly recomputing everything from scratch on every single token.</p>\n<p>This is why SFT works perfectly (no generation, no cache needed) but GRPO grinds to a halt (generation on every step, cache broken).</p>\n<h3>The Numbers</h3>\n<ul>\n<li><strong>Without fix:</strong> ~2 tokens/sec. A single GRPO step with 4 completions × 2048 max tokens could take minutes.</li>\n<li><strong>With fix:</strong> ~38 tokens/sec. Nearly 20× faster.</li>\n</ul>\n<p>At 2 tok/sec, a 500-step GRPO run would take days. At 38 tok/sec, it fits within a Kaggle session.</p>\n<h2>The Fix</h2>\n<p>Thanks to <strong>CPMP</strong> for confirming this in this discussion <a href=\"https://www.kaggle.com/competitions/nvidia-nemotron-model-reasoning-challenge/discussion/686615\" target=\"_blank\">here</a> — <strong>transformers &gt;= 5.3.0</strong> fixes this bug natively. The library now has built-in NemotronH support with the correct parameter mapping.</p>\n<h3>What to do:</h3>\n<p><strong>Step 1:</strong> Install transformers &gt;= 5.3.0. On Kaggle (no internet), upload the wheel as a dataset:</p>\n<pre><code>!pip install -q --no-deps --force-reinstall \"/kaggle/input/your-dataset/transformers-5.5.3-py3-none-any.whl\"\n</code></pre>\n<p>The <code>--no-deps</code> flag prevents pip from trying to download dependencies (no internet on Kaggle, if you don't do that, code will try to use internet). The <code>--force-reinstall</code> flag is needed because Kaggle comes with an older transformers pre-installed, and pip will skip the install thinking \"it's already satisfied\" without this flag.</p>\n<p><strong>Step 2:</strong> Remove <code>trust_remote_code=True</code> from your model loading:</p>\n<pre><code># BEFORE (uses old buggy modeling_nemotron_h.py from model repo)\nmodel = AutoModelForCausalLM.from_pretrained(MODEL_PATH, trust_remote_code=True, ...)\n\n# AFTER (uses fixed built-in transformers implementation)\nmodel = AutoModelForCausalLM.from_pretrained(MODEL_PATH, ...)\n</code></pre>\n<p>This is critical — even with transformers 5.5.3 installed, <code>trust_remote_code=True</code> pulls in the OLD <code>modeling_nemotron_h.py</code> from the HuggingFace model cache, which overrides the library's fix entirely. Drop the flag and let the library's native implementation handle it.</p>\n<p><strong>Step 3:</strong> Also note that with the built-in implementation, <code>gradient_checkpointing=True</code> will throw a <code>ValueError</code> because <code>NemotronHForCausalLM</code> doesn't declare support for it. Set <code>gradient_checkpointing=False</code> in your training config.</p>\n<h2>TL;DR</h2>\n<table>\n<thead>\n<tr>\n<th></th>\n<th>SFT</th>\n<th>GRPO</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Generation needed?</td>\n<td>No (parallel forward pass)</td>\n<td>Yes (token-by-token)</td>\n</tr>\n<tr>\n<td>Cache needed?</td>\n<td>No</td>\n<td>Yes</td>\n</tr>\n<tr>\n<td>Affected by bug?</td>\n<td>No</td>\n<td>Yes — 20× slowdown</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Fix:</strong> <code>transformers &gt;= 5.3.0</code> + remove <code>trust_remote_code=True</code>. That's it. Thanks CPMP!</p>\n<p>Hope this saves someone a few hours of debugging (took days in mine 🥲)</p>",
+      "parent": {},
+      "author": {
+        "displayName": "Komil Parmar",
+        "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/11351811-kg.jpg?t=2025-07-02-06-16-19",
+        "url": "/komilparmar",
+        "tier": "EXPERT",
+        "id": 11351811,
+        "progressionOptOut": false
+      },
+      "authorType": "TOPIC",
+      "votes": {
+        "totalVotes": 48,
+        "canUpvote": true,
+        "totalUpvotes": 50
+      },
+      "kernelVersion": 0,
+      "competitionRanking": 574,
+      "feedbackTrackingData": {},
+      "isThankYou": false,
+      "reactions": [
+        {
+          "emoji": "LOVE",
+          "featuredUserNames": [
+            "harsha7754",
+            "adaluvu",
+            "jctesting",
+            "bugkeeper"
+          ],
+          "userCount": 4
+        }
+      ],
+      "teamUpInfo": {
+        "teamLeader": {
+          "displayName": "Komil Parmar",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/11351811-kg.jpg?t=2025-07-02-06-16-19",
+          "url": "/komilparmar",
+          "userName": "komilparmar",
+          "tier": "EXPERT",
+          "id": 11351811,
+          "profileUrl": "/komilparmar",
+          "performanceTier": "EXPERT",
+          "userId": 11351811,
+          "progressionOptOut": false
+        },
+        "intro": ""
+      }
+    },
+    "firstMessageId": 3439466,
+    "forumId": 10085877,
+    "forumName": "NVIDIA Nemotron Model Reasoning Challenge",
+    "id": 690161,
+    "name": "Why GRPO is Painfully Slow on Nemotron (and the Fix)",
+    "parentName": "nvidia-nemotron-model-reasoning-challenge",
+    "parentUrl": "/competitions/nvidia-nemotron-model-reasoning-challenge",
+    "postDate": "2026-04-10T18:51:33.824359400Z",
+    "totalVotes": 48,
+    "url": "/competitions/nvidia-nemotron-model-reasoning-challenge/discussion/690161",
+    "totalMessages": 18,
+    "authorPerformanceTier": "EXPERT",
+    "authorProgressionOptOut": false
+  }
+}

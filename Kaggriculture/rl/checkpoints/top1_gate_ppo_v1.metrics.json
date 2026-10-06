@@ -1,0 +1,140 @@
+{
+  "config": {
+    "action_dim": 14,
+    "hidden_dim": 128,
+    "observation_dim": 2048
+  },
+  "final_evaluation": {
+    "draws": 2,
+    "games": 8,
+    "losses": 0,
+    "mean_accepted_component_rate": 0.0,
+    "mean_margin": 8647.875,
+    "wins": 6,
+    "worst_margin": 0.0
+  },
+  "final_improvement": {
+    "equal_games": 8,
+    "improved_games": 0,
+    "mean_margin_delta": 0.0,
+    "regressed_games": 0,
+    "worst_margin_delta": 0.0
+  },
+  "incumbent_evaluation": {
+    "draws": 2,
+    "games": 8,
+    "losses": 0,
+    "mean_accepted_component_rate": 0.0,
+    "mean_margin": 8647.875,
+    "wins": 6,
+    "worst_margin": 0.0
+  },
+  "iterations": [
+    {
+      "evaluation": {
+        "draws": 2,
+        "games": 8,
+        "losses": 0,
+        "mean_accepted_component_rate": 0.0,
+        "mean_margin": 8647.875,
+        "wins": 6,
+        "worst_margin": 0.0
+      },
+      "evaluation_improvement": {
+        "equal_games": 8,
+        "improved_games": 0,
+        "mean_margin_delta": 0.0,
+        "regressed_games": 0,
+        "worst_margin_delta": 0.0
+      },
+      "iteration": 1,
+      "rollout": {
+        "draws": 0,
+        "games": 8,
+        "losses": 2,
+        "mean_accepted_component_rate": 0.05095608665353996,
+        "mean_margin": 6258.5,
+        "wins": 6,
+        "worst_margin": -3844.0
+      },
+      "update": {
+        "advantage_mean": -2.6527797736264347e-09,
+        "advantage_std": 0.9999998211860657,
+        "approximate_kl": 0.0008989542930857683,
+        "entropy": 0.18987701379734537,
+        "loss": 0.0004968457898307267,
+        "policy_loss": 0.00018366364225664216,
+        "value_loss": 0.004423904670503638
+      }
+    },
+    {
+      "evaluation": {
+        "draws": 2,
+        "games": 8,
+        "losses": 0,
+        "mean_accepted_component_rate": 0.0,
+        "mean_margin": 8647.875,
+        "wins": 6,
+        "worst_margin": 0.0
+      },
+      "evaluation_improvement": {
+        "equal_games": 8,
+        "improved_games": 0,
+        "mean_margin_delta": 0.0,
+        "regressed_games": 0,
+        "worst_margin_delta": 0.0
+      },
+      "iteration": 2,
+      "rollout": {
+        "draws": 0,
+        "games": 8,
+        "losses": 2,
+        "mean_accepted_component_rate": 0.04501452740563472,
+        "mean_margin": 7150.125,
+        "wins": 6,
+        "worst_margin": -2410.0
+      },
+      "update": {
+        "advantage_mean": 1.3263898424042964e-08,
+        "advantage_std": 1.0,
+        "approximate_kl": 0.00081303085544673,
+        "entropy": 0.18906725181833559,
+        "loss": 0.000492439002972906,
+        "policy_loss": 0.00026935667467668003,
+        "value_loss": 0.004227509334906126
+      }
+    }
+  ],
+  "promotion": {
+    "passed": false,
+    "rule": "paired mean margin delta > 0, worst delta >= 0, and accepted component rate > 0"
+  },
+  "training": {
+    "base_seed": 20000,
+    "evaluation_episodes": 8,
+    "initial_acceptance": 0.05,
+    "iterations": 2,
+    "learning_rate": 0.0001,
+    "opponent_specs": [
+      [
+        "MELON",
+        6
+      ],
+      [
+        "WHEAT",
+        6
+      ],
+      [
+        "CARROT",
+        6
+      ],
+      [
+        "STRAWBERRY",
+        6
+      ]
+    ],
+    "reward_scale": 10000.0,
+    "rollout_episodes": 8,
+    "seed": 1729
+  }
+}

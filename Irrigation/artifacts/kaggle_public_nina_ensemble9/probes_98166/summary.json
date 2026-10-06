@@ -1,0 +1,106 @@
+{
+  "base": "submission_nina_ensemble9_final_0.98145.csv",
+  "target_public_score": 0.98166,
+  "rationale": "Leaderboard rank 7 is 0.98166; public code max is 0.98145. These are targeted strict-vote probes around Nina's winning pattern correction.",
+  "recommended_upload_order": [
+    "artifacts/kaggle_public_nina_ensemble9/probes_98166/submission_nina_final_low_block_to_medium.csv",
+    "artifacts/kaggle_public_nina_ensemble9/probes_98166/submission_nina_final_high_block_to_medium.csv",
+    "artifacts/kaggle_public_nina_ensemble9/probes_98166/submission_nina_final_low_and_high_blocks_to_medium.csv",
+    "artifacts/kaggle_public_nina_ensemble9/probes_98166/submission_nina_final_single_low_votes_to_low.csv",
+    "artifacts/kaggle_public_nina_ensemble9/probes_98166/submission_nina_final_single_high_votes_to_high.csv"
+  ],
+  "variants": [
+    {
+      "name": "nina_final_low_block_to_medium",
+      "submission": "artifacts/kaggle_public_nina_ensemble9/probes_98166/submission_nina_final_low_block_to_medium.csv",
+      "rules": {
+        "_ L L L L L ": "Medium"
+      },
+      "changed_rows_by_pattern": {
+        "_ L L L L L ": 138
+      },
+      "details": [
+        "Symmetric probe to Nina's winning _ H H H H H -> Medium correction; changes 138 Low rows to Medium."
+      ],
+      "label_counts": {
+        "Low": 159378,
+        "Medium": 100532,
+        "High": 10090
+      }
+    },
+    {
+      "name": "nina_final_high_block_to_medium",
+      "submission": "artifacts/kaggle_public_nina_ensemble9/probes_98166/submission_nina_final_high_block_to_medium.csv",
+      "rules": {
+        "H H _ H H H ": "Medium"
+      },
+      "changed_rows_by_pattern": {
+        "H H _ H H H ": 81
+      },
+      "details": [
+        "High-class counterpart where only df3 says Medium; changes 81 High rows to Medium."
+      ],
+      "label_counts": {
+        "Low": 159516,
+        "Medium": 100475,
+        "High": 10009
+      }
+    },
+    {
+      "name": "nina_final_low_and_high_blocks_to_medium",
+      "submission": "artifacts/kaggle_public_nina_ensemble9/probes_98166/submission_nina_final_low_and_high_blocks_to_medium.csv",
+      "rules": {
+        "_ L L L L L ": "Medium",
+        "H H _ H H H ": "Medium"
+      },
+      "changed_rows_by_pattern": {
+        "_ L L L L L ": 138,
+        "H H _ H H H ": 81
+      },
+      "details": [
+        "Combined low-block and high-block correction probe."
+      ],
+      "label_counts": {
+        "Low": 159378,
+        "Medium": 100613,
+        "High": 10009
+      }
+    },
+    {
+      "name": "nina_final_single_low_votes_to_low",
+      "submission": "artifacts/kaggle_public_nina_ensemble9/probes_98166/submission_nina_final_single_low_votes_to_low.csv",
+      "rules": {
+        "_ _ L _ _ _ ": "Low"
+      },
+      "changed_rows_by_pattern": {
+        "_ _ L _ _ _ ": 114
+      },
+      "details": [
+        "Small low-recall probe; changes 114 Medium rows to Low where one source votes Low."
+      ],
+      "label_counts": {
+        "Low": 159630,
+        "Medium": 100280,
+        "High": 10090
+      }
+    },
+    {
+      "name": "nina_final_single_high_votes_to_high",
+      "submission": "artifacts/kaggle_public_nina_ensemble9/probes_98166/submission_nina_final_single_high_votes_to_high.csv",
+      "rules": {
+        "_ _ H _ _ _ ": "High"
+      },
+      "changed_rows_by_pattern": {
+        "_ _ H _ _ _ ": 182
+      },
+      "details": [
+        "Small high-recall probe; changes 182 Medium rows to High where one source votes High."
+      ],
+      "label_counts": {
+        "Low": 159516,
+        "Medium": 100212,
+        "High": 10272
+      }
+    }
+  ]
+}

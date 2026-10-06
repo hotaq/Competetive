@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "name": "meta_v27_taiseiu_projected_wool_sale_local",
+  "base": "submissions/meta_v20_taiseiu_99306813_repaired_local/main.py",
+  "policy": {
+    "family": "observable_state_overlay",
+    "rule": "one high-value adjacent-shed return with same-step projected wool sale",
+    "minimum_inventory_value": 2500.0,
+    "maximum_interventions_per_game": 1,
+    "liquidation_items": ["WOOL"]
+  },
+  "status": "experimental",
+  "promotion_gate": "must beat mirror and cross-family dev/holdout/fresh official leagues"
+}

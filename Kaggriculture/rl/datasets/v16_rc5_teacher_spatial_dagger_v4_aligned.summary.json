@@ -1,0 +1,14 @@
+{
+  "dataset": "rl/datasets/v16_rc5_teacher_spatial_dagger_v4.npz",
+  "checkpoint": "rl/checkpoints/v16_rc5_spatial_gru_bc_v1_e100.npz",
+  "output": "rl/datasets/v16_rc5_teacher_spatial_dagger_v4_aligned.npz",
+  "samples": 30198,
+  "unit_vocab_size": 33,
+  "market_vocab_size": 114,
+  "alignment": {
+    "source_unit_vocab_size": 33,
+    "source_market_vocab_size": 113,
+    "target_unit_vocab_size": 33,
+    "target_market_vocab_size": 114
+  }
+}

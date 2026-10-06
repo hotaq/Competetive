@@ -1,0 +1,22 @@
+{
+  "id": "chinnaphatkhun/rsna-knee-e030-vjepa21-vitb-frozen-scout",
+  "title": "RSNA Knee E030 VJEPA21 ViTB Frozen Scout",
+  "code_file": "e030-vjepa21-vitb-frozen-scout.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [
+    "dreaddevelopment/knee-raptor-corpus",
+    "dreaddevelopment/knee-raptor-corpus-ext",
+    "pilkwang/rsna-knee-llm-labels",
+    "lixin73/rsna-knee-llm-report-labels-sol56",
+    "stevenleehans/rsna-knee-llm-report-labels"
+  ],
+  "competition_sources": ["rsna-knee-abnormality-detection"],
+  "model_sources": [],
+  "kernel_sources": ["chinnaphatkhun/rsna-knee-e029-warmstart-exact64-smoke"],
+  "machine_shape": "NvidiaTeslaT4"
+}

@@ -1,0 +1,522 @@
+{
+  "checkpoint": "rl/checkpoints/semantic_ppo_v1.npz",
+  "evaluation_episodes": 30,
+  "feature_checkpoint": "rl/checkpoints/top1_spatial_gru_e100.npz",
+  "final_evaluation": {
+    "draws": 2,
+    "games": 30,
+    "losses": 0,
+    "mean_margin": 10046.866666666667,
+    "mean_money": 16227.733333333334,
+    "wins": 28,
+    "worst_margin": 0.0,
+    "worst_money": 15010.0
+  },
+  "history": [
+    {
+      "evaluation": {
+        "draws": 2,
+        "games": 30,
+        "losses": 0,
+        "mean_margin": 9941.366666666667,
+        "mean_money": 16222.4,
+        "wins": 28,
+        "worst_margin": 0.0,
+        "worst_money": 15010.0
+      },
+      "iteration": 1,
+      "rollout": {
+        "draws": 0,
+        "games": 30,
+        "losses": 6,
+        "mean_margin": 4961.6,
+        "mean_money": 11463.233333333334,
+        "wins": 24,
+        "worst_margin": -7093.0,
+        "worst_money": 4232.0
+      },
+      "update": {
+        "advantage_mean": 2.543131571997037e-08,
+        "loss": 0.12542413020661722,
+        "return_mean": 0.7512960433959961
+      }
+    },
+    {
+      "evaluation": {
+        "draws": 2,
+        "games": 30,
+        "losses": 0,
+        "mean_margin": 9941.366666666667,
+        "mean_money": 16222.4,
+        "wins": 28,
+        "worst_margin": 0.0,
+        "worst_money": 15010.0
+      },
+      "iteration": 2,
+      "rollout": {
+        "draws": 0,
+        "games": 30,
+        "losses": 5,
+        "mean_margin": 4247.866666666667,
+        "mean_money": 10538.833333333334,
+        "wins": 25,
+        "worst_margin": -11942.0,
+        "worst_money": 2406.0
+      },
+      "update": {
+        "advantage_mean": 3.3908420959960495e-08,
+        "loss": 0.05141208026422343,
+        "return_mean": 0.48258450627326965
+      }
+    },
+    {
+      "evaluation": {
+        "draws": 2,
+        "games": 30,
+        "losses": 0,
+        "mean_margin": 9941.366666666667,
+        "mean_money": 16222.4,
+        "wins": 28,
+        "worst_margin": 0.0,
+        "worst_money": 15010.0
+      },
+      "iteration": 3,
+      "rollout": {
+        "draws": 0,
+        "games": 30,
+        "losses": 4,
+        "mean_margin": 6081.733333333334,
+        "mean_money": 12488.166666666666,
+        "wins": 26,
+        "worst_margin": -11299.0,
+        "worst_money": 4075.0
+      },
+      "update": {
+        "advantage_mean": 1.6954210479980247e-08,
+        "loss": 0.008400060748681427,
+        "return_mean": 0.4653981328010559
+      }
+    },
+    {
+      "evaluation": {
+        "draws": 2,
+        "games": 30,
+        "losses": 0,
+        "mean_margin": 9941.366666666667,
+        "mean_money": 16222.4,
+        "wins": 28,
+        "worst_margin": 0.0,
+        "worst_money": 15010.0
+      },
+      "iteration": 4,
+      "rollout": {
+        "draws": 0,
+        "games": 30,
+        "losses": 5,
+        "mean_margin": 5389.066666666667,
+        "mean_money": 11632.2,
+        "wins": 25,
+        "worst_margin": -7856.0,
+        "worst_money": 6228.0
+      },
+      "update": {
+        "advantage_mean": 4.238552619995062e-08,
+        "loss": 0.05590862339983384,
+        "return_mean": 0.4279792010784149
+      }
+    },
+    {
+      "evaluation": {
+        "draws": 2,
+        "games": 30,
+        "losses": 0,
+        "mean_margin": 9941.366666666667,
+        "mean_money": 16222.4,
+        "wins": 28,
+        "worst_margin": 0.0,
+        "worst_money": 15010.0
+      },
+      "iteration": 5,
+      "rollout": {
+        "draws": 0,
+        "games": 30,
+        "losses": 6,
+        "mean_margin": 6244.866666666667,
+        "mean_money": 12573.4,
+        "wins": 24,
+        "worst_margin": -6803.0,
+        "worst_money": 0.0
+      },
+      "update": {
+        "advantage_mean": -3.3908420959960495e-08,
+        "loss": 0.06105462724032502,
+        "return_mean": 0.4497370719909668
+      }
+    },
+    {
+      "evaluation": {
+        "draws": 2,
+        "games": 30,
+        "losses": 0,
+        "mean_margin": 9941.366666666667,
+        "mean_money": 16222.4,
+        "wins": 28,
+        "worst_margin": 0.0,
+        "worst_money": 15010.0
+      },
+      "iteration": 6,
+      "rollout": {
+        "draws": 0,
+        "games": 30,
+        "losses": 3,
+        "mean_margin": 6467.4,
+        "mean_money": 12801.5,
+        "wins": 27,
+        "worst_margin": -8989.0,
+        "worst_money": 6651.0
+      },
+      "update": {
+        "advantage_mean": 2.543131571997037e-08,
+        "loss": 0.010461823184353609,
+        "return_mean": 0.4263595640659332
+      }
+    },
+    {
+      "evaluation": {
+        "draws": 2,
+        "games": 30,
+        "losses": 0,
+        "mean_margin": 9941.366666666667,
+        "mean_money": 16222.4,
+        "wins": 28,
+        "worst_margin": 0.0,
+        "worst_money": 15010.0
+      },
+      "iteration": 7,
+      "rollout": {
+        "draws": 0,
+        "games": 30,
+        "losses": 5,
+        "mean_margin": 7500.066666666667,
+        "mean_money": 13698.633333333333,
+        "wins": 25,
+        "worst_margin": -9793.0,
+        "worst_money": 2310.0
+      },
+      "update": {
+        "advantage_mean": 0.0,
+        "loss": 0.025141222029924394,
+        "return_mean": 0.4638248383998871
+      }
+    },
+    {
+      "evaluation": {
+        "draws": 2,
+        "games": 30,
+        "losses": 0,
+        "mean_margin": 9941.366666666667,
+        "mean_money": 16222.4,
+        "wins": 28,
+        "worst_margin": 0.0,
+        "worst_money": 15010.0
+      },
+      "iteration": 8,
+      "rollout": {
+        "draws": 1,
+        "games": 30,
+        "losses": 2,
+        "mean_margin": 7839.7,
+        "mean_money": 14339.266666666666,
+        "wins": 27,
+        "worst_margin": -5085.0,
+        "worst_money": 11017.0
+      },
+      "update": {
+        "advantage_mean": -1.6954210479980247e-08,
+        "loss": 0.024468838683484744,
+        "return_mean": 0.45968595147132874
+      }
+    },
+    {
+      "evaluation": {
+        "draws": 2,
+        "games": 30,
+        "losses": 0,
+        "mean_margin": 9941.366666666667,
+        "mean_money": 16222.4,
+        "wins": 28,
+        "worst_margin": 0.0,
+        "worst_money": 15010.0
+      },
+      "iteration": 9,
+      "rollout": {
+        "draws": 0,
+        "games": 30,
+        "losses": 3,
+        "mean_margin": 7670.4,
+        "mean_money": 13889.266666666666,
+        "wins": 27,
+        "worst_margin": -3265.0,
+        "worst_money": 5377.0
+      },
+      "update": {
+        "advantage_mean": -3.3908420959960495e-08,
+        "loss": 0.01008125329002117,
+        "return_mean": 0.44712549448013306
+      }
+    },
+    {
+      "evaluation": {
+        "draws": 2,
+        "games": 30,
+        "losses": 0,
+        "mean_margin": 9941.366666666667,
+        "mean_money": 16222.4,
+        "wins": 28,
+        "worst_margin": 0.0,
+        "worst_money": 15010.0
+      },
+      "iteration": 10,
+      "rollout": {
+        "draws": 0,
+        "games": 30,
+        "losses": 3,
+        "mean_margin": 8512.566666666668,
+        "mean_money": 14810.5,
+        "wins": 27,
+        "worst_margin": -2035.0,
+        "worst_money": 11077.0
+      },
+      "update": {
+        "advantage_mean": 3.3908420959960495e-08,
+        "loss": 0.03257950627982306,
+        "return_mean": 0.5066613554954529
+      }
+    },
+    {
+      "evaluation": {
+        "draws": 2,
+        "games": 30,
+        "losses": 0,
+        "mean_margin": 9941.366666666667,
+        "mean_money": 16222.4,
+        "wins": 28,
+        "worst_margin": 0.0,
+        "worst_money": 15010.0
+      },
+      "iteration": 11,
+      "rollout": {
+        "draws": 0,
+        "games": 30,
+        "losses": 4,
+        "mean_margin": 8448.966666666667,
+        "mean_money": 14865.9,
+        "wins": 26,
+        "worst_margin": -7098.0,
+        "worst_money": 8872.0
+      },
+      "update": {
+        "advantage_mean": -1.6954210479980247e-08,
+        "loss": 0.044051106316813575,
+        "return_mean": 0.516387939453125
+      }
+    },
+    {
+      "evaluation": {
+        "draws": 2,
+        "games": 30,
+        "losses": 0,
+        "mean_margin": 9941.366666666667,
+        "mean_money": 16222.4,
+        "wins": 28,
+        "worst_margin": 0.0,
+        "worst_money": 15010.0
+      },
+      "iteration": 12,
+      "rollout": {
+        "draws": 0,
+        "games": 30,
+        "losses": 3,
+        "mean_margin": 8711.6,
+        "mean_money": 14951.866666666667,
+        "wins": 27,
+        "worst_margin": -4433.0,
+        "worst_money": 9550.0
+      },
+      "update": {
+        "advantage_mean": 3.3908420959960495e-08,
+        "loss": 0.016282209133108457,
+        "return_mean": 0.5444733500480652
+      }
+    }
+  ],
+  "incumbent_strategy": 22,
+  "iterations": 12,
+  "league": [
+    {
+      "crop": "WHEAT",
+      "plots": 4
+    },
+    {
+      "crop": "WHEAT",
+      "plots": 6
+    },
+    {
+      "crop": "WHEAT",
+      "plots": 8
+    },
+    {
+      "crop": "CARROT",
+      "plots": 4
+    },
+    {
+      "crop": "CARROT",
+      "plots": 6
+    },
+    {
+      "crop": "CARROT",
+      "plots": 8
+    },
+    {
+      "crop": "TOMATO",
+      "plots": 4
+    },
+    {
+      "crop": "TOMATO",
+      "plots": 6
+    },
+    {
+      "crop": "TOMATO",
+      "plots": 8
+    },
+    {
+      "crop": "STRAWBERRY",
+      "plots": 4
+    },
+    {
+      "crop": "STRAWBERRY",
+      "plots": 6
+    },
+    {
+      "crop": "STRAWBERRY",
+      "plots": 8
+    },
+    {
+      "crop": "MELON",
+      "plots": 4
+    },
+    {
+      "crop": "MELON",
+      "plots": 6
+    },
+    {
+      "crop": "MELON",
+      "plots": 8
+    }
+  ],
+  "model": "executor-semantic-ppo-v1",
+  "rollout_episodes": 30,
+  "seed": 1729,
+  "strategies": [
+    {
+      "crop": "WHEAT",
+      "plots": 2
+    },
+    {
+      "crop": "WHEAT",
+      "plots": 4
+    },
+    {
+      "crop": "WHEAT",
+      "plots": 6
+    },
+    {
+      "crop": "WHEAT",
+      "plots": 8
+    },
+    {
+      "crop": "WHEAT",
+      "plots": 10
+    },
+    {
+      "crop": "CARROT",
+      "plots": 2
+    },
+    {
+      "crop": "CARROT",
+      "plots": 4
+    },
+    {
+      "crop": "CARROT",
+      "plots": 6
+    },
+    {
+      "crop": "CARROT",
+      "plots": 8
+    },
+    {
+      "crop": "CARROT",
+      "plots": 10
+    },
+    {
+      "crop": "TOMATO",
+      "plots": 2
+    },
+    {
+      "crop": "TOMATO",
+      "plots": 4
+    },
+    {
+      "crop": "TOMATO",
+      "plots": 6
+    },
+    {
+      "crop": "TOMATO",
+      "plots": 8
+    },
+    {
+      "crop": "TOMATO",
+      "plots": 10
+    },
+    {
+      "crop": "STRAWBERRY",
+      "plots": 2
+    },
+    {
+      "crop": "STRAWBERRY",
+      "plots": 4
+    },
+    {
+      "crop": "STRAWBERRY",
+      "plots": 6
+    },
+    {
+      "crop": "STRAWBERRY",
+      "plots": 8
+    },
+    {
+      "crop": "STRAWBERRY",
+      "plots": 10
+    },
+    {
+      "crop": "MELON",
+      "plots": 2
+    },
+    {
+      "crop": "MELON",
+      "plots": 4
+    },
+    {
+      "crop": "MELON",
+      "plots": 6
+    },
+    {
+      "crop": "MELON",
+      "plots": 8
+    },
+    {
+      "crop": "MELON",
+      "plots": 10
+    }
+  ]
+}

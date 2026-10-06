@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "name": "meta_v16_rc5_robust_base_standalone",
+  "status": "validated_local_robust_base",
+  "adopted_at": "2026-08-21",
+  "agent_file": "submissions/meta_v16_rc5_robust_base_standalone/main.py",
+  "sha256": "f029fa0cb66a9eb509afbe44e3f59b800332d0419db91607183410e4089c4d19",
+  "source": {
+    "kind": "public_kaggle_kernel_output",
+    "kernel": "boatlee/v16-rc5-high-score-8c-4s-premium-market-lead",
+    "url": "https://www.kaggle.com/code/boatlee/v16-rc5-high-score-8c-4s-premium-market-lead",
+    "local_output": "artifacts/kaggle_notebooks/boatlee_v16_rc5/output/main.py",
+    "exact_copy": true
+  },
+  "policy": {
+    "family": "replay_derived_open_loop_with_state_overlays",
+    "livestock_target": {"COW": 8, "SHEEP": 4},
+    "overlays": ["weed_repair", "premium_market_front_run"],
+    "is_rl": false
+  },
+  "specialist_reference": {
+    "name": "top1_v12_ryo_selector_b120_repaired_standalone",
+    "agent_file": "submissions/top1_v12_ryo_selector_b120_repaired_standalone/main.py",
+    "role": "ryo_specialist_only",
+    "direct_midgame_splice_safe": false
+  },
+  "evaluation_reports": [
+    "rl/evaluations/boatlee_v16_rc5_public11_ablation.json",
+    "rl/evaluations/boatlee_v16_rc5_vs_v12_selector_live24.json",
+    "rl/evaluations/boatlee_v16_rc5_vs_ryo_dev96.json",
+    "rl/evaluations/meta_v16_rc5_vs_v12_live24_recheck.json"
+  ],
+  "validation": {
+    "environment": "kaggle_environments:kaggriculture",
+    "method": "live_two_player_seat_swapped",
+    "games": 24,
+    "wins": 18,
+    "losses": 6,
+    "mean_margin": 8169.7083333333,
+    "worst_margin": -14946.0,
+    "all_done": true
+  },
+  "submission": {
+    "submitted_from_this_candidate": false,
+    "promotion_ready": false,
+    "remaining_gates": [
+      "broader live population evaluation",
+      "worst-case and CVaR promotion check"
+    ]
+  }
+}

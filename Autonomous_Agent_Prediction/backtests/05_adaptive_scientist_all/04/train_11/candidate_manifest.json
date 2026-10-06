@@ -1,0 +1,83 @@
+{
+  "classes": [
+    0,
+    1
+  ],
+  "rows": 10000,
+  "features": 20,
+  "candidates": [
+    {
+      "file": "candidate_meta_logstack.csv",
+      "name": "meta_logstack",
+      "family": "meta",
+      "oof_auc": 0.82880567,
+      "fold_auc": [
+        0.82912549,
+        0.83360871,
+        0.8288701,
+        0.82710919,
+        0.82561362
+      ],
+      "fold_auc_std": 0.00269165,
+      "test_rank_correlation_to_best": 0.9901162
+    },
+    {
+      "file": "candidate_lightgbm_native.csv",
+      "name": "lightgbm_native",
+      "family": "lightgbm",
+      "oof_auc": 0.82444656,
+      "fold_auc": [
+        0.82756198,
+        0.82385465,
+        0.81987549,
+        0.82788171,
+        0.82353669
+      ],
+      "fold_auc_std": 0.00295071,
+      "test_rank_correlation_to_best": 1.0
+    },
+    {
+      "file": "candidate_extra_trees.csv",
+      "name": "extra_trees",
+      "family": "bagging",
+      "oof_auc": 0.81624597,
+      "fold_auc": [
+        0.81758635,
+        0.81566637,
+        0.81658577,
+        0.82074854,
+        0.81090978
+      ],
+      "fold_auc_std": 0.00319317,
+      "test_rank_correlation_to_best": 0.95205847
+    }
+  ],
+  "diagnostics": {
+    "best_core": {
+      "name": "lightgbm_native",
+      "family": "lightgbm",
+      "oof_auc": 0.82444656
+    },
+    "blend_gate": {
+      "accepted": true,
+      "name": "meta_logstack",
+      "oof_auc": 0.82880567,
+      "gain": 0.00435911,
+      "test_rank_correlation_to_best": 0.9901162
+    },
+    "interaction_gate": {
+      "accepted": false,
+      "name": "interaction_te",
+      "oof_auc": 0.8116636,
+      "standalone_gain": -0.01278296,
+      "blend_auc": 0.82469321,
+      "blend_gain": 0.00024665,
+      "fold_auc_std": 0.00142978,
+      "test_rank_correlation": 0.96550898,
+      "stable": true,
+      "diverse": true,
+      "improves": false
+    }
+  },
+  "failures": []
+}

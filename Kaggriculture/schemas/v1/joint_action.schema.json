@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kaggriculture.local/schemas/v1/joint_action.schema.json",
+  "title": "Kaggriculture joint primitive action v1",
+  "$defs": {
+    "simpleUnit": {
+      "items": false,
+      "maxItems": 1,
+      "minItems": 1,
+      "prefixItems": [{
+        "enum": ["NORTH", "SOUTH", "EAST", "WEST", "PASS", "DROP", "WATER", "HARVEST", "FERTILIZE", "DIG", "BUILD_COOP", "BUILD_PASTURE", "FEED", "COLLECT_FERTILIZER", "CARE"]
+      }],
+      "type": "array"
+    },
+    "itemUnit": {
+      "items": false,
+      "maxItems": 3,
+      "minItems": 3,
+      "prefixItems": [
+        { "enum": ["PICKUP", "PLACE"] },
+        { "enum": ["WHEAT", "CARROT", "TOMATO", "STRAWBERRY", "MELON", "EGG", "MILK", "WOOL", "FERTILIZER", "GOOSE", "COW", "SHEEP"] },
+        { "minimum": 1, "type": "integer" }
+      ],
+      "type": "array"
+    },
+    "plantUnit": {
+      "items": false,
+      "maxItems": 2,
+      "minItems": 2,
+      "prefixItems": [
+        { "const": "PLANT" },
+        { "enum": ["WHEAT", "CARROT", "TOMATO", "STRAWBERRY", "MELON"] }
+      ],
+      "type": "array"
+    },
+    "unitAction": {
+      "oneOf": [
+        { "$ref": "#/$defs/simpleUnit" },
+        { "$ref": "#/$defs/itemUnit" },
+        { "$ref": "#/$defs/plantUnit" }
+      ]
+    },
+    "marketOrder": {
+      "oneOf": [
+        {
+          "items": false,
+          "maxItems": 1,
+          "minItems": 1,
+          "prefixItems": [{ "enum": ["HIRE", "BUY_LAND"] }],
+          "type": "array"
+        },
+        {
+          "items": false,
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            { "const": "BUY_SEED" },
+            { "enum": ["WHEAT", "CARROT", "TOMATO", "STRAWBERRY", "MELON"] },
+            { "minimum": 1, "type": "integer" }
+          ],
+          "type": "array"
+        },
+        {
+          "items": false,
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            { "const": "BUY_PRODUCT" },
+            { "enum": ["WHEAT", "FERTILIZER"] },
+            { "minimum": 1, "type": "integer" }
+          ],
+          "type": "array"
+        },
+        {
+          "items": false,
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            { "const": "BUY_ANIMAL" },
+            { "enum": ["GOOSE", "COW", "SHEEP"] },
+            { "minimum": 1, "type": "integer" }
+          ],
+          "type": "array"
+        },
+        {
+          "items": false,
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            { "const": "SELL" },
+            { "enum": ["WHEAT", "CARROT", "TOMATO", "STRAWBERRY", "MELON", "EGG", "MILK", "WOOL", "FERTILIZER"] },
+            { "minimum": 1, "type": "integer" }
+          ],
+          "type": "array"
+        }
+      ]
+    },
+    "playerAction": {
+      "additionalProperties": false,
+      "properties": {
+        "farmer": { "$ref": "#/$defs/unitAction" },
+        "hands": { "items": { "$ref": "#/$defs/unitAction" }, "type": "array" },
+        "market": { "items": { "$ref": "#/$defs/marketOrder" }, "type": "array" }
+      },
+      "required": ["farmer", "hands", "market"],
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": 1, "type": "integer" },
+    "actions": {
+      "items": { "$ref": "#/$defs/playerAction" },
+      "maxItems": 2,
+      "minItems": 2,
+      "type": "array"
+    }
+  },
+  "required": ["schema_version", "actions"],
+  "type": "object"
+}

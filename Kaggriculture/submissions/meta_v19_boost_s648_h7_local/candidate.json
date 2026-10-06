@@ -1,0 +1,30 @@
+{
+  "agent_file": "submissions/meta_v19_boost_s648_h7_local/main.py",
+  "dependencies": {
+    "policy": {
+      "path": "src/kaggriculture_rl/policy/v19_residual.py",
+      "sha256": "40786192650d9550d0f5a6242762247a5f62dd4f75857e6ed67d7a82d798129c"
+    },
+    "seat1": {
+      "path": "submissions/top1_v12_ryo_b96_dual_b144_retriever_exact_safe_local/main.py",
+      "sha256": "6ac20f3e2736e4d94968401acb693656fb58e61a4174175c243db845adf6c7f4"
+    },
+    "v16": {
+      "path": "submissions/meta_v16_rc6_adaptive_market_standalone/main.py",
+      "sha256": "c8afcbb8f90861cd92131012146e573752820b80fbd939ace3c7503aea83cd5e"
+    }
+  },
+  "name": "meta_v19_boost_s648_h7_local",
+  "policy": {
+    "family": "contextual_portfolio_with_residual",
+    "hire_boost_end": 696,
+    "hire_boost_start": 648,
+    "late_hire_cutoff": 720,
+    "minimum_hires": 7,
+    "seat_0": "V16 plus no-late-hire residual",
+    "seat_1": "V12 dual retriever from step zero"
+  },
+  "schema_version": 1,
+  "sha256": "ff22c58d9f010a21982bf8773d4f608f12c372a602b75e09686c5172f29476ee",
+  "status": "local_experiment"
+}

@@ -1,0 +1,119 @@
+{
+  "manifest_version": 1,
+  "classes": [
+    0,
+    1
+  ],
+  "rows": 10000,
+  "features": 12,
+  "recipe_id": "mixed-safe",
+  "planner": {
+    "source": "profile",
+    "valid": true,
+    "recipe_id": "mixed-safe"
+  },
+  "initial_candidates": [
+    "logistic",
+    "hist_gradient",
+    "extra_trees"
+  ],
+  "challenger_candidates": [
+    "meta_logstack"
+  ],
+  "candidates": [
+    {
+      "file": "candidate_logistic.csv",
+      "state_file": "candidate_logistic.npz",
+      "name": "logistic",
+      "family": "linear",
+      "role": "anchor",
+      "oof_auc": 0.74639411,
+      "fold_auc": [
+        0.76779082,
+        0.74161823,
+        0.76067013,
+        0.7519026,
+        0.71000779
+      ],
+      "fold_auc_std": 0.02019277,
+      "test_rank_correlation_to_best": 0.73008754
+    },
+    {
+      "file": "candidate_hist_gradient.csv",
+      "state_file": "candidate_hist_gradient.npz",
+      "name": "hist_gradient",
+      "family": "histogram",
+      "role": "anchor",
+      "oof_auc": 0.82441751,
+      "fold_auc": [
+        0.83484501,
+        0.8311788,
+        0.8306961,
+        0.82693636,
+        0.79869481
+      ],
+      "fold_auc_std": 0.01312903,
+      "test_rank_correlation_to_best": 0.99204573
+    },
+    {
+      "file": "candidate_extra_trees.csv",
+      "state_file": "candidate_extra_trees.npz",
+      "name": "extra_trees",
+      "family": "bagging",
+      "role": "anchor",
+      "oof_auc": 0.82252422,
+      "fold_auc": [
+        0.83046971,
+        0.82132171,
+        0.83713117,
+        0.82777792,
+        0.79600779
+      ],
+      "fold_auc_std": 0.01420324,
+      "test_rank_correlation_to_best": 0.98883599
+    },
+    {
+      "file": "candidate_meta_logstack.csv",
+      "state_file": "candidate_meta_logstack.npz",
+      "name": "meta_logstack",
+      "family": "meta",
+      "role": "challenger",
+      "oof_auc": 0.82733672,
+      "fold_auc": [
+        0.82298663,
+        0.82658532,
+        0.84041169,
+        0.82828182,
+        0.81815584
+      ],
+      "fold_auc_std": 0.00742443,
+      "test_rank_correlation_to_best": 1.0
+    }
+  ],
+  "diagnostics": {
+    "anchors": [
+      "logistic",
+      "hist_gradient",
+      "extra_trees"
+    ],
+    "guarded_selection": {
+      "best_core": {
+        "name": "hist_gradient",
+        "family": "histogram",
+        "oof_auc": 0.82441751
+      },
+      "blend_gate": {
+        "accepted": true,
+        "name": "meta_logstack",
+        "oof_auc": 0.82733672,
+        "gain": 0.00291921,
+        "test_rank_correlation_to_best": 0.99204573
+      },
+      "interaction_gate": {
+        "accepted": false
+      }
+    },
+    "recipe_candidates": []
+  },
+  "failures": []
+}

@@ -1,0 +1,1322 @@
+{
+  "best_crop": {
+    "better": 0,
+    "chosen_profile_ids": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "distinct_profiles": 1,
+    "equal": 30,
+    "games": 30,
+    "ineffective_actions": 0,
+    "mean_margin": 0.0,
+    "mean_money": 0.0,
+    "worse": 0,
+    "worst_margin": 0.0,
+    "worst_money": 0.0
+  },
+  "best_stage": "macro_bc",
+  "best_tape": {
+    "better": 1,
+    "chosen_profile_ids": [
+      3,
+      3,
+      3,
+      3,
+      2,
+      3,
+      3,
+      3
+    ],
+    "distinct_profiles": 2,
+    "equal": 7,
+    "games": 8,
+    "ineffective_actions": 0,
+    "mean_margin": 2270.875,
+    "mean_money": 316.875,
+    "worse": 0,
+    "worst_margin": 0.0,
+    "worst_money": 0.0
+  },
+  "history": [
+    {
+      "bc": {
+        "accuracy": 1.0,
+        "loss": 0.04210059344768524
+      },
+      "crop": {
+        "better": 0,
+        "chosen_profile_ids": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "distinct_profiles": 1,
+        "equal": 30,
+        "games": 30,
+        "ineffective_actions": 0,
+        "mean_margin": 0.0,
+        "mean_money": 0.0,
+        "worse": 0,
+        "worst_margin": 0.0,
+        "worst_money": 0.0
+      },
+      "safe_score": [
+        0.0,
+        0.0,
+        0.0,
+        2270.875,
+        0.0,
+        2.0
+      ],
+      "stage": "macro_bc",
+      "tape": {
+        "better": 1,
+        "chosen_profile_ids": [
+          3,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          3
+        ],
+        "distinct_profiles": 2,
+        "equal": 7,
+        "games": 8,
+        "ineffective_actions": 0,
+        "mean_margin": 2270.875,
+        "mean_money": 316.875,
+        "worse": 0,
+        "worst_margin": 0.0,
+        "worst_money": 0.0
+      }
+    },
+    {
+      "crop": {
+        "better": 0,
+        "chosen_profile_ids": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "distinct_profiles": 1,
+        "equal": 30,
+        "games": 30,
+        "ineffective_actions": 0,
+        "mean_margin": 0.0,
+        "mean_money": 0.0,
+        "worse": 0,
+        "worst_margin": 0.0,
+        "worst_money": 0.0
+      },
+      "safe_score": [
+        0.0,
+        0.0,
+        0.0,
+        2270.875,
+        0.0,
+        2.0
+      ],
+      "stage": "ppo_1",
+      "tape": {
+        "better": 1,
+        "chosen_profile_ids": [
+          3,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          3
+        ],
+        "distinct_profiles": 2,
+        "equal": 7,
+        "games": 8,
+        "ineffective_actions": 0,
+        "mean_margin": 2270.875,
+        "mean_money": 316.875,
+        "worse": 0,
+        "worst_margin": 0.0,
+        "worst_money": 0.0
+      },
+      "update": {
+        "advantage_mean": 4.967053879312289e-09,
+        "loss": 22.406258583068848,
+        "return_mean": -0.3801875114440918
+      }
+    },
+    {
+      "crop": {
+        "better": 0,
+        "chosen_profile_ids": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "distinct_profiles": 1,
+        "equal": 30,
+        "games": 30,
+        "ineffective_actions": 0,
+        "mean_margin": 0.0,
+        "mean_money": 0.0,
+        "worse": 0,
+        "worst_margin": 0.0,
+        "worst_money": 0.0
+      },
+      "safe_score": [
+        0.0,
+        0.0,
+        0.0,
+        2270.875,
+        0.0,
+        2.0
+      ],
+      "stage": "ppo_2",
+      "tape": {
+        "better": 1,
+        "chosen_profile_ids": [
+          3,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          3
+        ],
+        "distinct_profiles": 2,
+        "equal": 7,
+        "games": 8,
+        "ineffective_actions": 0,
+        "mean_margin": 2270.875,
+        "mean_money": 316.875,
+        "worse": 0,
+        "worst_margin": 0.0,
+        "worst_money": 0.0
+      },
+      "update": {
+        "advantage_mean": 4.967053879312289e-09,
+        "loss": 22.93102963765462,
+        "return_mean": -0.4242750108242035
+      }
+    },
+    {
+      "crop": {
+        "better": 0,
+        "chosen_profile_ids": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "distinct_profiles": 1,
+        "equal": 30,
+        "games": 30,
+        "ineffective_actions": 0,
+        "mean_margin": 0.0,
+        "mean_money": 0.0,
+        "worse": 0,
+        "worst_margin": 0.0,
+        "worst_money": 0.0
+      },
+      "safe_score": [
+        0.0,
+        0.0,
+        0.0,
+        2270.875,
+        0.0,
+        2.0
+      ],
+      "stage": "ppo_3",
+      "tape": {
+        "better": 1,
+        "chosen_profile_ids": [
+          3,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          3
+        ],
+        "distinct_profiles": 2,
+        "equal": 7,
+        "games": 8,
+        "ineffective_actions": 0,
+        "mean_margin": 2270.875,
+        "mean_money": 316.875,
+        "worse": 0,
+        "worst_margin": 0.0,
+        "worst_money": 0.0
+      },
+      "update": {
+        "advantage_mean": 0.0,
+        "loss": 21.68578592936198,
+        "return_mean": -0.4794332981109619
+      }
+    },
+    {
+      "crop": {
+        "better": 0,
+        "chosen_profile_ids": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "distinct_profiles": 1,
+        "equal": 30,
+        "games": 30,
+        "ineffective_actions": 0,
+        "mean_margin": 0.0,
+        "mean_money": 0.0,
+        "worse": 0,
+        "worst_margin": 0.0,
+        "worst_money": 0.0
+      },
+      "safe_score": [
+        0.0,
+        0.0,
+        0.0,
+        2270.875,
+        0.0,
+        2.0
+      ],
+      "stage": "ppo_4",
+      "tape": {
+        "better": 1,
+        "chosen_profile_ids": [
+          3,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          3
+        ],
+        "distinct_profiles": 2,
+        "equal": 7,
+        "games": 8,
+        "ineffective_actions": 0,
+        "mean_margin": 2270.875,
+        "mean_money": 316.875,
+        "worse": 0,
+        "worst_margin": 0.0,
+        "worst_money": 0.0
+      },
+      "update": {
+        "advantage_mean": 7.450580596923828e-09,
+        "loss": 21.42906379699707,
+        "return_mean": -0.5038833022117615
+      }
+    },
+    {
+      "crop": {
+        "better": 0,
+        "chosen_profile_ids": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "distinct_profiles": 1,
+        "equal": 30,
+        "games": 30,
+        "ineffective_actions": 0,
+        "mean_margin": 0.0,
+        "mean_money": 0.0,
+        "worse": 0,
+        "worst_margin": 0.0,
+        "worst_money": 0.0
+      },
+      "safe_score": [
+        0.0,
+        0.0,
+        0.0,
+        2270.875,
+        0.0,
+        2.0
+      ],
+      "stage": "ppo_5",
+      "tape": {
+        "better": 1,
+        "chosen_profile_ids": [
+          3,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          3
+        ],
+        "distinct_profiles": 2,
+        "equal": 7,
+        "games": 8,
+        "ineffective_actions": 0,
+        "mean_margin": 2270.875,
+        "mean_money": 316.875,
+        "worse": 0,
+        "worst_margin": 0.0,
+        "worst_money": 0.0
+      },
+      "update": {
+        "advantage_mean": -1.4901161193847656e-08,
+        "loss": 24.56502564748128,
+        "return_mean": -0.5514959096908569
+      }
+    },
+    {
+      "crop": {
+        "better": 0,
+        "chosen_profile_ids": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "distinct_profiles": 1,
+        "equal": 30,
+        "games": 30,
+        "ineffective_actions": 0,
+        "mean_margin": 0.0,
+        "mean_money": 0.0,
+        "worse": 0,
+        "worst_margin": 0.0,
+        "worst_money": 0.0
+      },
+      "safe_score": [
+        0.0,
+        0.0,
+        0.0,
+        2270.875,
+        0.0,
+        2.0
+      ],
+      "stage": "ppo_6",
+      "tape": {
+        "better": 1,
+        "chosen_profile_ids": [
+          3,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          3
+        ],
+        "distinct_profiles": 2,
+        "equal": 7,
+        "games": 8,
+        "ineffective_actions": 0,
+        "mean_margin": 2270.875,
+        "mean_money": 316.875,
+        "worse": 0,
+        "worst_margin": 0.0,
+        "worst_money": 0.0
+      },
+      "update": {
+        "advantage_mean": -9.934107758624577e-09,
+        "loss": 24.66713809967041,
+        "return_mean": -0.4887624680995941
+      }
+    },
+    {
+      "crop": {
+        "better": 0,
+        "chosen_profile_ids": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "distinct_profiles": 1,
+        "equal": 30,
+        "games": 30,
+        "ineffective_actions": 0,
+        "mean_margin": 0.0,
+        "mean_money": 0.0,
+        "worse": 0,
+        "worst_margin": 0.0,
+        "worst_money": 0.0
+      },
+      "safe_score": [
+        0.0,
+        0.0,
+        0.0,
+        2270.875,
+        0.0,
+        2.0
+      ],
+      "stage": "ppo_7",
+      "tape": {
+        "better": 1,
+        "chosen_profile_ids": [
+          3,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          3
+        ],
+        "distinct_profiles": 2,
+        "equal": 7,
+        "games": 8,
+        "ineffective_actions": 0,
+        "mean_margin": 2270.875,
+        "mean_money": 316.875,
+        "worse": 0,
+        "worst_margin": 0.0,
+        "worst_money": 0.0
+      },
+      "update": {
+        "advantage_mean": -4.967053879312289e-09,
+        "loss": 21.341010411580402,
+        "return_mean": -0.47079578042030334
+      }
+    },
+    {
+      "crop": {
+        "better": 0,
+        "chosen_profile_ids": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "distinct_profiles": 1,
+        "equal": 30,
+        "games": 30,
+        "ineffective_actions": 0,
+        "mean_margin": 0.0,
+        "mean_money": 0.0,
+        "worse": 0,
+        "worst_margin": 0.0,
+        "worst_money": 0.0
+      },
+      "safe_score": [
+        0.0,
+        0.0,
+        0.0,
+        2270.875,
+        0.0,
+        2.0
+      ],
+      "stage": "ppo_8",
+      "tape": {
+        "better": 1,
+        "chosen_profile_ids": [
+          3,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          3
+        ],
+        "distinct_profiles": 2,
+        "equal": 7,
+        "games": 8,
+        "ineffective_actions": 0,
+        "mean_margin": 2270.875,
+        "mean_money": 316.875,
+        "worse": 0,
+        "worst_margin": 0.0,
+        "worst_money": 0.0
+      },
+      "update": {
+        "advantage_mean": -1.3659398057086491e-08,
+        "loss": 21.33706792195638,
+        "return_mean": -0.6380749344825745
+      }
+    }
+  ],
+  "limitation": "Top-1 recordings are open-loop action tapes and the eight tape contexts are training-visible; promotion is therefore local, not proof against a live or unseen Top-1 policy.",
+  "manifest": "replays/top1_current/manifest.json",
+  "model": "executor-replay-robust-profile-ppo-v2",
+  "oracle": [
+    {
+      "baseline": {
+        "margin": -109605.0,
+        "money": 37183.0,
+        "profile": "melon6_cow4_w4",
+        "profile_id": 3
+      },
+      "best": {
+        "margin": -109605.0,
+        "money": 37183.0,
+        "profile": "melon6_cow4_w4",
+        "profile_id": 3
+      },
+      "candidates": [
+        {
+          "margin": -109605.0,
+          "money": 37183.0,
+          "profile": "melon6_cow4_w4",
+          "profile_id": 3
+        },
+        {
+          "margin": -143428.0,
+          "money": 28684.0,
+          "profile": "melon6_cow2_w2",
+          "profile_id": 2
+        },
+        {
+          "margin": -144131.0,
+          "money": 35366.0,
+          "profile": "melon6_cow2_sheep2_w4",
+          "profile_id": 5
+        },
+        {
+          "margin": -149473.0,
+          "money": 20250.0,
+          "profile": "melon6_sheep2_w3",
+          "profile_id": 4
+        },
+        {
+          "margin": -157362.0,
+          "money": 13201.0,
+          "profile": "melon6",
+          "profile_id": 0
+        },
+        {
+          "margin": -166279.0,
+          "money": 18954.0,
+          "profile": "melon6_goose2_w2",
+          "profile_id": 1
+        }
+      ],
+      "episode_id": 93653980
+    },
+    {
+      "baseline": {
+        "margin": -62309.0,
+        "money": 32312.0,
+        "profile": "melon6_cow4_w4",
+        "profile_id": 3
+      },
+      "best": {
+        "margin": -62309.0,
+        "money": 32312.0,
+        "profile": "melon6_cow4_w4",
+        "profile_id": 3
+      },
+      "candidates": [
+        {
+          "margin": -57039.0,
+          "money": 30658.0,
+          "profile": "melon6_cow2_sheep2_w4",
+          "profile_id": 5
+        },
+        {
+          "margin": -62309.0,
+          "money": 32312.0,
+          "profile": "melon6_cow4_w4",
+          "profile_id": 3
+        },
+        {
+          "margin": -70468.0,
+          "money": 19430.0,
+          "profile": "melon6_goose2_w2",
+          "profile_id": 1
+        },
+        {
+          "margin": -84974.0,
+          "money": 28892.0,
+          "profile": "melon6_cow2_w2",
+          "profile_id": 2
+        },
+        {
+          "margin": -93173.0,
+          "money": 18316.0,
+          "profile": "melon6_sheep2_w3",
+          "profile_id": 4
+        },
+        {
+          "margin": -109098.0,
+          "money": 13201.0,
+          "profile": "melon6",
+          "profile_id": 0
+        }
+      ],
+      "episode_id": 93642238
+    },
+    {
+      "baseline": {
+        "margin": -72721.0,
+        "money": 22335.0,
+        "profile": "melon6_cow4_w4",
+        "profile_id": 3
+      },
+      "best": {
+        "margin": -72721.0,
+        "money": 22335.0,
+        "profile": "melon6_cow4_w4",
+        "profile_id": 3
+      },
+      "candidates": [
+        {
+          "margin": -72721.0,
+          "money": 22335.0,
+          "profile": "melon6_cow4_w4",
+          "profile_id": 3
+        },
+        {
+          "margin": -94955.0,
+          "money": 19145.0,
+          "profile": "melon6_goose2_w2",
+          "profile_id": 1
+        },
+        {
+          "margin": -98810.0,
+          "money": 24515.0,
+          "profile": "melon6_cow2_sheep2_w4",
+          "profile_id": 5
+        },
+        {
+          "margin": -115950.0,
+          "money": 20751.0,
+          "profile": "melon6_cow2_w2",
+          "profile_id": 2
+        },
+        {
+          "margin": -119040.0,
+          "money": 13201.0,
+          "profile": "melon6",
+          "profile_id": 0
+        },
+        {
+          "margin": -131030.0,
+          "money": 27229.0,
+          "profile": "melon6_sheep2_w3",
+          "profile_id": 4
+        }
+      ],
+      "episode_id": 93629715
+    },
+    {
+      "baseline": {
+        "margin": -105839.0,
+        "money": 41523.0,
+        "profile": "melon6_cow4_w4",
+        "profile_id": 3
+      },
+      "best": {
+        "margin": -105839.0,
+        "money": 41523.0,
+        "profile": "melon6_cow4_w4",
+        "profile_id": 3
+      },
+      "candidates": [
+        {
+          "margin": -105839.0,
+          "money": 41523.0,
+          "profile": "melon6_cow4_w4",
+          "profile_id": 3
+        },
+        {
+          "margin": -110875.0,
+          "money": 29648.0,
+          "profile": "melon6_cow2_sheep2_w4",
+          "profile_id": 5
+        },
+        {
+          "margin": -111899.0,
+          "money": 25225.0,
+          "profile": "melon6_cow2_w2",
+          "profile_id": 2
+        },
+        {
+          "margin": -124588.0,
+          "money": 18035.0,
+          "profile": "melon6_sheep2_w3",
+          "profile_id": 4
+        },
+        {
+          "margin": -138050.0,
+          "money": 13201.0,
+          "profile": "melon6",
+          "profile_id": 0
+        },
+        {
+          "margin": -143817.0,
+          "money": 18900.0,
+          "profile": "melon6_goose2_w2",
+          "profile_id": 1
+        }
+      ],
+      "episode_id": 93616226
+    },
+    {
+      "baseline": {
+        "margin": -92515.0,
+        "money": 18317.0,
+        "profile": "melon6_cow4_w4",
+        "profile_id": 3
+      },
+      "best": {
+        "margin": -74348.0,
+        "money": 20852.0,
+        "profile": "melon6_cow2_w2",
+        "profile_id": 2
+      },
+      "candidates": [
+        {
+          "margin": -74348.0,
+          "money": 20852.0,
+          "profile": "melon6_cow2_w2",
+          "profile_id": 2
+        },
+        {
+          "margin": -88303.0,
+          "money": 28669.0,
+          "profile": "melon6_sheep2_w3",
+          "profile_id": 4
+        },
+        {
+          "margin": -92515.0,
+          "money": 18317.0,
+          "profile": "melon6_cow4_w4",
+          "profile_id": 3
+        },
+        {
+          "margin": -106058.0,
+          "money": 18361.0,
+          "profile": "melon6_goose2_w2",
+          "profile_id": 1
+        },
+        {
+          "margin": -126999.0,
+          "money": 13201.0,
+          "profile": "melon6",
+          "profile_id": 0
+        },
+        {
+          "margin": -141410.0,
+          "money": 34312.0,
+          "profile": "melon6_cow2_sheep2_w4",
+          "profile_id": 5
+        }
+      ],
+      "episode_id": 93600210
+    },
+    {
+      "baseline": {
+        "margin": -123525.0,
+        "money": 45262.0,
+        "profile": "melon6_cow4_w4",
+        "profile_id": 3
+      },
+      "best": {
+        "margin": -123525.0,
+        "money": 45262.0,
+        "profile": "melon6_cow4_w4",
+        "profile_id": 3
+      },
+      "candidates": [
+        {
+          "margin": -86996.0,
+          "money": 32618.0,
+          "profile": "melon6_cow2_sheep2_w4",
+          "profile_id": 5
+        },
+        {
+          "margin": -109888.0,
+          "money": 13201.0,
+          "profile": "melon6",
+          "profile_id": 0
+        },
+        {
+          "margin": -123525.0,
+          "money": 45262.0,
+          "profile": "melon6_cow4_w4",
+          "profile_id": 3
+        },
+        {
+          "margin": -127556.0,
+          "money": 30892.0,
+          "profile": "melon6_cow2_w2",
+          "profile_id": 2
+        },
+        {
+          "margin": -130344.0,
+          "money": 22125.0,
+          "profile": "melon6_sheep2_w3",
+          "profile_id": 4
+        },
+        {
+          "margin": -131249.0,
+          "money": 18104.0,
+          "profile": "melon6_goose2_w2",
+          "profile_id": 1
+        }
+      ],
+      "episode_id": 93586724
+    },
+    {
+      "baseline": {
+        "margin": -91135.0,
+        "money": 21019.0,
+        "profile": "melon6_cow4_w4",
+        "profile_id": 3
+      },
+      "best": {
+        "margin": -91135.0,
+        "money": 21019.0,
+        "profile": "melon6_cow4_w4",
+        "profile_id": 3
+      },
+      "candidates": [
+        {
+          "margin": -91135.0,
+          "money": 21019.0,
+          "profile": "melon6_cow4_w4",
+          "profile_id": 3
+        },
+        {
+          "margin": -134350.0,
+          "money": 30164.0,
+          "profile": "melon6_cow2_sheep2_w4",
+          "profile_id": 5
+        },
+        {
+          "margin": -140535.0,
+          "money": 13281.0,
+          "profile": "melon6",
+          "profile_id": 0
+        },
+        {
+          "margin": -143052.0,
+          "money": 29073.0,
+          "profile": "melon6_cow2_w2",
+          "profile_id": 2
+        },
+        {
+          "margin": -153553.0,
+          "money": 18174.0,
+          "profile": "melon6_sheep2_w3",
+          "profile_id": 4
+        },
+        {
+          "margin": -157047.0,
+          "money": 18997.0,
+          "profile": "melon6_goose2_w2",
+          "profile_id": 1
+        }
+      ],
+      "episode_id": 93575082
+    },
+    {
+      "baseline": {
+        "margin": -121080.0,
+        "money": 45380.0,
+        "profile": "melon6_cow4_w4",
+        "profile_id": 3
+      },
+      "best": {
+        "margin": -121080.0,
+        "money": 45380.0,
+        "profile": "melon6_cow4_w4",
+        "profile_id": 3
+      },
+      "candidates": [
+        {
+          "margin": -98831.0,
+          "money": 29753.0,
+          "profile": "melon6_cow2_sheep2_w4",
+          "profile_id": 5
+        },
+        {
+          "margin": -103766.0,
+          "money": 28071.0,
+          "profile": "melon6_cow2_w2",
+          "profile_id": 2
+        },
+        {
+          "margin": -112556.0,
+          "money": 17976.0,
+          "profile": "melon6_sheep2_w3",
+          "profile_id": 4
+        },
+        {
+          "margin": -121080.0,
+          "money": 45380.0,
+          "profile": "melon6_cow4_w4",
+          "profile_id": 3
+        },
+        {
+          "margin": -147559.0,
+          "money": 18096.0,
+          "profile": "melon6_goose2_w2",
+          "profile_id": 1
+        },
+        {
+          "margin": -176560.0,
+          "money": 13154.0,
+          "profile": "melon6",
+          "profile_id": 0
+        }
+      ],
+      "episode_id": 93564317
+    }
+  ],
+  "profiles": [
+    {
+      "cows": 0,
+      "crop": "MELON",
+      "geese": 0,
+      "land_quadrants": 0,
+      "name": "melon6",
+      "plots": 6,
+      "sell_reserve": 0,
+      "sheep": 0,
+      "wheat_buffer": 0,
+      "workers": 0
+    },
+    {
+      "cows": 0,
+      "crop": "MELON",
+      "geese": 2,
+      "land_quadrants": 0,
+      "name": "melon6_goose2_w2",
+      "plots": 6,
+      "sell_reserve": 0,
+      "sheep": 0,
+      "wheat_buffer": 4,
+      "workers": 2
+    },
+    {
+      "cows": 2,
+      "crop": "MELON",
+      "geese": 0,
+      "land_quadrants": 0,
+      "name": "melon6_cow2_w2",
+      "plots": 6,
+      "sell_reserve": 0,
+      "sheep": 0,
+      "wheat_buffer": 4,
+      "workers": 2
+    },
+    {
+      "cows": 4,
+      "crop": "MELON",
+      "geese": 0,
+      "land_quadrants": 0,
+      "name": "melon6_cow4_w4",
+      "plots": 6,
+      "sell_reserve": 0,
+      "sheep": 0,
+      "wheat_buffer": 8,
+      "workers": 4
+    },
+    {
+      "cows": 0,
+      "crop": "MELON",
+      "geese": 0,
+      "land_quadrants": 0,
+      "name": "melon6_sheep2_w3",
+      "plots": 6,
+      "sell_reserve": 0,
+      "sheep": 2,
+      "wheat_buffer": 4,
+      "workers": 3
+    },
+    {
+      "cows": 2,
+      "crop": "MELON",
+      "geese": 0,
+      "land_quadrants": 0,
+      "name": "melon6_cow2_sheep2_w4",
+      "plots": 6,
+      "sell_reserve": 0,
+      "sheep": 2,
+      "wheat_buffer": 8,
+      "workers": 4
+    }
+  ],
+  "promotion": true,
+  "safe_score": [
+    0.0,
+    0.0,
+    0.0,
+    2270.875,
+    0.0,
+    2.0
+  ],
+  "source_checkpoint": "rl/checkpoints/profile_ppo_v1.npz",
+  "source_model": "executor-sticky-profile-ppo-v1"
+}

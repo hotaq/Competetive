@@ -1,0 +1,221 @@
+{
+  "base_public_score": 0.98145,
+  "round1_feedback": {
+    "low_block_to_medium": 0.98142,
+    "high_block_to_medium": 0.98127,
+    "low_and_high_blocks_to_medium": 0.98124
+  },
+  "recommended_upload_order": [
+    "artifacts/kaggle_public_nina_ensemble9/probes_98166_round2/submission_single_high_vote_to_high.csv",
+    "artifacts/kaggle_public_nina_ensemble9/probes_98166_round2/submission_single_low_vote_to_low.csv",
+    "artifacts/kaggle_public_nina_ensemble9/probes_98166_round2/submission_df8_high_df9_medium_to_high.csv",
+    "artifacts/kaggle_public_nina_ensemble9/probes_98166_round2/submission_df9_low_blocks_to_low.csv",
+    "artifacts/kaggle_public_nina_ensemble9/probes_98166_round2/submission_medium_to_edges_combo.csv"
+  ],
+  "variants": [
+    {
+      "name": "single_high_vote_to_high",
+      "submission": "artifacts/kaggle_public_nina_ensemble9/probes_98166_round2/submission_single_high_vote_to_high.csv",
+      "rules": {
+        "_ _ H _ _ _ ": "High"
+      },
+      "changed_rows_by_pattern": {
+        "_ _ H _ _ _ ": 182
+      },
+      "transitions": [
+        {
+          "pattern": "_ _ H _ _ _ ",
+          "old_counts": {
+            "Medium": 182
+          },
+          "new_label": "High"
+        }
+      ],
+      "note": "Only one selected model votes High; base says Medium. Probe whether public split wants higher High recall here.",
+      "label_counts": {
+        "Low": 159516,
+        "Medium": 100212,
+        "High": 10272
+      }
+    },
+    {
+      "name": "single_low_vote_to_low",
+      "submission": "artifacts/kaggle_public_nina_ensemble9/probes_98166_round2/submission_single_low_vote_to_low.csv",
+      "rules": {
+        "_ _ L _ _ _ ": "Low"
+      },
+      "changed_rows_by_pattern": {
+        "_ _ L _ _ _ ": 114
+      },
+      "transitions": [
+        {
+          "pattern": "_ _ L _ _ _ ",
+          "old_counts": {
+            "Medium": 114
+          },
+          "new_label": "Low"
+        }
+      ],
+      "note": "Only one selected model votes Low; base says Medium. Probe whether public split wants higher Low recall here.",
+      "label_counts": {
+        "Low": 159630,
+        "Medium": 100280,
+        "High": 10090
+      }
+    },
+    {
+      "name": "df8_high_df9_medium_to_high",
+      "submission": "artifacts/kaggle_public_nina_ensemble9/probes_98166_round2/submission_df8_high_df9_medium_to_high.csv",
+      "rules": {
+        "H _ H _ _ _ ": "High",
+        "H _ _ _ _ _ ": "High"
+      },
+      "changed_rows_by_pattern": {
+        "H _ H _ _ _ ": 226,
+        "H _ _ _ _ _ ": 132
+      },
+      "transitions": [
+        {
+          "pattern": "H _ H _ _ _ ",
+          "old_counts": {
+            "Medium": 226
+          },
+          "new_label": "High"
+        },
+        {
+          "pattern": "H _ _ _ _ _ ",
+          "old_counts": {
+            "Medium": 132
+          },
+          "new_label": "High"
+        }
+      ],
+      "note": "Undo two Nina strict returns where df8/high-side sources vote High but base final says Medium.",
+      "label_counts": {
+        "Low": 159516,
+        "Medium": 100036,
+        "High": 10448
+      }
+    },
+    {
+      "name": "df9_low_blocks_to_low",
+      "submission": "artifacts/kaggle_public_nina_ensemble9/probes_98166_round2/submission_df9_low_blocks_to_low.csv",
+      "rules": {
+        "_ L _ L L L ": "Low",
+        "_ _ _ _ L L ": "Low",
+        "_ L _ L _ L ": "Low",
+        "_ L L _ _ L ": "Low",
+        "_ _ L _ L L ": "Low"
+      },
+      "changed_rows_by_pattern": {
+        "_ L _ L L L ": 47,
+        "_ _ _ _ L L ": 4,
+        "_ L _ L _ L ": 3,
+        "_ L L _ _ L ": 2,
+        "_ _ L _ L L ": 2
+      },
+      "transitions": [
+        {
+          "pattern": "_ L _ L L L ",
+          "old_counts": {
+            "Medium": 47
+          },
+          "new_label": "Low"
+        },
+        {
+          "pattern": "_ _ _ _ L L ",
+          "old_counts": {
+            "Low": 4
+          },
+          "new_label": "Low"
+        },
+        {
+          "pattern": "_ L _ L _ L ",
+          "old_counts": {
+            "Low": 3
+          },
+          "new_label": "Low"
+        },
+        {
+          "pattern": "_ L L _ _ L ",
+          "old_counts": {
+            "Low": 2
+          },
+          "new_label": "Low"
+        },
+        {
+          "pattern": "_ _ L _ L L ",
+          "old_counts": {
+            "Low": 2
+          },
+          "new_label": "Low"
+        }
+      ],
+      "note": "Small df9/low-side blocks: base final mostly Medium/Low mix; force Low for low-consensus crumbs.",
+      "label_counts": {
+        "Low": 159563,
+        "Medium": 100347,
+        "High": 10090
+      }
+    },
+    {
+      "name": "known_bad_low_block_reverse_to_low",
+      "submission": "artifacts/kaggle_public_nina_ensemble9/probes_98166_round2/submission_known_bad_low_block_reverse_to_low.csv",
+      "rules": {
+        "_ L L L L L ": "Low"
+      },
+      "changed_rows_by_pattern": {
+        "_ L L L L L ": 138
+      },
+      "transitions": [
+        {
+          "pattern": "_ L L L L L ",
+          "old_counts": {
+            "Low": 138
+          },
+          "new_label": "Low"
+        }
+      ],
+      "note": "Round1 changed this Low block to Medium and hurt; this reproduces base for sanity if needed, should equal base on this pattern.",
+      "label_counts": {
+        "Low": 159516,
+        "Medium": 100394,
+        "High": 10090
+      }
+    },
+    {
+      "name": "medium_to_edges_combo",
+      "submission": "artifacts/kaggle_public_nina_ensemble9/probes_98166_round2/submission_medium_to_edges_combo.csv",
+      "rules": {
+        "_ _ H _ _ _ ": "High",
+        "_ _ L _ _ _ ": "Low"
+      },
+      "changed_rows_by_pattern": {
+        "_ _ H _ _ _ ": 182,
+        "_ _ L _ _ _ ": 114
+      },
+      "transitions": [
+        {
+          "pattern": "_ _ H _ _ _ ",
+          "old_counts": {
+            "Medium": 182
+          },
+          "new_label": "High"
+        },
+        {
+          "pattern": "_ _ L _ _ _ ",
+          "old_counts": {
+            "Medium": 114
+          },
+          "new_label": "Low"
+        }
+      ],
+      "note": "Combined single-vote edge recall probe: Medium -> High and Medium -> Low on two largest one-off disagreement groups.",
+      "label_counts": {
+        "Low": 159630,
+        "Medium": 100098,
+        "High": 10272
+      }
+    }
+  ]
+}

@@ -1,0 +1,504 @@
+{
+  "candidate": {
+    "agent_file": "submissions/meta_v18_state_macro_local/main.py",
+    "fallback_agent_file": null,
+    "sha256": "b46e4f4a4f16e48753f853049ecfc53986c6578fe657a81edb1b97282f6ea17d"
+  },
+  "created_at": "2026-08-24T17:41:42.566960+00:00",
+  "episodes": [
+    {
+      "candidate_margin": -126512.0,
+      "candidate_money": 35317.0,
+      "completed_transitions": 719,
+      "episode_id": 93653980,
+      "fallback_components": 0,
+      "farmer_sanitized_steps": 25,
+      "final_state_step": 719,
+      "hands_sanitized_steps": 25,
+      "market_sanitized_steps": 1,
+      "normalized_steps": 0,
+      "opening_normalized_steps": 0,
+      "opening_sanitized_steps": 43,
+      "original_opponent_money": 46377.0,
+      "original_top1_money": 43801.0,
+      "post_handoff_normalized_steps": 0,
+      "post_handoff_sanitized_steps": 0,
+      "replay_frames": 720,
+      "route_decisions": [
+        {
+          "gate": 120,
+          "planner_status": "BLOCKED",
+          "reason": "milk=1.225,wool=1.075,money=383,threshold=0.25,balanced",
+          "route": "BALANCED",
+          "step": 120
+        },
+        {
+          "gate": 240,
+          "planner_status": "BLOCKED",
+          "reason": "milk=1.432,wool=0.665,money=1890,threshold=0.20,blocked:capital,workforce",
+          "route": "BALANCED",
+          "step": 240
+        },
+        {
+          "gate": 480,
+          "planner_status": "BLOCKED",
+          "reason": "milk=1.570,wool=1.105,money=10309,threshold=0.20,blocked:workforce",
+          "route": "BALANCED",
+          "step": 480
+        },
+        {
+          "gate": 696,
+          "planner_status": "PLANNED",
+          "reason": "terminal liquidation gate",
+          "route": "LIQUIDATE",
+          "step": 696
+        }
+      ],
+      "sanitized_steps": 43,
+      "seed": 373238822,
+      "steps": 719,
+      "tape_top1_money": 161829.0,
+      "top1_seat": 0
+    },
+    {
+      "candidate_margin": -109182.0,
+      "candidate_money": 15831.0,
+      "completed_transitions": 719,
+      "episode_id": 93642238,
+      "fallback_components": 0,
+      "farmer_sanitized_steps": 25,
+      "final_state_step": 719,
+      "hands_sanitized_steps": 25,
+      "market_sanitized_steps": 1,
+      "normalized_steps": 0,
+      "opening_normalized_steps": 0,
+      "opening_sanitized_steps": 43,
+      "original_opponent_money": 107474.0,
+      "original_top1_money": 112527.0,
+      "post_handoff_normalized_steps": 0,
+      "post_handoff_sanitized_steps": 0,
+      "replay_frames": 720,
+      "route_decisions": [
+        {
+          "gate": 120,
+          "planner_status": "BLOCKED",
+          "reason": "milk=1.119,wool=1.075,money=383,threshold=0.25,balanced",
+          "route": "BALANCED",
+          "step": 120
+        },
+        {
+          "gate": 240,
+          "planner_status": "BLOCKED",
+          "reason": "milk=1.250,wool=0.665,money=250,threshold=0.20,blocked:capital,workforce",
+          "route": "BALANCED",
+          "step": 240
+        },
+        {
+          "gate": 480,
+          "planner_status": "BLOCKED",
+          "reason": "milk=1.388,wool=0.275,money=50,threshold=0.20,blocked:capital,workforce",
+          "route": "BALANCED",
+          "step": 480
+        },
+        {
+          "gate": 696,
+          "planner_status": "PLANNED",
+          "reason": "terminal liquidation gate",
+          "route": "LIQUIDATE",
+          "step": 696
+        }
+      ],
+      "sanitized_steps": 43,
+      "seed": 1660098397,
+      "steps": 719,
+      "tape_top1_money": 125013.0,
+      "top1_seat": 1
+    },
+    {
+      "candidate_margin": -133583.0,
+      "candidate_money": 5353.0,
+      "completed_transitions": 719,
+      "episode_id": 93629715,
+      "fallback_components": 0,
+      "farmer_sanitized_steps": 25,
+      "final_state_step": 719,
+      "hands_sanitized_steps": 25,
+      "market_sanitized_steps": 1,
+      "normalized_steps": 0,
+      "opening_normalized_steps": 0,
+      "opening_sanitized_steps": 43,
+      "original_opponent_money": 96782.0,
+      "original_top1_money": 99274.0,
+      "post_handoff_normalized_steps": 0,
+      "post_handoff_sanitized_steps": 0,
+      "replay_frames": 720,
+      "route_decisions": [
+        {
+          "gate": 120,
+          "planner_status": "BLOCKED",
+          "reason": "milk=1.225,wool=1.075,money=379,threshold=0.25,balanced",
+          "route": "BALANCED",
+          "step": 120
+        },
+        {
+          "gate": 240,
+          "planner_status": "BLOCKED",
+          "reason": "milk=1.338,wool=0.580,money=601,threshold=0.20,blocked:capital,workforce",
+          "route": "BALANCED",
+          "step": 240
+        },
+        {
+          "gate": 480,
+          "planner_status": "BLOCKED",
+          "reason": "milk=1.275,wool=0.004,money=70,threshold=0.20,blocked:capital,workforce",
+          "route": "BALANCED",
+          "step": 480
+        },
+        {
+          "gate": 696,
+          "planner_status": "PLANNED",
+          "reason": "terminal liquidation gate",
+          "route": "LIQUIDATE",
+          "step": 696
+        }
+      ],
+      "sanitized_steps": 43,
+      "seed": 726721292,
+      "steps": 719,
+      "tape_top1_money": 138936.0,
+      "top1_seat": 0
+    },
+    {
+      "candidate_margin": -128045.0,
+      "candidate_money": 15261.0,
+      "completed_transitions": 719,
+      "episode_id": 93616226,
+      "fallback_components": 0,
+      "farmer_sanitized_steps": 25,
+      "final_state_step": 719,
+      "hands_sanitized_steps": 25,
+      "market_sanitized_steps": 1,
+      "normalized_steps": 0,
+      "opening_normalized_steps": 0,
+      "opening_sanitized_steps": 43,
+      "original_opponent_money": 44385.0,
+      "original_top1_money": 43090.0,
+      "post_handoff_normalized_steps": 0,
+      "post_handoff_sanitized_steps": 0,
+      "replay_frames": 720,
+      "route_decisions": [
+        {
+          "gate": 120,
+          "planner_status": "BLOCKED",
+          "reason": "milk=1.225,wool=1.075,money=379,threshold=0.25,balanced",
+          "route": "BALANCED",
+          "step": 120
+        },
+        {
+          "gate": 240,
+          "planner_status": "BLOCKED",
+          "reason": "milk=1.451,wool=0.580,money=1091,threshold=0.20,blocked:capital,workforce",
+          "route": "BALANCED",
+          "step": 240
+        },
+        {
+          "gate": 480,
+          "planner_status": "BLOCKED",
+          "reason": "milk=1.658,wool=0.004,money=1822,threshold=0.20,blocked:capital,workforce",
+          "route": "BALANCED",
+          "step": 480
+        },
+        {
+          "gate": 696,
+          "planner_status": "PLANNED",
+          "reason": "terminal liquidation gate",
+          "route": "LIQUIDATE",
+          "step": 696
+        }
+      ],
+      "sanitized_steps": 43,
+      "seed": 1636699744,
+      "steps": 719,
+      "tape_top1_money": 143306.0,
+      "top1_seat": 1
+    },
+    {
+      "candidate_margin": -103439.0,
+      "candidate_money": 19909.0,
+      "completed_transitions": 719,
+      "episode_id": 93600210,
+      "fallback_components": 0,
+      "farmer_sanitized_steps": 25,
+      "final_state_step": 719,
+      "hands_sanitized_steps": 25,
+      "market_sanitized_steps": 1,
+      "normalized_steps": 0,
+      "opening_normalized_steps": 0,
+      "opening_sanitized_steps": 43,
+      "original_opponent_money": 76852.0,
+      "original_top1_money": 79107.0,
+      "post_handoff_normalized_steps": 0,
+      "post_handoff_sanitized_steps": 0,
+      "replay_frames": 720,
+      "route_decisions": [
+        {
+          "gate": 120,
+          "planner_status": "BLOCKED",
+          "reason": "milk=1.119,wool=1.075,money=383,threshold=0.25,balanced",
+          "route": "BALANCED",
+          "step": 120
+        },
+        {
+          "gate": 240,
+          "planner_status": "BLOCKED",
+          "reason": "milk=1.282,wool=0.665,money=30,threshold=0.20,blocked:capital,workforce",
+          "route": "BALANCED",
+          "step": 240
+        },
+        {
+          "gate": 480,
+          "planner_status": "BLOCKED",
+          "reason": "milk=1.319,wool=0.860,money=3279,threshold=0.20,blocked:capital,workforce",
+          "route": "BALANCED",
+          "step": 480
+        },
+        {
+          "gate": 696,
+          "planner_status": "PLANNED",
+          "reason": "terminal liquidation gate",
+          "route": "LIQUIDATE",
+          "step": 696
+        }
+      ],
+      "sanitized_steps": 43,
+      "seed": 1921241818,
+      "steps": 719,
+      "tape_top1_money": 123348.0,
+      "top1_seat": 1
+    },
+    {
+      "candidate_margin": -105551.0,
+      "candidate_money": 27555.0,
+      "completed_transitions": 719,
+      "episode_id": 93586724,
+      "fallback_components": 0,
+      "farmer_sanitized_steps": 25,
+      "final_state_step": 719,
+      "hands_sanitized_steps": 25,
+      "market_sanitized_steps": 1,
+      "normalized_steps": 0,
+      "opening_normalized_steps": 0,
+      "opening_sanitized_steps": 43,
+      "original_opponent_money": 128208.0,
+      "original_top1_money": 132153.0,
+      "post_handoff_normalized_steps": 0,
+      "post_handoff_sanitized_steps": 0,
+      "replay_frames": 720,
+      "route_decisions": [
+        {
+          "gate": 120,
+          "planner_status": "BLOCKED",
+          "reason": "milk=1.119,wool=1.075,money=379,threshold=0.25,balanced",
+          "route": "BALANCED",
+          "step": 120
+        },
+        {
+          "gate": 240,
+          "planner_status": "BLOCKED",
+          "reason": "milk=0.975,wool=1.045,money=2646,threshold=0.20,balanced",
+          "route": "BALANCED",
+          "step": 240
+        },
+        {
+          "gate": 480,
+          "planner_status": "BLOCKED",
+          "reason": "milk=1.294,wool=1.160,money=6715,threshold=0.20,balanced",
+          "route": "BALANCED",
+          "step": 480
+        },
+        {
+          "gate": 696,
+          "planner_status": "PLANNED",
+          "reason": "terminal liquidation gate",
+          "route": "LIQUIDATE",
+          "step": 696
+        }
+      ],
+      "sanitized_steps": 43,
+      "seed": 1024633621,
+      "steps": 719,
+      "tape_top1_money": 133106.0,
+      "top1_seat": 0
+    },
+    {
+      "candidate_margin": -123730.0,
+      "candidate_money": 4789.0,
+      "completed_transitions": 719,
+      "episode_id": 93575082,
+      "fallback_components": 0,
+      "farmer_sanitized_steps": 25,
+      "final_state_step": 719,
+      "hands_sanitized_steps": 25,
+      "market_sanitized_steps": 1,
+      "normalized_steps": 0,
+      "opening_normalized_steps": 0,
+      "opening_sanitized_steps": 43,
+      "original_opponent_money": 97421.0,
+      "original_top1_money": 102687.0,
+      "post_handoff_normalized_steps": 0,
+      "post_handoff_sanitized_steps": 0,
+      "replay_frames": 720,
+      "route_decisions": [
+        {
+          "gate": 120,
+          "planner_status": "BLOCKED",
+          "reason": "milk=1.225,wool=1.075,money=379,threshold=0.25,balanced",
+          "route": "BALANCED",
+          "step": 120
+        },
+        {
+          "gate": 240,
+          "planner_status": "BLOCKED",
+          "reason": "milk=1.338,wool=0.580,money=593,threshold=0.20,blocked:capital,workforce",
+          "route": "BALANCED",
+          "step": 240
+        },
+        {
+          "gate": 480,
+          "planner_status": "BLOCKED",
+          "reason": "milk=1.206,wool=0.004,money=300,threshold=0.20,blocked:capital,workforce",
+          "route": "BALANCED",
+          "step": 480
+        },
+        {
+          "gate": 696,
+          "planner_status": "PLANNED",
+          "reason": "terminal liquidation gate",
+          "route": "LIQUIDATE",
+          "step": 696
+        }
+      ],
+      "sanitized_steps": 43,
+      "seed": 864976960,
+      "steps": 719,
+      "tape_top1_money": 128519.0,
+      "top1_seat": 0
+    },
+    {
+      "candidate_margin": -127264.0,
+      "candidate_money": 12848.0,
+      "completed_transitions": 719,
+      "episode_id": 93564317,
+      "fallback_components": 0,
+      "farmer_sanitized_steps": 25,
+      "final_state_step": 719,
+      "hands_sanitized_steps": 25,
+      "market_sanitized_steps": 1,
+      "normalized_steps": 0,
+      "opening_normalized_steps": 0,
+      "opening_sanitized_steps": 43,
+      "original_opponent_money": 95831.0,
+      "original_top1_money": 116500.0,
+      "post_handoff_normalized_steps": 0,
+      "post_handoff_sanitized_steps": 0,
+      "replay_frames": 720,
+      "route_decisions": [
+        {
+          "gate": 120,
+          "planner_status": "BLOCKED",
+          "reason": "milk=1.225,wool=1.075,money=383,threshold=0.25,balanced",
+          "route": "BALANCED",
+          "step": 120
+        },
+        {
+          "gate": 240,
+          "planner_status": "BLOCKED",
+          "reason": "milk=1.413,wool=0.580,money=676,threshold=0.20,blocked:capital,workforce",
+          "route": "BALANCED",
+          "step": 240
+        },
+        {
+          "gate": 480,
+          "planner_status": "BLOCKED",
+          "reason": "milk=1.601,wool=0.024,money=1060,threshold=0.20,blocked:capital,workforce",
+          "route": "BALANCED",
+          "step": 480
+        },
+        {
+          "gate": 696,
+          "planner_status": "PLANNED",
+          "reason": "terminal liquidation gate",
+          "route": "LIQUIDATE",
+          "step": 696
+        }
+      ],
+      "sanitized_steps": 43,
+      "seed": 896714598,
+      "steps": 719,
+      "tape_top1_money": 140112.0,
+      "top1_seat": 0
+    }
+  ],
+  "limitation": "Recorded Top-1 actions are an action tape, not a live policy; changing the opponent can make later tape actions stale or illegal.",
+  "schema_version": 4,
+  "source": {
+    "competition": "kaggriculture",
+    "leader": {
+      "score": 3207.3,
+      "submission_date": "2026-08-16T01:30:54.743Z",
+      "team_id": 16677252,
+      "team_name": "\u30ab\u30ef\u30b7\u30ae"
+    },
+    "manifest_created_at": "2026-08-16T14:34:46.365999+00:00",
+    "manifest_file": "replays/top1_current/manifest.json",
+    "manifest_sha256": "074a5d4957e962f031c22a49a2da5839fecb278a38c3af7458a8ffbb393fb40f",
+    "submission": {
+      "date": "2026-08-12T16:50:03.273Z",
+      "public_score": 3207.3,
+      "submission_id": 55463512
+    }
+  },
+  "summary": {
+    "cvar10_margin": -133583.0,
+    "draws": 0,
+    "fallback_components": 0,
+    "farmer_sanitized_steps": 200,
+    "games": 8,
+    "hands_sanitized_steps": 200,
+    "losses": 8,
+    "market_sanitized_steps": 8,
+    "mean_margin": -119663.25,
+    "mean_money": 17107.875,
+    "median_margin": -125121.0,
+    "normalized_steps": 0,
+    "opening_normalized_steps": 0,
+    "opening_sanitized_steps": 344,
+    "post_handoff_normalized_steps": 0,
+    "post_handoff_sanitized_steps": 0,
+    "route_counts_by_gate": {
+      "120": {
+        "BALANCED": 8
+      },
+      "240": {
+        "BALANCED": 8
+      },
+      "480": {
+        "BALANCED": 8
+      },
+      "696": {
+        "LIQUIDATE": 8
+      }
+    },
+    "sanitized_steps": 344,
+    "win_rate": 0.0,
+    "wins": 0,
+    "worst_margin": -133583.0,
+    "worst_money": 4789.0
+  },
+  "validation": {
+    "action_alignment": "steps[1:] actions produce observations in the same frame",
+    "all_original_replays_exact": true,
+    "candidate_actions_sanitized": true,
+    "phase_boundary": 120
+  }
+}

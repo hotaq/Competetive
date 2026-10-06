@@ -1,0 +1,144 @@
+{
+  "topic": {
+    "authorUser": {
+      "displayName": "broccoli beef",
+      "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1048539-kg.jpg",
+      "url": "/siukeitin",
+      "tier": "GRANDMASTER",
+      "id": 1048539,
+      "progressionOptOut": false
+    },
+    "authorType": "TOPIC",
+    "commentCount": 1,
+    "firstForumMessageId": 3451858,
+    "id": 696380,
+    "lastCommenterType": "TOPIC",
+    "lastCommenterName": "broccoli beef",
+    "lastCommenterUrl": "/competitions/playground-series-s6e5/discussion/696380#3452237",
+    "lastCommentPostDate": "2026-05-02T21:19:37.883333300Z",
+    "parentName": "Predicting F1 Pit Stops",
+    "parentUrl": "/competitions/playground-series-s6e5/discussion",
+    "postDate": "2026-05-02T02:41:01.496362300Z",
+    "tags": [
+      {
+        "id": 13102,
+        "name": "beginner",
+        "listingUrl": "/tags/beginner",
+        "displayName": "Beginner"
+      },
+      {
+        "id": 13201,
+        "name": "exploratory data analysis",
+        "listingUrl": "/tags/eda",
+        "displayName": "Exploratory Data Analysis"
+      }
+    ],
+    "title": "Inconsistencies in the \"original\" dataset",
+    "topicUrl": "/competitions/playground-series-s6e5/discussion/696380",
+    "votes": 13,
+    "teamUpInfo": {
+      "teamLeader": {
+        "displayName": "broccoli beef",
+        "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1048539-kg.jpg",
+        "url": "/siukeitin",
+        "userName": "siukeitin",
+        "tier": "GRANDMASTER",
+        "id": 1048539,
+        "profileUrl": "/siukeitin",
+        "performanceTier": "GRANDMASTER",
+        "userId": 1048539,
+        "progressionOptOut": false
+      },
+      "intro": ""
+    }
+  },
+  "firstMessage": {
+    "id": 3451858,
+    "postDate": "2026-05-02T02:41:01.497Z",
+    "rawMarkdown": "The \"original\" dataset is supposed to be based on data provided by the [FastF1](https://github.com/theOehrly/Fast-F1) library, but the creator of the dataset also derived additional features from the existing features. \n\nEach combination of `Driver`, `Race` and `Year` corresponds to a time series indexed by `LapNumber` \\\\(i\\\\). As such, the derived features are supposed to satisfy some consistency requirements. For example,\n\n\\\\[\nLapTime\\\\_Delta_i=LapTime_i-LapTime_{i-1}\\quad\\text{if }PitStop_i\\not=1\n\\\\]\n\n\\\\[\nPosition\\\\_Change_i=Position_{i-1}-Position_i\n\\\\]\n\n\\\\[\nPitNextLap_i=1\\iff PitStop_{i+1}=1\n\\\\]\n\nIt seems that these do not hold for all the time series. It is unclear what is causing this, possibly bugs.\n```python\ndef test_consistency(driver, race, year):\n    print(F'>>> Test started for {driver=}, {race=}, {year=}')  \n    mask = (original.Driver==driver)&(original.Race==race)&(original.Year==year)\n    assert sum(mask)>0\n    X = original[mask].set_index('LapNumber')\n    # LapTime_Delta test\n    for i, r in X.iterrows():\n        try:\n            delta = r['LapTime (s)'] - X.loc[i-1, 'LapTime (s)']\n            if not r['PitStop'] and not np.isclose(delta, r['LapTime_Delta']):\n                print('*** LapTime_Delta consistency test failed.')\n                print(F'Expected: {delta}, Actual: {r['LapTime_Delta']}')\n                break \n        except:\n            pass\n  \n    # Position_Change test\n    for i, r in X.iterrows():\n        try:\n            delta = X.loc[i-1, 'Position'] - r['Position']\n            if not np.isclose(delta, r['Position_Change']):\n                print('*** Position_Change consistency test failed.')\n                print(F'Expected: {delta}, Actual: {r['Position_Change']}')\n                break \n        except:\n            pass\n\n    # PitStop/PitNextLap test\n    for i, r in X.iterrows():\n        try:\n            pit_next_lap = X.loc[i+1, 'PitStop']\n            if pit_next_lap^r['PitNextLap'] :\n                print('*** PitStop/PitNextLap consistency test failed.')\n                print(F'PitNextLap={r.PitNextLap}, Next PitStop={pit_next_lap}')\n                break \n        except:\n            pass\n    print(F'<<< Test completed for {driver=}, {race=}, {year=}')   \n\ntest_consistency('ALB', 'Abu Dhabi Grand Prix', 2023);print()\ntest_consistency('ALB', 'Abu Dhabi Grand Prix', 2024);print()\ntest_consistency('ALB', 'Abu Dhabi Grand Prix', 2025);print()\ntest_consistency('ZHO', 'Abu Dhabi Grand Prix', 2023);print()\ntest_consistency('ZHO', 'Abu Dhabi Grand Prix', 2024);print()\n```\n```text\n>>> Test started for driver='ALB', race='Abu Dhabi Grand Prix', year=2023\n<<< Test completed for driver='ALB', race='Abu Dhabi Grand Prix', year=2023\n\n>>> Test started for driver='ALB', race='Abu Dhabi Grand Prix', year=2024\n*** LapTime_Delta consistency test failed.\nExpected: 19.001000000000005, Actual: -26.10499999999999\n*** Position_Change consistency test failed.\nExpected: 0, Actual: 1.0\n*** PitStop/PitNextLap consistency test failed.\nPitNextLap=0, Next PitStop=1\n<<< Test completed for driver='ALB', race='Abu Dhabi Grand Prix', year=2024\n\n>>> Test started for driver='ALB', race='Abu Dhabi Grand Prix', year=2025\n*** LapTime_Delta consistency test failed.\nExpected: -8.047000000000011, Actual: 1.8819999999999908\n*** Position_Change consistency test failed.\nExpected: 0, Actual: 2.0\n*** PitStop/PitNextLap consistency test failed.\nPitNextLap=0, Next PitStop=1\n<<< Test completed for driver='ALB', race='Abu Dhabi Grand Prix', year=2025\n\n>>> Test started for driver='ZHO', race='Abu Dhabi Grand Prix', year=2023\n<<< Test completed for driver='ZHO', race='Abu Dhabi Grand Prix', year=2023\n\n>>> Test started for driver='ZHO', race='Abu Dhabi Grand Prix', year=2024\n*** LapTime_Delta consistency test failed.\nExpected: 19.108999999999995, Actual: -26.033999999999992\n*** Position_Change consistency test failed.\nExpected: 0, Actual: 1.0\n*** PitStop/PitNextLap consistency test failed.\nPitNextLap=0, Next PitStop=1\n<<< Test completed for driver='ZHO', race='Abu Dhabi Grand Prix', year=2024\n```",
+    "content": "<p>The \"original\" dataset is supposed to be based on data provided by the <a href=\"https://github.com/theOehrly/Fast-F1\" target=\"_blank\">FastF1</a> library, but the creator of the dataset also derived additional features from the existing features. </p>\n<p>Each combination of <code>Driver</code>, <code>Race</code> and <code>Year</code> corresponds to a time series indexed by <code>LapNumber</code> \\(i\\). As such, the derived features are supposed to satisfy some consistency requirements. For example,</p>\n<p>\\[\nLapTime\\_Delta_i=LapTime_i-LapTime_{i-1}\\quad\\text{if }PitStop_i\\not=1\n\\]</p>\n<p>\\[\nPosition\\_Change_i=Position_{i-1}-Position_i\n\\]</p>\n<p>\\[\nPitNextLap_i=1\\iff PitStop_{i+1}=1\n\\]</p>\n<p>It seems that these do not hold for all the time series. It is unclear what is causing this, possibly bugs.</p>\n<pre><code>def test_consistency(driver, race, year):\n    print(F'&gt;&gt;&gt; Test started for {driver=}, {race=}, {year=}')  \n    mask = (original.Driver==driver)&amp;(original.Race==race)&amp;(original.Year==year)\n    assert sum(mask)&gt;0\n    X = original[mask].set_index('LapNumber')\n    # LapTime_Delta test\n    for i, r in X.iterrows():\n        try:\n            delta = r['LapTime (s)'] - X.loc[i-1, 'LapTime (s)']\n            if not r['PitStop'] and not np.isclose(delta, r['LapTime_Delta']):\n                print('*** LapTime_Delta consistency test failed.')\n                print(F'Expected: {delta}, Actual: {r['LapTime_Delta']}')\n                break \n        except:\n            pass\n\n    # Position_Change test\n    for i, r in X.iterrows():\n        try:\n            delta = X.loc[i-1, 'Position'] - r['Position']\n            if not np.isclose(delta, r['Position_Change']):\n                print('*** Position_Change consistency test failed.')\n                print(F'Expected: {delta}, Actual: {r['Position_Change']}')\n                break \n        except:\n            pass\n\n    # PitStop/PitNextLap test\n    for i, r in X.iterrows():\n        try:\n            pit_next_lap = X.loc[i+1, 'PitStop']\n            if pit_next_lap^r['PitNextLap'] :\n                print('*** PitStop/PitNextLap consistency test failed.')\n                print(F'PitNextLap={r.PitNextLap}, Next PitStop={pit_next_lap}')\n                break \n        except:\n            pass\n    print(F'&lt;&lt;&lt; Test completed for {driver=}, {race=}, {year=}')   \n\ntest_consistency('ALB', 'Abu Dhabi Grand Prix', 2023);print()\ntest_consistency('ALB', 'Abu Dhabi Grand Prix', 2024);print()\ntest_consistency('ALB', 'Abu Dhabi Grand Prix', 2025);print()\ntest_consistency('ZHO', 'Abu Dhabi Grand Prix', 2023);print()\ntest_consistency('ZHO', 'Abu Dhabi Grand Prix', 2024);print()\n</code></pre>\n<pre><code>&gt;&gt;&gt; Test started for driver='ALB', race='Abu Dhabi Grand Prix', year=2023\n&lt;&lt;&lt; Test completed for driver='ALB', race='Abu Dhabi Grand Prix', year=2023\n\n&gt;&gt;&gt; Test started for driver='ALB', race='Abu Dhabi Grand Prix', year=2024\n*** LapTime_Delta consistency test failed.\nExpected: 19.001000000000005, Actual: -26.10499999999999\n*** Position_Change consistency test failed.\nExpected: 0, Actual: 1.0\n*** PitStop/PitNextLap consistency test failed.\nPitNextLap=0, Next PitStop=1\n&lt;&lt;&lt; Test completed for driver='ALB', race='Abu Dhabi Grand Prix', year=2024\n\n&gt;&gt;&gt; Test started for driver='ALB', race='Abu Dhabi Grand Prix', year=2025\n*** LapTime_Delta consistency test failed.\nExpected: -8.047000000000011, Actual: 1.8819999999999908\n*** Position_Change consistency test failed.\nExpected: 0, Actual: 2.0\n*** PitStop/PitNextLap consistency test failed.\nPitNextLap=0, Next PitStop=1\n&lt;&lt;&lt; Test completed for driver='ALB', race='Abu Dhabi Grand Prix', year=2025\n\n&gt;&gt;&gt; Test started for driver='ZHO', race='Abu Dhabi Grand Prix', year=2023\n&lt;&lt;&lt; Test completed for driver='ZHO', race='Abu Dhabi Grand Prix', year=2023\n\n&gt;&gt;&gt; Test started for driver='ZHO', race='Abu Dhabi Grand Prix', year=2024\n*** LapTime_Delta consistency test failed.\nExpected: 19.108999999999995, Actual: -26.033999999999992\n*** Position_Change consistency test failed.\nExpected: 0, Actual: 1.0\n*** PitStop/PitNextLap consistency test failed.\nPitNextLap=0, Next PitStop=1\n&lt;&lt;&lt; Test completed for driver='ZHO', race='Abu Dhabi Grand Prix', year=2024\n</code></pre>",
+    "parent": {
+      "url": "#"
+    },
+    "author": {
+      "displayName": "broccoli beef",
+      "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1048539-kg.jpg",
+      "url": "/siukeitin",
+      "tier": "GRANDMASTER",
+      "id": 1048539,
+      "progressionOptOut": false
+    },
+    "authorType": "TOPIC",
+    "votes": {
+      "totalVotes": 13,
+      "canUpvote": true,
+      "totalUpvotes": 13
+    },
+    "kernelVersion": 0,
+    "feedbackTrackingData": {},
+    "reactions": [
+      {
+        "emoji": "THANK_YOU",
+        "featuredUserNames": [
+          "ozzy97",
+          "rawashishsin"
+        ],
+        "userCount": 2
+      }
+    ],
+    "teamUpInfo": {
+      "teamLeader": {
+        "displayName": "broccoli beef",
+        "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1048539-kg.jpg",
+        "url": "/siukeitin",
+        "userName": "siukeitin",
+        "tier": "GRANDMASTER",
+        "id": 1048539,
+        "profileUrl": "/siukeitin",
+        "performanceTier": "GRANDMASTER",
+        "userId": 1048539,
+        "progressionOptOut": false
+      },
+      "intro": ""
+    }
+  },
+  "comments": [
+    {
+      "id": 3452237,
+      "postDate": "2026-05-02T21:19:37.883Z",
+      "rawMarkdown": "Here is another look at how problematic the \"original\" dataset is. Obviously, among all the variables derived from the fastf1 raw data, the most important ones are `PitNextLap` and `PitStop`. Let's compare what these variables really should be from the raw fastf1 data.\n\n```python\nimport fastf1, os, logging\n\nlogging.disable(logging.CRITICAL)\n\ncache_dir = './f1'\nif not os.path.exists(cache_dir):\n    os.makedirs(cache_dir)\n\nfastf1.Cache.enable_cache(cache_dir) \n\noriginal = pd.read_csv('/kaggle/input/datasets/aadigupta1601/f1-strategy-dataset-pit-stop-prediction/f1_strategy_dataset_v4.csv')\n\ndef diff_data(driver, race, year):\n    # X is raw fastf1 data\n    session = fastf1.get_session(year, race, 'R')\n    session.load()\n    df = session.laps\n    df = df[df.Driver==driver]\n    assert not df.empty\n    X = df[['LapNumber', 'Compound', 'Stint', 'Position']].convert_dtypes()\n    X['LapTime (s)'] = df['LapTime'].dt.total_seconds()\n    X['PitNextLap'] = df['PitInTime'].notna().astype(int)\n    X['PitStop'] = df['PitOutTime'].notna().astype(int)    \n    # X0 is from \"original\" dataset\n    X0 = original[(original['Driver']==driver) & (original['Race']==race) & (original['Year']==year)]\n    cols = ['LapNumber', 'Compound', 'Stint', 'Position', 'LapTime (s)', 'PitNextLap', 'PitStop']\n    X0 = X0[cols]\n\n    X['indicator'] = 'fastf1'\n    X0['indicator'] = 'original'\n    \n    df_tmp = pd.concat([X, X0]).drop_duplicates(cols, keep=False)\n    if df_tmp.empty:\n        print('FastF1 data and \"original\" data are identical.')\n        return \n    X = df_tmp[df_tmp['indicator']=='fastf1'].drop(['indicator'], axis=1)\n    X0 = df_tmp[df_tmp['indicator']=='original'].drop(['indicator'], axis=1)\n    return X0.merge(\n        X, on=['LapNumber', 'Compound', 'Stint', 'Position', 'LapTime (s)'], \n        how='left', suffixes=('_orig','_fastf1') \n    )\n```\n```python\nd, r, y = 'ALB', 'Abu Dhabi Grand Prix', 2023\ndiff_data(d,r,y)\n```\n```text\nFastF1 data and \"original\" data are identical.\n```\n```python\nd, r, y = 'ALB', 'Abu Dhabi Grand Prix', 2024\ndiff_data(d,r,y)\n```\n![](https://www.googleapis.com/download/storage/v1/b/kaggle-forum-message-attachments/o/inbox%2F1048539%2F9b3bc8bc604765187eca5860adeb46b6%2FCapture.PNG?generation=1777756488135486&alt=media)\n\nThe \"original\" dataset says the car was pretty much in the pit every lap, which is nonsensical. \n",
+      "content": "<p>Here is another look at how problematic the \"original\" dataset is. Obviously, among all the variables derived from the fastf1 raw data, the most important ones are <code>PitNextLap</code> and <code>PitStop</code>. Let's compare what these variables really should be from the raw fastf1 data.</p>\n<pre><code>import fastf1, os, logging\n\nlogging.disable(logging.CRITICAL)\n\ncache_dir = './f1'\nif not os.path.exists(cache_dir):\n    os.makedirs(cache_dir)\n\nfastf1.Cache.enable_cache(cache_dir) \n\noriginal = pd.read_csv('/kaggle/input/datasets/aadigupta1601/f1-strategy-dataset-pit-stop-prediction/f1_strategy_dataset_v4.csv')\n\ndef diff_data(driver, race, year):\n    # X is raw fastf1 data\n    session = fastf1.get_session(year, race, 'R')\n    session.load()\n    df = session.laps\n    df = df[df.Driver==driver]\n    assert not df.empty\n    X = df[['LapNumber', 'Compound', 'Stint', 'Position']].convert_dtypes()\n    X['LapTime (s)'] = df['LapTime'].dt.total_seconds()\n    X['PitNextLap'] = df['PitInTime'].notna().astype(int)\n    X['PitStop'] = df['PitOutTime'].notna().astype(int)    \n    # X0 is from \"original\" dataset\n    X0 = original[(original['Driver']==driver) &amp; (original['Race']==race) &amp; (original['Year']==year)]\n    cols = ['LapNumber', 'Compound', 'Stint', 'Position', 'LapTime (s)', 'PitNextLap', 'PitStop']\n    X0 = X0[cols]\n\n    X['indicator'] = 'fastf1'\n    X0['indicator'] = 'original'\n\n    df_tmp = pd.concat([X, X0]).drop_duplicates(cols, keep=False)\n    if df_tmp.empty:\n        print('FastF1 data and \"original\" data are identical.')\n        return \n    X = df_tmp[df_tmp['indicator']=='fastf1'].drop(['indicator'], axis=1)\n    X0 = df_tmp[df_tmp['indicator']=='original'].drop(['indicator'], axis=1)\n    return X0.merge(\n        X, on=['LapNumber', 'Compound', 'Stint', 'Position', 'LapTime (s)'], \n        how='left', suffixes=('_orig','_fastf1') \n    )\n</code></pre>\n<pre><code>d, r, y = 'ALB', 'Abu Dhabi Grand Prix', 2023\ndiff_data(d,r,y)\n</code></pre>\n<pre><code>FastF1 data and \"original\" data are identical.\n</code></pre>\n<pre><code>d, r, y = 'ALB', 'Abu Dhabi Grand Prix', 2024\ndiff_data(d,r,y)\n</code></pre>\n<p><img src=\"https://www.googleapis.com/download/storage/v1/b/kaggle-forum-message-attachments/o/inbox%2F1048539%2F9b3bc8bc604765187eca5860adeb46b6%2FCapture.PNG?generation=1777756488135486&amp;alt=media\" alt=\"\"></p>\n<p>The \"original\" dataset says the car was pretty much in the pit every lap, which is nonsensical. </p>",
+      "parent": {},
+      "author": {
+        "displayName": "broccoli beef",
+        "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1048539-kg.jpg",
+        "url": "/siukeitin",
+        "tier": "GRANDMASTER",
+        "id": 1048539,
+        "progressionOptOut": false
+      },
+      "authorType": "TOPIC",
+      "votes": {
+        "canUpvote": true
+      },
+      "kernelVersion": 0,
+      "feedbackTrackingData": {},
+      "isThankYou": false,
+      "teamUpInfo": {
+        "teamLeader": {
+          "displayName": "broccoli beef",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1048539-kg.jpg",
+          "url": "/siukeitin",
+          "userName": "siukeitin",
+          "tier": "GRANDMASTER",
+          "id": 1048539,
+          "profileUrl": "/siukeitin",
+          "performanceTier": "GRANDMASTER",
+          "userId": 1048539,
+          "progressionOptOut": false
+        },
+        "intro": ""
+      }
+    }
+  ]
+}

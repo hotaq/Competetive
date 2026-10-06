@@ -1,0 +1,163 @@
+{
+  "anchor_gold_macro": 0.8400089312435326,
+  "anchor_macro": 0.8486296936378753,
+  "anchor_oof_sha256": "62d47ba4c0c8347b5b24e7fd2aa517aae0fd6d4656fd5d829fd3a50f0159909c",
+  "anchor_weight": 0.8,
+  "arm_gold_macro": 0.7335554179146494,
+  "arm_macro": 0.7368168518742668,
+  "cache_version": "raddino_b14_gray336_5slot_g8_r192_v1",
+  "candidate_gold_macro": 0.8334507837212278,
+  "candidate_macro": 0.8421702394539801,
+  "checks": {
+    "cache_coverage": true,
+    "diversity": true,
+    "gold_direction": false,
+    "hidden_runtime": true,
+    "label_identity": true,
+    "macro_gain": false,
+    "target_breadth": false,
+    "target_veto": true
+  },
+  "decision": "stop_rad_dino",
+  "global_arm_weight": 0.25,
+  "global_macro": 0.7149166539715622,
+  "gold_gain": -0.006558147522304769,
+  "head_seconds": 482.5961067676544,
+  "macro_gain": -0.0064594541838952635,
+  "median_spearman": 0.7242158343681877,
+  "model_sha256": "dbfb9f54459c38773505de64a6ab7807bdcb392610fe1e697166342e43fb91ae",
+  "n_gold": 58,
+  "n_studies": 4407,
+  "nonworse_targets": 1,
+  "pass": false,
+  "per_target": [
+    {
+      "anchor_auc": 0.8405215407755982,
+      "arm_auc": 0.6913438426464638,
+      "candidate_auc": 0.8326863519274567,
+      "candidate_delta": -0.007835188848141494,
+      "global_auc": 0.6635252234284621,
+      "spatial_auc": 0.6930232420986557,
+      "spearman": 0.5914674453417129,
+      "target": "ACL"
+    },
+    {
+      "anchor_auc": 0.8193428800664785,
+      "arm_auc": 0.7069666318036592,
+      "candidate_auc": 0.8135005802541656,
+      "candidate_delta": -0.005842299812312879,
+      "global_auc": 0.6902665945527744,
+      "spatial_auc": 0.7070321790334828,
+      "spearman": 0.6696946183384632,
+      "target": "MCL"
+    },
+    {
+      "anchor_auc": 0.8602243723654656,
+      "arm_auc": 0.7311272188002862,
+      "candidate_auc": 0.8518083403311807,
+      "candidate_delta": -0.00841603203428487,
+      "global_auc": 0.7019328537567067,
+      "spatial_auc": 0.7334173764483476,
+      "spearman": 0.7012757322009805,
+      "target": "Medial Meniscus"
+    },
+    {
+      "anchor_auc": 0.7996042464910742,
+      "arm_auc": 0.7258345490804391,
+      "candidate_auc": 0.7956209214557692,
+      "candidate_delta": -0.003983325035304963,
+      "global_auc": 0.7082513710749738,
+      "spatial_auc": 0.725221427047301,
+      "spearman": 0.7696191332351203,
+      "target": "Lateral Meniscus"
+    },
+    {
+      "anchor_auc": 0.8682436773501186,
+      "arm_auc": 0.775661242969295,
+      "candidate_auc": 0.8634549994993101,
+      "candidate_delta": -0.004788677850808498,
+      "global_auc": 0.7528521600116266,
+      "spatial_auc": 0.7765432104235661,
+      "spearman": 0.7558566717333822,
+      "target": "Medial OA"
+    },
+    {
+      "anchor_auc": 0.8246974096939736,
+      "arm_auc": 0.7140658771239512,
+      "candidate_auc": 0.816991332394897,
+      "candidate_delta": -0.007706077299076686,
+      "global_auc": 0.6950981478813136,
+      "spatial_auc": 0.7148529721461744,
+      "spearman": 0.7108355281638934,
+      "target": "Lateral OA"
+    },
+    {
+      "anchor_auc": 0.8165105973569806,
+      "arm_auc": 0.7178182408586986,
+      "candidate_auc": 0.8101969001234031,
+      "candidate_delta": -0.006313697233577553,
+      "global_auc": 0.6882438273555503,
+      "spatial_auc": 0.7214821830688429,
+      "spearman": 0.7375961405724819,
+      "target": "PF OA"
+    },
+    {
+      "anchor_auc": 0.8564437921657324,
+      "arm_auc": 0.805467341849822,
+      "candidate_auc": 0.8550249638802578,
+      "candidate_delta": -0.0014188282854745715,
+      "global_auc": 0.7714652313279353,
+      "spatial_auc": 0.8067187675724214,
+      "spearman": 0.8505232514213341,
+      "target": "Effusion"
+    },
+    {
+      "anchor_auc": 0.8772546245821433,
+      "arm_auc": 0.8173891496895921,
+      "candidate_auc": 0.8746202121045565,
+      "candidate_delta": -0.0026344124775867783,
+      "global_auc": 0.7831176846904481,
+      "spatial_auc": 0.8217938783417282,
+      "spearman": 0.8078790761789602,
+      "target": "Synovitis"
+    },
+    {
+      "anchor_auc": 0.8815814079263942,
+      "arm_auc": 0.6857633105641093,
+      "candidate_auc": 0.868272206808305,
+      "candidate_delta": -0.013309201118089198,
+      "global_auc": 0.6842709713929934,
+      "spatial_auc": 0.6823746416014385,
+      "spearman": 0.5160610073387991,
+      "target": "Baker's"
+    },
+    {
+      "anchor_auc": 0.8473700129162772,
+      "arm_auc": 0.7369995562353886,
+      "candidate_auc": 0.8394490625162692,
+      "candidate_delta": -0.007920950400008064,
+      "global_auc": 0.721592990998272,
+      "spatial_auc": 0.7367925487211398,
+      "spearman": 0.7541233608655804,
+      "target": "Contusion"
+    },
+    {
+      "anchor_auc": 0.891761761964267,
+      "arm_auc": 0.7333652608694976,
+      "candidate_auc": 0.8844170021521909,
+      "candidate_delta": -0.007344759812076163,
+      "global_auc": 0.7183827911876889,
+      "spatial_auc": 0.7312640347587384,
+      "spearman": 0.4385556522616558,
+      "target": "Fracture"
+    }
+  ],
+  "projected_hidden_test_seconds": 1414.9151074851156,
+  "spatial_macro": 0.7375430384384862,
+  "test_coverage": 1.0,
+  "test_encode_seconds": 4.469156742095947,
+  "train_coverage": 1.0,
+  "train_encode_seconds": 4796.562214374542,
+  "weak_label_mismatches": 0,
+  "worst_target_delta": -0.013309201118089198
+}

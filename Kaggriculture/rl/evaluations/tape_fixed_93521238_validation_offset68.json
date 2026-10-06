@@ -1,0 +1,158 @@
+{
+  "candidate": {
+    "agent_file": "artifacts/replay_tape_population_v9/tape_93521238.py",
+    "fallback_agent_file": null,
+    "sha256": "e158d7a0dc4078707e755dba16d80d1758d641205bfbc05ce37e445f782df2f0"
+  },
+  "episodes": [
+    {
+      "candidate_margin": -3976.0,
+      "candidate_money": 77130.0,
+      "episode_id": 93520335,
+      "fallback_components": 0,
+      "normalized_steps": 0,
+      "original_opponent_money": 63663.0,
+      "original_top1_money": 77936.0,
+      "sanitized_steps": 136,
+      "seed": 1622866730,
+      "steps": 719,
+      "tape_top1_money": 81106.0,
+      "top1_seat": 0
+    },
+    {
+      "candidate_margin": -36258.0,
+      "candidate_money": 100764.0,
+      "episode_id": 93519448,
+      "fallback_components": 0,
+      "normalized_steps": 0,
+      "original_opponent_money": 133206.0,
+      "original_top1_money": 138276.0,
+      "sanitized_steps": 146,
+      "seed": 1242073508,
+      "steps": 719,
+      "tape_top1_money": 137022.0,
+      "top1_seat": 1
+    },
+    {
+      "candidate_margin": 17505.0,
+      "candidate_money": 102261.0,
+      "episode_id": 93518562,
+      "fallback_components": 0,
+      "normalized_steps": 0,
+      "original_opponent_money": 99420.0,
+      "original_top1_money": 104514.0,
+      "sanitized_steps": 136,
+      "seed": 1764802535,
+      "steps": 719,
+      "tape_top1_money": 84756.0,
+      "top1_seat": 0
+    },
+    {
+      "candidate_margin": -7921.0,
+      "candidate_money": 64766.0,
+      "episode_id": 93517673,
+      "fallback_components": 0,
+      "normalized_steps": 0,
+      "original_opponent_money": 53781.0,
+      "original_top1_money": 50568.0,
+      "sanitized_steps": 137,
+      "seed": 63210755,
+      "steps": 719,
+      "tape_top1_money": 72687.0,
+      "top1_seat": 1
+    },
+    {
+      "candidate_margin": 2588.0,
+      "candidate_money": 95663.0,
+      "episode_id": 93516858,
+      "fallback_components": 0,
+      "normalized_steps": 0,
+      "original_opponent_money": 101824.0,
+      "original_top1_money": 104201.0,
+      "sanitized_steps": 136,
+      "seed": 663915145,
+      "steps": 719,
+      "tape_top1_money": 93075.0,
+      "top1_seat": 0
+    },
+    {
+      "candidate_margin": -38856.0,
+      "candidate_money": 38690.0,
+      "episode_id": 93516782,
+      "fallback_components": 0,
+      "normalized_steps": 0,
+      "original_opponent_money": 62199.0,
+      "original_top1_money": 69365.0,
+      "sanitized_steps": 487,
+      "seed": 660514245,
+      "steps": 719,
+      "tape_top1_money": 77546.0,
+      "top1_seat": 1
+    },
+    {
+      "candidate_margin": -26159.0,
+      "candidate_money": 66347.0,
+      "episode_id": 93515895,
+      "fallback_components": 0,
+      "normalized_steps": 0,
+      "original_opponent_money": 67668.0,
+      "original_top1_money": 68911.0,
+      "sanitized_steps": 277,
+      "seed": 1000783491,
+      "steps": 719,
+      "tape_top1_money": 92506.0,
+      "top1_seat": 1
+    },
+    {
+      "candidate_margin": -15771.0,
+      "candidate_money": 107886.0,
+      "episode_id": 93514993,
+      "fallback_components": 0,
+      "normalized_steps": 0,
+      "original_opponent_money": 95716.0,
+      "original_top1_money": 105995.0,
+      "sanitized_steps": 136,
+      "seed": 961187645,
+      "steps": 719,
+      "tape_top1_money": 123657.0,
+      "top1_seat": 1
+    }
+  ],
+  "limitation": "Recorded Top-1 actions are an action tape, not a live policy; changing the opponent can make later tape actions stale or illegal.",
+  "source": {
+    "competition": "kaggriculture",
+    "leader": {
+      "score": 3202.3,
+      "submission_date": "2026-08-17T14:08:48.060Z",
+      "team_id": 16677252,
+      "team_name": "\u30ab\u30ef\u30b7\u30ae"
+    },
+    "manifest_created_at": "2026-08-17T15:09:41.187962+00:00",
+    "submission": {
+      "date": "2026-08-16T01:30:54.743Z",
+      "public_score": 3202.3,
+      "submission_id": 55540317
+    }
+  },
+  "summary": {
+    "cvar10_margin": -38856.0,
+    "draws": 0,
+    "fallback_components": 0,
+    "games": 8,
+    "losses": 6,
+    "mean_margin": -13606.0,
+    "mean_money": 81688.375,
+    "median_margin": -11846.0,
+    "normalized_steps": 0,
+    "sanitized_steps": 1591,
+    "win_rate": 0.25,
+    "wins": 2,
+    "worst_margin": -38856.0,
+    "worst_money": 38690.0
+  },
+  "validation": {
+    "action_alignment": "steps[1:] actions produce observations in the same frame",
+    "all_original_replays_exact": true,
+    "candidate_actions_sanitized": true
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "classes": [
+    0,
+    1
+  ],
+  "rows": 10000,
+  "features": 30,
+  "candidates": [
+    {
+      "file": "candidate_blend_top4.csv",
+      "name": "blend_top4",
+      "family": "blend",
+      "oof_auc": 0.871384,
+      "fold_auc": [],
+      "fold_auc_std": null,
+      "test_rank_correlation_to_best": 0.98914364
+    },
+    {
+      "file": "candidate_blend_core_interaction.csv",
+      "name": "blend_core_interaction",
+      "family": "interaction_blend",
+      "oof_auc": 0.864192,
+      "fold_auc": [],
+      "fold_auc_std": null,
+      "test_rank_correlation_to_best": 0.99732633
+    },
+    {
+      "file": "candidate_catboost_d8.csv",
+      "name": "catboost_d8",
+      "family": "catboost",
+      "oof_auc": 0.863568,
+      "fold_auc": [
+        0.936,
+        0.8612,
+        0.8108,
+        0.8732,
+        0.8632
+      ],
+      "fold_auc_std": 0.03997071,
+      "test_rank_correlation_to_best": 1.0
+    },
+    {
+      "file": "candidate_logistic.csv",
+      "name": "logistic",
+      "family": "linear",
+      "oof_auc": 0.841696,
+      "fold_auc": [
+        0.886,
+        0.8336,
+        0.8248,
+        0.864,
+        0.7904
+      ],
+      "fold_auc_std": 0.03293591,
+      "test_rank_correlation_to_best": 0.88116058
+    }
+  ],
+  "diagnostics": {
+    "best_core": {
+      "name": "catboost_d8",
+      "family": "catboost",
+      "oof_auc": 0.863568
+    },
+    "blend_gate": {
+      "accepted": true,
+      "name": "blend_top4",
+      "oof_auc": 0.871384,
+      "gain": 0.007816,
+      "test_rank_correlation_to_best": 0.98914364
+    },
+    "interaction_gate": {
+      "accepted": true,
+      "name": "interaction_te",
+      "oof_auc": 0.811784,
+      "standalone_gain": -0.051784,
+      "blend_auc": 0.864192,
+      "blend_gain": 0.000624,
+      "fold_auc_std": 0.03620882,
+      "test_rank_correlation": 0.93230773,
+      "stable": true,
+      "diverse": true,
+      "improves": true
+    }
+  },
+  "failures": []
+}

@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "scope": "authorized_old80_two_replay_screen_only",
+  "candidate": "V75 maintenance-admission",
+  "all_gates_pass": false,
+  "stop": true,
+  "cases": [
+    {
+      "label": "median",
+      "episode_id": 99614514,
+      "candidate_money": 6799.0,
+      "tape_top1_money": 141127.0,
+      "candidate_margin": -134328.0,
+      "money_gate": 53036.0,
+      "land_at_192": 1,
+      "final_land": 1,
+      "final_live": {
+        "COW": 1,
+        "SHEEP": 3
+      },
+      "final_stranded": {
+        "COW": 0,
+        "SHEEP": 1
+      },
+      "longest_stranded": {
+        "COW": 0,
+        "SHEEP": 434
+      },
+      "longest_starvation_exceeded": 48,
+      "min_money_after_fixed_purchase": 4888.0,
+      "post_handoff_normalized": 0,
+      "post_handoff_sanitized": 0,
+      "fallback_components": 0,
+      "instrumentation": {
+        "no_target_turns": 0,
+        "maintenance_turns": 576,
+        "expansion_turns": 0,
+        "liquidation_turns": 23,
+        "admission_rejected_orders": {},
+        "admission_rejected_quantity": {},
+        "planner_blocked": {},
+        "peak_live": {
+          "COW": 1,
+          "SHEEP": 4
+        },
+        "peak_crops": {
+          "MELON": 5,
+          "STRAWBERRY": 3,
+          "WHEAT": 6
+        }
+      },
+      "gates": {
+        "cash_floor": true,
+        "complete": true,
+        "money": false,
+        "post_handoff_sanitizer": true,
+        "starvation": false,
+        "stranded": false,
+        "worst_land_at_192": true
+      },
+      "all_gates_pass": false
+    },
+    {
+      "label": "worst",
+      "episode_id": 99589578,
+      "candidate_money": 16127.0,
+      "tape_top1_money": 181143.0,
+      "candidate_margin": -165016.0,
+      "money_gate": 53533.0,
+      "land_at_192": 1,
+      "final_land": 1,
+      "final_live": {
+        "COW": 1,
+        "SHEEP": 3
+      },
+      "final_stranded": {
+        "COW": 0,
+        "SHEEP": 1
+      },
+      "longest_stranded": {
+        "COW": 0,
+        "SHEEP": 434
+      },
+      "longest_starvation_exceeded": 48,
+      "min_money_after_fixed_purchase": 5020.0,
+      "post_handoff_normalized": 0,
+      "post_handoff_sanitized": 0,
+      "fallback_components": 0,
+      "instrumentation": {
+        "no_target_turns": 0,
+        "maintenance_turns": 576,
+        "expansion_turns": 0,
+        "liquidation_turns": 23,
+        "admission_rejected_orders": {},
+        "admission_rejected_quantity": {},
+        "planner_blocked": {},
+        "peak_live": {
+          "COW": 1,
+          "SHEEP": 4
+        },
+        "peak_crops": {
+          "MELON": 5,
+          "STRAWBERRY": 3,
+          "WHEAT": 6
+        }
+      },
+      "gates": {
+        "cash_floor": true,
+        "complete": true,
+        "money": false,
+        "post_handoff_sanitizer": true,
+        "starvation": false,
+        "stranded": false,
+        "worst_land_at_192": false
+      },
+      "all_gates_pass": false
+    }
+  ],
+  "measurement_note": "The compact projection retained the starvation gate but not its per-target run lengths; false means the observed maximum exceeded the authorized 48-step limit. No replay was run after the hard stop."
+}

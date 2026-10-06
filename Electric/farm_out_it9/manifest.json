@@ -1,0 +1,209 @@
+{
+ "models": {
+  "lgb_te2_s42_dart": {
+   "cfg": {
+    "id": "lgb_te2_s42_dart",
+    "family": "lgb",
+    "features": "te2",
+    "seed": 42,
+    "tag": "dart",
+    "params": {
+     "lr": 0.05,
+     "leaves": 8,
+     "depth": 3,
+     "min_child": 100,
+     "ff": 0.9,
+     "bag": 0.8,
+     "l2": 2.0,
+     "rounds": 4000,
+     "boost": "dart"
+    }
+   },
+   "oof_auc": 0.945552,
+   "fold_auc": [
+    0.944651,
+    0.945279,
+    0.946482,
+    0.945824,
+    0.945554
+   ],
+   "iters": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lgb_te2_s7_dart": {
+   "cfg": {
+    "id": "lgb_te2_s7_dart",
+    "family": "lgb",
+    "features": "te2",
+    "seed": 7,
+    "tag": "dart",
+    "params": {
+     "lr": 0.05,
+     "leaves": 8,
+     "depth": 3,
+     "min_child": 100,
+     "ff": 0.9,
+     "bag": 0.8,
+     "l2": 2.0,
+     "rounds": 4000,
+     "boost": "dart"
+    }
+   },
+   "oof_auc": 0.945554,
+   "fold_auc": [
+    0.944666,
+    0.945293,
+    0.946496,
+    0.94579,
+    0.945555
+   ],
+   "iters": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lgb_naji_s42_xtra": {
+   "cfg": {
+    "id": "lgb_naji_s42_xtra",
+    "family": "lgb",
+    "features": "naji",
+    "seed": 42,
+    "tag": "xtra",
+    "params": {
+     "lr": 0.05,
+     "leaves": 8,
+     "depth": 3,
+     "min_child": 100,
+     "ff": 0.9,
+     "bag": 0.8,
+     "l2": 2.0,
+     "rounds": 8000,
+     "xtra": true
+    }
+   },
+   "oof_auc": 0.945264,
+   "fold_auc": [
+    0.944501,
+    0.9449,
+    0.946273,
+    0.945725,
+    0.945607
+   ],
+   "iters": [
+    1341,
+    1395,
+    1263,
+    1337,
+    1997
+   ]
+  },
+  "mlp_naji_s42_h32": {
+   "cfg": {
+    "id": "mlp_naji_s42_h32",
+    "family": "mlp",
+    "features": "naji",
+    "seed": 42,
+    "tag": "h32",
+    "params": {
+     "hidden": [
+      32
+     ],
+     "alpha": 1.0,
+     "max_iter": 150
+    }
+   },
+   "oof_auc": 0.94348,
+   "fold_auc": [
+    0.942653,
+    0.943205,
+    0.944337,
+    0.944063,
+    0.943414
+   ],
+   "iters": [
+    10,
+    15,
+    10,
+    10,
+    10
+   ]
+  },
+  "hgb_te2_s42_d3b": {
+   "cfg": {
+    "id": "hgb_te2_s42_d3b",
+    "family": "hgb",
+    "features": "te2",
+    "seed": 42,
+    "tag": "d3b",
+    "params": {
+     "lr": 0.03,
+     "leaves": 31,
+     "min_leaf": 200,
+     "rounds": 1500
+    }
+   },
+   "oof_auc": 0.945385,
+   "fold_auc": [
+    0.944478,
+    0.945141,
+    0.946349,
+    0.945691,
+    0.945311
+   ],
+   "iters": [
+    904,
+    805,
+    646,
+    583,
+    721
+   ]
+  },
+  "logreg_naji_s42_C1": {
+   "cfg": {
+    "id": "logreg_naji_s42_C1",
+    "family": "logreg",
+    "features": "naji",
+    "seed": 42,
+    "tag": "C1",
+    "params": {
+     "C": 1.0
+    }
+   },
+   "oof_auc": 0.944148,
+   "fold_auc": [
+    0.943343,
+    0.943909,
+    0.944775,
+    0.94456,
+    0.944225
+   ],
+   "iters": [
+    500,
+    500,
+    500,
+    500,
+    500
+   ]
+  }
+ },
+ "history": [
+  {
+   "n_models": 6,
+   "blend_oof": 0.945681,
+   "weights": {
+    "lgb_te2_s7_dart": 0.25,
+    "lgb_naji_s42_xtra": 0.25,
+    "hgb_te2_s42_d3b": 0.25,
+    "lgb_te2_s42_dart": 0.25
+   }
+  }
+ ]
+}

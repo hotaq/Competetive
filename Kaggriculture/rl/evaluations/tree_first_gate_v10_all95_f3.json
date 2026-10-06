@@ -1,0 +1,68 @@
+{
+  "model": "validation-selected-robust-q-decision-tree",
+  "population": "artifacts/replay_tape_population_v10_portfolio7_cv92/manifest.json",
+  "q_matrix": "rl/evaluations/splice_portfolio8_step163_train95_qmatrix.json",
+  "holdout_used": false,
+  "candidate_count": 1,
+  "checkpoint": "artifacts/tree_first_gate_v10_all95_f3.json",
+  "selected": {
+    "feature_steps": [
+      96,
+      163
+    ],
+    "config": {
+      "max_depth": 4,
+      "min_leaf": 1,
+      "margin_weight": 0.05,
+      "risk_coefficient": 0.0
+    },
+    "games": 95,
+    "wins": 78,
+    "draws": 0,
+    "losses": 17,
+    "win_rate": 0.8210526315789474,
+    "mean_margin": 3355.642105263158,
+    "worst_margin": -28074.0,
+    "cvar10_margin": -9735.6,
+    "actions": {
+      "93816256": 5,
+      "93518562": 15,
+      "93520335": 7,
+      "93501610": 1,
+      "93724855": 8,
+      "93546314": 29,
+      "93734648": 30
+    }
+  },
+  "candidates": [
+    {
+      "feature_steps": [
+        96,
+        163
+      ],
+      "config": {
+        "max_depth": 4,
+        "min_leaf": 1,
+        "margin_weight": 0.05,
+        "risk_coefficient": 0.0
+      },
+      "games": 95,
+      "wins": 78,
+      "draws": 0,
+      "losses": 17,
+      "win_rate": 0.8210526315789474,
+      "mean_margin": 3355.642105263158,
+      "worst_margin": -28074.0,
+      "cvar10_margin": -9735.6,
+      "actions": {
+        "93816256": 5,
+        "93518562": 15,
+        "93520335": 7,
+        "93501610": 1,
+        "93724855": 8,
+        "93546314": 29,
+        "93734648": 30
+      }
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "surface": "report",
+  "manifest": {
+    "version": 1,
+    "surface": "report",
+    "title": "Road to 0.97074",
+    "description": "Technical diagnosis of incremental OOF signals for Playground Series S6E8.",
+    "generatedAt": "2026-08-02T16:10:00+07:00",
+    "sources": [
+      {
+        "id": "submissions",
+        "label": "Kaggle competition submissions and leaderboard",
+        "href": "https://www.kaggle.com/competitions/playground-series-s6e8/leaderboard",
+        "query": {
+          "engine": "DuckDB",
+          "language": "SQL",
+          "description": "Reviewed snapshot of Kaggle submission scores used in the report.",
+          "executed_at": "2026-08-02T16:04:00+07:00",
+          "sql": "SELECT * FROM (VALUES ('HistGB baseline', 0.9590605, 0.96018), ('LGBM + HistGB', 0.9643539, 0.96588), ('54-model stack', 0.9694272176, 0.97061), ('+ TabNet rank', 0.9694478069, 0.97063), ('+ RealMLP rank', 0.9694731187, 0.97063)) AS t(stage, oof_auc, public_auc)"
+        }
+      },
+      {
+        "id": "experiment_metrics",
+        "label": "Saved OOF experiment metrics",
+        "href": "https://www.kaggle.com/code/chinnaphatkhun/smartphone-addiction-realmlp-blend-v10",
+        "query": {
+          "engine": "DuckDB",
+          "language": "SQL",
+          "description": "Reviewed candidate metrics transcribed from saved Kaggle GPU experiment outputs.",
+          "executed_at": "2026-08-02T16:08:00+07:00",
+          "sql": "SELECT * FROM (VALUES ('GPU XGBoost base-margin correction', 0.9694267721, 0.9999999523, 0.0000001174, 'Reject'), ('TabNet rank signal', 0.9675594949, 0.9815530783, 0.0000205892, 'Keep'), ('Second RealMLP rank signal', 0.9681378086, 0.9845951014, 0.0000253119, 'Keep'), ('Extra MLP rank signal', 0.9389952219, 0.9410238605, -0.0000003610, 'Reject'), ('Extra GBM rank signal', 0.9638713687, 0.9800188874, 0.0000005410, 'Reject')) AS t(candidate, candidate_auc, correlation, delta_oof, decision)"
+        }
+      }
+    ],
+    "cards": [
+      {
+        "id": "current_score",
+        "description": "Best verified Public ROC AUC after adding TabNet and RealMLP rank signals.",
+        "dataset": "headline",
+        "sourceId": "submissions",
+        "metrics": [
+          {"label": "Current Public AUC", "field": "current_public_auc", "format": "number"},
+          {"label": "Starting Public AUC", "field": "starting_public_auc", "format": "number"}
+        ]
+      },
+      {
+        "id": "remaining_gap",
+        "description": "Remaining rounded-score gap to the requested target.",
+        "dataset": "headline",
+        "sourceId": "submissions",
+        "metrics": [
+          {"label": "Gap to 0.97074", "field": "gap_to_target", "format": "number", "signed": true},
+          {"label": "Target", "field": "target_public_auc", "format": "number"}
+        ]
+      },
+      {
+        "id": "best_oof",
+        "description": "Best nested OOF result after two incremental neural rank blends.",
+        "dataset": "headline",
+        "sourceId": "experiment_metrics",
+        "metrics": [
+          {"label": "Best nested OOF AUC", "field": "best_oof_auc", "format": "number"},
+          {"label": "54-model anchor OOF", "field": "anchor_oof_auc", "format": "number"}
+        ]
+      }
+    ],
+    "charts": [
+      {
+        "id": "public_progression_chart",
+        "title": "Public AUC gain over the HistGB baseline",
+        "subtitle": "Five submitted stages; gain is measured in absolute ROC AUC",
+        "type": "bar",
+        "dataset": "progression",
+        "sourceId": "submissions",
+        "encodings": {
+          "x": {"field": "stage", "type": "nominal", "label": "Submitted stage"},
+          "y": {"field": "gain_vs_baseline", "type": "quantitative", "label": "AUC gain"},
+          "tooltip": [
+            {"field": "public_auc", "type": "quantitative", "label": "Public AUC"},
+            {"field": "oof_auc", "type": "quantitative", "label": "OOF AUC"}
+          ]
+        },
+        "xAxisTitle": "Submitted stage",
+        "yAxisTitle": "AUC gain vs 0.96018 baseline",
+        "valueFormat": "number",
+        "layout": "full",
+        "maxRows": 5,
+        "surface": {"palette": {"kind": "single-root", "root": "blue"}, "legend": {"show": false}}
+      }
+    ],
+    "tables": [
+      {
+        "id": "candidate_table",
+        "title": "Incremental OOF candidate results",
+        "subtitle": "Each delta is measured against the anchor entering that experiment",
+        "dataset": "candidate_results",
+        "sourceId": "experiment_metrics",
+        "defaultSort": {"field": "delta_oof", "direction": "desc"},
+        "density": "spacious",
+        "layout": "full",
+        "columns": [
+          {"field": "candidate", "label": "Candidate", "type": "text"},
+          {"field": "candidate_auc", "label": "Candidate OOF AUC", "format": "number"},
+          {"field": "correlation", "label": "Spearman vs anchor", "format": "number"},
+          {"field": "delta_oof", "label": "Incremental OOF delta", "format": "number", "movement": true},
+          {"field": "decision", "label": "Decision", "type": "text"}
+        ]
+      }
+    ],
+    "blocks": [
+      {"id": "title", "type": "markdown", "body": "# Road to 0.97074", "layout": "full"},
+      {
+        "id": "technical_summary",
+        "type": "markdown",
+        "body": "## Two neural rank signals moved the score to 0.97063\n\nThe verified Public ROC AUC improved from **0.97061 to 0.97063** after adding a 9.5% TabNet rank signal and then a 12% second RealMLP rank signal. Both additions had positive nested OOF deltas with consistent weights across all five folds. GPU XGBoost residual correction and additional weak MLP/GBM signals did not contribute enough to justify submission. The requested **0.97074** remains **0.00011** away and now requires a genuinely new neural representation rather than another tree variant.",
+        "layout": "full"
+      },
+      {"id": "headline_metrics", "type": "metric-strip", "cardIds": ["current_score", "remaining_gap", "best_oof"], "layout": "full"},
+      {
+        "id": "progression_intro",
+        "type": "markdown",
+        "body": "## Most of the gain came from the 54-model stack\n\nThe first large jump came from replacing the two-tree blend with the public 54-model OOF stack. TabNet then added another displayed 0.00002. RealMLP improved nested OOF again, but Kaggle's five-decimal display still rounds the result to 0.97063. The chart uses gain over the original HistGB score so the incremental movement remains visible without truncating an absolute-score axis.",
+        "layout": "full"
+      },
+      {"id": "progression_chart_block", "type": "chart", "chartId": "public_progression_chart", "layout": "full"},
+      {
+        "id": "definitions",
+        "type": "markdown",
+        "body": "## The comparison uses nested OOF evidence, not leaderboard tuning\n\n**Population.** All 691,369 labeled training rows and 296,302 competition test rows. **Metric.** ROC AUC, which depends on ranking rather than probability calibration. **Anchor.** The prediction entering each incremental experiment. **Nested weight selection.** For each held-out fold, blend weights were selected on the other four folds. **Public comparison.** Kaggle reports scores rounded to five decimals, so two submissions can display the same score despite different underlying rankings.",
+        "layout": "full"
+      },
+      {
+        "id": "candidate_intro",
+        "type": "markdown",
+        "body": "## Diversity mattered; raw model strength alone did not\n\nTabNet and the second RealMLP were kept because they combined respectable standalone AUC with lower correlation to the anchor. The extra MLP was highly decorrelated but too weak, while the GPU XGBoost correction reproduced the anchor almost exactly and stopped after one tree in every fold. This is evidence that the tree feature view is saturated.",
+        "layout": "full"
+      },
+      {"id": "candidate_table_block", "type": "table", "tableId": "candidate_table", "layout": "full"},
+      {
+        "id": "methodology",
+        "type": "markdown",
+        "body": "## Model and validation specification\n\nAll retained blends used `StratifiedKFold(n_splits=5, shuffle=True, random_state=42)`. IDs were aligned explicitly whenever available; row-order artifacts were accepted only after shape and target-order checks. Candidate predictions were percentile-ranked before weighted blending. Rank weights were selected independently for each validation fold, and the median of the five selected weights was used for test predictions. Training experiments were run only on Kaggle GPU; the local workspace was used for code preparation and artifact review.",
+        "layout": "full"
+      },
+      {
+        "id": "limitations",
+        "type": "markdown",
+        "body": "## The remaining gap is smaller than the public-score resolution\n\nThe Public leaderboard is a single rounded sample of the hidden test labels, so a positive OOF delta of 0.00002 may appear as no visible change. Sequentially selecting several small blends also creates selection risk even when each weight is cross-fitted. The current experiments establish predictive association, not the undisclosed method used by the 0.97073 leader. Private leaderboard ordering may differ.",
+        "layout": "full"
+      },
+      {
+        "id": "next_steps",
+        "type": "markdown",
+        "body": "## Next experiment: one new GPU neural representation\n\n1. Train a genuinely different architecture such as FT-Transformer or an improved TabNet with the same five-fold contract and save aligned OOF/test predictions.\n\n2. Require an incremental nested OOF gain of at least **0.00002** with stable fold weights before submission.\n\n3. Stop adding GBDT variants unless their rank correlation with the current anchor falls materially below 0.99.\n\n4. Keep v10 as the reproducible anchor even though v9 and v10 currently display the same Public score.",
+        "layout": "full"
+      },
+      {
+        "id": "further_questions",
+        "type": "markdown",
+        "body": "## Further questions\n\n- Can a transformer-style model reach OOF above 0.967 while keeping rank correlation below 0.98?\n\n- Does improving TabNet strength preserve the disagreement that made the public TabNet useful?\n\n- How stable are the small gains under repeated meta-fold partitions rather than only seed 42?",
+        "layout": "full"
+      }
+    ]
+  },
+  "snapshot": {
+    "version": 1,
+    "generatedAt": "2026-08-02T16:10:00+07:00",
+    "status": "ready",
+    "datasets": {
+      "headline": [
+        {
+          "current_public_auc": 0.97063,
+          "starting_public_auc": 0.96018,
+          "target_public_auc": 0.97074,
+          "gap_to_target": -0.00011,
+          "best_oof_auc": 0.9694731187,
+          "anchor_oof_auc": 0.9694272176
+        }
+      ],
+      "progression": [
+        {"stage": "HistGB baseline", "oof_auc": 0.9590605, "public_auc": 0.96018, "gain_vs_baseline": 0.0},
+        {"stage": "LGBM + HistGB", "oof_auc": 0.9643539, "public_auc": 0.96588, "gain_vs_baseline": 0.00570},
+        {"stage": "54-model stack", "oof_auc": 0.9694272176, "public_auc": 0.97061, "gain_vs_baseline": 0.01043},
+        {"stage": "+ TabNet rank", "oof_auc": 0.9694478069, "public_auc": 0.97063, "gain_vs_baseline": 0.01045},
+        {"stage": "+ RealMLP rank", "oof_auc": 0.9694731187, "public_auc": 0.97063, "gain_vs_baseline": 0.01045}
+      ],
+      "candidate_results": [
+        {"candidate": "GPU XGBoost base-margin correction", "candidate_auc": 0.9694267721, "correlation": 0.9999999523, "delta_oof": 0.0000001174, "decision": "Reject"},
+        {"candidate": "TabNet rank signal", "candidate_auc": 0.9675594949, "correlation": 0.9815530783, "delta_oof": 0.0000205892, "decision": "Keep"},
+        {"candidate": "Second RealMLP rank signal", "candidate_auc": 0.9681378086, "correlation": 0.9845951014, "delta_oof": 0.0000253119, "decision": "Keep"},
+        {"candidate": "Extra MLP rank signal", "candidate_auc": 0.9389952219, "correlation": 0.9410238605, "delta_oof": -0.0000003610, "decision": "Reject"},
+        {"candidate": "Extra GBM rank signal", "candidate_auc": 0.9638713687, "correlation": 0.9800188874, "delta_oof": 0.0000005410, "decision": "Reject"}
+      ]
+    }
+  },
+  "sources": [
+    {
+      "id": "submissions",
+      "label": "Kaggle competition submissions and leaderboard",
+      "href": "https://www.kaggle.com/competitions/playground-series-s6e8/leaderboard"
+    },
+    {
+      "id": "experiment_metrics",
+      "label": "Saved OOF experiment metrics",
+      "href": "https://www.kaggle.com/code/chinnaphatkhun/smartphone-addiction-realmlp-blend-v10"
+    }
+  ]
+}

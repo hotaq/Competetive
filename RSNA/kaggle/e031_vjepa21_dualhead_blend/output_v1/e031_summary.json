@@ -1,0 +1,334 @@
+{
+  "blend_gates": {
+    "blend_max_target_drop_vs_coatnet_le_003": false,
+    "bootstrap_vs_coatnet_win_ge_065": false,
+    "bootstrap_vs_selected_single_win_ge_060": true,
+    "gold_blend_gain_vs_best_observed_single_ge_001": true,
+    "gold_blend_gain_vs_coatnet_ge_001": false,
+    "gold_blend_gain_vs_selected_single_ge_001": true,
+    "selected_alpha_is_interior": true,
+    "validation_blend_gain_ge_002": true,
+    "validation_head_correlation_le_0995": true
+  },
+  "blend_selection": {
+    "best_single_validation_macro_auc": 0.7466221942992579,
+    "global_alphas": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "methods": [
+      "probability",
+      "rank"
+    ],
+    "selected_alpha_transformer": 0.5,
+    "selected_method": "probability",
+    "selected_on": "fixed_non_gold_validation",
+    "validation_gain_vs_best_single": 0.008330387120035532,
+    "validation_head_prediction_correlation": 0.8614353826966694,
+    "validation_macro_auc": 0.7549525814192934
+  },
+  "checkpoint_exported": false,
+  "complement_gates": {
+    "blend_max_target_drop_vs_coatnet_le_015": false,
+    "blend_targets_improved_vs_coatnet_ge_3": false,
+    "gold_blend_macro_ge_088": false,
+    "gold_head_correlation_le_0995": true,
+    "selected_alpha_is_interior": true,
+    "validation_blend_gain_ge_001": true,
+    "validation_blend_macro_ge_075": true,
+    "validation_head_correlation_le_0995": true
+  },
+  "decision": "STOP_E031_DUALHEAD_FAILED",
+  "diagnostics": {
+    "determinism_max_abs": 0.0,
+    "feature_std": 0.8818414807319641,
+    "reverse_aligned_cosine": 0.9944778680801392,
+    "shuffle_global_cosine": 0.9843032360076904
+  },
+  "experiment": "E031 frozen V-JEPA dual-head MIL plus masked Transformer blend",
+  "feature_cache_exported": false,
+  "gold58": {
+    "best_observed_single_macro_auc": 0.6863623629391465,
+    "blend_coatnet_prediction_correlation": 0.5225420561244651,
+    "blend_delta_vs_coatnet": -0.2273681726689769,
+    "blend_gain_vs_best_observed_single": 0.003699336861866076,
+    "blend_gain_vs_selected_single": 0.016078661485150025,
+    "blend_macro_auc": 0.6900616998010126,
+    "blend_min_target_delta_vs_coatnet": -0.42630385487528344,
+    "blend_per_target_delta_vs_coatnet": {
+      "ACL": -0.39093137254901955,
+      "Baker's": -0.32971014492753625,
+      "Contusion": -0.24021592442645068,
+      "Effusion": -0.2857142857142858,
+      "Fracture": -0.23749999999999993,
+      "Lateral Meniscus": -0.21242236024844707,
+      "Lateral OA": -0.042553191489361764,
+      "MCL": -0.42630385487528344,
+      "Medial Meniscus": -0.2776442307692307,
+      "Medial OA": -0.13953488372093026,
+      "PF OA": -0.1351351351351351,
+      "Synovitis": -0.010752688172043001
+    },
+    "blend_target_improve_count_vs_coatnet": 0,
+    "coatnet_macro_auc": 0.9174298724699895,
+    "evaluation_count": 1,
+    "mil_macro_auc": 0.6739830383158626,
+    "mil_per_target_delta_vs_coatnet": {
+      "ACL": -0.4056372549019607,
+      "Baker's": -0.27898550724637683,
+      "Contusion": -0.3076923076923077,
+      "Effusion": -0.3031055900621119,
+      "Fracture": -0.26944444444444426,
+      "Lateral Meniscus": -0.2248447204968944,
+      "Lateral OA": -0.04835589941972929,
+      "MCL": -0.47845804988662133,
+      "Medial Meniscus": -0.2740384615384617,
+      "Medial OA": -0.15503875968992242,
+      "PF OA": -0.15186615186615182,
+      "Synovitis": -0.02389486260453999
+    },
+    "mil_transformer_prediction_correlation": 0.8432447335487525,
+    "paired_bootstrap_vs_coatnet": {
+      "ci95": [
+        -0.27944195638785124,
+        -0.18112940892725307
+      ],
+      "mean_delta": -0.22697785469448828,
+      "valid_repeats": 2000,
+      "win_rate": 0.0
+    },
+    "paired_bootstrap_vs_selected_single": {
+      "ci95": [
+        -0.00017075400849664285,
+        0.03282868086199524
+      ],
+      "mean_delta": 0.016029123559390738,
+      "valid_repeats": 2000,
+      "win_rate": 0.973
+    },
+    "selected_single_macro_auc": 0.6739830383158626,
+    "transformer_macro_auc": 0.6863623629391465,
+    "transformer_per_target_delta_vs_coatnet": {
+      "ACL": -0.37254901960784315,
+      "Baker's": -0.3677536231884059,
+      "Contusion": -0.21727395411605943,
+      "Effusion": -0.2732919254658386,
+      "Fracture": -0.22499999999999987,
+      "Lateral Meniscus": -0.21118012422360244,
+      "Lateral OA": -0.0831721470019342,
+      "MCL": -0.4104308390022675,
+      "Medial Meniscus": -0.29927884615384626,
+      "Medial OA": -0.14263565891472874,
+      "PF OA": -0.14157014157014147,
+      "Synovitis": -0.028673835125448077
+    },
+    "transformer_target_improve_count_vs_mil": 8,
+    "validation_selected_single": "mil"
+  },
+  "heads": {
+    "mil": {
+      "best_epoch": 38,
+      "hidden_dim": 256,
+      "optimizer_head_only": true,
+      "type": "target_specific_slot_time_mil",
+      "updated": true,
+      "validation_macro_auc": 0.7466221942992579
+    },
+    "optimizers_exclude_encoder": true,
+    "parameter_sets_disjoint": true,
+    "training_mode": "frozen_encoder_head_only",
+    "transformer": {
+      "attention_heads": 8,
+      "best_epoch": 40,
+      "depth": 2,
+      "hidden_dim": 192,
+      "optimizer_head_only": true,
+      "target_tokens": 12,
+      "type": "masked_target_token_transformer",
+      "updated": true,
+      "validation_macro_auc": 0.7459649799038343
+    }
+  },
+  "identity": {
+    "all_ids_sha256": "ce332c0a673abde31856db1b3b86fba9e0a2f73d38fff23c7b02c51b869f3c30",
+    "baseline_identity_exact": true,
+    "baseline_payload_sha256": "7b356156eca446527d89b61cc444ab4622609a63a75eef95d0a3c521fefb99ee",
+    "baseline_source": "E029 v3 exact CoAtNet zero-step Gold58 predictions",
+    "counts": {
+      "gold": 58,
+      "train": 512,
+      "validation": 128
+    },
+    "extra_ids_sha256": "65a32fe80ad4cffd20b847b3c36bda7b0c33178fff652d8828a4b0d4e1ccf9bb",
+    "gold_ids_sha256": "3918e0c230d6c8d16e073b3c2537d173011b705c71b494493591e6afa5f510ea",
+    "seed": 31021,
+    "train_ids_sha256": "0bdc475565a2ff7ea1afc5be9aec69aab0aa615050df796aeac6af4fd2fb051c",
+    "val_class_counts": [
+      [
+        27,
+        101
+      ],
+      [
+        15,
+        113
+      ],
+      [
+        52,
+        76
+      ],
+      [
+        27,
+        101
+      ],
+      [
+        56,
+        72
+      ],
+      [
+        48,
+        80
+      ],
+      [
+        64,
+        64
+      ],
+      [
+        77,
+        51
+      ],
+      [
+        91,
+        37
+      ],
+      [
+        47,
+        81
+      ],
+      [
+        30,
+        98
+      ],
+      [
+        11,
+        117
+      ]
+    ],
+    "validation_ids_sha256": "223ed533e435180acf9f086fff74a12de527977f9bcff7641db7b06d11739565"
+  },
+  "input": {
+    "clip_frames": 16,
+    "cross_series_clip_count": 0,
+    "feature_shape_per_slot": [
+      8,
+      3072
+    ],
+    "grayscale_repeated_rgb": true,
+    "out_layers": [
+      2,
+      5,
+      8,
+      11
+    ],
+    "patch_size": 16,
+    "per_slot_independent": true,
+    "shape": [
+      1,
+      3,
+      16,
+      384,
+      384
+    ],
+    "slot_count_min_mean_max": [
+      4,
+      4.71919770773639,
+      5
+    ],
+    "tubelet_size": 2
+  },
+  "model": {
+    "checkpoint_bytes": 1664223428,
+    "checkpoint_etag": "be0dc26f052ae6a7476714cd53176836-199",
+    "checkpoint_sha256": "848a77c33cc9e6649ed2119c9bea1e2c569bcdab9539ff3e7c02ccc2959ddf4d",
+    "checkpoint_url": "https://dl.fbaipublicfiles.com/vjepa2/vjepa2_1_vitb_dist_vitG_384.pt",
+    "encoder_final_sha256": "a9ffcb2140f93f341e325eb6fc996a5791520810d149499f356ac8a8dc9ab0bc",
+    "encoder_frozen": true,
+    "encoder_initial_sha256": "a9ffcb2140f93f341e325eb6fc996a5791520810d149499f356ac8a8dc9ab0bc",
+    "encoder_parameter_count": 86833152,
+    "repo_commit": "204698b45b3712590f06245fbfba32d3be539812",
+    "repo_url": "https://github.com/facebookresearch/vjepa2.git"
+  },
+  "required_gates": {
+    "baseline_identity_exact": true,
+    "baseline_payload_sha256_exact": true,
+    "blend_grid_exact": true,
+    "cache_pixel_max_abs_zero": true,
+    "checkpoint_bytes_exact": true,
+    "checkpoint_sha256_recorded": true,
+    "checkpoint_url_exact": true,
+    "core_metrics_finite": true,
+    "cross_series_clip_count_zero": true,
+    "determinism_max_abs_le_1e5": true,
+    "downloaded_checkpoint_removed": true,
+    "each_study_has_slot": true,
+    "encoder_parameter_count_75m_to_90m": true,
+    "encoder_unchanged": true,
+    "feature_throughput_positive": true,
+    "features_finite": true,
+    "features_nondegenerate": true,
+    "gold_evaluated_once": true,
+    "gold_ids_exact": true,
+    "gold_train_validation_overlap_zero": true,
+    "heads_parameter_disjoint": true,
+    "input_shape_exact": true,
+    "mil_control_dimension_256": true,
+    "mil_gradients_finite": true,
+    "mil_optimizer_head_only": true,
+    "mil_updated": true,
+    "mil_xai_maps_nondegenerate": true,
+    "mil_xai_median_deletion_advantage_positive": true,
+    "mil_xai_positive_deletion_at_least_7": true,
+    "official_repo_cleanup_complete": true,
+    "optimizers_exclude_encoder": true,
+    "output_shape_exact": true,
+    "peak_gpu_le_15_gib": true,
+    "repo_commit_exact": true,
+    "selected_blend_declared": true,
+    "transformer_attention_mask_zero": true,
+    "transformer_attention_shape_exact": true,
+    "transformer_attention_sums_one": true,
+    "transformer_depth_2": true,
+    "transformer_dimension_192": true,
+    "transformer_gradients_finite": true,
+    "transformer_heads_8": true,
+    "transformer_optimizer_head_only": true,
+    "transformer_updated": true,
+    "transformer_xai_attention_nondegenerate": true,
+    "transformer_xai_median_deletion_advantage_positive": false,
+    "transformer_xai_positive_deletion_at_least_7": false,
+    "validation_all_targets_two_classes": true,
+    "xai_all_12_targets": true
+  },
+  "resources": {
+    "build_workers": 4,
+    "cache_build_minutes": 8.286531233787537,
+    "clip_count": 3294,
+    "clips_per_second": 3.775091705407557,
+    "feature_extract_minutes": 14.542693074544271,
+    "peak_gpu_gib": 0.5294113159179688
+  },
+  "submission_created": false,
+  "xai": {
+    "delete_fraction": 0.2,
+    "mil_median_deletion_advantage": 0.028424154967069626,
+    "mil_nondegenerate_count": 12,
+    "mil_positive_deletion_count": 12,
+    "target_count": 12,
+    "transformer_median_deletion_advantage": -0.008891269564628601,
+    "transformer_nondegenerate_count": 12,
+    "transformer_positive_deletion_count": 4,
+    "visualized_count": 4
+  }
+}

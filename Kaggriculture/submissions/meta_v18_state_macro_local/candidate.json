@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "name": "meta_v18_state_macro_local",
+  "agent_file": "submissions/meta_v18_state_macro_local/main.py",
+  "sha256": "b46e4f4a4f16e48753f853049ecfc53986c6578fe657a81edb1b97282f6ea17d",
+  "base": {
+    "agent_file": "submissions/meta_v16_rc6_adaptive_market_standalone/main.py",
+    "sha256": "c8afcbb8f90861cd92131012146e573752820b80fbd939ace3c7503aea83cd5e"
+  },
+  "policy": {
+    "family": "fixed_opening_state_aware_semantic_routes",
+    "is_rl": false,
+    "handoff_step": 120,
+    "route_gates": [
+      120,
+      240,
+      480,
+      696
+    ],
+    "routes": [
+      "BALANCED",
+      "COW_PREMIUM",
+      "SHEEP_PREMIUM",
+      "LIQUIDATE"
+    ],
+    "executor": {
+      "api": "kaggriculture_rs.plan_observation",
+      "source_file": "rust/kaggriculture-executor/src/planner.rs",
+      "source_sha256": "a2a44e4bce09827f5bd8c8860dda90b5e6df64b4cf1558c225e9c44462ca81d1",
+      "native_file": "bindings/python/kaggriculture_rs/_native.abi3.so",
+      "native_sha256": "059c542f26814037a15ff580a839138f6e623383cea8164c455dd66c37ec6063"
+    },
+    "source": {
+      "file": "src/kaggriculture_rl/policy/hierarchical_semantic.py",
+      "sha256": "793c7e5ecd1bcac3131f960c74546129caf38ca584ec061582991de55f3816a9"
+    }
+  },
+  "status": "experimental_local_native_required",
+  "upload_ready": false
+}

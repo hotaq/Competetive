@@ -1,0 +1,52 @@
+{
+  "classes": [
+    0,
+    1
+  ],
+  "rows": 10000,
+  "features": 12,
+  "candidates": [
+    {
+      "file": "candidate_blend_logistic_hist_gradient.csv",
+      "name": "blend_logistic_hist_gradient",
+      "family": "blend",
+      "oof_auc": 0.85430392,
+      "fold_auc": [],
+      "fold_auc_std": null,
+      "test_rank_correlation_to_best": 0.99905567
+    },
+    {
+      "file": "candidate_logistic.csv",
+      "name": "logistic",
+      "family": "linear",
+      "oof_auc": 0.85372992,
+      "fold_auc": [
+        0.85419012,
+        0.85299775,
+        0.86478613,
+        0.85744156,
+        0.8399324
+      ],
+      "fold_auc_std": 0.00808749,
+      "test_rank_correlation_to_best": 1.0
+    }
+  ],
+  "diagnostics": {
+    "best_core": {
+      "name": "logistic",
+      "family": "linear",
+      "oof_auc": 0.85372992
+    },
+    "blend_gate": {
+      "accepted": true,
+      "name": "blend_logistic_hist_gradient",
+      "oof_auc": 0.85430392,
+      "gain": 0.00057401,
+      "test_rank_correlation_to_best": 0.99905567
+    },
+    "interaction_gate": {
+      "accepted": false
+    }
+  },
+  "failures": []
+}

@@ -1,0 +1,68 @@
+{
+  "coatnet": {
+    "checkpoint": "raptor_ft_coatnet_v4_full.pt",
+    "native_windows": 42,
+    "public_lb": 0.924
+  },
+  "comparison": [
+    {
+      "coatnet_cross_series_window": false,
+      "coatnet_probability": 0.8678611516952515,
+      "coatnet_slot": "sagittal_fluid",
+      "coatnet_top_window": 2,
+      "coatnet_window_attention": 0.10047321766614914,
+      "dino_group_start": 0,
+      "dino_map_type": "patch-token energy fallback",
+      "dino_one_member_diagnostic_probability": 0.5674519538879395,
+      "dino_slot": "SAG_FLUID_FS",
+      "dino_slot_attention": 0.1666666716337204,
+      "gold": 1.0,
+      "target": "Medial Meniscus"
+    },
+    {
+      "coatnet_cross_series_window": false,
+      "coatnet_probability": 0.9208481311798096,
+      "coatnet_slot": "sagittal_fluid",
+      "coatnet_top_window": 9,
+      "coatnet_window_attention": 0.1739705502986908,
+      "dino_group_start": 0,
+      "dino_map_type": "patch-token energy fallback",
+      "dino_one_member_diagnostic_probability": 0.103205606341362,
+      "dino_slot": "SAG_FLUID_FS",
+      "dino_slot_attention": 0.1666666716337204,
+      "gold": 1.0,
+      "target": "Lateral Meniscus"
+    }
+  ],
+  "dinov2": {
+    "checkpoint": "m_e5427d6c21.pt",
+    "member_id": "e5427d6c21",
+    "native_group_starts": [
+      0,
+      3,
+      6,
+      9
+    ],
+    "native_slots": [
+      "SAG_FLUID_FS",
+      "COR_FLUID_FS",
+      "AX_FLUID_FS",
+      "SAG_FLUID_NOFS",
+      "COR_T1",
+      "SAG_T1"
+    ],
+    "scope": "one competition-trained member; not the 20-member scored ensemble"
+  },
+  "experiment": "E024 what trained knee models see",
+  "interpretation_limits": [
+    "Gradient saliency is local sensitivity, not proof of causal medical reasoning.",
+    "Transformer CLS attention is class-agnostic; target specificity comes from the separate slot and gradient maps.",
+    "The models use different native preprocessing, so spatial maps are explanatory rather than pixelwise comparable."
+  ],
+  "study": "1.2.826.0.1.3680043.8.498.16060119389060497136231217718921482192",
+  "submission_created": false,
+  "targets": [
+    "Medial Meniscus",
+    "Lateral Meniscus"
+  ]
+}

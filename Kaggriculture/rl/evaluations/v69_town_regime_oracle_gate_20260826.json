@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-08-26T16:07:31Z",
+  "experiment": "v69_town_regime_portfolio_oracle_gate",
+  "status": "stopped_before_policy",
+  "scope": {
+    "development_only": true,
+    "allowed_leagues": [
+      "replays/top20_live_20260826/manifest.json",
+      "replays/top20_live_holdout_offset4_20260826/manifest.json"
+    ],
+    "third160_or_future_holdout_read": false,
+    "package_or_upload_created": false
+  },
+  "candidate_set": {
+    "base": "artifacts/v67_front_run_20260826/all_v16.py",
+    "decision_steps": [240, 360],
+    "suffix_experts": {
+      "a": "artifacts/top20_live_tapes80_20260826/tape_99566826_s0.py",
+      "b": "artifacts/top20_live_tapes80_20260826/tape_99600846_s0.py",
+      "c": "artifacts/top20_live_tapes80_20260826/tape_99596430_s1.py"
+    },
+    "splice_component": "all",
+    "state_aware_repair": true,
+    "oracle_definition": "For each episode and seat, choose the maximum final margin among base, a@240, b@240, c@240, a@360, b@360, and c@360. This uses outcome hindsight and is therefore an unattainable upper bound for any observable-only selector over this exact expert set."
+  },
+  "sources": {
+    "old80_base": {
+      "path": "rl/evaluations/v67_all_v16_old80_20260826.json",
+      "sha256": "094ebab13d010ac34946b5f9e7316a5c920bcde89e97ef384cdf574cfdeb6044"
+    },
+    "fresh95_base": {
+      "path": "rl/evaluations/v67_standalone_fresh95_exact_20260826.json",
+      "sha256": "9eb93e06966a9add3c64979b15c8bc5179b6dd1f26af7b5e3d7d33b040b81765"
+    },
+    "old80_splices": {
+      "path": "rl/evaluations/v69_town_regime_oracle_splices_old80_20260826.json",
+      "sha256": "9c0332a189ee92a255ef485d9c9ac0546c73527302f80ea772f7a873f77747bb"
+    },
+    "fresh95_splices": {
+      "path": "rl/evaluations/v69_town_regime_oracle_splices_fresh95_20260826.json",
+      "sha256": "a3bd9bb141ed351b3c299e9708be13443cb7ab4333786afc4f7f3877f567ca67"
+    },
+    "old80_manifest_sha256": "1253ef13a3bea8bfd8e741185d27c178b296e3aafde08832972dd5dd16934c57",
+    "fresh95_manifest_sha256": "af7ccd297374a9eaad811820e7bb05ffc71e124e696eeacd746df608dcabb6d1"
+  },
+  "static_results": {
+    "old80": {
+      "base": {"wins": 67, "games": 80, "mean_margin": 9657.55, "worst_margin": -21138.0, "cvar10_margin": -14551.375},
+      "a@240": {"wins": 0, "games": 80, "mean_margin": -28801.675, "worst_margin": -59230.0, "cvar10_margin": -54661.625},
+      "a@360": {"wins": 3, "games": 80, "mean_margin": -35186.325, "worst_margin": -69859.0, "cvar10_margin": -65544.5},
+      "b@240": {"wins": 53, "games": 80, "mean_margin": 835.9625, "worst_margin": -56299.0, "cvar10_margin": -35328.875},
+      "b@360": {"wins": 48, "games": 80, "mean_margin": -2623.3125, "worst_margin": -60575.0, "cvar10_margin": -50652.625},
+      "c@240": {"wins": 20, "games": 80, "mean_margin": -10233.5875, "worst_margin": -47282.0, "cvar10_margin": -35973.75},
+      "c@360": {"wins": 14, "games": 80, "mean_margin": -21797.6625, "worst_margin": -62211.0, "cvar10_margin": -57211.5}
+    },
+    "fresh95": {
+      "base": {"wins": 83, "games": 95, "mean_margin": 12298.463157894737, "worst_margin": -36136.0, "cvar10_margin": -12965.1},
+      "a@240": {"wins": 7, "games": 95, "mean_margin": -24151.821052631578, "worst_margin": -70855.0, "cvar10_margin": -55954.0},
+      "a@360": {"wins": 3, "games": 95, "mean_margin": -34517.95789473684, "worst_margin": -81429.0, "cvar10_margin": -70280.7},
+      "b@240": {"wins": 65, "games": 95, "mean_margin": 4997.0, "worst_margin": -55263.0, "cvar10_margin": -28202.5},
+      "b@360": {"wins": 61, "games": 95, "mean_margin": 3218.5157894736844, "worst_margin": -52546.0, "cvar10_margin": -37664.4},
+      "c@240": {"wins": 25, "games": 95, "mean_margin": -11490.2, "worst_margin": -60960.0, "cvar10_margin": -45569.9},
+      "c@360": {"wins": 11, "games": 95, "mean_margin": -24505.484210526316, "worst_margin": -74080.0, "cvar10_margin": -62886.5}
+    }
+  },
+  "oracle_results": {
+    "old80": {
+      "games": 80,
+      "wins": 68,
+      "losses": 12,
+      "mean_margin": 10879.7875,
+      "worst_margin": -21138.0,
+      "cvar10_margin": -11630.125,
+      "choice_counts": {"base": 59, "a@240": 0, "a@360": 1, "b@240": 15, "b@360": 3, "c@240": 2, "c@360": 0},
+      "rescues_vs_base": 1,
+      "rescue_teams": 1
+    },
+    "fresh95": {
+      "games": 95,
+      "wins": 83,
+      "losses": 12,
+      "mean_margin": 13427.915789473684,
+      "worst_margin": -13202.0,
+      "cvar10_margin": -10257.0,
+      "choice_counts": {"base": 75, "a@240": 1, "a@360": 0, "b@240": 7, "b@360": 9, "c@240": 3, "c@360": 0},
+      "rescues_vs_base": 0,
+      "rescue_teams": 0
+    },
+    "combined": {
+      "games": 175,
+      "wins": 151,
+      "losses": 24,
+      "baseline_wins": 150,
+      "rescues_vs_base": 1,
+      "unique_rescue_episode_seats": 1,
+      "unique_rescue_teams": 1,
+      "regressions_vs_base": 0,
+      "rescue": {
+        "split": "old80",
+        "episode_id": 99578041,
+        "top1_seat": 1,
+        "team_id": 16727266,
+        "expert": "b@240",
+        "base_margin": -1373.0,
+        "oracle_margin": 1024.0
+      }
+    }
+  },
+  "promotion_gate": {
+    "required_oracle_wins": 167,
+    "observed_oracle_wins": 151,
+    "oracle_win_deficit": 16,
+    "required_old80_wins": 67,
+    "observed_old80_oracle_wins": 68,
+    "required_fresh95_wins": 83,
+    "observed_fresh95_oracle_wins": 83,
+    "required_rescues": 3,
+    "observed_rescues": 1,
+    "required_rescue_teams": 3,
+    "observed_rescue_teams": 1,
+    "maximum_regressions": 1,
+    "observed_oracle_regressions": 0,
+    "cvar_and_worst_not_worse_on_both_splits": true,
+    "passed": false,
+    "stop_reason": "The hindsight oracle over the exact coherent expert set reaches only 151/175, below the mandatory 167/175 ceiling gate. It also provides only one rescue from one team. No learned or rule-based observable selector over this expert set can exceed its hindsight oracle."
+  },
+  "validation": {
+    "evaluated_episode_seats": 175,
+    "old80_configurations": 6,
+    "fresh95_configurations": 6,
+    "fallback_components": 0,
+    "normalized_steps": 0,
+    "sanitized_steps": 0,
+    "farmer_sanitized_steps": 0,
+    "hands_sanitized_steps": 0,
+    "market_sanitized_steps": 0,
+    "opening_normalized_steps": 0,
+    "post_handoff_normalized_steps": 0,
+    "opening_sanitized_steps": 0,
+    "post_handoff_sanitized_steps": 0,
+    "group_cv_by_team_and_episode": "not_run_stop_before_policy",
+    "runtime_reset_test": "not_applicable_no_v69_policy_created",
+    "conservation_test": "not_applicable_no_v69_policy_created"
+  },
+  "decision": {
+    "create_town_regime_features": false,
+    "fit_selector": false,
+    "create_v69_agent": false,
+    "run_group_cv": false,
+    "run_third_or_future_holdout": false,
+    "package": false,
+    "upload": false
+  },
+  "limitation": "Replay continuation is causal screening evidence, not live Kaggle proof. The oracle uses final outcomes only as an impossibility upper bound and is not deployable."
+}

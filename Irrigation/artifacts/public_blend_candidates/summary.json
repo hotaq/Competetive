@@ -1,0 +1,241 @@
+{
+  "created_by": "make_public_blend_candidates.py",
+  "labels": [
+    "Low",
+    "Medium",
+    "High"
+  ],
+  "candidates": [
+    {
+      "name": "top5_weighted_search_tuned",
+      "submission": "artifacts/public_blend_candidates/submission_top5_weighted_search_tuned.csv",
+      "oof_predictions": "artifacts/public_blend_candidates/oof_top5_weighted_search_tuned.csv",
+      "test_predictions": "artifacts/public_blend_candidates/test_predictions_top5_weighted_search_tuned.csv",
+      "oof_balanced_accuracy": 0.9804054921513234,
+      "oof_accuracy": 0.984147619047619,
+      "scales": [
+        1.0,
+        1.3307939767837524,
+        2.0462374687194824
+      ],
+      "source_names": [
+        "yun_lgb_advanced",
+        "include4eto_xgb_pseudo",
+        "yun_lgb_baseline",
+        "yun_xgb",
+        "utaazu_cat"
+      ],
+      "test_label_counts": {
+        "Low": 159375,
+        "Medium": 100414,
+        "High": 10211
+      },
+      "blend_type": "weighted_average",
+      "model_weights": [
+        0.17686107754707336,
+        0.11876005679368973,
+        0.2245449274778366,
+        0.27492043375968933,
+        0.20491351187229156
+      ]
+    },
+    {
+      "name": "top5_avg_tuned",
+      "submission": "artifacts/public_blend_candidates/submission_top5_avg_tuned.csv",
+      "oof_predictions": "artifacts/public_blend_candidates/oof_top5_avg_tuned.csv",
+      "test_predictions": "artifacts/public_blend_candidates/test_predictions_top5_avg_tuned.csv",
+      "oof_balanced_accuracy": 0.9803522264224975,
+      "oof_accuracy": 0.9839126984126985,
+      "scales": [
+        1.0,
+        1.4770798505950196,
+        2.2783009235296063
+      ],
+      "source_names": [
+        "yun_lgb_advanced",
+        "include4eto_xgb_pseudo",
+        "yun_lgb_baseline",
+        "yun_xgb",
+        "utaazu_cat"
+      ],
+      "test_label_counts": {
+        "Low": 159304,
+        "Medium": 100432,
+        "High": 10264
+      },
+      "blend_type": "equal_average"
+    },
+    {
+      "name": "top5_logreg_tuned",
+      "submission": "artifacts/public_blend_candidates/submission_top5_logreg_tuned.csv",
+      "oof_predictions": "artifacts/public_blend_candidates/oof_top5_logreg_tuned.csv",
+      "test_predictions": "artifacts/public_blend_candidates/test_predictions_top5_logreg_tuned.csv",
+      "oof_balanced_accuracy": 0.9801418875794775,
+      "oof_accuracy": 0.9834777777777778,
+      "scales": [
+        1.0,
+        0.7774732065834714,
+        1.0000937543946686
+      ],
+      "source_names": [
+        "yun_lgb_advanced",
+        "include4eto_xgb_pseudo",
+        "yun_lgb_baseline",
+        "yun_xgb",
+        "utaazu_cat"
+      ],
+      "test_label_counts": {
+        "Low": 159364,
+        "Medium": 100304,
+        "High": 10332
+      },
+      "blend_type": "logreg_stacker"
+    },
+    {
+      "name": "top8_public_match_avg_tuned",
+      "submission": "artifacts/public_blend_candidates/submission_top8_public_match_avg_tuned.csv",
+      "oof_predictions": "artifacts/public_blend_candidates/oof_top8_public_match_avg_tuned.csv",
+      "test_predictions": "artifacts/public_blend_candidates/test_predictions_top8_public_match_avg_tuned.csv",
+      "oof_balanced_accuracy": 0.980095293721094,
+      "oof_accuracy": 0.9835984126984127,
+      "scales": [
+        1.0,
+        1.2530237980916752,
+        1.9812777151818923
+      ],
+      "source_names": [
+        "yun_lgb_advanced",
+        "include4eto_xgb_pseudo",
+        "yun_lgb_baseline",
+        "yun_xgb",
+        "utaazu_cat",
+        "ravi_gbdt_v3",
+        "amordia_ref_hybrid",
+        "mahogany_realmlp"
+      ],
+      "test_label_counts": {
+        "Low": 159475,
+        "Medium": 100149,
+        "High": 10376
+      },
+      "blend_type": "equal_average"
+    },
+    {
+      "name": "top6_plus_ravi_logreg_tuned",
+      "submission": "artifacts/public_blend_candidates/submission_top6_plus_ravi_logreg_tuned.csv",
+      "oof_predictions": "artifacts/public_blend_candidates/oof_top6_plus_ravi_logreg_tuned.csv",
+      "test_predictions": "artifacts/public_blend_candidates/test_predictions_top6_plus_ravi_logreg_tuned.csv",
+      "oof_balanced_accuracy": 0.9800416524286325,
+      "oof_accuracy": 0.9836174603174603,
+      "scales": [
+        1.0,
+        1.2534914851155163,
+        1.0242093698347636
+      ],
+      "source_names": [
+        "yun_lgb_advanced",
+        "include4eto_xgb_pseudo",
+        "yun_lgb_baseline",
+        "yun_xgb",
+        "utaazu_cat",
+        "ravi_gbdt_v3"
+      ],
+      "test_label_counts": {
+        "Low": 159084,
+        "Medium": 100725,
+        "High": 10191
+      },
+      "blend_type": "logreg_stacker"
+    },
+    {
+      "name": "top8_public_match_logreg_tuned",
+      "submission": "artifacts/public_blend_candidates/submission_top8_public_match_logreg_tuned.csv",
+      "oof_predictions": "artifacts/public_blend_candidates/oof_top8_public_match_logreg_tuned.csv",
+      "test_predictions": "artifacts/public_blend_candidates/test_predictions_top8_public_match_logreg_tuned.csv",
+      "oof_balanced_accuracy": 0.9799258652914548,
+      "oof_accuracy": 0.9837095238095238,
+      "scales": [
+        1.0,
+        1.075,
+        1.0
+      ],
+      "source_names": [
+        "yun_lgb_advanced",
+        "include4eto_xgb_pseudo",
+        "yun_lgb_baseline",
+        "yun_xgb",
+        "utaazu_cat",
+        "ravi_gbdt_v3",
+        "amordia_ref_hybrid",
+        "mahogany_realmlp"
+      ],
+      "test_label_counts": {
+        "Low": 159150,
+        "Medium": 100629,
+        "High": 10221
+      },
+      "blend_type": "logreg_stacker"
+    },
+    {
+      "name": "top6_plus_ravi_avg_tuned",
+      "submission": "artifacts/public_blend_candidates/submission_top6_plus_ravi_avg_tuned.csv",
+      "oof_predictions": "artifacts/public_blend_candidates/oof_top6_plus_ravi_avg_tuned.csv",
+      "test_predictions": "artifacts/public_blend_candidates/test_predictions_top6_plus_ravi_avg_tuned.csv",
+      "oof_balanced_accuracy": 0.9799210590863711,
+      "oof_accuracy": 0.9840619047619048,
+      "scales": [
+        1.0,
+        1.4,
+        1.775
+      ],
+      "source_names": [
+        "yun_lgb_advanced",
+        "include4eto_xgb_pseudo",
+        "yun_lgb_baseline",
+        "yun_xgb",
+        "utaazu_cat",
+        "ravi_gbdt_v3"
+      ],
+      "test_label_counts": {
+        "Low": 159409,
+        "Medium": 100387,
+        "High": 10204
+      },
+      "blend_type": "equal_average"
+    }
+  ],
+  "best_local_cv": {
+    "name": "top5_weighted_search_tuned",
+    "submission": "artifacts/public_blend_candidates/submission_top5_weighted_search_tuned.csv",
+    "oof_predictions": "artifacts/public_blend_candidates/oof_top5_weighted_search_tuned.csv",
+    "test_predictions": "artifacts/public_blend_candidates/test_predictions_top5_weighted_search_tuned.csv",
+    "oof_balanced_accuracy": 0.9804054921513234,
+    "oof_accuracy": 0.984147619047619,
+    "scales": [
+      1.0,
+      1.3307939767837524,
+      2.0462374687194824
+    ],
+    "source_names": [
+      "yun_lgb_advanced",
+      "include4eto_xgb_pseudo",
+      "yun_lgb_baseline",
+      "yun_xgb",
+      "utaazu_cat"
+    ],
+    "test_label_counts": {
+      "Low": 159375,
+      "Medium": 100414,
+      "High": 10211
+    },
+    "blend_type": "weighted_average",
+    "model_weights": [
+      0.17686107754707336,
+      0.11876005679368973,
+      0.2245449274778366,
+      0.27492043375968933,
+      0.20491351187229156
+    ]
+  },
+  "note": "Local OOF balanced accuracy is the selection signal; Kaggle public LB can still differ."
+}

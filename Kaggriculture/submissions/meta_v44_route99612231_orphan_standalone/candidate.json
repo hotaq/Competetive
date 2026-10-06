@@ -1,0 +1,39 @@
+{
+  "version": "meta_v44_route99612231_orphan",
+  "agent_file": "submissions/meta_v44_route99612231_orphan_standalone/main.py",
+  "archive_file": "submissions/meta_v44_route99612231_orphan_standalone/submission.tar.gz",
+  "sha256": "cd2eda3600b4d4849f40a74d25f350239528541e52be0aecf85215fe7aa9afb2",
+  "archive_sha256": "087915a5d4c693481c97e93e07c4a6e79fb4f6571cb92ef4fbafc5700268a581",
+  "sources": {
+    "tape": "artifacts/top20_live_tapes80_20260826/tape_99612231_s0.py",
+    "tape_sha256": "b2c77ad8f7c7031857b99e76cdc6f58d2e39ca4d96d36cc1b51a647ad31788dc",
+    "legalizer": "src/kaggriculture_rl/policy/primitive_legalizer.py",
+    "legalizer_sha256": "9ef2d1edd652d82a7af69f1d3d2bd709feef339707f2cebaa44ca3b1c409a287",
+    "unit_rules": "src/kaggriculture_rl/policy/unit_rules.py",
+    "unit_rules_sha256": "14b6da3f04eceec217af6afc6622608cad891fe934bea96363b8b48d8cd865b5"
+  },
+  "policy": {
+    "route_episode": 99612231,
+    "recovery": [
+      "weed",
+      "orphan_structure",
+      "terminal_liquidation"
+    ],
+    "final_action_legalizer": true
+  },
+  "screening_evidence": {
+    "old_top20": {
+      "wins": 60,
+      "games": 80
+    },
+    "fresh_disjoint_top20": {
+      "wins": 72,
+      "games": 95
+    },
+    "combined": {
+      "wins": 132,
+      "games": 175
+    }
+  },
+  "status": "built_pending_parity_gate"
+}

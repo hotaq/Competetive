@@ -1,0 +1,50 @@
+{
+  "b3_weights": {
+    "ACL": 0.0,
+    "Baker's": 0.35,
+    "Contusion": 0.0,
+    "Effusion": 0.25,
+    "Fracture": 0.0,
+    "Lateral Meniscus": 0.35,
+    "Lateral OA": 0.35,
+    "MCL": 0.1,
+    "Medial Meniscus": 0.0,
+    "Medial OA": 0.15,
+    "PF OA": 0.35,
+    "Synovitis": 0.35
+  },
+  "experiment": "E019 exact V104 plus public B3 targetwise rank blend",
+  "legacy_alpha": 0.0,
+  "outputs": {
+    "submission_b3_raw.csv": {
+      "checks": {
+        "finite": true,
+        "range": true,
+        "schema": true,
+        "uid_order": true,
+        "uid_unique": true
+      },
+      "sha256": "9c194d330b1753f334601bc567a7596bd66ad6946441a510d16c675834bd4cad"
+    },
+    "submission_target_plus_b3_10.csv": {
+      "checks": {
+        "finite": true,
+        "range": true,
+        "schema": true,
+        "uid_order": true,
+        "uid_unique": true
+      },
+      "sha256": "45cb71123b6f11303b04ea9ce8f8b1ddf1b16e0fc761d16db1bd870d2c30c5d9"
+    },
+    "submission_target_plus_b3_targetwise.csv": {
+      "checks": {
+        "finite": true,
+        "range": true,
+        "schema": true,
+        "uid_order": true,
+        "uid_unique": true
+      },
+      "sha256": "fd99435bf41f6106d44c0e4308c05f5ba7ec985e21d7bdffc50d07610c70244b"
+    }
+  }
+}

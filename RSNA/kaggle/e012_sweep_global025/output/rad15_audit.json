@@ -1,0 +1,27 @@
+{
+  "alpha": 0.25,
+  "available_slots": 8,
+  "baseline_sha256": "56123233443d3c47e97b2970510d959e93dbcab9c02adf7ec18febc817449b5e",
+  "config_hash": "54fe3632e9936949e4cbb49da95f0fe692a55fa67fc669b5c42a8028f66347ac",
+  "elapsed_seconds": 524.575745344162,
+  "encoder_path": "/kaggle/input/datasets/chinnaphatkhun/radimagenet-resnet50-official-mit/ResNet50.pt",
+  "encoder_sha256": "08629f7e7bd3e29b8ee9522ca3f65ce4d010a7ddf74f0ea3c7e3f3d0bbab0734",
+  "fold_sha256": "2c805d89ba5ad1f713d322daedad8c0768c8dc78c0a9938dc3a00daa8e02b8ab",
+  "formula": "0.75*rank(V8)+0.25*mean_fold(rank(Rad_fold))",
+  "head_sha256": {
+    "e011_rad_head_f0_s0.pt": "663e437bb750b1a4d131366f27ec6cf5e9355700215641c629b601870c798d2e",
+    "e011_rad_head_f0_s1.pt": "dec954e9a82b82c68cf73e5c1e535536fcb3a3a87dc36c3f74f47dce23d85124",
+    "e011_rad_head_f1_s0.pt": "2faf588c832b53e79894dc75f5d97faa29b299166c43eee09af5579abbb445c9",
+    "e011_rad_head_f1_s1.pt": "ef5af0ebe0dfbea6ed719c66218cb14a07f92271b8b12fc8eb65e2ec1286dfe6",
+    "e011_rad_head_f2_s0.pt": "852fba79635ea5b5b8e93dde5ff44e673176b7d3ee4bae1b7cc6ec19b8e426d2",
+    "e011_rad_head_f2_s1.pt": "48cb717a480bb3227547cf5178d540ac404f46742acba7bed024f3e1ac2e5fd1",
+    "e011_rad_head_f3_s0.pt": "68a6fefc9870beab1fbc6cc4c6ed5ff45c196a16efb4db5ba62f5aabb75cfbfb",
+    "e011_rad_head_f3_s1.pt": "8db659b09092115dd53dcd878fddb6b742f5897bbbcbefd07e0c412177f37f58",
+    "e011_rad_head_f4_s0.pt": "a1ebc8b58cdc94f427cfca50dad875a9432abaaf1fa32618fdf3d0da63a4f488",
+    "e011_rad_head_f4_s1.pt": "1437c3808eb01f1c1b1112dff15bed23c76d71d27979e4b5879cc9627442eacd"
+  },
+  "status": "FIXED_RAD15_WRITTEN",
+  "studies": 3,
+  "submission_sha256": "c6fd36585ed3a7420b2c76416b246a210ce9140f3ca5ac0e500741056fdaac38",
+  "weight_policy": "one fixed global weight; no nested/per-label/test selection"
+}

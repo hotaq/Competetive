@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kaggriculture.local/schemas/v1/macro_action.schema.json",
+  "title": "Kaggriculture semantic macro action v1",
+  "$defs": {
+    "schemaVersion": { "const": 1, "type": "integer" },
+    "product": {
+      "enum": ["WHEAT", "CARROT", "TOMATO", "STRAWBERRY", "MELON", "EGG", "MILK", "WOOL", "FERTILIZER"],
+      "type": "string"
+    },
+    "crop": {
+      "enum": ["WHEAT", "CARROT", "TOMATO", "STRAWBERRY", "MELON"],
+      "type": "string"
+    },
+    "animal": { "enum": ["GOOSE", "COW", "SHEEP"], "type": "string" }
+  },
+  "oneOf": [
+    {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": { "$ref": "#/$defs/schemaVersion" },
+        "kind": { "const": "CROP_PRODUCTION" },
+        "crop": { "$ref": "#/$defs/crop" },
+        "target_quantity": { "minimum": 0, "type": "integer" }
+      },
+      "required": ["schema_version", "kind", "crop", "target_quantity"],
+      "type": "object"
+    },
+    {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": { "$ref": "#/$defs/schemaVersion" },
+        "kind": { "const": "ANIMAL_PRODUCTION" },
+        "animal": { "$ref": "#/$defs/animal" },
+        "target_count": { "minimum": 0, "type": "integer" }
+      },
+      "required": ["schema_version", "kind", "animal", "target_count"],
+      "type": "object"
+    },
+    {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": { "$ref": "#/$defs/schemaVersion" },
+        "kind": { "const": "WORKFORCE" },
+        "target_count": { "minimum": 0, "type": "integer" }
+      },
+      "required": ["schema_version", "kind", "target_count"],
+      "type": "object"
+    },
+    {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": { "$ref": "#/$defs/schemaVersion" },
+        "kind": { "const": "SELLING" },
+        "item": { "$ref": "#/$defs/product" },
+        "quantity": { "minimum": 1, "type": "integer" }
+      },
+      "required": ["schema_version", "kind", "item", "quantity"],
+      "type": "object"
+    },
+    {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": { "$ref": "#/$defs/schemaVersion" },
+        "kind": { "const": "INVENTORY_BUFFER" },
+        "item": { "$ref": "#/$defs/product" },
+        "target_quantity": { "minimum": 0, "type": "integer" }
+      },
+      "required": ["schema_version", "kind", "item", "target_quantity"],
+      "type": "object"
+    },
+    {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": { "$ref": "#/$defs/schemaVersion" },
+        "kind": { "const": "LAND_EXPANSION" },
+        "quadrant": { "enum": ["NE", "SW", "SE"], "type": "string" }
+      },
+      "required": ["schema_version", "kind", "quadrant"],
+      "type": "object"
+    },
+    {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": { "$ref": "#/$defs/schemaVersion" },
+        "kind": { "const": "RECOVERY" },
+        "mode": { "enum": ["LIQUIDITY", "PRODUCTION", "INVENTORY"], "type": "string" }
+      },
+      "required": ["schema_version", "kind", "mode"],
+      "type": "object"
+    }
+  ]
+}

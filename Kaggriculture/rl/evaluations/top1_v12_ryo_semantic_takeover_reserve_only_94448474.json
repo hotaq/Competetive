@@ -1,0 +1,505 @@
+{
+  "base_agent": "submissions/top1_v12_ryo_selector_b120_repaired_standalone/main.py",
+  "context_episode_ids": [
+    94448474
+  ],
+  "leaderboard": [
+    {
+      "config": {
+        "mature_cows": 0,
+        "mature_sheep": 0,
+        "name": "champion",
+        "takeover_step": 720
+      },
+      "episodes": [
+        {
+          "blocked_rate": 0.0,
+          "candidate_money": 143672.0,
+          "episode_id": 94448474,
+          "ineffective_actions": 0,
+          "margin": -2447.0,
+          "opponent_money": 146119.0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -2447.0,
+        "draws": 0,
+        "games": 1,
+        "ineffective_actions": 0,
+        "losses": 1,
+        "mean_blocked_rate": 0.0,
+        "mean_margin": -2447.0,
+        "mean_money": 143672.0,
+        "median_margin": -2447.0,
+        "wins": 0,
+        "worst_margin": -2447.0
+      }
+    },
+    {
+      "config": {
+        "mature_cows": 8,
+        "mature_sheep": 5,
+        "name": "median_b120",
+        "takeover_step": 120
+      },
+      "episodes": [
+        {
+          "blocked_rate": 0.7968384074941453,
+          "candidate_money": 0.0,
+          "episode_id": 94448474,
+          "ineffective_actions": 0,
+          "margin": -98717.0,
+          "opponent_money": 98717.0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -98717.0,
+        "draws": 0,
+        "games": 1,
+        "ineffective_actions": 0,
+        "losses": 1,
+        "mean_blocked_rate": 0.7968384074941453,
+        "mean_margin": -98717.0,
+        "mean_money": 0.0,
+        "median_margin": -98717.0,
+        "wins": 0,
+        "worst_margin": -98717.0
+      }
+    },
+    {
+      "config": {
+        "mature_cows": 6,
+        "mature_sheep": 2,
+        "name": "low_b120",
+        "takeover_step": 120
+      },
+      "episodes": [
+        {
+          "blocked_rate": 0.820738137082601,
+          "candidate_money": 0.0,
+          "episode_id": 94448474,
+          "ineffective_actions": 0,
+          "margin": -128459.0,
+          "opponent_money": 128459.0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -128459.0,
+        "draws": 0,
+        "games": 1,
+        "ineffective_actions": 0,
+        "losses": 1,
+        "mean_blocked_rate": 0.820738137082601,
+        "mean_margin": -128459.0,
+        "mean_money": 0.0,
+        "median_margin": -128459.0,
+        "wins": 0,
+        "worst_margin": -128459.0
+      }
+    },
+    {
+      "config": {
+        "mature_cows": 10,
+        "mature_sheep": 8,
+        "name": "balanced_heavy_b120",
+        "takeover_step": 120
+      },
+      "episodes": [
+        {
+          "blocked_rate": 0.8201523140011716,
+          "candidate_money": 0.0,
+          "episode_id": 94448474,
+          "ineffective_actions": 0,
+          "margin": -143604.0,
+          "opponent_money": 143604.0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -143604.0,
+        "draws": 0,
+        "games": 1,
+        "ineffective_actions": 0,
+        "losses": 1,
+        "mean_blocked_rate": 0.8201523140011716,
+        "mean_margin": -143604.0,
+        "mean_money": 0.0,
+        "median_margin": -143604.0,
+        "wins": 0,
+        "worst_margin": -143604.0
+      }
+    },
+    {
+      "config": {
+        "mature_cows": 8,
+        "mature_sheep": 9,
+        "name": "sheep_heavy_b120",
+        "takeover_step": 120
+      },
+      "episodes": [
+        {
+          "blocked_rate": 0.8172231985940246,
+          "candidate_money": 0.0,
+          "episode_id": 94448474,
+          "ineffective_actions": 0,
+          "margin": -144645.0,
+          "opponent_money": 144645.0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -144645.0,
+        "draws": 0,
+        "games": 1,
+        "ineffective_actions": 0,
+        "losses": 1,
+        "mean_blocked_rate": 0.8172231985940246,
+        "mean_margin": -144645.0,
+        "mean_money": 0.0,
+        "median_margin": -144645.0,
+        "wins": 0,
+        "worst_margin": -144645.0
+      }
+    },
+    {
+      "config": {
+        "mature_cows": 12,
+        "mature_sheep": 5,
+        "name": "cow_heavy_b120",
+        "takeover_step": 120
+      },
+      "episodes": [
+        {
+          "blocked_rate": 0.7898126463700235,
+          "candidate_money": 0.0,
+          "episode_id": 94448474,
+          "ineffective_actions": 0,
+          "margin": -146255.0,
+          "opponent_money": 146255.0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -146255.0,
+        "draws": 0,
+        "games": 1,
+        "ineffective_actions": 0,
+        "losses": 1,
+        "mean_blocked_rate": 0.7898126463700235,
+        "mean_margin": -146255.0,
+        "mean_money": 0.0,
+        "median_margin": -146255.0,
+        "wins": 0,
+        "worst_margin": -146255.0
+      }
+    },
+    {
+      "config": {
+        "mature_cows": 12,
+        "mature_sheep": 5,
+        "name": "cow_heavy_b96",
+        "takeover_step": 96
+      },
+      "episodes": [
+        {
+          "blocked_rate": 0.7330097087378641,
+          "candidate_money": 0.0,
+          "episode_id": 94448474,
+          "ineffective_actions": 0,
+          "margin": -154288.0,
+          "opponent_money": 154288.0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -154288.0,
+        "draws": 0,
+        "games": 1,
+        "ineffective_actions": 0,
+        "losses": 1,
+        "mean_blocked_rate": 0.7330097087378641,
+        "mean_margin": -154288.0,
+        "mean_money": 0.0,
+        "median_margin": -154288.0,
+        "wins": 0,
+        "worst_margin": -154288.0
+      }
+    },
+    {
+      "config": {
+        "mature_cows": 10,
+        "mature_sheep": 8,
+        "name": "balanced_heavy_b96",
+        "takeover_step": 96
+      },
+      "episodes": [
+        {
+          "blocked_rate": 0.7420399352401511,
+          "candidate_money": 0.0,
+          "episode_id": 94448474,
+          "ineffective_actions": 0,
+          "margin": -154307.0,
+          "opponent_money": 154307.0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -154307.0,
+        "draws": 0,
+        "games": 1,
+        "ineffective_actions": 0,
+        "losses": 1,
+        "mean_blocked_rate": 0.7420399352401511,
+        "mean_margin": -154307.0,
+        "mean_money": 0.0,
+        "median_margin": -154307.0,
+        "wins": 0,
+        "worst_margin": -154307.0
+      }
+    },
+    {
+      "config": {
+        "mature_cows": 12,
+        "mature_sheep": 5,
+        "name": "cow_heavy_b144",
+        "takeover_step": 144
+      },
+      "episodes": [
+        {
+          "blocked_rate": 0.755421686746988,
+          "candidate_money": 0.0,
+          "episode_id": 94448474,
+          "ineffective_actions": 0,
+          "margin": -167001.0,
+          "opponent_money": 167001.0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -167001.0,
+        "draws": 0,
+        "games": 1,
+        "ineffective_actions": 0,
+        "losses": 1,
+        "mean_blocked_rate": 0.755421686746988,
+        "mean_margin": -167001.0,
+        "mean_money": 0.0,
+        "median_margin": -167001.0,
+        "wins": 0,
+        "worst_margin": -167001.0
+      }
+    },
+    {
+      "config": {
+        "mature_cows": 8,
+        "mature_sheep": 9,
+        "name": "sheep_heavy_b96",
+        "takeover_step": 96
+      },
+      "episodes": [
+        {
+          "blocked_rate": 0.7408008658008658,
+          "candidate_money": 0.0,
+          "episode_id": 94448474,
+          "ineffective_actions": 0,
+          "margin": -168709.0,
+          "opponent_money": 168709.0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -168709.0,
+        "draws": 0,
+        "games": 1,
+        "ineffective_actions": 0,
+        "losses": 1,
+        "mean_blocked_rate": 0.7408008658008658,
+        "mean_margin": -168709.0,
+        "mean_money": 0.0,
+        "median_margin": -168709.0,
+        "wins": 0,
+        "worst_margin": -168709.0
+      }
+    },
+    {
+      "config": {
+        "mature_cows": 6,
+        "mature_sheep": 2,
+        "name": "low_b96",
+        "takeover_step": 96
+      },
+      "episodes": [
+        {
+          "blocked_rate": 0.6535560344827587,
+          "candidate_money": 0.0,
+          "episode_id": 94448474,
+          "ineffective_actions": 0,
+          "margin": -169825.0,
+          "opponent_money": 169825.0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -169825.0,
+        "draws": 0,
+        "games": 1,
+        "ineffective_actions": 0,
+        "losses": 1,
+        "mean_blocked_rate": 0.6535560344827587,
+        "mean_margin": -169825.0,
+        "mean_money": 0.0,
+        "median_margin": -169825.0,
+        "wins": 0,
+        "worst_margin": -169825.0
+      }
+    },
+    {
+      "config": {
+        "mature_cows": 8,
+        "mature_sheep": 5,
+        "name": "median_b144",
+        "takeover_step": 144
+      },
+      "episodes": [
+        {
+          "blocked_rate": 0.75708257986739,
+          "candidate_money": 0.0,
+          "episode_id": 94448474,
+          "ineffective_actions": 0,
+          "margin": -170975.0,
+          "opponent_money": 170975.0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -170975.0,
+        "draws": 0,
+        "games": 1,
+        "ineffective_actions": 0,
+        "losses": 1,
+        "mean_blocked_rate": 0.75708257986739,
+        "mean_margin": -170975.0,
+        "mean_money": 0.0,
+        "median_margin": -170975.0,
+        "wins": 0,
+        "worst_margin": -170975.0
+      }
+    },
+    {
+      "config": {
+        "mature_cows": 10,
+        "mature_sheep": 8,
+        "name": "balanced_heavy_b144",
+        "takeover_step": 144
+      },
+      "episodes": [
+        {
+          "blocked_rate": 0.7383966244725738,
+          "candidate_money": 0.0,
+          "episode_id": 94448474,
+          "ineffective_actions": 0,
+          "margin": -171753.0,
+          "opponent_money": 171753.0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -171753.0,
+        "draws": 0,
+        "games": 1,
+        "ineffective_actions": 0,
+        "losses": 1,
+        "mean_blocked_rate": 0.7383966244725738,
+        "mean_margin": -171753.0,
+        "mean_money": 0.0,
+        "median_margin": -171753.0,
+        "wins": 0,
+        "worst_margin": -171753.0
+      }
+    },
+    {
+      "config": {
+        "mature_cows": 8,
+        "mature_sheep": 5,
+        "name": "median_b96",
+        "takeover_step": 96
+      },
+      "episodes": [
+        {
+          "blocked_rate": 0.7389189189189189,
+          "candidate_money": 0.0,
+          "episode_id": 94448474,
+          "ineffective_actions": 0,
+          "margin": -177043.0,
+          "opponent_money": 177043.0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -177043.0,
+        "draws": 0,
+        "games": 1,
+        "ineffective_actions": 0,
+        "losses": 1,
+        "mean_blocked_rate": 0.7389189189189189,
+        "mean_margin": -177043.0,
+        "mean_money": 0.0,
+        "median_margin": -177043.0,
+        "wins": 0,
+        "worst_margin": -177043.0
+      }
+    },
+    {
+      "config": {
+        "mature_cows": 6,
+        "mature_sheep": 2,
+        "name": "low_b144",
+        "takeover_step": 144
+      },
+      "episodes": [
+        {
+          "blocked_rate": 0.7939759036144578,
+          "candidate_money": 0.0,
+          "episode_id": 94448474,
+          "ineffective_actions": 0,
+          "margin": -179273.0,
+          "opponent_money": 179273.0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -179273.0,
+        "draws": 0,
+        "games": 1,
+        "ineffective_actions": 0,
+        "losses": 1,
+        "mean_blocked_rate": 0.7939759036144578,
+        "mean_margin": -179273.0,
+        "mean_money": 0.0,
+        "median_margin": -179273.0,
+        "wins": 0,
+        "worst_margin": -179273.0
+      }
+    },
+    {
+      "config": {
+        "mature_cows": 8,
+        "mature_sheep": 9,
+        "name": "sheep_heavy_b144",
+        "takeover_step": 144
+      },
+      "episodes": [
+        {
+          "blocked_rate": 0.7120481927710843,
+          "candidate_money": 0.0,
+          "episode_id": 94448474,
+          "ineffective_actions": 0,
+          "margin": -184618.0,
+          "opponent_money": 184618.0
+        }
+      ],
+      "summary": {
+        "cvar10_margin": -184618.0,
+        "draws": 0,
+        "games": 1,
+        "ineffective_actions": 0,
+        "losses": 1,
+        "mean_blocked_rate": 0.7120481927710843,
+        "mean_margin": -184618.0,
+        "mean_money": 0.0,
+        "median_margin": -184618.0,
+        "wins": 0,
+        "worst_margin": -184618.0
+      }
+    }
+  ],
+  "manifest": "replays/top1_v12_ryo_development_20260821/manifest.json"
+}

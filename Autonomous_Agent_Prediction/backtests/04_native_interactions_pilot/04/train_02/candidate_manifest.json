@@ -1,0 +1,77 @@
+{
+  "classes": [
+    0,
+    1
+  ],
+  "rows": 10000,
+  "features": 28,
+  "candidates": [
+    {
+      "file": "candidate_blend_lightgbm_native_catboost_d8.csv",
+      "name": "blend_lightgbm_native_catboost_d8",
+      "family": "blend",
+      "oof_auc": 0.9714099,
+      "fold_auc": [],
+      "fold_auc_std": null,
+      "test_rank_correlation_to_best": 0.99813984
+    },
+    {
+      "file": "candidate_lightgbm_native.csv",
+      "name": "lightgbm_native",
+      "family": "lightgbm",
+      "oof_auc": 0.97033138,
+      "fold_auc": [
+        0.9688376,
+        0.96849394,
+        0.967246,
+        0.96937525,
+        0.97763782
+      ],
+      "fold_auc_std": 0.00372624,
+      "test_rank_correlation_to_best": 1.0
+    },
+    {
+      "file": "candidate_hist_gradient.csv",
+      "name": "hist_gradient",
+      "family": "histogram",
+      "oof_auc": 0.96034807,
+      "fold_auc": [
+        0.95626137,
+        0.95937537,
+        0.95595727,
+        0.9596137,
+        0.97026936
+      ],
+      "fold_auc_std": 0.00521313,
+      "test_rank_correlation_to_best": 0.98713253
+    }
+  ],
+  "diagnostics": {
+    "best_core": {
+      "name": "lightgbm_native",
+      "family": "lightgbm",
+      "oof_auc": 0.97033138
+    },
+    "blend_gate": {
+      "accepted": true,
+      "name": "blend_lightgbm_native_catboost_d8",
+      "oof_auc": 0.9714099,
+      "gain": 0.00107852,
+      "test_rank_correlation_to_best": 0.99813984
+    },
+    "interaction_gate": {
+      "accepted": false,
+      "name": "interaction_te",
+      "oof_auc": 0.96304307,
+      "standalone_gain": -0.00728831,
+      "blend_auc": 0.97012532,
+      "blend_gain": -0.00020605,
+      "fold_auc_std": 0.00520876,
+      "test_rank_correlation": 0.98771955,
+      "stable": true,
+      "diverse": false,
+      "improves": false
+    }
+  },
+  "failures": []
+}

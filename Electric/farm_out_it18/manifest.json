@@ -1,0 +1,216 @@
+{
+ "models": {
+  "lgb_lam_s42_d3": {
+   "cfg": {
+    "id": "lgb_lam_s42_d3",
+    "family": "lgb",
+    "features": "lam",
+    "seed": 42,
+    "tag": "d3",
+    "params": {
+     "lr": 0.05,
+     "leaves": 8,
+     "depth": 3,
+     "min_child": 100,
+     "ff": 0.9,
+     "bag": 0.8,
+     "l2": 2.0,
+     "rounds": 8000
+    }
+   },
+   "oof_auc": 0.945655,
+   "fold_auc": [
+    0.944759,
+    0.945406,
+    0.946616,
+    0.945849,
+    0.945674
+   ],
+   "iters": [
+    1249,
+    1171,
+    1774,
+    1059,
+    1302
+   ]
+  },
+  "lgb_lam_s7_d3": {
+   "cfg": {
+    "id": "lgb_lam_s7_d3",
+    "family": "lgb",
+    "features": "lam",
+    "seed": 7,
+    "tag": "d3",
+    "params": {
+     "lr": 0.05,
+     "leaves": 8,
+     "depth": 3,
+     "min_child": 100,
+     "ff": 0.9,
+     "bag": 0.8,
+     "l2": 2.0,
+     "rounds": 8000
+    }
+   },
+   "oof_auc": 0.945662,
+   "fold_auc": [
+    0.944694,
+    0.94549,
+    0.946643,
+    0.945833,
+    0.945685
+   ],
+   "iters": [
+    1015,
+    1217,
+    1250,
+    1006,
+    1103
+   ]
+  },
+  "lgb_lam_s42_d4": {
+   "cfg": {
+    "id": "lgb_lam_s42_d4",
+    "family": "lgb",
+    "features": "lam",
+    "seed": 42,
+    "tag": "d4",
+    "params": {
+     "lr": 0.04,
+     "leaves": 16,
+     "depth": 4,
+     "min_child": 100,
+     "ff": 0.9,
+     "bag": 0.8,
+     "l2": 2.0,
+     "rounds": 8000
+    }
+   },
+   "oof_auc": 0.945652,
+   "fold_auc": [
+    0.944765,
+    0.94537,
+    0.946586,
+    0.945906,
+    0.945675
+   ],
+   "iters": [
+    1064,
+    840,
+    944,
+    1055,
+    1160
+   ]
+  },
+  "lgb_lam_s42_d2": {
+   "cfg": {
+    "id": "lgb_lam_s42_d2",
+    "family": "lgb",
+    "features": "lam",
+    "seed": 42,
+    "tag": "d2",
+    "params": {
+     "lr": 0.08,
+     "leaves": 4,
+     "depth": 2,
+     "min_child": 100,
+     "ff": 0.9,
+     "bag": 0.8,
+     "l2": 2.0,
+     "rounds": 8000
+    }
+   },
+   "oof_auc": 0.945624,
+   "fold_auc": [
+    0.944739,
+    0.945418,
+    0.946594,
+    0.945751,
+    0.945651
+   ],
+   "iters": [
+    1246,
+    1554,
+    1777,
+    1605,
+    1830
+   ]
+  },
+  "cat_lam_s42_d4": {
+   "cfg": {
+    "id": "cat_lam_s42_d4",
+    "family": "cat",
+    "features": "lam",
+    "seed": 42,
+    "tag": "d4",
+    "params": {
+     "depth": 4,
+     "lr": 0.06,
+     "l2": 5.0,
+     "rounds": 4000
+    }
+   },
+   "oof_auc": 0.945585,
+   "fold_auc": [
+    0.944705,
+    0.945285,
+    0.946561,
+    0.94588,
+    0.945522
+   ],
+   "iters": [
+    1763,
+    1381,
+    1306,
+    1296,
+    1669
+   ]
+  },
+  "xgb_lam_s42_d3": {
+   "cfg": {
+    "id": "xgb_lam_s42_d3",
+    "family": "xgb",
+    "features": "lam",
+    "seed": 42,
+    "tag": "d3",
+    "params": {
+     "max_depth": 3,
+     "lr": 0.05,
+     "mcw": 100,
+     "sub": 0.8,
+     "col": 0.9,
+     "l2": 3.0,
+     "a": 0.0,
+     "rounds": 8000
+    }
+   },
+   "oof_auc": 0.945606,
+   "fold_auc": [
+    0.94468,
+    0.945312,
+    0.946571,
+    0.94584,
+    0.945658
+   ],
+   "iters": [
+    1093,
+    1161,
+    1388,
+    1150,
+    1175
+   ]
+  }
+ },
+ "history": [
+  {
+   "n_models": 6,
+   "blend_oof": 0.945743,
+   "weights": {
+    "lgb_lam_s7_d3": 0.25,
+    "cat_lam_s42_d4": 0.25,
+    "lgb_lam_s42_d4": 0.25,
+    "lgb_lam_s42_d2": 0.25
+   }
+  }
+ ]
+}

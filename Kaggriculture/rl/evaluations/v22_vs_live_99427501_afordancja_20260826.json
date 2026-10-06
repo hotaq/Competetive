@@ -1,0 +1,79 @@
+{
+  "candidate": {
+    "agent_file": "submissions/meta_v22_v16_land3_terminal_rule_standalone/main.py",
+    "fallback_agent_file": null,
+    "sha256": "5d5c615a296d984402f886b5f998a54e211dd6138e7818793733069d0d1476ba"
+  },
+  "created_at": "2026-08-25T17:59:18.524386+00:00",
+  "episodes": [
+    {
+      "candidate_margin": 42675.0,
+      "candidate_money": 120722.0,
+      "completed_transitions": 719,
+      "episode_id": 99427501,
+      "fallback_components": 0,
+      "farmer_sanitized_steps": 116,
+      "final_state_step": 719,
+      "hands_sanitized_steps": 245,
+      "market_sanitized_steps": 27,
+      "normalized_steps": 0,
+      "opening_normalized_steps": 0,
+      "opening_sanitized_steps": 43,
+      "original_opponent_money": 120722.0,
+      "original_top1_money": 78047.0,
+      "post_handoff_normalized_steps": 0,
+      "post_handoff_sanitized_steps": 250,
+      "replay_frames": 720,
+      "route_decisions": [],
+      "sanitized_steps": 293,
+      "seed": 161863677,
+      "steps": 719,
+      "tape_top1_money": 78047.0,
+      "top1_seat": 0
+    }
+  ],
+  "limitation": "Recorded Top-1 actions are an action tape, not a live policy; changing the opponent can make later tape actions stale or illegal.",
+  "schema_version": 4,
+  "source": {
+    "competition": "kaggriculture",
+    "leader": {
+      "team_name": "Afordancja"
+    },
+    "manifest_created_at": "2026-08-25T17:58:49.378171+00:00",
+    "manifest_file": "replays/submission_55776016_public_latest1_20260826/opponent_manifest.json",
+    "manifest_sha256": "34125b0b8f31184c5d65f20a76ae5e1fdb8866e322453e8e3698be22f83b17c4",
+    "submission": {
+      "submission_id": 55776016
+    }
+  },
+  "summary": {
+    "cvar10_margin": 42675.0,
+    "draws": 0,
+    "fallback_components": 0,
+    "farmer_sanitized_steps": 116,
+    "games": 1,
+    "hands_sanitized_steps": 245,
+    "losses": 0,
+    "market_sanitized_steps": 27,
+    "mean_margin": 42675.0,
+    "mean_money": 120722.0,
+    "median_margin": 42675.0,
+    "normalized_steps": 0,
+    "opening_normalized_steps": 0,
+    "opening_sanitized_steps": 43,
+    "post_handoff_normalized_steps": 0,
+    "post_handoff_sanitized_steps": 250,
+    "route_counts_by_gate": {},
+    "sanitized_steps": 293,
+    "win_rate": 1.0,
+    "wins": 1,
+    "worst_margin": 42675.0,
+    "worst_money": 120722.0
+  },
+  "validation": {
+    "action_alignment": "steps[1:] actions produce observations in the same frame",
+    "all_original_replays_exact": true,
+    "candidate_actions_sanitized": true,
+    "phase_boundary": 120
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "name": "meta_v16_rc6_2_safe_rollback_standalone",
+  "agent_file": "submissions/meta_v16_rc6_adaptive_market_standalone/main.py",
+  "sha256": "c8afcbb8f90861cd92131012146e573752820b80fbd939ace3c7503aea83cd5e",
+  "base": {
+    "agent_file": "submissions/meta_v16_rc5_robust_base_standalone/main.py",
+    "sha256": "f029fa0cb66a9eb509afbe44e3f59b800332d0419db91607183410e4089c4d19"
+  },
+  "policy": {
+    "family": "replay_derived_open_loop_with_state_overlays",
+    "is_rl": false,
+    "overlays": [
+      "weed_repair",
+      "premium_market_front_run"
+    ]
+  },
+  "status": "validated_safe_rollback",
+  "evaluation_reports": [
+    "rl/evaluations/v16_rc6_2_safe_rollback_public82.json",
+    "rl/evaluations/boatlee_v16_rc5_vs_v12_selector_live24.json"
+  ]
+}

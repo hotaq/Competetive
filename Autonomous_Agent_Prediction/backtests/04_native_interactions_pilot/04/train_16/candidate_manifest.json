@@ -1,0 +1,77 @@
+{
+  "classes": [
+    0,
+    1
+  ],
+  "rows": 10000,
+  "features": 21,
+  "candidates": [
+    {
+      "file": "candidate_blend_catboost_d8_catboost_d6.csv",
+      "name": "blend_catboost_d8_catboost_d6",
+      "family": "blend",
+      "oof_auc": 0.90619278,
+      "fold_auc": [],
+      "fold_auc_std": null,
+      "test_rank_correlation_to_best": 0.99827061
+    },
+    {
+      "file": "candidate_catboost_d8.csv",
+      "name": "catboost_d8",
+      "family": "catboost",
+      "oof_auc": 0.90438496,
+      "fold_auc": [
+        0.90458167,
+        0.89224993,
+        0.90827228,
+        0.91434676,
+        0.91332106
+      ],
+      "fold_auc_std": 0.00797457,
+      "test_rank_correlation_to_best": 1.0
+    },
+    {
+      "file": "candidate_extra_trees.csv",
+      "name": "extra_trees",
+      "family": "bagging",
+      "oof_auc": 0.88201033,
+      "fold_auc": [
+        0.89389823,
+        0.87230243,
+        0.88250916,
+        0.86791819,
+        0.89168201
+      ],
+      "fold_auc_std": 0.01026974,
+      "test_rank_correlation_to_best": 0.94797629
+    }
+  ],
+  "diagnostics": {
+    "best_core": {
+      "name": "catboost_d8",
+      "family": "catboost",
+      "oof_auc": 0.90438496
+    },
+    "blend_gate": {
+      "accepted": true,
+      "name": "blend_catboost_d8_catboost_d6",
+      "oof_auc": 0.90619278,
+      "gain": 0.00180782,
+      "test_rank_correlation_to_best": 0.99827061
+    },
+    "interaction_gate": {
+      "accepted": false,
+      "name": "interaction_te",
+      "oof_auc": 0.8628223,
+      "standalone_gain": -0.04156267,
+      "blend_auc": 0.90244514,
+      "blend_gain": -0.00193983,
+      "fold_auc_std": 0.00838566,
+      "test_rank_correlation": 0.94375106,
+      "stable": true,
+      "diverse": true,
+      "improves": false
+    }
+  },
+  "failures": []
+}

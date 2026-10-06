@@ -1,0 +1,172 @@
+{
+  "checkpoints": {
+    "e011_rad_head_f0_s0.pt": "663e437bb750b1a4d131366f27ec6cf5e9355700215641c629b601870c798d2e",
+    "e011_rad_head_f0_s1.pt": "dec954e9a82b82c68cf73e5c1e535536fcb3a3a87dc36c3f74f47dce23d85124",
+    "e011_rad_head_f1_s0.pt": "2faf588c832b53e79894dc75f5d97faa29b299166c43eee09af5579abbb445c9",
+    "e011_rad_head_f1_s1.pt": "ef5af0ebe0dfbea6ed719c66218cb14a07f92271b8b12fc8eb65e2ec1286dfe6",
+    "e011_rad_head_f2_s0.pt": "852fba79635ea5b5b8e93dde5ff44e673176b7d3ee4bae1b7cc6ec19b8e426d2",
+    "e011_rad_head_f2_s1.pt": "48cb717a480bb3227547cf5178d540ac404f46742acba7bed024f3e1ac2e5fd1",
+    "e011_rad_head_f3_s0.pt": "68a6fefc9870beab1fbc6cc4c6ed5ff45c196a16efb4db5ba62f5aabb75cfbfb",
+    "e011_rad_head_f3_s1.pt": "8db659b09092115dd53dcd878fddb6b742f5897bbbcbefd07e0c412177f37f58",
+    "e011_rad_head_f4_s0.pt": "a1ebc8b58cdc94f427cfca50dad875a9432abaaf1fa32618fdf3d0da63a4f488",
+    "e011_rad_head_f4_s1.pt": "1437c3808eb01f1c1b1112dff15bed23c76d71d27979e4b5879cc9627442eacd"
+  },
+  "checks": {
+    "checkpoint_count": 1,
+    "complete_oof": 1,
+    "fat_sat_slot_coverage": 1,
+    "five_folds": 1,
+    "gold58_macro_auc": 1,
+    "weak_macro_auc": 1,
+    "weak_target_floor": 1
+  },
+  "config": {
+    "architecture": "FoundationQueryHead",
+    "base_lr": 0.0003,
+    "encoder": "official RadImageNet ResNet50 frozen",
+    "encoder_sha256": "08629f7e7bd3e29b8ee9522ca3f65ce4d010a7ddf74f0ea3c7e3f3d0bbab0734",
+    "fat_suppressed_only": 1,
+    "feature_noise": 0.006,
+    "fold_sha256": "2c805d89ba5ad1f713d322daedad8c0768c8dc78c0a9938dc3a00daa8e02b8ab",
+    "gold_override": 1,
+    "image_size": 224,
+    "max_epochs": 20,
+    "normalization": "grayscale repeated RGB; x/127.5-1",
+    "patience": 4,
+    "planes": [
+      "Sagittal",
+      "Coronal",
+      "Axial"
+    ],
+    "seeds_per_fold": 2,
+    "slice_band": [
+      0.12,
+      0.88
+    ],
+    "slices_per_plane": 8,
+    "target_source": {
+      "ACL": "pilkwang",
+      "Baker's": "steven_v2",
+      "Contusion": "steven_v4",
+      "Effusion": "steven_v4",
+      "Fracture": "pilkwang",
+      "Lateral Meniscus": "steven_v4",
+      "Lateral OA": "steven_v4",
+      "MCL": "pilkwang",
+      "Medial Meniscus": "steven_v2",
+      "Medial OA": "steven_v4",
+      "PF OA": "steven_v4",
+      "Synovitis": "steven_v4"
+    },
+    "token_drop": 0.06,
+    "version": 1,
+    "weight_decay": 0.001
+  },
+  "config_hash": "54fe3632e9936949e4cbb49da95f0fe692a55fa67fc669b5c42a8028f66347ac",
+  "coverage": {
+    "available_slots": 12347,
+    "fold_counts": [
+      881,
+      834,
+      937,
+      885,
+      870
+    ],
+    "gold_studies": 58,
+    "possible_slots": 13221,
+    "studies": 4407
+  },
+  "decision": "GO_E012",
+  "elapsed_seconds": 2651.6215438842773,
+  "encoder": {
+    "license": "MIT",
+    "official_source": "https://github.com/BMEII-AI/RadImageNet",
+    "path": "/kaggle/input/datasets/chinnaphatkhun/radimagenet-resnet50-official-mit/ResNet50.pt",
+    "sha256": "08629f7e7bd3e29b8ee9522ca3f65ce4d010a7ddf74f0ea3c7e3f3d0bbab0734"
+  },
+  "experiment": "E011 self-trained RadImageNet query heads",
+  "fold_sha256": "2c805d89ba5ad1f713d322daedad8c0768c8dc78c0a9938dc3a00daa8e02b8ab",
+  "hardware": {
+    "capability": [
+      7,
+      5
+    ],
+    "gpu": "Tesla T4"
+  },
+  "labels": {
+    "files": {
+      "labels_llm_gpt56sol.csv": "/kaggle/input/datasets/lixin73/rsna-knee-llm-report-labels-sol56/labels_llm_gpt56sol.csv",
+      "llm_labels_v2.csv": "/kaggle/input/datasets/stevenleehans/rsna-knee-llm-report-labels/llm_labels_v2.csv",
+      "llm_labels_v4_blend.csv": "/kaggle/input/datasets/stevenleehans/rsna-knee-llm-report-labels/llm_labels_v4_blend.csv",
+      "report_labels_v2.csv": "/kaggle/input/datasets/pilkwang/rsna-knee-llm-labels/report_labels_v2.csv"
+    },
+    "official_complete_studies": 58,
+    "official_override_cells": 696,
+    "prevalence": {
+      "ACL": 0.29781004786491394,
+      "Baker's": 0.46417659521102905,
+      "Contusion": 0.26093360781669617,
+      "Effusion": 0.5839918255805969,
+      "Fracture": 0.24103964865207672,
+      "Lateral Meniscus": 0.22559402883052826,
+      "Lateral OA": 0.32375261187553406,
+      "MCL": 0.21185803413391113,
+      "Medial Meniscus": 0.5286427736282349,
+      "Medial OA": 0.40497633814811707,
+      "PF OA": 0.4816543757915497,
+      "Synovitis": 0.33983883261680603
+    },
+    "sha256": {
+      "labels_llm_gpt56sol.csv": "a79b05e609336811d51c97f9a48f00ea8004244a1a80fe886504a62bb39867ae",
+      "llm_labels_v2.csv": "3c082a987939528a55202028f655bd6f9dc5c9e28eff5058bbae7ef088a9f144",
+      "llm_labels_v4_blend.csv": "eb4c2b29e7e84adbb4b5ccee825ca20ade6a43dbe295f13be442d549e4f5dca4",
+      "report_labels_v2.csv": "6f704a7bdb2f894cc49445b19ba7c4378c3f548d3449e00361e10044bee40920"
+    },
+    "target_source": {
+      "ACL": "pilkwang",
+      "Baker's": "steven_v2",
+      "Contusion": "steven_v4",
+      "Effusion": "steven_v4",
+      "Fracture": "pilkwang",
+      "Lateral Meniscus": "steven_v4",
+      "Lateral OA": "steven_v4",
+      "MCL": "pilkwang",
+      "Medial Meniscus": "steven_v2",
+      "Medial OA": "steven_v4",
+      "PF OA": "steven_v4",
+      "Synovitis": "steven_v4"
+    }
+  },
+  "metrics": {
+    "gold58_macro_auc": 0.8447675257586167,
+    "gold58_target_auc": {
+      "ACL": 0.8737745098039216,
+      "Baker's": 0.9365942028985507,
+      "Contusion": 0.8812415654520918,
+      "Effusion": 0.8857142857142858,
+      "Fracture": 0.8416666666666666,
+      "Lateral Meniscus": 0.7875776397515528,
+      "Lateral OA": 0.793036750483559,
+      "MCL": 0.8117913832199546,
+      "Medial Meniscus": 0.8341346153846154,
+      "Medial OA": 0.9457364341085271,
+      "PF OA": 0.7992277992277992,
+      "Synovitis": 0.7467144563918757
+    },
+    "weak_macro_auc": 0.8338060719737844,
+    "weak_target_auc": {
+      "ACL": 0.8080800123165582,
+      "Baker's": 0.8019262608089475,
+      "Contusion": 0.859395469701701,
+      "Effusion": 0.8306072975457779,
+      "Fracture": 0.8675779719717626,
+      "Lateral Meniscus": 0.8255651981110791,
+      "Lateral OA": 0.8229930095706324,
+      "MCL": 0.7854195785739543,
+      "Medial Meniscus": 0.8561702091448484,
+      "Medial OA": 0.8571354220651055,
+      "PF OA": 0.8195364506298969,
+      "Synovitis": 0.8712659832451499
+    }
+  }
+}

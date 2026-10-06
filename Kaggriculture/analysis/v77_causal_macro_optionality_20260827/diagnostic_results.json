@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "status": "STOP_FAIL_BEFORE_IMPLEMENTATION",
+  "gate_manifest": {
+    "path": "analysis/v67_live_loss_audit_20260826/gate8_manifest_suggestion.json",
+    "sha256": "4e9268c02575ea9bb6b2e9aaff8714910bc2fed3d3d886a05355dbb47edc8be2"
+  },
+  "baseline": {
+    "path": "submissions/meta_v67_quantity_conserving_front_run_standalone/main.py",
+    "sha256": "300983ffa3da614ad5e7b9958c76104d9f613fcaf7169e69963ea634ee0a093b"
+  },
+  "rule": {
+    "identity_fields_used": [],
+    "fixed_cow_signature": {
+      "operation": "BUY_ANIMAL",
+      "animal": "COW",
+      "quantity": 4,
+      "minimum_step": 156,
+      "maximum_step": 159
+    },
+    "minimum_action_step": 216,
+    "minimum_milk_price": 160,
+    "requires_existing_v67_milk_sale": true,
+    "maximum_quantity": "shed MILK minus same-turn MILK pickup reserve"
+  },
+  "requirements": {
+    "target_rescues": 4,
+    "control_wins": 4,
+    "each_control_margin_delta_minimum": 0,
+    "sanitized_steps": 0,
+    "worst_margin_strictly_greater_than": 0
+  },
+  "results": [
+    {"group": "target", "episode_id": 100159725, "baseline_margin": -6859, "candidate_margin": -6859, "delta": 0, "sanitized_steps": 0, "events": []},
+    {"group": "target", "episode_id": 100184942, "baseline_margin": -5470, "candidate_margin": -5470, "delta": 0, "sanitized_steps": 0, "events": [{"step": 370, "price": 201, "scheduled": 4, "accelerated": 6}, {"step": 385, "price": 183, "scheduled": 3, "accelerated": 6}]},
+    {"group": "target", "episode_id": 100187229, "baseline_margin": -21061, "candidate_margin": -21061, "delta": 0, "sanitized_steps": 0, "events": []},
+    {"group": "target", "episode_id": 100196432, "baseline_margin": -2479, "candidate_margin": -2479, "delta": 0, "sanitized_steps": 0, "events": [{"step": 370, "price": 199, "scheduled": 4, "accelerated": 6}]},
+    {"group": "control", "episode_id": 100168881, "baseline_margin": 18079, "candidate_margin": 18079, "delta": 0, "sanitized_steps": 0, "events": []},
+    {"group": "control", "episode_id": 100182646, "baseline_margin": 9765, "candidate_margin": 10064, "delta": 299, "sanitized_steps": 0, "events_count": 17},
+    {"group": "control", "episode_id": 100143759, "baseline_margin": 23005, "candidate_margin": 23005, "delta": 0, "sanitized_steps": 0, "events": []},
+    {"group": "control", "episode_id": 100166584, "baseline_margin": 602, "candidate_margin": 602, "delta": 0, "sanitized_steps": 0, "events": []}
+  ],
+  "summary": {
+    "games": 8,
+    "wins": 4,
+    "target_rescues": 0,
+    "control_wins": 4,
+    "baseline_mean_margin": 1947.75,
+    "candidate_mean_margin": 1985.125,
+    "candidate_worst_margin": -21061,
+    "sanitized_steps": 0
+  },
+  "forbidden_data_used": false,
+  "candidate_written": false,
+  "uploaded": false
+}

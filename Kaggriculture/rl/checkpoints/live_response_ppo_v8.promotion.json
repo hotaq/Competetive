@@ -1,0 +1,118 @@
+{
+  "checkpoint": "rl/checkpoints/live_response_ppo_v8.npz",
+  "model": "live-response-contextual-ppo-v2",
+  "status": "live-league-challenger",
+  "promotion": false,
+  "live_league_gate": true,
+  "kaggle_facing_gate": false,
+  "submission_preflight_gate": true,
+  "submission_artifact": {
+    "path": "artifacts/dist/live_response_ppo_v8_kaggle.tar.gz",
+    "sha256": "58b1710a452158a764aac43d2208055019c59e66a9c75fb639df39ae39a0da0f",
+    "bytes": 596452,
+    "platform": "manylinux2014_x86_64",
+    "python_abi": "abi3-py311"
+  },
+  "local_kaggle_ab": {
+    "report": "rl/evaluations/kaggle_submission_v8_vs_v1_100games.json",
+    "seed_start": 480000,
+    "seed_end": 480049,
+    "games": 100,
+    "wins": 42,
+    "draws": 16,
+    "losses": 42,
+    "win_rate": 0.42,
+    "mean_money": 38126.98,
+    "p10_money": 22765.3,
+    "cvar10_money": 21893.3,
+    "worst_money": 21563.0,
+    "mean_margin": 0.0,
+    "p10_margin": -466.8,
+    "cvar10_margin": -825.3,
+    "worst_margin": -1342.0,
+    "paired_seed_gate": {
+      "better": 0,
+      "equal": 50,
+      "worse": 0,
+      "mean_margin": 0.0,
+      "worst_margin": 0.0
+    },
+    "p99_action_ms": 0.21400040946900822,
+    "max_action_ms": 31.88324999064207,
+    "all_games_completed": true,
+    "diagnostic_only": true,
+    "conclusion": "No head-to-head advantage over v1 after seat pairing; live or common-opponent evidence is still required."
+  },
+  "top1_tape_gate": {
+    "report": "rl/evaluations/live_response_ppo_v8_vs_top1_gate_24tapes.json",
+    "top1_team": "カワシギ",
+    "top1_submission_id": 55540317,
+    "top1_public_score": 3218.3,
+    "episodes": 24,
+    "wins": 0,
+    "draws": 0,
+    "losses": 24,
+    "mean_money": 34540.791666666664,
+    "worst_money": 17446.0,
+    "mean_margin": -86796.375,
+    "worst_margin": -117953.0,
+    "paired_vs_v1": {
+      "money_better": 13,
+      "money_equal": 0,
+      "money_worse": 11,
+      "mean_money_delta": 1464.625,
+      "margin_better": 16,
+      "margin_equal": 0,
+      "margin_worse": 8,
+      "mean_margin_delta": 8356.208333333334
+    },
+    "passed": false,
+    "diagnostic_only": true
+  },
+  "competition_champion": "rl/checkpoints/profile_ppo_v1.npz",
+  "training": {
+    "episodes": 216,
+    "behavior_cloning_accuracy": 1.0,
+    "selected_safe_iteration": 5,
+    "validation_teacher_accuracy": 1.0
+  },
+  "fresh_gate": {
+    "seeds": [
+      460000,
+      460001,
+      460002,
+      460003,
+      460004,
+      460005,
+      460006,
+      460007
+    ],
+    "games": 96,
+    "candidate": {
+      "wins": 84,
+      "draws": 8,
+      "losses": 4,
+      "mean_money": 54469.604166666664,
+      "worst_money": 25434.0,
+      "mean_margin": 26223.010416666668,
+      "worst_margin": -407.0
+    },
+    "cow4_baseline": {
+      "wins": 84,
+      "draws": 8,
+      "losses": 4,
+      "mean_money": 46483.541666666664,
+      "worst_money": 24613.0,
+      "mean_margin": 17634.197916666668,
+      "worst_margin": -407.0
+    },
+    "paired": {
+      "better": 62,
+      "equal": 32,
+      "worse": 2,
+      "mean_money_delta": 7986.0625,
+      "mean_margin_delta": 8588.8125
+    }
+  },
+  "reason_not_promoted": "The checkpoint passed the seat-balanced live profile league, but it has not passed a Kaggle-facing or live Top-1 opponent gate. Recorded Top-1 action tapes are open-loop and can become stale after counterfactual actions."
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "evaluated_at": "2026-08-23T15:14:50+07:00",
+  "competition": "kaggriculture",
+  "decision": "promote_safe_rollback",
+  "source_submission": {
+    "submission_id": 55693920,
+    "public_episodes": 82,
+    "policy": "V16-RC6.1"
+  },
+  "candidate": {
+    "agent_file": "submissions/meta_v16_rc5_robust_base_standalone/main.py",
+    "sha256": "f029fa0cb66a9eb509afbe44e3f59b800332d0419db91607183410e4089c4d19",
+    "policy": "V16-RC6.2 safe rollback"
+  },
+  "paired_counterfactual_replay": {
+    "candidate": {
+      "games": 82,
+      "wins": 49,
+      "losses": 33,
+      "mean_margin": 673.2926829268292,
+      "worst_margin": -31154.0,
+      "cvar10_margin": -18211.666666666668,
+      "mean_money": 83007.78048780488,
+      "sanitized_steps": 24334,
+      "market_sanitized_steps": 2291
+    },
+    "submitted_rc6_1": {
+      "games": 82,
+      "wins": 49,
+      "losses": 33,
+      "mean_margin": 671.9756097560976,
+      "worst_margin": -31154.0,
+      "cvar10_margin": -18211.666666666668,
+      "mean_money": 83004.36585365854,
+      "sanitized_steps": 24358,
+      "market_sanitized_steps": 2317
+    },
+    "delta_candidate_minus_submitted": {
+      "wins": 0,
+      "mean_margin": 1.3170731707316,
+      "worst_margin": 0.0,
+      "cvar10_margin": 0.0,
+      "sanitized_steps": -24,
+      "market_sanitized_steps": -26
+    }
+  },
+  "rejected_alternatives": {
+    "unconditional_day17_day19_liquidation": "mean margin decreased on the recent 12-replay screen",
+    "oversized_sell_repair": "reduced every recent replay margin by roughly 1000 to 3000",
+    "midgame_v16_v12_router": "state and geometry mismatch produced losses below -100000",
+    "v16_v12_component_fallback": "cross-policy action components were incoherent and lost all 82 screens",
+    "seat_router": "improved mean and worst-case but reduced broad replay wins from 49 to 48 and live wins versus V12 from 18 to 11",
+    "portfolio_specialists": "V12, temporal, staged, and robust specialists improved the newest 12 games but all lost materially more games on the independent older 70"
+  },
+  "limitations": [
+    "Replay evaluation fixes the opponent action tape, so the opponent cannot react to the counterfactual candidate state.",
+    "The rollback preserves win count and tail metrics; its measured gain is deliberately small.",
+    "The remaining losses are mainly production-timing and geometry failures of the open-loop tape, not a safe market-overlay defect."
+  ]
+}

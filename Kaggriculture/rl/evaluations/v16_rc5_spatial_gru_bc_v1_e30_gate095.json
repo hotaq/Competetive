@@ -1,0 +1,74 @@
+{
+  "checkpoint": "/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/rl/checkpoints/v16_rc5_spatial_gru_bc_v1_e30.npz",
+  "checkpoint_sha256": "3788f880810a8db1901d5e4533a814f3a1736ed7d3dda307e963768c64496830",
+  "confidence_threshold": 0.95,
+  "games": [
+    {
+      "action_difference_rate": 0.0027816411682892906,
+      "candidate_money": 136180.0,
+      "candidate_seat": 0,
+      "farmer_acceptance_rate": 0.23783031988873435,
+      "hand_acceptance_rate": 0.017974130690408197,
+      "margin": 124336.0,
+      "market_acceptance_rate": 0.14464534075104313,
+      "opponent_money": 11844.0,
+      "seed": 621000
+    },
+    {
+      "action_difference_rate": 0.0027816411682892906,
+      "candidate_money": 161142.0,
+      "candidate_seat": 1,
+      "farmer_acceptance_rate": 0.24478442280945759,
+      "hand_acceptance_rate": 0.0176381656307744,
+      "margin": 149298.0,
+      "market_acceptance_rate": 0.1404728789986092,
+      "opponent_money": 11844.0,
+      "seed": 621000
+    },
+    {
+      "action_difference_rate": 0.004172461752433936,
+      "candidate_money": 123458.0,
+      "candidate_seat": 0,
+      "farmer_acceptance_rate": 0.2545201668984701,
+      "hand_acceptance_rate": 0.018982025869309593,
+      "margin": 111614.0,
+      "market_acceptance_rate": 0.14464534075104313,
+      "opponent_money": 11844.0,
+      "seed": 621001
+    },
+    {
+      "action_difference_rate": 0.0027816411682892906,
+      "candidate_money": 115916.0,
+      "candidate_seat": 1,
+      "farmer_acceptance_rate": 0.25034770514603616,
+      "hand_acceptance_rate": 0.0176381656307744,
+      "margin": 104072.0,
+      "market_acceptance_rate": 0.14464534075104313,
+      "opponent_money": 11844.0,
+      "seed": 621001
+    }
+  ],
+  "opponent": {
+    "crop": "MELON",
+    "plots": 6
+  },
+  "schema_version": 1,
+  "summary": {
+    "draws": 0,
+    "games": 4,
+    "losses": 0,
+    "mean_action_difference_rate": 0.003129346314325452,
+    "mean_candidate_money": 134174.0,
+    "mean_farmer_acceptance_rate": 0.24687065368567457,
+    "mean_hand_acceptance_rate": 0.01805812195531665,
+    "mean_margin": 122330.0,
+    "mean_market_acceptance_rate": 0.14360222531293465,
+    "median_candidate_money": 129819.0,
+    "median_margin": 117975.0,
+    "wins": 4,
+    "worst_candidate_money": 115916.0,
+    "worst_margin": 104072.0
+  },
+  "teacher": "/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/submissions/meta_v16_rc5_robust_base_standalone/main.py",
+  "teacher_sha256": "f029fa0cb66a9eb509afbe44e3f59b800332d0419db91607183410e4089c4d19"
+}

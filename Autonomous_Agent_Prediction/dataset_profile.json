@@ -1,0 +1,130 @@
+{
+  "allowed_recipes": [
+    "mixed-safe",
+    "tiny-safe",
+    "numeric-boost",
+    "categorical-native",
+    "ordinal-native",
+    "missing-robust"
+  ],
+  "default_recipe": "mixed-safe",
+  "drift": {
+    "max_score": 0.01609,
+    "mean_score": 0.005977,
+    "top_columns": [
+      {
+        "name": "feature_4",
+        "score": 0.01609
+      },
+      {
+        "name": "feature_11",
+        "score": 0.014027
+      },
+      {
+        "name": "feature_5",
+        "score": 0.011851
+      },
+      {
+        "name": "feature_0",
+        "score": 0.010759
+      },
+      {
+        "name": "feature_6",
+        "score": 0.0072
+      },
+      {
+        "name": "feature_8",
+        "score": 0.004468
+      },
+      {
+        "name": "feature_7",
+        "score": 0.002423
+      },
+      {
+        "name": "feature_9",
+        "score": 0.002106
+      }
+    ]
+  },
+  "duplicates": {
+    "test_feature_row_rate": 0.0,
+    "train_feature_row_rate": 0.0
+  },
+  "flags": {
+    "categorical_heavy": false,
+    "missing_heavy": false,
+    "numeric_heavy": false,
+    "ordinal_heavy": false,
+    "shifted": false,
+    "tiny": false
+  },
+  "missingness": {
+    "max_column_rate": 0.220499,
+    "overall_rate": 0.075177,
+    "top_columns": [
+      {
+        "name": "feature_9",
+        "rate": 0.220499
+      },
+      {
+        "name": "feature_5",
+        "rate": 0.21749
+      },
+      {
+        "name": "feature_2",
+        "rate": 0.19429
+      },
+      {
+        "name": "feature_4",
+        "rate": 0.15003
+      },
+      {
+        "name": "feature_11",
+        "rate": 0.11981
+      },
+      {
+        "name": "feature_0",
+        "rate": 0.0
+      },
+      {
+        "name": "feature_1",
+        "rate": 0.0
+      },
+      {
+        "name": "feature_3",
+        "rate": 0.0
+      }
+    ]
+  },
+  "profile_version": 1,
+  "schema": {
+    "cardinality_max": 14957,
+    "categorical_columns": [
+      "feature_0",
+      "feature_4",
+      "feature_6",
+      "feature_8",
+      "feature_11"
+    ],
+    "categorical_count": 5,
+    "id_column": "row_id",
+    "numeric_count": 7,
+    "ordinal_like_columns": [],
+    "ordinal_like_count": 0,
+    "target_column": "target"
+  },
+  "shape": {
+    "feature_count": 12,
+    "test_rows": 10000,
+    "train_rows": 14957
+  },
+  "signal_proxy": {
+    "columns_evaluated": 12,
+    "max_mutual_information": 0.041393,
+    "strongest_column": "feature_3"
+  },
+  "target": {
+    "minority_count": 7440,
+    "positive_rate": 0.497426
+  }
+}

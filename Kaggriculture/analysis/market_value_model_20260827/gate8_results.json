@@ -1,0 +1,1979 @@
+{
+  "analysis": "observable_market_livestock_marginal_value",
+  "cases": [
+    {
+      "agent_seat": 0,
+      "baseline_margin": -6859.0,
+      "category": "target_loss",
+      "episode_id": 100159725,
+      "observable_projection": {
+        "common_fertilizer_units_cancel_in_comparison": true,
+        "cow": {
+          "animal": "COW",
+          "break_even_shadow_value_per_required_unit_action": -20.555556,
+          "break_even_shadow_value_with_full_fertilizer_per_action": 8.046875,
+          "care_actions": 18,
+          "empty_matching_structure_at_observation": false,
+          "feasible_same_turn_buy_and_place": false,
+          "feed_actions": 18,
+          "feed_opportunity_cost": 764.0,
+          "fertilizer_snapshot_liquidation": 1440.0,
+          "forced_full_liquidation_portfolio_delta": 21.0,
+          "harvest_actions": 6,
+          "marginal_product_revenue": 239.0,
+          "max_fertilizer_units": 19,
+          "minimum_logistics_actions": 3,
+          "net_before_labor_and_fertilizer": -925.0,
+          "net_with_full_fertilizer_snapshot_before_labor": 515.0,
+          "placement_day": 10,
+          "placement_step": 248,
+          "product": "MILK",
+          "product_events": [
+            {
+              "refresh_day": 18,
+              "sale_step": 433,
+              "units": 6
+            },
+            {
+              "refresh_day": 20,
+              "sale_step": 481,
+              "units": 3
+            },
+            {
+              "refresh_day": 22,
+              "sale_step": 529,
+              "units": 3
+            },
+            {
+              "refresh_day": 24,
+              "sale_step": 577,
+              "units": 3
+            },
+            {
+              "refresh_day": 26,
+              "sale_step": 625,
+              "units": 3
+            },
+            {
+              "refresh_day": 28,
+              "sale_step": 673,
+              "units": 3
+            }
+          ],
+          "product_units": 21,
+          "projection_assumptions": [
+            "daily feed and care through the final useful product refresh",
+            "immediate harvest and sale with a two-step post-refresh lag",
+            "currently visible animals on both farms receive maximum service and sell output",
+            "currently unlocked shops are exact; future uniform-with-replacement shops use expected demand",
+            "no identity, episode, hidden opponent inventory, future action, or learned threshold input",
+            "feed is charged at projected WHEAT opportunity value; public future crop sales are omitted",
+            "fertilizer option value and labor burden are reported separately"
+          ],
+          "purchase_cost": 400,
+          "start_inventory": {
+            "FERTILIZER": 10112,
+            "MILK": 9992,
+            "WHEAT": 9856
+          },
+          "start_prices": {
+            "FERTILIZER": 78,
+            "MILK": 185,
+            "WHEAT": 37
+          },
+          "total_required_actions_with_full_fertilizer": 64,
+          "visible_live_animals": {
+            "0": {
+              "COW": 9,
+              "GOOSE": 0,
+              "SHEEP": 4
+            },
+            "1": {
+              "COW": 7,
+              "GOOSE": 0,
+              "SHEEP": 4
+            }
+          }
+        },
+        "preferred_by_mechanical_cash_value": "SHEEP",
+        "sheep": {
+          "animal": "SHEEP",
+          "break_even_shadow_value_per_required_unit_action": 91.545455,
+          "break_even_shadow_value_with_full_fertilizer_per_action": 86.793651,
+          "care_actions": 18,
+          "empty_matching_structure_at_observation": false,
+          "feasible_same_turn_buy_and_place": false,
+          "feed_actions": 18,
+          "feed_opportunity_cost": 764.0,
+          "fertilizer_snapshot_liquidation": 1440.0,
+          "forced_full_liquidation_portfolio_delta": 4598.0,
+          "harvest_actions": 5,
+          "marginal_product_revenue": 5292.0,
+          "max_fertilizer_units": 19,
+          "minimum_logistics_actions": 3,
+          "net_before_labor_and_fertilizer": 4028.0,
+          "net_with_full_fertilizer_snapshot_before_labor": 5468.0,
+          "placement_day": 10,
+          "placement_step": 248,
+          "product": "WOOL",
+          "product_events": [
+            {
+              "refresh_day": 16,
+              "sale_step": 385,
+              "units": 6
+            },
+            {
+              "refresh_day": 19,
+              "sale_step": 457,
+              "units": 4
+            },
+            {
+              "refresh_day": 22,
+              "sale_step": 529,
+              "units": 4
+            },
+            {
+              "refresh_day": 25,
+              "sale_step": 601,
+              "units": 4
+            },
+            {
+              "refresh_day": 28,
+              "sale_step": 673,
+              "units": 4
+            }
+          ],
+          "product_units": 22,
+          "projection_assumptions": [
+            "daily feed and care through the final useful product refresh",
+            "immediate harvest and sale with a two-step post-refresh lag",
+            "currently visible animals on both farms receive maximum service and sell output",
+            "currently unlocked shops are exact; future uniform-with-replacement shops use expected demand",
+            "no identity, episode, hidden opponent inventory, future action, or learned threshold input",
+            "feed is charged at projected WHEAT opportunity value; public future crop sales are omitted",
+            "fertilizer option value and labor burden are reported separately"
+          ],
+          "purchase_cost": 500,
+          "start_inventory": {
+            "FERTILIZER": 10112,
+            "WHEAT": 9856,
+            "WOOL": 10046
+          },
+          "start_prices": {
+            "FERTILIZER": 78,
+            "WHEAT": 37,
+            "WOOL": 77
+          },
+          "total_required_actions_with_full_fertilizer": 63,
+          "visible_live_animals": {
+            "0": {
+              "COW": 9,
+              "GOOSE": 0,
+              "SHEEP": 4
+            },
+            "1": {
+              "COW": 7,
+              "GOOSE": 0,
+              "SHEEP": 4
+            }
+          }
+        },
+        "sheep_minus_cow_net_before_labor_and_fertilizer": 4953.0
+      },
+      "realized_price_path_sanity_only": {
+        "cow": {
+          "feed_opportunity_cost": 797.0,
+          "marginal_product_revenue": 91.0,
+          "net_before_labor_and_fertilizer": -1106.0
+        },
+        "preferred": "SHEEP",
+        "sheep": {
+          "feed_opportunity_cost": 797.0,
+          "marginal_product_revenue": 4711.0,
+          "net_before_labor_and_fertilizer": 3414.0
+        },
+        "sheep_minus_cow_net_before_labor_and_fertilizer": 4520.0,
+        "warning": "ex-post replay prices; audit sanity only, never a policy input"
+      },
+      "replay_sha256": "2016357995951b4ed48f5ffd54d70c9ad9d1b224adff7a33943c3f8e592fd243",
+      "step248": {
+        "actual_candidate_buy_animal_orders": {
+          "COW": 2
+        },
+        "day": 10,
+        "empty_pasture": false,
+        "farm_money": [
+          2793.0,
+          461.0
+        ],
+        "hour": 8,
+        "inventory": {
+          "FERTILIZER": 10112,
+          "MILK": 9992,
+          "WHEAT": 9856,
+          "WOOL": 10046
+        },
+        "prices": {
+          "FERTILIZER": 78,
+          "MILK": 185,
+          "WHEAT": 37,
+          "WOOL": 77
+        },
+        "replay_action_record_index": 249,
+        "shops": [
+          "BAKERY",
+          "FARMERS_MARKET",
+          "YARN_STORE"
+        ],
+        "visible_live_animals": {
+          "0": {
+            "COW": 9,
+            "GOOSE": 0,
+            "SHEEP": 4
+          },
+          "1": {
+            "COW": 7,
+            "GOOSE": 0,
+            "SHEEP": 4
+          }
+        }
+      }
+    },
+    {
+      "agent_seat": 1,
+      "baseline_margin": -5470.0,
+      "category": "target_loss",
+      "episode_id": 100184942,
+      "observable_projection": {
+        "common_fertilizer_units_cancel_in_comparison": true,
+        "cow": {
+          "animal": "COW",
+          "break_even_shadow_value_per_required_unit_action": -15.844444,
+          "break_even_shadow_value_with_full_fertilizer_per_action": 11.71875,
+          "care_actions": 18,
+          "empty_matching_structure_at_observation": false,
+          "feasible_same_turn_buy_and_place": false,
+          "feed_actions": 18,
+          "feed_opportunity_cost": 675.0,
+          "fertilizer_snapshot_liquidation": 1463.0,
+          "forced_full_liquidation_portfolio_delta": -221.0,
+          "harvest_actions": 6,
+          "marginal_product_revenue": 362.0,
+          "max_fertilizer_units": 19,
+          "minimum_logistics_actions": 3,
+          "net_before_labor_and_fertilizer": -713.0,
+          "net_with_full_fertilizer_snapshot_before_labor": 750.0,
+          "placement_day": 10,
+          "placement_step": 248,
+          "product": "MILK",
+          "product_events": [
+            {
+              "refresh_day": 18,
+              "sale_step": 433,
+              "units": 6
+            },
+            {
+              "refresh_day": 20,
+              "sale_step": 481,
+              "units": 3
+            },
+            {
+              "refresh_day": 22,
+              "sale_step": 529,
+              "units": 3
+            },
+            {
+              "refresh_day": 24,
+              "sale_step": 577,
+              "units": 3
+            },
+            {
+              "refresh_day": 26,
+              "sale_step": 625,
+              "units": 3
+            },
+            {
+              "refresh_day": 28,
+              "sale_step": 673,
+              "units": 3
+            }
+          ],
+          "product_units": 21,
+          "projection_assumptions": [
+            "daily feed and care through the final useful product refresh",
+            "immediate harvest and sale with a two-step post-refresh lag",
+            "currently visible animals on both farms receive maximum service and sell output",
+            "currently unlocked shops are exact; future uniform-with-replacement shops use expected demand",
+            "no identity, episode, hidden opponent inventory, future action, or learned threshold input",
+            "feed is charged at projected WHEAT opportunity value; public future crop sales are omitted",
+            "fertilizer option value and labor burden are reported separately"
+          ],
+          "purchase_cost": 400,
+          "start_inventory": {
+            "FERTILIZER": 10106,
+            "MILK": 9975,
+            "WHEAT": 9909
+          },
+          "start_prices": {
+            "FERTILIZER": 79,
+            "MILK": 203,
+            "WHEAT": 35
+          },
+          "total_required_actions_with_full_fertilizer": 64,
+          "visible_live_animals": {
+            "0": {
+              "COW": 6,
+              "GOOSE": 0,
+              "SHEEP": 6
+            },
+            "1": {
+              "COW": 9,
+              "GOOSE": 0,
+              "SHEEP": 4
+            }
+          }
+        },
+        "preferred_by_mechanical_cash_value": "SHEEP",
+        "sheep": {
+          "animal": "SHEEP",
+          "break_even_shadow_value_per_required_unit_action": 91.863636,
+          "break_even_shadow_value_with_full_fertilizer_per_action": 87.380952,
+          "care_actions": 18,
+          "empty_matching_structure_at_observation": false,
+          "feasible_same_turn_buy_and_place": false,
+          "feed_actions": 18,
+          "feed_opportunity_cost": 675.0,
+          "fertilizer_snapshot_liquidation": 1463.0,
+          "forced_full_liquidation_portfolio_delta": 4296.0,
+          "harvest_actions": 5,
+          "marginal_product_revenue": 5217.0,
+          "max_fertilizer_units": 19,
+          "minimum_logistics_actions": 3,
+          "net_before_labor_and_fertilizer": 4042.0,
+          "net_with_full_fertilizer_snapshot_before_labor": 5505.0,
+          "placement_day": 10,
+          "placement_step": 248,
+          "product": "WOOL",
+          "product_events": [
+            {
+              "refresh_day": 16,
+              "sale_step": 385,
+              "units": 6
+            },
+            {
+              "refresh_day": 19,
+              "sale_step": 457,
+              "units": 4
+            },
+            {
+              "refresh_day": 22,
+              "sale_step": 529,
+              "units": 4
+            },
+            {
+              "refresh_day": 25,
+              "sale_step": 601,
+              "units": 4
+            },
+            {
+              "refresh_day": 28,
+              "sale_step": 673,
+              "units": 4
+            }
+          ],
+          "product_units": 22,
+          "projection_assumptions": [
+            "daily feed and care through the final useful product refresh",
+            "immediate harvest and sale with a two-step post-refresh lag",
+            "currently visible animals on both farms receive maximum service and sell output",
+            "currently unlocked shops are exact; future uniform-with-replacement shops use expected demand",
+            "no identity, episode, hidden opponent inventory, future action, or learned threshold input",
+            "feed is charged at projected WHEAT opportunity value; public future crop sales are omitted",
+            "fertilizer option value and labor burden are reported separately"
+          ],
+          "purchase_cost": 500,
+          "start_inventory": {
+            "FERTILIZER": 10106,
+            "WHEAT": 9909,
+            "WOOL": 10031
+          },
+          "start_prices": {
+            "FERTILIZER": 79,
+            "WHEAT": 35,
+            "WOOL": 144
+          },
+          "total_required_actions_with_full_fertilizer": 63,
+          "visible_live_animals": {
+            "0": {
+              "COW": 6,
+              "GOOSE": 0,
+              "SHEEP": 6
+            },
+            "1": {
+              "COW": 9,
+              "GOOSE": 0,
+              "SHEEP": 4
+            }
+          }
+        },
+        "sheep_minus_cow_net_before_labor_and_fertilizer": 4755.0
+      },
+      "realized_price_path_sanity_only": {
+        "cow": {
+          "feed_opportunity_cost": 712.0,
+          "marginal_product_revenue": 1008.0,
+          "net_before_labor_and_fertilizer": -104.0
+        },
+        "preferred": "SHEEP",
+        "sheep": {
+          "feed_opportunity_cost": 712.0,
+          "marginal_product_revenue": 4765.0,
+          "net_before_labor_and_fertilizer": 3553.0
+        },
+        "sheep_minus_cow_net_before_labor_and_fertilizer": 3657.0,
+        "warning": "ex-post replay prices; audit sanity only, never a policy input"
+      },
+      "replay_sha256": "753383925b79cdcebbb8214c67afaf99fa5ff6d3337ecceebce5d4de4be9dd07",
+      "step248": {
+        "actual_candidate_buy_animal_orders": {
+          "COW": 2
+        },
+        "day": 10,
+        "empty_pasture": false,
+        "farm_money": [
+          1938.0,
+          2468.0
+        ],
+        "hour": 8,
+        "inventory": {
+          "FERTILIZER": 10106,
+          "MILK": 9975,
+          "WHEAT": 9909,
+          "WOOL": 10031
+        },
+        "prices": {
+          "FERTILIZER": 79,
+          "MILK": 203,
+          "WHEAT": 35,
+          "WOOL": 144
+        },
+        "replay_action_record_index": 249,
+        "shops": [
+          "PET_CAFE",
+          "SMOOTHIE_SHOP",
+          "YARN_STORE"
+        ],
+        "visible_live_animals": {
+          "0": {
+            "COW": 6,
+            "GOOSE": 0,
+            "SHEEP": 6
+          },
+          "1": {
+            "COW": 9,
+            "GOOSE": 0,
+            "SHEEP": 4
+          }
+        }
+      }
+    },
+    {
+      "agent_seat": 0,
+      "baseline_margin": -21061.0,
+      "category": "target_loss",
+      "episode_id": 100187229,
+      "observable_projection": {
+        "common_fertilizer_units_cancel_in_comparison": true,
+        "cow": {
+          "animal": "COW",
+          "break_even_shadow_value_per_required_unit_action": -19.666667,
+          "break_even_shadow_value_with_full_fertilizer_per_action": 9.625,
+          "care_actions": 18,
+          "empty_matching_structure_at_observation": false,
+          "feasible_same_turn_buy_and_place": false,
+          "feed_actions": 18,
+          "feed_opportunity_cost": 714.0,
+          "fertilizer_snapshot_liquidation": 1501.0,
+          "forced_full_liquidation_portfolio_delta": 21.0,
+          "harvest_actions": 6,
+          "marginal_product_revenue": 229.0,
+          "max_fertilizer_units": 19,
+          "minimum_logistics_actions": 3,
+          "net_before_labor_and_fertilizer": -885.0,
+          "net_with_full_fertilizer_snapshot_before_labor": 616.0,
+          "placement_day": 10,
+          "placement_step": 248,
+          "product": "MILK",
+          "product_events": [
+            {
+              "refresh_day": 18,
+              "sale_step": 433,
+              "units": 6
+            },
+            {
+              "refresh_day": 20,
+              "sale_step": 481,
+              "units": 3
+            },
+            {
+              "refresh_day": 22,
+              "sale_step": 529,
+              "units": 3
+            },
+            {
+              "refresh_day": 24,
+              "sale_step": 577,
+              "units": 3
+            },
+            {
+              "refresh_day": 26,
+              "sale_step": 625,
+              "units": 3
+            },
+            {
+              "refresh_day": 28,
+              "sale_step": 673,
+              "units": 3
+            }
+          ],
+          "product_units": 21,
+          "projection_assumptions": [
+            "daily feed and care through the final useful product refresh",
+            "immediate harvest and sale with a two-step post-refresh lag",
+            "currently visible animals on both farms receive maximum service and sell output",
+            "currently unlocked shops are exact; future uniform-with-replacement shops use expected demand",
+            "no identity, episode, hidden opponent inventory, future action, or learned threshold input",
+            "feed is charged at projected WHEAT opportunity value; public future crop sales are omitted",
+            "fertilizer option value and labor burden are reported separately"
+          ],
+          "purchase_cost": 400,
+          "start_inventory": {
+            "FERTILIZER": 10096,
+            "MILK": 10001,
+            "WHEAT": 9897
+          },
+          "start_prices": {
+            "FERTILIZER": 81,
+            "MILK": 158,
+            "WHEAT": 35
+          },
+          "total_required_actions_with_full_fertilizer": 64,
+          "visible_live_animals": {
+            "0": {
+              "COW": 9,
+              "GOOSE": 0,
+              "SHEEP": 4
+            },
+            "1": {
+              "COW": 6,
+              "GOOSE": 0,
+              "SHEEP": 6
+            }
+          }
+        },
+        "preferred_by_mechanical_cash_value": "SHEEP",
+        "sheep": {
+          "animal": "SHEEP",
+          "break_even_shadow_value_per_required_unit_action": 92.659091,
+          "break_even_shadow_value_with_full_fertilizer_per_action": 88.539683,
+          "care_actions": 18,
+          "empty_matching_structure_at_observation": false,
+          "feasible_same_turn_buy_and_place": false,
+          "feed_actions": 18,
+          "feed_opportunity_cost": 714.0,
+          "fertilizer_snapshot_liquidation": 1501.0,
+          "forced_full_liquidation_portfolio_delta": 4991.0,
+          "harvest_actions": 5,
+          "marginal_product_revenue": 5291.0,
+          "max_fertilizer_units": 19,
+          "minimum_logistics_actions": 3,
+          "net_before_labor_and_fertilizer": 4077.0,
+          "net_with_full_fertilizer_snapshot_before_labor": 5578.0,
+          "placement_day": 10,
+          "placement_step": 248,
+          "product": "WOOL",
+          "product_events": [
+            {
+              "refresh_day": 16,
+              "sale_step": 385,
+              "units": 6
+            },
+            {
+              "refresh_day": 19,
+              "sale_step": 457,
+              "units": 4
+            },
+            {
+              "refresh_day": 22,
+              "sale_step": 529,
+              "units": 4
+            },
+            {
+              "refresh_day": 25,
+              "sale_step": 601,
+              "units": 4
+            },
+            {
+              "refresh_day": 28,
+              "sale_step": 673,
+              "units": 4
+            }
+          ],
+          "product_units": 22,
+          "projection_assumptions": [
+            "daily feed and care through the final useful product refresh",
+            "immediate harvest and sale with a two-step post-refresh lag",
+            "currently visible animals on both farms receive maximum service and sell output",
+            "currently unlocked shops are exact; future uniform-with-replacement shops use expected demand",
+            "no identity, episode, hidden opponent inventory, future action, or learned threshold input",
+            "feed is charged at projected WHEAT opportunity value; public future crop sales are omitted",
+            "fertilizer option value and labor burden are reported separately"
+          ],
+          "purchase_cost": 500,
+          "start_inventory": {
+            "FERTILIZER": 10096,
+            "WHEAT": 9897,
+            "WOOL": 9995
+          },
+          "start_prices": {
+            "FERTILIZER": 81,
+            "WHEAT": 35,
+            "WOOL": 215
+          },
+          "total_required_actions_with_full_fertilizer": 63,
+          "visible_live_animals": {
+            "0": {
+              "COW": 9,
+              "GOOSE": 0,
+              "SHEEP": 4
+            },
+            "1": {
+              "COW": 6,
+              "GOOSE": 0,
+              "SHEEP": 6
+            }
+          }
+        },
+        "sheep_minus_cow_net_before_labor_and_fertilizer": 4962.0
+      },
+      "realized_price_path_sanity_only": {
+        "cow": {
+          "feed_opportunity_cost": 742.0,
+          "marginal_product_revenue": 93.0,
+          "net_before_labor_and_fertilizer": -1049.0
+        },
+        "preferred": "SHEEP",
+        "sheep": {
+          "feed_opportunity_cost": 742.0,
+          "marginal_product_revenue": 5167.0,
+          "net_before_labor_and_fertilizer": 3925.0
+        },
+        "sheep_minus_cow_net_before_labor_and_fertilizer": 4974.0,
+        "warning": "ex-post replay prices; audit sanity only, never a policy input"
+      },
+      "replay_sha256": "0fc0e6ee2ee30f900f37781bb150aba2ac685b59ce49e70b12d961e536f0f24c",
+      "step248": {
+        "actual_candidate_buy_animal_orders": {
+          "COW": 2
+        },
+        "day": 10,
+        "empty_pasture": false,
+        "farm_money": [
+          5545.0,
+          1683.0
+        ],
+        "hour": 8,
+        "inventory": {
+          "FERTILIZER": 10096,
+          "MILK": 10001,
+          "WHEAT": 9897,
+          "WOOL": 9995
+        },
+        "prices": {
+          "FERTILIZER": 81,
+          "MILK": 158,
+          "WHEAT": 35,
+          "WOOL": 215
+        },
+        "replay_action_record_index": 249,
+        "shops": [
+          "PET_CAFE",
+          "YARN_STORE",
+          "BRUNCH_SPOT"
+        ],
+        "visible_live_animals": {
+          "0": {
+            "COW": 9,
+            "GOOSE": 0,
+            "SHEEP": 4
+          },
+          "1": {
+            "COW": 6,
+            "GOOSE": 0,
+            "SHEEP": 6
+          }
+        }
+      }
+    },
+    {
+      "agent_seat": 1,
+      "baseline_margin": -2479.0,
+      "category": "target_loss",
+      "episode_id": 100196432,
+      "observable_projection": {
+        "common_fertilizer_units_cancel_in_comparison": true,
+        "cow": {
+          "animal": "COW",
+          "break_even_shadow_value_per_required_unit_action": -18.377778,
+          "break_even_shadow_value_with_full_fertilizer_per_action": 9.578125,
+          "care_actions": 18,
+          "empty_matching_structure_at_observation": false,
+          "feasible_same_turn_buy_and_place": false,
+          "feed_actions": 18,
+          "feed_opportunity_cost": 765.0,
+          "fertilizer_snapshot_liquidation": 1440.0,
+          "forced_full_liquidation_portfolio_delta": -126.0,
+          "harvest_actions": 6,
+          "marginal_product_revenue": 338.0,
+          "max_fertilizer_units": 19,
+          "minimum_logistics_actions": 3,
+          "net_before_labor_and_fertilizer": -827.0,
+          "net_with_full_fertilizer_snapshot_before_labor": 613.0,
+          "placement_day": 10,
+          "placement_step": 248,
+          "product": "MILK",
+          "product_events": [
+            {
+              "refresh_day": 18,
+              "sale_step": 433,
+              "units": 6
+            },
+            {
+              "refresh_day": 20,
+              "sale_step": 481,
+              "units": 3
+            },
+            {
+              "refresh_day": 22,
+              "sale_step": 529,
+              "units": 3
+            },
+            {
+              "refresh_day": 24,
+              "sale_step": 577,
+              "units": 3
+            },
+            {
+              "refresh_day": 26,
+              "sale_step": 625,
+              "units": 3
+            },
+            {
+              "refresh_day": 28,
+              "sale_step": 673,
+              "units": 3
+            }
+          ],
+          "product_units": 21,
+          "projection_assumptions": [
+            "daily feed and care through the final useful product refresh",
+            "immediate harvest and sale with a two-step post-refresh lag",
+            "currently visible animals on both farms receive maximum service and sell output",
+            "currently unlocked shops are exact; future uniform-with-replacement shops use expected demand",
+            "no identity, episode, hidden opponent inventory, future action, or learned threshold input",
+            "feed is charged at projected WHEAT opportunity value; public future crop sales are omitted",
+            "fertilizer option value and labor burden are reported separately"
+          ],
+          "purchase_cost": 400,
+          "start_inventory": {
+            "FERTILIZER": 10112,
+            "MILK": 9987,
+            "WHEAT": 9855
+          },
+          "start_prices": {
+            "FERTILIZER": 78,
+            "MILK": 191,
+            "WHEAT": 37
+          },
+          "total_required_actions_with_full_fertilizer": 64,
+          "visible_live_animals": {
+            "0": {
+              "COW": 7,
+              "GOOSE": 0,
+              "SHEEP": 4
+            },
+            "1": {
+              "COW": 9,
+              "GOOSE": 0,
+              "SHEEP": 4
+            }
+          }
+        },
+        "preferred_by_mechanical_cash_value": "SHEEP",
+        "sheep": {
+          "animal": "SHEEP",
+          "break_even_shadow_value_per_required_unit_action": 0.386364,
+          "break_even_shadow_value_with_full_fertilizer_per_action": 23.126984,
+          "care_actions": 18,
+          "empty_matching_structure_at_observation": false,
+          "feasible_same_turn_buy_and_place": false,
+          "feed_actions": 18,
+          "feed_opportunity_cost": 765.0,
+          "fertilizer_snapshot_liquidation": 1440.0,
+          "forced_full_liquidation_portfolio_delta": 22.0,
+          "harvest_actions": 5,
+          "marginal_product_revenue": 1282.0,
+          "max_fertilizer_units": 19,
+          "minimum_logistics_actions": 3,
+          "net_before_labor_and_fertilizer": 17.0,
+          "net_with_full_fertilizer_snapshot_before_labor": 1457.0,
+          "placement_day": 10,
+          "placement_step": 248,
+          "product": "WOOL",
+          "product_events": [
+            {
+              "refresh_day": 16,
+              "sale_step": 385,
+              "units": 6
+            },
+            {
+              "refresh_day": 19,
+              "sale_step": 457,
+              "units": 4
+            },
+            {
+              "refresh_day": 22,
+              "sale_step": 529,
+              "units": 4
+            },
+            {
+              "refresh_day": 25,
+              "sale_step": 601,
+              "units": 4
+            },
+            {
+              "refresh_day": 28,
+              "sale_step": 673,
+              "units": 4
+            }
+          ],
+          "product_units": 22,
+          "projection_assumptions": [
+            "daily feed and care through the final useful product refresh",
+            "immediate harvest and sale with a two-step post-refresh lag",
+            "currently visible animals on both farms receive maximum service and sell output",
+            "currently unlocked shops are exact; future uniform-with-replacement shops use expected demand",
+            "no identity, episode, hidden opponent inventory, future action, or learned threshold input",
+            "feed is charged at projected WHEAT opportunity value; public future crop sales are omitted",
+            "fertilizer option value and labor burden are reported separately"
+          ],
+          "purchase_cost": 500,
+          "start_inventory": {
+            "FERTILIZER": 10112,
+            "WHEAT": 9855,
+            "WOOL": 10059
+          },
+          "start_prices": {
+            "FERTILIZER": 78,
+            "WHEAT": 37,
+            "WOOL": 1
+          },
+          "total_required_actions_with_full_fertilizer": 63,
+          "visible_live_animals": {
+            "0": {
+              "COW": 7,
+              "GOOSE": 0,
+              "SHEEP": 4
+            },
+            "1": {
+              "COW": 9,
+              "GOOSE": 0,
+              "SHEEP": 4
+            }
+          }
+        },
+        "sheep_minus_cow_net_before_labor_and_fertilizer": 844.0
+      },
+      "realized_price_path_sanity_only": {
+        "cow": {
+          "feed_opportunity_cost": 797.0,
+          "marginal_product_revenue": 430.0,
+          "net_before_labor_and_fertilizer": -767.0
+        },
+        "preferred": "SHEEP",
+        "sheep": {
+          "feed_opportunity_cost": 797.0,
+          "marginal_product_revenue": 1871.0,
+          "net_before_labor_and_fertilizer": 574.0
+        },
+        "sheep_minus_cow_net_before_labor_and_fertilizer": 1341.0,
+        "warning": "ex-post replay prices; audit sanity only, never a policy input"
+      },
+      "replay_sha256": "756ad37232656018ec1c66bd0ad37244b77652ce5d7381aaa5214aca6406fe20",
+      "step248": {
+        "actual_candidate_buy_animal_orders": {
+          "COW": 2
+        },
+        "day": 10,
+        "empty_pasture": false,
+        "farm_money": [
+          42.0,
+          2072.0
+        ],
+        "hour": 8,
+        "inventory": {
+          "FERTILIZER": 10112,
+          "MILK": 9987,
+          "WHEAT": 9855,
+          "WOOL": 10059
+        },
+        "prices": {
+          "FERTILIZER": 78,
+          "MILK": 191,
+          "WHEAT": 37,
+          "WOOL": 1
+        },
+        "replay_action_record_index": 249,
+        "shops": [
+          "BRUNCH_SPOT",
+          "BAKERY",
+          "SMOOTHIE_SHOP"
+        ],
+        "visible_live_animals": {
+          "0": {
+            "COW": 7,
+            "GOOSE": 0,
+            "SHEEP": 4
+          },
+          "1": {
+            "COW": 9,
+            "GOOSE": 0,
+            "SHEEP": 4
+          }
+        }
+      }
+    },
+    {
+      "agent_seat": 0,
+      "baseline_margin": 18079.0,
+      "category": "regression_control",
+      "episode_id": 100168881,
+      "observable_projection": {
+        "common_fertilizer_units_cancel_in_comparison": true,
+        "cow": {
+          "animal": "COW",
+          "break_even_shadow_value_per_required_unit_action": -17.244444,
+          "break_even_shadow_value_with_full_fertilizer_per_action": 10.375,
+          "care_actions": 18,
+          "empty_matching_structure_at_observation": false,
+          "feasible_same_turn_buy_and_place": false,
+          "feed_actions": 18,
+          "feed_opportunity_cost": 748.0,
+          "fertilizer_snapshot_liquidation": 1440.0,
+          "forced_full_liquidation_portfolio_delta": -67.0,
+          "harvest_actions": 6,
+          "marginal_product_revenue": 372.0,
+          "max_fertilizer_units": 19,
+          "minimum_logistics_actions": 3,
+          "net_before_labor_and_fertilizer": -776.0,
+          "net_with_full_fertilizer_snapshot_before_labor": 664.0,
+          "placement_day": 10,
+          "placement_step": 248,
+          "product": "MILK",
+          "product_events": [
+            {
+              "refresh_day": 18,
+              "sale_step": 433,
+              "units": 6
+            },
+            {
+              "refresh_day": 20,
+              "sale_step": 481,
+              "units": 3
+            },
+            {
+              "refresh_day": 22,
+              "sale_step": 529,
+              "units": 3
+            },
+            {
+              "refresh_day": 24,
+              "sale_step": 577,
+              "units": 3
+            },
+            {
+              "refresh_day": 26,
+              "sale_step": 625,
+              "units": 3
+            },
+            {
+              "refresh_day": 28,
+              "sale_step": 673,
+              "units": 3
+            }
+          ],
+          "product_units": 21,
+          "projection_assumptions": [
+            "daily feed and care through the final useful product refresh",
+            "immediate harvest and sale with a two-step post-refresh lag",
+            "currently visible animals on both farms receive maximum service and sell output",
+            "currently unlocked shops are exact; future uniform-with-replacement shops use expected demand",
+            "no identity, episode, hidden opponent inventory, future action, or learned threshold input",
+            "feed is charged at projected WHEAT opportunity value; public future crop sales are omitted",
+            "fertilizer option value and labor burden are reported separately"
+          ],
+          "purchase_cost": 400,
+          "start_inventory": {
+            "FERTILIZER": 10112,
+            "MILK": 9984,
+            "WHEAT": 9887
+          },
+          "start_prices": {
+            "FERTILIZER": 78,
+            "MILK": 195,
+            "WHEAT": 36
+          },
+          "total_required_actions_with_full_fertilizer": 64,
+          "visible_live_animals": {
+            "0": {
+              "COW": 6,
+              "GOOSE": 0,
+              "SHEEP": 8
+            },
+            "1": {
+              "COW": 8,
+              "GOOSE": 0,
+              "SHEEP": 4
+            }
+          }
+        },
+        "preferred_by_mechanical_cash_value": "SHEEP",
+        "sheep": {
+          "animal": "SHEEP",
+          "break_even_shadow_value_per_required_unit_action": 90.840909,
+          "break_even_shadow_value_with_full_fertilizer_per_action": 86.301587,
+          "care_actions": 18,
+          "empty_matching_structure_at_observation": false,
+          "feasible_same_turn_buy_and_place": false,
+          "feed_actions": 18,
+          "feed_opportunity_cost": 748.0,
+          "fertilizer_snapshot_liquidation": 1440.0,
+          "forced_full_liquidation_portfolio_delta": 4842.0,
+          "harvest_actions": 5,
+          "marginal_product_revenue": 5245.0,
+          "max_fertilizer_units": 19,
+          "minimum_logistics_actions": 3,
+          "net_before_labor_and_fertilizer": 3997.0,
+          "net_with_full_fertilizer_snapshot_before_labor": 5437.0,
+          "placement_day": 10,
+          "placement_step": 248,
+          "product": "WOOL",
+          "product_events": [
+            {
+              "refresh_day": 16,
+              "sale_step": 385,
+              "units": 6
+            },
+            {
+              "refresh_day": 19,
+              "sale_step": 457,
+              "units": 4
+            },
+            {
+              "refresh_day": 22,
+              "sale_step": 529,
+              "units": 4
+            },
+            {
+              "refresh_day": 25,
+              "sale_step": 601,
+              "units": 4
+            },
+            {
+              "refresh_day": 28,
+              "sale_step": 673,
+              "units": 4
+            }
+          ],
+          "product_units": 22,
+          "projection_assumptions": [
+            "daily feed and care through the final useful product refresh",
+            "immediate harvest and sale with a two-step post-refresh lag",
+            "currently visible animals on both farms receive maximum service and sell output",
+            "currently unlocked shops are exact; future uniform-with-replacement shops use expected demand",
+            "no identity, episode, hidden opponent inventory, future action, or learned threshold input",
+            "feed is charged at projected WHEAT opportunity value; public future crop sales are omitted",
+            "fertilizer option value and labor burden are reported separately"
+          ],
+          "purchase_cost": 500,
+          "start_inventory": {
+            "FERTILIZER": 10112,
+            "WHEAT": 9887,
+            "WOOL": 9976
+          },
+          "start_prices": {
+            "FERTILIZER": 78,
+            "WHEAT": 36,
+            "WOOL": 228
+          },
+          "total_required_actions_with_full_fertilizer": 63,
+          "visible_live_animals": {
+            "0": {
+              "COW": 6,
+              "GOOSE": 0,
+              "SHEEP": 8
+            },
+            "1": {
+              "COW": 8,
+              "GOOSE": 0,
+              "SHEEP": 4
+            }
+          }
+        },
+        "sheep_minus_cow_net_before_labor_and_fertilizer": 4773.0
+      },
+      "realized_price_path_sanity_only": {
+        "cow": {
+          "feed_opportunity_cost": 770.0,
+          "marginal_product_revenue": 451.0,
+          "net_before_labor_and_fertilizer": -719.0
+        },
+        "preferred": "SHEEP",
+        "sheep": {
+          "feed_opportunity_cost": 770.0,
+          "marginal_product_revenue": 4543.0,
+          "net_before_labor_and_fertilizer": 3273.0
+        },
+        "sheep_minus_cow_net_before_labor_and_fertilizer": 3992.0,
+        "warning": "ex-post replay prices; audit sanity only, never a policy input"
+      },
+      "replay_sha256": "1132fcfffb2033f8d591778c14eda74442d4e035ea623f2efb6ca60c56c602a1",
+      "step248": {
+        "actual_candidate_buy_animal_orders": {},
+        "day": 10,
+        "empty_pasture": false,
+        "farm_money": [
+          4515.0,
+          3483.0
+        ],
+        "hour": 8,
+        "inventory": {
+          "FERTILIZER": 10112,
+          "MILK": 9984,
+          "WHEAT": 9887,
+          "WOOL": 9976
+        },
+        "prices": {
+          "FERTILIZER": 78,
+          "MILK": 195,
+          "WHEAT": 36,
+          "WOOL": 228
+        },
+        "replay_action_record_index": 249,
+        "shops": [
+          "YARN_STORE",
+          "BAKERY",
+          "PIZZA_SHOP"
+        ],
+        "visible_live_animals": {
+          "0": {
+            "COW": 6,
+            "GOOSE": 0,
+            "SHEEP": 8
+          },
+          "1": {
+            "COW": 8,
+            "GOOSE": 0,
+            "SHEEP": 4
+          }
+        }
+      }
+    },
+    {
+      "agent_seat": 0,
+      "baseline_margin": 9765.0,
+      "category": "regression_control",
+      "episode_id": 100182646,
+      "observable_projection": {
+        "common_fertilizer_units_cancel_in_comparison": true,
+        "cow": {
+          "animal": "COW",
+          "break_even_shadow_value_per_required_unit_action": 56.111111,
+          "break_even_shadow_value_with_full_fertilizer_per_action": 62.90625,
+          "care_actions": 18,
+          "empty_matching_structure_at_observation": false,
+          "feasible_same_turn_buy_and_place": false,
+          "feed_actions": 18,
+          "feed_opportunity_cost": 756.0,
+          "fertilizer_snapshot_liquidation": 1501.0,
+          "forced_full_liquidation_portfolio_delta": 528.0,
+          "harvest_actions": 6,
+          "marginal_product_revenue": 3681.0,
+          "max_fertilizer_units": 19,
+          "minimum_logistics_actions": 3,
+          "net_before_labor_and_fertilizer": 2525.0,
+          "net_with_full_fertilizer_snapshot_before_labor": 4026.0,
+          "placement_day": 10,
+          "placement_step": 248,
+          "product": "MILK",
+          "product_events": [
+            {
+              "refresh_day": 18,
+              "sale_step": 433,
+              "units": 6
+            },
+            {
+              "refresh_day": 20,
+              "sale_step": 481,
+              "units": 3
+            },
+            {
+              "refresh_day": 22,
+              "sale_step": 529,
+              "units": 3
+            },
+            {
+              "refresh_day": 24,
+              "sale_step": 577,
+              "units": 3
+            },
+            {
+              "refresh_day": 26,
+              "sale_step": 625,
+              "units": 3
+            },
+            {
+              "refresh_day": 28,
+              "sale_step": 673,
+              "units": 3
+            }
+          ],
+          "product_units": 21,
+          "projection_assumptions": [
+            "daily feed and care through the final useful product refresh",
+            "immediate harvest and sale with a two-step post-refresh lag",
+            "currently visible animals on both farms receive maximum service and sell output",
+            "currently unlocked shops are exact; future uniform-with-replacement shops use expected demand",
+            "no identity, episode, hidden opponent inventory, future action, or learned threshold input",
+            "feed is charged at projected WHEAT opportunity value; public future crop sales are omitted",
+            "fertilizer option value and labor burden are reported separately"
+          ],
+          "purchase_cost": 400,
+          "start_inventory": {
+            "FERTILIZER": 10096,
+            "MILK": 9931,
+            "WHEAT": 9873
+          },
+          "start_prices": {
+            "FERTILIZER": 81,
+            "MILK": 232,
+            "WHEAT": 36
+          },
+          "total_required_actions_with_full_fertilizer": 64,
+          "visible_live_animals": {
+            "0": {
+              "COW": 9,
+              "GOOSE": 0,
+              "SHEEP": 4
+            },
+            "1": {
+              "COW": 8,
+              "GOOSE": 0,
+              "SHEEP": 4
+            }
+          }
+        },
+        "preferred_by_mechanical_cash_value": "COW",
+        "sheep": {
+          "animal": "SHEEP",
+          "break_even_shadow_value_per_required_unit_action": -7.113636,
+          "break_even_shadow_value_with_full_fertilizer_per_action": 18.857143,
+          "care_actions": 18,
+          "empty_matching_structure_at_observation": false,
+          "feasible_same_turn_buy_and_place": false,
+          "feed_actions": 18,
+          "feed_opportunity_cost": 756.0,
+          "fertilizer_snapshot_liquidation": 1501.0,
+          "forced_full_liquidation_portfolio_delta": 22.0,
+          "harvest_actions": 5,
+          "marginal_product_revenue": 943.0,
+          "max_fertilizer_units": 19,
+          "minimum_logistics_actions": 3,
+          "net_before_labor_and_fertilizer": -313.0,
+          "net_with_full_fertilizer_snapshot_before_labor": 1188.0,
+          "placement_day": 10,
+          "placement_step": 248,
+          "product": "WOOL",
+          "product_events": [
+            {
+              "refresh_day": 16,
+              "sale_step": 385,
+              "units": 6
+            },
+            {
+              "refresh_day": 19,
+              "sale_step": 457,
+              "units": 4
+            },
+            {
+              "refresh_day": 22,
+              "sale_step": 529,
+              "units": 4
+            },
+            {
+              "refresh_day": 25,
+              "sale_step": 601,
+              "units": 4
+            },
+            {
+              "refresh_day": 28,
+              "sale_step": 673,
+              "units": 4
+            }
+          ],
+          "product_units": 22,
+          "projection_assumptions": [
+            "daily feed and care through the final useful product refresh",
+            "immediate harvest and sale with a two-step post-refresh lag",
+            "currently visible animals on both farms receive maximum service and sell output",
+            "currently unlocked shops are exact; future uniform-with-replacement shops use expected demand",
+            "no identity, episode, hidden opponent inventory, future action, or learned threshold input",
+            "feed is charged at projected WHEAT opportunity value; public future crop sales are omitted",
+            "fertilizer option value and labor burden are reported separately"
+          ],
+          "purchase_cost": 500,
+          "start_inventory": {
+            "FERTILIZER": 10096,
+            "WHEAT": 9873,
+            "WOOL": 10047
+          },
+          "start_prices": {
+            "FERTILIZER": 81,
+            "WHEAT": 36,
+            "WOOL": 72
+          },
+          "total_required_actions_with_full_fertilizer": 63,
+          "visible_live_animals": {
+            "0": {
+              "COW": 9,
+              "GOOSE": 0,
+              "SHEEP": 4
+            },
+            "1": {
+              "COW": 8,
+              "GOOSE": 0,
+              "SHEEP": 4
+            }
+          }
+        },
+        "sheep_minus_cow_net_before_labor_and_fertilizer": -2838.0
+      },
+      "realized_price_path_sanity_only": {
+        "cow": {
+          "feed_opportunity_cost": 800.0,
+          "marginal_product_revenue": 4119.0,
+          "net_before_labor_and_fertilizer": 2919.0
+        },
+        "preferred": "COW",
+        "sheep": {
+          "feed_opportunity_cost": 800.0,
+          "marginal_product_revenue": 42.0,
+          "net_before_labor_and_fertilizer": -1258.0
+        },
+        "sheep_minus_cow_net_before_labor_and_fertilizer": -4177.0,
+        "warning": "ex-post replay prices; audit sanity only, never a policy input"
+      },
+      "replay_sha256": "b857736f6b524d1cc04a84930f43e42221a2792c28f4d05b521328ed0aabdf10",
+      "step248": {
+        "actual_candidate_buy_animal_orders": {
+          "COW": 2
+        },
+        "day": 10,
+        "empty_pasture": false,
+        "farm_money": [
+          3762.0,
+          1432.0
+        ],
+        "hour": 8,
+        "inventory": {
+          "FERTILIZER": 10096,
+          "MILK": 9931,
+          "WHEAT": 9873,
+          "WOOL": 10047
+        },
+        "prices": {
+          "FERTILIZER": 81,
+          "MILK": 232,
+          "WHEAT": 36,
+          "WOOL": 72
+        },
+        "replay_action_record_index": 249,
+        "shops": [
+          "SMOOTHIE_SHOP",
+          "ICE_CREAM_SHOP",
+          "FARMERS_MARKET"
+        ],
+        "visible_live_animals": {
+          "0": {
+            "COW": 9,
+            "GOOSE": 0,
+            "SHEEP": 4
+          },
+          "1": {
+            "COW": 8,
+            "GOOSE": 0,
+            "SHEEP": 4
+          }
+        }
+      }
+    },
+    {
+      "agent_seat": 1,
+      "baseline_margin": 23005.0,
+      "category": "regression_control",
+      "episode_id": 100143759,
+      "observable_projection": {
+        "common_fertilizer_units_cancel_in_comparison": true,
+        "cow": {
+          "animal": "COW",
+          "break_even_shadow_value_per_required_unit_action": -17.363636,
+          "break_even_shadow_value_with_full_fertilizer_per_action": 11.873016,
+          "care_actions": 18,
+          "empty_matching_structure_at_observation": true,
+          "feasible_same_turn_buy_and_place": false,
+          "feed_actions": 18,
+          "feed_opportunity_cost": 718.0,
+          "fertilizer_snapshot_liquidation": 1512.0,
+          "forced_full_liquidation_portfolio_delta": 219.0,
+          "harvest_actions": 6,
+          "marginal_product_revenue": 354.0,
+          "max_fertilizer_units": 19,
+          "minimum_logistics_actions": 2,
+          "net_before_labor_and_fertilizer": -764.0,
+          "net_with_full_fertilizer_snapshot_before_labor": 748.0,
+          "placement_day": 10,
+          "placement_step": 248,
+          "product": "MILK",
+          "product_events": [
+            {
+              "refresh_day": 18,
+              "sale_step": 433,
+              "units": 6
+            },
+            {
+              "refresh_day": 20,
+              "sale_step": 481,
+              "units": 3
+            },
+            {
+              "refresh_day": 22,
+              "sale_step": 529,
+              "units": 3
+            },
+            {
+              "refresh_day": 24,
+              "sale_step": 577,
+              "units": 3
+            },
+            {
+              "refresh_day": 26,
+              "sale_step": 625,
+              "units": 3
+            },
+            {
+              "refresh_day": 28,
+              "sale_step": 673,
+              "units": 3
+            }
+          ],
+          "product_units": 21,
+          "projection_assumptions": [
+            "daily feed and care through the final useful product refresh",
+            "immediate harvest and sale with a two-step post-refresh lag",
+            "currently visible animals on both farms receive maximum service and sell output",
+            "currently unlocked shops are exact; future uniform-with-replacement shops use expected demand",
+            "no identity, episode, hidden opponent inventory, future action, or learned threshold input",
+            "feed is charged at projected WHEAT opportunity value; public future crop sales are omitted",
+            "fertilizer option value and labor burden are reported separately"
+          ],
+          "purchase_cost": 400,
+          "start_inventory": {
+            "FERTILIZER": 10093,
+            "MILK": 10007,
+            "WHEAT": 9892
+          },
+          "start_prices": {
+            "FERTILIZER": 81,
+            "MILK": 145,
+            "WHEAT": 35
+          },
+          "total_required_actions_with_full_fertilizer": 63,
+          "visible_live_animals": {
+            "0": {
+              "COW": 6,
+              "GOOSE": 0,
+              "SHEEP": 6
+            },
+            "1": {
+              "COW": 4,
+              "GOOSE": 0,
+              "SHEEP": 7
+            }
+          }
+        },
+        "preferred_by_mechanical_cash_value": "SHEEP",
+        "sheep": {
+          "animal": "SHEEP",
+          "break_even_shadow_value_per_required_unit_action": 99.883721,
+          "break_even_shadow_value_with_full_fertilizer_per_action": 93.66129,
+          "care_actions": 18,
+          "empty_matching_structure_at_observation": true,
+          "feasible_same_turn_buy_and_place": false,
+          "feed_actions": 18,
+          "feed_opportunity_cost": 718.0,
+          "fertilizer_snapshot_liquidation": 1512.0,
+          "forced_full_liquidation_portfolio_delta": 5379.0,
+          "harvest_actions": 5,
+          "marginal_product_revenue": 5513.0,
+          "max_fertilizer_units": 19,
+          "minimum_logistics_actions": 2,
+          "net_before_labor_and_fertilizer": 4295.0,
+          "net_with_full_fertilizer_snapshot_before_labor": 5807.0,
+          "placement_day": 10,
+          "placement_step": 248,
+          "product": "WOOL",
+          "product_events": [
+            {
+              "refresh_day": 16,
+              "sale_step": 385,
+              "units": 6
+            },
+            {
+              "refresh_day": 19,
+              "sale_step": 457,
+              "units": 4
+            },
+            {
+              "refresh_day": 22,
+              "sale_step": 529,
+              "units": 4
+            },
+            {
+              "refresh_day": 25,
+              "sale_step": 601,
+              "units": 4
+            },
+            {
+              "refresh_day": 28,
+              "sale_step": 673,
+              "units": 4
+            }
+          ],
+          "product_units": 22,
+          "projection_assumptions": [
+            "daily feed and care through the final useful product refresh",
+            "immediate harvest and sale with a two-step post-refresh lag",
+            "currently visible animals on both farms receive maximum service and sell output",
+            "currently unlocked shops are exact; future uniform-with-replacement shops use expected demand",
+            "no identity, episode, hidden opponent inventory, future action, or learned threshold input",
+            "feed is charged at projected WHEAT opportunity value; public future crop sales are omitted",
+            "fertilizer option value and labor burden are reported separately"
+          ],
+          "purchase_cost": 500,
+          "start_inventory": {
+            "FERTILIZER": 10093,
+            "WHEAT": 9892,
+            "WOOL": 9896
+          },
+          "start_prices": {
+            "FERTILIZER": 81,
+            "WHEAT": 35,
+            "WOOL": 240
+          },
+          "total_required_actions_with_full_fertilizer": 62,
+          "visible_live_animals": {
+            "0": {
+              "COW": 6,
+              "GOOSE": 0,
+              "SHEEP": 6
+            },
+            "1": {
+              "COW": 4,
+              "GOOSE": 0,
+              "SHEEP": 7
+            }
+          }
+        },
+        "sheep_minus_cow_net_before_labor_and_fertilizer": 5059.0
+      },
+      "realized_price_path_sanity_only": {
+        "cow": {
+          "feed_opportunity_cost": 762.0,
+          "marginal_product_revenue": 33.0,
+          "net_before_labor_and_fertilizer": -1129.0
+        },
+        "preferred": "SHEEP",
+        "sheep": {
+          "feed_opportunity_cost": 762.0,
+          "marginal_product_revenue": 5513.0,
+          "net_before_labor_and_fertilizer": 4251.0
+        },
+        "sheep_minus_cow_net_before_labor_and_fertilizer": 5380.0,
+        "warning": "ex-post replay prices; audit sanity only, never a policy input"
+      },
+      "replay_sha256": "3b0de8348aa999611bf3a671880e748c643b266dece5b1ca775186235de24226",
+      "step248": {
+        "actual_candidate_buy_animal_orders": {},
+        "day": 10,
+        "empty_pasture": true,
+        "farm_money": [
+          342.0,
+          3759.0
+        ],
+        "hour": 8,
+        "inventory": {
+          "FERTILIZER": 10093,
+          "MILK": 10007,
+          "WHEAT": 9892,
+          "WOOL": 9896
+        },
+        "prices": {
+          "FERTILIZER": 81,
+          "MILK": 145,
+          "WHEAT": 35,
+          "WOOL": 240
+        },
+        "replay_action_record_index": 249,
+        "shops": [
+          "YARN_STORE",
+          "YARN_STORE",
+          "FARMERS_MARKET"
+        ],
+        "visible_live_animals": {
+          "0": {
+            "COW": 6,
+            "GOOSE": 0,
+            "SHEEP": 6
+          },
+          "1": {
+            "COW": 4,
+            "GOOSE": 0,
+            "SHEEP": 7
+          }
+        }
+      }
+    },
+    {
+      "agent_seat": 1,
+      "baseline_margin": 602.0,
+      "category": "regression_control",
+      "episode_id": 100166584,
+      "observable_projection": {
+        "common_fertilizer_units_cancel_in_comparison": true,
+        "cow": {
+          "animal": "COW",
+          "break_even_shadow_value_per_required_unit_action": -19.711111,
+          "break_even_shadow_value_with_full_fertilizer_per_action": 9.53125,
+          "care_actions": 18,
+          "empty_matching_structure_at_observation": false,
+          "feasible_same_turn_buy_and_place": false,
+          "feed_actions": 18,
+          "feed_opportunity_cost": 726.0,
+          "fertilizer_snapshot_liquidation": 1497.0,
+          "forced_full_liquidation_portfolio_delta": 21.0,
+          "harvest_actions": 6,
+          "marginal_product_revenue": 239.0,
+          "max_fertilizer_units": 19,
+          "minimum_logistics_actions": 3,
+          "net_before_labor_and_fertilizer": -887.0,
+          "net_with_full_fertilizer_snapshot_before_labor": 610.0,
+          "placement_day": 10,
+          "placement_step": 248,
+          "product": "MILK",
+          "product_events": [
+            {
+              "refresh_day": 18,
+              "sale_step": 433,
+              "units": 6
+            },
+            {
+              "refresh_day": 20,
+              "sale_step": 481,
+              "units": 3
+            },
+            {
+              "refresh_day": 22,
+              "sale_step": 529,
+              "units": 3
+            },
+            {
+              "refresh_day": 24,
+              "sale_step": 577,
+              "units": 3
+            },
+            {
+              "refresh_day": 26,
+              "sale_step": 625,
+              "units": 3
+            },
+            {
+              "refresh_day": 28,
+              "sale_step": 673,
+              "units": 3
+            }
+          ],
+          "product_units": 21,
+          "projection_assumptions": [
+            "daily feed and care through the final useful product refresh",
+            "immediate harvest and sale with a two-step post-refresh lag",
+            "currently visible animals on both farms receive maximum service and sell output",
+            "currently unlocked shops are exact; future uniform-with-replacement shops use expected demand",
+            "no identity, episode, hidden opponent inventory, future action, or learned threshold input",
+            "feed is charged at projected WHEAT opportunity value; public future crop sales are omitted",
+            "fertilizer option value and labor burden are reported separately"
+          ],
+          "purchase_cost": 400,
+          "start_inventory": {
+            "FERTILIZER": 10097,
+            "MILK": 10001,
+            "WHEAT": 9924
+          },
+          "start_prices": {
+            "FERTILIZER": 81,
+            "MILK": 158,
+            "WHEAT": 34
+          },
+          "total_required_actions_with_full_fertilizer": 64,
+          "visible_live_animals": {
+            "0": {
+              "COW": 6,
+              "GOOSE": 0,
+              "SHEEP": 2
+            },
+            "1": {
+              "COW": 9,
+              "GOOSE": 0,
+              "SHEEP": 4
+            }
+          }
+        },
+        "preferred_by_mechanical_cash_value": "SHEEP",
+        "sheep": {
+          "animal": "SHEEP",
+          "break_even_shadow_value_per_required_unit_action": -2.659091,
+          "break_even_shadow_value_with_full_fertilizer_per_action": 21.904762,
+          "care_actions": 18,
+          "empty_matching_structure_at_observation": false,
+          "feasible_same_turn_buy_and_place": false,
+          "feed_actions": 18,
+          "feed_opportunity_cost": 726.0,
+          "fertilizer_snapshot_liquidation": 1497.0,
+          "forced_full_liquidation_portfolio_delta": 27.0,
+          "harvest_actions": 5,
+          "marginal_product_revenue": 1109.0,
+          "max_fertilizer_units": 19,
+          "minimum_logistics_actions": 3,
+          "net_before_labor_and_fertilizer": -117.0,
+          "net_with_full_fertilizer_snapshot_before_labor": 1380.0,
+          "placement_day": 10,
+          "placement_step": 248,
+          "product": "WOOL",
+          "product_events": [
+            {
+              "refresh_day": 16,
+              "sale_step": 385,
+              "units": 6
+            },
+            {
+              "refresh_day": 19,
+              "sale_step": 457,
+              "units": 4
+            },
+            {
+              "refresh_day": 22,
+              "sale_step": 529,
+              "units": 4
+            },
+            {
+              "refresh_day": 25,
+              "sale_step": 601,
+              "units": 4
+            },
+            {
+              "refresh_day": 28,
+              "sale_step": 673,
+              "units": 4
+            }
+          ],
+          "product_units": 22,
+          "projection_assumptions": [
+            "daily feed and care through the final useful product refresh",
+            "immediate harvest and sale with a two-step post-refresh lag",
+            "currently visible animals on both farms receive maximum service and sell output",
+            "currently unlocked shops are exact; future uniform-with-replacement shops use expected demand",
+            "no identity, episode, hidden opponent inventory, future action, or learned threshold input",
+            "feed is charged at projected WHEAT opportunity value; public future crop sales are omitted",
+            "fertilizer option value and labor burden are reported separately"
+          ],
+          "purchase_cost": 500,
+          "start_inventory": {
+            "FERTILIZER": 10097,
+            "WHEAT": 9924,
+            "WOOL": 10045
+          },
+          "start_prices": {
+            "FERTILIZER": 81,
+            "WHEAT": 34,
+            "WOOL": 82
+          },
+          "total_required_actions_with_full_fertilizer": 63,
+          "visible_live_animals": {
+            "0": {
+              "COW": 6,
+              "GOOSE": 0,
+              "SHEEP": 2
+            },
+            "1": {
+              "COW": 9,
+              "GOOSE": 0,
+              "SHEEP": 4
+            }
+          }
+        },
+        "sheep_minus_cow_net_before_labor_and_fertilizer": 770.0
+      },
+      "realized_price_path_sanity_only": {
+        "cow": {
+          "feed_opportunity_cost": 747.0,
+          "marginal_product_revenue": 75.0,
+          "net_before_labor_and_fertilizer": -1072.0
+        },
+        "preferred": "COW",
+        "sheep": {
+          "feed_opportunity_cost": 747.0,
+          "marginal_product_revenue": 42.0,
+          "net_before_labor_and_fertilizer": -1205.0
+        },
+        "sheep_minus_cow_net_before_labor_and_fertilizer": -133.0,
+        "warning": "ex-post replay prices; audit sanity only, never a policy input"
+      },
+      "replay_sha256": "a0a8f0c57ccb0f6fc2a957087ca85e1361c2b6ff3610ce1e5831e4a18558446e",
+      "step248": {
+        "actual_candidate_buy_animal_orders": {
+          "COW": 2
+        },
+        "day": 10,
+        "empty_pasture": false,
+        "farm_money": [
+          1463.0,
+          2091.0
+        ],
+        "hour": 8,
+        "inventory": {
+          "FERTILIZER": 10097,
+          "MILK": 10001,
+          "WHEAT": 9924,
+          "WOOL": 10045
+        },
+        "prices": {
+          "FERTILIZER": 81,
+          "MILK": 158,
+          "WHEAT": 34,
+          "WOOL": 82
+        },
+        "replay_action_record_index": 249,
+        "shops": [
+          "PET_CAFE",
+          "BRUNCH_SPOT",
+          "BAKERY"
+        ],
+        "visible_live_animals": {
+          "0": {
+            "COW": 6,
+            "GOOSE": 0,
+            "SHEEP": 2
+          },
+          "1": {
+            "COW": 9,
+            "GOOSE": 0,
+            "SHEEP": 4
+          }
+        }
+      }
+    }
+  ],
+  "data_boundary": {
+    "baseline_path": "submissions/meta_v67_quantity_conserving_front_run_standalone/main.py",
+    "baseline_sha256": "300983ffa3da614ad5e7b9958c76104d9f613fcaf7169e69963ea634ee0a093b",
+    "episodes": [
+      100159725,
+      100184942,
+      100187229,
+      100196432,
+      100168881,
+      100182646,
+      100143759,
+      100166584
+    ],
+    "forbidden_sets_read": [],
+    "gate_path": "analysis/v67_live_loss_audit_20260826/gate8_manifest_suggestion.json",
+    "gate_sha256": "4e9268c02575ea9bb6b2e9aaff8714910bc2fed3d3d886a05355dbb47edc8be2"
+  },
+  "decision_scope": "economic audit only; no candidate, promotion, or upload",
+  "mechanical_schedule_step248": {
+    "cow_product_days": [
+      18,
+      20,
+      22,
+      24,
+      26,
+      28
+    ],
+    "cow_units": 21,
+    "feed_actions_each": 18,
+    "max_fertilizer_units_each": 19,
+    "sheep_product_days": [
+      16,
+      19,
+      22,
+      25,
+      28
+    ],
+    "sheep_units": 22
+  },
+  "projection_vs_realized_net_mae": {
+    "cow": 251.875,
+    "sheep": 576.625
+  },
+  "status": "read_only_gate8_sanity_complete",
+  "summary": {
+    "regression_control": {
+      "cases": 4,
+      "current_cow_order_cases": 2,
+      "current_cow_order_cases_where_projection_prefers_sheep": 1,
+      "mean_projected_sheep_minus_cow": 1941.0,
+      "mean_realized_sheep_minus_cow": 1265.5,
+      "projected_preference_counts": {
+        "COW": 1,
+        "SHEEP": 3
+      },
+      "realized_path_preference_counts": {
+        "COW": 2,
+        "SHEEP": 2
+      }
+    },
+    "target_loss": {
+      "cases": 4,
+      "current_cow_order_cases": 4,
+      "current_cow_order_cases_where_projection_prefers_sheep": 4,
+      "mean_projected_sheep_minus_cow": 3878.5,
+      "mean_realized_sheep_minus_cow": 3623.0,
+      "projected_preference_counts": {
+        "SHEEP": 4
+      },
+      "realized_path_preference_counts": {
+        "SHEEP": 4
+      }
+    }
+  }
+}

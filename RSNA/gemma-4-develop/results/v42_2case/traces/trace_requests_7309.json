@@ -1,0 +1,783 @@
+{
+  "schema_version": "ATIF-v1.7",
+  "agent": {
+    "name": "adk-eval-core",
+    "version": "1.0"
+  },
+  "steps": [
+    {
+      "step_id": 1,
+      "source": "system",
+      "message": "You are an autonomous senior Python engineer working inside a sandboxed checkout of a real open-source repository at /workspace.\nGoal: resolve the issue in the user message with the smallest correct patch, then call `submit_patch`.\n\n## Hard rules\n- Never edit, add or delete tests, `conftest.py`, `pytest.ini`, CI or packaging files. Hidden tests are applied after you finish.\n- Keep public APIs backward compatible unless the issue explicitly asks for a change.\n- Scratch files go to /tmp only. Anything left in /workspace becomes part of your patch.\n- Never add print or debug statements to source files: if time runs out, the working tree is graded as it is. Print from your /tmp test instead.\n- The environment is pre-built: do not try to install packages.\n- Always finish by calling `submit_patch`. A careful best-effort fix beats no patch.\n\n## Tools\nYou have no shell. Everything goes through the `code-tools` skill: call the tool `run_skill_script` with skill_name \"code-tools\", file_path \"scripts/ct.py\" and args (a list of strings). Call `load_skill` for it once at the start to see its commands (`outline`, `def`, `refs`, `grep`, `show`, `edit`, `write`, `run`). `run` executes only python, pytest and `git status`/`git diff`, e.g. args [\"run\", \"python -m pytest tests/test_x.py -q\"]. You have 32k tokens for the whole task: keep every output small.\n\n## Workflow: test first\n1. **Understand**: state the expected vs. actual behaviour in one or two sentences. Note the exact names, messages and values the issue uses. If one of these skills fits the issue, `load_skill` it: `exact-output`, `add-feature`, `errors-and-validation`.\n2. **Read the tests**: `grep` an identifier from the issue in `tests`, `outline` that test file and `show` the one or two tests closest to the issue. They show the public entry point, how the code is called and the style of messages. Hidden tests are usually added to this file.\n3. **Write a failing test**: first `load_skill` `write-failing-test`. Then `write` /tmp/test_issue.py in the same style, asserting what the issue asks for, with names and messages taken from the issue's own words. `run` it: `python -m pytest /tmp/test_issue.py -q`. It must fail, and for the reason the issue describes. If it passes or fails for another reason, fix the test before touching the code.\n4. **Find why it fails**: read the traceback, `show` the function it points to, and follow the call chain with `def` / `refs` / `show` until you reach the line where behaviour diverges from what the issue expects.\n5. **Fix**: choose the change with the minimal-fix ladder below and apply it with `edit`. Copy OLD exactly from `show` output, written as plain code (`\"\"\"` stays `\"\"\"`, never `\\\"\\\"\\\"`). Keep OLD short but unique. Hidden tests often match error messages, exception types and names exactly (`pytest.raises(..., match=...)`): build new messages and names from the issue's own words and title, not a paraphrase (issue says \"negative timeouts\" \u2192 `\"timeout must not be negative\"`, not `\"invalid timeout value\"`). If an edit fails, copy OLD from the closest text it prints; never resend the same OLD.\n6. **Re-run**: `run` /tmp/test_issue.py, which must pass now. Then `run` the test file from step 2 (`python -m pytest <tests/path> -x -q`), which must still pass. \"no tests ran\" (exit code 5) is not a pass. If an existing test fails only because it asserts the old behaviour the issue asks to change, that is expected: leave it, the hidden tests replace it. Any other failure: go back to step 4 with the new traceback.\n7. **Submit**: `run` `git diff`, make sure only intended source changes remain, then call `submit_patch`.\n\n## Minimal-fix ladder\nLazy about the fix, never about reading: trace the code the issue touches first, then stop at the first rung that works.\n1. Already supported (an option, flag, parameter)? Fix the wiring, don't add code.\n2. The codebase already has a helper, validator or pattern for this? Reuse it and copy its style.\n3. One guard in the shared function fixes every caller? Put it there (check its callers with `refs`), not in each caller.\n4. Only then: the smallest new code that works.\nNever cut what the issue asks for: every edge case it names, its error handling, backward compatibility.\nNo refactors, renames, new abstractions, reformatting or comment churn. A 3-line diff beats a 30-line one.\n\n## Budget\n- Most fixes need 10-20 tool calls. Once both test runs in step 6 pass, submit; don't polish.\n- Re-running a command without editing code in between returns the same output, so never do it. After an unexpected result, `show` the code you just changed and fix it, or change approach.\n- Call `get_status` every ~8 tool calls. When less than 25% of time remains, go straight to Fix \u2192 Re-run \u2192 Submit.\n- Keep outputs short: `pytest -q`, and `show` one function or a few lines at a time.",
+      "extra": {
+        "event_type": "system_instruction",
+        "elapsed_s": 6.895869016647339,
+        "timestamp": 1790331711.985992,
+        "author": "harness"
+      }
+    },
+    {
+      "step_id": 2,
+      "source": "user",
+      "message": "You are evaluating a software engineering task for repository psf/requests.\n\nProblem Statement:\nFix malformed value parsing for Content-Type\n\nThis PR addresses https://github.com/psf/requests/issues/6646 by cleaning up `_parse_content_type_header`. Instead of setting a default that we can't use in practice, we now skip value assignment completely if the value is malformed. Every RFC from 1521 to 9110 is clear that an `=` is required for a valid parameter. If it doesn't exist, we need to ignore it.\n\n## Task Budget (Session terminates when any budget is exhausted)\n- Time allowance: 10.0 minutes\n\n## Execution Environment Rules\n- Single command timeout: 300 seconds (commands exceeding this fail without ending the session)\n- Command output limit: 5000 characters\n- File view limit: 150 lines per read_file call\n- File character limit: 10000 characters per read_file call\n- Environment is offline (no network/PyPI access). All repository and test dependencies are ALREADY pre-installed. Do NOT attempt to run pip install or download packages.\n\n## Instructions:\n0. All source code is under `/workspace`. Do NOT search outside `/workspace` (e.g. `/usr/`, `/wheels/`, system site-packages). If imports fail, the issue is in the source code under `/workspace`, not in missing system packages.\n1. Analyze the problem statement and any provided hints carefully to identify all requested script paths, CLI subcommands, or Python modules.\n2. Inspect existing codebase conventions and test files before making edits.\n3. Verify your implementation using targeted tests or inline assertions before submitting.\n4. Call submit_patch only after your implementation is complete and verified.\n5. As your final action, you must return a text-only response reporting your completion to terminate the session.\n## Code Intelligence Tools\nThis repository has pre-built code graph and embedding data. Use these tools for fast, targeted navigation:\n- `search_similar_code(query)`: Find semantically similar functions/classes by keyword.\n- `get_code_neighbors(node)`: Find callers, callees, and definitions related to a symbol.\n- `get_code_subgraph(nodes)`: Get the induced subgraph for a set of symbols.\n\n## Workspace Layout\nThe repository is located at `/workspace`. Here is the directory tree (up to 3 levels):\n```\n.\n./.coveragerc\n./.git\n./.git-blame-ignore-revs\n./.github\n./.github/CODEOWNERS\n./.github/CODE_OF_CONDUCT.md\n./.github/CONTRIBUTING.md\n./.github/FUNDING.yml\n./.github/ISSUE_TEMPLATE\n./.github/ISSUE_TEMPLATE.md\n./.github/ISSUE_TEMPLATE/Bug_report.md\n./.github/ISSUE_TEMPLATE/Custom.md\n./.github/ISSUE_TEMPLATE/Feature_request.md\n./.github/SECURITY.md\n./.github/dependabot.yml\n./.github/workflows\n./.github/workflows/close-issues.yml\n./.github/workflows/codeql-analysis.yml\n./.github/workflows/lint.yml\n./.github/workflows/lock-issues.yml\n./.github/workflows/publish.yml\n./.github/workflows/run-tests.yml\n./.gitignore\n./.pre-commit-config.yaml\n./.readthedocs.yaml\n./AUTHORS.rst\n./HISTORY.md\n./LICENSE\n./MANIFEST.in\n./Makefile\n./NOTICE\n./README.md\n./conftest.py\n./docs\n./docs/.nojekyll\n./docs/Makefile\n./docs/_static\n./docs/_static/custom.css\n./docs/_static/requests-sidebar.png\n./docs/_templates\n./docs/_templates/hacks.html\n./docs/_templates/sidebarintro.html\n./docs/_templates/sidebarlogo.html\n./docs/_themes\n./docs/_themes/.gitignore\n./docs/_themes/LICENSE\n./docs/_themes/flask_theme_support.py\n./docs/api.rst\n./docs/community\n./docs/community/faq.rst\n./docs/community/out-there.rst\n./docs/community/recommended.rst\n./docs/community/release-process.rst\n./docs/community/support.rst\n./docs/community/updates.rst\n./docs/community/vulnerabilities.rst\n./docs/conf.py\n./docs/dev\n./docs/dev/authors.rst\n./docs/dev/contributing.rst\n./docs/index.rst\n./docs/make.bat\n./docs/requirements.txt\n./docs/user\n./docs/user/advanced.rst\n./docs/user/authentication.rst\n./docs/user/install.rst\n./docs/user/quickstart.rst\n./ext\n./ext/LICENSE\n./ext/flower-of-life.jpg\n./ext/kr-compressed.png\n./ext/kr.png\n./ext/psf-compressed.png\n./ext/psf.png\n./ext/requests-logo-compressed.png\n./ext/requests-logo.ai\n./ext/requests-logo.png\n./ext/requests-logo.svg\n./ext/ss-compressed.png\n./ext/ss.png\n./pyproject.toml\n./pytest.ini\n./requirements-dev.txt\n./setup.py\n./src\n./src/requests\n./src/requests/__init__.py\n./src/requests/__version__.py\n./src/requests/_internal_utils.py\n./src/requests/adapters.py\n./src/requests/api.py\n./src/requests/auth.py\n./src/requests/certs.py\n./src/requests/compat.py\n./src/requests/cookies.py\n./src/requests/exceptions.py\n./src/requests/help.py\n./src/requests/hooks.py\n./src/requests/models.py\n./src/requests/packages.py\n./src/requests/sessions.py\n./src/requests/status_codes.py\n./src/requests/structures.py\n./src/requests/utils.py\n./tests\n./tests/__init__.py\n./tests/certs\n./tests/certs/README.md\n./tests/certs/expired\n./tests/certs/mtls\n./tests/certs/valid\n./tests/compat.py\n./tests/conftest.py\n./tests/test_adapters.py\n./tests/test_help.py\n./tests/test_hooks.py\n./tests/test_lowlevel.py\n./tests/test_packages.py\n./tests/test_requests.py\n./tests/test_structures.py\n./tests/test_testserver.py\n./tests/test_utils.py\n./tests/testserver\n./tests/testserver/__init__.py\n./tests/testserver/server.py\n./tests/utils.py\n./tox.ini\n```\n",
+      "extra": {
+        "event_type": "task_prompt",
+        "elapsed_s": 6.895878076553345,
+        "timestamp": 1790331711.986001,
+        "author": "harness"
+      }
+    },
+    {
+      "step_id": 3,
+      "source": "agent",
+      "message": "The problem is that `_parse_content_type_header` in `requests` doesn't correctly handle malformed `Content-Type` values, specifically those missing an `=` for a parameter. It should skip value assignment if the `=` is missing.\n\nLet's start by exploring the codebase to find `_parse_content_type_header`.",
+      "model_name": "google/gemma-4-31b-it",
+      "tool_calls": [
+        {
+          "tool_call_id": "call_3",
+          "function_name": "load_skill",
+          "arguments": {
+            "skill_name": "code-tools"
+          },
+          "extra": {
+            "elapsed_s": 12.460012197494507,
+            "timestamp": 1790331717.5501351,
+            "author": "swe_coder",
+            "model_version": "google/gemma-4-31b-it"
+          }
+        }
+      ],
+      "observation": {
+        "content": "{\"skill_name\": \"code-tools\", \"instructions\": \"Call the tool `run_skill_script` with skill_name \\\"code-tools\\\", file_path \\\"scripts/ct.py\\\" and args (a list of strings).\\nPaths are relative to /workspace. Output is compact; prefer it over reading whole files.\\n\\n| args | result |\\n|---|---|\\n| `[\\\"outline\\\", \\\"pkg/mod.py\\\"]` | classes/functions with line ranges. Use before reading a file |\\n| `[\\\"def\\\", \\\"Name\\\"]` or `[\\\"def\\\", \\\"Class.method\\\"]` | where it is defined (async defs included) |\\n| `[\\\"refs\\\", \\\"name\\\"]` | every line using it: callers, imports, attributes |\\n| `[\\\"show\\\", \\\"pkg/mod.py\\\", \\\"Class.method\\\"]` or `[\\\"show\\\", \\\"pkg/mod.py\\\", \\\"120-160\\\"]` | exact source, no line numbers. Copy OLD text from here |\\n| `[\\\"edit\\\", \\\"pkg/mod.py\\\", OLD, NEW]` | replace the exact text OLD with NEW (5th arg `\\\"all\\\"` replaces every occurrence). Not saved if the result is invalid Python. On a miss it prints the closest text: copy OLD from that |\\n| `[\\\"grep\\\", \\\"PATTERN\\\"]` or `[\\\"grep\\\", \\\"PATTERN\\\", \\\"tests\\\"]` | regex search in .py files, at most 40 `file:line: text` hits |\\n| `[\\\"run\\\", \\\"python -m pytest tests/test_x.py -q\\\"]` | run python, pytest or `git status`/`git diff` in /workspace; shows exit code and the end of the output. No search commands |\\n| `[\\\"write\\\", \\\"/tmp/repro.py\\\", CONTENT]` | create or overwrite a file. Scratch files go in /tmp: anything in /workspace is part of your patch |\\n\\nWrite OLD/NEW as plain code, exactly as `show` printed it: `\\\"\\\"\\\"` stays `\\\"\\\"\\\"`, never `\\\\\\\"\\\\\\\"\\\\\\\"`.\", \"frontmatter\": {\"name\": \"code-tools\", \"description\": \"Low-context Python navigation (file outline, go-to-definition including async defs, references, exact symbol source) plus reliable edit/write commands that tolerate quote and backslash escaping and refuse edits that break syntax. Use it for all reading and editing.\", \"license\": null, \"compatibility\": null, \"allowed_tools\": null, \"metadata\": {}}}",
+        "extra": {
+          "tool_name": "load_skill",
+          "elapsed_s": 12.462760925292969,
+          "timestamp": 1790331717.5528839,
+          "author": "swe_coder"
+        }
+      },
+      "metrics": {
+        "prompt_tokens": 3786,
+        "completion_tokens": 96,
+        "cached_tokens": 5,
+        "total_tokens": 3882
+      },
+      "llm_call_count": 1,
+      "extra": {
+        "event_type": "thinking",
+        "elapsed_s": 12.460012197494507,
+        "timestamp": 1790331717.5501351,
+        "author": "swe_coder"
+      }
+    },
+    {
+      "step_id": 4,
+      "source": "agent",
+      "message": "I'll search for `_parse_content_type_header`.",
+      "model_name": "google/gemma-4-31b-it",
+      "tool_calls": [
+        {
+          "tool_call_id": "call_6",
+          "function_name": "run_skill_script",
+          "arguments": {
+            "args": [
+              "run_skill_script",
+              "code-tools",
+              "scripts/ct.py",
+              "def",
+              "_parse_content_type_header"
+            ],
+            "file_path": "scripts/ct.py",
+            "skill_name": "code-tools"
+          },
+          "extra": {
+            "elapsed_s": 14.514110088348389,
+            "timestamp": 1790331719.604233,
+            "author": "swe_coder",
+            "model_version": "google/gemma-4-31b-it"
+          }
+        }
+      ],
+      "observation": {
+        "content": "{\"skill_name\": \"code-tools\", \"file_path\": \"scripts/ct.py\", \"stdout\": \"Compact code navigation + escape-tolerant editing for /workspace (stdlib only).\\n\\nct.py outline FILE              classes/functions with line ranges\\nct.py def NAME                  where NAME (or Class.method) is defined, incl. async\\nct.py refs NAME                 lines that use NAME\\nct.py show FILE SYMBOL|A-B      exact source of a symbol or line range\\nct.py edit FILE OLD NEW [all]   replace OLD with NEW (tolerates \\\\\\\" style escaping), syntax-checked\\nct.py write PATH CONTENT        create/overwrite a file (/tmp allowed)\\nct.py run \\\"COMMAND\\\"             run python / pytest / git status|diff in /workspace (no searching)\\nct.py grep PATTERN [DIR]        regex search in .py files, max 40 matching lines\\n\\n\", \"stderr\": \"\", \"status\": \"success\"}",
+        "extra": {
+          "tool_name": "run_skill_script",
+          "elapsed_s": 15.025227069854736,
+          "timestamp": 1790331720.11535,
+          "author": "swe_coder"
+        }
+      },
+      "metrics": {
+        "prompt_tokens": 4461,
+        "completion_tokens": 88,
+        "cached_tokens": 5,
+        "total_tokens": 4549
+      },
+      "llm_call_count": 1,
+      "extra": {
+        "event_type": "thinking",
+        "elapsed_s": 14.514110088348389,
+        "timestamp": 1790331719.604233,
+        "author": "swe_coder"
+      }
+    },
+    {
+      "step_id": 5,
+      "source": "agent",
+      "message": "Wait, I called `run_skill_script` with `args` that looked like a mix of `run_skill_script` and `code-tools` parameters. I should use the tool as specified.",
+      "model_name": "google/gemma-4-31b-it",
+      "tool_calls": [
+        {
+          "tool_call_id": "call_9",
+          "function_name": "run_skill_script",
+          "arguments": {
+            "args": [
+              "def",
+              "_parse_content_type_header"
+            ],
+            "file_path": "scripts/ct.py",
+            "skill_name": "code-tools"
+          },
+          "extra": {
+            "elapsed_s": 18.07183599472046,
+            "timestamp": 1790331723.161959,
+            "author": "swe_coder",
+            "model_version": "google/gemma-4-31b-it"
+          }
+        }
+      ],
+      "observation": {
+        "content": "{\"skill_name\": \"code-tools\", \"file_path\": \"scripts/ct.py\", \"stdout\": \"src/requests/utils.py:504-526  _parse_content_type_header  def _parse_content_type_header(header)\\n\", \"stderr\": \"\", \"status\": \"success\"}",
+        "extra": {
+          "tool_name": "run_skill_script",
+          "elapsed_s": 18.62700605392456,
+          "timestamp": 1790331723.717129,
+          "author": "swe_coder"
+        }
+      },
+      "metrics": {
+        "prompt_tokens": 4789,
+        "completion_tokens": 96,
+        "cached_tokens": 4475,
+        "total_tokens": 4885
+      },
+      "llm_call_count": 1,
+      "extra": {
+        "event_type": "thinking",
+        "elapsed_s": 18.07183599472046,
+        "timestamp": 1790331723.161959,
+        "author": "swe_coder"
+      }
+    },
+    {
+      "step_id": 6,
+      "source": "agent",
+      "message": "Okay, it's in `src/requests/utils.py`. Now let's see the implementation.",
+      "model_name": "google/gemma-4-31b-it",
+      "tool_calls": [
+        {
+          "tool_call_id": "call_12",
+          "function_name": "run_skill_script",
+          "arguments": {
+            "args": [
+              "show",
+              "src/requests/utils.py",
+              "_parse_content_type_header"
+            ],
+            "file_path": "scripts/ct.py",
+            "skill_name": "code-tools"
+          },
+          "extra": {
+            "elapsed_s": 21.89164900779724,
+            "timestamp": 1790331726.981772,
+            "author": "swe_coder",
+            "model_version": "google/gemma-4-31b-it"
+          }
+        }
+      ],
+      "observation": {
+        "content": "{\"skill_name\": \"code-tools\", \"file_path\": \"scripts/ct.py\", \"stdout\": \"# src/requests/utils.py lines 504-526 (copy text from here for edits; no line numbers inside)\\ndef _parse_content_type_header(header):\\n    \\\"\\\"\\\"Returns content type and parameters from given header\\n\\n    :param header: string\\n    :return: tuple containing content type and dictionary of\\n         parameters\\n    \\\"\\\"\\\"\\n\\n    tokens = header.split(\\\";\\\")\\n    content_type, params = tokens[0].strip(), tokens[1:]\\n    params_dict = {}\\n    items_to_strip = \\\"\\\\\\\"' \\\"\\n\\n    for param in params:\\n        param = param.strip()\\n        if param:\\n            key, value = param, True\\n            index_of_equals = param.find(\\\"=\\\")\\n            if index_of_equals != -1:\\n                key = param[:index_of_equals].strip(items_to_strip)\\n                value = param[index_of_equals + 1 :].strip(items_to_strip)\\n            params_dict[key.lower()] = value\\n    return content_type, params_dict\\n\", \"stderr\": \"\", \"status\": \"success\"}",
+        "extra": {
+          "tool_name": "run_skill_script",
+          "elapsed_s": 22.41864824295044,
+          "timestamp": 1790331727.5087712,
+          "author": "swe_coder"
+        }
+      },
+      "metrics": {
+        "prompt_tokens": 4977,
+        "completion_tokens": 85,
+        "cached_tokens": 3861,
+        "total_tokens": 5062
+      },
+      "llm_call_count": 1,
+      "extra": {
+        "event_type": "thinking",
+        "elapsed_s": 21.89164900779724,
+        "timestamp": 1790331726.981772,
+        "author": "swe_coder"
+      }
+    },
+    {
+      "step_id": 7,
+      "source": "agent",
+      "message": "The issue is here:\n```python\n    for param in params:\\n        param = param.strip()\\n        if param:\\n            key, value = param, True\\n            index_of_equals = param.find(\\\"=\\\")\\n            if index_of_equals != -1:\\n                key = param[:index_of_equals].strip(items_to_strip)\\n                value = param[index_of_equals + 1 :].strip(items_to_strip)\\n            params_dict[key.lower()] = value\n```\nIf `index_of_equals` is -1, `key` remains `param` and `value` remains `True`.\nThe issue says: \"Every RFC from 1521 to 9110 is clear that an `=` is required for a valid parameter. If it doesn't exist, we need to ignore it.\"\n\nSo if `index_of_equals == -1`, we should not add it to `params_dict`.\n\nLet's write a failing test to confirm this.",
+      "model_name": "google/gemma-4-31b-it",
+      "tool_calls": [
+        {
+          "tool_call_id": "call_15",
+          "function_name": "load_skill",
+          "arguments": {
+            "skill_name": "write-failing-test"
+          },
+          "extra": {
+            "elapsed_s": 29.63912606239319,
+            "timestamp": 1790331734.729249,
+            "author": "swe_coder",
+            "model_version": "google/gemma-4-31b-it"
+          }
+        }
+      ],
+      "observation": {
+        "content": "{\"skill_name\": \"write-failing-test\", \"instructions\": \"- Start from a copy, never from scratch: `show` the top of the closest test file (imports and module-level setup) and the closest test function, and copy them into /tmp/test_issue.py. Then change only the input and the assertion.\\n- Framework code (web apps, CLIs, ORMs, plugins) is tested through the setup the repo's tests already use (the app/route/test client, runner or session they build). Copy that setup exactly; an invented setup usually tests something else.\\n- Fixtures from the repo's `conftest.py` are NOT available in /tmp: copy the fixture's body into the test instead.\\n- Exceptions: `with pytest.raises(ValueError, match=re.escape(\\\"exact message\\\")):` (match is a regex searched in `str(exc)`, so escape it).\\n- Output: capture it into a string and compare the whole thing (`assert out == \\\"...\\\"`). When it fails, print `repr(out)` once to see spaces, newlines and escape codes.\\n- Warnings: `with pytest.warns(DeprecationWarning, match=\\\"...\\\"):`.\\n- Async code: call `asyncio.run(main())` inside a normal test function; no plugin needed.\\n- Several inputs: `@pytest.mark.parametrize(\\\"value\\\", [...])` with every case the issue names.\\n- Before the fix it must fail with the problem the issue describes. An ImportError, NameError or TypeError raised by the test itself means the test is wrong: fix the test.\\n- If it passes before the fix, that path already works: the bug is on another way into the same feature. Features usually have several (a single parameter vs a model/class/config object that groups them, sync vs async, one value vs a list, a function vs a method). List them, then test the next one. The closest existing test file's name often says which path the issue is about.\\n- After two passing attempts, stop writing tests: `grep` where the feature's option is read in the source and check each code path that reads it.\\n- Keep one test. Once /tmp/test_issue.py fails for the issue's reason, it is your only check: don't write other test files, don't mock internal functions, don't test third-party libraries.\\n- Trust the environment: it is offline and correctly installed. If a library seems broken, your usage is wrong (for example a real network call).\\n- A fix that doesn't change the test result is on the wrong line: `show` the rest of the function handling the value (especially loops after your edit) and trace where the bad value still gets through.\", \"frontmatter\": {\"name\": \"write-failing-test\", \"description\": \"How to write /tmp/test_issue.py so it fails for the issue's reason - exact exception messages, captured output, warnings, async code, and working without the repo's fixtures.\", \"license\": null, \"compatibility\": null, \"allowed_tools\": null, \"metadata\": {}}}",
+        "extra": {
+          "tool_name": "load_skill",
+          "elapsed_s": 29.64067316055298,
+          "timestamp": 1790331734.730796,
+          "author": "swe_coder"
+        }
+      },
+      "metrics": {
+        "prompt_tokens": 5385,
+        "completion_tokens": 257,
+        "cached_tokens": 4999,
+        "total_tokens": 5642
+      },
+      "llm_call_count": 1,
+      "extra": {
+        "event_type": "thinking",
+        "elapsed_s": 29.63912606239319,
+        "timestamp": 1790331734.729249,
+        "author": "swe_coder"
+      }
+    },
+    {
+      "step_id": 8,
+      "source": "agent",
+      "message": "I'll look for existing tests that use `_parse_content_type_header` or test `Content-Type` parsing. Since it's a utility function, it might be tested in `tests/test_utils.py`.",
+      "model_name": "google/gemma-4-31b-it",
+      "tool_calls": [
+        {
+          "tool_call_id": "call_18",
+          "function_name": "run_skill_script",
+          "arguments": {
+            "args": [
+              "grep",
+              "_parse_content_type_header",
+              "tests/test_utils.py"
+            ],
+            "file_path": "scripts/ct.py",
+            "skill_name": "code-tools"
+          },
+          "extra": {
+            "elapsed_s": 33.15653419494629,
+            "timestamp": 1790331738.2466571,
+            "author": "swe_coder",
+            "model_version": "google/gemma-4-31b-it"
+          }
+        }
+      ],
+      "observation": {
+        "content": "{\"skill_name\": \"code-tools\", \"file_path\": \"scripts/ct.py\", \"stdout\": \"tests/test_utils.py:17: _parse_content_type_header,\\ntests/test_utils.py:636: def test__parse_content_type_header(value, expected):\\ntests/test_utils.py:637: assert _parse_content_type_header(value) == expected\\n\", \"stderr\": \"\", \"status\": \"success\"}",
+        "extra": {
+          "tool_name": "run_skill_script",
+          "elapsed_s": 33.670756101608276,
+          "timestamp": 1790331738.760879,
+          "author": "swe_coder"
+        }
+      },
+      "metrics": {
+        "prompt_tokens": 6343,
+        "completion_tokens": 112,
+        "cached_tokens": 5617,
+        "total_tokens": 6455
+      },
+      "llm_call_count": 1,
+      "extra": {
+        "event_type": "thinking",
+        "elapsed_s": 33.15653419494629,
+        "timestamp": 1790331738.2466571,
+        "author": "swe_coder"
+      }
+    },
+    {
+      "step_id": 9,
+      "source": "agent",
+      "message": "Let's see `tests/test_utils.py` around line 636.",
+      "model_name": "google/gemma-4-31b-it",
+      "tool_calls": [
+        {
+          "tool_call_id": "call_21",
+          "function_name": "run_skill_script",
+          "arguments": {
+            "args": [
+              "show",
+              "tests/test_utils.py",
+              "630-650"
+            ],
+            "file_path": "scripts/ct.py",
+            "skill_name": "code-tools"
+          },
+          "extra": {
+            "elapsed_s": 34.92604899406433,
+            "timestamp": 1790331740.016172,
+            "author": "swe_coder",
+            "model_version": "google/gemma-4-31b-it"
+          }
+        }
+      ],
+      "observation": {
+        "content": "{\"skill_name\": \"code-tools\", \"file_path\": \"scripts/ct.py\", \"stdout\": \"# tests/test_utils.py lines 630-650 (copy text from here for edits; no line numbers inside)\\n                },\\n            ),\\n        ),\\n        (\\\"application/json ; ; \\\", (\\\"application/json\\\", {})),\\n    ),\\n)\\ndef test__parse_content_type_header(value, expected):\\n    assert _parse_content_type_header(value) == expected\\n\\n\\n@pytest.mark.parametrize(\\n    \\\"value, expected\\\",\\n    (\\n        (CaseInsensitiveDict(), None),\\n        (\\n            CaseInsensitiveDict({\\\"content-type\\\": \\\"application/json; charset=utf-8\\\"}),\\n            \\\"utf-8\\\",\\n        ),\\n        (CaseInsensitiveDict({\\\"content-type\\\": \\\"text/plain\\\"}), \\\"ISO-8859-1\\\"),\\n    ),\\n)\\n\", \"stderr\": \"\", \"status\": \"success\"}",
+        "extra": {
+          "tool_name": "run_skill_script",
+          "elapsed_s": 35.405336141586304,
+          "timestamp": 1790331740.495459,
+          "author": "swe_coder"
+        }
+      },
+      "metrics": {
+        "prompt_tokens": 6586,
+        "completion_tokens": 81,
+        "cached_tokens": 4832,
+        "total_tokens": 6667
+      },
+      "llm_call_count": 1,
+      "extra": {
+        "event_type": "thinking",
+        "elapsed_s": 34.92604899406433,
+        "timestamp": 1790331740.016172,
+        "author": "swe_coder"
+      }
+    },
+    {
+      "step_id": 10,
+      "source": "agent",
+      "message": "I need to see the parametrization for `test__parse_content_type_header`. It must be above line 636.",
+      "model_name": "google/gemma-4-31b-it",
+      "tool_calls": [
+        {
+          "tool_call_id": "call_24",
+          "function_name": "run_skill_script",
+          "arguments": {
+            "args": [
+              "show",
+              "tests/test_utils.py",
+              "610-636"
+            ],
+            "file_path": "scripts/ct.py",
+            "skill_name": "code-tools"
+          },
+          "extra": {
+            "elapsed_s": 37.33170795440674,
+            "timestamp": 1790331742.421831,
+            "author": "swe_coder",
+            "model_version": "google/gemma-4-31b-it"
+          }
+        }
+      ],
+      "observation": {
+        "content": "{\"skill_name\": \"code-tools\", \"file_path\": \"scripts/ct.py\", \"stdout\": \"# tests/test_utils.py lines 610-636 (copy text from here for edits; no line numbers inside)\\n        ),\\n        (\\n            \\\"multipart/form-data; boundary = something ; 'boundary2=something_else' ; no_equals \\\",\\n            (\\n                \\\"multipart/form-data\\\",\\n                {\\n                    \\\"boundary\\\": \\\"something\\\",\\n                    \\\"boundary2\\\": \\\"something_else\\\",\\n                    \\\"no_equals\\\": True,\\n                },\\n            ),\\n        ),\\n        (\\n            'multipart/form-data; boundary = something ; \\\"boundary2=something_else\\\" ; no_equals ',\\n            (\\n                \\\"multipart/form-data\\\",\\n                {\\n                    \\\"boundary\\\": \\\"something\\\",\\n                    \\\"boundary2\\\": \\\"something_else\\\",\\n                    \\\"no_equals\\\": True,\\n                },\\n            ),\\n        ),\\n        (\\\"application/json ; ; \\\", (\\\"application/json\\\", {})),\\n    ),\\n)\\ndef test__parse_content_type_header(value, expected):\\n\", \"stderr\": \"\", \"status\": \"success\"}",
+        "extra": {
+          "tool_name": "run_skill_script",
+          "elapsed_s": 37.82823300361633,
+          "timestamp": 1790331742.918356,
+          "author": "swe_coder"
+        }
+      },
+      "metrics": {
+        "prompt_tokens": 6923,
+        "completion_tokens": 89,
+        "cached_tokens": 6605,
+        "total_tokens": 7012
+      },
+      "llm_call_count": 1,
+      "extra": {
+        "event_type": "thinking",
+        "elapsed_s": 37.33170795440674,
+        "timestamp": 1790331742.421831,
+        "author": "swe_coder"
+      }
+    },
+    {
+      "step_id": 11,
+      "source": "agent",
+      "message": "Aha! There are existing tests that explicitly expect `True` when there is no equals sign:\n```python\n        (\n            \\\"multipart/form-data; boundary = something ; 'boundary2=something_else' ; no_equals \\\",\n            (\n                \\\"multipart/form-data\\\",\n                {\n                    \\\"boundary\\\": \\\"something\\\",\n                    \\\"boundary2\\\": \\\"something_else\\\",\n                    \\\"no_equals\\\": True,\n                },\n            ),\n        ),\n```\nThe issue says this behavior is wrong and should be changed to ignore it.\n\nNow let's write the failing test in `/tmp/test_issue.py`.",
+      "model_name": "google/gemma-4-31b-it",
+      "tool_calls": [
+        {
+          "tool_call_id": "call_27",
+          "function_name": "run_skill_script",
+          "arguments": {
+            "args": [
+              "write",
+              "/tmp/test_issue.py",
+              "import pytest\nfrom requests.utils import _parse_content_type_header\n\n@pytest.mark.parametrize(\n    \"value, expected\",\n    (\n        (\n            \"multipart/form-data; boundary = something ; 'boundary2=something_else' ; no_equals \",\n            (\n                \"multipart/form-data\",\n                {\n                    \"boundary\": \"something\",\n                    \"boundary2\": \"something_else\",\n                },\n            ),\n        ),\n    ),\n)\ndef test__parse_content_type_header_no_equals(value, expected):\n    assert _parse_content_type_header(value) == expected\n"
+            ],
+            "file_path": "scripts/ct.py",
+            "skill_name": "code-tools"
+          },
+          "extra": {
+            "elapsed_s": 44.39146018028259,
+            "timestamp": 1790331749.481583,
+            "author": "swe_coder",
+            "model_version": "google/gemma-4-31b-it"
+          }
+        }
+      ],
+      "observation": {
+        "content": "{\"skill_name\": \"code-tools\", \"file_path\": \"scripts/ct.py\", \"stdout\": \"OK: wrote /tmp/test_issue.py (575 chars)\\n\", \"stderr\": \"\", \"status\": \"success\"}",
+        "extra": {
+          "tool_name": "run_skill_script",
+          "elapsed_s": 44.84484505653381,
+          "timestamp": 1790331749.934968,
+          "author": "swe_coder"
+        }
+      },
+      "metrics": {
+        "prompt_tokens": 7308,
+        "completion_tokens": 345,
+        "cached_tokens": 6950,
+        "total_tokens": 7653
+      },
+      "llm_call_count": 1,
+      "extra": {
+        "event_type": "thinking",
+        "elapsed_s": 44.39146018028259,
+        "timestamp": 1790331749.481583,
+        "author": "swe_coder"
+      }
+    },
+    {
+      "step_id": 12,
+      "source": "agent",
+      "message": "Now run the test. It should fail because the current implementation will include `\"no_equals\": True`.",
+      "model_name": "google/gemma-4-31b-it",
+      "tool_calls": [
+        {
+          "tool_call_id": "call_30",
+          "function_name": "run_skill_script",
+          "arguments": {
+            "args": [
+              "run",
+              "python -m pytest /tmp/test_issue.py -q"
+            ],
+            "file_path": "scripts/ct.py",
+            "skill_name": "code-tools"
+          },
+          "extra": {
+            "elapsed_s": 47.34869623184204,
+            "timestamp": 1790331752.4388192,
+            "author": "swe_coder",
+            "model_version": "google/gemma-4-31b-it"
+          }
+        }
+      ],
+      "observation": {
+        "content": "{\"skill_name\": \"code-tools\", \"file_path\": \"scripts/ct.py\", \"stdout\": \"exit code 1\\nF                                                                        [100%]\\n=================================== FAILURES ===================================\\n_ test__parse_content_type_header_no_equals[multipart/form-data; boundary = something ; 'boundary2=something_else' ; no_equals -expected0] _\\n\\nvalue = \\\"multipart/form-data; boundary = something ; 'boundary2=something_else' ; no_equals \\\"\\nexpected = ('multipart/form-data', {'boundary': 'something', 'boundary2': 'something_else'})\\n\\n    @pytest.mark.parametrize(\\n        \\\"value, expected\\\",\\n        (\\n            (\\n                \\\"multipart/form-data; boundary = something ; 'boundary2=something_else' ; no_equals \\\",\\n                (\\n                    \\\"multipart/form-data\\\",\\n                    {\\n                        \\\"boundary\\\": \\\"something\\\",\\n                        \\\"boundary2\\\": \\\"something_else\\\",\\n                    },\\n                ),\\n            ),\\n        ),\\n    )\\n    def test__parse_content_type_header_no_equals(value, expected):\\n>       assert _parse_content_type_header(value) == expected\\nE       AssertionError: assert ('multipart/f...quals': True}) == ('multipart/f...ething_else'})\\nE         \\nE         At index 1 diff: {'boundary': 'something', 'boundary2': 'something_else', 'no_equals': True} != {'boundary': 'something', 'boundary2': 'something_else'}\\nE         Use -v to get more diff\\n\\n/tmp/test_issue.py:20: AssertionError\\n=========================== short test summary info ============================\\nFAILED ../tmp/test_issue.py::test__parse_content_type_header_no_equals[multipart/form-data; boundary = something ; 'boundary2=something_else' ; no_equals -expected0]\\n1 failed in 0.11s\\n\", \"stderr\": \"\", \"status\": \"success\"}",
+        "extra": {
+          "tool_name": "run_skill_script",
+          "elapsed_s": 48.33894896507263,
+          "timestamp": 1790331753.429072,
+          "author": "swe_coder"
+        }
+      },
+      "metrics": {
+        "prompt_tokens": 7725,
+        "completion_tokens": 79,
+        "cached_tokens": 7449,
+        "total_tokens": 7804
+      },
+      "llm_call_count": 1,
+      "extra": {
+        "event_type": "thinking",
+        "elapsed_s": 47.34869623184204,
+        "timestamp": 1790331752.4388192,
+        "author": "swe_coder"
+      }
+    },
+    {
+      "step_id": 13,
+      "source": "agent",
+      "message": "The test failed as expected. Now I will fix the code in `src/requests/utils.py`.\n\nI need to change the loop in `_parse_content_type_header` so it only adds to `params_dict` if `index_of_equals != -1`.\n\nCurrent code:\n```python\n    for param in params:\\n        param = param.strip()\\n        if param:\\n            key, value = param, True\\n            index_of_equals = param.find(\\\"=\\\")\\n            if index_of_equals != -1:\\n                key = param[:index_of_equals].strip(items_to_strip)\\n                value = param[index_of_equals + 1 :].strip(items_to_strip)\\n            params_dict[key.lower()] = value\n```\n\nModified code:\n```python\n    for param in params:\n        param = param.strip()\n        if param:\n            index_of_equals = param.find(\"=\")\n            if index_of_equals != -1:\n                key = param[:index_of_equals].strip(items_to_strip)\n                value = param[index_of_equals + 1 :].strip(items_to_strip)\n                params_dict[key.lower()] = value\n```\n\nWait, I should check if `key` could be empty. The original code had `key, value = param, True` if `index_of_equals == -1`.\n\nLet's see the original code again.\n```python\n    for param in params:\n        param = param.strip()\n        if param:\n            key, value = param, True\n            index_of_equals = param.find(\"=\")\n            if index_of_equals != -1:\n                key = param[:index_of_equals].strip(items_to_strip)\n                value = param[index_of_equals + 1 :].strip(items_to_strip)\n            params_dict[key.lower()] = value\n```\n\nIf `index_of_equals == -1`, `key` is `param` (stripped) and `value` is `True`.\n\nIf I change it to:\n```python\n    for param in params:\n        param = param.strip()\n        if param:\n            index_of_equals = param.find(\"=\")\n            if index_of_equals != -1:\n                key = param[:index_of_equals].strip(items_to_strip)\n                value = param[index_of_equals + 1 :].strip(items_to_strip)\n                params_dict[key.lower()] = value\n```\nThen parameters without `=` are ignored. This is what is requested.\n\nLet's apply the edit.",
+      "model_name": "google/gemma-4-31b-it",
+      "tool_calls": [
+        {
+          "tool_call_id": "call_33",
+          "function_name": "run_skill_script",
+          "arguments": {
+            "args": [
+              "edit",
+              "src/requests/utils.py",
+              "            key, value = param, True\n            index_of_equals = param.find(\"=\")\n            if index_of_equals != -1:\n                key = param[:index_of_equals].strip(items_to_strip)\n                value = param[index_of_equals + 1 :].strip(items_to_strip)\n            params_dict[key.lower()] = value",
+              "            index_of_equals = param.find(\"=\")\n            if index_of_equals != -1:\n                key = param[:index_of_equals].strip(items_to_strip)\n                value = param[index_of_equals + 1 :].strip(items_to_strip)\n                params_dict[key.lower()] = value"
+            ],
+            "file_path": "scripts/ct.py",
+            "skill_name": "code-tools"
+          },
+          "extra": {
+            "elapsed_s": 61.62124013900757,
+            "timestamp": 1790331766.711363,
+            "author": "swe_coder",
+            "model_version": "google/gemma-4-31b-it"
+          }
+        }
+      ],
+      "observation": {
+        "content": "{\"skill_name\": \"code-tools\", \"file_path\": \"scripts/ct.py\", \"stdout\": \"OK: 1 replacement(s) in src/requests/utils.py\\n@@ -519,3 +519,2 @@\\n         if param:\\n-            key, value = param, True\\n             index_of_equals = param.find(\\\"=\\\")\\n@@ -524,3 +523,3 @@\\n                 value = param[index_of_equals + 1 :].strip(items_to_strip)\\n-            params_dict[key.lower()] = value\\n+                params_dict[key.lower()] = value\\n     return content_type, params_dict\\n\", \"stderr\": \"\", \"status\": \"success\"}",
+        "extra": {
+          "tool_name": "run_skill_script",
+          "elapsed_s": 62.10475301742554,
+          "timestamp": 1790331767.194876,
+          "author": "swe_coder"
+        }
+      },
+      "metrics": {
+        "prompt_tokens": 8311,
+        "completion_tokens": 848,
+        "cached_tokens": 7745,
+        "total_tokens": 9159
+      },
+      "llm_call_count": 1,
+      "extra": {
+        "event_type": "thinking",
+        "elapsed_s": 61.62124013900757,
+        "timestamp": 1790331766.711363,
+        "author": "swe_coder"
+      }
+    },
+    {
+      "step_id": 14,
+      "source": "agent",
+      "message": "Now let's re-run the test.",
+      "model_name": "google/gemma-4-31b-it",
+      "tool_calls": [
+        {
+          "tool_call_id": "call_36",
+          "function_name": "run_skill_script",
+          "arguments": {
+            "args": [
+              "run",
+              "python -m pytest /tmp/test_issue.py -q"
+            ],
+            "file_path": "scripts/ct.py",
+            "skill_name": "code-tools"
+          },
+          "extra": {
+            "elapsed_s": 64.0518741607666,
+            "timestamp": 1790331769.141997,
+            "author": "swe_coder",
+            "model_version": "google/gemma-4-31b-it"
+          }
+        }
+      ],
+      "observation": {
+        "content": "{\"skill_name\": \"code-tools\", \"file_path\": \"scripts/ct.py\", \"stdout\": \"exit code 0\\n.                                                                        [100%]\\n1 passed in 0.05s\\n\", \"stderr\": \"\", \"status\": \"success\"}",
+        "extra": {
+          "tool_name": "run_skill_script",
+          "elapsed_s": 64.84749388694763,
+          "timestamp": 1790331769.9376168,
+          "author": "swe_coder"
+        }
+      },
+      "metrics": {
+        "prompt_tokens": 9358,
+        "completion_tokens": 68,
+        "cached_tokens": 8932,
+        "total_tokens": 9426
+      },
+      "llm_call_count": 1,
+      "extra": {
+        "event_type": "thinking",
+        "elapsed_s": 64.0518741607666,
+        "timestamp": 1790331769.141997,
+        "author": "swe_coder"
+      }
+    },
+    {
+      "step_id": 15,
+      "source": "agent",
+      "message": "Great. Now I must also run the original tests in `tests/test_utils.py` to see if I broke anything. I expect `test__parse_content_type_header` to fail now because it asserted the old behavior.",
+      "model_name": "google/gemma-4-31b-it",
+      "tool_calls": [
+        {
+          "tool_call_id": "call_39",
+          "function_name": "run_skill_script",
+          "arguments": {
+            "args": [
+              "run",
+              "python -m pytest tests/test_utils.py -q"
+            ],
+            "file_path": "scripts/ct.py",
+            "skill_name": "code-tools"
+          },
+          "extra": {
+            "elapsed_s": 72.76945304870605,
+            "timestamp": 1790331777.859576,
+            "author": "swe_coder",
+            "model_version": "google/gemma-4-31b-it"
+          }
+        }
+      ],
+      "observation": {
+        "content": "{\"skill_name\": \"code-tools\", \"file_path\": \"scripts/ct.py\", \"stdout\": \"exit code 1\\n... [first 8967 chars cut]\\nf...ething_else'}) == ('multipart/f...quals': True})\\nE         \\nE         At index 1 diff: {'boundary': 'something', 'boundary2': 'something_else'} != {'boundary': 'something', 'boundary2': 'something_else', 'no_equals': True}\\nE         Use -v to get more diff\\n\\ntests/test_utils.py:637: AssertionError\\n_ test__parse_content_type_header[multipart/form-data; boundary = something ; \\\"boundary2=something_else\\\" ; no_equals -expected7] _\\n\\nvalue = 'multipart/form-data; boundary = something ; \\\"boundary2=something_else\\\" ; no_equals '\\nexpected = ('multipart/form-data', {'boundary': 'something', 'boundary2': 'something_else', 'no_equals': True})\\n\\n    @pytest.mark.parametrize(\\n        \\\"value, expected\\\",\\n        (\\n            (\\\"application/xml\\\", (\\\"application/xml\\\", {})),\\n            (\\n                \\\"application/json ; charset=utf-8\\\",\\n                (\\\"application/json\\\", {\\\"charset\\\": \\\"utf-8\\\"}),\\n            ),\\n            (\\n                \\\"application/json ; Charset=utf-8\\\",\\n                (\\\"application/json\\\", {\\\"charset\\\": \\\"utf-8\\\"}),\\n            ),\\n            (\\\"text/plain\\\", (\\\"text/plain\\\", {})),\\n            (\\n                \\\"multipart/form-data; boundary = something ; boundary2='something_else' ; no_equals \\\",\\n                (\\n                    \\\"multipart/form-data\\\",\\n                    {\\n                        \\\"boundary\\\": \\\"something\\\",\\n                        \\\"boundary2\\\": \\\"something_else\\\",\\n                        \\\"no_equals\\\": True,\\n                    },\\n                ),\\n            ),\\n            (\\n                'multipart/form-data; boundary = something ; boundary2=\\\"something_else\\\" ; no_equals ',\\n                (\\n                    \\\"multipart/form-data\\\",\\n                    {\\n                        \\\"boundary\\\": \\\"something\\\",\\n                        \\\"boundary2\\\": \\\"something_else\\\",\\n                        \\\"no_equals\\\": True,\\n                    },\\n                ),\\n            ),\\n            (\\n                \\\"multipart/form-data; boundary = something ; 'boundary2=something_else' ; no_equals \\\",\\n                (\\n                    \\\"multipart/form-data\\\",\\n                    {\\n                        \\\"boundary\\\": \\\"something\\\",\\n                        \\\"boundary2\\\": \\\"something_else\\\",\\n                        \\\"no_equals\\\": True,\\n                    },\\n                ),\\n            ),\\n            (\\n                'multipart/form-data; boundary = something ; \\\"boundary2=something_else\\\" ; no_equals ',\\n                (\\n                    \\\"multipart/form-data\\\",\\n                    {\\n                        \\\"boundary\\\": \\\"something\\\",\\n                        \\\"boundary2\\\": \\\"something_else\\\",\\n                        \\\"no_equals\\\": True,\\n                    },\\n                ),\\n            ),\\n            (\\\"application/json ; ; \\\", (\\\"application/json\\\", {})),\\n        ),\\n    )\\n    def test__parse_content_type_header(value, expected):\\n>       assert _parse_content_type_header(value) == expected\\nE       AssertionError: assert ('multipart/f...ething_else'}) == ('multipart/f...quals': True})\\nE         \\nE         At index 1 diff: {'boundary': 'something', 'boundary2': 'something_else'} != {'boundary': 'something', 'boundary2': 'something_else', 'no_equals': True}\\nE         Use -v to get more diff\\n\\ntests/test_utils.py:637: AssertionError\\n=========================== short test summary info ============================\\nFAILED tests/test_utils.py::test__parse_content_type_header[multipart/form-data; boundary = something ; boundary2='something_else' ; no_equals -expected4]\\nFAILED tests/test_utils.py::test__parse_content_type_header[multipart/form-data; boundary = something ; boundary2=\\\"something_else\\\" ; no_equals -expected5]\\nFAILED tests/test_utils.py::test__parse_content_type_header[multipart/form-data; boundary = something ; 'boundary2=something_else' ; no_equals -expected6]\\nFAILED tests/test_utils.py::test__parse_content_type_header[multipart/form-data; boundary = something ; \\\"boundary2=something_else\\\" ; no_equals -expected7]\\n4 failed, 202 passed, 13 skipped in 0.21s\\n\", \"stderr\": \"\", \"status\": \"success\"}",
+        "extra": {
+          "tool_name": "run_skill_script",
+          "elapsed_s": 73.75878715515137,
+          "timestamp": 1790331778.84891,
+          "author": "swe_coder"
+        }
+      },
+      "metrics": {
+        "prompt_tokens": 9508,
+        "completion_tokens": 107,
+        "cached_tokens": 4,
+        "total_tokens": 9615
+      },
+      "llm_call_count": 1,
+      "extra": {
+        "event_type": "thinking",
+        "elapsed_s": 72.76945304870605,
+        "timestamp": 1790331777.859576,
+        "author": "swe_coder"
+      }
+    },
+    {
+      "step_id": 16,
+      "source": "agent",
+      "message": "As expected, the tests that depended on the old behavior failed. The instructions say: \"If an existing test fails only because it asserts the old behaviour the issue asks to change, that is expected: leave it, the hidden tests replace it.\"\n\nWait, I should re-read that part carefully: \"If an existing test fails only because it asserts the old behaviour the issue asks to change, that is expected: leave it, the hidden tests replace it.\"\n\nActually, usually in these tasks, I should not modify the tests in `tests/` folder, but I should ensure my fix is correct. The hidden tests will check the new behavior.\n\nLet's double check the diff.",
+      "model_name": "google/gemma-4-31b-it",
+      "tool_calls": [
+        {
+          "tool_call_id": "call_42",
+          "function_name": "run_skill_script",
+          "arguments": {
+            "args": [
+              "run",
+              "git diff"
+            ],
+            "file_path": "scripts/ct.py",
+            "skill_name": "code-tools"
+          },
+          "extra": {
+            "elapsed_s": 78.23342108726501,
+            "timestamp": 1790331783.323544,
+            "author": "swe_coder",
+            "model_version": "google/gemma-4-31b-it"
+          }
+        }
+      ],
+      "observation": {
+        "content": "{\"skill_name\": \"code-tools\", \"file_path\": \"scripts/ct.py\", \"stdout\": \"exit code 0\\ndiff --git a/src/requests/utils.py b/src/requests/utils.py\\nindex 54959bb8..805cf9d2 100644\\n--- a/src/requests/utils.py\\n+++ b/src/requests/utils.py\\n@@ -517,12 +517,11 @@ def _parse_content_type_header(header):\\n     for param in params:\\n         param = param.strip()\\n         if param:\\n-            key, value = param, True\\n             index_of_equals = param.find(\\\"=\\\")\\n             if index_of_equals != -1:\\n                 key = param[:index_of_equals].strip(items_to_strip)\\n                 value = param[index_of_equals + 1 :].strip(items_to_strip)\\n-            params_dict[key.lower()] = value\\n+                params_dict[key.lower()] = value\\n     return content_type, params_dict\\n\", \"stderr\": \"\", \"status\": \"success\"}",
+        "extra": {
+          "tool_name": "run_skill_script",
+          "elapsed_s": 78.77501606941223,
+          "timestamp": 1790331783.865139,
+          "author": "swe_coder"
+        }
+      },
+      "metrics": {
+        "prompt_tokens": 10735,
+        "completion_tokens": 187,
+        "cached_tokens": 9367,
+        "total_tokens": 10922
+      },
+      "llm_call_count": 1,
+      "extra": {
+        "event_type": "thinking",
+        "elapsed_s": 78.23342108726501,
+        "timestamp": 1790331783.323544,
+        "author": "swe_coder"
+      }
+    },
+    {
+      "step_id": 17,
+      "source": "agent",
+      "message": "The diff looks correct and minimal.\n\nI'll just make sure that I didn't miss any other place where `_parse_content_type_header` might be used or similar parsing logic exists. But the task was specifically about `_parse_content_type_header`.\n\nI've:\n1. Identified the function `_parse_content_type_header` in `src/requests/utils.py`.\n2. Wrote a failing test that reproduces the issue (parameters without `=` were being set to `True`).\n3. Fixed the code to skip parameters without `=`.\n4. Verified the fix with the repro test.\n5. Confirmed that existing tests failed because they expected the old (incorrect) behavior.\n\nI am confident in the fix.\n\nWait, one more check. Is it possible that `index_of_equals == 0`?\nIf `param` is `=value`, then `index_of_equals` is 0.\n`key = param[:0].strip(items_to_strip)` which is `\"\"`.\n`value = param[1:].strip(items_to_strip)` which is `value`.\n`params_dict[\"\"] = value`.\nThis seems fine, it follows the logic of stripping and splitting by `=`.\n\nWhat if `param` is `key=`?\n`index_of_equals` is `len(key)`.\n`key = param[:index_of_equals].strip(items_to_strip)` which is `key`.\n`value = param[index_of_equals + 1 :].strip(items_to_strip)` which is `\"\"`.\n`params_dict[key.lower()] = \"\"`.\nThis also seems fine.\n\nThe only change is that if there is no `=`, we ignore it.\n\nFinal check of the instructions: \"Never edit, add or delete tests, `conftest.py`, `pytest.ini`, CI or packaging files.\"\nSo I must NOT edit `tests/test_utils.py`. I should leave it as it is, even if it fails.\n\nI will submit the patch now.",
+      "model_name": "google/gemma-4-31b-it",
+      "tool_calls": [
+        {
+          "tool_call_id": "call_45",
+          "function_name": "submit_patch",
+          "arguments": {},
+          "extra": {
+            "elapsed_s": 89.59125709533691,
+            "timestamp": 1790331794.68138,
+            "author": "swe_coder",
+            "model_version": "google/gemma-4-31b-it"
+          }
+        }
+      ],
+      "observation": {
+        "content": "{\"status\": \"ok\", \"patch_size\": 692, \"files_changed\": 1}",
+        "extra": {
+          "tool_name": "submit_patch",
+          "elapsed_s": 89.82364797592163,
+          "timestamp": 1790331794.913771,
+          "author": "swe_coder"
+        }
+      },
+      "metrics": {
+        "prompt_tokens": 11226,
+        "completion_tokens": 466,
+        "cached_tokens": 10875,
+        "total_tokens": 11692
+      },
+      "llm_call_count": 1,
+      "extra": {
+        "event_type": "thinking",
+        "elapsed_s": 89.59125709533691,
+        "timestamp": 1790331794.68138,
+        "author": "swe_coder"
+      }
+    },
+    {
+      "step_id": 18,
+      "source": "agent",
+      "message": "I have successfully resolved the issue.",
+      "model_name": "google/gemma-4-31b-it",
+      "metrics": {
+        "prompt_tokens": 11737,
+        "completion_tokens": 127,
+        "cached_tokens": 11681,
+        "total_tokens": 11864
+      },
+      "llm_call_count": 1,
+      "extra": {
+        "event_type": "thinking",
+        "elapsed_s": 93.65283608436584,
+        "timestamp": 1790331798.742959,
+        "author": "swe_coder"
+      }
+    },
+    {
+      "step_id": 19,
+      "source": "agent",
+      "message": "The issue was that `_parse_content_type_header` in `src/requests/utils.py` incorrectly handled `Content-Type` parameters that lacked an `=` sign, assigning them a value of `True` instead of ignoring them as required by RFCs. I have updated the function to skip value assignment when no equals sign is found in the parameter string. This change was verified with a reproduction test, and it is consistent with the behavior described in the issue. Existing tests in the repository that asserted the old, incorrect behavior are expected to fail, as instructed.",
+      "model_name": "google/gemma-4-31b-it",
+      "llm_call_count": 1,
+      "extra": {
+        "event_type": "final",
+        "elapsed_s": 93.65283608436584,
+        "timestamp": 1790331798.742959,
+        "author": "swe_coder"
+      }
+    }
+  ],
+  "final_metrics": {
+    "total_prompt_tokens": 119158,
+    "total_completion_tokens": 3131,
+    "total_cached_tokens": 93402,
+    "total_tokens": 122289,
+    "total_steps": 19
+  }
+}

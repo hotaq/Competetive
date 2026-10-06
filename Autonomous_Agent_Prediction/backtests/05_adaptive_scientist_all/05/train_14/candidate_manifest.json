@@ -1,0 +1,161 @@
+{
+  "manifest_version": 1,
+  "classes": [
+    0,
+    1
+  ],
+  "rows": 10000,
+  "features": 23,
+  "recipe_id": "mixed-safe",
+  "planner": {
+    "source": "profile",
+    "valid": true,
+    "recipe_id": "mixed-safe"
+  },
+  "initial_candidates": [
+    "catboost_d6",
+    "lightgbm_native",
+    "logistic"
+  ],
+  "challenger_candidates": [
+    "interaction_te",
+    "blend_top3",
+    "hist_gradient"
+  ],
+  "candidates": [
+    {
+      "file": "candidate_catboost_d6.csv",
+      "state_file": "candidate_catboost_d6.npz",
+      "name": "catboost_d6",
+      "family": "catboost",
+      "role": "anchor",
+      "oof_auc": 0.80484012,
+      "fold_auc": [
+        0.80927833,
+        0.79904334,
+        0.80560903,
+        0.81048825,
+        0.80039248
+      ],
+      "fold_auc_std": 0.00459347,
+      "test_rank_correlation_to_best": 0.99388923
+    },
+    {
+      "file": "candidate_lightgbm_native.csv",
+      "state_file": "candidate_lightgbm_native.npz",
+      "name": "lightgbm_native",
+      "family": "lightgbm",
+      "role": "anchor",
+      "oof_auc": 0.80220496,
+      "fold_auc": [
+        0.809284,
+        0.80159135,
+        0.80267132,
+        0.80363691,
+        0.79777001
+      ],
+      "fold_auc_std": 0.00372395,
+      "test_rank_correlation_to_best": 0.9860311
+    },
+    {
+      "file": "candidate_logistic.csv",
+      "state_file": "candidate_logistic.npz",
+      "name": "logistic",
+      "family": "linear",
+      "role": "anchor",
+      "oof_auc": 0.68510724,
+      "fold_auc": [
+        0.68329477,
+        0.69892311,
+        0.66340894,
+        0.68737259,
+        0.6929135
+      ],
+      "fold_auc_std": 0.01209149,
+      "test_rank_correlation_to_best": 0.60875592
+    },
+    {
+      "file": "candidate_interaction_te.csv",
+      "state_file": "candidate_interaction_te.npz",
+      "name": "interaction_te",
+      "family": "interaction",
+      "role": "challenger",
+      "oof_auc": 0.74988169,
+      "fold_auc": [
+        0.7581585,
+        0.75733941,
+        0.74263345,
+        0.75500531,
+        0.75824326
+      ],
+      "fold_auc_std": 0.00593765,
+      "test_rank_correlation_to_best": 0.8746637
+    },
+    {
+      "file": "candidate_blend_top3.csv",
+      "state_file": "candidate_blend_top3.npz",
+      "name": "blend_top3",
+      "family": "blend",
+      "role": "challenger",
+      "oof_auc": 0.80688132,
+      "fold_auc": [],
+      "fold_auc_std": null,
+      "test_rank_correlation_to_best": 1.0
+    },
+    {
+      "file": "candidate_hist_gradient.csv",
+      "state_file": "candidate_hist_gradient.npz",
+      "name": "hist_gradient",
+      "family": "histogram",
+      "role": "challenger",
+      "oof_auc": 0.80229598,
+      "fold_auc": [
+        0.80308289,
+        0.80191947,
+        0.79911423,
+        0.8029598,
+        0.80474947
+      ],
+      "fold_auc_std": 0.00186123,
+      "test_rank_correlation_to_best": 0.99014071
+    }
+  ],
+  "diagnostics": {
+    "anchors": [
+      "catboost_d6",
+      "lightgbm_native",
+      "logistic"
+    ],
+    "guarded_selection": {
+      "best_core": {
+        "name": "catboost_d6",
+        "family": "catboost",
+        "oof_auc": 0.80484012
+      },
+      "blend_gate": {
+        "accepted": true,
+        "name": "blend_top3",
+        "oof_auc": 0.80688132,
+        "gain": 0.0020412,
+        "test_rank_correlation_to_best": 0.99388923
+      },
+      "interaction_gate": {
+        "accepted": false,
+        "name": "interaction_te",
+        "oof_auc": 0.74988169,
+        "standalone_gain": -0.05495843,
+        "blend_auc": 0.80216831,
+        "blend_gain": -0.00267181,
+        "fold_auc_std": 0.00593765,
+        "test_rank_correlation": 0.86221444,
+        "stable": true,
+        "diverse": true,
+        "improves": false
+      }
+    },
+    "recipe_candidates": [
+      "interaction_te"
+    ]
+  },
+  "failures": []
+}

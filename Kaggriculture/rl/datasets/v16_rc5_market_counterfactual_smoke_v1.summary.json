@@ -1,0 +1,121 @@
+{
+  "baseline_games": [
+    {
+      "candidate_money": 143053.0,
+      "candidate_residuals": 1,
+      "candidate_seat": 0,
+      "episode_index": 0,
+      "margin": 131209.0,
+      "opponent": "crop:MELON:6",
+      "opponent_money": 11844.0,
+      "seed": 708000
+    },
+    {
+      "candidate_money": 120116.0,
+      "candidate_residuals": 1,
+      "candidate_seat": 1,
+      "episode_index": 1,
+      "margin": 108272.0,
+      "opponent": "crop:MELON:6",
+      "opponent_money": 11844.0,
+      "seed": 708000
+    },
+    {
+      "candidate_money": 187835.0,
+      "candidate_residuals": 1,
+      "candidate_seat": 0,
+      "episode_index": 2,
+      "margin": 175991.0,
+      "opponent": "crop:MELON:6",
+      "opponent_money": 11844.0,
+      "seed": 708001
+    },
+    {
+      "candidate_money": 187835.0,
+      "candidate_residuals": 1,
+      "candidate_seat": 1,
+      "episode_index": 3,
+      "margin": 175991.0,
+      "opponent": "crop:MELON:6",
+      "opponent_money": 11844.0,
+      "seed": 708001
+    }
+  ],
+  "dataset": "/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/rl/datasets/v16_rc5_market_counterfactual_smoke_v1.npz",
+  "metadata": {
+    "base_seed": 708000,
+    "baseline_games": [
+      {
+        "candidate_money": 143053.0,
+        "candidate_residuals": 1,
+        "candidate_seat": 0,
+        "episode_index": 0,
+        "margin": 131209.0,
+        "opponent": "crop:MELON:6",
+        "opponent_money": 11844.0,
+        "seed": 708000
+      },
+      {
+        "candidate_money": 120116.0,
+        "candidate_residuals": 1,
+        "candidate_seat": 1,
+        "episode_index": 1,
+        "margin": 108272.0,
+        "opponent": "crop:MELON:6",
+        "opponent_money": 11844.0,
+        "seed": 708000
+      },
+      {
+        "candidate_money": 187835.0,
+        "candidate_residuals": 1,
+        "candidate_seat": 0,
+        "episode_index": 2,
+        "margin": 175991.0,
+        "opponent": "crop:MELON:6",
+        "opponent_money": 11844.0,
+        "seed": 708001
+      },
+      {
+        "candidate_money": 187835.0,
+        "candidate_residuals": 1,
+        "candidate_seat": 1,
+        "episode_index": 3,
+        "margin": 175991.0,
+        "opponent": "crop:MELON:6",
+        "opponent_money": 11844.0,
+        "seed": 708001
+      }
+    ],
+    "crop_opponents": [
+      [
+        "MELON",
+        6
+      ]
+    ],
+    "episodes": 4,
+    "file_opponents": [],
+    "holdout_fold": 1,
+    "holdout_mod": 2,
+    "limitation": "Each label measures one deviation followed by the live V16 teacher; labels are not assumed additive when multiple residuals are accepted.",
+    "max_candidates_per_game": 1,
+    "max_hands": 14,
+    "minimum_confidence": 0.99,
+    "model": "v16-market-single-deviation-counterfactual-v1",
+    "schema_version": 1,
+    "spatial_checkpoint": "/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/rl/checkpoints/v16_rc5_spatial_gru_bc_v1_e100.npz",
+    "spatial_checkpoint_sha256": "d471ce12ba45e84d9ca869caa4168ff4046b609b11f2c73beaff7d5f0680935b",
+    "teacher_path": "/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/submissions/meta_v16_rc5_robust_base_standalone/main.py",
+    "teacher_sha256": "f029fa0cb66a9eb509afbe44e3f59b800332d0419db91607183410e4089c4d19"
+  },
+  "summary": {
+    "beneficial": 0,
+    "best_margin_delta": -92.0,
+    "harmful": 4,
+    "holdout_rows": 2,
+    "mean_margin_delta": -111.0,
+    "neutral": 0,
+    "rows": 4,
+    "train_rows": 2,
+    "worst_margin_delta": -118.0
+  }
+}

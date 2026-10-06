@@ -1,0 +1,274 @@
+# Current 20+ Staged Batch
+
+- Source zip: `generated/local_plus_pixel_gate/submission.zip`
+- Staged zip: `generated/ready_pixel_gate_7397/submission.zip`
+- Cost report: `reports/local_plus_pixel_gate_task_costs.csv`
+- Local estimated points from scored rows: `7397.075265`
+- Tasks at 20+ (`cost <= 148`): `245`
+- Near-20 tasks (`149 <= cost <= 500`): `11`
+
+## 20+ Tasks
+
+| task | cost | points | bucket |
+| --- | ---: | ---: | --- |
+| task312 | 5 | 23.390562 | C_medium |
+| task047 | 17 | 22.166787 | B_template |
+| task053 | 17 | 22.166787 | B_template |
+| task067 | 17 | 22.166787 | A_exact |
+| task085 | 17 | 22.166787 | D_hard |
+| task127 | 17 | 22.166787 | B_template |
+| task141 | 17 | 22.166787 | D_hard |
+| task157 | 17 | 22.166787 | B_template |
+| task161 | 17 | 22.166787 | D_hard |
+| task220 | 17 | 22.166787 | C_medium |
+| task222 | 17 | 22.166787 | C_medium |
+| task224 | 17 | 22.166787 | D_hard |
+| task225 | 17 | 22.166787 | C_medium |
+| task229 | 17 | 22.166787 | C_medium |
+| task258 | 17 | 22.166787 | C_medium |
+| task267 | 17 | 22.166787 | C_medium |
+| task294 | 17 | 22.166787 | B_template |
+| task331 | 17 | 22.166787 | B_template |
+| task341 | 17 | 22.166787 | C_medium |
+| task385 | 17 | 22.166787 | C_medium |
+| task004 | 19 | 22.055561 | D_hard |
+| task015 | 19 | 22.055561 | B_template |
+| task073 | 19 | 22.055561 | B_template |
+| task081 | 19 | 22.055561 | B_template |
+| task098 | 19 | 22.055561 | D_hard |
+| task120 | 19 | 22.055561 | C_medium |
+| task122 | 19 | 22.055561 | C_medium |
+| task139 | 19 | 22.055561 | B_template |
+| task147 | 19 | 22.055561 | B_template |
+| task151 | 19 | 22.055561 | D_hard |
+| task180 | 19 | 22.055561 | C_medium |
+| task181 | 19 | 22.055561 | B_template |
+| task262 | 19 | 22.055561 | B_template |
+| task272 | 19 | 22.055561 | B_template |
+| task282 | 19 | 22.055561 | B_template |
+| task296 | 19 | 22.055561 | C_medium |
+| task320 | 19 | 22.055561 | C_medium |
+| task336 | 19 | 22.055561 | B_template |
+| task344 | 19 | 22.055561 | C_medium |
+| task352 | 19 | 22.055561 | C_medium |
+| task024 | 27 | 21.704163 | C_medium |
+| task063 | 27 | 21.704163 | C_medium |
+| task166 | 27 | 21.704163 | C_medium |
+| task254 | 27 | 21.704163 | B_template |
+| task288 | 27 | 21.704163 | C_medium |
+| task299 | 27 | 21.704163 | B_template |
+| task303 | 27 | 21.704163 | D_hard |
+| task323 | 27 | 21.704163 | B_template |
+| task012 | 28 | 21.667795 | C_medium |
+| task032 | 28 | 21.667795 | C_medium |
+| task104 | 28 | 21.667795 | B_template |
+| task023 | 33 | 21.503492 | C_medium |
+| task278 | 33 | 21.503492 | C_medium |
+| task334 | 36 | 21.416481 | C_medium |
+| task016 | 40 | 21.311121 | A_exact |
+| task276 | 40 | 21.311121 | A_exact |
+| task309 | 40 | 21.311121 | A_exact |
+| task337 | 40 | 21.311121 | A_exact |
+| task056 | 44 | 21.215810 | C_medium |
+| task077 | 56 | 20.974648 | D_hard |
+| task190 | 57 | 20.956949 | C_medium |
+| task186 | 61 | 20.889126 | B_template |
+| task092 | 63 | 20.856865 | D_hard |
+| task099 | 63 | 20.856865 | C_medium |
+| task129 | 63 | 20.856865 | B_template |
+| task132 | 63 | 20.856865 | D_hard |
+| task389 | 63 | 20.856865 | C_medium |
+| task002 | 67 | 20.795307 | C_medium |
+| task011 | 67 | 20.795307 | C_medium |
+| task026 | 67 | 20.795307 | A_exact |
+| task033 | 67 | 20.795307 | C_medium |
+| task037 | 67 | 20.795307 | C_medium |
+| task040 | 67 | 20.795307 | B_template |
+| task042 | 67 | 20.795307 | B_template |
+| task043 | 67 | 20.795307 | B_template |
+| task068 | 67 | 20.795307 | C_medium |
+| task070 | 67 | 20.795307 | C_medium |
+| task072 | 67 | 20.795307 | A_exact |
+| task075 | 67 | 20.795307 | C_medium |
+| task078 | 67 | 20.795307 | B_template |
+| task082 | 67 | 20.795307 | C_medium |
+| task093 | 67 | 20.795307 | C_medium |
+| task095 | 67 | 20.795307 | B_template |
+| task097 | 67 | 20.795307 | D_hard |
+| task105 | 67 | 20.795307 | C_medium |
+| task114 | 67 | 20.795307 | C_medium |
+| task116 | 67 | 20.795307 | C_medium |
+| task123 | 67 | 20.795307 | C_medium |
+| task126 | 67 | 20.795307 | D_hard |
+| task136 | 67 | 20.795307 | B_template |
+| task144 | 67 | 20.795307 | A_exact |
+| task146 | 67 | 20.795307 | B_template |
+| task153 | 67 | 20.795307 | C_medium |
+| task162 | 67 | 20.795307 | C_medium |
+| task169 | 67 | 20.795307 | B_template |
+| task192 | 67 | 20.795307 | D_hard |
+| task193 | 67 | 20.795307 | D_hard |
+| task221 | 67 | 20.795307 | D_hard |
+| task236 | 67 | 20.795307 | A_exact |
+| task240 | 67 | 20.795307 | C_medium |
+| task251 | 67 | 20.795307 | C_medium |
+| task256 | 67 | 20.795307 | C_medium |
+| task260 | 67 | 20.795307 | C_medium |
+| task261 | 67 | 20.795307 | C_medium |
+| task273 | 67 | 20.795307 | B_template |
+| task287 | 67 | 20.795307 | C_medium |
+| task289 | 67 | 20.795307 | D_hard |
+| task295 | 67 | 20.795307 | D_hard |
+| task302 | 67 | 20.795307 | B_template |
+| task304 | 67 | 20.795307 | C_medium |
+| task315 | 67 | 20.795307 | B_template |
+| task317 | 67 | 20.795307 | B_template |
+| task318 | 67 | 20.795307 | A_exact |
+| task326 | 67 | 20.795307 | A_exact |
+| task327 | 67 | 20.795307 | C_medium |
+| task335 | 67 | 20.795307 | C_medium |
+| task338 | 67 | 20.795307 | D_hard |
+| task345 | 67 | 20.795307 | B_template |
+| task348 | 67 | 20.795307 | C_medium |
+| task350 | 67 | 20.795307 | D_hard |
+| task371 | 67 | 20.795307 | C_medium |
+| task372 | 67 | 20.795307 | D_hard |
+| task374 | 67 | 20.795307 | B_template |
+| task025 | 69 | 20.765893 | D_hard |
+| task005 | 70 | 20.751505 | C_medium |
+| task008 | 70 | 20.751505 | C_medium |
+| task009 | 70 | 20.751505 | D_hard |
+| task010 | 70 | 20.751505 | B_template |
+| task013 | 70 | 20.751505 | D_hard |
+| task022 | 70 | 20.751505 | D_hard |
+| task041 | 70 | 20.751505 | C_medium |
+| task045 | 70 | 20.751505 | C_medium |
+| task046 | 70 | 20.751505 | D_hard |
+| task051 | 70 | 20.751505 | D_hard |
+| task060 | 70 | 20.751505 | C_medium |
+| task065 | 70 | 20.751505 | B_template |
+| task069 | 70 | 20.751505 | C_medium |
+| task090 | 70 | 20.751505 | C_medium |
+| task102 | 70 | 20.751505 | B_template |
+| task106 | 70 | 20.751505 | D_hard |
+| task128 | 70 | 20.751505 | C_medium |
+| task130 | 70 | 20.751505 | C_medium |
+| task148 | 70 | 20.751505 | C_medium |
+| task149 | 70 | 20.751505 | C_medium |
+| task189 | 70 | 20.751505 | C_medium |
+| task194 | 70 | 20.751505 | C_medium |
+| task197 | 70 | 20.751505 | D_hard |
+| task214 | 70 | 20.751505 | B_template |
+| task228 | 70 | 20.751505 | C_medium |
+| task234 | 70 | 20.751505 | D_hard |
+| task235 | 70 | 20.751505 | B_template |
+| task237 | 70 | 20.751505 | C_medium |
+| task243 | 70 | 20.751505 | D_hard |
+| task247 | 70 | 20.751505 | D_hard |
+| task250 | 70 | 20.751505 | B_template |
+| task252 | 70 | 20.751505 | D_hard |
+| task264 | 70 | 20.751505 | D_hard |
+| task265 | 70 | 20.751505 | B_template |
+| task270 | 70 | 20.751505 | C_medium |
+| task279 | 70 | 20.751505 | C_medium |
+| task281 | 70 | 20.751505 | D_hard |
+| task283 | 70 | 20.751505 | B_template |
+| task284 | 70 | 20.751505 | D_hard |
+| task286 | 70 | 20.751505 | D_hard |
+| task301 | 70 | 20.751505 | C_medium |
+| task306 | 70 | 20.751505 | D_hard |
+| task321 | 70 | 20.751505 | C_medium |
+| task328 | 70 | 20.751505 | D_hard |
+| task330 | 70 | 20.751505 | B_template |
+| task342 | 70 | 20.751505 | C_medium |
+| task346 | 70 | 20.751505 | B_template |
+| task354 | 70 | 20.751505 | C_medium |
+| task356 | 70 | 20.751505 | B_template |
+| task358 | 70 | 20.751505 | D_hard |
+| task362 | 70 | 20.751505 | B_template |
+| task364 | 70 | 20.751505 | C_medium |
+| task368 | 70 | 20.751505 | C_medium |
+| task376 | 70 | 20.751505 | D_hard |
+| task378 | 70 | 20.751505 | D_hard |
+| task094 | 71 | 20.737320 | B_template |
+| task343 | 71 | 20.737320 | C_medium |
+| task226 | 77 | 20.656195 | B_template |
+| task355 | 78 | 20.643291 | B_template |
+| task061 | 80 | 20.617973 | C_medium |
+| task160 | 80 | 20.617973 | B_template |
+| task027 | 81 | 20.605551 | B_template |
+| task340 | 85 | 20.557349 | D_hard |
+| task119 | 89 | 20.511364 | B_template |
+| task054 | 90 | 20.500190 | D_hard |
+| task103 | 94 | 20.456705 | B_template |
+| task399 | 99 | 20.404880 | C_medium |
+| task373 | 100 | 20.394830 | B_template |
+| task007 | 103 | 20.365271 | C_medium |
+| task083 | 103 | 20.365271 | C_medium |
+| task087 | 103 | 20.365271 | A_exact |
+| task111 | 103 | 20.365271 | B_template |
+| task140 | 103 | 20.365271 | A_exact |
+| task142 | 103 | 20.365271 | C_medium |
+| task152 | 103 | 20.365271 | C_medium |
+| task164 | 103 | 20.365271 | B_template |
+| task172 | 103 | 20.365271 | C_medium |
+| task175 | 103 | 20.365271 | C_medium |
+| task179 | 103 | 20.365271 | A_exact |
+| task210 | 103 | 20.365271 | B_template |
+| task223 | 103 | 20.365271 | C_medium |
+| task241 | 103 | 20.365271 | A_exact |
+| task274 | 103 | 20.365271 | C_medium |
+| task291 | 103 | 20.365271 | B_template |
+| task305 | 103 | 20.365271 | C_medium |
+| task311 | 103 | 20.365271 | B_template |
+| task322 | 103 | 20.365271 | C_medium |
+| task325 | 103 | 20.365271 | C_medium |
+| task359 | 103 | 20.365271 | D_hard |
+| task360 | 103 | 20.365271 | C_medium |
+| task380 | 103 | 20.365271 | A_exact |
+| task266 | 105 | 20.346040 | B_template |
+| task006 | 106 | 20.336561 | A_exact |
+| task145 | 106 | 20.336561 | C_medium |
+| task158 | 106 | 20.336561 | D_hard |
+| task227 | 106 | 20.336561 | B_template |
+| task347 | 106 | 20.336561 | B_template |
+| task386 | 106 | 20.336561 | A_exact |
+| task395 | 106 | 20.336561 | B_template |
+| task062 | 107 | 20.327171 | C_medium |
+| task125 | 107 | 20.327171 | B_template |
+| task349 | 109 | 20.308652 | D_hard |
+| task333 | 114 | 20.263802 | C_medium |
+| task003 | 117 | 20.237826 | B_template |
+| task196 | 117 | 20.237826 | C_medium |
+| task230 | 117 | 20.237826 | C_medium |
+| task232 | 117 | 20.237826 | D_hard |
+| task370 | 117 | 20.237826 | C_medium |
+| task298 | 122 | 20.195979 | C_medium |
+| task121 | 124 | 20.179718 | D_hard |
+| task269 | 126 | 20.163718 | D_hard |
+| task280 | 126 | 20.163718 | B_template |
+| task058 | 128 | 20.147970 | C_medium |
+| task167 | 134 | 20.102160 | B_template |
+| task212 | 137 | 20.080019 | B_template |
+| task292 | 137 | 20.080019 | C_medium |
+| task248 | 143 | 20.037155 | B_template |
+| task357 | 143 | 20.037155 | C_medium |
+| task050 | 147 | 20.009567 | C_medium |
+| task314 | 148 | 20.002788 | C_medium |
+| task375 | 148 | 20.002788 | C_medium |
+
+## Near-20 Queue
+
+| task | cost | points | bucket | ops |
+| --- | ---: | ---: | --- | --- |
+| task034 | 150 | 19.989365 | C_medium | Add;Cast;Compress;Constant;Greater;Max;Mul;Pad;ReduceMax;ReduceSum;Reshape;Sl... |
+| task064 | 153 | 19.969562 | C_medium | Cast;Compress;Constant;Conv;CumSum;Gather;Greater;Less;Mul;Pad;ReduceMax;Redu... |
+| task353 | 163 | 19.906250 | C_medium | Add;Compress;Concat;Constant;Greater;Min;Mul;Pad;ReduceMax;ReduceSum;Relu;Res... |
+| task171 | 196 | 19.721885 | C_medium | And;Cast;Compress;Constant;GatherND;Not;Squeeze |
+| task084 | 220 | 19.606372 | C_medium | Abs;Add;Cast;Compress;Constant;Greater;Less;Mul;ReduceMax;ReduceSum;Reshape;S... |
+| task246 | 227 | 19.575050 | C_medium | Add;Cast;Clip;Compress;Constant;Greater;MaxPool;Mul;ReduceMax;ReduceSum;Resha... |
+| task124 | 237 | 19.531940 | C_medium | Add;Cast;Compress;Constant;Greater;Identity;Less;Max;Mul;Pad;ReduceMax;Reduce... |
+| task339 | 258 | 19.447040 | D_hard | Cast;Compress;Concat;Constant;Gather;Greater;Pad;ReduceMax;ReduceSum;Reshape;... |
+| task017 | 281 | 19.361645 | C_medium | Add;Cast;Compress;Constant;Conv;Greater;Mul;ReduceMax;ReduceMin;ReduceSum;Res... |
+| task137 | 307 | 19.273152 | D_hard | Abs;Add;Cast;Compress;Constant;Div;Equal;Greater;Max;Mul;ReduceSum;Reshape;Sl... |
+| task176 | 359 | 19.116678 | C_medium | And;Cast;Compress;Concat;Constant;Identity;Not;Reshape;Slice |

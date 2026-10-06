@@ -1,0 +1,83 @@
+{
+  "candidate": {
+    "agent_file": "artifacts/dist/temporal_tape_selector_v9_21_safe64_sparse/main.py",
+    "fallback_agent_file": null,
+    "sha256": "13286fbc4ce3ea5d78cc913736028d6c8a61a53f3643b142ec3255d8f771b290"
+  },
+  "episodes": [
+    {
+      "candidate_margin": 3063.0,
+      "candidate_money": 88736.0,
+      "episode_id": 93767766,
+      "fallback_components": 0,
+      "farmer_sanitized_steps": 0,
+      "hands_sanitized_steps": 16,
+      "market_sanitized_steps": 146,
+      "normalized_steps": 0,
+      "original_opponent_money": 68140.0,
+      "original_top1_money": 66972.0,
+      "sanitized_steps": 161,
+      "seed": 1696916094,
+      "steps": 719,
+      "tape_top1_money": 85673.0,
+      "top1_seat": 0
+    },
+    {
+      "candidate_margin": 7893.0,
+      "candidate_money": 78586.0,
+      "episode_id": 93759682,
+      "fallback_components": 0,
+      "farmer_sanitized_steps": 1,
+      "hands_sanitized_steps": 52,
+      "market_sanitized_steps": 134,
+      "normalized_steps": 0,
+      "original_opponent_money": 59656.0,
+      "original_top1_money": 69581.0,
+      "sanitized_steps": 170,
+      "seed": 1832775276,
+      "steps": 719,
+      "tape_top1_money": 70693.0,
+      "top1_seat": 1
+    }
+  ],
+  "limitation": "Recorded Top-1 actions are an action tape, not a live policy; changing the opponent can make later tape actions stale or illegal.",
+  "source": {
+    "competition": "kaggriculture",
+    "leader": {
+      "score": 3191.5,
+      "submission_date": "2026-08-17T14:08:48.060Z",
+      "team_id": 16677252,
+      "team_name": "\u30ab\u30ef\u30b7\u30ae"
+    },
+    "manifest_created_at": "2026-08-17T15:54:34.692339+00:00",
+    "submission": {
+      "date": "2026-08-16T01:30:54.743Z",
+      "public_score": 3191.5,
+      "submission_id": 55540317
+    }
+  },
+  "summary": {
+    "cvar10_margin": 3063.0,
+    "draws": 0,
+    "fallback_components": 0,
+    "farmer_sanitized_steps": 1,
+    "games": 2,
+    "hands_sanitized_steps": 68,
+    "losses": 0,
+    "market_sanitized_steps": 280,
+    "mean_margin": 5478.0,
+    "mean_money": 83661.0,
+    "median_margin": 5478.0,
+    "normalized_steps": 0,
+    "sanitized_steps": 331,
+    "win_rate": 1.0,
+    "wins": 2,
+    "worst_margin": 3063.0,
+    "worst_money": 78586.0
+  },
+  "validation": {
+    "action_alignment": "steps[1:] actions produce observations in the same frame",
+    "all_original_replays_exact": true,
+    "candidate_actions_sanitized": true
+  }
+}

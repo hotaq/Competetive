@@ -1,0 +1,48 @@
+{
+  "baseline_reproduction_gap": 0.007648645231960738,
+  "best_challenger": {
+    "bootstrap_ci_high": 0.010982697487442414,
+    "bootstrap_ci_low": -0.0012378524237904678,
+    "bootstrap_win_rate": 0.9405,
+    "delta_vs_legacy": 0.004381227238028806,
+    "go_hidden_test": true,
+    "macro_auc": 0.9174298724699895,
+    "policy": "safe_resample",
+    "targets_lost": 4,
+    "targets_won": 7
+  },
+  "checkpoint": "raptor_ft_coatnet_v4_full.pt",
+  "decision": "GO_BUILD_HIDDEN_INFERENCE",
+  "experiment": "E025 CoAtNet Gold58 window-safety ablation",
+  "macro_auc": {
+    "legacy": 0.9130486452319607,
+    "minimal_repair": 0.9135473414160412,
+    "safe_resample": 0.9174298724699895
+  },
+  "policies": [
+    "legacy",
+    "safe_resample",
+    "minimal_repair"
+  ],
+  "reported_reference_gold58": 0.9054,
+  "study_stats": {
+    "mean_legacy_unsafe_windows": 7.241379310344827,
+    "mean_repaired_positions": 7.241379310344827,
+    "mean_unsafe_attention_by_target": {
+      "ACL": 0.011195342056453228,
+      "Baker's": 0.08188048750162125,
+      "Contusion": 0.02233143150806427,
+      "Effusion": 0.046376995742321014,
+      "Fracture": 0.04337193816900253,
+      "Lateral Meniscus": 0.030378811061382294,
+      "Lateral OA": 0.044369593262672424,
+      "MCL": 0.07777330279350281,
+      "Medial Meniscus": 0.03426294028759003,
+      "Medial OA": 0.04629819095134735,
+      "PF OA": 0.03823887184262276,
+      "Synovitis": 0.056878577917814255
+    },
+    "studies_with_unsafe_windows": 58
+  },
+  "submission_created": false
+}

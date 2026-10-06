@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-08-26T01:32:19.241153+00:00",
+  "environment": "kaggle_environments:kaggriculture",
+  "method": "live_two_player_seat_swapped",
+  "candidate": {
+    "agent_file": "/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/submissions/meta_v33_arman_orphan_recovery_local/main.py",
+    "sha256": "53a94d5b575fb3068c18b414dab820da201cbce674bf84c884af8b6e3305a78b"
+  },
+  "reference": {
+    "agent_file": "/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/submissions/meta_v26_v22_projected_wool_sale_standalone/main.py",
+    "sha256": "d9ab9d73e1a430c4bdbc7ed8388ef119fbf806a19e1543bdeb91aefd46fd086a"
+  },
+  "configuration": {
+    "starting_seed": 26121007,
+    "paired_seeds": 1,
+    "games": 2
+  },
+  "summary": {
+    "wins": 2,
+    "draws": 0,
+    "losses": 0,
+    "win_rate": 1.0,
+    "mean_margin": 1360.0,
+    "median_margin": 1360.0,
+    "worst_margin": 1154.0,
+    "cvar10_margin": 1154.0,
+    "mean_money": 101742.5,
+    "worst_money": 100657.0,
+    "all_done": true,
+    "max_action_ms": 30.529083000146784
+  },
+  "paired_seeds": [
+    {
+      "seed": 26121007,
+      "games": 2,
+      "mean_margin": 1360.0,
+      "worst_margin": 1154.0
+    }
+  ],
+  "games": [
+    {
+      "seed": 26121007,
+      "candidate_seat": 0,
+      "initial_prices": {
+        "WHEAT": 25.0,
+        "CARROT": 35.0,
+        "TOMATO": 60.0,
+        "STRAWBERRY": 120.0,
+        "MELON": 250.0,
+        "EGG": 50.0,
+        "MILK": 160.0,
+        "WOOL": 200.0,
+        "FERTILIZER": 100.0
+      },
+      "candidate_money": 100657.0,
+      "reference_money": 99503.0,
+      "margin": 1154.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 30.529083000146784
+    },
+    {
+      "seed": 26121007,
+      "candidate_seat": 1,
+      "initial_prices": {
+        "WHEAT": 25.0,
+        "CARROT": 35.0,
+        "TOMATO": 60.0,
+        "STRAWBERRY": 120.0,
+        "MELON": 250.0,
+        "EGG": 50.0,
+        "MILK": 160.0,
+        "WOOL": 200.0,
+        "FERTILIZER": 100.0
+      },
+      "candidate_money": 102828.0,
+      "reference_money": 101262.0,
+      "margin": 1566.0,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "turns": 719,
+      "max_action_ms": 21.042207998107187
+    }
+  ]
+}

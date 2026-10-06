@@ -1,0 +1,1085 @@
+{
+  "forumTopic": {
+    "authorId": 6624777,
+    "authorThumbnailName": "6624777-kg.jpg",
+    "authorUserDisplayName": "c-number",
+    "authorUserName": "cnumber",
+    "comments": [
+      {
+        "id": 3439425,
+        "postDate": "2026-04-10T17:24:28.347Z",
+        "rawMarkdown": "@cnumber Thanks for raising this, it is a recurring issue in Kaggle competitions. Not kaggle fault, rather the complexity of IP laws and regulations.\n\nDisclaimer: We cannot provide legal advice. Contact someone trained on US IP laws if you need advice.\n\nWith the above disclaimer, here is our thought.\n\nThe purpose of this competition is not to train models that would compete with commercial models. NVIDIA will not reuse the adapters produced by participants. After all, we could train models ourselves if that was our intent, given we have the data generator.\n\nThe goal of the competition is to see how people manage to fine tune Nemotron model. The pipelines are more interesting to us than the outcome.\n\nGiven the above, we won't bother if people distill models for this competition provided that the only limit to model output use is to forbid training competing models. In particular, distilling Gemini Flash 2.0 outputs looks fine for this competition. For any other use please check with someone trained in IP law.\n\n",
+        "content": "<p><a href=\"https://www.kaggle.com/cnumber\" target=\"_blank\">@cnumber</a> Thanks for raising this, it is a recurring issue in Kaggle competitions. Not kaggle fault, rather the complexity of IP laws and regulations.</p>\n<p>Disclaimer: We cannot provide legal advice. Contact someone trained on US IP laws if you need advice.</p>\n<p>With the above disclaimer, here is our thought.</p>\n<p>The purpose of this competition is not to train models that would compete with commercial models. NVIDIA will not reuse the adapters produced by participants. After all, we could train models ourselves if that was our intent, given we have the data generator.</p>\n<p>The goal of the competition is to see how people manage to fine tune Nemotron model. The pipelines are more interesting to us than the outcome.</p>\n<p>Given the above, we won't bother if people distill models for this competition provided that the only limit to model output use is to forbid training competing models. In particular, distilling Gemini Flash 2.0 outputs looks fine for this competition. For any other use please check with someone trained in IP law.</p>",
+        "replies": [
+          {
+            "id": 3439627,
+            "postDate": "2026-04-11T02:27:40.163Z",
+            "rawMarkdown": "Thank you for the confirmation!\n\nI am now confident that top players will distill frontier models for some tasks, but still there will be a huge gap between a simple distilation solution and the top solutions.",
+            "content": "<p>Thank you for the confirmation!</p>\n<p>I am now confident that top players will distill frontier models for some tasks, but still there will be a huge gap between a simple distilation solution and the top solutions.</p>",
+            "parent": {},
+            "author": {
+              "displayName": "c-number",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/6624777-kg.jpg",
+              "url": "/cnumber",
+              "tier": "GRANDMASTER",
+              "id": 6624777,
+              "progressionOptOut": false
+            },
+            "authorType": "TOPIC",
+            "votes": {
+              "totalVotes": 1,
+              "canUpvote": true,
+              "totalUpvotes": 1
+            },
+            "kernelVersion": 0,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "teamUpInfo": {
+              "teamLeader": {
+                "displayName": "c-number",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/6624777-kg.jpg",
+                "url": "/cnumber",
+                "userName": "cnumber",
+                "tier": "GRANDMASTER",
+                "id": 6624777,
+                "profileUrl": "/cnumber",
+                "performanceTier": "GRANDMASTER",
+                "userId": 6624777,
+                "progressionOptOut": false
+              },
+              "intro": ""
+            }
+          },
+          {
+            "id": 3441383,
+            "postDate": "2026-04-13T22:00:11.687Z",
+            "rawMarkdown": "Anthropic, Open AI, and Google don't allow distillation for training models that will **COMPETE** with them, does that mean for this competitions we can distill them because a LORA adapter is not competing with them? ",
+            "content": "<p>Anthropic, Open AI, and Google don't allow distillation for training models that will <strong>COMPETE</strong> with them, does that mean for this competitions we can distill them because a LORA adapter is not competing with them? </p>",
+            "parent": {},
+            "author": {
+              "displayName": "Saicharan Ramineni",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/33573923-gr.jpg",
+              "url": "/godlydonuts",
+              "tier": "CONTRIBUTOR",
+              "id": 33573923,
+              "progressionOptOut": false
+            },
+            "authorType": "COMMENT",
+            "votes": {
+              "canUpvote": true
+            },
+            "kernelVersion": 0,
+            "competitionRanking": 87,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "teamUpInfo": {
+              "enabled": true,
+              "teamLeader": {
+                "displayName": "Saicharan Ramineni",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/33573923-gr.jpg",
+                "url": "/godlydonuts",
+                "userName": "godlydonuts",
+                "tier": "CONTRIBUTOR",
+                "id": 33573923,
+                "profileUrl": "/godlydonuts",
+                "performanceTier": "CONTRIBUTOR",
+                "userId": 33573923,
+                "progressionOptOut": false
+              },
+              "intro": "Anything and Everything to Win."
+            }
+          }
+        ],
+        "parent": {},
+        "author": {
+          "displayName": "CPMP",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/75976-gr.jpg",
+          "url": "/cpmpml",
+          "tier": "GRANDMASTER",
+          "id": 75976,
+          "progressionOptOut": false
+        },
+        "authorType": "HOST",
+        "votes": {
+          "totalVotes": 18,
+          "canUpvote": true,
+          "totalUpvotes": 18
+        },
+        "kernelVersion": 0,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "reactions": [
+          {
+            "emoji": "THANK_YOU",
+            "featuredUserNames": [
+              "hallayang",
+              "arunodhayan",
+              "honganzhu",
+              "ryotasueyoshi",
+              "cnumber",
+              "yukiokumura1",
+              "weedoo",
+              "barnobarno",
+              "mekory",
+              "oleksiinahirnyi"
+            ],
+            "userCount": 10
+          }
+        ]
+      },
+      {
+        "id": 3437179,
+        "postDate": "2026-04-07T09:36:53.053Z",
+        "rawMarkdown": "No, using such data will NOT lead to your account being deleted from the LB, there is no such rule.\n\nThe only possible worst case scenario is that you will not eligible to receive the monetary prize.\n\nBut some past Competition winner had been using output from Gemini to train their model and there is no words from either Google or Kaggle that it is not allow.",
+        "content": "<p>No, using such data will NOT lead to your account being deleted from the LB, there is no such rule.</p>\n<p>The only possible worst case scenario is that you will not eligible to receive the monetary prize.</p>\n<p>But some past Competition winner had been using output from Gemini to train their model and there is no words from either Google or Kaggle that it is not allow.</p>",
+        "replies": [
+          {
+            "id": 3438446,
+            "postDate": "2026-04-09T05:49:24.413Z",
+            "rawMarkdown": "Maybe you would want to have a look at this competition.\n\nDeepfake Detection Challenge\n\nhttps://www.kaggle.com/c/deepfake-detection-challenge/discussion/157925\n\nhttps://www.kaggle.com/c/deepfake-detection-challenge/discussion/158506",
+            "content": "<p>Maybe you would want to have a look at this competition.</p>\n<p>Deepfake Detection Challenge</p>\n<p><a href=\"https://www.kaggle.com/c/deepfake-detection-challenge/discussion/157925\" target=\"_blank\">https://www.kaggle.com/c/deepfake-detection-challenge/discussion/157925</a></p>\n<p><a href=\"https://www.kaggle.com/c/deepfake-detection-challenge/discussion/158506\" target=\"_blank\">https://www.kaggle.com/c/deepfake-detection-challenge/discussion/158506</a></p>",
+            "replies": [
+              {
+                "id": 3438459,
+                "postDate": "2026-04-09T06:22:04.813Z",
+                "rawMarkdown": "6 years ago, There is no use debating unless the host can confirm this. @cpmpml ",
+                "content": "<p>6 years ago, There is no use debating unless the host can confirm this. <a href=\"https://www.kaggle.com/cpmpml\" target=\"_blank\">@cpmpml</a> </p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Sangram Patil",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/23276411-kg.jpg?t=2026-03-28-14-12-16",
+                  "url": "/sangrampatil5150",
+                  "tier": "EXPERT",
+                  "id": 23276411,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "totalVotes": 1,
+                  "canUpvote": true,
+                  "totalUpvotes": 1
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 115,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Sangram Patil",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/23276411-kg.jpg?t=2026-03-28-14-12-16",
+                    "url": "/sangrampatil5150",
+                    "userName": "sangrampatil5150",
+                    "tier": "EXPERT",
+                    "id": 23276411,
+                    "profileUrl": "/sangrampatil5150",
+                    "performanceTier": "EXPERT",
+                    "userId": 23276411,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              },
+              {
+                "id": 3438493,
+                "postDate": "2026-04-09T08:44:36.593Z",
+                "rawMarkdown": "Its in judgement of host to remove participants from LB that do not comply with rules. And although we will discuss such cases internally I can tell you I am personally very much against that people would get medals when they are not eligible for a monetary prize ",
+                "content": "<p>Its in judgement of host to remove participants from LB that do not comply with rules. And although we will discuss such cases internally I can tell you I am personally very much against that people would get medals when they are not eligible for a monetary prize </p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Dieter",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1424766-kg.png",
+                  "url": "/christofhenkel",
+                  "tier": "GRANDMASTER",
+                  "id": 1424766,
+                  "progressionOptOut": false
+                },
+                "authorType": "HOST",
+                "votes": {
+                  "totalVotes": 5,
+                  "canUpvote": true,
+                  "totalUpvotes": 5
+                },
+                "kernelVersion": 0,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "reactions": [
+                  {
+                    "emoji": "SURPRISE",
+                    "featuredUserNames": [
+                      "sangrampatil5150"
+                    ],
+                    "userCount": 1
+                  }
+                ]
+              }
+            ],
+            "parent": {},
+            "author": {
+              "displayName": "c-number",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/6624777-kg.jpg",
+              "url": "/cnumber",
+              "tier": "GRANDMASTER",
+              "id": 6624777,
+              "progressionOptOut": false
+            },
+            "authorType": "TOPIC",
+            "votes": {
+              "totalVotes": 1,
+              "canUpvote": true,
+              "totalUpvotes": 1
+            },
+            "kernelVersion": 0,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "teamUpInfo": {
+              "teamLeader": {
+                "displayName": "c-number",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/6624777-kg.jpg",
+                "url": "/cnumber",
+                "userName": "cnumber",
+                "tier": "GRANDMASTER",
+                "id": 6624777,
+                "profileUrl": "/cnumber",
+                "performanceTier": "GRANDMASTER",
+                "userId": 6624777,
+                "progressionOptOut": false
+              },
+              "intro": ""
+            }
+          },
+          {
+            "id": 3438721,
+            "postDate": "2026-04-09T16:14:28.083Z",
+            "rawMarkdown": "> The only possible worst case scenario is that you will not eligible to receive the monetary prize.\n\nNope. We can remove anyone who doesn't comply with the rules.",
+            "content": "<blockquote>\n  <p>The only possible worst case scenario is that you will not eligible to receive the monetary prize.</p>\n</blockquote>\n<p>Nope. We can remove anyone who doesn't comply with the rules.</p>",
+            "parent": {},
+            "author": {
+              "displayName": "CPMP",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/75976-gr.jpg",
+              "url": "/cpmpml",
+              "tier": "GRANDMASTER",
+              "id": 75976,
+              "progressionOptOut": false
+            },
+            "authorType": "HOST",
+            "votes": {
+              "canUpvote": true
+            },
+            "kernelVersion": 0,
+            "feedbackTrackingData": {},
+            "isThankYou": false
+          }
+        ],
+        "parent": {},
+        "author": {
+          "displayName": "Chew Kok Wah",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+          "url": "/chewkokwahibrainai",
+          "tier": "EXPERT",
+          "id": 3967558,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "totalVotes": 3,
+          "canUpvote": true,
+          "totalUpvotes": 3
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 47,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Chew Kok Wah",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+            "url": "/chewkokwahibrainai",
+            "userName": "chewkokwahibrainai",
+            "tier": "EXPERT",
+            "id": 3967558,
+            "profileUrl": "/chewkokwahibrainai",
+            "performanceTier": "EXPERT",
+            "userId": 3967558,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3438798,
+        "postDate": "2026-04-09T18:13:36.227Z",
+        "rawMarkdown": "In the 2025 edition of ARC-AGI-2, it looked as though NVARC (NVIDIA's 1st place solution) found it permissible to use Claude to generate some limited types of synthetic data (see https://www.kaggle.com/datasets/sorokin/nvarc-artifacts-puzzles ). The creator of that dataset wrote:\n\n>License concerns: In case you need to filter the records created using Claude model, you have to filter all the records that contain [\"summary1\", \"summary5\", \"summary6\"] or [\"mix\"]. \n\nThat text suggests that they were aware that Claude usage could lead to license concerns.  Maybe there are some nuances about how synthetic data from Claude can be used, e.g. perhaps it's okay to generate text summaries that then generate code, but it's not okay to generate reasoning traces, though I would be interested in more certainty on where that boundary is located.",
+        "content": "<p>In the 2025 edition of ARC-AGI-2, it looked as though NVARC (NVIDIA's 1st place solution) found it permissible to use Claude to generate some limited types of synthetic data (see <a href=\"https://www.kaggle.com/datasets/sorokin/nvarc-artifacts-puzzles\" target=\"_blank\">https://www.kaggle.com/datasets/sorokin/nvarc-artifacts-puzzles</a> ). The creator of that dataset wrote:</p>\n<blockquote>\n  <p>License concerns: In case you need to filter the records created using Claude model, you have to filter all the records that contain [\"summary1\", \"summary5\", \"summary6\"] or [\"mix\"]. </p>\n</blockquote>\n<p>That text suggests that they were aware that Claude usage could lead to license concerns.  Maybe there are some nuances about how synthetic data from Claude can be used, e.g. perhaps it's okay to generate text summaries that then generate code, but it's not okay to generate reasoning traces, though I would be interested in more certainty on where that boundary is located.</p>",
+        "replies": [
+          {
+            "id": 3438873,
+            "postDate": "2026-04-09T20:40:21.680Z",
+            "rawMarkdown": "Anthropic prohibits the use of Claude models output to train models that compete with them. That's why we put this warning in case people use our data to train models that could compete with Anthropic.\n",
+            "content": "<p>Anthropic prohibits the use of Claude models output to train models that compete with them. That's why we put this warning in case people use our data to train models that could compete with Anthropic.</p>",
+            "replies": [
+              {
+                "id": 3438874,
+                "postDate": "2026-04-09T20:49:39.517Z",
+                "rawMarkdown": "Thanks, your response makes perfect sense. I don't believe a LoRA adapter for this Kaggle contest competes with Anthropic, so by the same reasoning it seems we should be permitted to use Claude here. ",
+                "content": "<p>Thanks, your response makes perfect sense. I don't believe a LoRA adapter for this Kaggle contest competes with Anthropic, so by the same reasoning it seems we should be permitted to use Claude here. </p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Halla Yang",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/36141-fb.jpg",
+                  "url": "/hallayang",
+                  "tier": "GRANDMASTER",
+                  "id": 36141,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "totalVotes": 1,
+                  "canUpvote": true,
+                  "totalUpvotes": 1
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 854,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Halla Yang",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/36141-fb.jpg",
+                    "url": "/hallayang",
+                    "userName": "hallayang",
+                    "tier": "GRANDMASTER",
+                    "id": 36141,
+                    "profileUrl": "/hallayang",
+                    "performanceTier": "GRANDMASTER",
+                    "userId": 36141,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              },
+              {
+                "id": 3440504,
+                "postDate": "2026-04-12T13:32:54.447Z",
+                "rawMarkdown": "",
+                "parent": {},
+                "author": {
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+                  "url": "/"
+                },
+                "authorType": "COMMENT",
+                "votes": {},
+                "canDelete": true,
+                "isUserAuthor": true,
+                "isDeleted": true,
+                "kernelVersion": 0,
+                "feedbackTrackingData": {},
+                "isThankYou": false
+              }
+            ],
+            "parent": {},
+            "author": {
+              "displayName": "CPMP",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/75976-gr.jpg",
+              "url": "/cpmpml",
+              "tier": "GRANDMASTER",
+              "id": 75976,
+              "progressionOptOut": false
+            },
+            "authorType": "HOST",
+            "votes": {
+              "totalVotes": 1,
+              "canUpvote": true,
+              "totalUpvotes": 1
+            },
+            "kernelVersion": 0,
+            "feedbackTrackingData": {},
+            "isThankYou": false
+          }
+        ],
+        "parent": {},
+        "author": {
+          "displayName": "Halla Yang",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/36141-fb.jpg",
+          "url": "/hallayang",
+          "tier": "GRANDMASTER",
+          "id": 36141,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "totalVotes": 1,
+          "canUpvote": true,
+          "totalUpvotes": 1
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 854,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "reactions": [
+          {
+            "emoji": "LOVE",
+            "featuredUserNames": [
+              "komilparmar"
+            ],
+            "userCount": 1
+          }
+        ],
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Halla Yang",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/36141-fb.jpg",
+            "url": "/hallayang",
+            "userName": "hallayang",
+            "tier": "GRANDMASTER",
+            "id": 36141,
+            "profileUrl": "/hallayang",
+            "performanceTier": "GRANDMASTER",
+            "userId": 36141,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3436211,
+        "postDate": "2026-04-05T14:11:07.477Z",
+        "rawMarkdown": "Wait, is Gemini-2.0-flash  does not allow for that ?\n\nComp. are not prohibiting closed-source APIs like Gemini or OpenAI for data generation\n\nAnd i gues ONLY Anthropic (Claude) Very strict!! so is fine!?\n\nhttps://www.kaggle.com/competitions/nvidia-nemotron-model-reasoning-challenge/discussion/684515#3429582",
+        "content": "<p>Wait, is Gemini-2.0-flash  does not allow for that ?</p>\n<p>Comp. are not prohibiting closed-source APIs like Gemini or OpenAI for data generation</p>\n<p>And i gues ONLY Anthropic (Claude) Very strict!! so is fine!?</p>\n<p><a href=\"https://www.kaggle.com/competitions/nvidia-nemotron-model-reasoning-challenge/discussion/684515#3429582\" target=\"_blank\">https://www.kaggle.com/competitions/nvidia-nemotron-model-reasoning-challenge/discussion/684515#3429582</a></p>",
+        "replies": [
+          {
+            "id": 3436223,
+            "postDate": "2026-04-05T14:33:18.977Z",
+            "rawMarkdown": "Google, OpenAI, and Anthropic all very strict about how their models are used.\n\nhttps://cloud.google.com/terms/service-terms\n\n> b. ​​Model Restrictions. Customer will not, and will not allow End Users to, use output from an AI/ML Service (including Generated Output) to: (i) substitute, replace, or circumvent the use of a Google Model, directly or indirectly, or (ii) create or improve models similar to a Google Model.\n\nInstead, you can use models that allow distilation, for example DeepSeek.",
+            "content": "<p>Google, OpenAI, and Anthropic all very strict about how their models are used.</p>\n<p><a href=\"https://cloud.google.com/terms/service-terms\" target=\"_blank\">https://cloud.google.com/terms/service-terms</a></p>\n<blockquote>\n  <p>b. ​​Model Restrictions. Customer will not, and will not allow End Users to, use output from an AI/ML Service (including Generated Output) to: (i) substitute, replace, or circumvent the use of a Google Model, directly or indirectly, or (ii) create or improve models similar to a Google Model.</p>\n</blockquote>\n<p>Instead, you can use models that allow distilation, for example DeepSeek.</p>",
+            "replies": [
+              {
+                "id": 3436227,
+                "postDate": "2026-04-05T14:39:48.493Z",
+                "rawMarkdown": "what about this:\n\n```python\nUse of Generated Content\n\nSome of our Services allow you to generate original content. Google won't claim ownership over that content. You acknowledge that Google may generate the same or similar content for others and that we reserve all rights to do so.\n...\n```\nSome of our Services allow you to generate original content. ->> Paid API Service\n\n`Google won't claim ownership over that content. `\n\nhttps://ai.google.dev/gemini-api/terms\n",
+                "content": "<p>what about this:</p>\n<pre><code>Use of Generated Content\n\nSome of our Services allow you to generate original content. Google won't claim ownership over that content. You acknowledge that Google may generate the same or similar content for others and that we reserve all rights to do so.\n...\n</code></pre>\n<p>Some of our Services allow you to generate original content. -&gt;&gt; Paid API Service</p>\n<p><code>Google won't claim ownership over that content.</code></p>\n<p><a href=\"https://ai.google.dev/gemini-api/terms\" target=\"_blank\">https://ai.google.dev/gemini-api/terms</a></p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Sangram Patil",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/23276411-kg.jpg?t=2026-03-28-14-12-16",
+                  "url": "/sangrampatil5150",
+                  "tier": "EXPERT",
+                  "id": 23276411,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "canUpvote": true
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 115,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Sangram Patil",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/23276411-kg.jpg?t=2026-03-28-14-12-16",
+                    "url": "/sangrampatil5150",
+                    "userName": "sangrampatil5150",
+                    "tier": "EXPERT",
+                    "id": 23276411,
+                    "profileUrl": "/sangrampatil5150",
+                    "performanceTier": "EXPERT",
+                    "userId": 23276411,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              },
+              {
+                "id": 3436239,
+                "postDate": "2026-04-05T14:59:28.760Z",
+                "rawMarkdown": "That is about ownership, not permitted use.\n\nGoogle saying it does not claim ownership over generated content does not mean distillation is allowed. The separate AI/ML terms still restrict using generated output to create or improve models similar to a Google Model.",
+                "content": "<p>That is about ownership, not permitted use.</p>\n<p>Google saying it does not claim ownership over generated content does not mean distillation is allowed. The separate AI/ML terms still restrict using generated output to create or improve models similar to a Google Model.</p>",
+                "parent": {},
+                "author": {
+                  "displayName": "c-number",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/6624777-kg.jpg",
+                  "url": "/cnumber",
+                  "tier": "GRANDMASTER",
+                  "id": 6624777,
+                  "progressionOptOut": false
+                },
+                "authorType": "TOPIC",
+                "votes": {
+                  "canUpvote": true
+                },
+                "kernelVersion": 0,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "isCollapsed": true,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "c-number",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/6624777-kg.jpg",
+                    "url": "/cnumber",
+                    "userName": "cnumber",
+                    "tier": "GRANDMASTER",
+                    "id": 6624777,
+                    "profileUrl": "/cnumber",
+                    "performanceTier": "GRANDMASTER",
+                    "userId": 6624777,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              },
+              {
+                "id": 3436240,
+                "postDate": "2026-04-05T15:01:52.387Z",
+                "rawMarkdown": "Thanks for a remainder. I'm just curious how 'similar' is being defined?",
+                "content": "<p>Thanks for a remainder. I'm just curious how 'similar' is being defined?</p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Yurnero",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/13977249-kg.jpg?t=2025-06-08-06-49-23",
+                  "url": "/samson8",
+                  "tier": "GRANDMASTER",
+                  "id": 13977249,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "totalVotes": 1,
+                  "canUpvote": true,
+                  "totalUpvotes": 1
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 924,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "isCollapsed": true,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Yurnero",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/13977249-kg.jpg?t=2025-06-08-06-49-23",
+                    "url": "/samson8",
+                    "userName": "samson8",
+                    "tier": "GRANDMASTER",
+                    "id": 13977249,
+                    "profileUrl": "/samson8",
+                    "performanceTier": "GRANDMASTER",
+                    "userId": 13977249,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              },
+              {
+                "id": 3436330,
+                "postDate": "2026-04-05T18:08:45.807Z",
+                "rawMarkdown": "```You may not use the Services to develop models that compete with the Services (e.g., Gemini API or Google AI Studio). You also may not attempt to reverse engineer, extract or replicate any component of the Services, including the underlying data or models (e.g., parameter weights).```\n\nThat page also has this. IMO Distilling here is not a violation. In previous competition's like llm detect ai generated content, competitor's have used gemini for essay writing and training models on it. \n@cpmpml  is gemini generated data allowed here?",
+                "content": "<p><code>You may not use the Services to develop models that compete with the Services (e.g., Gemini API or Google AI Studio). You also may not attempt to reverse engineer, extract or replicate any component of the Services, including the underlying data or models (e.g., parameter weights).</code></p>\n<p>That page also has this. IMO Distilling here is not a violation. In previous competition's like llm detect ai generated content, competitor's have used gemini for essay writing and training models on it. \n<a href=\"https://www.kaggle.com/cpmpml\" target=\"_blank\">@cpmpml</a>  is gemini generated data allowed here?</p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Kishan Vavdara",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/12951282-kg.jpeg",
+                  "url": "/kishanvavdara",
+                  "tier": "MASTER",
+                  "id": 12951282,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "totalVotes": 1,
+                  "canUpvote": true,
+                  "totalUpvotes": 2
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 6,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "isCollapsed": true,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Kishan Vavdara",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/12951282-kg.jpeg",
+                    "url": "/kishanvavdara",
+                    "userName": "kishanvavdara",
+                    "tier": "MASTER",
+                    "id": 12951282,
+                    "profileUrl": "/kishanvavdara",
+                    "performanceTier": "MASTER",
+                    "userId": 12951282,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              },
+              {
+                "id": 3438723,
+                "postDate": "2026-04-09T16:18:54.400Z",
+                "rawMarkdown": "> b. ​​Model Restrictions. Customer will not, and will not allow End Users to, use output from an AI/ML Service (including Generated Output) to: (i) substitute, replace, or circumvent the use of a Google Model, directly or indirectly, or (ii) create or improve models similar to a Google Model.\n\nThis is a fair observation. Participants should only use data for which they have proper license.\n\nIn this specific case, the competitions is not about creating a substitute for a Google model. NVIDIA is not going to use the LORA adapters from the participants. We are more interested in seeing how participants find ways to fine tune our model effectively.\n\nWe will come back for clarification on the license topic ASAP.",
+                "content": "<blockquote>\n  <p>b. ​​Model Restrictions. Customer will not, and will not allow End Users to, use output from an AI/ML Service (including Generated Output) to: (i) substitute, replace, or circumvent the use of a Google Model, directly or indirectly, or (ii) create or improve models similar to a Google Model.</p>\n</blockquote>\n<p>This is a fair observation. Participants should only use data for which they have proper license.</p>\n<p>In this specific case, the competitions is not about creating a substitute for a Google model. NVIDIA is not going to use the LORA adapters from the participants. We are more interested in seeing how participants find ways to fine tune our model effectively.</p>\n<p>We will come back for clarification on the license topic ASAP.</p>",
+                "parent": {},
+                "author": {
+                  "displayName": "CPMP",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/75976-gr.jpg",
+                  "url": "/cpmpml",
+                  "tier": "GRANDMASTER",
+                  "id": 75976,
+                  "progressionOptOut": false
+                },
+                "authorType": "HOST",
+                "votes": {
+                  "totalVotes": 6,
+                  "canUpvote": true,
+                  "totalUpvotes": 6
+                },
+                "kernelVersion": 0,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "isCollapsed": true,
+                "reactions": [
+                  {
+                    "emoji": "KAGGLE",
+                    "featuredUserNames": [
+                      "sangrampatil5150",
+                      "oleksiinahirnyi"
+                    ],
+                    "userCount": 2
+                  }
+                ]
+              }
+            ],
+            "parent": {},
+            "author": {
+              "displayName": "c-number",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/6624777-kg.jpg",
+              "url": "/cnumber",
+              "tier": "GRANDMASTER",
+              "id": 6624777,
+              "progressionOptOut": false
+            },
+            "authorType": "TOPIC",
+            "votes": {
+              "canUpvote": true
+            },
+            "kernelVersion": 0,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "teamUpInfo": {
+              "teamLeader": {
+                "displayName": "c-number",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/6624777-kg.jpg",
+                "url": "/cnumber",
+                "userName": "cnumber",
+                "tier": "GRANDMASTER",
+                "id": 6624777,
+                "profileUrl": "/cnumber",
+                "performanceTier": "GRANDMASTER",
+                "userId": 6624777,
+                "progressionOptOut": false
+              },
+              "intro": ""
+            }
+          }
+        ],
+        "parent": {},
+        "author": {
+          "displayName": "Sangram Patil",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/23276411-kg.jpg?t=2026-03-28-14-12-16",
+          "url": "/sangrampatil5150",
+          "tier": "EXPERT",
+          "id": 23276411,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "totalVotes": 1,
+          "canUpvote": true,
+          "totalUpvotes": 1
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 115,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Sangram Patil",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/23276411-kg.jpg?t=2026-03-28-14-12-16",
+            "url": "/sangrampatil5150",
+            "userName": "sangrampatil5150",
+            "tier": "EXPERT",
+            "id": 23276411,
+            "profileUrl": "/sangrampatil5150",
+            "performanceTier": "EXPERT",
+            "userId": 23276411,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3437009,
+        "postDate": "2026-04-07T01:43:08.377Z",
+        "rawMarkdown": "Bravo update @cnumber ",
+        "content": "<p>Bravo update <a href=\"https://www.kaggle.com/cnumber\" target=\"_blank\">@cnumber</a> </p>",
+        "parent": {},
+        "author": {
+          "displayName": "Navneet",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/15692441-kg.jpg?t=2025-05-18-07-58-06",
+          "url": "/navneetbende",
+          "tier": "CONTRIBUTOR",
+          "id": 15692441,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "totalVotes": -2,
+          "canUpvote": true,
+          "totalUpvotes": 1
+        },
+        "kernelVersion": 0,
+        "feedbackTrackingData": {},
+        "isThankYou": false
+      },
+      {
+        "id": 3436342,
+        "postDate": "2026-04-05T18:30:54.557Z",
+        "rawMarkdown": "https://www.kaggle.com/competitions/nvidia-nemotron-model-reasoning-challenge/discussion/684515#3429582\n\nHere is said by host we must comply by the term of LLM we use and the terms are we must not use the data generated by it to train model which would compete with them in market but for kaggle competition it's allowed ",
+        "content": "<p><a href=\"https://www.kaggle.com/competitions/nvidia-nemotron-model-reasoning-challenge/discussion/684515#3429582\" target=\"_blank\">https://www.kaggle.com/competitions/nvidia-nemotron-model-reasoning-challenge/discussion/684515#3429582</a></p>\n<p>Here is said by host we must comply by the term of LLM we use and the terms are we must not use the data generated by it to train model which would compete with them in market but for kaggle competition it's allowed </p>",
+        "replies": [
+          {
+            "id": 3436354,
+            "postDate": "2026-04-05T19:23:06.667Z",
+            "rawMarkdown": "Where does it say that for Kaggle Competition it's allowed?",
+            "content": "<p>Where does it say that for Kaggle Competition it's allowed?</p>",
+            "replies": [
+              {
+                "id": 3436459,
+                "postDate": "2026-04-06T02:07:07.833Z",
+                "rawMarkdown": "You can google it or ask the LLM it self, it's not allowed if the model is competing with LLM itself but for competitions there is no such problem for LLM in fact in competition many people purchase API which ultimately turns in their profit ",
+                "content": "<p>You can google it or ask the LLM it self, it's not allowed if the model is competing with LLM itself but for competitions there is no such problem for LLM in fact in competition many people purchase API which ultimately turns in their profit </p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Adarsh Kumar",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/25818777-kg.png?t=2026-04-20-16-49-43",
+                  "url": "/adarsh2626",
+                  "tier": "MASTER",
+                  "id": 25818777,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "totalVotes": 1,
+                  "canUpvote": true,
+                  "totalUpvotes": 1
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 557,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Muhammad Ibrahim Qasmi",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/24946333-kg.jpeg?t=2025-12-22-22-44-57",
+                    "url": "/ibrahimqasimi",
+                    "userName": "ibrahimqasimi",
+                    "tier": "GRANDMASTER",
+                    "id": 24946333,
+                    "profileUrl": "/ibrahimqasimi",
+                    "performanceTier": "GRANDMASTER",
+                    "userId": 24946333,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              },
+              {
+                "id": 3436563,
+                "postDate": "2026-04-06T08:32:01.487Z",
+                "rawMarkdown": "Paying for an API isn't a license to ignore its TOS. Since distillation is banned by closed-source providers, its better to use open-source models to keep your solution eligible and safe from disqualification.",
+                "content": "<p>Paying for an API isn't a license to ignore its TOS. Since distillation is banned by closed-source providers, its better to use open-source models to keep your solution eligible and safe from disqualification.</p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Deepak Saldanha",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/3928900-kg.jpg?t=2025-07-10-08-32-10",
+                  "url": "/deepaksaldanha",
+                  "tier": "CONTRIBUTOR",
+                  "id": 3928900,
+                  "progressionOptOut": true
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "canUpvote": true,
+                  "totalUpvotes": 1
+                },
+                "kernelVersion": 0,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Deepak Saldanha",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/3928900-kg.jpg?t=2025-07-10-08-32-10",
+                    "url": "/deepaksaldanha",
+                    "userName": "deepaksaldanha",
+                    "tier": "CONTRIBUTOR",
+                    "id": 3928900,
+                    "profileUrl": "/deepaksaldanha",
+                    "performanceTier": "CONTRIBUTOR",
+                    "userId": 3928900,
+                    "progressionOptOut": true
+                  },
+                  "intro": ""
+                }
+              },
+              {
+                "id": 3436618,
+                "postDate": "2026-04-06T10:51:58.107Z",
+                "rawMarkdown": "@deepaksaldanha Maybe you are right but only open source model that could produce good reasoning at this level is deekseek r1(as per my knowledge) and its 671B model need 1TB vram thats not possible for us and also rtx 6000 pro's env in offline so we even cannot use its 30B and 70B variants so in end we need to buy api to access the model ",
+                "content": "<p><a href=\"https://www.kaggle.com/deepaksaldanha\" target=\"_blank\">@deepaksaldanha</a> Maybe you are right but only open source model that could produce good reasoning at this level is deekseek r1(as per my knowledge) and its 671B model need 1TB vram thats not possible for us and also rtx 6000 pro's env in offline so we even cannot use its 30B and 70B variants so in end we need to buy api to access the model </p>",
+                "parent": {},
+                "author": {
+                  "displayName": "Adarsh Kumar",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/25818777-kg.png?t=2026-04-20-16-49-43",
+                  "url": "/adarsh2626",
+                  "tier": "MASTER",
+                  "id": 25818777,
+                  "progressionOptOut": false
+                },
+                "authorType": "COMMENT",
+                "votes": {
+                  "totalVotes": 1,
+                  "canUpvote": true,
+                  "totalUpvotes": 1
+                },
+                "kernelVersion": 0,
+                "competitionRanking": 557,
+                "feedbackTrackingData": {},
+                "isThankYou": false,
+                "teamUpInfo": {
+                  "teamLeader": {
+                    "displayName": "Muhammad Ibrahim Qasmi",
+                    "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/24946333-kg.jpeg?t=2025-12-22-22-44-57",
+                    "url": "/ibrahimqasimi",
+                    "userName": "ibrahimqasimi",
+                    "tier": "GRANDMASTER",
+                    "id": 24946333,
+                    "profileUrl": "/ibrahimqasimi",
+                    "performanceTier": "GRANDMASTER",
+                    "userId": 24946333,
+                    "progressionOptOut": false
+                  },
+                  "intro": ""
+                }
+              }
+            ],
+            "parent": {},
+            "author": {
+              "displayName": "Paritosh Kumar Tripathi",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/12759647-kg.jpg?t=2025-07-01-13-08-22",
+              "url": "/paritoshtripathi5",
+              "tier": "MASTER",
+              "id": 12759647,
+              "progressionOptOut": false
+            },
+            "authorType": "COMMENT",
+            "votes": {
+              "canUpvote": true
+            },
+            "kernelVersion": 0,
+            "competitionRanking": 1806,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "teamUpInfo": {
+              "teamLeader": {
+                "displayName": "Paritosh Kumar Tripathi",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/12759647-kg.jpg?t=2025-07-01-13-08-22",
+                "url": "/paritoshtripathi5",
+                "userName": "paritoshtripathi5",
+                "tier": "MASTER",
+                "id": 12759647,
+                "profileUrl": "/paritoshtripathi5",
+                "performanceTier": "MASTER",
+                "userId": 12759647,
+                "progressionOptOut": false
+              },
+              "intro": ""
+            }
+          },
+          {
+            "id": 3436587,
+            "postDate": "2026-04-06T09:30:50.613Z",
+            "rawMarkdown": "@cpmpml can you clarify whether we are allowed to use api from models like gemini GPT, etc., to geenrate some datas",
+            "content": "<p><a href=\"https://www.kaggle.com/cpmpml\" target=\"_blank\">@cpmpml</a> can you clarify whether we are allowed to use api from models like gemini GPT, etc., to geenrate some datas</p>",
+            "parent": {},
+            "author": {
+              "displayName": "Arunodhayan",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/2101769-kg.jpg",
+              "url": "/arunodhayan",
+              "tier": "MASTER",
+              "id": 2101769,
+              "progressionOptOut": false
+            },
+            "authorType": "COMMENT",
+            "votes": {
+              "totalVotes": 4,
+              "canUpvote": true,
+              "totalUpvotes": 4
+            },
+            "kernelVersion": 0,
+            "competitionRanking": 825,
+            "feedbackTrackingData": {},
+            "isThankYou": false,
+            "teamUpInfo": {
+              "enabled": true,
+              "teamLeader": {
+                "displayName": "Arunodhayan",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/2101769-kg.jpg",
+                "url": "/arunodhayan",
+                "userName": "arunodhayan",
+                "tier": "MASTER",
+                "id": 2101769,
+                "profileUrl": "/arunodhayan",
+                "performanceTier": "MASTER",
+                "userId": 2101769,
+                "progressionOptOut": false
+              },
+              "intro": ""
+            }
+          }
+        ],
+        "parent": {},
+        "author": {
+          "displayName": "Adarsh Kumar",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/25818777-kg.png?t=2026-04-20-16-49-43",
+          "url": "/adarsh2626",
+          "tier": "MASTER",
+          "id": 25818777,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "totalVotes": 1,
+          "canUpvote": true,
+          "totalUpvotes": 2
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 557,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "reactions": [
+          {
+            "emoji": "KAGGLE",
+            "featuredUserNames": [
+              "arunodhayan",
+              "kishanvavdara"
+            ],
+            "userCount": 2
+          }
+        ],
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Muhammad Ibrahim Qasmi",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/24946333-kg.jpeg?t=2025-12-22-22-44-57",
+            "url": "/ibrahimqasimi",
+            "userName": "ibrahimqasimi",
+            "tier": "GRANDMASTER",
+            "id": 24946333,
+            "profileUrl": "/ibrahimqasimi",
+            "performanceTier": "GRANDMASTER",
+            "userId": 24946333,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      {
+        "id": 3439664,
+        "postDate": "2026-04-11T05:12:40.097Z",
+        "rawMarkdown": "While I was not really focusing on which model can be used for distillation and which cannot be, I had a slightly different question.\nLet's say I use DeepSeek R1 model for distillation (as it has MIT license). \nDoes that mean I have to also make the dataset public to everyone that I am using to train Nemotron?\n\nAlso, the rules mention \n\n> Because of the potential costs or restrictions (e.g., “geo restrictions”) associated with obtaining rights to use external data or certain software and associated tools, their use must be “reasonably accessible to all” and of “minimal cost”.\n\nSo the model is (I guess) available to everyone equally. Do I have to make the dataset I make using it public too? \n\nAnd also, what is considered \"minimal cost\"? \n\nI think is someone uses an API it can cost somewhat near $50. \nWould that be considered minimal cost?\nOn the other hand, there's rank 1 winner of the progress prize who have spent at least $500 in his experiments (estimated).",
+        "content": "<p>While I was not really focusing on which model can be used for distillation and which cannot be, I had a slightly different question.\nLet's say I use DeepSeek R1 model for distillation (as it has MIT license). \nDoes that mean I have to also make the dataset public to everyone that I am using to train Nemotron?</p>\n<p>Also, the rules mention </p>\n<blockquote>\n  <p>Because of the potential costs or restrictions (e.g., “geo restrictions”) associated with obtaining rights to use external data or certain software and associated tools, their use must be “reasonably accessible to all” and of “minimal cost”.</p>\n</blockquote>\n<p>So the model is (I guess) available to everyone equally. Do I have to make the dataset I make using it public too? </p>\n<p>And also, what is considered \"minimal cost\"? </p>\n<p>I think is someone uses an API it can cost somewhat near $50. \nWould that be considered minimal cost?\nOn the other hand, there's rank 1 winner of the progress prize who have spent at least $500 in his experiments (estimated).</p>",
+        "parent": {},
+        "author": {
+          "displayName": "Komil Parmar",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/11351811-kg.jpg?t=2025-07-02-06-16-19",
+          "url": "/komilparmar",
+          "tier": "EXPERT",
+          "id": 11351811,
+          "progressionOptOut": false
+        },
+        "authorType": "COMMENT",
+        "votes": {
+          "canUpvote": true
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 578,
+        "feedbackTrackingData": {},
+        "isThankYou": false,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Komil Parmar",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/11351811-kg.jpg?t=2025-07-02-06-16-19",
+            "url": "/komilparmar",
+            "userName": "komilparmar",
+            "tier": "EXPERT",
+            "id": 11351811,
+            "profileUrl": "/komilparmar",
+            "performanceTier": "EXPERT",
+            "userId": 11351811,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      }
+    ],
+    "commentSort": "COMMENT_LIST_SORT_BY_HOT",
+    "firstMessage": {
+      "id": 3436206,
+      "postDate": "2026-04-05T13:55:19.090Z",
+      "rawMarkdown": "~~The dataset that many top-scoring public notebooks rely on includes traces that were generated by Gemini-2.0-flash.\nIn my understanding, using such data will result in the revocation of your eligibility to receive prizes and, in the worst case, could lead to your account being deleted from the LB.~~\n\nhttps://www.kaggle.com/datasets/kienngx/nemotron-30b-competition-trainingdata-cot-labels\n\nIt seems it's okay.",
+      "content": "<p></p>\n<p><a href=\"https://www.kaggle.com/datasets/kienngx/nemotron-30b-competition-trainingdata-cot-labels\" target=\"_blank\">https://www.kaggle.com/datasets/kienngx/nemotron-30b-competition-trainingdata-cot-labels</a></p>\n<p>It seems it's okay.</p>",
+      "parent": {},
+      "author": {
+        "displayName": "c-number",
+        "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/6624777-kg.jpg",
+        "url": "/cnumber",
+        "tier": "GRANDMASTER",
+        "id": 6624777,
+        "progressionOptOut": false
+      },
+      "authorType": "TOPIC",
+      "votes": {
+        "totalVotes": 24,
+        "canUpvote": true,
+        "totalUpvotes": 26
+      },
+      "kernelVersion": 0,
+      "feedbackTrackingData": {},
+      "isThankYou": false,
+      "teamUpInfo": {
+        "teamLeader": {
+          "displayName": "c-number",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/6624777-kg.jpg",
+          "url": "/cnumber",
+          "userName": "cnumber",
+          "tier": "GRANDMASTER",
+          "id": 6624777,
+          "profileUrl": "/cnumber",
+          "performanceTier": "GRANDMASTER",
+          "userId": 6624777,
+          "progressionOptOut": false
+        },
+        "intro": ""
+      }
+    },
+    "firstMessageId": 3436206,
+    "forumId": 10085877,
+    "forumName": "NVIDIA Nemotron Model Reasoning Challenge",
+    "id": 688360,
+    "name": "[update] Read CPMP's reply. [original] Do not distill models that do not allow distillation (e.g. gemini, gpt5)",
+    "parentName": "nvidia-nemotron-model-reasoning-challenge",
+    "parentUrl": "/competitions/nvidia-nemotron-model-reasoning-challenge",
+    "postDate": "2026-04-05T13:55:19.091505400Z",
+    "totalVotes": 24,
+    "url": "/competitions/nvidia-nemotron-model-reasoning-challenge/discussion/688360",
+    "totalMessages": 27,
+    "authorPerformanceTier": "GRANDMASTER",
+    "authorProgressionOptOut": false
+  }
+}

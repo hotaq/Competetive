@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "name": "meta_v26_v22_projected_wool_sale_standalone",
+  "agent_file": "submissions/meta_v26_v22_projected_wool_sale_standalone/main.py",
+  "archive_file": "submissions/meta_v26_v22_projected_wool_sale_standalone/submission.tar.gz",
+  "sha256": "d9ab9d73e1a430c4bdbc7ed8388ef119fbf806a19e1543bdeb91aefd46fd086a",
+  "archive_sha256": "88f7f6664b9a82658145522b6dacec8edf5becb2186cbbb26cda279d78d0045f",
+  "base": {
+    "agent_file": "submissions/meta_v22_v16_land3_terminal_rule_standalone/main.py",
+    "sha256": "5d5c615a296d984402f886b5f998a54e211dd6138e7818793733069d0d1476ba"
+  },
+  "policy": {
+    "family": "observable_state_overlay",
+    "minimum_inventory_value": 2500.0,
+    "maximum_interventions_per_game": 1,
+    "liquidation_items": [
+      "WOOL"
+    ],
+    "transaction": "enter shed, drop, and sell projected wool in the same turn"
+  },
+  "validation": {
+    "fresh_official_games": 96,
+    "fresh_official_wins": 85,
+    "fresh_official_losses": 11,
+    "raw_loader_seats": [0, 1],
+    "raw_loader_active_steps_per_game": 712,
+    "raw_loader_invalid_action_keys": 0,
+    "local_standalone_action_parity_steps": 1438,
+    "local_standalone_action_mismatches": 0
+  },
+  "evaluation_reports": [
+    "rl/evaluations/v26_fresh_vs_v22_official16_seed26092001.json",
+    "rl/evaluations/v26_fresh_vs_v16_official16_seed26092101.json",
+    "rl/evaluations/v26_fresh_vs_v12_official16_seed26092201.json",
+    "rl/evaluations/v26_fresh_vs_taiseiu_official16_seed26092301.json",
+    "rl/evaluations/v26_fresh_vs_robust_official16_seed26092401.json",
+    "rl/evaluations/v26_fresh_vs_staged_official16_seed26092501.json",
+    "rl/evaluations/v26_archive_raw_smoke_seat0_20260826.json",
+    "rl/evaluations/v26_archive_raw_smoke_seat1_20260826.json",
+    "rl/evaluations/v26_local_standalone_action_parity_99429769.json",
+    "rl/evaluations/v26_local_standalone_action_parity_99434330.json"
+  ],
+  "known_gap": "taiseiu fresh gate is 8/16; live challenger only, not decisive Top1-20 proof",
+  "status": "validated_live_challenger_not_champion"
+}

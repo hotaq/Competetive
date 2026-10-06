@@ -1,0 +1,2567 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-08-26T08:29:46.572790+00:00",
+  "selection_protocol": {
+    "train": "old80 leave-one-team-out",
+    "evaluation": "fresh95 after model selection",
+    "observable_only": true,
+    "opponent_identity_feature": false,
+    "ranking": [
+      "wins",
+      "worst_margin",
+      "mean_margin"
+    ]
+  },
+  "sources": {
+    "base_agent_file": "submissions/meta_v54_market_splice_state_gate_local/main.py",
+    "base_agent_sha256": "c9d8bc4249c102c0b8bf215eb2ea5a9dbb299ec052466061193643334b0ae927",
+    "train_league": "replays/top20_live_20260826/manifest.json",
+    "evaluation_league": "replays/top20_live_holdout_offset4_20260826/manifest.json",
+    "train_policies": {
+      "base": "rl/evaluations/v54_market_splice_state_gate_old80_fixed_20260826.json",
+      "a24": "rl/evaluations/v55a_top20_old80_20260826.json",
+      "b24": "rl/evaluations/v55b_top20_old80_20260826.json",
+      "c24": "rl/evaluations/v55c_top20_old80_20260826.json"
+    },
+    "evaluation_policies": {
+      "base": "rl/evaluations/v54_market_splice_state_gate_fresh95_fixed_20260826.json",
+      "a24": "rl/evaluations/v55a_top20_fresh95_20260826.json",
+      "b24": "rl/evaluations/v55b_top20_fresh95_20260826.json",
+      "c24": "rl/evaluations/v55c_top20_fresh95_20260826.json"
+    }
+  },
+  "data": {
+    "train_rows": 80,
+    "evaluation_rows": 95,
+    "policy_names": [
+      "base",
+      "a24",
+      "b24",
+      "c24"
+    ],
+    "histories": {
+      "1,3,6,12,18,24": [
+        1,
+        3,
+        6,
+        12,
+        18,
+        24
+      ],
+      "6,12,18,24": [
+        6,
+        12,
+        18,
+        24
+      ],
+      "12,18,24": [
+        12,
+        18,
+        24
+      ]
+    }
+  },
+  "references": {
+    "train": {
+      "static": {
+        "base": {
+          "games": 80,
+          "wins": 61,
+          "draws": 0,
+          "losses": 19,
+          "mean_margin": 4873.85,
+          "worst_margin": -51813.0,
+          "cvar10_margin": -29183.25,
+          "choice_counts": {
+            "base": 80,
+            "a24": 0,
+            "b24": 0,
+            "c24": 0
+          }
+        },
+        "a24": {
+          "games": 80,
+          "wins": 51,
+          "draws": 0,
+          "losses": 29,
+          "mean_margin": 5588.9625,
+          "worst_margin": -38533.0,
+          "cvar10_margin": -16497.375,
+          "choice_counts": {
+            "base": 0,
+            "a24": 80,
+            "b24": 0,
+            "c24": 0
+          }
+        },
+        "b24": {
+          "games": 80,
+          "wins": 59,
+          "draws": 0,
+          "losses": 21,
+          "mean_margin": 2508.5625,
+          "worst_margin": -41661.0,
+          "cvar10_margin": -26159.125,
+          "choice_counts": {
+            "base": 0,
+            "a24": 0,
+            "b24": 80,
+            "c24": 0
+          }
+        },
+        "c24": {
+          "games": 80,
+          "wins": 36,
+          "draws": 0,
+          "losses": 44,
+          "mean_margin": -3560.3,
+          "worst_margin": -38729.0,
+          "cvar10_margin": -35832.875,
+          "choice_counts": {
+            "base": 0,
+            "a24": 0,
+            "b24": 0,
+            "c24": 80
+          }
+        }
+      },
+      "oracle": {
+        "games": 80,
+        "wins": 78,
+        "draws": 0,
+        "losses": 2,
+        "mean_margin": 16070.425,
+        "worst_margin": -10288.0,
+        "cvar10_margin": -1157.25,
+        "choice_counts": {
+          "base": 25,
+          "a24": 21,
+          "b24": 14,
+          "c24": 20
+        }
+      }
+    },
+    "evaluation": {
+      "static": {
+        "base": {
+          "games": 95,
+          "wins": 74,
+          "draws": 0,
+          "losses": 21,
+          "mean_margin": 8761.673684210526,
+          "worst_margin": -43325.0,
+          "cvar10_margin": -24830.3,
+          "choice_counts": {
+            "base": 95,
+            "a24": 0,
+            "b24": 0,
+            "c24": 0
+          }
+        },
+        "a24": {
+          "games": 95,
+          "wins": 70,
+          "draws": 0,
+          "losses": 25,
+          "mean_margin": 8178.694736842105,
+          "worst_margin": -45632.0,
+          "cvar10_margin": -16063.2,
+          "choice_counts": {
+            "base": 0,
+            "a24": 95,
+            "b24": 0,
+            "c24": 0
+          }
+        },
+        "b24": {
+          "games": 95,
+          "wins": 69,
+          "draws": 0,
+          "losses": 26,
+          "mean_margin": 6870.989473684211,
+          "worst_margin": -37409.0,
+          "cvar10_margin": -22544.0,
+          "choice_counts": {
+            "base": 0,
+            "a24": 0,
+            "b24": 95,
+            "c24": 0
+          }
+        },
+        "c24": {
+          "games": 95,
+          "wins": 47,
+          "draws": 0,
+          "losses": 48,
+          "mean_margin": -881.2210526315789,
+          "worst_margin": -41720.0,
+          "cvar10_margin": -31514.6,
+          "choice_counts": {
+            "base": 0,
+            "a24": 0,
+            "b24": 0,
+            "c24": 95
+          }
+        }
+      },
+      "oracle": {
+        "games": 95,
+        "wins": 93,
+        "draws": 0,
+        "losses": 2,
+        "mean_margin": 21274.063157894736,
+        "worst_margin": -9128.0,
+        "cvar10_margin": 774.5,
+        "choice_counts": {
+          "base": 28,
+          "a24": 37,
+          "b24": 16,
+          "c24": 14
+        }
+      }
+    }
+  },
+  "selected_search": {
+    "model": "policy_tree",
+    "history": "12,18,24",
+    "mode": "economy",
+    "target": "win",
+    "max_depth": 2,
+    "min_leaf": 3,
+    "fit_risk": 0.0,
+    "top_features": 32,
+    "beta": 0.0,
+    "switch_penalty": 0.0,
+    "score": {
+      "games": 80,
+      "wins": 65,
+      "draws": 0,
+      "losses": 15,
+      "mean_margin": 4299.525,
+      "worst_margin": -41661.0,
+      "cvar10_margin": -25652.125,
+      "choice_counts": {
+        "base": 38,
+        "a24": 3,
+        "b24": 37,
+        "c24": 2
+      }
+    }
+  },
+  "top_searches": [
+    {
+      "model": "policy_tree",
+      "history": "12,18,24",
+      "mode": "economy",
+      "target": "win",
+      "max_depth": 2,
+      "min_leaf": 3,
+      "fit_risk": 0.0,
+      "top_features": 32,
+      "beta": 0.0,
+      "switch_penalty": 0.0,
+      "score": {
+        "games": 80,
+        "wins": 65,
+        "draws": 0,
+        "losses": 15,
+        "mean_margin": 4299.525,
+        "worst_margin": -41661.0,
+        "cvar10_margin": -25652.125,
+        "choice_counts": {
+          "base": 38,
+          "a24": 3,
+          "b24": 37,
+          "c24": 2
+        }
+      }
+    },
+    {
+      "model": "policy_tree",
+      "history": "12,18,24",
+      "mode": "economy",
+      "target": "win",
+      "max_depth": 2,
+      "min_leaf": 3,
+      "fit_risk": 0.0,
+      "top_features": 32,
+      "beta": 0.5,
+      "switch_penalty": 0.0,
+      "score": {
+        "games": 80,
+        "wins": 65,
+        "draws": 0,
+        "losses": 15,
+        "mean_margin": 4299.525,
+        "worst_margin": -41661.0,
+        "cvar10_margin": -25652.125,
+        "choice_counts": {
+          "base": 38,
+          "a24": 3,
+          "b24": 37,
+          "c24": 2
+        }
+      }
+    },
+    {
+      "model": "policy_tree",
+      "history": "12,18,24",
+      "mode": "economy",
+      "target": "win",
+      "max_depth": 2,
+      "min_leaf": 3,
+      "fit_risk": 0.0,
+      "top_features": 32,
+      "beta": 1.0,
+      "switch_penalty": 0.0,
+      "score": {
+        "games": 80,
+        "wins": 65,
+        "draws": 0,
+        "losses": 15,
+        "mean_margin": 4299.525,
+        "worst_margin": -41661.0,
+        "cvar10_margin": -25652.125,
+        "choice_counts": {
+          "base": 38,
+          "a24": 3,
+          "b24": 37,
+          "c24": 2
+        }
+      }
+    },
+    {
+      "model": "policy_tree",
+      "history": "6,12,18,24",
+      "mode": "economy",
+      "target": "win",
+      "max_depth": 2,
+      "min_leaf": 6,
+      "fit_risk": 0.0,
+      "top_features": 32,
+      "beta": 0.0,
+      "switch_penalty": 0.0,
+      "score": {
+        "games": 80,
+        "wins": 64,
+        "draws": 0,
+        "losses": 16,
+        "mean_margin": 4452.025,
+        "worst_margin": -41661.0,
+        "cvar10_margin": -25652.125,
+        "choice_counts": {
+          "base": 41,
+          "a24": 0,
+          "b24": 39,
+          "c24": 0
+        }
+      }
+    },
+    {
+      "model": "policy_tree",
+      "history": "6,12,18,24",
+      "mode": "economy",
+      "target": "win",
+      "max_depth": 2,
+      "min_leaf": 6,
+      "fit_risk": 0.0,
+      "top_features": 32,
+      "beta": 0.5,
+      "switch_penalty": 0.0,
+      "score": {
+        "games": 80,
+        "wins": 64,
+        "draws": 0,
+        "losses": 16,
+        "mean_margin": 4452.025,
+        "worst_margin": -41661.0,
+        "cvar10_margin": -25652.125,
+        "choice_counts": {
+          "base": 41,
+          "a24": 0,
+          "b24": 39,
+          "c24": 0
+        }
+      }
+    },
+    {
+      "model": "policy_tree",
+      "history": "6,12,18,24",
+      "mode": "economy",
+      "target": "win",
+      "max_depth": 2,
+      "min_leaf": 6,
+      "fit_risk": 0.0,
+      "top_features": 32,
+      "beta": 1.0,
+      "switch_penalty": 0.0,
+      "score": {
+        "games": 80,
+        "wins": 64,
+        "draws": 0,
+        "losses": 16,
+        "mean_margin": 4452.025,
+        "worst_margin": -41661.0,
+        "cvar10_margin": -25652.125,
+        "choice_counts": {
+          "base": 41,
+          "a24": 0,
+          "b24": 39,
+          "c24": 0
+        }
+      }
+    },
+    {
+      "model": "policy_tree",
+      "history": "1,3,6,12,18,24",
+      "mode": "economy",
+      "target": "win",
+      "max_depth": 3,
+      "min_leaf": 6,
+      "fit_risk": 0.5,
+      "top_features": 32,
+      "beta": 0.0,
+      "switch_penalty": 0.0,
+      "score": {
+        "games": 80,
+        "wins": 64,
+        "draws": 0,
+        "losses": 16,
+        "mean_margin": 4166.2125,
+        "worst_margin": -41661.0,
+        "cvar10_margin": -28418.125,
+        "choice_counts": {
+          "base": 44,
+          "a24": 4,
+          "b24": 32,
+          "c24": 0
+        }
+      }
+    },
+    {
+      "model": "policy_tree",
+      "history": "1,3,6,12,18,24",
+      "mode": "economy",
+      "target": "win",
+      "max_depth": 3,
+      "min_leaf": 6,
+      "fit_risk": 0.5,
+      "top_features": 32,
+      "beta": 0.5,
+      "switch_penalty": 0.0,
+      "score": {
+        "games": 80,
+        "wins": 64,
+        "draws": 0,
+        "losses": 16,
+        "mean_margin": 4166.2125,
+        "worst_margin": -41661.0,
+        "cvar10_margin": -28418.125,
+        "choice_counts": {
+          "base": 44,
+          "a24": 4,
+          "b24": 32,
+          "c24": 0
+        }
+      }
+    },
+    {
+      "model": "policy_tree",
+      "history": "1,3,6,12,18,24",
+      "mode": "economy",
+      "target": "win",
+      "max_depth": 3,
+      "min_leaf": 6,
+      "fit_risk": 0.5,
+      "top_features": 32,
+      "beta": 1.0,
+      "switch_penalty": 0.0,
+      "score": {
+        "games": 80,
+        "wins": 64,
+        "draws": 0,
+        "losses": 16,
+        "mean_margin": 4166.2125,
+        "worst_margin": -41661.0,
+        "cvar10_margin": -28418.125,
+        "choice_counts": {
+          "base": 44,
+          "a24": 4,
+          "b24": 32,
+          "c24": 0
+        }
+      }
+    },
+    {
+      "model": "policy_tree",
+      "history": "1,3,6,12,18,24",
+      "mode": "economy",
+      "target": "win",
+      "max_depth": 4,
+      "min_leaf": 6,
+      "fit_risk": 0.5,
+      "top_features": 32,
+      "beta": 0.0,
+      "switch_penalty": 0.0,
+      "score": {
+        "games": 80,
+        "wins": 64,
+        "draws": 0,
+        "losses": 16,
+        "mean_margin": 4166.2125,
+        "worst_margin": -41661.0,
+        "cvar10_margin": -28418.125,
+        "choice_counts": {
+          "base": 44,
+          "a24": 4,
+          "b24": 32,
+          "c24": 0
+        }
+      }
+    },
+    {
+      "model": "policy_tree",
+      "history": "1,3,6,12,18,24",
+      "mode": "economy",
+      "target": "win",
+      "max_depth": 4,
+      "min_leaf": 6,
+      "fit_risk": 0.5,
+      "top_features": 32,
+      "beta": 0.5,
+      "switch_penalty": 0.0,
+      "score": {
+        "games": 80,
+        "wins": 64,
+        "draws": 0,
+        "losses": 16,
+        "mean_margin": 4166.2125,
+        "worst_margin": -41661.0,
+        "cvar10_margin": -28418.125,
+        "choice_counts": {
+          "base": 44,
+          "a24": 4,
+          "b24": 32,
+          "c24": 0
+        }
+      }
+    },
+    {
+      "model": "policy_tree",
+      "history": "1,3,6,12,18,24",
+      "mode": "economy",
+      "target": "win",
+      "max_depth": 4,
+      "min_leaf": 6,
+      "fit_risk": 0.5,
+      "top_features": 32,
+      "beta": 1.0,
+      "switch_penalty": 0.0,
+      "score": {
+        "games": 80,
+        "wins": 64,
+        "draws": 0,
+        "losses": 16,
+        "mean_margin": 4166.2125,
+        "worst_margin": -41661.0,
+        "cvar10_margin": -28418.125,
+        "choice_counts": {
+          "base": 44,
+          "a24": 4,
+          "b24": 32,
+          "c24": 0
+        }
+      }
+    },
+    {
+      "model": "policy_tree",
+      "history": "6,12,18,24",
+      "mode": "economy",
+      "target": "win",
+      "max_depth": 4,
+      "min_leaf": 3,
+      "fit_risk": 0.5,
+      "top_features": 32,
+      "beta": 0.0,
+      "switch_penalty": 0.0,
+      "score": {
+        "games": 80,
+        "wins": 64,
+        "draws": 0,
+        "losses": 16,
+        "mean_margin": 4970.325,
+        "worst_margin": -43350.0,
+        "cvar10_margin": -25863.25,
+        "choice_counts": {
+          "base": 43,
+          "a24": 2,
+          "b24": 35,
+          "c24": 0
+        }
+      }
+    },
+    {
+      "model": "policy_tree",
+      "history": "6,12,18,24",
+      "mode": "economy",
+      "target": "win",
+      "max_depth": 4,
+      "min_leaf": 3,
+      "fit_risk": 0.5,
+      "top_features": 32,
+      "beta": 0.5,
+      "switch_penalty": 0.0,
+      "score": {
+        "games": 80,
+        "wins": 64,
+        "draws": 0,
+        "losses": 16,
+        "mean_margin": 4970.325,
+        "worst_margin": -43350.0,
+        "cvar10_margin": -25863.25,
+        "choice_counts": {
+          "base": 43,
+          "a24": 2,
+          "b24": 35,
+          "c24": 0
+        }
+      }
+    },
+    {
+      "model": "policy_tree",
+      "history": "6,12,18,24",
+      "mode": "economy",
+      "target": "win",
+      "max_depth": 4,
+      "min_leaf": 3,
+      "fit_risk": 0.5,
+      "top_features": 32,
+      "beta": 1.0,
+      "switch_penalty": 0.0,
+      "score": {
+        "games": 80,
+        "wins": 64,
+        "draws": 0,
+        "losses": 16,
+        "mean_margin": 4970.325,
+        "worst_margin": -43350.0,
+        "cvar10_margin": -25863.25,
+        "choice_counts": {
+          "base": 43,
+          "a24": 2,
+          "b24": 35,
+          "c24": 0
+        }
+      }
+    },
+    {
+      "model": "policy_tree",
+      "history": "12,18,24",
+      "mode": "economy",
+      "target": "win",
+      "max_depth": 2,
+      "min_leaf": 6,
+      "fit_risk": 0.0,
+      "top_features": 32,
+      "beta": 0.0,
+      "switch_penalty": 0.0,
+      "score": {
+        "games": 80,
+        "wins": 63,
+        "draws": 0,
+        "losses": 17,
+        "mean_margin": 4092.0625,
+        "worst_margin": -41661.0,
+        "cvar10_margin": -25652.125,
+        "choice_counts": {
+          "base": 43,
+          "a24": 0,
+          "b24": 37,
+          "c24": 0
+        }
+      }
+    },
+    {
+      "model": "policy_tree",
+      "history": "12,18,24",
+      "mode": "economy",
+      "target": "win",
+      "max_depth": 2,
+      "min_leaf": 6,
+      "fit_risk": 0.0,
+      "top_features": 32,
+      "beta": 0.5,
+      "switch_penalty": 0.0,
+      "score": {
+        "games": 80,
+        "wins": 63,
+        "draws": 0,
+        "losses": 17,
+        "mean_margin": 4092.0625,
+        "worst_margin": -41661.0,
+        "cvar10_margin": -25652.125,
+        "choice_counts": {
+          "base": 43,
+          "a24": 0,
+          "b24": 37,
+          "c24": 0
+        }
+      }
+    },
+    {
+      "model": "policy_tree",
+      "history": "12,18,24",
+      "mode": "economy",
+      "target": "win",
+      "max_depth": 2,
+      "min_leaf": 6,
+      "fit_risk": 0.0,
+      "top_features": 32,
+      "beta": 1.0,
+      "switch_penalty": 0.0,
+      "score": {
+        "games": 80,
+        "wins": 63,
+        "draws": 0,
+        "losses": 17,
+        "mean_margin": 4092.0625,
+        "worst_margin": -41661.0,
+        "cvar10_margin": -25652.125,
+        "choice_counts": {
+          "base": 43,
+          "a24": 0,
+          "b24": 37,
+          "c24": 0
+        }
+      }
+    },
+    {
+      "model": "policy_tree",
+      "history": "12,18,24",
+      "mode": "economy",
+      "target": "win",
+      "max_depth": 2,
+      "min_leaf": 6,
+      "fit_risk": 0.5,
+      "top_features": 32,
+      "beta": 0.0,
+      "switch_penalty": 0.0,
+      "score": {
+        "games": 80,
+        "wins": 63,
+        "draws": 0,
+        "losses": 17,
+        "mean_margin": 4092.0625,
+        "worst_margin": -41661.0,
+        "cvar10_margin": -25652.125,
+        "choice_counts": {
+          "base": 43,
+          "a24": 0,
+          "b24": 37,
+          "c24": 0
+        }
+      }
+    },
+    {
+      "model": "policy_tree",
+      "history": "12,18,24",
+      "mode": "economy",
+      "target": "win",
+      "max_depth": 2,
+      "min_leaf": 6,
+      "fit_risk": 0.5,
+      "top_features": 32,
+      "beta": 0.5,
+      "switch_penalty": 0.0,
+      "score": {
+        "games": 80,
+        "wins": 63,
+        "draws": 0,
+        "losses": 17,
+        "mean_margin": 4092.0625,
+        "worst_margin": -41661.0,
+        "cvar10_margin": -25652.125,
+        "choice_counts": {
+          "base": 43,
+          "a24": 0,
+          "b24": 37,
+          "c24": 0
+        }
+      }
+    },
+    {
+      "model": "policy_tree",
+      "history": "12,18,24",
+      "mode": "economy",
+      "target": "win",
+      "max_depth": 2,
+      "min_leaf": 6,
+      "fit_risk": 0.5,
+      "top_features": 32,
+      "beta": 1.0,
+      "switch_penalty": 0.0,
+      "score": {
+        "games": 80,
+        "wins": 63,
+        "draws": 0,
+        "losses": 17,
+        "mean_margin": 4092.0625,
+        "worst_margin": -41661.0,
+        "cvar10_margin": -25652.125,
+        "choice_counts": {
+          "base": 43,
+          "a24": 0,
+          "b24": 37,
+          "c24": 0
+        }
+      }
+    },
+    {
+      "model": "policy_tree",
+      "history": "6,12,18,24",
+      "mode": "economy",
+      "target": "win",
+      "max_depth": 3,
+      "min_leaf": 3,
+      "fit_risk": 0.5,
+      "top_features": 32,
+      "beta": 0.0,
+      "switch_penalty": 0.0,
+      "score": {
+        "games": 80,
+        "wins": 63,
+        "draws": 0,
+        "losses": 17,
+        "mean_margin": 4968.5875,
+        "worst_margin": -43350.0,
+        "cvar10_margin": -25606.25,
+        "choice_counts": {
+          "base": 45,
+          "a24": 2,
+          "b24": 33,
+          "c24": 0
+        }
+      }
+    },
+    {
+      "model": "policy_tree",
+      "history": "6,12,18,24",
+      "mode": "economy",
+      "target": "win",
+      "max_depth": 3,
+      "min_leaf": 3,
+      "fit_risk": 0.5,
+      "top_features": 32,
+      "beta": 0.5,
+      "switch_penalty": 0.0,
+      "score": {
+        "games": 80,
+        "wins": 63,
+        "draws": 0,
+        "losses": 17,
+        "mean_margin": 4968.5875,
+        "worst_margin": -43350.0,
+        "cvar10_margin": -25606.25,
+        "choice_counts": {
+          "base": 45,
+          "a24": 2,
+          "b24": 33,
+          "c24": 0
+        }
+      }
+    },
+    {
+      "model": "policy_tree",
+      "history": "6,12,18,24",
+      "mode": "economy",
+      "target": "win",
+      "max_depth": 3,
+      "min_leaf": 3,
+      "fit_risk": 0.5,
+      "top_features": 32,
+      "beta": 1.0,
+      "switch_penalty": 0.0,
+      "score": {
+        "games": 80,
+        "wins": 63,
+        "draws": 0,
+        "losses": 17,
+        "mean_margin": 4968.5875,
+        "worst_margin": -43350.0,
+        "cvar10_margin": -25606.25,
+        "choice_counts": {
+          "base": 45,
+          "a24": 2,
+          "b24": 33,
+          "c24": 0
+        }
+      }
+    },
+    {
+      "model": "policy_tree",
+      "history": "12,18,24",
+      "mode": "economy",
+      "target": "win",
+      "max_depth": 2,
+      "min_leaf": 3,
+      "fit_risk": 0.5,
+      "top_features": 32,
+      "beta": 0.0,
+      "switch_penalty": 0.0,
+      "score": {
+        "games": 80,
+        "wins": 63,
+        "draws": 0,
+        "losses": 17,
+        "mean_margin": 4553.8375,
+        "worst_margin": -43350.0,
+        "cvar10_margin": -28245.125,
+        "choice_counts": {
+          "base": 44,
+          "a24": 2,
+          "b24": 31,
+          "c24": 3
+        }
+      }
+    },
+    {
+      "model": "policy_tree",
+      "history": "12,18,24",
+      "mode": "economy",
+      "target": "win",
+      "max_depth": 2,
+      "min_leaf": 3,
+      "fit_risk": 0.5,
+      "top_features": 32,
+      "beta": 0.5,
+      "switch_penalty": 0.0,
+      "score": {
+        "games": 80,
+        "wins": 63,
+        "draws": 0,
+        "losses": 17,
+        "mean_margin": 4553.8375,
+        "worst_margin": -43350.0,
+        "cvar10_margin": -28245.125,
+        "choice_counts": {
+          "base": 44,
+          "a24": 2,
+          "b24": 31,
+          "c24": 3
+        }
+      }
+    },
+    {
+      "model": "policy_tree",
+      "history": "12,18,24",
+      "mode": "economy",
+      "target": "win",
+      "max_depth": 2,
+      "min_leaf": 3,
+      "fit_risk": 0.5,
+      "top_features": 32,
+      "beta": 1.0,
+      "switch_penalty": 0.0,
+      "score": {
+        "games": 80,
+        "wins": 63,
+        "draws": 0,
+        "losses": 17,
+        "mean_margin": 4553.8375,
+        "worst_margin": -43350.0,
+        "cvar10_margin": -28245.125,
+        "choice_counts": {
+          "base": 44,
+          "a24": 2,
+          "b24": 31,
+          "c24": 3
+        }
+      }
+    },
+    {
+      "model": "policy_tree",
+      "history": "6,12,18,24",
+      "mode": "economy",
+      "target": "win",
+      "max_depth": 3,
+      "min_leaf": 6,
+      "fit_risk": 0.0,
+      "top_features": 32,
+      "beta": 0.0,
+      "switch_penalty": 0.0,
+      "score": {
+        "games": 80,
+        "wins": 63,
+        "draws": 0,
+        "losses": 17,
+        "mean_margin": 4524.025,
+        "worst_margin": -43350.0,
+        "cvar10_margin": -25863.25,
+        "choice_counts": {
+          "base": 45,
+          "a24": 0,
+          "b24": 35,
+          "c24": 0
+        }
+      }
+    },
+    {
+      "model": "policy_tree",
+      "history": "6,12,18,24",
+      "mode": "economy",
+      "target": "win",
+      "max_depth": 3,
+      "min_leaf": 6,
+      "fit_risk": 0.0,
+      "top_features": 32,
+      "beta": 0.5,
+      "switch_penalty": 0.0,
+      "score": {
+        "games": 80,
+        "wins": 63,
+        "draws": 0,
+        "losses": 17,
+        "mean_margin": 4524.025,
+        "worst_margin": -43350.0,
+        "cvar10_margin": -25863.25,
+        "choice_counts": {
+          "base": 45,
+          "a24": 0,
+          "b24": 35,
+          "c24": 0
+        }
+      }
+    },
+    {
+      "model": "policy_tree",
+      "history": "6,12,18,24",
+      "mode": "economy",
+      "target": "win",
+      "max_depth": 3,
+      "min_leaf": 6,
+      "fit_risk": 0.0,
+      "top_features": 32,
+      "beta": 1.0,
+      "switch_penalty": 0.0,
+      "score": {
+        "games": 80,
+        "wins": 63,
+        "draws": 0,
+        "losses": 17,
+        "mean_margin": 4524.025,
+        "worst_margin": -43350.0,
+        "cvar10_margin": -25863.25,
+        "choice_counts": {
+          "base": 45,
+          "a24": 0,
+          "b24": 35,
+          "c24": 0
+        }
+      }
+    }
+  ],
+  "model": {
+    "tree": {
+      "feature": 0,
+      "threshold": 0.5,
+      "value": [
+        0.7625,
+        0.6375,
+        0.7375,
+        0.45
+      ],
+      "uncertainty": [
+        0.4255511132637302,
+        0.48072211307573537,
+        0.43999289766995076,
+        0.4974937185533101
+      ],
+      "samples": 80,
+      "left": {
+        "feature": 5,
+        "threshold": 0.0001975,
+        "value": [
+          0.717948717948718,
+          0.5641025641025641,
+          0.7948717948717948,
+          0.3076923076923077
+        ],
+        "uncertainty": [
+          0.4499981737124166,
+          0.4958738360465055,
+          0.4037952755903492,
+          0.46153846153846145
+        ],
+        "samples": 39,
+        "left": {
+          "feature": -1,
+          "value": [
+            1.0,
+            0.0,
+            0.75,
+            0.0
+          ],
+          "uncertainty": [
+            0.0,
+            0.0,
+            0.4330127018922193,
+            0.0
+          ],
+          "samples": 4
+        },
+        "right": {
+          "feature": -1,
+          "value": [
+            0.6857142857142857,
+            0.6285714285714286,
+            0.8,
+            0.34285714285714286
+          ],
+          "uncertainty": [
+            0.4642307659791977,
+            0.48318670072250763,
+            0.4,
+            0.4746642207381757
+          ],
+          "samples": 35
+        }
+      },
+      "right": {
+        "feature": 100,
+        "threshold": 0.0008375,
+        "value": [
+          0.8048780487804879,
+          0.7073170731707317,
+          0.6829268292682927,
+          0.5853658536585366
+        ],
+        "uncertainty": [
+          0.39629455632370536,
+          0.4549941001506738,
+          0.4653361958131443,
+          0.49265877748107695
+        ],
+        "samples": 41,
+        "left": {
+          "feature": -1,
+          "value": [
+            0.8571428571428571,
+            0.6857142857142857,
+            0.7142857142857143,
+            0.5714285714285714
+          ],
+          "uncertainty": [
+            0.3499271061118824,
+            0.46423076597919766,
+            0.4517539514526257,
+            0.4948716593053936
+          ],
+          "samples": 35
+        },
+        "right": {
+          "feature": -1,
+          "value": [
+            0.5,
+            0.8333333333333334,
+            0.5,
+            0.6666666666666666
+          ],
+          "uncertainty": [
+            0.5,
+            0.37267799624996495,
+            0.5,
+            0.4714045207910317
+          ],
+          "samples": 6
+        }
+      }
+    },
+    "selected_features": [
+      0,
+      96,
+      48,
+      100,
+      4,
+      52,
+      7,
+      103,
+      55,
+      5,
+      6,
+      53,
+      54,
+      101,
+      102,
+      59,
+      58,
+      46,
+      47,
+      57,
+      49,
+      61,
+      40,
+      41,
+      45,
+      44,
+      66,
+      43,
+      42,
+      67,
+      60,
+      62
+    ],
+    "max_depth": 2,
+    "min_leaf": 3,
+    "fit_risk": 0.0
+  },
+  "evaluation": {
+    "score": {
+      "games": 95,
+      "wins": 69,
+      "draws": 0,
+      "losses": 26,
+      "mean_margin": 6709.4631578947365,
+      "worst_margin": -45632.0,
+      "cvar10_margin": -23140.7,
+      "choice_counts": {
+        "base": 43,
+        "a24": 11,
+        "b24": 41,
+        "c24": 0
+      }
+    },
+    "decisions": [
+      {
+        "episode_id": 99373066,
+        "top1_seat": 1,
+        "team_id": 16705390,
+        "team_name": "Subramanya N",
+        "choice": "b24",
+        "selected_margin": 10111.0,
+        "policy_margins": {
+          "base": 19516.0,
+          "a24": 776.0,
+          "b24": 10111.0,
+          "c24": 44203.0
+        }
+      },
+      {
+        "episode_id": 99443786,
+        "top1_seat": 0,
+        "team_id": 16705390,
+        "team_name": "Subramanya N",
+        "choice": "a24",
+        "selected_margin": 21927.0,
+        "policy_margins": {
+          "base": 1753.0,
+          "a24": 21927.0,
+          "b24": 31527.0,
+          "c24": 16529.0
+        }
+      },
+      {
+        "episode_id": 99473404,
+        "top1_seat": 0,
+        "team_id": 16632245,
+        "team_name": "u",
+        "choice": "base",
+        "selected_margin": 7404.0,
+        "policy_margins": {
+          "base": 7404.0,
+          "a24": 9722.0,
+          "b24": -2444.0,
+          "c24": -41720.0
+        }
+      },
+      {
+        "episode_id": 99477929,
+        "top1_seat": 0,
+        "team_id": 16748154,
+        "team_name": "taiseiu",
+        "choice": "base",
+        "selected_margin": 12604.0,
+        "policy_margins": {
+          "base": 12604.0,
+          "a24": 7200.0,
+          "b24": 10891.0,
+          "c24": 1553.0
+        }
+      },
+      {
+        "episode_id": 99484671,
+        "top1_seat": 1,
+        "team_id": 16632245,
+        "team_name": "u",
+        "choice": "b24",
+        "selected_margin": 8657.0,
+        "policy_margins": {
+          "base": 16880.0,
+          "a24": 10334.0,
+          "b24": 8657.0,
+          "c24": -5157.0
+        }
+      },
+      {
+        "episode_id": 99486958,
+        "top1_seat": 1,
+        "team_id": 16748154,
+        "team_name": "taiseiu",
+        "choice": "b24",
+        "selected_margin": 29971.0,
+        "policy_margins": {
+          "base": 19755.0,
+          "a24": -4483.0,
+          "b24": 29971.0,
+          "c24": 6351.0
+        }
+      },
+      {
+        "episode_id": 99500641,
+        "top1_seat": 0,
+        "team_id": 16632245,
+        "team_name": "u",
+        "choice": "base",
+        "selected_margin": 9460.0,
+        "policy_margins": {
+          "base": 9460.0,
+          "a24": 17408.0,
+          "b24": 12400.0,
+          "c24": 5862.0
+        }
+      },
+      {
+        "episode_id": 99502928,
+        "top1_seat": 0,
+        "team_id": 16705390,
+        "team_name": "Subramanya N",
+        "choice": "a24",
+        "selected_margin": 7421.0,
+        "policy_margins": {
+          "base": 12682.0,
+          "a24": 7421.0,
+          "b24": 15040.0,
+          "c24": -30833.0
+        }
+      },
+      {
+        "episode_id": 99505213,
+        "top1_seat": 0,
+        "team_id": 16665224,
+        "team_name": "tyz123456",
+        "choice": "base",
+        "selected_margin": 61176.0,
+        "policy_margins": {
+          "base": 61176.0,
+          "a24": -1167.0,
+          "b24": 64574.0,
+          "c24": 3012.0
+        }
+      },
+      {
+        "episode_id": 99509775,
+        "top1_seat": 0,
+        "team_id": 16632245,
+        "team_name": "u",
+        "choice": "base",
+        "selected_margin": 56534.0,
+        "policy_margins": {
+          "base": 56534.0,
+          "a24": -9518.0,
+          "b24": 49102.0,
+          "c24": 10537.0
+        }
+      },
+      {
+        "episode_id": 99509833,
+        "top1_seat": 1,
+        "team_id": 16663649,
+        "team_name": "Akhil Chinta",
+        "choice": "b24",
+        "selected_margin": 5466.0,
+        "policy_margins": {
+          "base": 11007.0,
+          "a24": 773.0,
+          "b24": 5466.0,
+          "c24": -1238.0
+        }
+      },
+      {
+        "episode_id": 99516620,
+        "top1_seat": 0,
+        "team_id": 16632245,
+        "team_name": "u",
+        "choice": "base",
+        "selected_margin": 8680.0,
+        "policy_margins": {
+          "base": 8680.0,
+          "a24": -5343.0,
+          "b24": 1171.0,
+          "c24": -26296.0
+        }
+      },
+      {
+        "episode_id": 99518975,
+        "top1_seat": 0,
+        "team_id": 16704466,
+        "team_name": "QQ Farming",
+        "choice": "base",
+        "selected_margin": 41985.0,
+        "policy_margins": {
+          "base": 41985.0,
+          "a24": 1363.0,
+          "b24": 4633.0,
+          "c24": 6453.0
+        }
+      },
+      {
+        "episode_id": 99546279,
+        "top1_seat": 1,
+        "team_id": 16721382,
+        "team_name": "Milan Leonard",
+        "choice": "base",
+        "selected_margin": -11476.0,
+        "policy_margins": {
+          "base": -11476.0,
+          "a24": -11911.0,
+          "b24": -9128.0,
+          "c24": -30408.0
+        }
+      },
+      {
+        "episode_id": 99553204,
+        "top1_seat": 0,
+        "team_id": 16704466,
+        "team_name": "QQ Farming",
+        "choice": "base",
+        "selected_margin": 161.0,
+        "policy_margins": {
+          "base": 161.0,
+          "a24": 18654.0,
+          "b24": -1475.0,
+          "c24": 27268.0
+        }
+      },
+      {
+        "episode_id": 99568915,
+        "top1_seat": 0,
+        "team_id": 16762957,
+        "team_name": "Yizuki",
+        "choice": "base",
+        "selected_margin": -1152.0,
+        "policy_margins": {
+          "base": -1152.0,
+          "a24": 7709.0,
+          "b24": 2930.0,
+          "c24": -12244.0
+        }
+      },
+      {
+        "episode_id": 99584884,
+        "top1_seat": 0,
+        "team_id": 16762957,
+        "team_name": "Yizuki",
+        "choice": "base",
+        "selected_margin": -21848.0,
+        "policy_margins": {
+          "base": -21848.0,
+          "a24": 17752.0,
+          "b24": -36079.0,
+          "c24": 2132.0
+        }
+      },
+      {
+        "episode_id": 99594001,
+        "top1_seat": 1,
+        "team_id": 16671767,
+        "team_name": "Kaileh57",
+        "choice": "b24",
+        "selected_margin": 7919.0,
+        "policy_margins": {
+          "base": 3868.0,
+          "a24": 9020.0,
+          "b24": 7919.0,
+          "c24": -11977.0
+        }
+      },
+      {
+        "episode_id": 99607686,
+        "top1_seat": 1,
+        "team_id": 16623716,
+        "team_name": "tetsuya",
+        "choice": "b24",
+        "selected_margin": 2711.0,
+        "policy_margins": {
+          "base": 5666.0,
+          "a24": 29175.0,
+          "b24": 2711.0,
+          "c24": 9348.0
+        }
+      },
+      {
+        "episode_id": 99616937,
+        "top1_seat": 0,
+        "team_id": 16665224,
+        "team_name": "tyz123456",
+        "choice": "base",
+        "selected_margin": -2219.0,
+        "policy_margins": {
+          "base": -2219.0,
+          "a24": 12928.0,
+          "b24": -1990.0,
+          "c24": -22066.0
+        }
+      },
+      {
+        "episode_id": 99616937,
+        "top1_seat": 1,
+        "team_id": 16711376,
+        "team_name": "Arman Tuganbaev",
+        "choice": "b24",
+        "selected_margin": 7185.0,
+        "policy_margins": {
+          "base": -488.0,
+          "a24": 13636.0,
+          "b24": 7185.0,
+          "c24": -34466.0
+        }
+      },
+      {
+        "episode_id": 99625995,
+        "top1_seat": 0,
+        "team_id": 16714457,
+        "team_name": "Crop Dusta",
+        "choice": "a24",
+        "selected_margin": 6014.0,
+        "policy_margins": {
+          "base": 18889.0,
+          "a24": 6014.0,
+          "b24": 62673.0,
+          "c24": 28764.0
+        }
+      },
+      {
+        "episode_id": 99628090,
+        "top1_seat": 1,
+        "team_id": 16673205,
+        "team_name": "Arda Ceylan",
+        "choice": "b24",
+        "selected_margin": 19038.0,
+        "policy_margins": {
+          "base": 19446.0,
+          "a24": 19715.0,
+          "b24": 19038.0,
+          "c24": -7839.0
+        }
+      },
+      {
+        "episode_id": 99628245,
+        "top1_seat": 1,
+        "team_id": 16686827,
+        "team_name": "Kronki",
+        "choice": "b24",
+        "selected_margin": -628.0,
+        "policy_margins": {
+          "base": 15785.0,
+          "a24": 12683.0,
+          "b24": -628.0,
+          "c24": -5997.0
+        }
+      },
+      {
+        "episode_id": 99628290,
+        "top1_seat": 0,
+        "team_id": 16686827,
+        "team_name": "Kronki",
+        "choice": "base",
+        "selected_margin": 13935.0,
+        "policy_margins": {
+          "base": 13935.0,
+          "a24": -4926.0,
+          "b24": 4585.0,
+          "c24": -1429.0
+        }
+      },
+      {
+        "episode_id": 99628290,
+        "top1_seat": 1,
+        "team_id": 16721382,
+        "team_name": "Milan Leonard",
+        "choice": "base",
+        "selected_margin": -8211.0,
+        "policy_margins": {
+          "base": -8211.0,
+          "a24": -13059.0,
+          "b24": -4294.0,
+          "c24": -31340.0
+        }
+      },
+      {
+        "episode_id": 99630587,
+        "top1_seat": 0,
+        "team_id": 16670032,
+        "team_name": "Kenjo1209",
+        "choice": "base",
+        "selected_margin": 1800.0,
+        "policy_margins": {
+          "base": 1800.0,
+          "a24": -5882.0,
+          "b24": 1122.0,
+          "c24": -30393.0
+        }
+      },
+      {
+        "episode_id": 99630605,
+        "top1_seat": 0,
+        "team_id": 16727266,
+        "team_name": "ebisu_ya",
+        "choice": "base",
+        "selected_margin": -12028.0,
+        "policy_margins": {
+          "base": -12028.0,
+          "a24": 61039.0,
+          "b24": -12262.0,
+          "c24": 6144.0
+        }
+      },
+      {
+        "episode_id": 99632649,
+        "top1_seat": 0,
+        "team_id": 16762957,
+        "team_name": "Yizuki",
+        "choice": "base",
+        "selected_margin": 9596.0,
+        "policy_margins": {
+          "base": 9596.0,
+          "a24": 173.0,
+          "b24": 10100.0,
+          "c24": 8077.0
+        }
+      },
+      {
+        "episode_id": 99632817,
+        "top1_seat": 0,
+        "team_id": 16671767,
+        "team_name": "Kaileh57",
+        "choice": "base",
+        "selected_margin": 10735.0,
+        "policy_margins": {
+          "base": 10735.0,
+          "a24": -4895.0,
+          "b24": 6595.0,
+          "c24": -26787.0
+        }
+      },
+      {
+        "episode_id": 99634937,
+        "top1_seat": 0,
+        "team_id": 16670032,
+        "team_name": "Kenjo1209",
+        "choice": "base",
+        "selected_margin": 14266.0,
+        "policy_margins": {
+          "base": 14266.0,
+          "a24": 9646.0,
+          "b24": 13877.0,
+          "c24": 8718.0
+        }
+      },
+      {
+        "episode_id": 99635059,
+        "top1_seat": 0,
+        "team_id": 16663649,
+        "team_name": "Akhil Chinta",
+        "choice": "base",
+        "selected_margin": 531.0,
+        "policy_margins": {
+          "base": 531.0,
+          "a24": -3944.0,
+          "b24": 4478.0,
+          "c24": 115.0
+        }
+      },
+      {
+        "episode_id": 99635059,
+        "top1_seat": 1,
+        "team_id": 16727266,
+        "team_name": "ebisu_ya",
+        "choice": "b24",
+        "selected_margin": 3190.0,
+        "policy_margins": {
+          "base": 252.0,
+          "a24": -5146.0,
+          "b24": 3190.0,
+          "c24": -7857.0
+        }
+      },
+      {
+        "episode_id": 99637227,
+        "top1_seat": 0,
+        "team_id": 16727266,
+        "team_name": "ebisu_ya",
+        "choice": "base",
+        "selected_margin": -13997.0,
+        "policy_margins": {
+          "base": -13997.0,
+          "a24": 38206.0,
+          "b24": -16275.0,
+          "c24": 14365.0
+        }
+      },
+      {
+        "episode_id": 99637329,
+        "top1_seat": 0,
+        "team_id": 16705390,
+        "team_name": "Subramanya N",
+        "choice": "a24",
+        "selected_margin": -45632.0,
+        "policy_margins": {
+          "base": -43325.0,
+          "a24": -45632.0,
+          "b24": 40494.0,
+          "c24": 1588.0
+        }
+      },
+      {
+        "episode_id": 99637329,
+        "top1_seat": 1,
+        "team_id": 16711376,
+        "team_name": "Arman Tuganbaev",
+        "choice": "b24",
+        "selected_margin": -37409.0,
+        "policy_margins": {
+          "base": -38657.0,
+          "a24": -22018.0,
+          "b24": -37409.0,
+          "c24": 16818.0
+        }
+      },
+      {
+        "episode_id": 99637359,
+        "top1_seat": 0,
+        "team_id": 16665224,
+        "team_name": "tyz123456",
+        "choice": "base",
+        "selected_margin": 7599.0,
+        "policy_margins": {
+          "base": 7599.0,
+          "a24": -8605.0,
+          "b24": -2828.0,
+          "c24": -16757.0
+        }
+      },
+      {
+        "episode_id": 99637439,
+        "top1_seat": 1,
+        "team_id": 16623716,
+        "team_name": "tetsuya",
+        "choice": "b24",
+        "selected_margin": 11695.0,
+        "policy_margins": {
+          "base": 20362.0,
+          "a24": 27263.0,
+          "b24": 11695.0,
+          "c24": 5430.0
+        }
+      },
+      {
+        "episode_id": 99639529,
+        "top1_seat": 1,
+        "team_id": 16762957,
+        "team_name": "Yizuki",
+        "choice": "b24",
+        "selected_margin": 13422.0,
+        "policy_margins": {
+          "base": 13870.0,
+          "a24": 20044.0,
+          "b24": 13422.0,
+          "c24": 7616.0
+        }
+      },
+      {
+        "episode_id": 99641829,
+        "top1_seat": 1,
+        "team_id": 16673205,
+        "team_name": "Arda Ceylan",
+        "choice": "b24",
+        "selected_margin": 11436.0,
+        "policy_margins": {
+          "base": 11526.0,
+          "a24": 20328.0,
+          "b24": 11436.0,
+          "c24": 20171.0
+        }
+      },
+      {
+        "episode_id": 99644113,
+        "top1_seat": 1,
+        "team_id": 16655477,
+        "team_name": "Aurora",
+        "choice": "b24",
+        "selected_margin": -13677.0,
+        "policy_margins": {
+          "base": -11876.0,
+          "a24": 65583.0,
+          "b24": -13677.0,
+          "c24": 9193.0
+        }
+      },
+      {
+        "episode_id": 99644283,
+        "top1_seat": 1,
+        "team_id": 16732578,
+        "team_name": "nao.kwmr",
+        "choice": "b24",
+        "selected_margin": 44494.0,
+        "policy_margins": {
+          "base": 28564.0,
+          "a24": 34421.0,
+          "b24": 44494.0,
+          "c24": 2157.0
+        }
+      },
+      {
+        "episode_id": 99646415,
+        "top1_seat": 0,
+        "team_id": 16732578,
+        "team_name": "nao.kwmr",
+        "choice": "base",
+        "selected_margin": 24628.0,
+        "policy_margins": {
+          "base": 24628.0,
+          "a24": 8785.0,
+          "b24": 21317.0,
+          "c24": -9232.0
+        }
+      },
+      {
+        "episode_id": 99648850,
+        "top1_seat": 0,
+        "team_id": 16732578,
+        "team_name": "nao.kwmr",
+        "choice": "base",
+        "selected_margin": 52412.0,
+        "policy_margins": {
+          "base": 52412.0,
+          "a24": 4037.0,
+          "b24": 33673.0,
+          "c24": 4475.0
+        }
+      },
+      {
+        "episode_id": 99648850,
+        "top1_seat": 1,
+        "team_id": 16748154,
+        "team_name": "taiseiu",
+        "choice": "b24",
+        "selected_margin": 33778.0,
+        "policy_margins": {
+          "base": 39367.0,
+          "a24": 2066.0,
+          "b24": 33778.0,
+          "c24": -264.0
+        }
+      },
+      {
+        "episode_id": 99648905,
+        "top1_seat": 0,
+        "team_id": 16721382,
+        "team_name": "Milan Leonard",
+        "choice": "a24",
+        "selected_margin": 962.0,
+        "policy_margins": {
+          "base": 1092.0,
+          "a24": 962.0,
+          "b24": 253.0,
+          "c24": -15994.0
+        }
+      },
+      {
+        "episode_id": 99653236,
+        "top1_seat": 0,
+        "team_id": 16670032,
+        "team_name": "Kenjo1209",
+        "choice": "base",
+        "selected_margin": -29483.0,
+        "policy_margins": {
+          "base": -29483.0,
+          "a24": 16686.0,
+          "b24": -34098.0,
+          "c24": 4514.0
+        }
+      },
+      {
+        "episode_id": 99653341,
+        "top1_seat": 0,
+        "team_id": 16750416,
+        "team_name": "G!vIOne",
+        "choice": "base",
+        "selected_margin": 502.0,
+        "policy_margins": {
+          "base": 502.0,
+          "a24": -5681.0,
+          "b24": -6896.0,
+          "c24": -23625.0
+        }
+      },
+      {
+        "episode_id": 99653377,
+        "top1_seat": 1,
+        "team_id": 16714457,
+        "team_name": "Crop Dusta",
+        "choice": "b24",
+        "selected_margin": -7991.0,
+        "policy_margins": {
+          "base": -5616.0,
+          "a24": -17998.0,
+          "b24": -7991.0,
+          "c24": 27035.0
+        }
+      },
+      {
+        "episode_id": 99653379,
+        "top1_seat": 0,
+        "team_id": 16714457,
+        "team_name": "Crop Dusta",
+        "choice": "a24",
+        "selected_margin": -5759.0,
+        "policy_margins": {
+          "base": 35445.0,
+          "a24": -5759.0,
+          "b24": 38453.0,
+          "c24": 41156.0
+        }
+      },
+      {
+        "episode_id": 99655517,
+        "top1_seat": 0,
+        "team_id": 16655477,
+        "team_name": "Aurora",
+        "choice": "base",
+        "selected_margin": 22743.0,
+        "policy_margins": {
+          "base": 22743.0,
+          "a24": 10259.0,
+          "b24": 20710.0,
+          "c24": 46047.0
+        }
+      },
+      {
+        "episode_id": 99655608,
+        "top1_seat": 0,
+        "team_id": 16704466,
+        "team_name": "QQ Farming",
+        "choice": "base",
+        "selected_margin": 16228.0,
+        "policy_margins": {
+          "base": 16228.0,
+          "a24": 13743.0,
+          "b24": 6548.0,
+          "c24": 30781.0
+        }
+      },
+      {
+        "episode_id": 99655642,
+        "top1_seat": 0,
+        "team_id": 16727266,
+        "team_name": "ebisu_ya",
+        "choice": "base",
+        "selected_margin": 13987.0,
+        "policy_margins": {
+          "base": 13987.0,
+          "a24": 17952.0,
+          "b24": -8416.0,
+          "c24": 2134.0
+        }
+      },
+      {
+        "episode_id": 99655642,
+        "top1_seat": 1,
+        "team_id": 16686827,
+        "team_name": "Kronki",
+        "choice": "b24",
+        "selected_margin": 6764.0,
+        "policy_margins": {
+          "base": 4712.0,
+          "a24": 39191.0,
+          "b24": 6764.0,
+          "c24": 6391.0
+        }
+      },
+      {
+        "episode_id": 99657802,
+        "top1_seat": 0,
+        "team_id": 16727266,
+        "team_name": "ebisu_ya",
+        "choice": "base",
+        "selected_margin": 13253.0,
+        "policy_margins": {
+          "base": 13253.0,
+          "a24": 16352.0,
+          "b24": 12728.0,
+          "c24": -746.0
+        }
+      },
+      {
+        "episode_id": 99660081,
+        "top1_seat": 0,
+        "team_id": 16721382,
+        "team_name": "Milan Leonard",
+        "choice": "a24",
+        "selected_margin": -2287.0,
+        "policy_margins": {
+          "base": 12896.0,
+          "a24": -2287.0,
+          "b24": -6269.0,
+          "c24": 11892.0
+        }
+      },
+      {
+        "episode_id": 99660235,
+        "top1_seat": 0,
+        "team_id": 16671767,
+        "team_name": "Kaileh57",
+        "choice": "base",
+        "selected_margin": -1218.0,
+        "policy_margins": {
+          "base": -1218.0,
+          "a24": 5816.0,
+          "b24": 3417.0,
+          "c24": -3149.0
+        }
+      },
+      {
+        "episode_id": 99660235,
+        "top1_seat": 1,
+        "team_id": 16655477,
+        "team_name": "Aurora",
+        "choice": "b24",
+        "selected_margin": 7944.0,
+        "policy_margins": {
+          "base": 11355.0,
+          "a24": 6022.0,
+          "b24": 7944.0,
+          "c24": -2264.0
+        }
+      },
+      {
+        "episode_id": 99662370,
+        "top1_seat": 1,
+        "team_id": 16665224,
+        "team_name": "tyz123456",
+        "choice": "b24",
+        "selected_margin": 9209.0,
+        "policy_margins": {
+          "base": 9290.0,
+          "a24": 22982.0,
+          "b24": 9209.0,
+          "c24": 14090.0
+        }
+      },
+      {
+        "episode_id": 99662528,
+        "top1_seat": 0,
+        "team_id": 16711376,
+        "team_name": "Arman Tuganbaev",
+        "choice": "base",
+        "selected_margin": -11886.0,
+        "policy_margins": {
+          "base": -11886.0,
+          "a24": 4530.0,
+          "b24": -11833.0,
+          "c24": -9563.0
+        }
+      },
+      {
+        "episode_id": 99662528,
+        "top1_seat": 1,
+        "team_id": 16663649,
+        "team_name": "Akhil Chinta",
+        "choice": "b24",
+        "selected_margin": 8307.0,
+        "policy_margins": {
+          "base": 5328.0,
+          "a24": 8471.0,
+          "b24": 8307.0,
+          "c24": -9978.0
+        }
+      },
+      {
+        "episode_id": 99664657,
+        "top1_seat": 0,
+        "team_id": 16748154,
+        "team_name": "taiseiu",
+        "choice": "base",
+        "selected_margin": 13126.0,
+        "policy_margins": {
+          "base": 13126.0,
+          "a24": 14752.0,
+          "b24": 13496.0,
+          "c24": 6800.0
+        }
+      },
+      {
+        "episode_id": 99666933,
+        "top1_seat": 0,
+        "team_id": 16711376,
+        "team_name": "Arman Tuganbaev",
+        "choice": "base",
+        "selected_margin": 9239.0,
+        "policy_margins": {
+          "base": 9239.0,
+          "a24": 19152.0,
+          "b24": 50.0,
+          "c24": -9528.0
+        }
+      },
+      {
+        "episode_id": 99666996,
+        "top1_seat": 1,
+        "team_id": 16623716,
+        "team_name": "tetsuya",
+        "choice": "b24",
+        "selected_margin": -15293.0,
+        "policy_margins": {
+          "base": -36180.0,
+          "a24": 28752.0,
+          "b24": -15293.0,
+          "c24": 15159.0
+        }
+      },
+      {
+        "episode_id": 99669217,
+        "top1_seat": 0,
+        "team_id": 16727266,
+        "team_name": "ebisu_ya",
+        "choice": "base",
+        "selected_margin": 18450.0,
+        "policy_margins": {
+          "base": 18450.0,
+          "a24": 13663.0,
+          "b24": 18244.0,
+          "c24": -20488.0
+        }
+      },
+      {
+        "episode_id": 99669346,
+        "top1_seat": 0,
+        "team_id": 16704466,
+        "team_name": "QQ Farming",
+        "choice": "base",
+        "selected_margin": 17078.0,
+        "policy_margins": {
+          "base": 17078.0,
+          "a24": 25811.0,
+          "b24": -15546.0,
+          "c24": 11030.0
+        }
+      },
+      {
+        "episode_id": 99669346,
+        "top1_seat": 1,
+        "team_id": 16673205,
+        "team_name": "Arda Ceylan",
+        "choice": "b24",
+        "selected_margin": 5586.0,
+        "policy_margins": {
+          "base": 5985.0,
+          "a24": 6920.0,
+          "b24": 5586.0,
+          "c24": -13154.0
+        }
+      },
+      {
+        "episode_id": 99671493,
+        "top1_seat": 1,
+        "team_id": 16663649,
+        "team_name": "Akhil Chinta",
+        "choice": "b24",
+        "selected_margin": 16240.0,
+        "policy_margins": {
+          "base": 16652.0,
+          "a24": 12084.0,
+          "b24": 16240.0,
+          "c24": -8004.0
+        }
+      },
+      {
+        "episode_id": 99676256,
+        "top1_seat": 0,
+        "team_id": 16750416,
+        "team_name": "G!vIOne",
+        "choice": "base",
+        "selected_margin": 11539.0,
+        "policy_margins": {
+          "base": 11539.0,
+          "a24": 387.0,
+          "b24": 6959.0,
+          "c24": -22610.0
+        }
+      },
+      {
+        "episode_id": 99676256,
+        "top1_seat": 1,
+        "team_id": 16732578,
+        "team_name": "nao.kwmr",
+        "choice": "b24",
+        "selected_margin": 5056.0,
+        "policy_margins": {
+          "base": 10607.0,
+          "a24": 3724.0,
+          "b24": 5056.0,
+          "c24": -20046.0
+        }
+      },
+      {
+        "episode_id": 99678356,
+        "top1_seat": 1,
+        "team_id": 16623716,
+        "team_name": "tetsuya",
+        "choice": "b24",
+        "selected_margin": -3952.0,
+        "policy_margins": {
+          "base": 94716.0,
+          "a24": -4954.0,
+          "b24": -3952.0,
+          "c24": 27512.0
+        }
+      },
+      {
+        "episode_id": 99680775,
+        "top1_seat": 1,
+        "team_id": 16670032,
+        "team_name": "Kenjo1209",
+        "choice": "b24",
+        "selected_margin": 1841.0,
+        "policy_margins": {
+          "base": -1698.0,
+          "a24": 9062.0,
+          "b24": 1841.0,
+          "c24": 13794.0
+        }
+      },
+      {
+        "episode_id": 99680807,
+        "top1_seat": 1,
+        "team_id": 16644287,
+        "team_name": "Ryo Hasegawa",
+        "choice": "b24",
+        "selected_margin": 38282.0,
+        "policy_margins": {
+          "base": 43093.0,
+          "a24": 7955.0,
+          "b24": 38282.0,
+          "c24": 19322.0
+        }
+      },
+      {
+        "episode_id": 99680808,
+        "top1_seat": 0,
+        "team_id": 16644287,
+        "team_name": "Ryo Hasegawa",
+        "choice": "a24",
+        "selected_margin": -11295.0,
+        "policy_margins": {
+          "base": 10839.0,
+          "a24": -11295.0,
+          "b24": 9582.0,
+          "c24": 21551.0
+        }
+      },
+      {
+        "episode_id": 99680808,
+        "top1_seat": 1,
+        "team_id": 16714457,
+        "team_name": "Crop Dusta",
+        "choice": "b24",
+        "selected_margin": -1641.0,
+        "policy_margins": {
+          "base": 2673.0,
+          "a24": 12799.0,
+          "b24": -1641.0,
+          "c24": -17037.0
+        }
+      },
+      {
+        "episode_id": 99680809,
+        "top1_seat": 0,
+        "team_id": 16644287,
+        "team_name": "Ryo Hasegawa",
+        "choice": "a24",
+        "selected_margin": -12540.0,
+        "policy_margins": {
+          "base": 11318.0,
+          "a24": -12540.0,
+          "b24": 12608.0,
+          "c24": 37172.0
+        }
+      },
+      {
+        "episode_id": 99682926,
+        "top1_seat": 0,
+        "team_id": 16750416,
+        "team_name": "G!vIOne",
+        "choice": "base",
+        "selected_margin": 15307.0,
+        "policy_margins": {
+          "base": 15307.0,
+          "a24": 17810.0,
+          "b24": 15225.0,
+          "c24": -17327.0
+        }
+      },
+      {
+        "episode_id": 99683095,
+        "top1_seat": 1,
+        "team_id": 16686827,
+        "team_name": "Kronki",
+        "choice": "b24",
+        "selected_margin": 4869.0,
+        "policy_margins": {
+          "base": 2654.0,
+          "a24": 12886.0,
+          "b24": 4869.0,
+          "c24": -18069.0
+        }
+      },
+      {
+        "episode_id": 99685357,
+        "top1_seat": 0,
+        "team_id": 16655477,
+        "team_name": "Aurora",
+        "choice": "base",
+        "selected_margin": 9305.0,
+        "policy_margins": {
+          "base": 9305.0,
+          "a24": 14502.0,
+          "b24": 6115.0,
+          "c24": -3910.0
+        }
+      },
+      {
+        "episode_id": 99687627,
+        "top1_seat": 0,
+        "team_id": 16671767,
+        "team_name": "Kaileh57",
+        "choice": "base",
+        "selected_margin": 4351.0,
+        "policy_margins": {
+          "base": 4351.0,
+          "a24": -1354.0,
+          "b24": 6063.0,
+          "c24": -19921.0
+        }
+      },
+      {
+        "episode_id": 99687627,
+        "top1_seat": 1,
+        "team_id": 16655477,
+        "team_name": "Aurora",
+        "choice": "b24",
+        "selected_margin": 3435.0,
+        "policy_margins": {
+          "base": 16550.0,
+          "a24": 6221.0,
+          "b24": 3435.0,
+          "c24": -18890.0
+        }
+      },
+      {
+        "episode_id": 99689900,
+        "top1_seat": 0,
+        "team_id": 16670032,
+        "team_name": "Kenjo1209",
+        "choice": "base",
+        "selected_margin": -1582.0,
+        "policy_margins": {
+          "base": -1582.0,
+          "a24": -7616.0,
+          "b24": 3663.0,
+          "c24": -13036.0
+        }
+      },
+      {
+        "episode_id": 99692196,
+        "top1_seat": 0,
+        "team_id": 16644287,
+        "team_name": "Ryo Hasegawa",
+        "choice": "a24",
+        "selected_margin": 17329.0,
+        "policy_margins": {
+          "base": -13515.0,
+          "a24": 17329.0,
+          "b24": -15301.0,
+          "c24": -20028.0
+        }
+      },
+      {
+        "episode_id": 99696775,
+        "top1_seat": 0,
+        "team_id": 16673205,
+        "team_name": "Arda Ceylan",
+        "choice": "base",
+        "selected_margin": 2072.0,
+        "policy_margins": {
+          "base": 2072.0,
+          "a24": 10105.0,
+          "b24": 2138.0,
+          "c24": 10304.0
+        }
+      },
+      {
+        "episode_id": 99703625,
+        "top1_seat": 1,
+        "team_id": 16750416,
+        "team_name": "G!vIOne",
+        "choice": "b24",
+        "selected_margin": 4600.0,
+        "policy_margins": {
+          "base": 2762.0,
+          "a24": -3627.0,
+          "b24": 4600.0,
+          "c24": 16707.0
+        }
+      },
+      {
+        "episode_id": 99705912,
+        "top1_seat": 1,
+        "team_id": 16623716,
+        "team_name": "tetsuya",
+        "choice": "b24",
+        "selected_margin": -29500.0,
+        "policy_margins": {
+          "base": -27384.0,
+          "a24": 37174.0,
+          "b24": -29500.0,
+          "c24": -8330.0
+        }
+      },
+      {
+        "episode_id": 99708182,
+        "top1_seat": 1,
+        "team_id": 16670032,
+        "team_name": "Kenjo1209",
+        "choice": "b24",
+        "selected_margin": -896.0,
+        "policy_margins": {
+          "base": 2326.0,
+          "a24": 5187.0,
+          "b24": -896.0,
+          "c24": -39278.0
+        }
+      },
+      {
+        "episode_id": 99710360,
+        "top1_seat": 0,
+        "team_id": 16644287,
+        "team_name": "Ryo Hasegawa",
+        "choice": "a24",
+        "selected_margin": 6492.0,
+        "policy_margins": {
+          "base": 13533.0,
+          "a24": 6492.0,
+          "b24": -2753.0,
+          "c24": -7632.0
+        }
+      },
+      {
+        "episode_id": 99710371,
+        "top1_seat": 1,
+        "team_id": 16644287,
+        "team_name": "Ryo Hasegawa",
+        "choice": "b24",
+        "selected_margin": 39883.0,
+        "policy_margins": {
+          "base": 36049.0,
+          "a24": 17581.0,
+          "b24": 39883.0,
+          "c24": -9331.0
+        }
+      },
+      {
+        "episode_id": 99712659,
+        "top1_seat": 0,
+        "team_id": 16670032,
+        "team_name": "Kenjo1209",
+        "choice": "base",
+        "selected_margin": -574.0,
+        "policy_margins": {
+          "base": -574.0,
+          "a24": 554.0,
+          "b24": 3442.0,
+          "c24": 4505.0
+        }
+      },
+      {
+        "episode_id": 99712659,
+        "top1_seat": 1,
+        "team_id": 16686827,
+        "team_name": "Kronki",
+        "choice": "b24",
+        "selected_margin": 1726.0,
+        "policy_margins": {
+          "base": 514.0,
+          "a24": 3784.0,
+          "b24": 1726.0,
+          "c24": -3693.0
+        }
+      },
+      {
+        "episode_id": 99737868,
+        "top1_seat": 1,
+        "team_id": 16750416,
+        "team_name": "G!vIOne",
+        "choice": "b24",
+        "selected_margin": 1961.0,
+        "policy_margins": {
+          "base": 291.0,
+          "a24": 7897.0,
+          "b24": 1961.0,
+          "c24": 23753.0
+        }
+      },
+      {
+        "episode_id": 99746938,
+        "top1_seat": 1,
+        "team_id": 16644287,
+        "team_name": "Ryo Hasegawa",
+        "choice": "b24",
+        "selected_margin": 1717.0,
+        "policy_margins": {
+          "base": 2658.0,
+          "a24": 1461.0,
+          "b24": 1717.0,
+          "c24": -12532.0
+        }
+      },
+      {
+        "episode_id": 99746941,
+        "top1_seat": 1,
+        "team_id": 16644287,
+        "team_name": "Ryo Hasegawa",
+        "choice": "b24",
+        "selected_margin": 9122.0,
+        "policy_margins": {
+          "base": 10897.0,
+          "a24": 11861.0,
+          "b24": 9122.0,
+          "c24": -20280.0
+        }
+      },
+      {
+        "episode_id": 99746943,
+        "top1_seat": 1,
+        "team_id": 16750416,
+        "team_name": "G!vIOne",
+        "choice": "b24",
+        "selected_margin": 5127.0,
+        "policy_margins": {
+          "base": 2663.0,
+          "a24": -8056.0,
+          "b24": 5127.0,
+          "c24": 499.0
+        }
+      }
+    ]
+  },
+  "limitation": "Frozen replay continuation margins are causal screening evidence, not live Kaggle proof; old80 and fresh95 share opponent identities but not episodes."
+}

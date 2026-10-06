@@ -1,0 +1,1389 @@
+{
+  "inputs": [
+    "rl/evaluations/splice_portfolio6_step163_train95_qmatrix.json",
+    "rl/evaluations/splice_population95_step163_hard20_qmatrix.json"
+  ],
+  "contexts": 95,
+  "actions": 95,
+  "oracle_wins": 92,
+  "oracle_worst_margin": -2762.0,
+  "selected": [
+    {
+      "key": "tape_93518562@163",
+      "suffix_agent": "artifacts/replay_tape_population_v10_train95/tape_93518562.py",
+      "branch_step": 163
+    },
+    {
+      "key": "tape_93724855@163",
+      "suffix_agent": "artifacts/replay_tape_population_v10_train95/tape_93724855.py",
+      "branch_step": 163
+    },
+    {
+      "key": "tape_93734648@163",
+      "suffix_agent": "artifacts/replay_tape_population_v10_train95/tape_93734648.py",
+      "branch_step": 163
+    },
+    {
+      "key": "tape_93520335@163",
+      "suffix_agent": "artifacts/replay_tape_population_v10_train95/tape_93520335.py",
+      "branch_step": 163
+    },
+    {
+      "key": "tape_93494430@163",
+      "suffix_agent": "artifacts/replay_tape_population_v10_train95/tape_93494430.py",
+      "branch_step": 163
+    },
+    {
+      "key": "tape_93816256@163",
+      "suffix_agent": "artifacts/replay_tape_population_v10_train95/tape_93816256.py",
+      "branch_step": 163
+    },
+    {
+      "key": "tape_93546314@163",
+      "suffix_agent": "artifacts/replay_tape_population_v10_train95/tape_93546314.py",
+      "branch_step": 163
+    },
+    {
+      "key": "tape_93501610@163",
+      "suffix_agent": "artifacts/replay_tape_population_v10_train95/tape_93501610.py",
+      "branch_step": 163
+    },
+    {
+      "key": "tape_93634131@163",
+      "suffix_agent": "artifacts/replay_tape_population_v10_train95/tape_93634131.py",
+      "branch_step": 163
+    },
+    {
+      "key": "tape_93498033@163",
+      "suffix_agent": "artifacts/replay_tape_population_v10_train95/tape_93498033.py",
+      "branch_step": 163
+    },
+    {
+      "key": "tape_93550871@163",
+      "suffix_agent": "artifacts/replay_tape_population_v10_train95/tape_93550871.py",
+      "branch_step": 163
+    }
+  ],
+  "selected_wins": 92,
+  "selected_worst_margin": -28074.0,
+  "uncovered": [
+    93515895,
+    93516782,
+    93519448
+  ],
+  "selection_steps": [
+    {
+      "action": "tape_93518562@163",
+      "newly_covered": [
+        93480183,
+        93481053,
+        93481927,
+        93482814,
+        93483706,
+        93485494,
+        93486381,
+        93487265,
+        93488158,
+        93488275,
+        93489928,
+        93494430,
+        93496227,
+        93498936,
+        93499826,
+        93503406,
+        93506095,
+        93509656,
+        93511430,
+        93512317,
+        93514107,
+        93517673,
+        93518562,
+        93523943,
+        93525727,
+        93544524,
+        93546314,
+        93547215,
+        93567835,
+        93579517,
+        93591196,
+        93606440,
+        93646712,
+        93704243,
+        93743523,
+        93775894,
+        93793186,
+        93816256,
+        93822918,
+        93835266,
+        93862421,
+        93897794,
+        93936519
+      ],
+      "remaining": [
+        93484593,
+        93489034,
+        93495340,
+        93497123,
+        93498033,
+        93500721,
+        93501610,
+        93502507,
+        93504316,
+        93505205,
+        93506163,
+        93506985,
+        93507880,
+        93508769,
+        93510537,
+        93513211,
+        93514993,
+        93515895,
+        93516782,
+        93516858,
+        93519448,
+        93520335,
+        93521238,
+        93522142,
+        93523040,
+        93524843,
+        93526612,
+        93527510,
+        93543614,
+        93545421,
+        93550871,
+        93558043,
+        93620762,
+        93634131,
+        93658436,
+        93670246,
+        93682830,
+        93693600,
+        93714132,
+        93724855,
+        93734648,
+        93751661,
+        93759682,
+        93767766,
+        93783010,
+        93787889,
+        93798410,
+        93803702,
+        93809928,
+        93848465,
+        93877490,
+        93916293
+      ]
+    },
+    {
+      "action": "tape_93724855@163",
+      "newly_covered": [
+        93484593,
+        93489034,
+        93501610,
+        93502507,
+        93504316,
+        93506985,
+        93516858,
+        93526612,
+        93545421,
+        93634131,
+        93670246,
+        93724855,
+        93767766,
+        93798410
+      ],
+      "remaining": [
+        93495340,
+        93497123,
+        93498033,
+        93500721,
+        93505205,
+        93506163,
+        93507880,
+        93508769,
+        93510537,
+        93513211,
+        93514993,
+        93515895,
+        93516782,
+        93519448,
+        93520335,
+        93521238,
+        93522142,
+        93523040,
+        93524843,
+        93527510,
+        93543614,
+        93550871,
+        93558043,
+        93620762,
+        93658436,
+        93682830,
+        93693600,
+        93714132,
+        93734648,
+        93751661,
+        93759682,
+        93783010,
+        93787889,
+        93803702,
+        93809928,
+        93848465,
+        93877490,
+        93916293
+      ]
+    },
+    {
+      "action": "tape_93734648@163",
+      "newly_covered": [
+        93495340,
+        93497123,
+        93498033,
+        93500721,
+        93506163,
+        93513211,
+        93514993,
+        93521238,
+        93620762,
+        93714132,
+        93751661
+      ],
+      "remaining": [
+        93505205,
+        93507880,
+        93508769,
+        93510537,
+        93515895,
+        93516782,
+        93519448,
+        93520335,
+        93522142,
+        93523040,
+        93524843,
+        93527510,
+        93543614,
+        93550871,
+        93558043,
+        93658436,
+        93682830,
+        93693600,
+        93734648,
+        93759682,
+        93783010,
+        93787889,
+        93803702,
+        93809928,
+        93848465,
+        93877490,
+        93916293
+      ]
+    },
+    {
+      "action": "tape_93520335@163",
+      "newly_covered": [
+        93520335,
+        93522142,
+        93523040,
+        93524843,
+        93543614,
+        93877490
+      ],
+      "remaining": [
+        93505205,
+        93507880,
+        93508769,
+        93510537,
+        93515895,
+        93516782,
+        93519448,
+        93527510,
+        93550871,
+        93558043,
+        93658436,
+        93682830,
+        93693600,
+        93734648,
+        93759682,
+        93783010,
+        93787889,
+        93803702,
+        93809928,
+        93848465,
+        93916293
+      ]
+    },
+    {
+      "action": "tape_93494430@163",
+      "newly_covered": [
+        93508769,
+        93510537,
+        93682830,
+        93787889,
+        93803702,
+        93916293
+      ],
+      "remaining": [
+        93505205,
+        93507880,
+        93515895,
+        93516782,
+        93519448,
+        93527510,
+        93550871,
+        93558043,
+        93658436,
+        93693600,
+        93734648,
+        93759682,
+        93783010,
+        93809928,
+        93848465
+      ]
+    },
+    {
+      "action": "tape_93816256@163",
+      "newly_covered": [
+        93550871,
+        93693600,
+        93734648,
+        93848465
+      ],
+      "remaining": [
+        93505205,
+        93507880,
+        93515895,
+        93516782,
+        93519448,
+        93527510,
+        93558043,
+        93658436,
+        93759682,
+        93783010,
+        93809928
+      ]
+    },
+    {
+      "action": "tape_93546314@163",
+      "newly_covered": [
+        93505205,
+        93507880,
+        93527510
+      ],
+      "remaining": [
+        93515895,
+        93516782,
+        93519448,
+        93558043,
+        93658436,
+        93759682,
+        93783010,
+        93809928
+      ]
+    },
+    {
+      "action": "tape_93501610@163",
+      "newly_covered": [
+        93558043,
+        93759682
+      ],
+      "remaining": [
+        93515895,
+        93516782,
+        93519448,
+        93658436,
+        93783010,
+        93809928
+      ]
+    },
+    {
+      "action": "tape_93634131@163",
+      "newly_covered": [
+        93658436
+      ],
+      "remaining": [
+        93515895,
+        93516782,
+        93519448,
+        93783010,
+        93809928
+      ]
+    },
+    {
+      "action": "tape_93498033@163",
+      "newly_covered": [
+        93809928
+      ],
+      "remaining": [
+        93515895,
+        93516782,
+        93519448,
+        93783010
+      ]
+    },
+    {
+      "action": "tape_93550871@163",
+      "newly_covered": [
+        93783010
+      ],
+      "remaining": [
+        93515895,
+        93516782,
+        93519448
+      ]
+    }
+  ],
+  "oracle": [
+    {
+      "episode_id": 93480183,
+      "action": "tape_93494430@163",
+      "margin": 25363.0
+    },
+    {
+      "episode_id": 93481053,
+      "action": "tape_93724855@163",
+      "margin": 28763.0
+    },
+    {
+      "episode_id": 93481927,
+      "action": "tape_93518562@163",
+      "margin": 15445.0
+    },
+    {
+      "episode_id": 93482814,
+      "action": "tape_93494430@163",
+      "margin": 19634.0
+    },
+    {
+      "episode_id": 93483706,
+      "action": "tape_93816256@163",
+      "margin": 8859.0
+    },
+    {
+      "episode_id": 93484593,
+      "action": "tape_93724855@163",
+      "margin": 13647.0
+    },
+    {
+      "episode_id": 93485494,
+      "action": "tape_93501610@163",
+      "margin": 17202.0
+    },
+    {
+      "episode_id": 93486381,
+      "action": "tape_93724855@163",
+      "margin": 31280.0
+    },
+    {
+      "episode_id": 93487265,
+      "action": "tape_93494430@163",
+      "margin": 10898.0
+    },
+    {
+      "episode_id": 93488158,
+      "action": "tape_93518562@163",
+      "margin": 1498.0
+    },
+    {
+      "episode_id": 93488275,
+      "action": "tape_93494430@163",
+      "margin": 22445.0
+    },
+    {
+      "episode_id": 93489034,
+      "action": "tape_93520335@163",
+      "margin": 6839.0
+    },
+    {
+      "episode_id": 93489928,
+      "action": "tape_93501610@163",
+      "margin": 8643.0
+    },
+    {
+      "episode_id": 93494430,
+      "action": "tape_93518562@163",
+      "margin": 786.0
+    },
+    {
+      "episode_id": 93495340,
+      "action": "tape_93510537@163",
+      "margin": 5469.0
+    },
+    {
+      "episode_id": 93496227,
+      "action": "tape_93518562@163",
+      "margin": 5839.0
+    },
+    {
+      "episode_id": 93497123,
+      "action": "tape_93751661@163",
+      "margin": 8284.0
+    },
+    {
+      "episode_id": 93498033,
+      "action": "tape_93482814@163",
+      "margin": 5423.0
+    },
+    {
+      "episode_id": 93498936,
+      "action": "tape_93816256@163",
+      "margin": 17131.0
+    },
+    {
+      "episode_id": 93499826,
+      "action": "tape_93518562@163",
+      "margin": 12731.0
+    },
+    {
+      "episode_id": 93500721,
+      "action": "tape_93734648@163",
+      "margin": 9841.0
+    },
+    {
+      "episode_id": 93501610,
+      "action": "tape_93520335@163",
+      "margin": 8928.0
+    },
+    {
+      "episode_id": 93502507,
+      "action": "tape_93494430@163",
+      "margin": 5625.0
+    },
+    {
+      "episode_id": 93503406,
+      "action": "tape_93518562@163",
+      "margin": 18041.0
+    },
+    {
+      "episode_id": 93504316,
+      "action": "tape_93724855@163",
+      "margin": 5912.0
+    },
+    {
+      "episode_id": 93505205,
+      "action": "tape_93803702@163",
+      "margin": 1854.0
+    },
+    {
+      "episode_id": 93506095,
+      "action": "tape_93724855@163",
+      "margin": 22611.0
+    },
+    {
+      "episode_id": 93506163,
+      "action": "tape_93558043@163",
+      "margin": 6038.0
+    },
+    {
+      "episode_id": 93506985,
+      "action": "tape_93816256@163",
+      "margin": 1394.0
+    },
+    {
+      "episode_id": 93507880,
+      "action": "tape_93483706@163",
+      "margin": 3488.0
+    },
+    {
+      "episode_id": 93508769,
+      "action": "tape_93494430@163",
+      "margin": 271.0
+    },
+    {
+      "episode_id": 93509656,
+      "action": "tape_93724855@163",
+      "margin": 22376.0
+    },
+    {
+      "episode_id": 93510537,
+      "action": "tape_93494430@163",
+      "margin": 1155.0
+    },
+    {
+      "episode_id": 93511430,
+      "action": "tape_93816256@163",
+      "margin": 4657.0
+    },
+    {
+      "episode_id": 93512317,
+      "action": "tape_93518562@163",
+      "margin": 402.0
+    },
+    {
+      "episode_id": 93513211,
+      "action": "tape_93489034@163",
+      "margin": 6192.0
+    },
+    {
+      "episode_id": 93514107,
+      "action": "tape_93518562@163",
+      "margin": 6100.0
+    },
+    {
+      "episode_id": 93514993,
+      "action": "tape_93714132@163",
+      "margin": 3853.0
+    },
+    {
+      "episode_id": 93515895,
+      "action": "tape_93509656@163",
+      "margin": -2762.0
+    },
+    {
+      "episode_id": 93516782,
+      "action": "tape_93489034@163",
+      "margin": -2008.0
+    },
+    {
+      "episode_id": 93516858,
+      "action": "tape_93724855@163",
+      "margin": 3663.0
+    },
+    {
+      "episode_id": 93517673,
+      "action": "tape_93518562@163",
+      "margin": 2266.0
+    },
+    {
+      "episode_id": 93518562,
+      "action": "tape_93816256@163",
+      "margin": 17589.0
+    },
+    {
+      "episode_id": 93519448,
+      "action": "tape_93547215@163",
+      "margin": -1424.0
+    },
+    {
+      "episode_id": 93520335,
+      "action": "tape_93520335@163",
+      "margin": 740.0
+    },
+    {
+      "episode_id": 93521238,
+      "action": "tape_93734648@163",
+      "margin": 3092.0
+    },
+    {
+      "episode_id": 93522142,
+      "action": "tape_93520335@163",
+      "margin": 3186.0
+    },
+    {
+      "episode_id": 93523040,
+      "action": "tape_93520335@163",
+      "margin": 907.0
+    },
+    {
+      "episode_id": 93523943,
+      "action": "tape_93518562@163",
+      "margin": 4377.0
+    },
+    {
+      "episode_id": 93524843,
+      "action": "tape_93816256@163",
+      "margin": 9049.0
+    },
+    {
+      "episode_id": 93525727,
+      "action": "tape_93816256@163",
+      "margin": 10230.0
+    },
+    {
+      "episode_id": 93526612,
+      "action": "tape_93816256@163",
+      "margin": 5967.0
+    },
+    {
+      "episode_id": 93527510,
+      "action": "tape_93546314@163",
+      "margin": 872.0
+    },
+    {
+      "episode_id": 93543614,
+      "action": "tape_93520335@163",
+      "margin": 3188.0
+    },
+    {
+      "episode_id": 93544524,
+      "action": "tape_93518562@163",
+      "margin": 4083.0
+    },
+    {
+      "episode_id": 93545421,
+      "action": "tape_93724855@163",
+      "margin": 5043.0
+    },
+    {
+      "episode_id": 93546314,
+      "action": "tape_93501610@163",
+      "margin": 9064.0
+    },
+    {
+      "episode_id": 93547215,
+      "action": "tape_93724855@163",
+      "margin": 23733.0
+    },
+    {
+      "episode_id": 93550871,
+      "action": "tape_93816256@163",
+      "margin": 1692.0
+    },
+    {
+      "episode_id": 93558043,
+      "action": "tape_93501610@163",
+      "margin": 6434.0
+    },
+    {
+      "episode_id": 93567835,
+      "action": "tape_93518562@163",
+      "margin": 4129.0
+    },
+    {
+      "episode_id": 93579517,
+      "action": "tape_93518562@163",
+      "margin": 492.0
+    },
+    {
+      "episode_id": 93591196,
+      "action": "tape_93518562@163",
+      "margin": 3622.0
+    },
+    {
+      "episode_id": 93606440,
+      "action": "tape_93520335@163",
+      "margin": 13401.0
+    },
+    {
+      "episode_id": 93620762,
+      "action": "tape_93486381@163",
+      "margin": 4678.0
+    },
+    {
+      "episode_id": 93634131,
+      "action": "tape_93724855@163",
+      "margin": 9934.0
+    },
+    {
+      "episode_id": 93646712,
+      "action": "tape_93494430@163",
+      "margin": 12162.0
+    },
+    {
+      "episode_id": 93658436,
+      "action": "tape_93634131@163",
+      "margin": 2833.0
+    },
+    {
+      "episode_id": 93670246,
+      "action": "tape_93724855@163",
+      "margin": 11607.0
+    },
+    {
+      "episode_id": 93682830,
+      "action": "tape_93494430@163",
+      "margin": 557.0
+    },
+    {
+      "episode_id": 93693600,
+      "action": "tape_93816256@163",
+      "margin": 1187.0
+    },
+    {
+      "episode_id": 93704243,
+      "action": "tape_93518562@163",
+      "margin": 1564.0
+    },
+    {
+      "episode_id": 93714132,
+      "action": "tape_93693600@163",
+      "margin": 1488.0
+    },
+    {
+      "episode_id": 93724855,
+      "action": "tape_93816256@163",
+      "margin": 5581.0
+    },
+    {
+      "episode_id": 93734648,
+      "action": "tape_93816256@163",
+      "margin": 5667.0
+    },
+    {
+      "episode_id": 93743523,
+      "action": "tape_93816256@163",
+      "margin": 15750.0
+    },
+    {
+      "episode_id": 93751661,
+      "action": "tape_93497123@163",
+      "margin": 6993.0
+    },
+    {
+      "episode_id": 93759682,
+      "action": "tape_93501610@163",
+      "margin": 713.0
+    },
+    {
+      "episode_id": 93767766,
+      "action": "tape_93724855@163",
+      "margin": 3449.0
+    },
+    {
+      "episode_id": 93775894,
+      "action": "tape_93518562@163",
+      "margin": 3013.0
+    },
+    {
+      "episode_id": 93783010,
+      "action": "tape_93550871@163",
+      "margin": 1164.0
+    },
+    {
+      "episode_id": 93787889,
+      "action": "tape_93494430@163",
+      "margin": 23.0
+    },
+    {
+      "episode_id": 93793186,
+      "action": "tape_93518562@163",
+      "margin": 3198.0
+    },
+    {
+      "episode_id": 93798410,
+      "action": "tape_93724855@163",
+      "margin": 173.0
+    },
+    {
+      "episode_id": 93803702,
+      "action": "tape_93816256@163",
+      "margin": 11751.0
+    },
+    {
+      "episode_id": 93809928,
+      "action": "tape_93498033@163",
+      "margin": 1615.0
+    },
+    {
+      "episode_id": 93816256,
+      "action": "tape_93518562@163",
+      "margin": 7596.0
+    },
+    {
+      "episode_id": 93822918,
+      "action": "tape_93816256@163",
+      "margin": 12442.0
+    },
+    {
+      "episode_id": 93835266,
+      "action": "tape_93494430@163",
+      "margin": 16343.0
+    },
+    {
+      "episode_id": 93848465,
+      "action": "tape_93816256@163",
+      "margin": 149.0
+    },
+    {
+      "episode_id": 93862421,
+      "action": "tape_93518562@163",
+      "margin": 970.0
+    },
+    {
+      "episode_id": 93877490,
+      "action": "tape_93520335@163",
+      "margin": 3884.0
+    },
+    {
+      "episode_id": 93897794,
+      "action": "tape_93518562@163",
+      "margin": 2165.0
+    },
+    {
+      "episode_id": 93916293,
+      "action": "tape_93494430@163",
+      "margin": 448.0
+    },
+    {
+      "episode_id": 93936519,
+      "action": "tape_93494430@163",
+      "margin": 22613.0
+    }
+  ],
+  "selected_coverage": [
+    {
+      "episode_id": 93480183,
+      "action": "tape_93494430@163",
+      "margin": 25363.0
+    },
+    {
+      "episode_id": 93481053,
+      "action": "tape_93724855@163",
+      "margin": 28763.0
+    },
+    {
+      "episode_id": 93481927,
+      "action": "tape_93518562@163",
+      "margin": 15445.0
+    },
+    {
+      "episode_id": 93482814,
+      "action": "tape_93494430@163",
+      "margin": 19634.0
+    },
+    {
+      "episode_id": 93483706,
+      "action": "tape_93816256@163",
+      "margin": 8859.0
+    },
+    {
+      "episode_id": 93484593,
+      "action": "tape_93724855@163",
+      "margin": 13647.0
+    },
+    {
+      "episode_id": 93485494,
+      "action": "tape_93501610@163",
+      "margin": 17202.0
+    },
+    {
+      "episode_id": 93486381,
+      "action": "tape_93724855@163",
+      "margin": 31280.0
+    },
+    {
+      "episode_id": 93487265,
+      "action": "tape_93494430@163",
+      "margin": 10898.0
+    },
+    {
+      "episode_id": 93488158,
+      "action": "tape_93518562@163",
+      "margin": 1498.0
+    },
+    {
+      "episode_id": 93488275,
+      "action": "tape_93494430@163",
+      "margin": 22445.0
+    },
+    {
+      "episode_id": 93489034,
+      "action": "tape_93520335@163",
+      "margin": 6839.0
+    },
+    {
+      "episode_id": 93489928,
+      "action": "tape_93501610@163",
+      "margin": 8643.0
+    },
+    {
+      "episode_id": 93494430,
+      "action": "tape_93518562@163",
+      "margin": 786.0
+    },
+    {
+      "episode_id": 93495340,
+      "action": "tape_93546314@163",
+      "margin": 3968.0
+    },
+    {
+      "episode_id": 93496227,
+      "action": "tape_93518562@163",
+      "margin": 5839.0
+    },
+    {
+      "episode_id": 93497123,
+      "action": "tape_93734648@163",
+      "margin": 1898.0
+    },
+    {
+      "episode_id": 93498033,
+      "action": "tape_93734648@163",
+      "margin": 3781.0
+    },
+    {
+      "episode_id": 93498936,
+      "action": "tape_93816256@163",
+      "margin": 17131.0
+    },
+    {
+      "episode_id": 93499826,
+      "action": "tape_93518562@163",
+      "margin": 12731.0
+    },
+    {
+      "episode_id": 93500721,
+      "action": "tape_93734648@163",
+      "margin": 9841.0
+    },
+    {
+      "episode_id": 93501610,
+      "action": "tape_93520335@163",
+      "margin": 8928.0
+    },
+    {
+      "episode_id": 93502507,
+      "action": "tape_93494430@163",
+      "margin": 5625.0
+    },
+    {
+      "episode_id": 93503406,
+      "action": "tape_93518562@163",
+      "margin": 18041.0
+    },
+    {
+      "episode_id": 93504316,
+      "action": "tape_93724855@163",
+      "margin": 5912.0
+    },
+    {
+      "episode_id": 93505205,
+      "action": "tape_93546314@163",
+      "margin": 529.0
+    },
+    {
+      "episode_id": 93506095,
+      "action": "tape_93724855@163",
+      "margin": 22611.0
+    },
+    {
+      "episode_id": 93506163,
+      "action": "tape_93734648@163",
+      "margin": 1089.0
+    },
+    {
+      "episode_id": 93506985,
+      "action": "tape_93816256@163",
+      "margin": 1394.0
+    },
+    {
+      "episode_id": 93507880,
+      "action": "tape_93546314@163",
+      "margin": 1785.0
+    },
+    {
+      "episode_id": 93508769,
+      "action": "tape_93494430@163",
+      "margin": 271.0
+    },
+    {
+      "episode_id": 93509656,
+      "action": "tape_93724855@163",
+      "margin": 22376.0
+    },
+    {
+      "episode_id": 93510537,
+      "action": "tape_93494430@163",
+      "margin": 1155.0
+    },
+    {
+      "episode_id": 93511430,
+      "action": "tape_93816256@163",
+      "margin": 4657.0
+    },
+    {
+      "episode_id": 93512317,
+      "action": "tape_93518562@163",
+      "margin": 402.0
+    },
+    {
+      "episode_id": 93513211,
+      "action": "tape_93734648@163",
+      "margin": 2144.0
+    },
+    {
+      "episode_id": 93514107,
+      "action": "tape_93518562@163",
+      "margin": 6100.0
+    },
+    {
+      "episode_id": 93514993,
+      "action": "tape_93734648@163",
+      "margin": 868.0
+    },
+    {
+      "episode_id": 93515895,
+      "action": "tape_93494430@163",
+      "margin": -2816.0
+    },
+    {
+      "episode_id": 93516782,
+      "action": "tape_93518562@163",
+      "margin": -28074.0
+    },
+    {
+      "episode_id": 93516858,
+      "action": "tape_93724855@163",
+      "margin": 3663.0
+    },
+    {
+      "episode_id": 93517673,
+      "action": "tape_93518562@163",
+      "margin": 2266.0
+    },
+    {
+      "episode_id": 93518562,
+      "action": "tape_93816256@163",
+      "margin": 17589.0
+    },
+    {
+      "episode_id": 93519448,
+      "action": "tape_93634131@163",
+      "margin": -1809.0
+    },
+    {
+      "episode_id": 93520335,
+      "action": "tape_93520335@163",
+      "margin": 740.0
+    },
+    {
+      "episode_id": 93521238,
+      "action": "tape_93734648@163",
+      "margin": 3092.0
+    },
+    {
+      "episode_id": 93522142,
+      "action": "tape_93520335@163",
+      "margin": 3186.0
+    },
+    {
+      "episode_id": 93523040,
+      "action": "tape_93520335@163",
+      "margin": 907.0
+    },
+    {
+      "episode_id": 93523943,
+      "action": "tape_93518562@163",
+      "margin": 4377.0
+    },
+    {
+      "episode_id": 93524843,
+      "action": "tape_93816256@163",
+      "margin": 9049.0
+    },
+    {
+      "episode_id": 93525727,
+      "action": "tape_93816256@163",
+      "margin": 10230.0
+    },
+    {
+      "episode_id": 93526612,
+      "action": "tape_93816256@163",
+      "margin": 5967.0
+    },
+    {
+      "episode_id": 93527510,
+      "action": "tape_93546314@163",
+      "margin": 872.0
+    },
+    {
+      "episode_id": 93543614,
+      "action": "tape_93520335@163",
+      "margin": 3188.0
+    },
+    {
+      "episode_id": 93544524,
+      "action": "tape_93518562@163",
+      "margin": 4083.0
+    },
+    {
+      "episode_id": 93545421,
+      "action": "tape_93724855@163",
+      "margin": 5043.0
+    },
+    {
+      "episode_id": 93546314,
+      "action": "tape_93501610@163",
+      "margin": 9064.0
+    },
+    {
+      "episode_id": 93547215,
+      "action": "tape_93724855@163",
+      "margin": 23733.0
+    },
+    {
+      "episode_id": 93550871,
+      "action": "tape_93816256@163",
+      "margin": 1692.0
+    },
+    {
+      "episode_id": 93558043,
+      "action": "tape_93501610@163",
+      "margin": 6434.0
+    },
+    {
+      "episode_id": 93567835,
+      "action": "tape_93518562@163",
+      "margin": 4129.0
+    },
+    {
+      "episode_id": 93579517,
+      "action": "tape_93518562@163",
+      "margin": 492.0
+    },
+    {
+      "episode_id": 93591196,
+      "action": "tape_93518562@163",
+      "margin": 3622.0
+    },
+    {
+      "episode_id": 93606440,
+      "action": "tape_93520335@163",
+      "margin": 13401.0
+    },
+    {
+      "episode_id": 93620762,
+      "action": "tape_93734648@163",
+      "margin": 236.0
+    },
+    {
+      "episode_id": 93634131,
+      "action": "tape_93724855@163",
+      "margin": 9934.0
+    },
+    {
+      "episode_id": 93646712,
+      "action": "tape_93494430@163",
+      "margin": 12162.0
+    },
+    {
+      "episode_id": 93658436,
+      "action": "tape_93634131@163",
+      "margin": 2833.0
+    },
+    {
+      "episode_id": 93670246,
+      "action": "tape_93724855@163",
+      "margin": 11607.0
+    },
+    {
+      "episode_id": 93682830,
+      "action": "tape_93494430@163",
+      "margin": 557.0
+    },
+    {
+      "episode_id": 93693600,
+      "action": "tape_93816256@163",
+      "margin": 1187.0
+    },
+    {
+      "episode_id": 93704243,
+      "action": "tape_93518562@163",
+      "margin": 1564.0
+    },
+    {
+      "episode_id": 93714132,
+      "action": "tape_93498033@163",
+      "margin": 871.0
+    },
+    {
+      "episode_id": 93724855,
+      "action": "tape_93816256@163",
+      "margin": 5581.0
+    },
+    {
+      "episode_id": 93734648,
+      "action": "tape_93816256@163",
+      "margin": 5667.0
+    },
+    {
+      "episode_id": 93743523,
+      "action": "tape_93816256@163",
+      "margin": 15750.0
+    },
+    {
+      "episode_id": 93751661,
+      "action": "tape_93734648@163",
+      "margin": 1081.0
+    },
+    {
+      "episode_id": 93759682,
+      "action": "tape_93501610@163",
+      "margin": 713.0
+    },
+    {
+      "episode_id": 93767766,
+      "action": "tape_93724855@163",
+      "margin": 3449.0
+    },
+    {
+      "episode_id": 93775894,
+      "action": "tape_93518562@163",
+      "margin": 3013.0
+    },
+    {
+      "episode_id": 93783010,
+      "action": "tape_93550871@163",
+      "margin": 1164.0
+    },
+    {
+      "episode_id": 93787889,
+      "action": "tape_93494430@163",
+      "margin": 23.0
+    },
+    {
+      "episode_id": 93793186,
+      "action": "tape_93518562@163",
+      "margin": 3198.0
+    },
+    {
+      "episode_id": 93798410,
+      "action": "tape_93724855@163",
+      "margin": 173.0
+    },
+    {
+      "episode_id": 93803702,
+      "action": "tape_93816256@163",
+      "margin": 11751.0
+    },
+    {
+      "episode_id": 93809928,
+      "action": "tape_93498033@163",
+      "margin": 1615.0
+    },
+    {
+      "episode_id": 93816256,
+      "action": "tape_93518562@163",
+      "margin": 7596.0
+    },
+    {
+      "episode_id": 93822918,
+      "action": "tape_93816256@163",
+      "margin": 12442.0
+    },
+    {
+      "episode_id": 93835266,
+      "action": "tape_93494430@163",
+      "margin": 16343.0
+    },
+    {
+      "episode_id": 93848465,
+      "action": "tape_93816256@163",
+      "margin": 149.0
+    },
+    {
+      "episode_id": 93862421,
+      "action": "tape_93518562@163",
+      "margin": 970.0
+    },
+    {
+      "episode_id": 93877490,
+      "action": "tape_93520335@163",
+      "margin": 3884.0
+    },
+    {
+      "episode_id": 93897794,
+      "action": "tape_93518562@163",
+      "margin": 2165.0
+    },
+    {
+      "episode_id": 93916293,
+      "action": "tape_93494430@163",
+      "margin": 448.0
+    },
+    {
+      "episode_id": 93936519,
+      "action": "tape_93494430@163",
+      "margin": 22613.0
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "manifest_version": 1,
+  "classes": [
+    0,
+    1
+  ],
+  "rows": 10000,
+  "features": 9,
+  "recipe_id": "mixed-safe",
+  "planner": {
+    "source": "profile",
+    "valid": true,
+    "recipe_id": "mixed-safe"
+  },
+  "initial_candidates": [
+    "logistic",
+    "small_rbf_svm",
+    "extra_trees"
+  ],
+  "challenger_candidates": [
+    "blend_top3",
+    "meta_logstack",
+    "hist_gradient"
+  ],
+  "candidates": [
+    {
+      "file": "candidate_logistic.csv",
+      "state_file": "candidate_logistic.npz",
+      "name": "logistic",
+      "family": "linear",
+      "role": "anchor",
+      "oof_auc": 0.67439401,
+      "fold_auc": [
+        0.63435692,
+        0.72550067,
+        0.68900757,
+        0.65785492,
+        0.66702279
+      ],
+      "fold_auc_std": 0.03084044,
+      "test_rank_correlation_to_best": 0.94584101
+    },
+    {
+      "file": "candidate_small_rbf_svm.csv",
+      "state_file": "candidate_small_rbf_svm.npz",
+      "name": "small_rbf_svm",
+      "family": "kernel",
+      "role": "anchor",
+      "oof_auc": 0.66669278,
+      "fold_auc": [
+        0.62007121,
+        0.67280819,
+        0.68099688,
+        0.65042279,
+        0.70833333
+      ],
+      "fold_auc_std": 0.02971224,
+      "test_rank_correlation_to_best": 0.93340797
+    },
+    {
+      "file": "candidate_extra_trees.csv",
+      "state_file": "candidate_extra_trees.npz",
+      "name": "extra_trees",
+      "family": "bagging",
+      "role": "anchor",
+      "oof_auc": 0.65867644,
+      "fold_auc": [
+        0.66372942,
+        0.65224744,
+        0.63484646,
+        0.66012461,
+        0.67939815
+      ],
+      "fold_auc_std": 0.01459024,
+      "test_rank_correlation_to_best": 0.81516713
+    },
+    {
+      "file": "candidate_blend_top3.csv",
+      "state_file": "candidate_blend_top3.npz",
+      "name": "blend_top3",
+      "family": "blend",
+      "role": "challenger",
+      "oof_auc": 0.68716888,
+      "fold_auc": [],
+      "fold_auc_std": null,
+      "test_rank_correlation_to_best": 1.0
+    },
+    {
+      "file": "candidate_meta_logstack.csv",
+      "state_file": "candidate_meta_logstack.npz",
+      "name": "meta_logstack",
+      "family": "meta",
+      "role": "challenger",
+      "oof_auc": 0.68370457,
+      "fold_auc": [
+        0.64548287,
+        0.74517134,
+        0.70102359,
+        0.69069871,
+        0.63933405
+      ],
+      "fold_auc_std": 0.03887066,
+      "test_rank_correlation_to_best": 0.9923982
+    },
+    {
+      "file": "candidate_hist_gradient.csv",
+      "state_file": "candidate_hist_gradient.npz",
+      "name": "hist_gradient",
+      "family": "histogram",
+      "role": "challenger",
+      "oof_auc": 0.64716375,
+      "fold_auc": [
+        0.65816644,
+        0.63938585,
+        0.62189586,
+        0.67467735,
+        0.65304487
+      ],
+      "fold_auc_std": 0.01780918,
+      "test_rank_correlation_to_best": 0.84959693
+    }
+  ],
+  "diagnostics": {
+    "anchors": [
+      "logistic",
+      "small_rbf_svm",
+      "extra_trees"
+    ],
+    "guarded_selection": {
+      "best_core": {
+        "name": "logistic",
+        "family": "linear",
+        "oof_auc": 0.67439401
+      },
+      "blend_gate": {
+        "accepted": true,
+        "name": "blend_top3",
+        "oof_auc": 0.68716888,
+        "gain": 0.01277487,
+        "test_rank_correlation_to_best": 0.94584101
+      },
+      "interaction_gate": {
+        "accepted": false
+      }
+    },
+    "recipe_candidates": []
+  },
+  "failures": []
+}

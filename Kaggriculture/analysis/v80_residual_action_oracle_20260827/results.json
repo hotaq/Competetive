@@ -1,0 +1,2598 @@
+{
+  "schema_version": 1,
+  "analysis": "v80_v67_residual_action_priority_oracle",
+  "status": "STOP_PRIORITY_GRAMMAR_FAILS_TARGET_PREREQUISITE",
+  "stop_reason": "Episode 100159725 remained negative under every tested priority macro deviation, so the 4/4 target rescue prerequisite failed before controls.",
+  "deployable": false,
+  "candidate_created": false,
+  "training_started": false,
+  "upload_performed": false,
+  "scope": {
+    "replays": "four consumed Gate8 target losses only for score simulation",
+    "controls": "catalogued but not simulated because the target-only fail-fast prerequisite failed",
+    "opening_preserved_through_step": 119,
+    "mutation_window_inclusive": [
+      120,
+      270
+    ],
+    "families": [
+      "market_drop",
+      "market_item_swap",
+      "market_quantity"
+    ],
+    "eligible_verbs": [
+      "HIRE",
+      "BUY_LAND",
+      "BUY_ANIMAL",
+      "BUY_SEED",
+      "BUY_PRODUCT"
+    ],
+    "continuation": "raw uploaded V67 candidate actions and opponent tape preserved byte-for-byte outside one mutation",
+    "engine": "official Rust binding",
+    "forbidden_sets_used": [],
+    "live_proxy_seeds_used": []
+  },
+  "coverage": {
+    "variant_simulations": 1213,
+    "exact_engine_transitions": 872147,
+    "sanitizer_clean_variants": 1203,
+    "sanitizer_changed_variants": 10,
+    "target_episode_counts": {
+      "100159725": 271,
+      "100184942": 277,
+      "100187229": 394,
+      "100196432": 271
+    },
+    "target_positive_count": 3,
+    "target_worst_oracle_margin": -3421.0,
+    "regression_controls_simulated": 0
+  },
+  "target_hindsight_oracle": {
+    "uses_completed_episode_identity": true,
+    "warning": "Per-episode best choice is a non-deployable ceiling, not an observable state rule.",
+    "rows": [
+      {
+        "episode_id": 100159725,
+        "baseline_margin": -6859.0,
+        "variant_count": 271,
+        "sanitizer_clean_variant_count": 270,
+        "sanitizer_changed_variant_count": 1,
+        "positive_variant_count": 0,
+        "oracle_margin": -3421.0,
+        "oracle_delta_margin": 3438.0,
+        "choice": {
+          "candidate_money": 57940.0,
+          "category": "crop",
+          "delta_margin": 3438.0,
+          "descriptor": {
+            "item": "STRAWBERRY",
+            "market_index": 6,
+            "occurrence": 2,
+            "operation": "drop",
+            "original": [
+              "BUY_SEED",
+              "STRAWBERRY",
+              1
+            ],
+            "step": 144,
+            "surface": "market",
+            "verb": "BUY_SEED"
+          },
+          "episode_id": 100159725,
+          "family": "market_drop",
+          "margin": -3421.0,
+          "mutated_step_sanitizer_changes": 0,
+          "mutation_id": "26be4073b51904f2b082",
+          "opponent_money": 61361.0,
+          "role": "target",
+          "semantic_key": "{\"category\":\"crop\",\"family\":\"market_drop\",\"item\":\"STRAWBERRY\",\"occurrence\":2,\"operation\":\"drop\",\"surface\":\"market\",\"verb\":\"BUY_SEED\"}"
+        },
+        "best_by_family": {
+          "market_drop": {
+            "candidate_money": 57940.0,
+            "category": "crop",
+            "delta_margin": 3438.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 6,
+              "occurrence": 2,
+              "operation": "drop",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                1
+              ],
+              "step": 144,
+              "surface": "market",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100159725,
+            "family": "market_drop",
+            "margin": -3421.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "26be4073b51904f2b082",
+            "opponent_money": 61361.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_drop\",\"item\":\"STRAWBERRY\",\"occurrence\":2,\"operation\":\"drop\",\"surface\":\"market\",\"verb\":\"BUY_SEED\"}"
+          },
+          "market_quantity": {
+            "candidate_money": 57940.0,
+            "category": "crop",
+            "delta_margin": 3438.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 0,
+              "occurrence": 1,
+              "operation": "quantity",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                4
+              ],
+              "quantity_mode": "minus_one",
+              "replacement": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                3
+              ],
+              "step": 141,
+              "surface": "market",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100159725,
+            "family": "market_quantity",
+            "margin": -3421.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "77ddd9fbc9297453bcfe",
+            "opponent_money": 61361.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_quantity\",\"item\":\"STRAWBERRY\",\"occurrence\":1,\"operation\":\"quantity\",\"quantity_mode\":\"minus_one\",\"surface\":\"market\",\"verb\":\"BUY_SEED\"}"
+          },
+          "market_item_swap": {
+            "candidate_money": 57930.0,
+            "category": "crop",
+            "delta_margin": 3428.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 6,
+              "occurrence": 2,
+              "operation": "swap_item",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                1
+              ],
+              "replacement": [
+                "BUY_SEED",
+                "WHEAT",
+                1
+              ],
+              "step": 144,
+              "surface": "market",
+              "target_item": "WHEAT",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100159725,
+            "family": "market_item_swap",
+            "margin": -3431.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "58f4e0d136cd58ef017b",
+            "opponent_money": 61361.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"STRAWBERRY\",\"occurrence\":2,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"WHEAT\",\"verb\":\"BUY_SEED\"}"
+          }
+        },
+        "top_variants": [
+          {
+            "candidate_money": 57940.0,
+            "category": "crop",
+            "delta_margin": 3438.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 6,
+              "occurrence": 2,
+              "operation": "drop",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                1
+              ],
+              "step": 144,
+              "surface": "market",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100159725,
+            "family": "market_drop",
+            "margin": -3421.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "26be4073b51904f2b082",
+            "opponent_money": 61361.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_drop\",\"item\":\"STRAWBERRY\",\"occurrence\":2,\"operation\":\"drop\",\"surface\":\"market\",\"verb\":\"BUY_SEED\"}"
+          },
+          {
+            "candidate_money": 57940.0,
+            "category": "crop",
+            "delta_margin": 3438.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 0,
+              "occurrence": 1,
+              "operation": "quantity",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                4
+              ],
+              "quantity_mode": "minus_one",
+              "replacement": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                3
+              ],
+              "step": 141,
+              "surface": "market",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100159725,
+            "family": "market_quantity",
+            "margin": -3421.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "77ddd9fbc9297453bcfe",
+            "opponent_money": 61361.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_quantity\",\"item\":\"STRAWBERRY\",\"occurrence\":1,\"operation\":\"quantity\",\"quantity_mode\":\"minus_one\",\"surface\":\"market\",\"verb\":\"BUY_SEED\"}"
+          },
+          {
+            "candidate_money": 57940.0,
+            "category": "crop",
+            "delta_margin": 3438.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 0,
+              "occurrence": 3,
+              "operation": "quantity",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                6
+              ],
+              "quantity_mode": "minus_one",
+              "replacement": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                5
+              ],
+              "step": 154,
+              "surface": "market",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100159725,
+            "family": "market_quantity",
+            "margin": -3421.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "b44cc09ac08782dc781d",
+            "opponent_money": 61361.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_quantity\",\"item\":\"STRAWBERRY\",\"occurrence\":3,\"operation\":\"quantity\",\"quantity_mode\":\"minus_one\",\"surface\":\"market\",\"verb\":\"BUY_SEED\"}"
+          },
+          {
+            "candidate_money": 57940.0,
+            "category": "crop",
+            "delta_margin": 3438.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 6,
+              "occurrence": 4,
+              "operation": "quantity",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                2
+              ],
+              "quantity_mode": "half",
+              "replacement": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                1
+              ],
+              "step": 168,
+              "surface": "market",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100159725,
+            "family": "market_quantity",
+            "margin": -3421.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "db6bfd15201b528b9f16",
+            "opponent_money": 61361.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_quantity\",\"item\":\"STRAWBERRY\",\"occurrence\":4,\"operation\":\"quantity\",\"quantity_mode\":\"half\",\"surface\":\"market\",\"verb\":\"BUY_SEED\"}"
+          },
+          {
+            "candidate_money": 57930.0,
+            "category": "crop",
+            "delta_margin": 3428.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 6,
+              "occurrence": 2,
+              "operation": "swap_item",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                1
+              ],
+              "replacement": [
+                "BUY_SEED",
+                "WHEAT",
+                1
+              ],
+              "step": 144,
+              "surface": "market",
+              "target_item": "WHEAT",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100159725,
+            "family": "market_item_swap",
+            "margin": -3431.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "58f4e0d136cd58ef017b",
+            "opponent_money": 61361.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"STRAWBERRY\",\"occurrence\":2,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"WHEAT\",\"verb\":\"BUY_SEED\"}"
+          },
+          {
+            "candidate_money": 57920.0,
+            "category": "crop",
+            "delta_margin": 3418.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 6,
+              "occurrence": 2,
+              "operation": "swap_item",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                1
+              ],
+              "replacement": [
+                "BUY_SEED",
+                "CARROT",
+                1
+              ],
+              "step": 144,
+              "surface": "market",
+              "target_item": "CARROT",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100159725,
+            "family": "market_item_swap",
+            "margin": -3441.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "3a41f651de64e01815d8",
+            "opponent_money": 61361.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"STRAWBERRY\",\"occurrence\":2,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"CARROT\",\"verb\":\"BUY_SEED\"}"
+          },
+          {
+            "candidate_money": 57890.0,
+            "category": "crop",
+            "delta_margin": 3388.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 6,
+              "occurrence": 2,
+              "operation": "swap_item",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                1
+              ],
+              "replacement": [
+                "BUY_SEED",
+                "TOMATO",
+                1
+              ],
+              "step": 144,
+              "surface": "market",
+              "target_item": "TOMATO",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100159725,
+            "family": "market_item_swap",
+            "margin": -3471.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "173a215f6279af29b4d3",
+            "opponent_money": 61361.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"STRAWBERRY\",\"occurrence\":2,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"TOMATO\",\"verb\":\"BUY_SEED\"}"
+          },
+          {
+            "candidate_money": 57860.0,
+            "category": "crop",
+            "delta_margin": 3358.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 6,
+              "occurrence": 2,
+              "operation": "swap_item",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                1
+              ],
+              "replacement": [
+                "BUY_SEED",
+                "MELON",
+                1
+              ],
+              "step": 144,
+              "surface": "market",
+              "target_item": "MELON",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100159725,
+            "family": "market_item_swap",
+            "margin": -3501.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "abc784e13978601985ab",
+            "opponent_money": 61361.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"STRAWBERRY\",\"occurrence\":2,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"MELON\",\"verb\":\"BUY_SEED\"}"
+          },
+          {
+            "candidate_money": 55382.0,
+            "category": "crop",
+            "delta_margin": 3182.0,
+            "descriptor": {
+              "item": "WHEAT",
+              "market_index": 7,
+              "occurrence": 1,
+              "operation": "drop",
+              "original": [
+                "BUY_SEED",
+                "WHEAT",
+                1
+              ],
+              "step": 144,
+              "surface": "market",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100159725,
+            "family": "market_drop",
+            "margin": -3677.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "627d8bbd29d9bd10327c",
+            "opponent_money": 59059.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_drop\",\"item\":\"WHEAT\",\"occurrence\":1,\"operation\":\"drop\",\"surface\":\"market\",\"verb\":\"BUY_SEED\"}"
+          },
+          {
+            "candidate_money": 55382.0,
+            "category": "crop",
+            "delta_margin": 3182.0,
+            "descriptor": {
+              "item": "WHEAT",
+              "market_index": 1,
+              "occurrence": 0,
+              "operation": "quantity",
+              "original": [
+                "BUY_SEED",
+                "WHEAT",
+                4
+              ],
+              "quantity_mode": "minus_one",
+              "replacement": [
+                "BUY_SEED",
+                "WHEAT",
+                3
+              ],
+              "step": 139,
+              "surface": "market",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100159725,
+            "family": "market_quantity",
+            "margin": -3677.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "b56b8052bda8abc54edf",
+            "opponent_money": 59059.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_quantity\",\"item\":\"WHEAT\",\"occurrence\":0,\"operation\":\"quantity\",\"quantity_mode\":\"minus_one\",\"surface\":\"market\",\"verb\":\"BUY_SEED\"}"
+          }
+        ]
+      },
+      {
+        "episode_id": 100184942,
+        "baseline_margin": -5470.0,
+        "variant_count": 277,
+        "sanitizer_clean_variant_count": 270,
+        "sanitizer_changed_variant_count": 7,
+        "positive_variant_count": 53,
+        "oracle_margin": 26804.0,
+        "oracle_delta_margin": 32274.0,
+        "choice": {
+          "candidate_money": 112706.0,
+          "category": "crop",
+          "delta_margin": 32274.0,
+          "descriptor": {
+            "item": "STRAWBERRY",
+            "market_index": 0,
+            "occurrence": 2,
+            "operation": "drop",
+            "original": [
+              "BUY_SEED",
+              "STRAWBERRY",
+              4
+            ],
+            "step": 141,
+            "surface": "market",
+            "verb": "BUY_SEED"
+          },
+          "episode_id": 100184942,
+          "family": "market_drop",
+          "margin": 26804.0,
+          "mutated_step_sanitizer_changes": 0,
+          "mutation_id": "1d5a9f1a20deaea3187f",
+          "opponent_money": 85902.0,
+          "role": "target",
+          "semantic_key": "{\"category\":\"crop\",\"family\":\"market_drop\",\"item\":\"STRAWBERRY\",\"occurrence\":2,\"operation\":\"drop\",\"surface\":\"market\",\"verb\":\"BUY_SEED\"}"
+        },
+        "best_by_family": {
+          "market_drop": {
+            "candidate_money": 112706.0,
+            "category": "crop",
+            "delta_margin": 32274.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 0,
+              "occurrence": 2,
+              "operation": "drop",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                4
+              ],
+              "step": 141,
+              "surface": "market",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100184942,
+            "family": "market_drop",
+            "margin": 26804.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "1d5a9f1a20deaea3187f",
+            "opponent_money": 85902.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_drop\",\"item\":\"STRAWBERRY\",\"occurrence\":2,\"operation\":\"drop\",\"surface\":\"market\",\"verb\":\"BUY_SEED\"}"
+          },
+          "market_item_swap": {
+            "candidate_money": 112666.0,
+            "category": "crop",
+            "delta_margin": 32234.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 0,
+              "occurrence": 2,
+              "operation": "swap_item",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                4
+              ],
+              "replacement": [
+                "BUY_SEED",
+                "WHEAT",
+                4
+              ],
+              "step": 141,
+              "surface": "market",
+              "target_item": "WHEAT",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100184942,
+            "family": "market_item_swap",
+            "margin": 26764.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "fd134aa382ff7bf1cbe2",
+            "opponent_money": 85902.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"STRAWBERRY\",\"occurrence\":2,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"WHEAT\",\"verb\":\"BUY_SEED\"}"
+          },
+          "market_quantity": {
+            "candidate_money": 94594.0,
+            "category": "crop",
+            "delta_margin": 23464.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 0,
+              "occurrence": 4,
+              "operation": "quantity",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                6
+              ],
+              "quantity_mode": "minus_one",
+              "replacement": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                5
+              ],
+              "step": 154,
+              "surface": "market",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100184942,
+            "family": "market_quantity",
+            "margin": 17994.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "8ee6c66cc5bc0afd48b2",
+            "opponent_money": 76600.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_quantity\",\"item\":\"STRAWBERRY\",\"occurrence\":4,\"operation\":\"quantity\",\"quantity_mode\":\"minus_one\",\"surface\":\"market\",\"verb\":\"BUY_SEED\"}"
+          }
+        },
+        "top_variants": [
+          {
+            "candidate_money": 112706.0,
+            "category": "crop",
+            "delta_margin": 32274.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 0,
+              "occurrence": 2,
+              "operation": "drop",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                4
+              ],
+              "step": 141,
+              "surface": "market",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100184942,
+            "family": "market_drop",
+            "margin": 26804.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "1d5a9f1a20deaea3187f",
+            "opponent_money": 85902.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_drop\",\"item\":\"STRAWBERRY\",\"occurrence\":2,\"operation\":\"drop\",\"surface\":\"market\",\"verb\":\"BUY_SEED\"}"
+          },
+          {
+            "candidate_money": 112666.0,
+            "category": "crop",
+            "delta_margin": 32234.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 0,
+              "occurrence": 2,
+              "operation": "swap_item",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                4
+              ],
+              "replacement": [
+                "BUY_SEED",
+                "WHEAT",
+                4
+              ],
+              "step": 141,
+              "surface": "market",
+              "target_item": "WHEAT",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100184942,
+            "family": "market_item_swap",
+            "margin": 26764.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "fd134aa382ff7bf1cbe2",
+            "opponent_money": 85902.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"STRAWBERRY\",\"occurrence\":2,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"WHEAT\",\"verb\":\"BUY_SEED\"}"
+          },
+          {
+            "candidate_money": 112626.0,
+            "category": "crop",
+            "delta_margin": 32194.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 0,
+              "occurrence": 2,
+              "operation": "swap_item",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                4
+              ],
+              "replacement": [
+                "BUY_SEED",
+                "CARROT",
+                4
+              ],
+              "step": 141,
+              "surface": "market",
+              "target_item": "CARROT",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100184942,
+            "family": "market_item_swap",
+            "margin": 26724.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "b761c89b1d685bd7d4e2",
+            "opponent_money": 85902.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"STRAWBERRY\",\"occurrence\":2,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"CARROT\",\"verb\":\"BUY_SEED\"}"
+          },
+          {
+            "candidate_money": 112506.0,
+            "category": "crop",
+            "delta_margin": 32074.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 0,
+              "occurrence": 2,
+              "operation": "swap_item",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                4
+              ],
+              "replacement": [
+                "BUY_SEED",
+                "TOMATO",
+                4
+              ],
+              "step": 141,
+              "surface": "market",
+              "target_item": "TOMATO",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100184942,
+            "family": "market_item_swap",
+            "margin": 26604.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "80730e9ce6b33b258e24",
+            "opponent_money": 85902.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"STRAWBERRY\",\"occurrence\":2,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"TOMATO\",\"verb\":\"BUY_SEED\"}"
+          },
+          {
+            "candidate_money": 112386.0,
+            "category": "crop",
+            "delta_margin": 31954.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 0,
+              "occurrence": 2,
+              "operation": "swap_item",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                4
+              ],
+              "replacement": [
+                "BUY_SEED",
+                "MELON",
+                4
+              ],
+              "step": 141,
+              "surface": "market",
+              "target_item": "MELON",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100184942,
+            "family": "market_item_swap",
+            "margin": 26484.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "68294594da650268fe2a",
+            "opponent_money": 85902.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"STRAWBERRY\",\"occurrence\":2,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"MELON\",\"verb\":\"BUY_SEED\"}"
+          },
+          {
+            "candidate_money": 95197.0,
+            "category": "crop",
+            "delta_margin": 25351.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 0,
+              "occurrence": 4,
+              "operation": "drop",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                6
+              ],
+              "step": 154,
+              "surface": "market",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100184942,
+            "family": "market_drop",
+            "margin": 19881.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "281880490ec97236b98d",
+            "opponent_money": 75316.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_drop\",\"item\":\"STRAWBERRY\",\"occurrence\":4,\"operation\":\"drop\",\"surface\":\"market\",\"verb\":\"BUY_SEED\"}"
+          },
+          {
+            "candidate_money": 95137.0,
+            "category": "crop",
+            "delta_margin": 25291.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 0,
+              "occurrence": 4,
+              "operation": "swap_item",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                6
+              ],
+              "replacement": [
+                "BUY_SEED",
+                "WHEAT",
+                6
+              ],
+              "step": 154,
+              "surface": "market",
+              "target_item": "WHEAT",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100184942,
+            "family": "market_item_swap",
+            "margin": 19821.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "ffd47ff7aab76771fe62",
+            "opponent_money": 75316.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"STRAWBERRY\",\"occurrence\":4,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"WHEAT\",\"verb\":\"BUY_SEED\"}"
+          },
+          {
+            "candidate_money": 95077.0,
+            "category": "crop",
+            "delta_margin": 25231.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 0,
+              "occurrence": 4,
+              "operation": "swap_item",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                6
+              ],
+              "replacement": [
+                "BUY_SEED",
+                "CARROT",
+                6
+              ],
+              "step": 154,
+              "surface": "market",
+              "target_item": "CARROT",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100184942,
+            "family": "market_item_swap",
+            "margin": 19761.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "809989d658d3eb5a4a4f",
+            "opponent_money": 75316.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"STRAWBERRY\",\"occurrence\":4,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"CARROT\",\"verb\":\"BUY_SEED\"}"
+          },
+          {
+            "candidate_money": 94897.0,
+            "category": "crop",
+            "delta_margin": 25051.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 0,
+              "occurrence": 4,
+              "operation": "swap_item",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                6
+              ],
+              "replacement": [
+                "BUY_SEED",
+                "TOMATO",
+                6
+              ],
+              "step": 154,
+              "surface": "market",
+              "target_item": "TOMATO",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100184942,
+            "family": "market_item_swap",
+            "margin": 19581.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "93f013caf216265323fa",
+            "opponent_money": 75316.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"STRAWBERRY\",\"occurrence\":4,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"TOMATO\",\"verb\":\"BUY_SEED\"}"
+          },
+          {
+            "candidate_money": 94717.0,
+            "category": "crop",
+            "delta_margin": 24871.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 0,
+              "occurrence": 4,
+              "operation": "swap_item",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                6
+              ],
+              "replacement": [
+                "BUY_SEED",
+                "MELON",
+                6
+              ],
+              "step": 154,
+              "surface": "market",
+              "target_item": "MELON",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100184942,
+            "family": "market_item_swap",
+            "margin": 19401.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "18db8a2cf4837706032e",
+            "opponent_money": 75316.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"STRAWBERRY\",\"occurrence\":4,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"MELON\",\"verb\":\"BUY_SEED\"}"
+          }
+        ]
+      },
+      {
+        "episode_id": 100187229,
+        "baseline_margin": -21061.0,
+        "variant_count": 394,
+        "sanitizer_clean_variant_count": 394,
+        "sanitizer_changed_variant_count": 0,
+        "positive_variant_count": 5,
+        "oracle_margin": 33534.0,
+        "oracle_delta_margin": 54595.0,
+        "choice": {
+          "candidate_money": 130205.0,
+          "category": "crop",
+          "delta_margin": 54595.0,
+          "descriptor": {
+            "item": "STRAWBERRY",
+            "market_index": 0,
+            "occurrence": 0,
+            "operation": "drop",
+            "original": [
+              "BUY_SEED",
+              "STRAWBERRY",
+              3
+            ],
+            "step": 127,
+            "surface": "market",
+            "verb": "BUY_SEED"
+          },
+          "episode_id": 100187229,
+          "family": "market_drop",
+          "margin": 33534.0,
+          "mutated_step_sanitizer_changes": 0,
+          "mutation_id": "8664d449880862e7fdcb",
+          "opponent_money": 96671.0,
+          "role": "target",
+          "semantic_key": "{\"category\":\"crop\",\"family\":\"market_drop\",\"item\":\"STRAWBERRY\",\"occurrence\":0,\"operation\":\"drop\",\"surface\":\"market\",\"verb\":\"BUY_SEED\"}"
+        },
+        "best_by_family": {
+          "market_drop": {
+            "candidate_money": 130205.0,
+            "category": "crop",
+            "delta_margin": 54595.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 0,
+              "occurrence": 0,
+              "operation": "drop",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                3
+              ],
+              "step": 127,
+              "surface": "market",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100187229,
+            "family": "market_drop",
+            "margin": 33534.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "8664d449880862e7fdcb",
+            "opponent_money": 96671.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_drop\",\"item\":\"STRAWBERRY\",\"occurrence\":0,\"operation\":\"drop\",\"surface\":\"market\",\"verb\":\"BUY_SEED\"}"
+          },
+          "market_item_swap": {
+            "candidate_money": 130175.0,
+            "category": "crop",
+            "delta_margin": 54565.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 0,
+              "occurrence": 0,
+              "operation": "swap_item",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                3
+              ],
+              "replacement": [
+                "BUY_SEED",
+                "WHEAT",
+                3
+              ],
+              "step": 127,
+              "surface": "market",
+              "target_item": "WHEAT",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100187229,
+            "family": "market_item_swap",
+            "margin": 33504.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "e0ce548c3544debcc6f4",
+            "opponent_money": 96671.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"STRAWBERRY\",\"occurrence\":0,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"WHEAT\",\"verb\":\"BUY_SEED\"}"
+          },
+          "market_quantity": {
+            "candidate_money": 61425.0,
+            "category": "crop",
+            "delta_margin": 13280.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 0,
+              "occurrence": 2,
+              "operation": "quantity",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                4
+              ],
+              "quantity_mode": "half",
+              "replacement": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                2
+              ],
+              "step": 161,
+              "surface": "market",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100187229,
+            "family": "market_quantity",
+            "margin": -7781.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "d49cc0716ee806ed48dd",
+            "opponent_money": 69206.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_quantity\",\"item\":\"STRAWBERRY\",\"occurrence\":2,\"operation\":\"quantity\",\"quantity_mode\":\"half\",\"surface\":\"market\",\"verb\":\"BUY_SEED\"}"
+          }
+        },
+        "top_variants": [
+          {
+            "candidate_money": 130205.0,
+            "category": "crop",
+            "delta_margin": 54595.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 0,
+              "occurrence": 0,
+              "operation": "drop",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                3
+              ],
+              "step": 127,
+              "surface": "market",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100187229,
+            "family": "market_drop",
+            "margin": 33534.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "8664d449880862e7fdcb",
+            "opponent_money": 96671.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_drop\",\"item\":\"STRAWBERRY\",\"occurrence\":0,\"operation\":\"drop\",\"surface\":\"market\",\"verb\":\"BUY_SEED\"}"
+          },
+          {
+            "candidate_money": 130175.0,
+            "category": "crop",
+            "delta_margin": 54565.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 0,
+              "occurrence": 0,
+              "operation": "swap_item",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                3
+              ],
+              "replacement": [
+                "BUY_SEED",
+                "WHEAT",
+                3
+              ],
+              "step": 127,
+              "surface": "market",
+              "target_item": "WHEAT",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100187229,
+            "family": "market_item_swap",
+            "margin": 33504.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "e0ce548c3544debcc6f4",
+            "opponent_money": 96671.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"STRAWBERRY\",\"occurrence\":0,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"WHEAT\",\"verb\":\"BUY_SEED\"}"
+          },
+          {
+            "candidate_money": 130145.0,
+            "category": "crop",
+            "delta_margin": 54535.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 0,
+              "occurrence": 0,
+              "operation": "swap_item",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                3
+              ],
+              "replacement": [
+                "BUY_SEED",
+                "CARROT",
+                3
+              ],
+              "step": 127,
+              "surface": "market",
+              "target_item": "CARROT",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100187229,
+            "family": "market_item_swap",
+            "margin": 33474.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "8aa42d62cd200a39488b",
+            "opponent_money": 96671.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"STRAWBERRY\",\"occurrence\":0,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"CARROT\",\"verb\":\"BUY_SEED\"}"
+          },
+          {
+            "candidate_money": 130055.0,
+            "category": "crop",
+            "delta_margin": 54445.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 0,
+              "occurrence": 0,
+              "operation": "swap_item",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                3
+              ],
+              "replacement": [
+                "BUY_SEED",
+                "TOMATO",
+                3
+              ],
+              "step": 127,
+              "surface": "market",
+              "target_item": "TOMATO",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100187229,
+            "family": "market_item_swap",
+            "margin": 33384.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "81a24f0c332b200db9aa",
+            "opponent_money": 96671.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"STRAWBERRY\",\"occurrence\":0,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"TOMATO\",\"verb\":\"BUY_SEED\"}"
+          },
+          {
+            "candidate_money": 129965.0,
+            "category": "crop",
+            "delta_margin": 54355.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 0,
+              "occurrence": 0,
+              "operation": "swap_item",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                3
+              ],
+              "replacement": [
+                "BUY_SEED",
+                "MELON",
+                3
+              ],
+              "step": 127,
+              "surface": "market",
+              "target_item": "MELON",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100187229,
+            "family": "market_item_swap",
+            "margin": 33294.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "53867373ad6d5e673fd1",
+            "opponent_money": 96671.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"STRAWBERRY\",\"occurrence\":0,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"MELON\",\"verb\":\"BUY_SEED\"}"
+          },
+          {
+            "candidate_money": 61625.0,
+            "category": "crop",
+            "delta_margin": 13480.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 0,
+              "occurrence": 2,
+              "operation": "drop",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                4
+              ],
+              "step": 161,
+              "surface": "market",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100187229,
+            "family": "market_drop",
+            "margin": -7581.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "886d98f294c73ec5846c",
+            "opponent_money": 69206.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_drop\",\"item\":\"STRAWBERRY\",\"occurrence\":2,\"operation\":\"drop\",\"surface\":\"market\",\"verb\":\"BUY_SEED\"}"
+          },
+          {
+            "candidate_money": 61585.0,
+            "category": "crop",
+            "delta_margin": 13440.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 0,
+              "occurrence": 2,
+              "operation": "swap_item",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                4
+              ],
+              "replacement": [
+                "BUY_SEED",
+                "WHEAT",
+                4
+              ],
+              "step": 161,
+              "surface": "market",
+              "target_item": "WHEAT",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100187229,
+            "family": "market_item_swap",
+            "margin": -7621.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "e4789cad2cbd43131b8e",
+            "opponent_money": 69206.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"STRAWBERRY\",\"occurrence\":2,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"WHEAT\",\"verb\":\"BUY_SEED\"}"
+          },
+          {
+            "candidate_money": 61545.0,
+            "category": "crop",
+            "delta_margin": 13400.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 0,
+              "occurrence": 2,
+              "operation": "swap_item",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                4
+              ],
+              "replacement": [
+                "BUY_SEED",
+                "CARROT",
+                4
+              ],
+              "step": 161,
+              "surface": "market",
+              "target_item": "CARROT",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100187229,
+            "family": "market_item_swap",
+            "margin": -7661.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "2ea68779b497443f8c8d",
+            "opponent_money": 69206.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"STRAWBERRY\",\"occurrence\":2,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"CARROT\",\"verb\":\"BUY_SEED\"}"
+          },
+          {
+            "candidate_money": 61425.0,
+            "category": "crop",
+            "delta_margin": 13280.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 0,
+              "occurrence": 2,
+              "operation": "swap_item",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                4
+              ],
+              "replacement": [
+                "BUY_SEED",
+                "TOMATO",
+                4
+              ],
+              "step": 161,
+              "surface": "market",
+              "target_item": "TOMATO",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100187229,
+            "family": "market_item_swap",
+            "margin": -7781.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "ab2d50367fd408b347d0",
+            "opponent_money": 69206.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"STRAWBERRY\",\"occurrence\":2,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"TOMATO\",\"verb\":\"BUY_SEED\"}"
+          },
+          {
+            "candidate_money": 61425.0,
+            "category": "crop",
+            "delta_margin": 13280.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 0,
+              "occurrence": 2,
+              "operation": "quantity",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                4
+              ],
+              "quantity_mode": "half",
+              "replacement": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                2
+              ],
+              "step": 161,
+              "surface": "market",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100187229,
+            "family": "market_quantity",
+            "margin": -7781.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "d49cc0716ee806ed48dd",
+            "opponent_money": 69206.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_quantity\",\"item\":\"STRAWBERRY\",\"occurrence\":2,\"operation\":\"quantity\",\"quantity_mode\":\"half\",\"surface\":\"market\",\"verb\":\"BUY_SEED\"}"
+          }
+        ]
+      },
+      {
+        "episode_id": 100196432,
+        "baseline_margin": -2479.0,
+        "variant_count": 271,
+        "sanitizer_clean_variant_count": 269,
+        "sanitizer_changed_variant_count": 2,
+        "positive_variant_count": 12,
+        "oracle_margin": 3228.0,
+        "oracle_delta_margin": 5707.0,
+        "choice": {
+          "candidate_money": 106292.0,
+          "category": "hire",
+          "delta_margin": 5707.0,
+          "descriptor": {
+            "item": null,
+            "market_index": 6,
+            "occurrence": 4,
+            "operation": "drop",
+            "original": [
+              "HIRE"
+            ],
+            "step": 120,
+            "surface": "market",
+            "verb": "HIRE"
+          },
+          "episode_id": 100196432,
+          "family": "market_drop",
+          "margin": 3228.0,
+          "mutated_step_sanitizer_changes": 0,
+          "mutation_id": "2ddcecde1b54c0c15faf",
+          "opponent_money": 103064.0,
+          "role": "target",
+          "semantic_key": "{\"category\":\"hire\",\"family\":\"market_drop\",\"item\":null,\"occurrence\":4,\"operation\":\"drop\",\"surface\":\"market\",\"verb\":\"HIRE\"}"
+        },
+        "best_by_family": {
+          "market_drop": {
+            "candidate_money": 106292.0,
+            "category": "hire",
+            "delta_margin": 5707.0,
+            "descriptor": {
+              "item": null,
+              "market_index": 6,
+              "occurrence": 4,
+              "operation": "drop",
+              "original": [
+                "HIRE"
+              ],
+              "step": 120,
+              "surface": "market",
+              "verb": "HIRE"
+            },
+            "episode_id": 100196432,
+            "family": "market_drop",
+            "margin": 3228.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "2ddcecde1b54c0c15faf",
+            "opponent_money": 103064.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"hire\",\"family\":\"market_drop\",\"item\":null,\"occurrence\":4,\"operation\":\"drop\",\"surface\":\"market\",\"verb\":\"HIRE\"}"
+          },
+          "market_quantity": {
+            "candidate_money": 112402.0,
+            "category": "crop",
+            "delta_margin": 4665.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 7,
+              "occurrence": 5,
+              "operation": "quantity",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                6
+              ],
+              "quantity_mode": "half",
+              "replacement": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                3
+              ],
+              "step": 216,
+              "surface": "market",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100196432,
+            "family": "market_quantity",
+            "margin": 2186.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "bc027dd0883bc4198d71",
+            "opponent_money": 110216.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_quantity\",\"item\":\"STRAWBERRY\",\"occurrence\":5,\"operation\":\"quantity\",\"quantity_mode\":\"half\",\"surface\":\"market\",\"verb\":\"BUY_SEED\"}"
+          },
+          "market_item_swap": {
+            "candidate_money": 112405.0,
+            "category": "crop",
+            "delta_margin": 4149.0,
+            "descriptor": {
+              "item": "WHEAT",
+              "market_index": 8,
+              "occurrence": 2,
+              "operation": "swap_item",
+              "original": [
+                "BUY_SEED",
+                "WHEAT",
+                7
+              ],
+              "replacement": [
+                "BUY_SEED",
+                "CARROT",
+                7
+              ],
+              "step": 192,
+              "surface": "market",
+              "target_item": "CARROT",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100196432,
+            "family": "market_item_swap",
+            "margin": 1670.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "5e3dcf3c987562cecec1",
+            "opponent_money": 110735.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"WHEAT\",\"occurrence\":2,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"CARROT\",\"verb\":\"BUY_SEED\"}"
+          }
+        },
+        "top_variants": [
+          {
+            "candidate_money": 106292.0,
+            "category": "hire",
+            "delta_margin": 5707.0,
+            "descriptor": {
+              "item": null,
+              "market_index": 6,
+              "occurrence": 4,
+              "operation": "drop",
+              "original": [
+                "HIRE"
+              ],
+              "step": 120,
+              "surface": "market",
+              "verb": "HIRE"
+            },
+            "episode_id": 100196432,
+            "family": "market_drop",
+            "margin": 3228.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "2ddcecde1b54c0c15faf",
+            "opponent_money": 103064.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"hire\",\"family\":\"market_drop\",\"item\":null,\"occurrence\":4,\"operation\":\"drop\",\"surface\":\"market\",\"verb\":\"HIRE\"}"
+          },
+          {
+            "candidate_money": 106292.0,
+            "category": "hire",
+            "delta_margin": 5707.0,
+            "descriptor": {
+              "item": null,
+              "market_index": 4,
+              "occurrence": 2,
+              "operation": "drop",
+              "original": [
+                "HIRE"
+              ],
+              "step": 120,
+              "surface": "market",
+              "verb": "HIRE"
+            },
+            "episode_id": 100196432,
+            "family": "market_drop",
+            "margin": 3228.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "7edf379542b6ccb65e92",
+            "opponent_money": 103064.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"hire\",\"family\":\"market_drop\",\"item\":null,\"occurrence\":2,\"operation\":\"drop\",\"surface\":\"market\",\"verb\":\"HIRE\"}"
+          },
+          {
+            "candidate_money": 106292.0,
+            "category": "hire",
+            "delta_margin": 5707.0,
+            "descriptor": {
+              "item": null,
+              "market_index": 7,
+              "occurrence": 5,
+              "operation": "drop",
+              "original": [
+                "HIRE"
+              ],
+              "step": 120,
+              "surface": "market",
+              "verb": "HIRE"
+            },
+            "episode_id": 100196432,
+            "family": "market_drop",
+            "margin": 3228.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "a96c102ff2854b66c153",
+            "opponent_money": 103064.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"hire\",\"family\":\"market_drop\",\"item\":null,\"occurrence\":5,\"operation\":\"drop\",\"surface\":\"market\",\"verb\":\"HIRE\"}"
+          },
+          {
+            "candidate_money": 106292.0,
+            "category": "hire",
+            "delta_margin": 5707.0,
+            "descriptor": {
+              "item": null,
+              "market_index": 2,
+              "occurrence": 0,
+              "operation": "drop",
+              "original": [
+                "HIRE"
+              ],
+              "step": 120,
+              "surface": "market",
+              "verb": "HIRE"
+            },
+            "episode_id": 100196432,
+            "family": "market_drop",
+            "margin": 3228.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "ad68966045927d508985",
+            "opponent_money": 103064.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"hire\",\"family\":\"market_drop\",\"item\":null,\"occurrence\":0,\"operation\":\"drop\",\"surface\":\"market\",\"verb\":\"HIRE\"}"
+          },
+          {
+            "candidate_money": 106292.0,
+            "category": "hire",
+            "delta_margin": 5707.0,
+            "descriptor": {
+              "item": null,
+              "market_index": 5,
+              "occurrence": 3,
+              "operation": "drop",
+              "original": [
+                "HIRE"
+              ],
+              "step": 120,
+              "surface": "market",
+              "verb": "HIRE"
+            },
+            "episode_id": 100196432,
+            "family": "market_drop",
+            "margin": 3228.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "c29302d887f72a9a3833",
+            "opponent_money": 103064.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"hire\",\"family\":\"market_drop\",\"item\":null,\"occurrence\":3,\"operation\":\"drop\",\"surface\":\"market\",\"verb\":\"HIRE\"}"
+          },
+          {
+            "candidate_money": 106292.0,
+            "category": "hire",
+            "delta_margin": 5707.0,
+            "descriptor": {
+              "item": null,
+              "market_index": 3,
+              "occurrence": 1,
+              "operation": "drop",
+              "original": [
+                "HIRE"
+              ],
+              "step": 120,
+              "surface": "market",
+              "verb": "HIRE"
+            },
+            "episode_id": 100196432,
+            "family": "market_drop",
+            "margin": 3228.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "e092b4ba37db45ae0caf",
+            "opponent_money": 103064.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"hire\",\"family\":\"market_drop\",\"item\":null,\"occurrence\":1,\"operation\":\"drop\",\"surface\":\"market\",\"verb\":\"HIRE\"}"
+          },
+          {
+            "candidate_money": 112402.0,
+            "category": "crop",
+            "delta_margin": 4665.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 7,
+              "occurrence": 5,
+              "operation": "quantity",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                6
+              ],
+              "quantity_mode": "half",
+              "replacement": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                3
+              ],
+              "step": 216,
+              "surface": "market",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100196432,
+            "family": "market_quantity",
+            "margin": 2186.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "bc027dd0883bc4198d71",
+            "opponent_money": 110216.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_quantity\",\"item\":\"STRAWBERRY\",\"occurrence\":5,\"operation\":\"quantity\",\"quantity_mode\":\"half\",\"surface\":\"market\",\"verb\":\"BUY_SEED\"}"
+          },
+          {
+            "candidate_money": 112545.0,
+            "category": "crop",
+            "delta_margin": 4289.0,
+            "descriptor": {
+              "item": "WHEAT",
+              "market_index": 8,
+              "occurrence": 2,
+              "operation": "drop",
+              "original": [
+                "BUY_SEED",
+                "WHEAT",
+                7
+              ],
+              "step": 192,
+              "surface": "market",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100196432,
+            "family": "market_drop",
+            "margin": 1810.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "ae85de5d04bddcfe74d4",
+            "opponent_money": 110735.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_drop\",\"item\":\"WHEAT\",\"occurrence\":2,\"operation\":\"drop\",\"surface\":\"market\",\"verb\":\"BUY_SEED\"}"
+          },
+          {
+            "candidate_money": 113823.0,
+            "category": "crop",
+            "delta_margin": 4177.0,
+            "descriptor": {
+              "item": "STRAWBERRY",
+              "market_index": 0,
+              "occurrence": 3,
+              "operation": "quantity",
+              "original": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                6
+              ],
+              "quantity_mode": "half",
+              "replacement": [
+                "BUY_SEED",
+                "STRAWBERRY",
+                3
+              ],
+              "step": 154,
+              "surface": "market",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100196432,
+            "family": "market_quantity",
+            "margin": 1698.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "ff24e4e41433269ff839",
+            "opponent_money": 112125.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_quantity\",\"item\":\"STRAWBERRY\",\"occurrence\":3,\"operation\":\"quantity\",\"quantity_mode\":\"half\",\"surface\":\"market\",\"verb\":\"BUY_SEED\"}"
+          },
+          {
+            "candidate_money": 112405.0,
+            "category": "crop",
+            "delta_margin": 4149.0,
+            "descriptor": {
+              "item": "WHEAT",
+              "market_index": 8,
+              "occurrence": 2,
+              "operation": "swap_item",
+              "original": [
+                "BUY_SEED",
+                "WHEAT",
+                7
+              ],
+              "replacement": [
+                "BUY_SEED",
+                "CARROT",
+                7
+              ],
+              "step": 192,
+              "surface": "market",
+              "target_item": "CARROT",
+              "verb": "BUY_SEED"
+            },
+            "episode_id": 100196432,
+            "family": "market_item_swap",
+            "margin": 1670.0,
+            "mutated_step_sanitizer_changes": 0,
+            "mutation_id": "5e3dcf3c987562cecec1",
+            "opponent_money": 110735.0,
+            "role": "target",
+            "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"WHEAT\",\"occurrence\":2,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"CARROT\",\"verb\":\"BUY_SEED\"}"
+          }
+        ]
+      }
+    ]
+  },
+  "same_semantic_rule_screen": {
+    "common_rule_count": 210,
+    "all_four_positive_count": 0,
+    "ranked_top": [
+      {
+        "semantic_key": "{\"category\":\"crop\",\"family\":\"market_drop\",\"item\":\"WHEAT\",\"occurrence\":2,\"operation\":\"drop\",\"surface\":\"market\",\"verb\":\"BUY_SEED\"}",
+        "family": "market_drop",
+        "positive_count": 2,
+        "worst_margin": -20546.0,
+        "mean_delta_margin": 5950.25,
+        "outcomes": [
+          {
+            "episode_id": 100159725,
+            "margin": -6204.0,
+            "delta_margin": 655.0
+          },
+          {
+            "episode_id": 100184942,
+            "margin": 12872.0,
+            "delta_margin": 18342.0
+          },
+          {
+            "episode_id": 100187229,
+            "margin": -20546.0,
+            "delta_margin": 515.0
+          },
+          {
+            "episode_id": 100196432,
+            "margin": 1810.0,
+            "delta_margin": 4289.0
+          }
+        ]
+      },
+      {
+        "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"WHEAT\",\"occurrence\":2,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"CARROT\",\"verb\":\"BUY_SEED\"}",
+        "family": "market_item_swap",
+        "positive_count": 2,
+        "worst_margin": -20566.0,
+        "mean_delta_margin": 5856.0,
+        "outcomes": [
+          {
+            "episode_id": 100159725,
+            "margin": -6344.0,
+            "delta_margin": 515.0
+          },
+          {
+            "episode_id": 100184942,
+            "margin": 12795.0,
+            "delta_margin": 18265.0
+          },
+          {
+            "episode_id": 100187229,
+            "margin": -20566.0,
+            "delta_margin": 495.0
+          },
+          {
+            "episode_id": 100196432,
+            "margin": 1670.0,
+            "delta_margin": 4149.0
+          }
+        ]
+      },
+      {
+        "semantic_key": "{\"category\":\"crop\",\"family\":\"market_drop\",\"item\":\"STRAWBERRY\",\"occurrence\":2,\"operation\":\"drop\",\"surface\":\"market\",\"verb\":\"BUY_SEED\"}",
+        "family": "market_drop",
+        "positive_count": 1,
+        "worst_margin": -7581.0,
+        "mean_delta_margin": 11842.0,
+        "outcomes": [
+          {
+            "episode_id": 100159725,
+            "margin": -3421.0,
+            "delta_margin": 3438.0
+          },
+          {
+            "episode_id": 100184942,
+            "margin": 26804.0,
+            "delta_margin": 32274.0
+          },
+          {
+            "episode_id": 100187229,
+            "margin": -7581.0,
+            "delta_margin": 13480.0
+          },
+          {
+            "episode_id": 100196432,
+            "margin": -4303.0,
+            "delta_margin": -1824.0
+          }
+        ]
+      },
+      {
+        "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"STRAWBERRY\",\"occurrence\":2,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"WHEAT\",\"verb\":\"BUY_SEED\"}",
+        "family": "market_item_swap",
+        "positive_count": 1,
+        "worst_margin": -7621.0,
+        "mean_delta_margin": 11817.0,
+        "outcomes": [
+          {
+            "episode_id": 100159725,
+            "margin": -3431.0,
+            "delta_margin": 3428.0
+          },
+          {
+            "episode_id": 100184942,
+            "margin": 26764.0,
+            "delta_margin": 32234.0
+          },
+          {
+            "episode_id": 100187229,
+            "margin": -7621.0,
+            "delta_margin": 13440.0
+          },
+          {
+            "episode_id": 100196432,
+            "margin": -4313.0,
+            "delta_margin": -1834.0
+          }
+        ]
+      },
+      {
+        "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"STRAWBERRY\",\"occurrence\":2,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"CARROT\",\"verb\":\"BUY_SEED\"}",
+        "family": "market_item_swap",
+        "positive_count": 1,
+        "worst_margin": -7661.0,
+        "mean_delta_margin": 11792.0,
+        "outcomes": [
+          {
+            "episode_id": 100159725,
+            "margin": -3441.0,
+            "delta_margin": 3418.0
+          },
+          {
+            "episode_id": 100184942,
+            "margin": 26724.0,
+            "delta_margin": 32194.0
+          },
+          {
+            "episode_id": 100187229,
+            "margin": -7661.0,
+            "delta_margin": 13400.0
+          },
+          {
+            "episode_id": 100196432,
+            "margin": -4323.0,
+            "delta_margin": -1844.0
+          }
+        ]
+      },
+      {
+        "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"STRAWBERRY\",\"occurrence\":2,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"TOMATO\",\"verb\":\"BUY_SEED\"}",
+        "family": "market_item_swap",
+        "positive_count": 1,
+        "worst_margin": -7781.0,
+        "mean_delta_margin": 11717.0,
+        "outcomes": [
+          {
+            "episode_id": 100159725,
+            "margin": -3471.0,
+            "delta_margin": 3388.0
+          },
+          {
+            "episode_id": 100184942,
+            "margin": 26604.0,
+            "delta_margin": 32074.0
+          },
+          {
+            "episode_id": 100187229,
+            "margin": -7781.0,
+            "delta_margin": 13280.0
+          },
+          {
+            "episode_id": 100196432,
+            "margin": -4353.0,
+            "delta_margin": -1874.0
+          }
+        ]
+      },
+      {
+        "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"STRAWBERRY\",\"occurrence\":2,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"MELON\",\"verb\":\"BUY_SEED\"}",
+        "family": "market_item_swap",
+        "positive_count": 1,
+        "worst_margin": -7901.0,
+        "mean_delta_margin": 11642.0,
+        "outcomes": [
+          {
+            "episode_id": 100159725,
+            "margin": -3501.0,
+            "delta_margin": 3358.0
+          },
+          {
+            "episode_id": 100184942,
+            "margin": 26484.0,
+            "delta_margin": 31954.0
+          },
+          {
+            "episode_id": 100187229,
+            "margin": -7901.0,
+            "delta_margin": 13160.0
+          },
+          {
+            "episode_id": 100196432,
+            "margin": -4383.0,
+            "delta_margin": -1904.0
+          }
+        ]
+      },
+      {
+        "semantic_key": "{\"category\":\"crop\",\"family\":\"market_drop\",\"item\":\"STRAWBERRY\",\"occurrence\":0,\"operation\":\"drop\",\"surface\":\"market\",\"verb\":\"BUY_SEED\"}",
+        "family": "market_drop",
+        "positive_count": 1,
+        "worst_margin": -14501.0,
+        "mean_delta_margin": 9846.0,
+        "outcomes": [
+          {
+            "episode_id": 100159725,
+            "margin": -4346.0,
+            "delta_margin": 2513.0
+          },
+          {
+            "episode_id": 100184942,
+            "margin": -14501.0,
+            "delta_margin": -9031.0
+          },
+          {
+            "episode_id": 100187229,
+            "margin": 33534.0,
+            "delta_margin": 54595.0
+          },
+          {
+            "episode_id": 100196432,
+            "margin": -11172.0,
+            "delta_margin": -8693.0
+          }
+        ]
+      },
+      {
+        "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"STRAWBERRY\",\"occurrence\":0,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"WHEAT\",\"verb\":\"BUY_SEED\"}",
+        "family": "market_item_swap",
+        "positive_count": 1,
+        "worst_margin": -14531.0,
+        "mean_delta_margin": 9816.0,
+        "outcomes": [
+          {
+            "episode_id": 100159725,
+            "margin": -4376.0,
+            "delta_margin": 2483.0
+          },
+          {
+            "episode_id": 100184942,
+            "margin": -14531.0,
+            "delta_margin": -9061.0
+          },
+          {
+            "episode_id": 100187229,
+            "margin": 33504.0,
+            "delta_margin": 54565.0
+          },
+          {
+            "episode_id": 100196432,
+            "margin": -11202.0,
+            "delta_margin": -8723.0
+          }
+        ]
+      },
+      {
+        "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"STRAWBERRY\",\"occurrence\":0,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"CARROT\",\"verb\":\"BUY_SEED\"}",
+        "family": "market_item_swap",
+        "positive_count": 1,
+        "worst_margin": -14561.0,
+        "mean_delta_margin": 9786.0,
+        "outcomes": [
+          {
+            "episode_id": 100159725,
+            "margin": -4406.0,
+            "delta_margin": 2453.0
+          },
+          {
+            "episode_id": 100184942,
+            "margin": -14561.0,
+            "delta_margin": -9091.0
+          },
+          {
+            "episode_id": 100187229,
+            "margin": 33474.0,
+            "delta_margin": 54535.0
+          },
+          {
+            "episode_id": 100196432,
+            "margin": -11232.0,
+            "delta_margin": -8753.0
+          }
+        ]
+      },
+      {
+        "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"STRAWBERRY\",\"occurrence\":0,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"TOMATO\",\"verb\":\"BUY_SEED\"}",
+        "family": "market_item_swap",
+        "positive_count": 1,
+        "worst_margin": -14651.0,
+        "mean_delta_margin": 9696.0,
+        "outcomes": [
+          {
+            "episode_id": 100159725,
+            "margin": -4496.0,
+            "delta_margin": 2363.0
+          },
+          {
+            "episode_id": 100184942,
+            "margin": -14651.0,
+            "delta_margin": -9181.0
+          },
+          {
+            "episode_id": 100187229,
+            "margin": 33384.0,
+            "delta_margin": 54445.0
+          },
+          {
+            "episode_id": 100196432,
+            "margin": -11322.0,
+            "delta_margin": -8843.0
+          }
+        ]
+      },
+      {
+        "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"STRAWBERRY\",\"occurrence\":0,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"MELON\",\"verb\":\"BUY_SEED\"}",
+        "family": "market_item_swap",
+        "positive_count": 1,
+        "worst_margin": -14741.0,
+        "mean_delta_margin": 9606.0,
+        "outcomes": [
+          {
+            "episode_id": 100159725,
+            "margin": -4586.0,
+            "delta_margin": 2273.0
+          },
+          {
+            "episode_id": 100184942,
+            "margin": -14741.0,
+            "delta_margin": -9271.0
+          },
+          {
+            "episode_id": 100187229,
+            "margin": 33294.0,
+            "delta_margin": 54355.0
+          },
+          {
+            "episode_id": 100196432,
+            "margin": -11412.0,
+            "delta_margin": -8933.0
+          }
+        ]
+      },
+      {
+        "semantic_key": "{\"category\":\"crop\",\"family\":\"market_drop\",\"item\":\"WHEAT\",\"occurrence\":1,\"operation\":\"drop\",\"surface\":\"market\",\"verb\":\"BUY_SEED\"}",
+        "family": "market_drop",
+        "positive_count": 1,
+        "worst_margin": -20546.0,
+        "mean_delta_margin": 6217.0,
+        "outcomes": [
+          {
+            "episode_id": 100159725,
+            "margin": -3677.0,
+            "delta_margin": 3182.0
+          },
+          {
+            "episode_id": 100184942,
+            "margin": 15917.0,
+            "delta_margin": 21387.0
+          },
+          {
+            "episode_id": 100187229,
+            "margin": -20546.0,
+            "delta_margin": 515.0
+          },
+          {
+            "episode_id": 100196432,
+            "margin": -2695.0,
+            "delta_margin": -216.0
+          }
+        ]
+      },
+      {
+        "semantic_key": "{\"category\":\"crop\",\"family\":\"market_drop\",\"item\":\"WHEAT\",\"occurrence\":3,\"operation\":\"drop\",\"surface\":\"market\",\"verb\":\"BUY_SEED\"}",
+        "family": "market_drop",
+        "positive_count": 1,
+        "worst_margin": -20546.0,
+        "mean_delta_margin": 2055.75,
+        "outcomes": [
+          {
+            "episode_id": 100159725,
+            "margin": -11186.0,
+            "delta_margin": -4327.0
+          },
+          {
+            "episode_id": 100184942,
+            "margin": 7119.0,
+            "delta_margin": 12589.0
+          },
+          {
+            "episode_id": 100187229,
+            "margin": -20546.0,
+            "delta_margin": 515.0
+          },
+          {
+            "episode_id": 100196432,
+            "margin": -3033.0,
+            "delta_margin": -554.0
+          }
+        ]
+      },
+      {
+        "semantic_key": "{\"category\":\"crop\",\"family\":\"market_drop\",\"item\":\"WHEAT\",\"occurrence\":0,\"operation\":\"drop\",\"surface\":\"market\",\"verb\":\"BUY_SEED\"}",
+        "family": "market_drop",
+        "positive_count": 1,
+        "worst_margin": -20546.0,
+        "mean_delta_margin": -370.25,
+        "outcomes": [
+          {
+            "episode_id": 100159725,
+            "margin": -10789.0,
+            "delta_margin": -3930.0
+          },
+          {
+            "episode_id": 100184942,
+            "margin": 4889.0,
+            "delta_margin": 10359.0
+          },
+          {
+            "episode_id": 100187229,
+            "margin": -20546.0,
+            "delta_margin": 515.0
+          },
+          {
+            "episode_id": 100196432,
+            "margin": -10904.0,
+            "delta_margin": -8425.0
+          }
+        ]
+      },
+      {
+        "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"WHEAT\",\"occurrence\":1,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"CARROT\",\"verb\":\"BUY_SEED\"}",
+        "family": "market_item_swap",
+        "positive_count": 1,
+        "worst_margin": -20566.0,
+        "mean_delta_margin": 6197.0,
+        "outcomes": [
+          {
+            "episode_id": 100159725,
+            "margin": -3697.0,
+            "delta_margin": 3162.0
+          },
+          {
+            "episode_id": 100184942,
+            "margin": 15897.0,
+            "delta_margin": 21367.0
+          },
+          {
+            "episode_id": 100187229,
+            "margin": -20566.0,
+            "delta_margin": 495.0
+          },
+          {
+            "episode_id": 100196432,
+            "margin": -2715.0,
+            "delta_margin": -236.0
+          }
+        ]
+      },
+      {
+        "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"WHEAT\",\"occurrence\":3,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"CARROT\",\"verb\":\"BUY_SEED\"}",
+        "family": "market_item_swap",
+        "positive_count": 1,
+        "worst_margin": -20566.0,
+        "mean_delta_margin": 1975.0,
+        "outcomes": [
+          {
+            "episode_id": 100159725,
+            "margin": -11286.0,
+            "delta_margin": -4427.0
+          },
+          {
+            "episode_id": 100184942,
+            "margin": 7016.0,
+            "delta_margin": 12486.0
+          },
+          {
+            "episode_id": 100187229,
+            "margin": -20566.0,
+            "delta_margin": 495.0
+          },
+          {
+            "episode_id": 100196432,
+            "margin": -3133.0,
+            "delta_margin": -654.0
+          }
+        ]
+      },
+      {
+        "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"WHEAT\",\"occurrence\":0,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"CARROT\",\"verb\":\"BUY_SEED\"}",
+        "family": "market_item_swap",
+        "positive_count": 1,
+        "worst_margin": -20566.0,
+        "mean_delta_margin": -426.75,
+        "outcomes": [
+          {
+            "episode_id": 100159725,
+            "margin": -10869.0,
+            "delta_margin": -4010.0
+          },
+          {
+            "episode_id": 100184942,
+            "margin": 4843.0,
+            "delta_margin": 10313.0
+          },
+          {
+            "episode_id": 100187229,
+            "margin": -20566.0,
+            "delta_margin": 495.0
+          },
+          {
+            "episode_id": 100196432,
+            "margin": -10984.0,
+            "delta_margin": -8505.0
+          }
+        ]
+      },
+      {
+        "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"WHEAT\",\"occurrence\":1,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"TOMATO\",\"verb\":\"BUY_SEED\"}",
+        "family": "market_item_swap",
+        "positive_count": 1,
+        "worst_margin": -20596.0,
+        "mean_delta_margin": 6175.5,
+        "outcomes": [
+          {
+            "episode_id": 100159725,
+            "margin": -3727.0,
+            "delta_margin": 3132.0
+          },
+          {
+            "episode_id": 100184942,
+            "margin": 15901.0,
+            "delta_margin": 21371.0
+          },
+          {
+            "episode_id": 100187229,
+            "margin": -20596.0,
+            "delta_margin": 465.0
+          },
+          {
+            "episode_id": 100196432,
+            "margin": -2745.0,
+            "delta_margin": -266.0
+          }
+        ]
+      },
+      {
+        "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"WHEAT\",\"occurrence\":3,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"TOMATO\",\"verb\":\"BUY_SEED\"}",
+        "family": "market_item_swap",
+        "positive_count": 1,
+        "worst_margin": -20596.0,
+        "mean_delta_margin": 1855.0,
+        "outcomes": [
+          {
+            "episode_id": 100159725,
+            "margin": -11436.0,
+            "delta_margin": -4577.0
+          },
+          {
+            "episode_id": 100184942,
+            "margin": 6866.0,
+            "delta_margin": 12336.0
+          },
+          {
+            "episode_id": 100187229,
+            "margin": -20596.0,
+            "delta_margin": 465.0
+          },
+          {
+            "episode_id": 100196432,
+            "margin": -3283.0,
+            "delta_margin": -804.0
+          }
+        ]
+      },
+      {
+        "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"WHEAT\",\"occurrence\":0,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"TOMATO\",\"verb\":\"BUY_SEED\"}",
+        "family": "market_item_swap",
+        "positive_count": 1,
+        "worst_margin": -20596.0,
+        "mean_delta_margin": -604.25,
+        "outcomes": [
+          {
+            "episode_id": 100159725,
+            "margin": -10989.0,
+            "delta_margin": -4130.0
+          },
+          {
+            "episode_id": 100184942,
+            "margin": 4403.0,
+            "delta_margin": 9873.0
+          },
+          {
+            "episode_id": 100187229,
+            "margin": -20596.0,
+            "delta_margin": 465.0
+          },
+          {
+            "episode_id": 100196432,
+            "margin": -11104.0,
+            "delta_margin": -8625.0
+          }
+        ]
+      },
+      {
+        "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"WHEAT\",\"occurrence\":3,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"MELON\",\"verb\":\"BUY_SEED\"}",
+        "family": "market_item_swap",
+        "positive_count": 1,
+        "worst_margin": -20626.0,
+        "mean_delta_margin": 1735.0,
+        "outcomes": [
+          {
+            "episode_id": 100159725,
+            "margin": -11586.0,
+            "delta_margin": -4727.0
+          },
+          {
+            "episode_id": 100184942,
+            "margin": 6716.0,
+            "delta_margin": 12186.0
+          },
+          {
+            "episode_id": 100187229,
+            "margin": -20626.0,
+            "delta_margin": 435.0
+          },
+          {
+            "episode_id": 100196432,
+            "margin": -3433.0,
+            "delta_margin": -954.0
+          }
+        ]
+      },
+      {
+        "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"WHEAT\",\"occurrence\":0,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"MELON\",\"verb\":\"BUY_SEED\"}",
+        "family": "market_item_swap",
+        "positive_count": 1,
+        "worst_margin": -20626.0,
+        "mean_delta_margin": -850.0,
+        "outcomes": [
+          {
+            "episode_id": 100159725,
+            "margin": -10995.0,
+            "delta_margin": -4136.0
+          },
+          {
+            "episode_id": 100184942,
+            "margin": 4428.0,
+            "delta_margin": 9898.0
+          },
+          {
+            "episode_id": 100187229,
+            "margin": -20626.0,
+            "delta_margin": 435.0
+          },
+          {
+            "episode_id": 100196432,
+            "margin": -12076.0,
+            "delta_margin": -9597.0
+          }
+        ]
+      },
+      {
+        "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"WHEAT\",\"occurrence\":3,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"STRAWBERRY\",\"verb\":\"BUY_SEED\"}",
+        "family": "market_item_swap",
+        "positive_count": 1,
+        "worst_margin": -20646.0,
+        "mean_delta_margin": 1655.0,
+        "outcomes": [
+          {
+            "episode_id": 100159725,
+            "margin": -11686.0,
+            "delta_margin": -4827.0
+          },
+          {
+            "episode_id": 100184942,
+            "margin": 6616.0,
+            "delta_margin": 12086.0
+          },
+          {
+            "episode_id": 100187229,
+            "margin": -20646.0,
+            "delta_margin": 415.0
+          },
+          {
+            "episode_id": 100196432,
+            "margin": -3533.0,
+            "delta_margin": -1054.0
+          }
+        ]
+      },
+      {
+        "semantic_key": "{\"category\":\"crop\",\"family\":\"market_item_swap\",\"item\":\"WHEAT\",\"occurrence\":0,\"operation\":\"swap_item\",\"surface\":\"market\",\"target_item\":\"STRAWBERRY\",\"verb\":\"BUY_SEED\"}",
+        "family": "market_item_swap",
+        "positive_count": 1,
+        "worst_margin": -20646.0,
+        "mean_delta_margin": -772.75,
+        "outcomes": [
+          {
+            "episode_id": 100159725,
+            "margin": -10989.0,
+            "delta_margin": -4130.0
+          },
+          {
+            "episode_id": 100184942,
+            "margin": 3779.0,
+            "delta_margin": 9249.0
+          },
+          {
+            "episode_id": 100187229,
+            "margin": -20646.0,
+            "delta_margin": 415.0
+          },
+          {
+            "episode_id": 100196432,
+            "margin": -11104.0,
+            "delta_margin": -8625.0
+          }
+        ]
+      }
+    ]
+  },
+  "catalog": {
+    "path": "analysis/v80_residual_action_oracle_20260827/catalog.json",
+    "sha256": "97a99d42920fd640132d608a1c057003089fc2030f9ee8958bc3ccd7124d32e1"
+  },
+  "related_closed_screens": {
+    "v79_market_only": {
+      "path": "analysis/v79_market_only_oracle_20260827/results.json",
+      "sha256": "a0ba7a773ca8831a90a8ed1658b703972019c6776b3838050e58d09981cba521",
+      "result": "2/4 target rescues; path stopped"
+    },
+    "v79_fixed_observable_sheep_rule": {
+      "path": "analysis/v79_expansion_allocation_20260827/results.json",
+      "sha256": "b9fd8670db9940f520ad1d928c68c08903cd9ead2a69f9f3cd8b1bcb3ca52416",
+      "result": "1/4 model-conditioned rescue ceilings; fixed rule stopped"
+    }
+  },
+  "inputs": {
+    "gate": {
+      "path": "analysis/v67_live_loss_audit_20260826/gate8_manifest_suggestion.json",
+      "sha256": "4e9268c02575ea9bb6b2e9aaff8714910bc2fed3d3d886a05355dbb47edc8be2"
+    },
+    "agent": {
+      "path": "submissions/meta_v67_quantity_conserving_front_run_standalone/main.py",
+      "sha256": "300983ffa3da614ad5e7b9958c76104d9f613fcaf7169e69963ea634ee0a093b"
+    },
+    "native_engine": {
+      "path": "bindings/python/kaggriculture_rs/_native.abi3.so",
+      "sha256": "315f30f12797c64ed1038347af1496d0ba18f9dc5ce3adcd15977a741f84acdd"
+    },
+    "target_jsonl": [
+      {
+        "path": "analysis/v80_residual_action_oracle_20260827/target_a.jsonl",
+        "sha256": "a557e6280a43db5b3130dde2b63183e6134ef3b25bc9f9e1fbd1441790502657"
+      },
+      {
+        "path": "analysis/v80_residual_action_oracle_20260827/target_b.jsonl",
+        "sha256": "4bd03e2968da1160612114842bcaf2f807f2cbce40eacf9c2060eb4b029d5f41"
+      }
+    ]
+  },
+  "untested_uncertainty": [
+    "Macro deviations after step 270.",
+    "Market reorder and adjacent-step shift variants.",
+    "Unit PLANT, structure, animal-placement, and multi-event option bundles.",
+    "Regression-control score effects for this priority grammar.",
+    "Consumed local live-proxy seeds 27082701..27082712.",
+    "Any sealed, old/fresh/novel, or future holdout evidence."
+  ],
+  "decision": "Do not start PPO from this grammar and do not create a submission candidate. A future branch needs a predeclared action family that can first rescue 100159725 under the same consumed-only discipline."
+}

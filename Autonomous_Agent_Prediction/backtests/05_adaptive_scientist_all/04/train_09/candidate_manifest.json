@@ -1,0 +1,86 @@
+{
+  "classes": [
+    0,
+    1
+  ],
+  "rows": 10000,
+  "features": 18,
+  "candidates": [
+    {
+      "file": "candidate_blend_top3.csv",
+      "name": "blend_top3",
+      "family": "blend",
+      "oof_auc": 0.65463073,
+      "fold_auc": [],
+      "fold_auc_std": null,
+      "test_rank_correlation_to_best": 0.96473246
+    },
+    {
+      "file": "candidate_blend_core_interaction.csv",
+      "name": "blend_core_interaction",
+      "family": "interaction_blend",
+      "oof_auc": 0.64752267,
+      "fold_auc": [],
+      "fold_auc_std": null,
+      "test_rank_correlation_to_best": 0.99283079
+    },
+    {
+      "file": "candidate_logistic.csv",
+      "name": "logistic",
+      "family": "linear",
+      "oof_auc": 0.64202779,
+      "fold_auc": [
+        0.7049513,
+        0.62154046,
+        0.61277494,
+        0.62949436,
+        0.64275184
+      ],
+      "fold_auc_std": 0.03283919,
+      "test_rank_correlation_to_best": 1.0
+    },
+    {
+      "file": "candidate_lightgbm_native.csv",
+      "name": "lightgbm_native",
+      "family": "lightgbm",
+      "oof_auc": 0.63405785,
+      "fold_auc": [
+        0.67987013,
+        0.64694424,
+        0.62190569,
+        0.64483402,
+        0.64135954
+      ],
+      "fold_auc_std": 0.01869052,
+      "test_rank_correlation_to_best": 0.84403396
+    }
+  ],
+  "diagnostics": {
+    "best_core": {
+      "name": "logistic",
+      "family": "linear",
+      "oof_auc": 0.64202779
+    },
+    "blend_gate": {
+      "accepted": true,
+      "name": "blend_top3",
+      "oof_auc": 0.65463073,
+      "gain": 0.01260294,
+      "test_rank_correlation_to_best": 0.96473246
+    },
+    "interaction_gate": {
+      "accepted": true,
+      "name": "interaction_te",
+      "oof_auc": 0.62797917,
+      "standalone_gain": -0.01404862,
+      "blend_auc": 0.64752267,
+      "blend_gain": 0.00549488,
+      "fold_auc_std": 0.02633615,
+      "test_rank_correlation": 0.81313161,
+      "stable": true,
+      "diverse": true,
+      "improves": true
+    }
+  },
+  "failures": []
+}

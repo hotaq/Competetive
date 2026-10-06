@@ -1,0 +1,57 @@
+{
+  "engine": "kaggriculture_rs",
+  "candidate": "/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/artifacts/top20_live_tapes80_20260826/tape_99596430_s1.py",
+  "reference": "/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/submissions/meta_v26_v22_projected_wool_sale_standalone/main.py",
+  "configuration": {
+    "starting_seed": 26110001,
+    "paired_seeds": 2,
+    "games": 4,
+    "candidate_repair": "orphan",
+    "reference_repair": "none"
+  },
+  "summary": {
+    "wins": 2,
+    "draws": 0,
+    "losses": 2,
+    "win_rate": 0.5,
+    "mean_margin": 6739.25,
+    "median_margin": 4855.0,
+    "worst_margin": -4227.0,
+    "cvar10_margin": -4227.0,
+    "all_complete": true
+  },
+  "games": [
+    {
+      "seed": 26110001,
+      "candidate_seat": 0,
+      "candidate_money": 66759.0,
+      "reference_money": 53199.0,
+      "margin": 13560.0,
+      "final_step": 719
+    },
+    {
+      "seed": 26110001,
+      "candidate_seat": 1,
+      "candidate_money": 86466.0,
+      "reference_money": 64992.0,
+      "margin": 21474.0,
+      "final_step": 719
+    },
+    {
+      "seed": 26110002,
+      "candidate_seat": 0,
+      "candidate_money": 62127.0,
+      "reference_money": 66354.0,
+      "margin": -4227.0,
+      "final_step": 719
+    },
+    {
+      "seed": 26110002,
+      "candidate_seat": 1,
+      "candidate_money": 63143.0,
+      "reference_money": 66993.0,
+      "margin": -3850.0,
+      "final_step": 719
+    }
+  ]
+}

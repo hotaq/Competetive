@@ -1,0 +1,167 @@
+{
+  "model": "validation-selected-contextual-q-tape-gate",
+  "population": "artifacts/replay_tape_population_v10_gate2/manifest.json",
+  "train_q_matrix": "rl/evaluations/splice_gate2_step192_train82_qmatrix.json",
+  "validation_q_matrix": "rl/evaluations/splice_gate2_step192_train82_qmatrix.json",
+  "holdout_used": false,
+  "action_win_rates": {
+    "93816256": 0.2972972972972973,
+    "93518562": 0.3783783783783784
+  },
+  "candidate_count": 1,
+  "selected": {
+    "feature_steps": [
+      192
+    ],
+    "neighbors": 7,
+    "risk_coefficient": 4.0,
+    "min_action_win_rate": 0.0,
+    "allowed_action_ids": [
+      93816256,
+      93518562
+    ],
+    "nearest_distance_mean": 1.8004523641043138,
+    "nearest_distance_max": 5.103449459042583,
+    "actions": {
+      "93518562": 7,
+      "93816256": 1
+    },
+    "games": 8,
+    "wins": 4,
+    "draws": 0,
+    "losses": 4,
+    "win_rate": 0.5,
+    "mean_margin": -148.0,
+    "worst_margin": -16811.0,
+    "cvar10_margin": -16811.0,
+    "episodes": [
+      {
+        "episode_id": 93494430,
+        "action_id": 93518562,
+        "margin": 786.0,
+        "distance": 1.4516810721013955
+      },
+      {
+        "episode_id": 93495340,
+        "action_id": 93518562,
+        "margin": -3050.0,
+        "distance": 5.103449459042583
+      },
+      {
+        "episode_id": 93496227,
+        "action_id": 93518562,
+        "margin": 5839.0,
+        "distance": 1.3589253481057926
+      },
+      {
+        "episode_id": 93497123,
+        "action_id": 93518562,
+        "margin": -13755.0,
+        "distance": 1.4552449274411425
+      },
+      {
+        "episode_id": 93498033,
+        "action_id": 93518562,
+        "margin": -4055.0,
+        "distance": 1.6998462975270718
+      },
+      {
+        "episode_id": 93498936,
+        "action_id": 93816256,
+        "margin": 17131.0,
+        "distance": 2.0884965091897585
+      },
+      {
+        "episode_id": 93499826,
+        "action_id": 93518562,
+        "margin": 12731.0,
+        "distance": 0.27867678113516353
+      },
+      {
+        "episode_id": 93500721,
+        "action_id": 93518562,
+        "margin": -16811.0,
+        "distance": 0.9672985182916013
+      }
+    ]
+  },
+  "candidates": [
+    {
+      "feature_steps": [
+        192
+      ],
+      "neighbors": 7,
+      "risk_coefficient": 4.0,
+      "min_action_win_rate": 0.0,
+      "allowed_action_ids": [
+        93816256,
+        93518562
+      ],
+      "nearest_distance_mean": 1.8004523641043138,
+      "nearest_distance_max": 5.103449459042583,
+      "actions": {
+        "93518562": 7,
+        "93816256": 1
+      },
+      "games": 8,
+      "wins": 4,
+      "draws": 0,
+      "losses": 4,
+      "win_rate": 0.5,
+      "mean_margin": -148.0,
+      "worst_margin": -16811.0,
+      "cvar10_margin": -16811.0,
+      "episodes": [
+        {
+          "episode_id": 93494430,
+          "action_id": 93518562,
+          "margin": 786.0,
+          "distance": 1.4516810721013955
+        },
+        {
+          "episode_id": 93495340,
+          "action_id": 93518562,
+          "margin": -3050.0,
+          "distance": 5.103449459042583
+        },
+        {
+          "episode_id": 93496227,
+          "action_id": 93518562,
+          "margin": 5839.0,
+          "distance": 1.3589253481057926
+        },
+        {
+          "episode_id": 93497123,
+          "action_id": 93518562,
+          "margin": -13755.0,
+          "distance": 1.4552449274411425
+        },
+        {
+          "episode_id": 93498033,
+          "action_id": 93518562,
+          "margin": -4055.0,
+          "distance": 1.6998462975270718
+        },
+        {
+          "episode_id": 93498936,
+          "action_id": 93816256,
+          "margin": 17131.0,
+          "distance": 2.0884965091897585
+        },
+        {
+          "episode_id": 93499826,
+          "action_id": 93518562,
+          "margin": 12731.0,
+          "distance": 0.27867678113516353
+        },
+        {
+          "episode_id": 93500721,
+          "action_id": 93518562,
+          "margin": -16811.0,
+          "distance": 0.9672985182916013
+        }
+      ]
+    }
+  ],
+  "checkpoint": "artifacts/temporal_gate2_v10_step192_rolling_offset92.npz"
+}

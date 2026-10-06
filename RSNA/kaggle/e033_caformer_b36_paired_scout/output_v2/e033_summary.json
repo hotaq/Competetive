@@ -1,0 +1,309 @@
+{
+  "checkpoint_exported": false,
+  "decision": "STOP_E033_GOLD_SIGNAL_FAILED",
+  "feature_cache_exported": false,
+  "gold58": {
+    "evaluation_count": 1,
+    "gate_passed": true,
+    "metrics": {
+      "delta_caformer_minus_frozen_coatnet": 0.01608117205373749,
+      "e029_finetuned_coatnet_macro_auc": 0.9174298724699895,
+      "evaluation_count": 1,
+      "min_target_delta": -0.053981106612685625,
+      "paired_bootstrap": {
+        "ci_high": 0.0513387878393345,
+        "ci_low": -0.020649779367649414,
+        "mean_delta": 0.015290819161038522,
+        "repeats_valid": 2000,
+        "win_rate": 0.8045
+      },
+      "paired_frozen_caformer_macro_auc": 0.6814388940250996,
+      "paired_frozen_coatnet_macro_auc": 0.6653577219713621,
+      "target_wins": 7
+    }
+  },
+  "gold_signal_gates": {
+    "caformer_gold_gain": true,
+    "caformer_gold_no_severe_target_drop": false,
+    "caformer_gold_target_wins": true,
+    "paired_bootstrap_signal": true
+  },
+  "identity": {
+    "all_ids_sha256": "ce332c0a673abde31856db1b3b86fba9e0a2f73d38fff23c7b02c51b869f3c30",
+    "baseline_payload_sha256": "7b356156eca446527d89b61cc444ab4622609a63a75eef95d0a3c521fefb99ee",
+    "counts": {
+      "gold": 58,
+      "train": 512,
+      "validation": 128
+    },
+    "extra_ids_sha256": "65a32fe80ad4cffd20b847b3c36bda7b0c33178fff652d8828a4b0d4e1ccf9bb",
+    "gold_ids_sha256": "3918e0c230d6c8d16e073b3c2537d173011b705c71b494493591e6afa5f510ea",
+    "identity_exact": true,
+    "seed": 31021,
+    "train_ids_sha256": "0bdc475565a2ff7ea1afc5be9aec69aab0aa615050df796aeac6af4fd2fb051c",
+    "validation_class_counts": [
+      [
+        27,
+        101
+      ],
+      [
+        15,
+        113
+      ],
+      [
+        52,
+        76
+      ],
+      [
+        27,
+        101
+      ],
+      [
+        56,
+        72
+      ],
+      [
+        48,
+        80
+      ],
+      [
+        64,
+        64
+      ],
+      [
+        77,
+        51
+      ],
+      [
+        91,
+        37
+      ],
+      [
+        47,
+        81
+      ],
+      [
+        30,
+        98
+      ],
+      [
+        11,
+        117
+      ]
+    ],
+    "validation_ids_sha256": "223ed533e435180acf9f086fff74a12de527977f9bcff7641db7b06d11739565"
+  },
+  "input": {
+    "cross_series_window_count": 0,
+    "exact64_slots": [
+      [
+        "sagittal_fluid",
+        "Sagittal",
+        1,
+        18
+      ],
+      [
+        "sagittal_other",
+        "Sagittal",
+        0,
+        14
+      ],
+      [
+        "coronal_fluid",
+        "Coronal",
+        1,
+        12
+      ],
+      [
+        "coronal_other",
+        "Coronal",
+        0,
+        8
+      ],
+      [
+        "axial",
+        "Axial",
+        -1,
+        12
+      ]
+    ],
+    "safe_same_series_windows": true,
+    "shape": [
+      1,
+      24,
+      3,
+      384,
+      384
+    ],
+    "zero_slice_window_count": 0
+  },
+  "models": [
+    {
+      "architecture": "coatnet_rmlp_2_rw_384.sw_in12k_ft_in1k",
+      "elapsed_seconds": 438.8511803150177,
+      "feature_finite": true,
+      "feature_shape": [
+        640,
+        24,
+        1024
+      ],
+      "feature_std": 1.3632440567016602,
+      "input_size": [
+        3,
+        384,
+        384
+      ],
+      "mean": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "mean_within_study_cosine": 0.6975613832473755,
+      "model_key": "coatnet",
+      "num_features": 1024,
+      "parameter_count": 72856264,
+      "peak_gpu_gib": 0.8204140663146973,
+      "state_sha256": "6bd585dad3b94212f2eb703dcd1d871bb4d4d42bead201048eb7dddcf4fe968a",
+      "std": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "windows_per_second": 35.000475534722796
+    },
+    {
+      "architecture": "caformer_b36.sail_in22k_ft_in1k_384",
+      "elapsed_seconds": 612.7059082984924,
+      "feature_finite": true,
+      "feature_shape": [
+        640,
+        24,
+        768
+      ],
+      "feature_std": 0.8968799114227295,
+      "input_size": [
+        3,
+        384,
+        384
+      ],
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "mean_within_study_cosine": 0.7153915166854858,
+      "model_key": "caformer",
+      "num_features": 768,
+      "parameter_count": 93312102,
+      "peak_gpu_gib": 0.7985916137695312,
+      "state_sha256": "ed2ace0e00efcfe9e131a8e83372194817fdf69860ad6525258b908222a4c6ae",
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "windows_per_second": 25.069123362389803
+    }
+  ],
+  "pre_gold_gates": {
+    "caformer_no_severe_target_drop": true,
+    "caformer_target_wins": true,
+    "caformer_validation_gain": true
+  },
+  "required_gates": {
+    "all_heads_updated": true,
+    "attention_nondegenerate": true,
+    "cache_contract_exact": true,
+    "features_finite_nondegenerate": true,
+    "identity_exact": true,
+    "model_shapes_exact": true,
+    "validation_all_targets_two_classes": true
+  },
+  "submission_created": false,
+  "training": {
+    "head_records": [
+      {
+        "best_epoch": 18,
+        "final_sha256": "99fbc4b9f1f3b63b797e07d7e570ddb14c384d3d95a498b407a187e5cec7dad8",
+        "hidden_dim": 512,
+        "initial_sha256": "d33b108aec24387890828df242bbee676c900e2faedb88d18dd4b29ca5976ca6",
+        "input_dim": 1024,
+        "model_key": "coatnet",
+        "seed": 33001,
+        "updated": true,
+        "validation_macro_auc": 0.6946893183158017
+      },
+      {
+        "best_epoch": 10,
+        "final_sha256": "e0cf96542c08ce4fbd357d6ce9866029fc5c9929225ffc834969a2e93b69ce21",
+        "hidden_dim": 512,
+        "initial_sha256": "c105ea7ee2527df12fdbdf825c26f2fc312049416b1c2d489a96a55b63df8c61",
+        "input_dim": 1024,
+        "model_key": "coatnet",
+        "seed": 33002,
+        "updated": true,
+        "validation_macro_auc": 0.71258986610389
+      },
+      {
+        "best_epoch": 9,
+        "final_sha256": "cd188746cbc94dcb68a3c102579c094ba53140c926cc43a392b1ca5e163e960f",
+        "hidden_dim": 512,
+        "initial_sha256": "fbff5d8ea941031750817a7b014c04f5b9e3ad2472163d73d0ca4b4be52a2815",
+        "input_dim": 1024,
+        "model_key": "coatnet",
+        "seed": 33003,
+        "updated": true,
+        "validation_macro_auc": 0.7108617399387785
+      },
+      {
+        "best_epoch": 12,
+        "final_sha256": "b7de4bed0c73925f426e566f462f2f78f811fe6ae357f46d3591a0c30e447699",
+        "hidden_dim": 512,
+        "initial_sha256": "eb3dc8f616ed41c8d18b3df3fbda36c42b5d3904a0573c9e5759c685ffa6f175",
+        "input_dim": 768,
+        "model_key": "caformer",
+        "seed": 33001,
+        "updated": true,
+        "validation_macro_auc": 0.7305190165376715
+      },
+      {
+        "best_epoch": 11,
+        "final_sha256": "72e7199baca821a1b8799850afa13631e8ca88bdacc796ddf0f9934145670a2b",
+        "hidden_dim": 512,
+        "initial_sha256": "a6c51516ad27b37c495d9299fd13a677a33a260daf0fcfde9791a322ed55b114",
+        "input_dim": 768,
+        "model_key": "caformer",
+        "seed": 33002,
+        "updated": true,
+        "validation_macro_auc": 0.7286902044320139
+      },
+      {
+        "best_epoch": 10,
+        "final_sha256": "1ce67677cb268ba0ab3d67a649e158d05c793a5269180b37302f2d7e54fa9b87",
+        "hidden_dim": 512,
+        "initial_sha256": "bfb5f292793698315909f452588f6ee536e56047e8d2b02033e4eec07ac073a8",
+        "input_dim": 768,
+        "model_key": "caformer",
+        "seed": 33003,
+        "updated": true,
+        "validation_macro_auc": 0.7292662118888535
+      }
+    ],
+    "head_seeds": [
+      33001,
+      33002,
+      33003
+    ],
+    "mode": "paired_frozen_backbones_fresh_target_window_mil",
+    "selection_split": "fixed_non_gold_validation",
+    "shared_hidden_dim": 512
+  },
+  "validation": {
+    "caformer_macro_auc": 0.731362952917837,
+    "coatnet_macro_auc": 0.7065249164796364,
+    "delta_caformer_minus_coatnet": 0.024838036438200595,
+    "min_target_delta": -0.04791666666666661,
+    "prediction_correlation": 0.7770823946519425,
+    "target_wins": 10
+  }
+}

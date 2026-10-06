@@ -1,0 +1,49 @@
+{
+  "agents": [
+    {
+      "episode_id": 393538238,
+      "agent_file": "artifacts/program_goal24_93538238_q12_stage2/program_393538238.py",
+      "agent_sha256": "9c4b17ba2023a3dc3a55c77b069f60e991b19ae4c529a1edebc85ed11feb95f3",
+      "program": {
+        "program_id": 393538238,
+        "name": "goal24-93538238-q12-stage2",
+        "segments": [
+          {
+            "start_step": 0,
+            "source_episode_id": 93816256
+          },
+          {
+            "start_step": 97,
+            "source_episode_id": 93513211
+          }
+        ],
+        "mutations": [
+          {
+            "kind": "remove_market_order",
+            "step": 197,
+            "order_index": 1,
+            "expected": [
+              "BUY_SEED",
+              "STRAWBERRY",
+              2
+            ]
+          },
+          {
+            "kind": "remove_market_order",
+            "step": 576,
+            "order_index": 0,
+            "expected": [
+              "SELL",
+              "FERTILIZER",
+              17
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "holdout": false,
+  "source_population": "artifacts/replay_tape_population_v10_train95/manifest.json",
+  "program_config": "rl/program_goal24_93538238_q12_stage2.json",
+  "common_prefix_step": 97
+}

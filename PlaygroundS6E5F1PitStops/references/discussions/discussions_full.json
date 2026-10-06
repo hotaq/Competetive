@@ -1,0 +1,971 @@
+{
+  "competition": {
+    "id": 125221,
+    "name": "playground-series-s6e5",
+    "title": "Predicting F1 Pit Stops",
+    "forumId": 9538241
+  },
+  "topics": [
+    {
+      "topic": {
+        "authorUser": {
+          "displayName": "Marília Prata",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/3012786-kg.jpg",
+          "url": "/mpwolke",
+          "tier": "GRANDMASTER",
+          "id": 3012786,
+          "progressionOptOut": false
+        },
+        "authorType": "TOPIC",
+        "commentCount": 4,
+        "firstForumMessageId": 3451200,
+        "id": 696012,
+        "lastCommenterType": "TOPIC",
+        "lastCommenterName": "Marília Prata",
+        "lastCommenterUrl": "/competitions/playground-series-s6e5/discussion/696012#3452491",
+        "lastCommentPostDate": "2026-05-03T14:37:38.700Z",
+        "parentName": "Predicting F1 Pit Stops",
+        "parentUrl": "/competitions/playground-series-s6e5/discussion",
+        "postDate": "2026-05-01T01:38:50.832002600Z",
+        "title": "Tire compound changes during a race. Compounds determine the tire's \"Personality\".",
+        "topicUrl": "/competitions/playground-series-s6e5/discussion/696012",
+        "votes": 31,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Marília Prata",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/3012786-kg.jpg",
+            "url": "/mpwolke",
+            "userName": "mpwolke",
+            "tier": "GRANDMASTER",
+            "id": 3012786,
+            "profileUrl": "/mpwolke",
+            "performanceTier": "GRANDMASTER",
+            "userId": 3012786,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      "firstMessage": {
+        "id": 3451200,
+        "postDate": "2026-05-01T01:38:50.833Z",
+        "rawMarkdown": "## Tire compound changes during a race\n\n\"A tire compound refers to the specific chemical recipe of rubber, silica, carbon black, and oils used to create a tire. These compounds determine the tire's \"personality\"—balancing grip, durability, and temperature resistance.\"\n\n\"Encoded system of Tire compounds, ranging from C0 to C6 (as of 2025/2026), where 'C' stands for Compound.\n\nC0/C1 (Hardest): Most durable, best for high-abrasion tracks and high heat.\n\n\"C3 (Medium/Mid-range): The \"workhorse\" or middle-range compound, offering a balance of speed and durability.\n\nC5/C6 (Softest): Fastest over a single lap, maximum grip, but wears out very quickly (high degradation).\"\n\nColor Codes: Red (Soft), Yellow (Medium), White (Hard), Green (Intermediate), Blue (Wet).\"\n\nhttps://www.redbull.com/us-en/formula-1-tire-compounds-guide",
+        "content": "<h2>Tire compound changes during a race</h2>\n<p>\"A tire compound refers to the specific chemical recipe of rubber, silica, carbon black, and oils used to create a tire. These compounds determine the tire's \"personality\"—balancing grip, durability, and temperature resistance.\"</p>\n<p>\"Encoded system of Tire compounds, ranging from C0 to C6 (as of 2025/2026), where 'C' stands for Compound.</p>\n<p>C0/C1 (Hardest): Most durable, best for high-abrasion tracks and high heat.</p>\n<p>\"C3 (Medium/Mid-range): The \"workhorse\" or middle-range compound, offering a balance of speed and durability.</p>\n<p>C5/C6 (Softest): Fastest over a single lap, maximum grip, but wears out very quickly (high degradation).\"</p>\n<p>Color Codes: Red (Soft), Yellow (Medium), White (Hard), Green (Intermediate), Blue (Wet).\"</p>\n<p><a href=\"https://www.redbull.com/us-en/formula-1-tire-compounds-guide\" target=\"_blank\">https://www.redbull.com/us-en/formula-1-tire-compounds-guide</a></p>",
+        "parent": {
+          "url": "#"
+        },
+        "author": {
+          "displayName": "Marília Prata",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/3012786-kg.jpg",
+          "url": "/mpwolke",
+          "tier": "GRANDMASTER",
+          "id": 3012786,
+          "progressionOptOut": false
+        },
+        "authorType": "TOPIC",
+        "votes": {
+          "totalVotes": 31,
+          "canUpvote": true,
+          "totalUpvotes": 31
+        },
+        "kernelVersion": 0,
+        "feedbackTrackingData": {},
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Marília Prata",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/3012786-kg.jpg",
+            "url": "/mpwolke",
+            "userName": "mpwolke",
+            "tier": "GRANDMASTER",
+            "id": 3012786,
+            "profileUrl": "/mpwolke",
+            "performanceTier": "GRANDMASTER",
+            "userId": 3012786,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      "comments": [
+        {
+          "id": 3452402,
+          "postDate": "2026-05-03T09:14:49.023Z",
+          "rawMarkdown": "Thanks for the specific chemical recipe @mpwolke ",
+          "content": "<p>Thanks for the specific chemical recipe <a href=\"https://www.kaggle.com/mpwolke\" target=\"_blank\">@mpwolke</a> </p>",
+          "replies": [
+            {
+              "id": 3452491,
+              "postDate": "2026-05-03T14:37:38.700Z",
+              "rawMarkdown": "Thank you for reading The chemical recipe Navneet.",
+              "content": "<p>Thank you for reading The chemical recipe Navneet.</p>",
+              "parent": {},
+              "author": {
+                "displayName": "Marília Prata",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/3012786-kg.jpg",
+                "url": "/mpwolke",
+                "tier": "GRANDMASTER",
+                "id": 3012786,
+                "progressionOptOut": false
+              },
+              "authorType": "TOPIC",
+              "votes": {
+                "canUpvote": true
+              },
+              "kernelVersion": 0,
+              "feedbackTrackingData": {},
+              "isThankYou": false,
+              "teamUpInfo": {
+                "teamLeader": {
+                  "displayName": "Marília Prata",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/3012786-kg.jpg",
+                  "url": "/mpwolke",
+                  "userName": "mpwolke",
+                  "tier": "GRANDMASTER",
+                  "id": 3012786,
+                  "profileUrl": "/mpwolke",
+                  "performanceTier": "GRANDMASTER",
+                  "userId": 3012786,
+                  "progressionOptOut": false
+                },
+                "intro": ""
+              }
+            }
+          ],
+          "parent": {},
+          "author": {
+            "displayName": "Navneet",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/15692441-kg.jpg?t=2025-05-18-07-58-06",
+            "url": "/navneetbende",
+            "tier": "CONTRIBUTOR",
+            "id": 15692441,
+            "progressionOptOut": false
+          },
+          "authorType": "COMMENT",
+          "votes": {
+            "totalVotes": 1,
+            "canUpvote": true,
+            "totalUpvotes": 1
+          },
+          "kernelVersion": 0,
+          "feedbackTrackingData": {},
+          "isThankYou": false
+        },
+        {
+          "id": 3451204,
+          "postDate": "2026-05-01T02:13:12.287Z",
+          "rawMarkdown": "Not sure if it is reflected in that data, but in \"dry\" races each car is required to use at least two different tire compounds.  In \"wet\" races, that is no longer required.",
+          "content": "<p>Not sure if it is reflected in that data, but in \"dry\" races each car is required to use at least two different tire compounds.  In \"wet\" races, that is no longer required.</p>",
+          "replies": [
+            {
+              "id": 3451474,
+              "postDate": "2026-05-01T13:56:54.563Z",
+              "rawMarkdown": "Thank you for the useful information Mcotton. Very likely the RedBull post isn't updated since it was published on 11/08/2023. ",
+              "content": "<p>Thank you for the useful information Mcotton. Very likely the RedBull post isn't updated since it was published on 11/08/2023. </p>",
+              "parent": {},
+              "author": {
+                "displayName": "Marília Prata",
+                "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/3012786-kg.jpg",
+                "url": "/mpwolke",
+                "tier": "GRANDMASTER",
+                "id": 3012786,
+                "progressionOptOut": false
+              },
+              "authorType": "TOPIC",
+              "votes": {
+                "totalVotes": 1,
+                "canUpvote": true,
+                "totalUpvotes": 1
+              },
+              "kernelVersion": 0,
+              "feedbackTrackingData": {},
+              "isThankYou": false,
+              "teamUpInfo": {
+                "teamLeader": {
+                  "displayName": "Marília Prata",
+                  "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/3012786-kg.jpg",
+                  "url": "/mpwolke",
+                  "userName": "mpwolke",
+                  "tier": "GRANDMASTER",
+                  "id": 3012786,
+                  "profileUrl": "/mpwolke",
+                  "performanceTier": "GRANDMASTER",
+                  "userId": 3012786,
+                  "progressionOptOut": false
+                },
+                "intro": ""
+              }
+            }
+          ],
+          "parent": {},
+          "author": {
+            "displayName": "mcotton",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/3927421-kg.jpg",
+            "url": "/mcotton",
+            "tier": "CONTRIBUTOR",
+            "id": 3927421,
+            "progressionOptOut": false
+          },
+          "authorType": "COMMENT",
+          "votes": {
+            "totalVotes": 2,
+            "canUpvote": true,
+            "totalUpvotes": 2
+          },
+          "kernelVersion": 0,
+          "competitionRanking": 467,
+          "feedbackTrackingData": {},
+          "isThankYou": false,
+          "teamUpInfo": {
+            "teamLeader": {
+              "displayName": "mcotton",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/3927421-kg.jpg",
+              "url": "/mcotton",
+              "userName": "mcotton",
+              "tier": "CONTRIBUTOR",
+              "id": 3927421,
+              "profileUrl": "/mcotton",
+              "performanceTier": "CONTRIBUTOR",
+              "userId": 3927421,
+              "progressionOptOut": false
+            },
+            "intro": ""
+          }
+        }
+      ]
+    },
+    {
+      "topic": {
+        "authorUser": {
+          "displayName": "broccoli beef",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1048539-kg.jpg",
+          "url": "/siukeitin",
+          "tier": "GRANDMASTER",
+          "id": 1048539,
+          "progressionOptOut": false
+        },
+        "authorType": "TOPIC",
+        "commentCount": 1,
+        "firstForumMessageId": 3451858,
+        "id": 696380,
+        "lastCommenterType": "TOPIC",
+        "lastCommenterName": "broccoli beef",
+        "lastCommenterUrl": "/competitions/playground-series-s6e5/discussion/696380#3452237",
+        "lastCommentPostDate": "2026-05-02T21:19:37.883333300Z",
+        "parentName": "Predicting F1 Pit Stops",
+        "parentUrl": "/competitions/playground-series-s6e5/discussion",
+        "postDate": "2026-05-02T02:41:01.496362300Z",
+        "tags": [
+          {
+            "id": 13102,
+            "name": "beginner",
+            "listingUrl": "/tags/beginner",
+            "displayName": "Beginner"
+          },
+          {
+            "id": 13201,
+            "name": "exploratory data analysis",
+            "listingUrl": "/tags/eda",
+            "displayName": "Exploratory Data Analysis"
+          }
+        ],
+        "title": "Inconsistencies in the \"original\" dataset",
+        "topicUrl": "/competitions/playground-series-s6e5/discussion/696380",
+        "votes": 13,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "broccoli beef",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1048539-kg.jpg",
+            "url": "/siukeitin",
+            "userName": "siukeitin",
+            "tier": "GRANDMASTER",
+            "id": 1048539,
+            "profileUrl": "/siukeitin",
+            "performanceTier": "GRANDMASTER",
+            "userId": 1048539,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      "firstMessage": {
+        "id": 3451858,
+        "postDate": "2026-05-02T02:41:01.497Z",
+        "rawMarkdown": "The \"original\" dataset is supposed to be based on data provided by the [FastF1](https://github.com/theOehrly/Fast-F1) library, but the creator of the dataset also derived additional features from the existing features. \n\nEach combination of `Driver`, `Race` and `Year` corresponds to a time series indexed by `LapNumber` \\\\(i\\\\). As such, the derived features are supposed to satisfy some consistency requirements. For example,\n\n\\\\[\nLapTime\\\\_Delta_i=LapTime_i-LapTime_{i-1}\\quad\\text{if }PitStop_i\\not=1\n\\\\]\n\n\\\\[\nPosition\\\\_Change_i=Position_{i-1}-Position_i\n\\\\]\n\n\\\\[\nPitNextLap_i=1\\iff PitStop_{i+1}=1\n\\\\]\n\nIt seems that these do not hold for all the time series. It is unclear what is causing this, possibly bugs.\n```python\ndef test_consistency(driver, race, year):\n    print(F'>>> Test started for {driver=}, {race=}, {year=}')  \n    mask = (original.Driver==driver)&(original.Race==race)&(original.Year==year)\n    assert sum(mask)>0\n    X = original[mask].set_index('LapNumber')\n    # LapTime_Delta test\n    for i, r in X.iterrows():\n        try:\n            delta = r['LapTime (s)'] - X.loc[i-1, 'LapTime (s)']\n            if not r['PitStop'] and not np.isclose(delta, r['LapTime_Delta']):\n                print('*** LapTime_Delta consistency test failed.')\n                print(F'Expected: {delta}, Actual: {r['LapTime_Delta']}')\n                break \n        except:\n            pass\n  \n    # Position_Change test\n    for i, r in X.iterrows():\n        try:\n            delta = X.loc[i-1, 'Position'] - r['Position']\n            if not np.isclose(delta, r['Position_Change']):\n                print('*** Position_Change consistency test failed.')\n                print(F'Expected: {delta}, Actual: {r['Position_Change']}')\n                break \n        except:\n            pass\n\n    # PitStop/PitNextLap test\n    for i, r in X.iterrows():\n        try:\n            pit_next_lap = X.loc[i+1, 'PitStop']\n            if pit_next_lap^r['PitNextLap'] :\n                print('*** PitStop/PitNextLap consistency test failed.')\n                print(F'PitNextLap={r.PitNextLap}, Next PitStop={pit_next_lap}')\n                break \n        except:\n            pass\n    print(F'<<< Test completed for {driver=}, {race=}, {year=}')   \n\ntest_consistency('ALB', 'Abu Dhabi Grand Prix', 2023);print()\ntest_consistency('ALB', 'Abu Dhabi Grand Prix', 2024);print()\ntest_consistency('ALB', 'Abu Dhabi Grand Prix', 2025);print()\ntest_consistency('ZHO', 'Abu Dhabi Grand Prix', 2023);print()\ntest_consistency('ZHO', 'Abu Dhabi Grand Prix', 2024);print()\n```\n```text\n>>> Test started for driver='ALB', race='Abu Dhabi Grand Prix', year=2023\n<<< Test completed for driver='ALB', race='Abu Dhabi Grand Prix', year=2023\n\n>>> Test started for driver='ALB', race='Abu Dhabi Grand Prix', year=2024\n*** LapTime_Delta consistency test failed.\nExpected: 19.001000000000005, Actual: -26.10499999999999\n*** Position_Change consistency test failed.\nExpected: 0, Actual: 1.0\n*** PitStop/PitNextLap consistency test failed.\nPitNextLap=0, Next PitStop=1\n<<< Test completed for driver='ALB', race='Abu Dhabi Grand Prix', year=2024\n\n>>> Test started for driver='ALB', race='Abu Dhabi Grand Prix', year=2025\n*** LapTime_Delta consistency test failed.\nExpected: -8.047000000000011, Actual: 1.8819999999999908\n*** Position_Change consistency test failed.\nExpected: 0, Actual: 2.0\n*** PitStop/PitNextLap consistency test failed.\nPitNextLap=0, Next PitStop=1\n<<< Test completed for driver='ALB', race='Abu Dhabi Grand Prix', year=2025\n\n>>> Test started for driver='ZHO', race='Abu Dhabi Grand Prix', year=2023\n<<< Test completed for driver='ZHO', race='Abu Dhabi Grand Prix', year=2023\n\n>>> Test started for driver='ZHO', race='Abu Dhabi Grand Prix', year=2024\n*** LapTime_Delta consistency test failed.\nExpected: 19.108999999999995, Actual: -26.033999999999992\n*** Position_Change consistency test failed.\nExpected: 0, Actual: 1.0\n*** PitStop/PitNextLap consistency test failed.\nPitNextLap=0, Next PitStop=1\n<<< Test completed for driver='ZHO', race='Abu Dhabi Grand Prix', year=2024\n```",
+        "content": "<p>The \"original\" dataset is supposed to be based on data provided by the <a href=\"https://github.com/theOehrly/Fast-F1\" target=\"_blank\">FastF1</a> library, but the creator of the dataset also derived additional features from the existing features. </p>\n<p>Each combination of <code>Driver</code>, <code>Race</code> and <code>Year</code> corresponds to a time series indexed by <code>LapNumber</code> \\(i\\). As such, the derived features are supposed to satisfy some consistency requirements. For example,</p>\n<p>\\[\nLapTime\\_Delta_i=LapTime_i-LapTime_{i-1}\\quad\\text{if }PitStop_i\\not=1\n\\]</p>\n<p>\\[\nPosition\\_Change_i=Position_{i-1}-Position_i\n\\]</p>\n<p>\\[\nPitNextLap_i=1\\iff PitStop_{i+1}=1\n\\]</p>\n<p>It seems that these do not hold for all the time series. It is unclear what is causing this, possibly bugs.</p>\n<pre><code>def test_consistency(driver, race, year):\n    print(F'&gt;&gt;&gt; Test started for {driver=}, {race=}, {year=}')  \n    mask = (original.Driver==driver)&amp;(original.Race==race)&amp;(original.Year==year)\n    assert sum(mask)&gt;0\n    X = original[mask].set_index('LapNumber')\n    # LapTime_Delta test\n    for i, r in X.iterrows():\n        try:\n            delta = r['LapTime (s)'] - X.loc[i-1, 'LapTime (s)']\n            if not r['PitStop'] and not np.isclose(delta, r['LapTime_Delta']):\n                print('*** LapTime_Delta consistency test failed.')\n                print(F'Expected: {delta}, Actual: {r['LapTime_Delta']}')\n                break \n        except:\n            pass\n\n    # Position_Change test\n    for i, r in X.iterrows():\n        try:\n            delta = X.loc[i-1, 'Position'] - r['Position']\n            if not np.isclose(delta, r['Position_Change']):\n                print('*** Position_Change consistency test failed.')\n                print(F'Expected: {delta}, Actual: {r['Position_Change']}')\n                break \n        except:\n            pass\n\n    # PitStop/PitNextLap test\n    for i, r in X.iterrows():\n        try:\n            pit_next_lap = X.loc[i+1, 'PitStop']\n            if pit_next_lap^r['PitNextLap'] :\n                print('*** PitStop/PitNextLap consistency test failed.')\n                print(F'PitNextLap={r.PitNextLap}, Next PitStop={pit_next_lap}')\n                break \n        except:\n            pass\n    print(F'&lt;&lt;&lt; Test completed for {driver=}, {race=}, {year=}')   \n\ntest_consistency('ALB', 'Abu Dhabi Grand Prix', 2023);print()\ntest_consistency('ALB', 'Abu Dhabi Grand Prix', 2024);print()\ntest_consistency('ALB', 'Abu Dhabi Grand Prix', 2025);print()\ntest_consistency('ZHO', 'Abu Dhabi Grand Prix', 2023);print()\ntest_consistency('ZHO', 'Abu Dhabi Grand Prix', 2024);print()\n</code></pre>\n<pre><code>&gt;&gt;&gt; Test started for driver='ALB', race='Abu Dhabi Grand Prix', year=2023\n&lt;&lt;&lt; Test completed for driver='ALB', race='Abu Dhabi Grand Prix', year=2023\n\n&gt;&gt;&gt; Test started for driver='ALB', race='Abu Dhabi Grand Prix', year=2024\n*** LapTime_Delta consistency test failed.\nExpected: 19.001000000000005, Actual: -26.10499999999999\n*** Position_Change consistency test failed.\nExpected: 0, Actual: 1.0\n*** PitStop/PitNextLap consistency test failed.\nPitNextLap=0, Next PitStop=1\n&lt;&lt;&lt; Test completed for driver='ALB', race='Abu Dhabi Grand Prix', year=2024\n\n&gt;&gt;&gt; Test started for driver='ALB', race='Abu Dhabi Grand Prix', year=2025\n*** LapTime_Delta consistency test failed.\nExpected: -8.047000000000011, Actual: 1.8819999999999908\n*** Position_Change consistency test failed.\nExpected: 0, Actual: 2.0\n*** PitStop/PitNextLap consistency test failed.\nPitNextLap=0, Next PitStop=1\n&lt;&lt;&lt; Test completed for driver='ALB', race='Abu Dhabi Grand Prix', year=2025\n\n&gt;&gt;&gt; Test started for driver='ZHO', race='Abu Dhabi Grand Prix', year=2023\n&lt;&lt;&lt; Test completed for driver='ZHO', race='Abu Dhabi Grand Prix', year=2023\n\n&gt;&gt;&gt; Test started for driver='ZHO', race='Abu Dhabi Grand Prix', year=2024\n*** LapTime_Delta consistency test failed.\nExpected: 19.108999999999995, Actual: -26.033999999999992\n*** Position_Change consistency test failed.\nExpected: 0, Actual: 1.0\n*** PitStop/PitNextLap consistency test failed.\nPitNextLap=0, Next PitStop=1\n&lt;&lt;&lt; Test completed for driver='ZHO', race='Abu Dhabi Grand Prix', year=2024\n</code></pre>",
+        "parent": {
+          "url": "#"
+        },
+        "author": {
+          "displayName": "broccoli beef",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1048539-kg.jpg",
+          "url": "/siukeitin",
+          "tier": "GRANDMASTER",
+          "id": 1048539,
+          "progressionOptOut": false
+        },
+        "authorType": "TOPIC",
+        "votes": {
+          "totalVotes": 13,
+          "canUpvote": true,
+          "totalUpvotes": 13
+        },
+        "kernelVersion": 0,
+        "feedbackTrackingData": {},
+        "reactions": [
+          {
+            "emoji": "THANK_YOU",
+            "featuredUserNames": [
+              "ozzy97",
+              "rawashishsin"
+            ],
+            "userCount": 2
+          }
+        ],
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "broccoli beef",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1048539-kg.jpg",
+            "url": "/siukeitin",
+            "userName": "siukeitin",
+            "tier": "GRANDMASTER",
+            "id": 1048539,
+            "profileUrl": "/siukeitin",
+            "performanceTier": "GRANDMASTER",
+            "userId": 1048539,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      "comments": [
+        {
+          "id": 3452237,
+          "postDate": "2026-05-02T21:19:37.883Z",
+          "rawMarkdown": "Here is another look at how problematic the \"original\" dataset is. Obviously, among all the variables derived from the fastf1 raw data, the most important ones are `PitNextLap` and `PitStop`. Let's compare what these variables really should be from the raw fastf1 data.\n\n```python\nimport fastf1, os, logging\n\nlogging.disable(logging.CRITICAL)\n\ncache_dir = './f1'\nif not os.path.exists(cache_dir):\n    os.makedirs(cache_dir)\n\nfastf1.Cache.enable_cache(cache_dir) \n\noriginal = pd.read_csv('/kaggle/input/datasets/aadigupta1601/f1-strategy-dataset-pit-stop-prediction/f1_strategy_dataset_v4.csv')\n\ndef diff_data(driver, race, year):\n    # X is raw fastf1 data\n    session = fastf1.get_session(year, race, 'R')\n    session.load()\n    df = session.laps\n    df = df[df.Driver==driver]\n    assert not df.empty\n    X = df[['LapNumber', 'Compound', 'Stint', 'Position']].convert_dtypes()\n    X['LapTime (s)'] = df['LapTime'].dt.total_seconds()\n    X['PitNextLap'] = df['PitInTime'].notna().astype(int)\n    X['PitStop'] = df['PitOutTime'].notna().astype(int)    \n    # X0 is from \"original\" dataset\n    X0 = original[(original['Driver']==driver) & (original['Race']==race) & (original['Year']==year)]\n    cols = ['LapNumber', 'Compound', 'Stint', 'Position', 'LapTime (s)', 'PitNextLap', 'PitStop']\n    X0 = X0[cols]\n\n    X['indicator'] = 'fastf1'\n    X0['indicator'] = 'original'\n    \n    df_tmp = pd.concat([X, X0]).drop_duplicates(cols, keep=False)\n    if df_tmp.empty:\n        print('FastF1 data and \"original\" data are identical.')\n        return \n    X = df_tmp[df_tmp['indicator']=='fastf1'].drop(['indicator'], axis=1)\n    X0 = df_tmp[df_tmp['indicator']=='original'].drop(['indicator'], axis=1)\n    return X0.merge(\n        X, on=['LapNumber', 'Compound', 'Stint', 'Position', 'LapTime (s)'], \n        how='left', suffixes=('_orig','_fastf1') \n    )\n```\n```python\nd, r, y = 'ALB', 'Abu Dhabi Grand Prix', 2023\ndiff_data(d,r,y)\n```\n```text\nFastF1 data and \"original\" data are identical.\n```\n```python\nd, r, y = 'ALB', 'Abu Dhabi Grand Prix', 2024\ndiff_data(d,r,y)\n```\n![](https://www.googleapis.com/download/storage/v1/b/kaggle-forum-message-attachments/o/inbox%2F1048539%2F9b3bc8bc604765187eca5860adeb46b6%2FCapture.PNG?generation=1777756488135486&alt=media)\n\nThe \"original\" dataset says the car was pretty much in the pit every lap, which is nonsensical. \n",
+          "content": "<p>Here is another look at how problematic the \"original\" dataset is. Obviously, among all the variables derived from the fastf1 raw data, the most important ones are <code>PitNextLap</code> and <code>PitStop</code>. Let's compare what these variables really should be from the raw fastf1 data.</p>\n<pre><code>import fastf1, os, logging\n\nlogging.disable(logging.CRITICAL)\n\ncache_dir = './f1'\nif not os.path.exists(cache_dir):\n    os.makedirs(cache_dir)\n\nfastf1.Cache.enable_cache(cache_dir) \n\noriginal = pd.read_csv('/kaggle/input/datasets/aadigupta1601/f1-strategy-dataset-pit-stop-prediction/f1_strategy_dataset_v4.csv')\n\ndef diff_data(driver, race, year):\n    # X is raw fastf1 data\n    session = fastf1.get_session(year, race, 'R')\n    session.load()\n    df = session.laps\n    df = df[df.Driver==driver]\n    assert not df.empty\n    X = df[['LapNumber', 'Compound', 'Stint', 'Position']].convert_dtypes()\n    X['LapTime (s)'] = df['LapTime'].dt.total_seconds()\n    X['PitNextLap'] = df['PitInTime'].notna().astype(int)\n    X['PitStop'] = df['PitOutTime'].notna().astype(int)    \n    # X0 is from \"original\" dataset\n    X0 = original[(original['Driver']==driver) &amp; (original['Race']==race) &amp; (original['Year']==year)]\n    cols = ['LapNumber', 'Compound', 'Stint', 'Position', 'LapTime (s)', 'PitNextLap', 'PitStop']\n    X0 = X0[cols]\n\n    X['indicator'] = 'fastf1'\n    X0['indicator'] = 'original'\n\n    df_tmp = pd.concat([X, X0]).drop_duplicates(cols, keep=False)\n    if df_tmp.empty:\n        print('FastF1 data and \"original\" data are identical.')\n        return \n    X = df_tmp[df_tmp['indicator']=='fastf1'].drop(['indicator'], axis=1)\n    X0 = df_tmp[df_tmp['indicator']=='original'].drop(['indicator'], axis=1)\n    return X0.merge(\n        X, on=['LapNumber', 'Compound', 'Stint', 'Position', 'LapTime (s)'], \n        how='left', suffixes=('_orig','_fastf1') \n    )\n</code></pre>\n<pre><code>d, r, y = 'ALB', 'Abu Dhabi Grand Prix', 2023\ndiff_data(d,r,y)\n</code></pre>\n<pre><code>FastF1 data and \"original\" data are identical.\n</code></pre>\n<pre><code>d, r, y = 'ALB', 'Abu Dhabi Grand Prix', 2024\ndiff_data(d,r,y)\n</code></pre>\n<p><img src=\"https://www.googleapis.com/download/storage/v1/b/kaggle-forum-message-attachments/o/inbox%2F1048539%2F9b3bc8bc604765187eca5860adeb46b6%2FCapture.PNG?generation=1777756488135486&amp;alt=media\" alt=\"\"></p>\n<p>The \"original\" dataset says the car was pretty much in the pit every lap, which is nonsensical. </p>",
+          "parent": {},
+          "author": {
+            "displayName": "broccoli beef",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1048539-kg.jpg",
+            "url": "/siukeitin",
+            "tier": "GRANDMASTER",
+            "id": 1048539,
+            "progressionOptOut": false
+          },
+          "authorType": "TOPIC",
+          "votes": {
+            "canUpvote": true
+          },
+          "kernelVersion": 0,
+          "feedbackTrackingData": {},
+          "isThankYou": false,
+          "teamUpInfo": {
+            "teamLeader": {
+              "displayName": "broccoli beef",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1048539-kg.jpg",
+              "url": "/siukeitin",
+              "userName": "siukeitin",
+              "tier": "GRANDMASTER",
+              "id": 1048539,
+              "profileUrl": "/siukeitin",
+              "performanceTier": "GRANDMASTER",
+              "userId": 1048539,
+              "progressionOptOut": false
+            },
+            "intro": ""
+          }
+        }
+      ]
+    },
+    {
+      "topic": {
+        "authorUser": {
+          "displayName": "mcotton",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/3927421-kg.jpg",
+          "url": "/mcotton",
+          "tier": "CONTRIBUTOR",
+          "id": 3927421,
+          "progressionOptOut": false
+        },
+        "authorType": "TOPIC",
+        "commentCount": 4,
+        "firstForumMessageId": 3451592,
+        "id": 696227,
+        "lastCommenterType": "COMMENT",
+        "lastCommenterName": "kgmuzu",
+        "lastCommenterUrl": "/competitions/playground-series-s6e5/discussion/696227#3452525",
+        "lastCommentPostDate": "2026-05-03T16:49:21.976666700Z",
+        "parentName": "Predicting F1 Pit Stops",
+        "parentUrl": "/competitions/playground-series-s6e5/discussion",
+        "postDate": "2026-05-01T16:57:23.340600500Z",
+        "title": "F1 nerds, watch out because data doesn't make sense",
+        "topicUrl": "/competitions/playground-series-s6e5/discussion/696227",
+        "votes": 4,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "mcotton",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/3927421-kg.jpg",
+            "url": "/mcotton",
+            "userName": "mcotton",
+            "tier": "CONTRIBUTOR",
+            "id": 3927421,
+            "profileUrl": "/mcotton",
+            "performanceTier": "CONTRIBUTOR",
+            "userId": 3927421,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      "firstMessage": {
+        "id": 3451592,
+        "postDate": "2026-05-01T16:57:23.340Z",
+        "rawMarkdown": "Looking at a single race (Austria 2022)\n`aus_2022 = df.query(\"year == 2022\").query(\"race == 'Austrian Grand Prix'\").sort_values(by='lapnumber')`\n\nand plotting the stints over lapnumber by driver\n`sns.lineplot(data=aus_2022, x='lapnumber', y='stint', hue='driver')`\n\nI expect this to be stairsteps and to never go back down.\n\n![](https://www.googleapis.com/download/storage/v1/b/kaggle-forum-message-attachments/o/inbox%2F3927421%2F64c160716e705904b7ab314607682435%2FScreenshot%202026-05-01%20at%2011.54.26AM.png?generation=1777654484943907&alt=media)\n\nLooking at a single driver shows\n\n![](https://www.googleapis.com/download/storage/v1/b/kaggle-forum-message-attachments/o/inbox%2F3927421%2F66bef3564e526fca843b05694557061d%2FScreenshot%202026-05-01%20at%2011.56.31AM.png?generation=1777654635432578&alt=media)",
+        "content": "<p>Looking at a single race (Austria 2022)\n<code>aus_2022 = df.query(\"year == 2022\").query(\"race == 'Austrian Grand Prix'\").sort_values(by='lapnumber')</code></p>\n<p>and plotting the stints over lapnumber by driver\n<code>sns.lineplot(data=aus_2022, x='lapnumber', y='stint', hue='driver')</code></p>\n<p>I expect this to be stairsteps and to never go back down.</p>\n<p><img src=\"https://www.googleapis.com/download/storage/v1/b/kaggle-forum-message-attachments/o/inbox%2F3927421%2F64c160716e705904b7ab314607682435%2FScreenshot%202026-05-01%20at%2011.54.26AM.png?generation=1777654484943907&amp;alt=media\" alt=\"\"></p>\n<p>Looking at a single driver shows</p>\n<p><img src=\"https://www.googleapis.com/download/storage/v1/b/kaggle-forum-message-attachments/o/inbox%2F3927421%2F66bef3564e526fca843b05694557061d%2FScreenshot%202026-05-01%20at%2011.56.31AM.png?generation=1777654635432578&amp;alt=media\" alt=\"\"></p>",
+        "parent": {
+          "url": "#"
+        },
+        "author": {
+          "displayName": "mcotton",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/3927421-kg.jpg",
+          "url": "/mcotton",
+          "tier": "CONTRIBUTOR",
+          "id": 3927421,
+          "progressionOptOut": false
+        },
+        "authorType": "TOPIC",
+        "votes": {
+          "totalVotes": 4,
+          "canUpvote": true,
+          "totalUpvotes": 4
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 467,
+        "feedbackTrackingData": {},
+        "reactions": [
+          {
+            "emoji": "THANK_YOU",
+            "featuredUserNames": [
+              "mpwolke"
+            ],
+            "userCount": 1
+          }
+        ],
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "mcotton",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/3927421-kg.jpg",
+            "url": "/mcotton",
+            "userName": "mcotton",
+            "tier": "CONTRIBUTOR",
+            "id": 3927421,
+            "profileUrl": "/mcotton",
+            "performanceTier": "CONTRIBUTOR",
+            "userId": 3927421,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      "comments": [
+        {
+          "id": 3452525,
+          "postDate": "2026-05-03T16:49:21.977Z",
+          "rawMarkdown": "Just that I get this right. Stint 1 means racing on the first set of tires and then stint two is the next set? ... I guess",
+          "content": "<p>Just that I get this right. Stint 1 means racing on the first set of tires and then stint two is the next set? … I guess</p>",
+          "parent": {},
+          "author": {
+            "displayName": "kgmuzu",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/23575980-kg.jpg?t=2025-04-01-09-25-03",
+            "url": "/kgmuzu",
+            "tier": "CONTRIBUTOR",
+            "id": 23575980,
+            "progressionOptOut": false
+          },
+          "authorType": "COMMENT",
+          "votes": {
+            "canUpvote": true
+          },
+          "kernelVersion": 0,
+          "competitionRanking": 503,
+          "feedbackTrackingData": {},
+          "isThankYou": false,
+          "teamUpInfo": {
+            "teamLeader": {
+              "displayName": "kgmuzu",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/23575980-kg.jpg?t=2025-04-01-09-25-03",
+              "url": "/kgmuzu",
+              "userName": "kgmuzu",
+              "tier": "CONTRIBUTOR",
+              "id": 23575980,
+              "profileUrl": "/kgmuzu",
+              "performanceTier": "CONTRIBUTOR",
+              "userId": 23575980,
+              "progressionOptOut": false
+            },
+            "intro": ""
+          }
+        },
+        {
+          "id": 3451888,
+          "postDate": "2026-05-02T04:36:11.340Z",
+          "rawMarkdown": "Nice catch. So maybe we need to treat each row as an independent sample, not taking into account drivers' previous laps.  ",
+          "content": "<p>Nice catch. So maybe we need to treat each row as an independent sample, not taking into account drivers' previous laps.  </p>",
+          "parent": {},
+          "author": {
+            "displayName": "Alibay Alili",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1946171-kg.jpg?t=2026-04-02-15-35-14",
+            "url": "/alibay",
+            "tier": "CONTRIBUTOR",
+            "id": 1946171,
+            "progressionOptOut": false
+          },
+          "authorType": "COMMENT",
+          "votes": {
+            "canUpvote": true
+          },
+          "kernelVersion": 0,
+          "competitionRanking": 175,
+          "feedbackTrackingData": {},
+          "isThankYou": false,
+          "teamUpInfo": {
+            "teamLeader": {
+              "displayName": "Alibay Alili",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1946171-kg.jpg?t=2026-04-02-15-35-14",
+              "url": "/alibay",
+              "userName": "alibay",
+              "tier": "CONTRIBUTOR",
+              "id": 1946171,
+              "profileUrl": "/alibay",
+              "performanceTier": "CONTRIBUTOR",
+              "userId": 1946171,
+              "progressionOptOut": false
+            },
+            "intro": ""
+          }
+        },
+        {
+          "id": 3451740,
+          "postDate": "2026-05-01T20:03:38.853Z",
+          "rawMarkdown": "You are absolutely right. The whole data for a race, year, driver is inaccurate. I was about to make a similar post. The `Stint, TyreLife and LapNumber` don't make sense when looked at holistically. I am not sure if this intended or not, but the actual dataset preserves the race integrity but the competition dataset does not.\n\n| id     | Driver | Compound | Race             | Year | PitStop | LapNumber | Stint | TyreLife | Position | LapTime (s) | LapTime\\_Delta | Cumulative\\_Degradation | RaceProgress  | Position\\_Change | PitNextLap |\n| :----- | :----- | :------- | :--------------- | :--- | :------ | :-------- | :---- | :------- | :------- | :---------- | :------------- | :---------------------- | :------------ | :--------------- | :--------- |\n| 479201 | D109   | MEDIUM   | Dutch Grand Prix | 2022 | 0       | 1         | 1     | 1        | 10       | 82.923      | \\-36.941       | \\-72.894                | 0.01388888889 | 2                | TEST\\_DATA |\n| 199160 | D109   | MEDIUM   | Dutch Grand Prix | 2022 | 0       | 4         | 1     | 4        | 7        | 77.148      | \\-37.165       | \\-162.898               | 0.05555555556 | 5                | 0          |\n| 553328 | D109   | MEDIUM   | Dutch Grand Prix | 2022 | 0       | 8         | 1     | 10       | 6        | 76.837      | \\-6.687        | 29.701                  | 0.1111111111  | 1                | TEST\\_DATA |\n| 441493 | D109   | MEDIUM   | Dutch Grand Prix | 2022 | 0       | 10        | 1     | 13       | 3        | 76.823      | \\-8.064        | 13.088                  | 0.1388888889  | 3                | TEST\\_DATA |\n| 19848  | D109   | MEDIUM   | Dutch Grand Prix | 2022 | 1       | 14        | 1     | 14       | 3        | 76.6        | \\-7.853        | 13.634                  | 0.1944444444  | \\-1              | 0          |\n| 597043 | D109   | MEDIUM   | Dutch Grand Prix | 2022 | 0       | 16        | 2     | 6        | 18       | 77.677      | \\-37.569       | \\-53.835                | 0.2222222222  | \\-2              | TEST\\_DATA |\n| 298581 | D109   | MEDIUM   | Dutch Grand Prix | 2022 | 0       | 17        | 2     | 8        | 15       | 77.865      | \\-38.095       | \\-16.738                | 0.2361111111  | \\-3              | 1          |\n| 93988  | D109   | MEDIUM   | Dutch Grand Prix | 2022 | 1       | 18        | 1     | 18       | 4        | 75.842      | \\-3.982        | \\-59.27                 | 0.25          | \\-2              | 0          |\n| 130223 | D109   | MEDIUM   | Dutch Grand Prix | 2022 | 0       | 19        | 1     | 19       | 2        | 76.629      | \\-8.433        | 102.076                 | 0.2638888889  | 6                | 0          |\n| 48563  | D109   | MEDIUM   | Dutch Grand Prix | 2022 | 1       | 23        | 2     | 11       | 16       | 93.942      | 7.161          | \\-4.135                 | 0.3285714286  | \\-7              | 1          |\n| 286471 | D109   | SOFT     | Dutch Grand Prix | 2022 | 0       | 27        | 3     | 15       | 10       | 77.075      | \\-0.088        | \\-23.084                | 0.3857142857  | 0                | 0          |\n| 459732 | D109   | MEDIUM   | Dutch Grand Prix | 2022 | 0       | 37        | 2     | 19       | 6        | 76.931      | \\-7.847        | 21.567                  | 0.5138888889  | 2                | TEST\\_DATA |\n| 433693 | D109   | MEDIUM   | Dutch Grand Prix | 2022 | 0       | 40        | 2     | 24       | 5        | 76.905      | \\-9.649        | \\-141.588               | 0.5555555556  | \\-3              | 0          |\n| 54224  | D109   | SOFT     | Dutch Grand Prix | 2022 | 1       | 47        | 4     | 4        | 14       | 108.864     | \\-2.093        | \\-18.746                | 0.6527777778  | \\-1              | 0          |\n| 479371 | D109   | SOFT     | Dutch Grand Prix | 2022 | 0       | 54        | 5     | 5        | 17       | 75.912      | 0.095          | \\-19.073                | 0.75          | 0                | TEST\\_DATA |\n| 25621  | D109   | SOFT     | Dutch Grand Prix | 2022 | 1       | 56        | 5     | 7        | 14       | 83.967      | 5.074          | \\-52.812                | 0.7777777778  | 2                | 0          |\n| 454179 | D109   | SOFT     | Dutch Grand Prix | 2022 | 1       | 59        | 4     | 6        | 9        | 74.261      | \\-7.543        | \\-17.438                | 0.8194444444  | \\-7              | TEST\\_DATA |\n| 272915 | D109   | SOFT     | Dutch Grand Prix | 2022 | 0       | 69        | 4     | 20       | 11       | 75.816      | \\-0.083        | \\-43.828                | 0.9583333333  | 3                | 0          |\n\n\n\nAlso many trivial relations of columns are being violated.For eg:\n\n`LapTimeDelta[Lap_i] = LapTime[Lap_i] - LapTime[Lap_i-1]`\n\n`CumulativeDegradation[Lap_i] = CumulativeDegradation[Lap_i-1] + LapTimeDelta[Lap_i]`\n\nThere relations are also violated in the dataset.",
+          "content": "<p>You are absolutely right. The whole data for a race, year, driver is inaccurate. I was about to make a similar post. The <code>Stint, TyreLife and LapNumber</code> don't make sense when looked at holistically. I am not sure if this intended or not, but the actual dataset preserves the race integrity but the competition dataset does not.</p>\n<table>\n<thead>\n<tr>\n<th>id</th>\n<th>Driver</th>\n<th>Compound</th>\n<th>Race</th>\n<th>Year</th>\n<th>PitStop</th>\n<th>LapNumber</th>\n<th>Stint</th>\n<th>TyreLife</th>\n<th>Position</th>\n<th>LapTime (s)</th>\n<th>LapTime_Delta</th>\n<th>Cumulative_Degradation</th>\n<th>RaceProgress</th>\n<th>Position_Change</th>\n<th>PitNextLap</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>479201</td>\n<td>D109</td>\n<td>MEDIUM</td>\n<td>Dutch Grand Prix</td>\n<td>2022</td>\n<td>0</td>\n<td>1</td>\n<td>1</td>\n<td>1</td>\n<td>10</td>\n<td>82.923</td>\n<td>-36.941</td>\n<td>-72.894</td>\n<td>0.01388888889</td>\n<td>2</td>\n<td>TEST_DATA</td>\n</tr>\n<tr>\n<td>199160</td>\n<td>D109</td>\n<td>MEDIUM</td>\n<td>Dutch Grand Prix</td>\n<td>2022</td>\n<td>0</td>\n<td>4</td>\n<td>1</td>\n<td>4</td>\n<td>7</td>\n<td>77.148</td>\n<td>-37.165</td>\n<td>-162.898</td>\n<td>0.05555555556</td>\n<td>5</td>\n<td>0</td>\n</tr>\n<tr>\n<td>553328</td>\n<td>D109</td>\n<td>MEDIUM</td>\n<td>Dutch Grand Prix</td>\n<td>2022</td>\n<td>0</td>\n<td>8</td>\n<td>1</td>\n<td>10</td>\n<td>6</td>\n<td>76.837</td>\n<td>-6.687</td>\n<td>29.701</td>\n<td>0.1111111111</td>\n<td>1</td>\n<td>TEST_DATA</td>\n</tr>\n<tr>\n<td>441493</td>\n<td>D109</td>\n<td>MEDIUM</td>\n<td>Dutch Grand Prix</td>\n<td>2022</td>\n<td>0</td>\n<td>10</td>\n<td>1</td>\n<td>13</td>\n<td>3</td>\n<td>76.823</td>\n<td>-8.064</td>\n<td>13.088</td>\n<td>0.1388888889</td>\n<td>3</td>\n<td>TEST_DATA</td>\n</tr>\n<tr>\n<td>19848</td>\n<td>D109</td>\n<td>MEDIUM</td>\n<td>Dutch Grand Prix</td>\n<td>2022</td>\n<td>1</td>\n<td>14</td>\n<td>1</td>\n<td>14</td>\n<td>3</td>\n<td>76.6</td>\n<td>-7.853</td>\n<td>13.634</td>\n<td>0.1944444444</td>\n<td>-1</td>\n<td>0</td>\n</tr>\n<tr>\n<td>597043</td>\n<td>D109</td>\n<td>MEDIUM</td>\n<td>Dutch Grand Prix</td>\n<td>2022</td>\n<td>0</td>\n<td>16</td>\n<td>2</td>\n<td>6</td>\n<td>18</td>\n<td>77.677</td>\n<td>-37.569</td>\n<td>-53.835</td>\n<td>0.2222222222</td>\n<td>-2</td>\n<td>TEST_DATA</td>\n</tr>\n<tr>\n<td>298581</td>\n<td>D109</td>\n<td>MEDIUM</td>\n<td>Dutch Grand Prix</td>\n<td>2022</td>\n<td>0</td>\n<td>17</td>\n<td>2</td>\n<td>8</td>\n<td>15</td>\n<td>77.865</td>\n<td>-38.095</td>\n<td>-16.738</td>\n<td>0.2361111111</td>\n<td>-3</td>\n<td>1</td>\n</tr>\n<tr>\n<td>93988</td>\n<td>D109</td>\n<td>MEDIUM</td>\n<td>Dutch Grand Prix</td>\n<td>2022</td>\n<td>1</td>\n<td>18</td>\n<td>1</td>\n<td>18</td>\n<td>4</td>\n<td>75.842</td>\n<td>-3.982</td>\n<td>-59.27</td>\n<td>0.25</td>\n<td>-2</td>\n<td>0</td>\n</tr>\n<tr>\n<td>130223</td>\n<td>D109</td>\n<td>MEDIUM</td>\n<td>Dutch Grand Prix</td>\n<td>2022</td>\n<td>0</td>\n<td>19</td>\n<td>1</td>\n<td>19</td>\n<td>2</td>\n<td>76.629</td>\n<td>-8.433</td>\n<td>102.076</td>\n<td>0.2638888889</td>\n<td>6</td>\n<td>0</td>\n</tr>\n<tr>\n<td>48563</td>\n<td>D109</td>\n<td>MEDIUM</td>\n<td>Dutch Grand Prix</td>\n<td>2022</td>\n<td>1</td>\n<td>23</td>\n<td>2</td>\n<td>11</td>\n<td>16</td>\n<td>93.942</td>\n<td>7.161</td>\n<td>-4.135</td>\n<td>0.3285714286</td>\n<td>-7</td>\n<td>1</td>\n</tr>\n<tr>\n<td>286471</td>\n<td>D109</td>\n<td>SOFT</td>\n<td>Dutch Grand Prix</td>\n<td>2022</td>\n<td>0</td>\n<td>27</td>\n<td>3</td>\n<td>15</td>\n<td>10</td>\n<td>77.075</td>\n<td>-0.088</td>\n<td>-23.084</td>\n<td>0.3857142857</td>\n<td>0</td>\n<td>0</td>\n</tr>\n<tr>\n<td>459732</td>\n<td>D109</td>\n<td>MEDIUM</td>\n<td>Dutch Grand Prix</td>\n<td>2022</td>\n<td>0</td>\n<td>37</td>\n<td>2</td>\n<td>19</td>\n<td>6</td>\n<td>76.931</td>\n<td>-7.847</td>\n<td>21.567</td>\n<td>0.5138888889</td>\n<td>2</td>\n<td>TEST_DATA</td>\n</tr>\n<tr>\n<td>433693</td>\n<td>D109</td>\n<td>MEDIUM</td>\n<td>Dutch Grand Prix</td>\n<td>2022</td>\n<td>0</td>\n<td>40</td>\n<td>2</td>\n<td>24</td>\n<td>5</td>\n<td>76.905</td>\n<td>-9.649</td>\n<td>-141.588</td>\n<td>0.5555555556</td>\n<td>-3</td>\n<td>0</td>\n</tr>\n<tr>\n<td>54224</td>\n<td>D109</td>\n<td>SOFT</td>\n<td>Dutch Grand Prix</td>\n<td>2022</td>\n<td>1</td>\n<td>47</td>\n<td>4</td>\n<td>4</td>\n<td>14</td>\n<td>108.864</td>\n<td>-2.093</td>\n<td>-18.746</td>\n<td>0.6527777778</td>\n<td>-1</td>\n<td>0</td>\n</tr>\n<tr>\n<td>479371</td>\n<td>D109</td>\n<td>SOFT</td>\n<td>Dutch Grand Prix</td>\n<td>2022</td>\n<td>0</td>\n<td>54</td>\n<td>5</td>\n<td>5</td>\n<td>17</td>\n<td>75.912</td>\n<td>0.095</td>\n<td>-19.073</td>\n<td>0.75</td>\n<td>0</td>\n<td>TEST_DATA</td>\n</tr>\n<tr>\n<td>25621</td>\n<td>D109</td>\n<td>SOFT</td>\n<td>Dutch Grand Prix</td>\n<td>2022</td>\n<td>1</td>\n<td>56</td>\n<td>5</td>\n<td>7</td>\n<td>14</td>\n<td>83.967</td>\n<td>5.074</td>\n<td>-52.812</td>\n<td>0.7777777778</td>\n<td>2</td>\n<td>0</td>\n</tr>\n<tr>\n<td>454179</td>\n<td>D109</td>\n<td>SOFT</td>\n<td>Dutch Grand Prix</td>\n<td>2022</td>\n<td>1</td>\n<td>59</td>\n<td>4</td>\n<td>6</td>\n<td>9</td>\n<td>74.261</td>\n<td>-7.543</td>\n<td>-17.438</td>\n<td>0.8194444444</td>\n<td>-7</td>\n<td>TEST_DATA</td>\n</tr>\n<tr>\n<td>272915</td>\n<td>D109</td>\n<td>SOFT</td>\n<td>Dutch Grand Prix</td>\n<td>2022</td>\n<td>0</td>\n<td>69</td>\n<td>4</td>\n<td>20</td>\n<td>11</td>\n<td>75.816</td>\n<td>-0.083</td>\n<td>-43.828</td>\n<td>0.9583333333</td>\n<td>3</td>\n<td>0</td>\n</tr>\n</tbody>\n</table>\n<p>Also many trivial relations of columns are being violated.For eg:</p>\n<p><code>LapTimeDelta[Lap_i] = LapTime[Lap_i] - LapTime[Lap_i-1]</code></p>\n<p><code>CumulativeDegradation[Lap_i] = CumulativeDegradation[Lap_i-1] + LapTimeDelta[Lap_i]</code></p>\n<p>There relations are also violated in the dataset.</p>",
+          "parent": {},
+          "author": {
+            "displayName": "Huzaifa Mankda",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1452732-gp.jpg",
+            "url": "/huzaifa242",
+            "tier": "CONTRIBUTOR",
+            "id": 1452732,
+            "progressionOptOut": false
+          },
+          "authorType": "COMMENT",
+          "votes": {
+            "canUpvote": true
+          },
+          "kernelVersion": 0,
+          "competitionRanking": 44,
+          "feedbackTrackingData": {},
+          "isThankYou": false,
+          "teamUpInfo": {
+            "teamLeader": {
+              "displayName": "Huzaifa Mankda",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/1452732-gp.jpg",
+              "url": "/huzaifa242",
+              "userName": "huzaifa242",
+              "tier": "CONTRIBUTOR",
+              "id": 1452732,
+              "profileUrl": "/huzaifa242",
+              "performanceTier": "CONTRIBUTOR",
+              "userId": 1452732,
+              "progressionOptOut": false
+            },
+            "intro": ""
+          }
+        },
+        {
+          "id": 3451684,
+          "postDate": "2026-05-01T18:34:07.253Z",
+          "rawMarkdown": "",
+          "parent": {},
+          "author": {
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+            "url": "/"
+          },
+          "authorType": "COMMENT",
+          "votes": {},
+          "canDelete": true,
+          "isUserAuthor": true,
+          "isDeleted": true,
+          "kernelVersion": 0,
+          "feedbackTrackingData": {},
+          "isThankYou": false
+        }
+      ]
+    },
+    {
+      "topic": {
+        "authorUser": {
+          "displayName": "Aryan Kaisth",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/32242681-kg.jpeg?t=2026-04-01-12-14-03",
+          "url": "/aryankaisth",
+          "tier": "EXPERT",
+          "id": 32242681,
+          "progressionOptOut": false
+        },
+        "authorType": "TOPIC",
+        "commentCount": 2,
+        "firstForumMessageId": 3452433,
+        "id": 696667,
+        "lastCommenterType": "COMMENT",
+        "lastCommenterName": "Mohammed Majeed",
+        "lastCommenterUrl": "/competitions/playground-series-s6e5/discussion/696667#3452605",
+        "lastCommentPostDate": "2026-05-03T21:15:14.490Z",
+        "parentName": "Predicting F1 Pit Stops",
+        "parentUrl": "/competitions/playground-series-s6e5/discussion",
+        "postDate": "2026-05-03T11:43:14.479962300Z",
+        "tags": [
+          {
+            "id": 17174,
+            "name": "mathematics",
+            "listingUrl": "/tags/mathematics",
+            "displayName": "Mathematics"
+          },
+          {
+            "id": 16070,
+            "name": "model explainability",
+            "listingUrl": "/tags/model-explainability",
+            "displayName": "Model Explainability"
+          },
+          {
+            "id": 14211,
+            "name": "adversarial learning",
+            "listingUrl": "/tags/adversarial-learning",
+            "displayName": "Adversarial Learning"
+          },
+          {
+            "id": 13103,
+            "name": "intermediate",
+            "listingUrl": "/tags/intermediate",
+            "displayName": "Intermediate"
+          }
+        ],
+        "title": "Is there a Covariate shift?",
+        "topicUrl": "/competitions/playground-series-s6e5/discussion/696667",
+        "votes": 1,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Aryan Kaisth",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/32242681-kg.jpeg?t=2026-04-01-12-14-03",
+            "url": "/aryankaisth",
+            "userName": "aryankaisth",
+            "tier": "EXPERT",
+            "id": 32242681,
+            "profileUrl": "/aryankaisth",
+            "performanceTier": "EXPERT",
+            "userId": 32242681,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      "firstMessage": {
+        "id": 3452433,
+        "postDate": "2026-05-03T11:43:14.480Z",
+        "rawMarkdown": "I wanted to check whether there’s any internal covariate shift between the training and test datasets, so I explored a few different approaches. I ran adversarial validation, looked at second-order covariate shift using correlations between train and test features, and also applied statistical tests like the Kolmogorov–Smirnov test and the Chi-square test.\n\nThe adversarial validation gave me a ROC-AUC of 0.498, which is very close to 0.5. That suggests the model is essentially unable to distinguish between train and test samples. Based on this, I’m fairly confident that the feature distributions are well aligned — in other words, Ptr(X) = Pte(X)) and Given this, it’s reasonable to assume that the conditional relationship between features and target should also hold, i.e., Ptr(Y|X) = Pte(Y|X)). So overall, the local validation scores should be reliable and representative of the test performance.\n\nI’ve included the full process and details in the link below\n\nhttps://www.kaggle.com/code/aryankaisth/s6e5-the-complete-eda-100",
+        "content": "<p>I wanted to check whether there’s any internal covariate shift between the training and test datasets, so I explored a few different approaches. I ran adversarial validation, looked at second-order covariate shift using correlations between train and test features, and also applied statistical tests like the Kolmogorov–Smirnov test and the Chi-square test.</p>\n<p>The adversarial validation gave me a ROC-AUC of 0.498, which is very close to 0.5. That suggests the model is essentially unable to distinguish between train and test samples. Based on this, I’m fairly confident that the feature distributions are well aligned — in other words, Ptr(X) = Pte(X)) and Given this, it’s reasonable to assume that the conditional relationship between features and target should also hold, i.e., Ptr(Y|X) = Pte(Y|X)). So overall, the local validation scores should be reliable and representative of the test performance.</p>\n<p>I’ve included the full process and details in the link below</p>\n<p><a href=\"https://www.kaggle.com/code/aryankaisth/s6e5-the-complete-eda-100\" target=\"_blank\">https://www.kaggle.com/code/aryankaisth/s6e5-the-complete-eda-100</a></p>",
+        "parent": {
+          "url": "#"
+        },
+        "author": {
+          "displayName": "Aryan Kaisth",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/32242681-kg.jpeg?t=2026-04-01-12-14-03",
+          "url": "/aryankaisth",
+          "tier": "EXPERT",
+          "id": 32242681,
+          "progressionOptOut": false
+        },
+        "authorType": "TOPIC",
+        "votes": {
+          "totalVotes": 1,
+          "canUpvote": true,
+          "totalUpvotes": 2
+        },
+        "kernelVersion": 0,
+        "feedbackTrackingData": {},
+        "reactions": [
+          {
+            "emoji": "THANK_YOU",
+            "featuredUserNames": [
+              "sjain600"
+            ],
+            "userCount": 1
+          }
+        ],
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Aryan Kaisth",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/32242681-kg.jpeg?t=2026-04-01-12-14-03",
+            "url": "/aryankaisth",
+            "userName": "aryankaisth",
+            "tier": "EXPERT",
+            "id": 32242681,
+            "profileUrl": "/aryankaisth",
+            "performanceTier": "EXPERT",
+            "userId": 32242681,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      "comments": [
+        {
+          "id": 3452605,
+          "postDate": "2026-05-03T21:15:14.490Z",
+          "rawMarkdown": "Your conclusion that validation is reliable based on adversarial validation (AUC ≈ 0.498) is not logically sufficient.\nAdversarial validation only tests whether\nP train (X)≈P test (X)\nIt does not evaluate the relationship between features and target.\nTherefore, even if the model cannot distinguish train vs test:\nIt only implies no detectable covariate shift\nIt does not imply\nP train (Y∣X)=P test (Y∣X)\nIn synthetic datasets (like this competition), the data generation process can:\nPreserve feature distributions\nWhile altering the underlying target function\nAs a result: The mapping from features → target can differ between train and test\nLocal CV can look stable while leaderboard performance degrades",
+          "content": "<p>Your conclusion that validation is reliable based on adversarial validation (AUC ≈ 0.498) is not logically sufficient.\nAdversarial validation only tests whether\nP train (X)≈P test (X)\nIt does not evaluate the relationship between features and target.\nTherefore, even if the model cannot distinguish train vs test:\nIt only implies no detectable covariate shift\nIt does not imply\nP train (Y∣X)=P test (Y∣X)\nIn synthetic datasets (like this competition), the data generation process can:\nPreserve feature distributions\nWhile altering the underlying target function\nAs a result: The mapping from features → target can differ between train and test\nLocal CV can look stable while leaderboard performance degrades</p>",
+          "parent": {},
+          "author": {
+            "displayName": "Mohammed Majeed",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+            "url": "/mojjeed",
+            "tier": "CONTRIBUTOR",
+            "id": 21918788,
+            "progressionOptOut": false
+          },
+          "authorType": "COMMENT",
+          "votes": {
+            "canUpvote": true
+          },
+          "kernelVersion": 0,
+          "competitionRanking": 90,
+          "feedbackTrackingData": {},
+          "isThankYou": false,
+          "teamUpInfo": {
+            "teamLeader": {
+              "displayName": "Mohammed Majeed",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+              "url": "/mojjeed",
+              "userName": "mojjeed",
+              "tier": "CONTRIBUTOR",
+              "id": 21918788,
+              "profileUrl": "/mojjeed",
+              "performanceTier": "CONTRIBUTOR",
+              "userId": 21918788,
+              "progressionOptOut": false
+            },
+            "intro": ""
+          }
+        },
+        {
+          "id": 3452567,
+          "postDate": "2026-05-03T19:07:58.890Z",
+          "rawMarkdown": "very concise, to the point and educative summary. thank you.\n",
+          "content": "<p>very concise, to the point and educative summary. thank you.</p>",
+          "parent": {},
+          "author": {
+            "displayName": "Safak Atakan Celik",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+            "url": "/safakatakancelik",
+            "tier": "CONTRIBUTOR",
+            "id": 14510978,
+            "progressionOptOut": false
+          },
+          "authorType": "COMMENT",
+          "votes": {
+            "canUpvote": true
+          },
+          "kernelVersion": 0,
+          "feedbackTrackingData": {},
+          "isThankYou": false,
+          "teamUpInfo": {
+            "teamLeader": {
+              "displayName": "Safak Atakan Celik",
+              "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+              "url": "/safakatakancelik",
+              "userName": "safakatakancelik",
+              "tier": "CONTRIBUTOR",
+              "id": 14510978,
+              "profileUrl": "/safakatakancelik",
+              "performanceTier": "CONTRIBUTOR",
+              "userId": 14510978,
+              "progressionOptOut": false
+            },
+            "intro": ""
+          }
+        }
+      ]
+    },
+    {
+      "topic": {
+        "authorUser": {
+          "displayName": "Caio Julio",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+          "url": "/caiojulio",
+          "tier": "CONTRIBUTOR",
+          "id": 24637603,
+          "progressionOptOut": false
+        },
+        "authorType": "TOPIC",
+        "firstForumMessageId": 3452654,
+        "id": 696769,
+        "lastCommenterType": "TOPIC",
+        "lastCommenterName": "Caio Julio",
+        "lastCommenterUrl": "/competitions/playground-series-s6e5/discussion/696769#3452654",
+        "lastCommentPostDate": "2026-05-04T03:43:03.376666700Z",
+        "parentName": "Predicting F1 Pit Stops",
+        "parentUrl": "/competitions/playground-series-s6e5/discussion",
+        "postDate": "2026-05-04T03:43:03.376197600Z",
+        "title": "Is this distribution correct, or am I missing something? (Yearly inconsistency in PitNextLap)",
+        "topicUrl": "/competitions/playground-series-s6e5/discussion/696769",
+        "votes": 1,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Caio Julio",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+            "url": "/caiojulio",
+            "userName": "caiojulio",
+            "tier": "CONTRIBUTOR",
+            "id": 24637603,
+            "profileUrl": "/caiojulio",
+            "performanceTier": "CONTRIBUTOR",
+            "userId": 24637603,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      "firstMessage": {
+        "id": 3452654,
+        "postDate": "2026-05-04T03:43:03.377Z",
+        "rawMarkdown": "Hello everyone,\n\nEnglish is not my first language, so I appreciate your patience. I am new to this field, but while performing some EDA on the dataset, I noticed a possible inconsistency in the target variable 'PitNextLap' across different years.\n\nIt seems that the class distribution for 2023 is very different compared to the other years (2022, 2024, and 2025). In 2023, the proportion of pit stops is around 1%, while in other years it jumps to nearly 30%.\n\nI used the following code to check this:\n\n```\nproportion = pd.crosstab(data['Year'], data['PitNextLap'], normalize='index') * 100\n\nprint(\"Proportion of the Pit Stops per Year (%):\")\nprint(proportion)\n```\nThis code produces the following output:\n\n```\nProportion of the Pit Stops per Year (%):\nPitNextLap        0.0        1.0\nYear                            \n2022        73.349480  26.650520\n2023        99.039274   0.960726\n2024        70.468098  29.531902\n2025        71.561134  28.438866\n```\n\ni also wrote another complementary code to see if in the year of 2023 has fewer race, or laps\n\n```\n# Years\nyear_unique = np.sort(data['Year'].unique())\n\n# Rows with PitStop = 0\nPitNextLap_false_per_year = data[data['PitNextLap'] == 0].groupby('Year')['PitNextLap'].count()\n\n# Rows with PitStop = 1\nPitNextLap_true_per_year = data[data['PitNextLap'] == 1].groupby('Year')['PitNextLap'].count()\n\n# Race per Year\nRace_per_year = data.groupby('Year')['Race'].nunique()\n\n# Getting laps per race manually\nlaps_per_race22 = data[data['Year'] == 2022].groupby(['Year','Race'])['LapNumber'].nunique().sum()\nlaps_por_race23 = data[data['Year'] == 2023].groupby(['Year','Race'])['LapNumber'].nunique().sum()\nlaps_por_race24 = data[data['Year'] == 2024].groupby(['Year','Race'])['LapNumber'].nunique().sum()\nlaps_por_race25 = data[data['Year'] == 2025].groupby(['Year','Race'])['LapNumber'].nunique().sum()\n\nlaps_per_year = pd.Series(\n    [laps_per_race22, \n     laps_por_race23, \n     laps_por_race24, \n     laps_por_race25], \n    index = [2022, 2023, 2024, 2025])\n\n\ndf_exp = pd.DataFrame({\n    #'Year': year_unique,\n    'PitNextLap False': PitNextLap_false_per_year,\n    'PitNextLap True': PitNextLap_true_per_year,\n    'Race': Race_per_year,\n    'Total Laps': laps_per_year\n    \n    })\n\ndf_exp.head()\n```\n\nThe output shows that race and laps per year are relatively stable:\n\n| Year | PitNextLap False | PitNextLap True | Race | Total Laps |\n|------|------------------|-----------------|------|------------|\n| 2022 | 60872            | 22117           | 26   | 1454       |\n| 2023 | 134839           | 1308            | 26   | 1480       |\n| 2024 | 89572            | 37538           | 26   | 1647       |\n| 2025 | 66476            | 26418           | 26   | 1601       |\n\nSince a pit stop usually happens only a few times per race, the ~30% rate feels like an anomaly compared to the ~1% in 2023. Am i missing something or is there a specific reason for this gap?\n\nI would love to hear your thoughts!",
+        "content": "<p>Hello everyone,</p>\n<p>English is not my first language, so I appreciate your patience. I am new to this field, but while performing some EDA on the dataset, I noticed a possible inconsistency in the target variable 'PitNextLap' across different years.</p>\n<p>It seems that the class distribution for 2023 is very different compared to the other years (2022, 2024, and 2025). In 2023, the proportion of pit stops is around 1%, while in other years it jumps to nearly 30%.</p>\n<p>I used the following code to check this:</p>\n<pre><code>proportion = pd.crosstab(data['Year'], data['PitNextLap'], normalize='index') * 100\n\nprint(\"Proportion of the Pit Stops per Year (%):\")\nprint(proportion)\n</code></pre>\n<p>This code produces the following output:</p>\n<pre><code>Proportion of the Pit Stops per Year (%):\nPitNextLap        0.0        1.0\nYear                            \n2022        73.349480  26.650520\n2023        99.039274   0.960726\n2024        70.468098  29.531902\n2025        71.561134  28.438866\n</code></pre>\n<p>i also wrote another complementary code to see if in the year of 2023 has fewer race, or laps</p>\n<pre><code># Years\nyear_unique = np.sort(data['Year'].unique())\n\n# Rows with PitStop = 0\nPitNextLap_false_per_year = data[data['PitNextLap'] == 0].groupby('Year')['PitNextLap'].count()\n\n# Rows with PitStop = 1\nPitNextLap_true_per_year = data[data['PitNextLap'] == 1].groupby('Year')['PitNextLap'].count()\n\n# Race per Year\nRace_per_year = data.groupby('Year')['Race'].nunique()\n\n# Getting laps per race manually\nlaps_per_race22 = data[data['Year'] == 2022].groupby(['Year','Race'])['LapNumber'].nunique().sum()\nlaps_por_race23 = data[data['Year'] == 2023].groupby(['Year','Race'])['LapNumber'].nunique().sum()\nlaps_por_race24 = data[data['Year'] == 2024].groupby(['Year','Race'])['LapNumber'].nunique().sum()\nlaps_por_race25 = data[data['Year'] == 2025].groupby(['Year','Race'])['LapNumber'].nunique().sum()\n\nlaps_per_year = pd.Series(\n    [laps_per_race22, \n     laps_por_race23, \n     laps_por_race24, \n     laps_por_race25], \n    index = [2022, 2023, 2024, 2025])\n\n\ndf_exp = pd.DataFrame({\n    #'Year': year_unique,\n    'PitNextLap False': PitNextLap_false_per_year,\n    'PitNextLap True': PitNextLap_true_per_year,\n    'Race': Race_per_year,\n    'Total Laps': laps_per_year\n\n    })\n\ndf_exp.head()\n</code></pre>\n<p>The output shows that race and laps per year are relatively stable:</p>\n<table>\n<thead>\n<tr>\n<th>Year</th>\n<th>PitNextLap False</th>\n<th>PitNextLap True</th>\n<th>Race</th>\n<th>Total Laps</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>2022</td>\n<td>60872</td>\n<td>22117</td>\n<td>26</td>\n<td>1454</td>\n</tr>\n<tr>\n<td>2023</td>\n<td>134839</td>\n<td>1308</td>\n<td>26</td>\n<td>1480</td>\n</tr>\n<tr>\n<td>2024</td>\n<td>89572</td>\n<td>37538</td>\n<td>26</td>\n<td>1647</td>\n</tr>\n<tr>\n<td>2025</td>\n<td>66476</td>\n<td>26418</td>\n<td>26</td>\n<td>1601</td>\n</tr>\n</tbody>\n</table>\n<p>Since a pit stop usually happens only a few times per race, the ~30% rate feels like an anomaly compared to the ~1% in 2023. Am i missing something or is there a specific reason for this gap?</p>\n<p>I would love to hear your thoughts!</p>",
+        "parent": {
+          "url": "#"
+        },
+        "author": {
+          "displayName": "Caio Julio",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+          "url": "/caiojulio",
+          "tier": "CONTRIBUTOR",
+          "id": 24637603,
+          "progressionOptOut": false
+        },
+        "authorType": "TOPIC",
+        "votes": {
+          "totalVotes": 1,
+          "canUpvote": true,
+          "totalUpvotes": 1
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 464,
+        "feedbackTrackingData": {},
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Caio Julio",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png",
+            "url": "/caiojulio",
+            "userName": "caiojulio",
+            "tier": "CONTRIBUTOR",
+            "id": 24637603,
+            "profileUrl": "/caiojulio",
+            "performanceTier": "CONTRIBUTOR",
+            "userId": 24637603,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      "comments": []
+    },
+    {
+      "topic": {
+        "authorUser": {
+          "displayName": "Markus.JM",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/2638079-kg.jpg?t=2024-10-09-18-17-44",
+          "url": "/maiernator",
+          "tier": "EXPERT",
+          "id": 2638079,
+          "progressionOptOut": false
+        },
+        "authorType": "TOPIC",
+        "firstForumMessageId": 3451777,
+        "id": 696347,
+        "lastCommenterType": "TOPIC",
+        "lastCommenterName": "Markus.JM",
+        "lastCommenterUrl": "/competitions/playground-series-s6e5/discussion/696347#3451777",
+        "lastCommentPostDate": "2026-05-01T21:14:25.063333300Z",
+        "parentName": "Predicting F1 Pit Stops",
+        "parentUrl": "/competitions/playground-series-s6e5/discussion",
+        "postDate": "2026-05-01T21:14:25.064662400Z",
+        "tags": [
+          {
+            "id": 13417,
+            "name": "decision tree",
+            "listingUrl": "/tags/decision-tree",
+            "displayName": "Decision Tree"
+          }
+        ],
+        "title": "CT boost for binary classification. ",
+        "topicUrl": "/competitions/playground-series-s6e5/discussion/696347",
+        "votes": 4,
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Markus.JM",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/2638079-kg.jpg?t=2024-10-09-18-17-44",
+            "url": "/maiernator",
+            "userName": "maiernator",
+            "tier": "EXPERT",
+            "id": 2638079,
+            "profileUrl": "/maiernator",
+            "performanceTier": "EXPERT",
+            "userId": 2638079,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      "firstMessage": {
+        "id": 3451777,
+        "postDate": "2026-05-01T21:14:25.063Z",
+        "rawMarkdown": "As stated here:\nhttps://www.kaggle.com/discussions/general/696346\n\nIam happy to announce iam using a brand new library i build the last month which relies on conditional tree split criteria instead of the common split criterias we are familiar with in xgboost or catboost.\nYou can take a look at my current notebook for this challenge\nhttps://www.kaggle.com/code/maiernator/ps-s6e5-ctboost-gpu-starter\nBe aware its takes a long time to run, you can lower the folds to 3 and it talks less than 2 hours.\nCtboost also for CPU inference only, contributions for further improvements, issues etc are welcome at.\nhttps://github.com/captnmarkus/ctboost\nhttps://pypi.org/project/ctboost/\n\nHave fun playing around with it in this comp. \nAlso keep in mind it will perform different on real datasets, as the current data diviates quite a bit from realistic data, reminds me of the car engine data we had last year with the same issues",
+        "content": "<p>As stated here:\n<a href=\"https://www.kaggle.com/discussions/general/696346\" target=\"_blank\">https://www.kaggle.com/discussions/general/696346</a></p>\n<p>Iam happy to announce iam using a brand new library i build the last month which relies on conditional tree split criteria instead of the common split criterias we are familiar with in xgboost or catboost.\nYou can take a look at my current notebook for this challenge\n<a href=\"https://www.kaggle.com/code/maiernator/ps-s6e5-ctboost-gpu-starter\" target=\"_blank\">https://www.kaggle.com/code/maiernator/ps-s6e5-ctboost-gpu-starter</a>\nBe aware its takes a long time to run, you can lower the folds to 3 and it talks less than 2 hours.\nCtboost also for CPU inference only, contributions for further improvements, issues etc are welcome at.\n<a href=\"https://github.com/captnmarkus/ctboost\" target=\"_blank\">https://github.com/captnmarkus/ctboost</a>\n<a href=\"https://pypi.org/project/ctboost/\" target=\"_blank\">https://pypi.org/project/ctboost/</a></p>\n<p>Have fun playing around with it in this comp. \nAlso keep in mind it will perform different on real datasets, as the current data diviates quite a bit from realistic data, reminds me of the car engine data we had last year with the same issues</p>",
+        "parent": {
+          "url": "#"
+        },
+        "author": {
+          "displayName": "Markus.JM",
+          "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/2638079-kg.jpg?t=2024-10-09-18-17-44",
+          "url": "/maiernator",
+          "tier": "EXPERT",
+          "id": 2638079,
+          "progressionOptOut": false
+        },
+        "authorType": "TOPIC",
+        "votes": {
+          "totalVotes": 4,
+          "canUpvote": true,
+          "totalUpvotes": 4
+        },
+        "kernelVersion": 0,
+        "competitionRanking": 202,
+        "feedbackTrackingData": {},
+        "teamUpInfo": {
+          "teamLeader": {
+            "displayName": "Markus.JM",
+            "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/2638079-kg.jpg?t=2024-10-09-18-17-44",
+            "url": "/maiernator",
+            "userName": "maiernator",
+            "tier": "EXPERT",
+            "id": 2638079,
+            "profileUrl": "/maiernator",
+            "performanceTier": "EXPERT",
+            "userId": 2638079,
+            "progressionOptOut": false
+          },
+          "intro": ""
+        }
+      },
+      "comments": []
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "chinnaphatkhun/smartphone-addiction-resnet-fusion-v15",
+  "title": "Smartphone Addiction ResNet Fusion V15",
+  "code_file": "resnet_fusion_v15.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "machine_shape": "NvidiaTeslaT4",
+  "enable_internet": "false",
+  "competition_sources": [
+    "playground-series-s6e8"
+  ],
+  "dataset_sources": [
+    "najiama/predicting-smartphone-addiction-oof-submission-csv",
+    "szymonkapiski/s6e8-50-weakest-oof-models",
+    "raykkretzschmar/s6e8-fm-lattice-blend-members",
+    "szymonkapiski/s6e8-oof-library-47-models",
+    "adarsh1077/s6e8-adarsh-oof-library",
+    "dariushafshar/s6e8-golem-oof-library",
+    "boltuzamaki/s6e8-oof-prediction-library",
+    "hboyang/s6e8-150-fusion-local-members",
+    "hboyang/s6e8-catstrall-member"
+  ],
+  "kernel_sources": [
+    "chinnaphatkhun/smartphone-addiction-autoencoder-resnet-v12"
+  ]
+}

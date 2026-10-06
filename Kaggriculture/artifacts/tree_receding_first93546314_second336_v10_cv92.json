@@ -1,0 +1,140 @@
+{
+  "model": "robust-q-decision-tree",
+  "branch_step": 336,
+  "feature_steps": [
+    240,
+    336
+  ],
+  "feature_encoder": "retriever",
+  "action_ids": [
+    93816256,
+    93518562,
+    93520335,
+    93501610,
+    93724855,
+    93546314,
+    93734648
+  ],
+  "config": {
+    "max_depth": 5,
+    "min_leaf": 2,
+    "margin_weight": 0.05,
+    "risk_coefficient": 2.0
+  },
+  "tree": {
+    "feature_index": 8,
+    "threshold": 0.0315,
+    "left": {
+      "feature_index": 5,
+      "threshold": 0.0032849999999999997,
+      "left": {
+        "feature_index": 280,
+        "threshold": 0.0727175,
+        "left": {
+          "action_index": 6
+        },
+        "right": {
+          "feature_index": 3,
+          "threshold": 0.007935000000000001,
+          "left": {
+            "action_index": 5
+          },
+          "right": {
+            "feature_index": 290,
+            "threshold": 0.11725,
+            "left": {
+              "action_index": 5
+            },
+            "right": {
+              "action_index": 3
+            }
+          }
+        }
+      },
+      "right": {
+        "feature_index": 42,
+        "threshold": 1.1833333333333333,
+        "left": {
+          "action_index": 5
+        },
+        "right": {
+          "action_index": 6
+        }
+      }
+    },
+    "right": {
+      "feature_index": 5,
+      "threshold": -0.0005875,
+      "left": {
+        "feature_index": 7,
+        "threshold": 0.0185,
+        "left": {
+          "action_index": 5
+        },
+        "right": {
+          "action_index": 1
+        }
+      },
+      "right": {
+        "action_index": 1
+      }
+    }
+  },
+  "training_context_episode_ids": [
+    93480183,
+    93481053,
+    93481927,
+    93482814,
+    93483706,
+    93484593,
+    93485494,
+    93486381,
+    93487265,
+    93488158,
+    93488275,
+    93489034,
+    93489928,
+    93501610,
+    93502507,
+    93503406,
+    93504316,
+    93505205,
+    93506095,
+    93506163,
+    93506985
+  ],
+  "validation_context_episode_ids": [
+    93494430,
+    93495340,
+    93496227,
+    93497123,
+    93498033,
+    93498936,
+    93499826,
+    93500721
+  ],
+  "validation": {
+    "feature_steps": [
+      240,
+      336
+    ],
+    "config": {
+      "max_depth": 5,
+      "min_leaf": 2,
+      "margin_weight": 0.05,
+      "risk_coefficient": 2.0
+    },
+    "games": 8,
+    "wins": 6,
+    "draws": 0,
+    "losses": 2,
+    "win_rate": 0.75,
+    "mean_margin": 1742.75,
+    "worst_margin": -16675.0,
+    "cvar10_margin": -16675.0,
+    "actions": {
+      "93518562": 5,
+      "93546314": 3
+    }
+  }
+}

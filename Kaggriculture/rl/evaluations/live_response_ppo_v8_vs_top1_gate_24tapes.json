@@ -1,0 +1,99 @@
+{
+  "top1": {
+    "team_name": "カワシギ",
+    "submission_id": 55540317,
+    "public_score": 3218.3,
+    "submission_date": "2026-08-16T01:30:54.743Z"
+  },
+  "dataset": {
+    "episodes": 24,
+    "manifests": [
+      "replays/top1_holdout_20260817/manifest.json",
+      "replays/top1_holdout2_20260817/manifest.json",
+      "replays/top1_holdout3_20260817/manifest.json"
+    ],
+    "v8_reports": [
+      "rl/evaluations/live_response_ppo_v8_vs_top1_holdout.json",
+      "rl/evaluations/live_response_ppo_v8_vs_top1_holdout2.json",
+      "rl/evaluations/live_response_ppo_v8_vs_top1_holdout3.json"
+    ],
+    "v1_reports": [
+      "rl/evaluations/profile_ppo_v1_vs_top1_holdout.json",
+      "rl/evaluations/profile_ppo_v1_vs_top1_holdout2.json",
+      "rl/evaluations/profile_ppo_v1_vs_top1_holdout3.json"
+    ],
+    "original_replays_exact": true
+  },
+  "v8": {
+    "wins": 0,
+    "draws": 0,
+    "losses": 24,
+    "money": {
+      "mean": 34540.791666666664,
+      "median": 30959.5,
+      "p10": 21949.9,
+      "cvar10": 19851.666666666668,
+      "worst": 17446.0,
+      "best": 54349.0
+    },
+    "margin": {
+      "mean": -86796.375,
+      "median": -83606.5,
+      "p10": -112096.1,
+      "cvar10": -116180.33333333333,
+      "worst": -117953.0,
+      "best": -43747.0
+    }
+  },
+  "v1": {
+    "wins": 0,
+    "draws": 0,
+    "losses": 24,
+    "money": {
+      "mean": 33076.166666666664,
+      "median": 30469.0,
+      "p10": 18805.2,
+      "cvar10": 18370.0,
+      "worst": 18262.0,
+      "best": 47826.0
+    },
+    "margin": {
+      "mean": -95152.58333333333,
+      "median": -98113.0,
+      "p10": -119335.2,
+      "cvar10": -120920.66666666667,
+      "worst": -122231.0,
+      "best": -38097.0
+    }
+  },
+  "paired_v8_minus_v1": {
+    "money": {
+      "better": 13,
+      "equal": 0,
+      "worse": 11,
+      "mean": 1464.625,
+      "median": 928.5,
+      "p10": -10994.9,
+      "cvar10": -15996.0,
+      "worst": -19353.0,
+      "best": 29384.0
+    },
+    "margin": {
+      "better": 16,
+      "equal": 0,
+      "worse": 8,
+      "mean": 8356.208333333334,
+      "median": 8420.0,
+      "p10": -17489.7,
+      "cvar10": -21954.0,
+      "worst": -27540.0,
+      "best": 59091.0
+    }
+  },
+  "gate": {
+    "passed": false,
+    "promotion": false,
+    "reason": "V8 improves average money and margin versus v1 on the recorded tapes, but wins 0/24 against Top1, regresses candidate money on 11/24 episodes, and has a lower absolute worst-money result than v1."
+  },
+  "limitation": "Top1 actions are open-loop recorded tapes, not a live policy. Counterfactual candidate actions change state and can make later Top1 actions stale or illegal, so this is a diagnostic gate rather than a Kaggle-facing promotion result."
+}

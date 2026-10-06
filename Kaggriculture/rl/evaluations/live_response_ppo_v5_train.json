@@ -1,0 +1,140 @@
+{
+  "base_seed": 370000,
+  "bc": {
+    "accuracy": 0.8333333333333334,
+    "cross_entropy": 0.2287461959041627
+  },
+  "episodes": 216,
+  "history": [
+    {
+      "actions": {
+        "melon10_cow8_w8_b16_l2": 12,
+        "melon6_cow5_w7_b10": 10,
+        "melon6_cow6_w6_b18": 14
+      },
+      "episodes": 36,
+      "iteration": 0,
+      "mean_margin": 28615.555555555555,
+      "mean_money": 55877.25,
+      "mean_reward": 3.979100555555556,
+      "update": {
+        "entropy": 0.37039305159856706,
+        "mean_probability_of_sampled_action": 0.783298582760706,
+        "teacher_accuracy": 0.8333333333333334,
+        "value_mse": 16.51662709358613
+      },
+      "wins": 36,
+      "worst_margin": 1843.0,
+      "worst_money": 23863.0
+    },
+    {
+      "actions": {
+        "melon10_cow8_w8_b16_l2": 12,
+        "melon6_cow5_w7_b10": 13,
+        "melon6_cow6_w6_b18": 11
+      },
+      "episodes": 36,
+      "iteration": 1,
+      "mean_margin": 18881.88888888889,
+      "mean_money": 44462.88888888889,
+      "mean_reward": 2.7558022222222225,
+      "update": {
+        "entropy": 0.36139174246793637,
+        "mean_probability_of_sampled_action": 0.7821027525208196,
+        "teacher_accuracy": 0.8333333333333334,
+        "value_mse": 8.206158635247295
+      },
+      "wins": 35,
+      "worst_margin": -3243.0,
+      "worst_money": 21234.0
+    },
+    {
+      "actions": {
+        "melon10_cow8_w8_b16_l2": 12,
+        "melon6_cow5_w7_b10": 12,
+        "melon6_cow6_w6_b18": 12
+      },
+      "episodes": 36,
+      "iteration": 2,
+      "mean_margin": 23312.083333333332,
+      "mean_money": 47289.916666666664,
+      "mean_reward": 3.2692372222222223,
+      "update": {
+        "entropy": 0.36095892255681566,
+        "mean_probability_of_sampled_action": 0.7866916939853541,
+        "teacher_accuracy": 0.8333333333333334,
+        "value_mse": 10.395438289835896
+      },
+      "wins": 36,
+      "worst_margin": 473.0,
+      "worst_money": 20745.0
+    },
+    {
+      "actions": {
+        "melon10_cow8_w8_b16_l2": 12,
+        "melon6_cow5_w7_b10": 11,
+        "melon6_cow6_w6_b18": 13
+      },
+      "episodes": 36,
+      "iteration": 3,
+      "mean_margin": 22567.555555555555,
+      "mean_money": 48207.944444444445,
+      "mean_reward": 3.2156811111111114,
+      "update": {
+        "entropy": 0.3666547606588296,
+        "mean_probability_of_sampled_action": 0.8231608580332941,
+        "teacher_accuracy": 0.8333333333333334,
+        "value_mse": 7.757705564275783
+      },
+      "wins": 36,
+      "worst_margin": 907.0,
+      "worst_money": 20825.0
+    },
+    {
+      "actions": {
+        "melon10_cow8_w8_b16_l2": 13,
+        "melon6_cow5_w7_b10": 10,
+        "melon6_cow6_w6_b18": 13
+      },
+      "episodes": 36,
+      "iteration": 4,
+      "mean_margin": 20983.25,
+      "mean_money": 45902.5,
+      "mean_reward": 2.9197611111111113,
+      "update": {
+        "entropy": 0.3732213554822008,
+        "mean_probability_of_sampled_action": 0.7661018866870928,
+        "teacher_accuracy": 1.0,
+        "value_mse": 8.089063567390568
+      },
+      "wins": 31,
+      "worst_margin": -4169.0,
+      "worst_money": 19313.0
+    },
+    {
+      "actions": {
+        "melon10_cow8_w8_b16_l2": 12,
+        "melon6_cow5_w7_b10": 15,
+        "melon6_cow6_w6_b18": 9
+      },
+      "episodes": 36,
+      "iteration": 5,
+      "mean_margin": 22889.63888888889,
+      "mean_money": 48230.86111111111,
+      "mean_reward": 3.2300561111111112,
+      "update": {
+        "entropy": 0.36935589066455826,
+        "mean_probability_of_sampled_action": 0.7649997038997114,
+        "teacher_accuracy": 0.8333333333333334,
+        "value_mse": 5.73687380309934
+      },
+      "wins": 35,
+      "worst_margin": -3939.0,
+      "worst_money": 21428.0
+    }
+  ],
+  "iterations": 6,
+  "model": "live-response-contextual-ppo-v2",
+  "seed": 71,
+  "seeds_per_opponent": 3
+}

@@ -1,0 +1,217 @@
+{
+ "models": {
+  "lgb_eda_s42_d3": {
+   "cfg": {
+    "id": "lgb_eda_s42_d3",
+    "family": "lgb",
+    "features": "eda",
+    "seed": 42,
+    "tag": "d3",
+    "params": {
+     "lr": 0.05,
+     "leaves": 8,
+     "depth": 3,
+     "min_child": 100,
+     "ff": 0.9,
+     "bag": 0.8,
+     "l2": 2.0,
+     "rounds": 8000
+    }
+   },
+   "oof_auc": 0.945669,
+   "fold_auc": [
+    0.944759,
+    0.94543,
+    0.946614,
+    0.945948,
+    0.945628
+   ],
+   "iters": [
+    1333,
+    1251,
+    1620,
+    1134,
+    1161
+   ]
+  },
+  "lgb_eda_s7_d3": {
+   "cfg": {
+    "id": "lgb_eda_s7_d3",
+    "family": "lgb",
+    "features": "eda",
+    "seed": 7,
+    "tag": "d3",
+    "params": {
+     "lr": 0.05,
+     "leaves": 8,
+     "depth": 3,
+     "min_child": 100,
+     "ff": 0.9,
+     "bag": 0.8,
+     "l2": 2.0,
+     "rounds": 8000
+    }
+   },
+   "oof_auc": 0.945668,
+   "fold_auc": [
+    0.944706,
+    0.945426,
+    0.946616,
+    0.945961,
+    0.945667
+   ],
+   "iters": [
+    1511,
+    1530,
+    1723,
+    1740,
+    1258
+   ]
+  },
+  "lgb_eda_s42_d4": {
+   "cfg": {
+    "id": "lgb_eda_s42_d4",
+    "family": "lgb",
+    "features": "eda",
+    "seed": 42,
+    "tag": "d4",
+    "params": {
+     "lr": 0.04,
+     "leaves": 16,
+     "depth": 4,
+     "min_child": 100,
+     "ff": 0.9,
+     "bag": 0.8,
+     "l2": 2.0,
+     "rounds": 8000
+    }
+   },
+   "oof_auc": 0.945639,
+   "fold_auc": [
+    0.944737,
+    0.945386,
+    0.946525,
+    0.945927,
+    0.945662
+   ],
+   "iters": [
+    1091,
+    1009,
+    790,
+    1019,
+    995
+   ]
+  },
+  "lgb_eda_s42_d2": {
+   "cfg": {
+    "id": "lgb_eda_s42_d2",
+    "family": "lgb",
+    "features": "eda",
+    "seed": 42,
+    "tag": "d2",
+    "params": {
+     "lr": 0.08,
+     "leaves": 4,
+     "depth": 2,
+     "min_child": 100,
+     "ff": 0.9,
+     "bag": 0.8,
+     "l2": 2.0,
+     "rounds": 8000
+    }
+   },
+   "oof_auc": 0.945624,
+   "fold_auc": [
+    0.944757,
+    0.945328,
+    0.946555,
+    0.945895,
+    0.945618
+   ],
+   "iters": [
+    1348,
+    1349,
+    1775,
+    1559,
+    1230
+   ]
+  },
+  "cat_eda_s42_d4": {
+   "cfg": {
+    "id": "cat_eda_s42_d4",
+    "family": "cat",
+    "features": "eda",
+    "seed": 42,
+    "tag": "d4",
+    "params": {
+     "depth": 4,
+     "lr": 0.06,
+     "l2": 5.0,
+     "rounds": 4000
+    }
+   },
+   "oof_auc": 0.945535,
+   "fold_auc": [
+    0.944603,
+    0.945211,
+    0.946474,
+    0.945919,
+    0.945521
+   ],
+   "iters": [
+    1563,
+    1527,
+    1875,
+    1653,
+    1435
+   ]
+  },
+  "xgb_eda_s42_d3": {
+   "cfg": {
+    "id": "xgb_eda_s42_d3",
+    "family": "xgb",
+    "features": "eda",
+    "seed": 42,
+    "tag": "d3",
+    "params": {
+     "max_depth": 3,
+     "lr": 0.05,
+     "mcw": 100,
+     "sub": 0.8,
+     "col": 0.9,
+     "l2": 3.0,
+     "a": 0.0,
+     "rounds": 8000
+    }
+   },
+   "oof_auc": 0.94547,
+   "fold_auc": [
+    0.944394,
+    0.945258,
+    0.946419,
+    0.945897,
+    0.945614
+   ],
+   "iters": [
+    1551,
+    1147,
+    1430,
+    1194,
+    1178
+   ]
+  }
+ },
+ "history": [
+  {
+   "n_models": 6,
+   "blend_oof": 0.94573,
+   "weights": {
+    "lgb_eda_s42_d3": 0.1667,
+    "lgb_eda_s7_d3": 0.3333,
+    "cat_eda_s42_d4": 0.1667,
+    "lgb_eda_s42_d4": 0.1667,
+    "lgb_eda_s42_d2": 0.1667
+   }
+  }
+ ]
+}

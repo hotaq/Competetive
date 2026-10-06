@@ -1,0 +1,61 @@
+{
+  "schema_version": 2,
+  "created_at": "2026-08-25",
+  "candidate": {
+    "agent_file": "submissions/meta_v18_state_macro_local/main.py",
+    "sha256": "b46e4f4a4f16e48753f853049ecfc53986c6578fe657a81edb1b97282f6ea17d",
+    "policy_source_sha256": "793c7e5ecd1bcac3131f960c74546129caf38ca584ec061582991de55f3816a9",
+    "executor_source_sha256": "a2a44e4bce09827f5bd8c8860dda90b5e6df64b4cf1558c225e9c44462ca81d1",
+    "native_binding_sha256": "059c542f26814037a15ff580a839138f6e623383cea8164c455dd66c37ec6063"
+  },
+  "baseline": {
+    "agent_file": "submissions/meta_v16_rc6_adaptive_market_standalone/main.py",
+    "sha256": "c8afcbb8f90861cd92131012146e573752820b80fbd939ace3c7503aea83cd5e",
+    "report": "rl/evaluations/v16_rc6_replay8_reference.json",
+    "mean_money": 98387.75,
+    "wins": 7,
+    "losses": 1,
+    "mean_margin": 7035.125,
+    "worst_margin": -10148.0
+  },
+  "verification": {
+    "python_tests": 126,
+    "rust_tests": 33,
+    "ruff": "passed",
+    "cargo_fmt": "passed"
+  },
+  "gate_0_replay": {
+    "status": "failed_score",
+    "report": "rl/evaluations/v18_state_macro_replay8_final.json",
+    "games": 8,
+    "replay_frames_per_game": 720,
+    "completed_transitions_per_game": 719,
+    "final_state_step": 719,
+    "fallback_components": 0,
+    "normalized_steps": 0,
+    "post_handoff_sanitized_steps": 0,
+    "opening_sanitized_steps": 344,
+    "wins": 0,
+    "losses": 8,
+    "win_rate": 0.0,
+    "mean_money": 17107.875,
+    "mean_margin": -119663.25,
+    "worst_margin": -133583.0,
+    "cvar10_margin": -133583.0
+  },
+  "gate_1_live_screen": {
+    "status": "not_run",
+    "reason": "Gate 0 score failed by a wide margin"
+  },
+  "gate_2_live_holdout": {
+    "status": "not_run",
+    "reason": "Gate 1 was not opened"
+  },
+  "decision": "do_not_promote_or_upload",
+  "diagnosis_confidence": "hypothesis_only_until_live_policy_evaluation",
+  "diagnosis": [
+    "The state-aware selector and joint farmer/hands/market execution are deterministic and legal after handoff.",
+    "The replay outcome is consistent with slower farm development and monetization than V16, but the recorded opponent tape can become stale after state divergence.",
+    "A follow-up hypothesis is to retain V16 geometry and expose only compatible macro degrees of freedom instead of replacing its full movement schedule at step 120."
+  ]
+}

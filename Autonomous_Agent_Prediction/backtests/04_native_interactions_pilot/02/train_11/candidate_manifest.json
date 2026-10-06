@@ -1,0 +1,41 @@
+{
+  "classes": [
+    0,
+    1
+  ],
+  "rows": 10000,
+  "features": 20,
+  "candidates": [
+    {
+      "file": "candidate_blend_pair.csv",
+      "name": "blend_pair",
+      "oof_auc": 0.8238702
+    },
+    {
+      "file": "candidate_blend_top4.csv",
+      "name": "blend_top4",
+      "oof_auc": 0.82375549
+    },
+    {
+      "file": "candidate_blend_top3.csv",
+      "name": "blend_top3",
+      "oof_auc": 0.8232264
+    },
+    {
+      "file": "candidate_catboost_d8.csv",
+      "name": "catboost_d8",
+      "oof_auc": 0.81967867
+    },
+    {
+      "file": "candidate_extra_trees.csv",
+      "name": "extra_trees",
+      "oof_auc": 0.81624597
+    },
+    {
+      "file": "candidate_catboost_d6.csv",
+      "name": "catboost_d6",
+      "oof_auc": 0.81530182
+    }
+  ],
+  "failures": []
+}

@@ -1,0 +1,15 @@
+group,gate,passed
+required,identity_exact,True
+required,validation_all_targets_two_classes,True
+required,cache_contract_exact,True
+required,model_shapes_exact,True
+required,features_finite_nondegenerate,True
+required,all_heads_updated,True
+required,attention_nondegenerate,True
+pre_gold,caformer_validation_gain,True
+pre_gold,caformer_target_wins,True
+pre_gold,caformer_no_severe_target_drop,True
+gold_signal,caformer_gold_gain,True
+gold_signal,caformer_gold_target_wins,True
+gold_signal,caformer_gold_no_severe_target_drop,False
+gold_signal,paired_bootstrap_signal,True

@@ -1,0 +1,107 @@
+{
+  "config": {
+    "base_seed": 702000,
+    "crop_opponents": [
+      [
+        "WHEAT",
+        6
+      ],
+      [
+        "CARROT",
+        6
+      ],
+      [
+        "TOMATO",
+        6
+      ],
+      [
+        "STRAWBERRY",
+        6
+      ],
+      [
+        "MELON",
+        6
+      ]
+    ],
+    "evaluation_episodes": 12,
+    "file_opponents": [
+      "/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/submissions/top1_v12_ryo_selector_b120_repaired_standalone/main.py"
+    ],
+    "gate": {
+      "action_dim": 16,
+      "hidden_dim": 64,
+      "observation_dim": 2048
+    },
+    "initial_acceptance": 0.02,
+    "iterations": 1,
+    "learning_rate": 0.0003,
+    "max_hands": 14,
+    "reward_scale": 10000.0,
+    "rollout_episodes": 12,
+    "seed": 2026
+  },
+  "history": [
+    {
+      "evaluation": {
+        "draws": 0,
+        "games": 12,
+        "losses": 2,
+        "mean_accepted_component_rate": 0.0,
+        "mean_action_difference_rate": 0.0,
+        "mean_margin": 103873.33333333333,
+        "mean_money": 126331.66666666667,
+        "wins": 10,
+        "worst_margin": -9696.0,
+        "worst_money": 99009.0
+      },
+      "improvement": {
+        "equal_games": 12,
+        "improved_games": 0,
+        "mean_margin_delta": 0.0,
+        "regressed_games": 0,
+        "worst_margin_delta": 0.0
+      },
+      "iteration": 1,
+      "rollout": {
+        "draws": 0,
+        "games": 12,
+        "losses": 2,
+        "mean_accepted_component_rate": 0.02015398687627627,
+        "mean_action_difference_rate": 0.09028743625405655,
+        "mean_margin": 62778.666666666664,
+        "mean_money": 86733.41666666667,
+        "wins": 10,
+        "worst_margin": -40778.0,
+        "worst_money": 22103.0
+      },
+      "update": {
+        "advantage_mean": 1.4148158200555372e-08,
+        "advantage_std": 1.0,
+        "approximate_kl": 0.0010439471870460479,
+        "entropy": 0.09849709058728288,
+        "loss": 0.014647589837884023,
+        "policy_loss": -0.002775528177153319,
+        "value_loss": 0.035240223994204664
+      }
+    }
+  ],
+  "incumbent": {
+    "draws": 0,
+    "games": 12,
+    "losses": 2,
+    "mean_accepted_component_rate": 0.0,
+    "mean_action_difference_rate": 0.0,
+    "mean_margin": 103873.33333333333,
+    "mean_money": 126331.66666666667,
+    "wins": 10,
+    "worst_margin": -9696.0,
+    "worst_money": 99009.0
+  },
+  "model": "spatial-teacher-component-gate-ppo-v1",
+  "promotion": {
+    "passed": false,
+    "rule": "positive paired mean, non-negative worst delta, and non-zero behavior"
+  },
+  "spatial_checkpoint": "/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/rl/checkpoints/v16_rc5_spatial_gru_bc_v1_e100.npz",
+  "teacher_path": "/Users/chinnaphat/Desktop/cedt/Super AI/competetive/Kaggriculture/submissions/meta_v16_rc5_robust_base_standalone/main.py"
+}

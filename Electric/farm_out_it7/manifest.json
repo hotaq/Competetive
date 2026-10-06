@@ -1,0 +1,208 @@
+{
+ "models": {
+  "lgb_tefe2_s42_d3": {
+   "cfg": {
+    "id": "lgb_tefe2_s42_d3",
+    "family": "lgb",
+    "features": "tefe2",
+    "seed": 42,
+    "tag": "d3",
+    "params": {
+     "lr": 0.05,
+     "leaves": 8,
+     "depth": 3,
+     "min_child": 100,
+     "ff": 0.9,
+     "bag": 0.8,
+     "l2": 2.0,
+     "rounds": 8000
+    }
+   },
+   "oof_auc": 0.945592,
+   "fold_auc": [
+    0.944721,
+    0.945358,
+    0.946504,
+    0.945863,
+    0.945554
+   ],
+   "iters": [
+    1759,
+    1432,
+    1156,
+    1169,
+    1243
+   ]
+  },
+  "lgb_tefe2_s7_d3": {
+   "cfg": {
+    "id": "lgb_tefe2_s7_d3",
+    "family": "lgb",
+    "features": "tefe2",
+    "seed": 7,
+    "tag": "d3",
+    "params": {
+     "lr": 0.05,
+     "leaves": 8,
+     "depth": 3,
+     "min_child": 100,
+     "ff": 0.9,
+     "bag": 0.8,
+     "l2": 2.0,
+     "rounds": 8000
+    }
+   },
+   "oof_auc": 0.945601,
+   "fold_auc": [
+    0.944696,
+    0.945351,
+    0.946517,
+    0.94587,
+    0.945611
+   ],
+   "iters": [
+    1459,
+    1445,
+    1363,
+    1020,
+    1551
+   ]
+  },
+  "lgb_tefe2_s42_d4": {
+   "cfg": {
+    "id": "lgb_tefe2_s42_d4",
+    "family": "lgb",
+    "features": "tefe2",
+    "seed": 42,
+    "tag": "d4",
+    "params": {
+     "lr": 0.04,
+     "leaves": 16,
+     "depth": 4,
+     "min_child": 100,
+     "ff": 0.9,
+     "bag": 0.8,
+     "l2": 2.0,
+     "rounds": 8000
+    }
+   },
+   "oof_auc": 0.945606,
+   "fold_auc": [
+    0.944711,
+    0.945358,
+    0.94653,
+    0.945912,
+    0.945547
+   ],
+   "iters": [
+    1258,
+    1011,
+    1054,
+    1047,
+    991
+   ]
+  },
+  "cat_tefe2_s42_d4": {
+   "cfg": {
+    "id": "cat_tefe2_s42_d4",
+    "family": "cat",
+    "features": "tefe2",
+    "seed": 42,
+    "tag": "d4",
+    "params": {
+     "depth": 4,
+     "lr": 0.06,
+     "l2": 5.0,
+     "rounds": 4000
+    }
+   },
+   "oof_auc": 0.945525,
+   "fold_auc": [
+    0.944663,
+    0.945281,
+    0.94653,
+    0.945751,
+    0.945432
+   ],
+   "iters": [
+    1958,
+    2439,
+    1510,
+    1687,
+    2241
+   ]
+  },
+  "xgb_tefe2_s42_d3": {
+   "cfg": {
+    "id": "xgb_tefe2_s42_d3",
+    "family": "xgb",
+    "features": "tefe2",
+    "seed": 42,
+    "tag": "d3",
+    "params": {
+     "max_depth": 3,
+     "lr": 0.05,
+     "mcw": 100,
+     "sub": 0.8,
+     "col": 0.9,
+     "l2": 3.0,
+     "a": 0.0,
+     "rounds": 8000
+    }
+   },
+   "oof_auc": 0.945486,
+   "fold_auc": [
+    0.944536,
+    0.945261,
+    0.946386,
+    0.945774,
+    0.94551
+   ],
+   "iters": [
+    1497,
+    1393,
+    1562,
+    1114,
+    1225
+   ]
+  },
+  "logreg_tefe2_s42_C0.1": {
+   "cfg": {
+    "id": "logreg_tefe2_s42_C0.1",
+    "family": "logreg",
+    "features": "tefe2",
+    "seed": 42,
+    "tag": "C0.1",
+    "params": {
+     "C": 0.1
+    }
+   },
+   "oof_auc": 0.943454,
+   "fold_auc": [
+    0.942577,
+    0.943246,
+    0.944322,
+    0.943791,
+    0.943346
+   ],
+   "iters": [
+    500,
+    500,
+    500,
+    500,
+    500
+   ]
+  }
+ },
+ "history": [
+  {
+   "n_models": 6,
+   "blend_oof": 0.945701,
+   "weights": {
+    "lgb_tefe2_s42_d4": 0.3333,
+    "cat_tefe2_s42_d4": 0.3333,
+    "lgb_tefe2_s7_d3": 0.3333
+   }
+  }
+ ]
+}

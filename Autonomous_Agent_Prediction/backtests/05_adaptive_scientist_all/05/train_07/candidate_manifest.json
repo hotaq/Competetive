@@ -1,0 +1,161 @@
+{
+  "manifest_version": 1,
+  "classes": [
+    0,
+    1
+  ],
+  "rows": 10000,
+  "features": 17,
+  "recipe_id": "mixed-safe",
+  "planner": {
+    "source": "profile",
+    "valid": true,
+    "recipe_id": "mixed-safe"
+  },
+  "initial_candidates": [
+    "catboost_d6",
+    "lightgbm_native",
+    "logistic"
+  ],
+  "challenger_candidates": [
+    "interaction_te",
+    "meta_logstack",
+    "blend_core_interaction"
+  ],
+  "candidates": [
+    {
+      "file": "candidate_catboost_d6.csv",
+      "state_file": "candidate_catboost_d6.npz",
+      "name": "catboost_d6",
+      "family": "catboost",
+      "role": "anchor",
+      "oof_auc": 0.82331581,
+      "fold_auc": [
+        0.82258307,
+        0.82693482,
+        0.81575861,
+        0.81504626,
+        0.83860774
+      ],
+      "fold_auc_std": 0.00862401,
+      "test_rank_correlation_to_best": 0.98660686
+    },
+    {
+      "file": "candidate_lightgbm_native.csv",
+      "state_file": "candidate_lightgbm_native.npz",
+      "name": "lightgbm_native",
+      "family": "lightgbm",
+      "role": "anchor",
+      "oof_auc": 0.82584424,
+      "fold_auc": [
+        0.83037459,
+        0.83141002,
+        0.81559725,
+        0.81401259,
+        0.83926243
+      ],
+      "fold_auc_std": 0.00975834,
+      "test_rank_correlation_to_best": 0.99216936
+    },
+    {
+      "file": "candidate_logistic.csv",
+      "state_file": "candidate_logistic.npz",
+      "name": "logistic",
+      "family": "linear",
+      "role": "anchor",
+      "oof_auc": 0.73152774,
+      "fold_auc": [
+        0.72736585,
+        0.72962464,
+        0.71812944,
+        0.73015689,
+        0.75270037
+      ],
+      "fold_auc_std": 0.01140696,
+      "test_rank_correlation_to_best": 0.71660694
+    },
+    {
+      "file": "candidate_interaction_te.csv",
+      "state_file": "candidate_interaction_te.npz",
+      "name": "interaction_te",
+      "family": "interaction",
+      "role": "challenger",
+      "oof_auc": 0.81924609,
+      "fold_auc": [
+        0.81610242,
+        0.82936587,
+        0.80609528,
+        0.80934953,
+        0.83646478
+      ],
+      "fold_auc_std": 0.01165674,
+      "test_rank_correlation_to_best": 0.97984198
+    },
+    {
+      "file": "candidate_meta_logstack.csv",
+      "state_file": "candidate_meta_logstack.npz",
+      "name": "meta_logstack",
+      "family": "meta",
+      "role": "challenger",
+      "oof_auc": 0.82852682,
+      "fold_auc": [
+        0.8332211,
+        0.83175455,
+        0.82953808,
+        0.8239897,
+        0.82486201
+      ],
+      "fold_auc_std": 0.00367114,
+      "test_rank_correlation_to_best": 1.0
+    },
+    {
+      "file": "candidate_blend_core_interaction.csv",
+      "state_file": "candidate_blend_core_interaction.npz",
+      "name": "blend_core_interaction",
+      "family": "interaction_blend",
+      "role": "challenger",
+      "oof_auc": 0.82682882,
+      "fold_auc": [],
+      "fold_auc_std": null,
+      "test_rank_correlation_to_best": 0.99419186
+    }
+  ],
+  "diagnostics": {
+    "anchors": [
+      "catboost_d6",
+      "lightgbm_native",
+      "logistic"
+    ],
+    "guarded_selection": {
+      "best_core": {
+        "name": "lightgbm_native",
+        "family": "lightgbm",
+        "oof_auc": 0.82584424
+      },
+      "blend_gate": {
+        "accepted": true,
+        "name": "meta_logstack",
+        "oof_auc": 0.82852682,
+        "gain": 0.00268258,
+        "test_rank_correlation_to_best": 0.99216936
+      },
+      "interaction_gate": {
+        "accepted": true,
+        "name": "interaction_te",
+        "oof_auc": 0.81924609,
+        "standalone_gain": -0.00659815,
+        "blend_auc": 0.82682882,
+        "blend_gain": 0.00098458,
+        "fold_auc_std": 0.01165674,
+        "test_rank_correlation": 0.97180606,
+        "stable": true,
+        "diverse": true,
+        "improves": true
+      }
+    },
+    "recipe_candidates": [
+      "interaction_te"
+    ]
+  },
+  "failures": []
+}
